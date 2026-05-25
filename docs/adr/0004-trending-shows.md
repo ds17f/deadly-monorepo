@@ -410,6 +410,167 @@ with a "Reset Home Screen to Defaults" action at the bottom. The
 density of home knobs reached a tipping point during this round; one
 big "Preferences" section was getting hard to scan.
 
+## Algorithm change: logical-listen ranking (2026-05-25 cont.)
+
+Within hours of shipping the original endpoint the bias the ADR's
+*Negative consequences* section warned about ("a single power user can
+move the `now` rankings") turned out to be much bigger than predicted —
+not because we underestimated power users, but because the *primitive*
+was wrong, not the user base.
+
+### What was wrong
+
+The original ranking was `COUNT(DISTINCT install_id || '|' || session_id)`,
+where `session_id` is one app lifetime. Each time the app got killed and
+relaunched mid-show, the resumed playback fired a fresh `playback_start`
+with a new `sid`. So one listener restarting the Greek 5 times in 30
+minutes registered as 5 "sessions" — indistinguishable from 5 different
+people each listening once.
+
+The 1982-05-23 Greek showed 19 sessions in the week window. The new
+primitive shows 10 listens from 7 distinct installs. Most of the
+deflation is the same one or two people getting de-duplicated.
+
+The Stanley Theatre 9/27/72 example is even cleaner: 35 plays from 1
+install used to look like a strong signal under any "plays"-weighted
+ranking. It's now 1 listen / 1 install — exactly as a human would
+describe what happened.
+
+### New primitive: logical listens
+
+A **logical listen** is a maximal run of `playback_start` events from
+one install on one show, where the run is broken by either:
+
+1. A play of a *different* show in between, or
+2. A gap of more than 6 hours.
+
+Walking each install's events in time order and incrementing a counter
+when a new listen starts gives the count. The 6h gap threshold means
+"come back the next morning" counts as a second listen (which matches
+intuition), but "lock phone, come back 30 min later" does not.
+
+```sql
+WITH plays AS (
+  SELECT iid, json_extract(props, '$.show_id') AS show_id, ts,
+         LAG(json_extract(props, '$.show_id')) OVER w AS prev_show,
+         LAG(ts)                              OVER w AS prev_ts
+  FROM analytics_events
+  WHERE event = 'playback_start'
+    AND json_extract(props, '$.show_id') IS NOT NULL
+  WINDOW w AS (PARTITION BY iid ORDER BY ts)
+),
+listens AS (
+  SELECT iid, show_id, ts,
+         CASE WHEN prev_show IS NULL
+                OR prev_show != show_id
+                OR (ts - prev_ts) > 21600000  -- 6h
+              THEN 1 ELSE 0 END AS is_new
+  FROM plays
+)
+SELECT show_id,
+       SUM(is_new)         AS listens,
+       COUNT(*)            AS plays,
+       COUNT(DISTINCT iid) AS installs
+FROM listens
+WHERE ts > :window_start
+GROUP BY show_id
+HAVING SUM(is_new) > 0
+ORDER BY listens DESC, plays DESC
+LIMIT :n;
+```
+
+The LAG scan deliberately runs *over the full event history*, not
+filtered to the window — so listen-start detection is correct even when
+a listen straddles the window boundary. The window filter applies to
+which listen-start events count toward this window, not which events
+participate in the LAG.
+
+### Storage: window-keyed rollup, not day-keyed
+
+The previous `show_plays_daily` table summed per-day session counts
+across windows. That worked when sessions were the primitive, because
+sessions are scoped to a single day anyway (a session ID rarely
+survives across the midnight UTC boundary). It does **not** work for
+logical listens: an install playing Cornell at 11pm and again at 1am
+crosses a day boundary inside one listen.
+
+The fix: a new table keyed by `(window, show_id)`, fully rebuilt each
+hour from raw events:
+
+```sql
+CREATE TABLE show_listens_rollup (
+  window TEXT NOT NULL,         -- 'now' | 'week' | 'month' | 'all'
+  show_id TEXT NOT NULL,
+  listens INTEGER NOT NULL,
+  plays INTEGER NOT NULL,
+  installs INTEGER NOT NULL,
+  PRIMARY KEY (window, show_id)
+);
+```
+
+The rebuild is a single transaction: `DELETE` all rows, then 4 INSERTs
+(one per window) using the query above. We cache the top 50 per window;
+the endpoint serves top 10. Storing the extra headroom lets us change
+the served limit without re-running the rollup.
+
+The old `show_plays_daily` table is dropped on startup. There's no
+migration concern — every value in it was derivable from
+`analytics_events`, which is the source of truth.
+
+### Cost shape
+
+The rollup is the only thing that scans `analytics_events`. The
+endpoint reads a small precomputed table behind a 10-minute Redis
+cache, so the request path is constant-time regardless of analytics
+volume. At ~7,000 events total today the rollup takes under 20 ms; at
+10× growth, ~200 ms in a background hourly tick. Nothing in the
+critical path scales with analytics-events count.
+
+The original ADR's "self-improving signal as user base grows"
+prediction was right in spirit — the rankings *do* get cleaner with
+more users — but the algorithm bias was masking that benefit. The
+new primitive makes the asymptote land where it should: more users
+means more distinct installs hitting the rollup, which is the signal
+we actually want.
+
+### Why we kept `plays` and added `installs`
+
+`plays` (raw `playback_start` count) is kept in the response and used
+only as a tiebreaker, not the primary signal. It's still useful
+operationally — it tells you, when ranking is tight, which show people
+went deep on.
+
+`installs` (distinct iids in the window) is new in the response. It's
+the most human-readable number — "how many different people played
+this show" — and matches what most people imagine when they ask "what
+are trending shows." We deliberately rank by `listens` rather than
+`installs`, though, because someone playing the same show on two
+different days *is* a stronger signal than someone playing it once,
+and the logical-listen count captures that without inflating from
+session restarts the way the old primitive did.
+
+### What we deliberately did *not* do
+
+- **Engagement weighting (e.g. count by `listened_ms`).** Tempting,
+  especially now that we know `playback_end` carries `listened_ms`
+  and a `reason` field. Held off because (a) the ranking change here
+  already addresses the user-visible complaint, (b) the duration data
+  is a separate axis from the dedup question, and (c) "this person
+  actually listened to most of it" is a fundamentally different
+  signal than "this show came up in someone's listening." Worth
+  revisiting if the new ranking still feels off.
+- **Engagement gate (require ≥N tracks before counting).** Would
+  drop the "Scarlet > Fire only" case, which is real signal. The
+  logical-listen primitive already treats one-track and 22-track
+  plays as 1 listen each, which is the right symmetry: depth
+  doesn't get rewarded *or* penalized.
+- **Velocity / momentum ranking.** Still deferred from v1. The
+  current windowing (now / week / month / all) already differentiates
+  short-window novelty from long-window perennials; adding a "spike
+  vs baseline" score would mostly help when a single show suddenly
+  appears, which doesn't happen often in a catalog of known shows
+  with stable taste.
+
 ## References
 
 - `api-data/analytics.db` — production analytics database (pulled via

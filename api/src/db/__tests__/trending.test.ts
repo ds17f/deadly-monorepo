@@ -14,24 +14,13 @@ process.env.ANALYTICS_DB_PATH = TMP_DB;
 const {
   getAnalyticsDb,
   insertEvents,
-  rollupShowPlaysDay,
-  backfillShowPlaysIfEmpty,
+  rebuildShowListensRollup,
   getTrending,
   closeAnalyticsDb,
 } = await import("../analytics.js");
 
-function todayUtc(daysOffset = 0): string {
-  const d = new Date();
-  d.setUTCDate(d.getUTCDate() + daysOffset);
-  return d.toISOString().slice(0, 10);
-}
-
-function tsForDay(daysAgo: number, hour = 12): number {
-  const d = new Date();
-  d.setUTCDate(d.getUTCDate() - daysAgo);
-  d.setUTCHours(hour, 0, 0, 0);
-  return d.getTime();
-}
+const HOUR_MS = 3600 * 1000;
+const DAY_MS = 24 * HOUR_MS;
 
 function play(
   iid: string,
@@ -52,10 +41,8 @@ function play(
 }
 
 beforeEach(() => {
-  // Truncate between tests so each starts clean. Cheaper than reopening
-  // the DB.
   const db = getAnalyticsDb();
-  db.exec(`DELETE FROM analytics_events; DELETE FROM show_plays_daily;`);
+  db.exec(`DELETE FROM analytics_events; DELETE FROM show_listens_rollup;`);
 });
 
 afterAll(() => {
@@ -63,173 +50,190 @@ afterAll(() => {
   if (fs.existsSync(TMP_DB)) fs.unlinkSync(TMP_DB);
 });
 
-describe("rollupShowPlaysDay", () => {
-  it("groups plays by show and counts sessions and plays", () => {
-    const day = todayUtc();
-    const ts = tsForDay(0);
+describe("logical-listen aggregation", () => {
+  it("5 restarts of the same show within 6h = 1 listen", () => {
+    // The bug ADR-0004 was rewritten to fix: same listener restarting the
+    // same show across app sessions used to count as N listens.
+    const t = Date.now() - HOUR_MS;
     insertEvents([
-      // Alice, one session, 3 tracks of show A
-      play("alice", "s1", "show-A", ts, 0),
-      play("alice", "s1", "show-A", ts + 1, 1),
-      play("alice", "s1", "show-A", ts + 2, 2),
-      // Bob, one session, 1 track of show A
-      play("bob", "s2", "show-A", ts + 3, 0),
-      // Alice, second session, 1 track of show B
-      play("alice", "s3", "show-B", ts + 4, 0),
+      play("alice", "s1", "show-A", t),
+      play("alice", "s2", "show-A", t + 5 * 60_000), // 5 min later, new sid
+      play("alice", "s3", "show-A", t + 10 * 60_000),
+      play("alice", "s4", "show-A", t + 20 * 60_000),
+      play("alice", "s5", "show-A", t + 30 * 60_000),
     ]);
+    rebuildShowListensRollup();
 
-    rollupShowPlaysDay(day);
-
-    const rows = getAnalyticsDb()
-      .prepare(
-        `SELECT show_id, sessions, plays FROM show_plays_daily
-         WHERE day = ? ORDER BY show_id`,
-      )
-      .all(day);
-
-    expect(rows).toEqual([
-      { show_id: "show-A", sessions: 2, plays: 4 },
-      { show_id: "show-B", sessions: 1, plays: 1 },
-    ]);
+    const result = getTrending(10);
+    const row = result.windows.now.find((r) => r.show_id === "show-A");
+    expect(row).toBeDefined();
+    expect(row!.listens).toBe(1);
+    expect(row!.plays).toBe(5);
+    expect(row!.installs).toBe(1);
   });
 
-  it("re-running replaces the day's rows (idempotent)", () => {
-    const day = todayUtc();
-    const ts = tsForDay(0);
-    insertEvents([play("alice", "s1", "show-A", ts, 0)]);
-    rollupShowPlaysDay(day);
-    rollupShowPlaysDay(day);
+  it("plays on the same show separated by > 6h = separate listens", () => {
+    const t = Date.now() - 12 * HOUR_MS;
+    insertEvents([
+      play("alice", "s1", "show-A", t),
+      play("alice", "s2", "show-A", t + 7 * HOUR_MS), // 7h later
+    ]);
+    rebuildShowListensRollup();
 
-    const count = (
-      getAnalyticsDb()
-        .prepare(`SELECT COUNT(*) AS c FROM show_plays_daily WHERE day = ?`)
-        .get(day) as { c: number }
-    ).c;
-    expect(count).toBe(1);
+    const row = getTrending(10).windows.now.find((r) => r.show_id === "show-A");
+    expect(row!.listens).toBe(2);
+    expect(row!.plays).toBe(2);
+    expect(row!.installs).toBe(1);
   });
 
-  it("ignores events without a show_id", () => {
-    const day = todayUtc();
-    const ts = tsForDay(0);
-    getAnalyticsDb()
-      .prepare(
-        `INSERT INTO analytics_events (event, ts, iid, sid, platform, app_version, props)
-         VALUES ('playback_start', ?, 'a', 's', 'ios', '2.30.0', NULL)`,
-      )
-      .run(ts);
+  it("interleaved A → B → A breaks the A listen", () => {
+    const t = Date.now() - HOUR_MS;
+    insertEvents([
+      play("alice", "s1", "show-A", t),
+      play("alice", "s1", "show-B", t + 60_000),
+      play("alice", "s1", "show-A", t + 120_000),
+    ]);
+    rebuildShowListensRollup();
 
-    rollupShowPlaysDay(day);
+    const a = getTrending(10).windows.now.find((r) => r.show_id === "show-A")!;
+    const b = getTrending(10).windows.now.find((r) => r.show_id === "show-B")!;
+    expect(a.listens).toBe(2); // started, interrupted by B, resumed = new listen
+    expect(a.plays).toBe(2);
+    expect(b.listens).toBe(1);
+  });
 
-    const rows = getAnalyticsDb()
-      .prepare(`SELECT * FROM show_plays_daily WHERE day = ?`)
-      .all(day);
-    expect(rows).toEqual([]);
+  it("distinct installs each get their own first-listen credit", () => {
+    const t = Date.now() - HOUR_MS;
+    insertEvents([
+      play("alice", "s1", "show-A", t),
+      play("bob", "s2", "show-A", t + 60_000),
+      play("carol", "s3", "show-A", t + 120_000),
+    ]);
+    rebuildShowListensRollup();
+
+    const row = getTrending(10).windows.now.find((r) => r.show_id === "show-A")!;
+    expect(row.listens).toBe(3);
+    expect(row.plays).toBe(3);
+    expect(row.installs).toBe(3);
+  });
+
+  it("deep listen (many tracks, one sitting) counts as 1 listen", () => {
+    // The other half of the bias problem: a 22-track listen-through
+    // shouldn't outweigh 3 different people each playing one track.
+    const t = Date.now() - HOUR_MS;
+    const deepListen = Array.from({ length: 22 }, (_, i) =>
+      play("alice", "s1", "show-A", t + i * 60_000, i),
+    );
+    const threeLightListens = [
+      play("bob", "s2", "show-B", t),
+      play("carol", "s3", "show-B", t + 60_000),
+      play("dave", "s4", "show-B", t + 120_000),
+    ];
+    insertEvents([...deepListen, ...threeLightListens]);
+    rebuildShowListensRollup();
+
+    const a = getTrending(10).windows.now.find((r) => r.show_id === "show-A")!;
+    const b = getTrending(10).windows.now.find((r) => r.show_id === "show-B")!;
+    expect(a.listens).toBe(1);
+    expect(b.listens).toBe(3);
+    // B beats A on the primary signal even though A has way more plays.
+    const order = getTrending(10).windows.now.map((r) => r.show_id);
+    expect(order.indexOf("show-B")).toBeLessThan(order.indexOf("show-A"));
   });
 });
 
-describe("getTrending", () => {
-  it("returns four windows with correct ordering", () => {
-    // Build a corpus that differentiates the windows.
-    const events = [
-      // show-A: heavy today, dominates `now`
-      play("u1", "s1", "show-A", tsForDay(0, 10)),
-      play("u2", "s2", "show-A", tsForDay(0, 11)),
-      play("u3", "s3", "show-A", tsForDay(0, 12)),
-      // show-B: spread across the week, dominates `week`
-      play("u1", "wk1", "show-B", tsForDay(1)),
-      play("u2", "wk2", "show-B", tsForDay(2)),
-      play("u3", "wk3", "show-B", tsForDay(3)),
-      play("u4", "wk4", "show-B", tsForDay(4)),
-      // show-C: only month-old, dominates `month` but not week
-      play("u1", "mo1", "show-C", tsForDay(15)),
-      play("u2", "mo2", "show-C", tsForDay(20)),
-      // show-D: old (out of month), only shows in `all`
-      play("u1", "old1", "show-D", tsForDay(60)),
-    ];
-    insertEvents(events);
+describe("getTrending window correctness", () => {
+  it("populates all four windows; out-of-window shows are absent", () => {
+    const now = Date.now();
+    insertEvents([
+      play("u1", "s1", "show-now", now - HOUR_MS),
+      play("u1", "s2", "show-week", now - 3 * DAY_MS),
+      play("u1", "s3", "show-month", now - 20 * DAY_MS),
+      play("u1", "s4", "show-old", now - 60 * DAY_MS),
+    ]);
+    rebuildShowListensRollup();
 
-    // Roll up every day that has events. The endpoint's rollup job does
-    // this for today + yesterday in real life; here we just do all of
-    // them so we can assert on every window.
-    for (let i = 0; i <= 60; i++) {
-      rollupShowPlaysDay(todayUtc(-i));
-    }
+    const r = getTrending(10);
+    const ids = (rows: { show_id: string }[]) => rows.map((x) => x.show_id);
 
-    const result = getTrending(10);
+    expect(ids(r.windows.now)).toEqual(["show-now"]);
+    expect(ids(r.windows.week).sort()).toEqual(["show-now", "show-week"]);
+    expect(ids(r.windows.month).sort()).toEqual([
+      "show-month",
+      "show-now",
+      "show-week",
+    ]);
+    expect(ids(r.windows.all).sort()).toEqual([
+      "show-month",
+      "show-now",
+      "show-old",
+      "show-week",
+    ]);
+  });
 
-    expect(result.windows.now[0]?.show_id).toBe("show-A");
-    expect(result.windows.now[0]?.sessions).toBe(3);
+  it("orders by listens DESC, plays DESC tiebreaker", () => {
+    const t = Date.now() - HOUR_MS;
+    insertEvents([
+      // show-X: 1 listen with many plays
+      ...Array.from({ length: 5 }, (_, i) =>
+        play("u1", "s1", "show-X", t + i * 60_000, i),
+      ),
+      // show-Y: 2 listens (2 different installs)
+      play("u2", "s2", "show-Y", t),
+      play("u3", "s3", "show-Y", t + 60_000),
+    ]);
+    rebuildShowListensRollup();
 
-    const weekIds = result.windows.week.map((r) => r.show_id);
-    expect(weekIds[0]).toBe("show-B");
-    expect(weekIds).toContain("show-A");
-    expect(weekIds).not.toContain("show-D");
-
-    const monthIds = result.windows.month.map((r) => r.show_id);
-    expect(monthIds).toContain("show-C");
-    expect(monthIds).not.toContain("show-D");
-
-    const allIds = result.windows.all.map((r) => r.show_id);
-    expect(allIds).toContain("show-D");
+    const order = getTrending(10).windows.now.map((r) => r.show_id);
+    expect(order[0]).toBe("show-Y"); // 2 listens > 1 listen
+    expect(order[1]).toBe("show-X");
   });
 
   it("respects the limit parameter", () => {
-    const ts = tsForDay(0);
+    const t = Date.now() - HOUR_MS;
     const events = Array.from({ length: 15 }, (_, i) =>
-      play(`u${i}`, `s${i}`, `show-${i}`, ts + i),
+      play(`u${i}`, `s${i}`, `show-${i}`, t + i),
     );
     insertEvents(events);
-    rollupShowPlaysDay(todayUtc());
+    rebuildShowListensRollup();
 
     const result = getTrending(5);
     expect(result.windows.now).toHaveLength(5);
     expect(result.windows.all).toHaveLength(5);
   });
 
-  it("orders by sessions desc, then plays desc as tiebreaker", () => {
-    const ts = tsForDay(0);
-    insertEvents([
-      // show-X: 1 session, 5 plays
-      play("u1", "s1", "show-X", ts, 0),
-      play("u1", "s1", "show-X", ts + 1, 1),
-      play("u1", "s1", "show-X", ts + 2, 2),
-      play("u1", "s1", "show-X", ts + 3, 3),
-      play("u1", "s1", "show-X", ts + 4, 4),
-      // show-Y: 2 sessions, 2 plays — should beat X on sessions
-      play("u2", "s2", "show-Y", ts, 0),
-      play("u3", "s3", "show-Y", ts + 1, 0),
-    ]);
-    rollupShowPlaysDay(todayUtc());
-
-    const result = getTrending(10);
-    expect(result.windows.now[0]?.show_id).toBe("show-Y");
-    expect(result.windows.now[1]?.show_id).toBe("show-X");
-  });
-
-  it("backfillShowPlaysIfEmpty populates every day with events on first run", () => {
-    insertEvents([
-      play("u1", "s1", "show-A", tsForDay(0)),
-      play("u1", "s2", "show-A", tsForDay(5)),
-      play("u2", "s3", "show-B", tsForDay(10)),
-    ]);
-
-    const filled = backfillShowPlaysIfEmpty();
-    expect(filled).toBe(3); // 3 distinct days
-
-    // Second call should be a no-op.
-    expect(backfillShowPlaysIfEmpty()).toBe(0);
-
-    const all = getTrending(10).windows.all.map((r) => r.show_id);
-    expect(all).toContain("show-A");
-    expect(all).toContain("show-B");
-  });
-
-  it("returns empty arrays when there are no events", () => {
+  it("empty events → empty windows, valid timestamp", () => {
+    rebuildShowListensRollup();
     const result = getTrending(10);
     expect(result.windows.now).toEqual([]);
     expect(result.windows.week).toEqual([]);
     expect(result.windows.month).toEqual([]);
     expect(result.windows.all).toEqual([]);
     expect(typeof result.generated_at).toBe("string");
+  });
+
+  it("rebuild is idempotent — running twice yields the same rollup", () => {
+    const t = Date.now() - HOUR_MS;
+    insertEvents([play("u1", "s1", "show-A", t)]);
+
+    rebuildShowListensRollup();
+    const first = getTrending(10);
+    rebuildShowListensRollup();
+    const second = getTrending(10);
+
+    expect(first.windows.now).toEqual(second.windows.now);
+    expect(first.windows.all).toEqual(second.windows.all);
+  });
+
+  it("ignores events without a show_id", () => {
+    const t = Date.now() - HOUR_MS;
+    getAnalyticsDb()
+      .prepare(
+        `INSERT INTO analytics_events (event, ts, iid, sid, platform, app_version, props)
+         VALUES ('playback_start', ?, 'a', 's', 'ios', '2.30.0', NULL)`,
+      )
+      .run(t);
+    rebuildShowListensRollup();
+    expect(getTrending(10).windows.all).toEqual([]);
   });
 });
