@@ -18,7 +18,6 @@ final class AppPreferences {
     private static let customDevEmailKey = "custom_dev_email"
     private static let analyticsEnabledKey = "analytics_enabled"
     private static let installIdKey = "install_id"
-    private static let showTicketImagesKey = "show_ticket_images"
     private static let playerControlsStyleKey = "player_controls_style"
 
     /// Server environment: "prod", "beta", or "custom".
@@ -93,10 +92,6 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(analyticsEnabled, forKey: Self.analyticsEnabledKey) }
     }
 
-    var showTicketImages: Bool {
-        didSet { UserDefaults.standard.set(showTicketImages, forKey: Self.showTicketImagesKey) }
-    }
-
     /// Which transport controls appear on lock screen / CarPlay: "skipTrack", "skipSeconds", or "both".
     var playerControlsStyle: String {
         didSet { UserDefaults.standard.set(playerControlsStyle, forKey: Self.playerControlsStyleKey) }
@@ -122,7 +117,6 @@ final class AppPreferences {
             Self.eqPresetKey: "flat",
             Self.shareAttachImageKey: false,
             Self.sourceBadgeStyleKey: "LONG",
-            Self.showTicketImagesKey: false,
             Self.playerControlsStyleKey: "skipTrack",
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
@@ -143,7 +137,6 @@ final class AppPreferences {
             ?? "LIST"
         shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
-        showTicketImages = UserDefaults.standard.bool(forKey: Self.showTicketImagesKey)
         playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true

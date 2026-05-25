@@ -135,25 +135,6 @@ struct SettingsScreen: View {
                     }
                 }
 
-                Toggle(isOn: Binding(
-                    get: { container.appPreferences.showTicketImages },
-                    set: {
-                        container.appPreferences.showTicketImages = $0
-                        container.analyticsService.track("feature_use", props: [
-                            "feature": "toggle_ticket_images",
-                            "category": "preference",
-                            "enabled": $0,
-                        ])
-                    }
-                )) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Show ticket images")
-                        Text("Display historical concert ticket stubs as show artwork")
-                            .font(.callout)
-                            .foregroundStyle(.secondary)
-                    }
-                }
-
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Lock screen & CarPlay controls")
                     Picker("Lock screen & CarPlay controls", selection: Binding(

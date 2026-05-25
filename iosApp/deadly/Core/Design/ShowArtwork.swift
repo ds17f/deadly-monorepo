@@ -25,7 +25,7 @@ struct ShowArtwork: View {
     }
 
     private var resolvedUrl: URL? {
-        if container.appPreferences.showTicketImages, let imageUrl, let url = URL(string: imageUrl) {
+        if let imageUrl, let url = URL(string: imageUrl) {
             return url
         }
         if let recordingId {
