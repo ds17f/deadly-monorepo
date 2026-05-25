@@ -47,10 +47,10 @@ dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     
     // Media3/ExoPlayer - Latest stable versions
-    implementation("androidx.media3:media3-exoplayer:1.3.1")
-    implementation("androidx.media3:media3-session:1.3.1")
-    implementation("androidx.media3:media3-ui:1.3.1")
-    implementation("androidx.media3:media3-datasource:1.3.1")
+    implementation("androidx.media3:media3-exoplayer:1.4.1")
+    implementation("androidx.media3:media3-session:1.4.1")
+    implementation("androidx.media3:media3-ui:1.4.1")
+    implementation("androidx.media3:media3-datasource:1.4.1")
     
     // Hilt for dependency injection
     implementation("com.google.dagger:hilt-android:2.56.1")

@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.design.resources.IconResources
+import com.grateful.deadly.core.model.PlayerControlsStyle
 import com.grateful.deadly.core.model.SourceBadgeStyle
 import com.grateful.deadly.feature.settings.BuildConfig
 
@@ -34,6 +35,7 @@ fun SettingsScreen(
     val context = LocalContext.current
     val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
+    val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
     val authState by viewModel.authState.collectAsState()
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
@@ -129,6 +131,13 @@ fun SettingsScreen(
             SourceBadgeStyleRow(
                 currentStyle = SourceBadgeStyle.fromString(sourceBadgeStyle),
                 onStyleSelected = { viewModel.setSourceBadgeStyle(it.name) }
+            )
+        }
+
+        item {
+            PlayerControlsStyleRow(
+                currentStyle = PlayerControlsStyle.fromString(playerControlsStyle),
+                onStyleSelected = { viewModel.setPlayerControlsStyle(it.name) }
             )
         }
 
@@ -476,6 +485,42 @@ private fun ImportMigrationButton(viewModel: SettingsViewModel) {
             )
         }
         else -> {}
+    }
+}
+
+// ── Player controls style selector ───────────────────────────────────────────
+
+@Composable
+private fun PlayerControlsStyleRow(
+    currentStyle: PlayerControlsStyle,
+    onStyleSelected: (PlayerControlsStyle) -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Notification & Android Auto controls", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "Choose between previous/next track, 15-second skip, or both.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            PlayerControlsStyle.entries.forEachIndexed { index, style ->
+                SegmentedButton(
+                    selected = currentStyle == style,
+                    onClick = { onStyleSelected(style) },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index,
+                        count = PlayerControlsStyle.entries.size
+                    )
+                ) {
+                    Text(style.label)
+                }
+            }
+        }
     }
 }
 

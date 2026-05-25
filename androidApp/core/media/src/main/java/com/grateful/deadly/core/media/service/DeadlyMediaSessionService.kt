@@ -12,6 +12,7 @@ import android.os.Looper
 import android.util.Log
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
+import androidx.media3.common.ForwardingPlayer
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
@@ -19,22 +20,31 @@ import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.cache.CacheDataSource
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
+import androidx.media3.session.CommandButton
+import androidx.media3.session.DefaultMediaNotificationProvider
 import androidx.media3.session.LibraryResult
 import androidx.media3.session.MediaLibraryService
 import androidx.media3.session.MediaSession
+import androidx.media3.session.SessionCommand
+import androidx.media3.session.SessionCommands
+import androidx.media3.session.SessionResult
 import com.google.common.collect.ImmutableList
 import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.media.browse.BrowseMediaId
 import com.grateful.deadly.core.media.browse.BrowseTreeProvider
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
+import com.grateful.deadly.core.model.PlayerControlsStyle
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.guava.future
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 /**
@@ -52,6 +62,13 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         private const val TAG = "DeadlyMediaSessionService"
         private const val TRANSIENT_LOSS_PAUSE_DELAY_MS = 1500L
         private const val DUCK_VOLUME = 0.2f
+
+        // Custom session commands backing the ±10s notification buttons. Using
+        // session commands (rather than player commands) keeps the buttons
+        // visible even when the underlying COMMAND_SEEK_BACK/FORWARD aren't
+        // currently available on the player (e.g., before media is loaded).
+        private const val CUSTOM_ACTION_REWIND = "com.grateful.deadly.REWIND_10S"
+        private const val CUSTOM_ACTION_FORWARD = "com.grateful.deadly.FORWARD_10S"
     }
 
     @Inject
@@ -66,7 +83,11 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     @Inject
     lateinit var equalizerRepository: EqualizerRepository
 
+    @Inject
+    lateinit var appPreferences: AppPreferences
+
     private lateinit var exoPlayer: ExoPlayer
+    private lateinit var filteringPlayer: ControlStyleFilteringPlayer
     private var mediaSession: MediaLibrarySession? = null
     private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
@@ -164,7 +185,16 @@ class DeadlyMediaSessionService : MediaLibraryService() {
                 false
             )
             .setHandleAudioBecomingNoisy(true)
+            .setSeekBackIncrementMs(10_000L)
+            .setSeekForwardIncrementMs(10_000L)
             .build()
+
+        // Wrap ExoPlayer so we can filter which transport commands are exposed
+        // to controllers (notification, lock screen, Android Auto) based on the
+        // user's PlayerControlsStyle preference. See ControlStyleFilteringPlayer.
+        filteringPlayer = ControlStyleFilteringPlayer(exoPlayer) {
+            PlayerControlsStyle.fromString(appPreferences.playerControlsStyle.value)
+        }
 
         // Initialize equalizer with ExoPlayer's audio session
         equalizerRepository.onAudioSessionReady(exoPlayer.audioSessionId)
@@ -215,17 +245,107 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         // periodic push does not affect transport, metadata, or seek updates —
         // AA still polls the controller for current position when it needs it.
         // See androidx/media#2192.
-        mediaSession = MediaLibrarySession.Builder(this, exoPlayer, LibrarySessionCallback())
+        val initialStyle = PlayerControlsStyle.fromString(appPreferences.playerControlsStyle.value)
+        mediaSession = MediaLibrarySession.Builder(this, filteringPlayer, LibrarySessionCallback())
             .setSessionActivity(sessionActivityPendingIntent)
             .setId("DeadlySession")
             .setBitmapLoader(WaveformFilteringBitmapLoader(this))
             .setPeriodicPositionUpdateEnabled(false)
+            .setCustomLayout(buildCustomLayout(initialStyle))
             .build()
 
-        Log.d(TAG, "[MEDIA] DeadlyMediaSessionService onCreate completed")
+        Log.d(TAG, "[MEDIA] DeadlyMediaSessionService onCreate completed (style=$initialStyle)")
+
+        // Observe style changes and re-publish to controllers without restarting playback.
+        serviceScope.launch {
+            appPreferences.playerControlsStyle.collectLatest { rawStyle ->
+                val style = PlayerControlsStyle.fromString(rawStyle)
+                withContext(Dispatchers.Main) {
+                    filteringPlayer.notifyAvailableCommandsChanged()
+                    mediaSession?.setCustomLayout(buildCustomLayout(style))
+                    Log.d(TAG, "[MEDIA] Player controls style changed to $style")
+                }
+            }
+        }
 
         // Restore last played session so AA reconnects see a loaded player
         restoreLastPlayedSession()
+    }
+
+    private fun buildCustomLayout(style: PlayerControlsStyle): ImmutableList<CommandButton> {
+        if (style == PlayerControlsStyle.SKIP_TRACK) {
+            return ImmutableList.of()
+        }
+        val rewindExtras = Bundle().apply {
+            putInt(DefaultMediaNotificationProvider.COMMAND_KEY_COMPACT_VIEW_INDEX, 0)
+        }
+        val forwardExtras = Bundle().apply {
+            putInt(DefaultMediaNotificationProvider.COMMAND_KEY_COMPACT_VIEW_INDEX, 2)
+        }
+        val rewind = CommandButton.Builder()
+            .setSessionCommand(SessionCommand(CUSTOM_ACTION_REWIND, Bundle.EMPTY))
+            .setDisplayName("Rewind 10s")
+            .setIconResId(com.grateful.deadly.core.media.R.drawable.ic_media_seek_back_10)
+            .setExtras(rewindExtras)
+            .build()
+        val forward = CommandButton.Builder()
+            .setSessionCommand(SessionCommand(CUSTOM_ACTION_FORWARD, Bundle.EMPTY))
+            .setDisplayName("Forward 10s")
+            .setIconResId(com.grateful.deadly.core.media.R.drawable.ic_media_seek_forward_10)
+            .setExtras(forwardExtras)
+            .build()
+        return ImmutableList.of(rewind, forward)
+    }
+
+    /**
+     * ForwardingPlayer that filters [Player.getAvailableCommands] based on the
+     * user-selected [PlayerControlsStyle].
+     *
+     * Media3 controllers (notification, AA, lock screen) decide which transport
+     * buttons to show by reading the player's available commands set. Removing
+     * SEEK_BACK/FORWARD hides the ±15s buttons; removing the SEEK_TO_NEXT/PREV
+     * pair hides the track-skip buttons. Style changes are pushed to listeners
+     * via [notifyAvailableCommandsChanged].
+     */
+    private class ControlStyleFilteringPlayer(
+        inner: Player,
+        private val styleProvider: () -> PlayerControlsStyle,
+    ) : ForwardingPlayer(inner) {
+        private val listeners = mutableListOf<Player.Listener>()
+
+        override fun addListener(listener: Player.Listener) {
+            listeners += listener
+            super.addListener(listener)
+        }
+
+        override fun removeListener(listener: Player.Listener) {
+            listeners -= listener
+            super.removeListener(listener)
+        }
+
+        override fun getAvailableCommands(): Player.Commands {
+            val base = super.getAvailableCommands()
+            return when (styleProvider()) {
+                PlayerControlsStyle.SKIP_TRACK -> base.buildUpon()
+                    .removeAll(Player.COMMAND_SEEK_BACK, Player.COMMAND_SEEK_FORWARD)
+                    .build()
+                PlayerControlsStyle.SKIP_SECONDS -> base.buildUpon()
+                    .removeAll(
+                        Player.COMMAND_SEEK_TO_NEXT,
+                        Player.COMMAND_SEEK_TO_PREVIOUS,
+                        Player.COMMAND_SEEK_TO_NEXT_MEDIA_ITEM,
+                        Player.COMMAND_SEEK_TO_PREVIOUS_MEDIA_ITEM,
+                    )
+                    .build()
+                PlayerControlsStyle.BOTH -> base
+            }
+        }
+
+        /** Force controllers to re-query the available command set after a style change. */
+        fun notifyAvailableCommandsChanged() {
+            val cmds = availableCommands
+            listeners.toList().forEach { it.onAvailableCommandsChanged(cmds) }
+        }
     }
 
     private fun restoreLastPlayedSession() {
@@ -483,6 +603,39 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     // ── Media library session callback (browse tree + search) ─────────────────
 
     private inner class LibrarySessionCallback : MediaLibrarySession.Callback {
+
+        override fun onConnect(
+            session: MediaSession,
+            controller: MediaSession.ControllerInfo
+        ): MediaSession.ConnectionResult {
+            // Expose our custom ±10s session commands to every controller so the
+            // notification + AA can render them as buttons. Player commands stay
+            // at their defaults.
+            val sessionCommands = MediaSession.ConnectionResult.DEFAULT_SESSION_AND_LIBRARY_COMMANDS
+                .buildUpon()
+                .add(SessionCommand(CUSTOM_ACTION_REWIND, Bundle.EMPTY))
+                .add(SessionCommand(CUSTOM_ACTION_FORWARD, Bundle.EMPTY))
+                .build()
+            return MediaSession.ConnectionResult.AcceptedResultBuilder(session)
+                .setAvailableSessionCommands(sessionCommands)
+                .build()
+        }
+
+        override fun onCustomCommand(
+            session: MediaSession,
+            controller: MediaSession.ControllerInfo,
+            customCommand: SessionCommand,
+            args: Bundle
+        ): ListenableFuture<SessionResult> {
+            when (customCommand.customAction) {
+                CUSTOM_ACTION_REWIND -> exoPlayer.seekBack()
+                CUSTOM_ACTION_FORWARD -> exoPlayer.seekForward()
+                else -> return Futures.immediateFuture(
+                    SessionResult(SessionResult.RESULT_ERROR_NOT_SUPPORTED)
+                )
+            }
+            return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS))
+        }
 
         override fun onGetLibraryRoot(
             session: MediaLibrarySession,

@@ -52,6 +52,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_LAST_REVIEW_PROMPT_TIME = "last_review_prompt_time"
         private const val KEY_HAS_ADDED_FAVORITE = "has_added_favorite"
         private const val KEY_DEVELOPER_MODE_UNLOCKED = "developer_mode_unlocked"
+        private const val KEY_PLAYER_CONTROLS_STYLE = "player_controls_style"
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(
@@ -157,6 +158,20 @@ class AppPreferences @Inject constructor(
         prefs.edit().putString(KEY_SOURCE_BADGE_STYLE, value).apply()
         _sourceBadgeStyle.value = value
         ShowArtworkService.badgeStyle = SourceBadgeStyle.fromString(value)
+    }
+
+    // ── Player Controls ──────────────────────────────────────────────────
+
+    private val _playerControlsStyle = MutableStateFlow(
+        prefs.getString(KEY_PLAYER_CONTROLS_STYLE, null) ?: "SKIP_TRACK"
+    )
+
+    /** Notification / lock screen / AA transport buttons: SKIP_TRACK, SKIP_SECONDS, or BOTH. */
+    val playerControlsStyle: StateFlow<String> = _playerControlsStyle.asStateFlow()
+
+    fun setPlayerControlsStyle(value: String) {
+        prefs.edit().putString(KEY_PLAYER_CONTROLS_STYLE, value).apply()
+        _playerControlsStyle.value = value
     }
 
     // ── Analytics ──────────────────────────────────────────────────────

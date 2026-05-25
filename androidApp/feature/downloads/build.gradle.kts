@@ -68,7 +68,7 @@ dependencies {
     ksp("com.google.dagger:hilt-compiler:2.56.1")
 
     // Media3 (for @UnstableApi annotation)
-    implementation("androidx.media3:media3-common:1.3.1")
+    implementation("androidx.media3:media3-common:1.4.1")
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")

@@ -88,6 +88,17 @@ class SettingsViewModel @Inject constructor(
         ))
     }
 
+    val playerControlsStyle: StateFlow<String> = appPreferences.playerControlsStyle
+
+    fun setPlayerControlsStyle(value: String) {
+        appPreferences.setPlayerControlsStyle(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_player_controls_style",
+            "category" to "preference",
+            "value" to value,
+        ))
+    }
+
     val authState: StateFlow<AuthState> = authService.authState
 
     val useBetaMode: StateFlow<Boolean> = appPreferences.useBetaModeFlow
