@@ -325,6 +325,91 @@ as a longer-term cleanup.
   Personalized trending ("shows similar to what you've been playing")
   is a different feature and a different conversation.
 
+## Post-implementation updates (2026-05-25)
+
+The endpoint and mobile carousels shipped on iOS and Android. A few
+things changed or got learned during build-out.
+
+### Rollup backfill bug
+
+The hourly rollup was originally written to upsert rows only for the
+*current* UTC day, on the assumption that historical days never change.
+That assumption held until we noticed `week` and `month` windows
+under-counting after the job missed a tick (deploy, restart, etc.) —
+the missed day stayed empty forever because nothing re-visited it.
+
+Fix: the rollup now backfills **any day in the analytics window that
+has no row in `show_plays_daily`**, not just empty days. Cheap because
+the lookup is a left join against the day-keyed index. See commit
+`6cb5edc4`.
+
+This shifts the operational model from "every hour is incremental" to
+"every hour is self-healing." Worth keeping in mind if we ever add a
+second show-keyed rollup — same property should apply.
+
+### UI iteration on the window selector
+
+The ADR specified "Four tabs: Now / Week / Month / All-Time." We tried
+that, an `AssistChip` pill that cycled, and a few other variants before
+landing on the current design:
+
+- **Title is the selector.** The carousel header itself reads
+  "Trending now" / "Trending this week" / "Trending this month" /
+  "Trending all time" and is tappable. A secondary "Show <next>" label
+  on the right of the row hints at the cycle and is also tappable.
+- **Why:** A four-tab strip burned vertical space and made the section
+  feel heavier than its neighbors (Recently Played, Today in History).
+  Inline cycling collapses the control into the heading itself.
+- **Risk we accepted:** without explicit tab affordances, users may
+  not immediately discover that the window is configurable. Mitigation:
+  the "Show <next>" text on the right reads as an action; the same
+  preference is also exposed as a segmented control in Settings →
+  Home Screen.
+
+### Carousel position is a user preference, not hardcoded
+
+The ADR said "v1 hard-codes the position above TIH." We implemented a
+`homeTrendingAboveToday` boolean instead, because once we had it
+running it was obvious that someone who prefers date-context-first
+(Today in History) over discovery-first (Trending) shouldn't have to
+wait for a "reorderable home modules" feature to flip it.
+
+Default flipped to **Trending below Today** mid-build, based on
+preference for the date-centric Today section anchoring the screen.
+
+### Per-section card sizing
+
+The Trending carousel surfaces 10 items, vs Today (typically 1-3) and
+Collections (a handful). At the default 160pt card width, Trending
+visually dominated the screen — every other section was "scroll past
+this." Solution: each carousel has its own card-size preference
+(`small` / `large`). Trending defaults to small (100pt, date-only
+caption); Today and Collections stay at 160pt. All three are
+user-overridable in Settings → Home Screen.
+
+This is a UI-only knob, not a data concern. Worth recording because
+it surfaces a pattern: the right "compactness" of a carousel is a
+function of how many things are in it and how unique each one is.
+Recently-played-by-this-user (always-relevant) and trending-shows
+(many, mostly-unknown-to-this-user) shouldn't get the same real
+estate per item.
+
+### Long-press preview parity
+
+Recently Played had a long-press detail popover from day one. Today
+and Trending did not. Added bottom-sheet (Android) and contextMenu
+preview (iOS) handlers for parity — users who long-press one show
+card now get the same detail surface on all three sections. Cheap
+to do and the inconsistency was confusing.
+
+### Settings grouping + reset
+
+All six home preferences (window, above-Today, recent rows, three card
+sizes) now live under a dedicated "Home Screen" section in Settings,
+with a "Reset Home Screen to Defaults" action at the bottom. The
+density of home knobs reached a tipping point during this round; one
+big "Preferences" section was getting hard to scan.
+
 ## References
 
 - `api-data/analytics.db` — production analytics database (pulled via
