@@ -1,9 +1,5 @@
 import type { FastifyInstance } from "fastify";
-import {
-  backfillShowPlaysIfEmpty,
-  getTrending,
-  rollupShowPlaysDay,
-} from "../db/analytics.js";
+import { getTrending, rebuildShowListensRollup } from "../db/analytics.js";
 import { getPublisher } from "../db/redis.js";
 
 const CACHE_KEY = "trending:v1";
@@ -14,8 +10,9 @@ const trendingShowSchema = {
   type: "object",
   properties: {
     show_id: { type: "string" },
-    sessions: { type: "number" },
+    listens: { type: "number" },
     plays: { type: "number" },
+    installs: { type: "number" },
   },
 } as const;
 
@@ -28,7 +25,8 @@ export async function trendingRoutes(app: FastifyInstance): Promise<void> {
         summary: "Trending shows for the home screen",
         description:
           "Returns four time windows (now=24h, week, month, all-time) of " +
-          "the most-played shows. Cached for 10 minutes in Redis.",
+          "the most-played shows ranked by logical listens. Cached for 10 " +
+          "minutes in Redis. See ADR-0004 for the ranking algorithm.",
         response: {
           200: {
             type: "object",
@@ -50,7 +48,7 @@ export async function trendingRoutes(app: FastifyInstance): Promise<void> {
     },
     async (_request, reply) => {
       // Try Redis first. Failure (no Redis available, network blip) falls
-      // through to a direct query — better to be uncached than to 500.
+      // through to the rollup table — better to be uncached than to 500.
       try {
         const cached = await getPublisher().get(CACHE_KEY);
         if (cached) {
@@ -58,7 +56,7 @@ export async function trendingRoutes(app: FastifyInstance): Promise<void> {
           return reply.type("application/json").send(cached);
         }
       } catch {
-        // Fall through to direct query.
+        // Fall through to rollup read.
       }
 
       const fresh = getTrending(TRENDING_LIMIT);
@@ -79,20 +77,16 @@ export async function trendingRoutes(app: FastifyInstance): Promise<void> {
 // ── Scheduled tasks (call from server.ts) ────────────────────────────
 
 /**
- * Rolls up today + yesterday on startup, then once per hour. Yesterday is
- * re-rolled to catch any late-arriving events that landed after midnight UTC.
- * Today's row is the one that actually drives the week/month/all windows
- * being fresh on the home screen.
+ * Rebuilds `show_listens_rollup` from raw events at startup, then once per
+ * hour. The rebuild is the entire job — there's no incremental path. At
+ * current scale (~7k playback_start events) the scan is milliseconds; at
+ * 100× scale it's still single-digit seconds in a background tick. The
+ * endpoint never queries `analytics_events`.
  */
 export function startTrendingSchedules(): void {
   const runRollup = (): void => {
     try {
-      const today = new Date().toISOString().slice(0, 10);
-      const yesterday = new Date(Date.now() - 24 * 3600 * 1000)
-        .toISOString()
-        .slice(0, 10);
-      rollupShowPlaysDay(yesterday);
-      rollupShowPlaysDay(today);
+      rebuildShowListensRollup();
       // Bust cache so the next request reflects the fresh rollup.
       getPublisher()
         .del(CACHE_KEY)
@@ -101,18 +95,6 @@ export function startTrendingSchedules(): void {
       console.error("Trending rollup error:", err);
     }
   };
-
-  // First-run backfill: if show_plays_daily is empty, populate it from
-  // every day present in analytics_events. Self-healing — drop the table
-  // and restart to re-roll history.
-  try {
-    const filled = backfillShowPlaysIfEmpty();
-    if (filled > 0) {
-      console.log(`[trending] backfilled ${filled} day(s) of show plays`);
-    }
-  } catch (err) {
-    console.error("Trending backfill error:", err);
-  }
 
   runRollup();
   setInterval(runRollup, 3600_000).unref();

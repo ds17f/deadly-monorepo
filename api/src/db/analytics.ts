@@ -78,14 +78,24 @@ function initSchema(db: Database.Database): void {
       PRIMARY KEY (day, event, platform, app_version)
     );
 
-    CREATE TABLE IF NOT EXISTS show_plays_daily (
-      day TEXT NOT NULL,
+    -- Pre-computed top-N per window for the trending endpoint. Fully
+    -- rebuilt by rebuildShowListensRollup() each hour from analytics_events,
+    -- so the endpoint never queries raw events. Replaces the day-keyed
+    -- show_plays_daily table — see ADR-0004 for why session-based dedup was
+    -- replaced with logical-listen aggregation.
+    CREATE TABLE IF NOT EXISTS show_listens_rollup (
+      window TEXT NOT NULL,         -- 'now' | 'week' | 'month' | 'all'
       show_id TEXT NOT NULL,
-      sessions INTEGER NOT NULL,
-      plays INTEGER NOT NULL,
-      PRIMARY KEY (day, show_id)
+      listens INTEGER NOT NULL,     -- logical listens (dedup-aware)
+      plays INTEGER NOT NULL,       -- raw playback_start count in window
+      installs INTEGER NOT NULL,    -- distinct iids contributing
+      PRIMARY KEY (window, show_id)
     );
-    CREATE INDEX IF NOT EXISTS idx_show_plays_day ON show_plays_daily(day);
+    CREATE INDEX IF NOT EXISTS idx_show_listens_window ON show_listens_rollup(window);
+
+    -- One-shot migration: the old day-keyed table is no longer load-bearing.
+    -- Listings are now rebuilt from raw events on every rollup tick.
+    DROP TABLE IF EXISTS show_plays_daily;
 
     CREATE TABLE IF NOT EXISTS watched_installs (
       iid TEXT PRIMARY KEY,
@@ -1732,8 +1742,13 @@ export function getInstallEvents(iid: string): InstallSummary | null {
 
 export interface TrendingShow {
   show_id: string;
-  sessions: number;
+  /** Logical listens — runs of plays from one install on one show, deduped
+   *  across app restarts. Primary ranking signal. See ADR-0004. */
+  listens: number;
+  /** Raw playback_start count in the window. Engagement-weighted secondary. */
   plays: number;
+  /** Distinct installs that contributed any play to this show in the window. */
+  installs: number;
 }
 
 export interface TrendingResponse {
@@ -1747,133 +1762,121 @@ export interface TrendingResponse {
 }
 
 /**
- * Upserts a day's row in `show_plays_daily` from raw events. Called hourly for
- * today, once at startup for yesterday. "Day" is UTC-aligned to match the
- * `date(ts/1000, 'unixepoch')` expression used everywhere else in this file.
- *
- * `sessions` counts distinct (iid, sid) tuples for the day — one app session
- * sitting down to play a show counts once, regardless of how many tracks they
- * played through. `plays` is the raw track-start count.
+ * Logical-listen rollup window definitions. `sinceMs` is computed against
+ * Date.now() at rebuild time; "all" uses 0 to mean "since the epoch".
  */
-export function rollupShowPlaysDay(day: string): void {
+const TRENDING_WINDOWS = ["now", "week", "month", "all"] as const;
+type TrendingWindowName = (typeof TRENDING_WINDOWS)[number];
+
+function windowSinceMs(name: TrendingWindowName, now: number): number {
+  switch (name) {
+    case "now":   return now - 24 * 3600 * 1000;
+    case "week":  return now -  7 * 24 * 3600 * 1000;
+    case "month": return now - 30 * 24 * 3600 * 1000;
+    case "all":   return 0;
+  }
+}
+
+/** Gap that splits two same-show plays into separate logical listens. */
+const LISTEN_GAP_MS = 6 * 3600 * 1000;
+
+/** How many shows we cache per window. UI serves a smaller `limit` slice. */
+const ROLLUP_PER_WINDOW = 50;
+
+/**
+ * Rebuild `show_listens_rollup` from raw events for all four windows.
+ *
+ * Ranking primitive is a **logical listen** — a maximal run of
+ * `playback_start` events from one install on one show, broken by either
+ * (a) a play of a *different* show in between, or (b) a gap of more than
+ * `LISTEN_GAP_MS`. This dedupes the case where the same listener stops
+ * and restarts the same show within one sitting (which the previous
+ * session-based primitive counted as multiple votes — see ADR-0004).
+ *
+ * Runs hourly in a background job. The endpoint never touches raw events;
+ * it just reads precomputed top-N rows from this table.
+ */
+export function rebuildShowListensRollup(): void {
   const db = getAnalyticsDb();
-  db.prepare(`
-    DELETE FROM show_plays_daily WHERE day = ?
-  `).run(day);
-  db.prepare(`
-    INSERT INTO show_plays_daily (day, show_id, sessions, plays)
+  const now = Date.now();
+
+  // SQL inserts the top-N for one window, given (gap, windowName, sinceMs, limit).
+  // The LAG scan runs over the full event history (no `ts >` filter), so
+  // listen-start detection is correct even when a listen straddles the
+  // window boundary; the WHERE on `ts > sinceMs` filters which listen-start
+  // events count toward this window.
+  const insertWindow = db.prepare(`
+    INSERT INTO show_listens_rollup (window, show_id, listens, plays, installs)
+    WITH plays AS (
+      SELECT iid,
+             json_extract(props, '$.show_id') AS show_id,
+             ts,
+             LAG(json_extract(props, '$.show_id')) OVER w AS prev_show,
+             LAG(ts)                              OVER w AS prev_ts
+      FROM analytics_events
+      WHERE event = 'playback_start'
+        AND json_extract(props, '$.show_id') IS NOT NULL
+      WINDOW w AS (PARTITION BY iid ORDER BY ts)
+    ),
+    listens AS (
+      SELECT iid, show_id, ts,
+             CASE
+               WHEN prev_show IS NULL
+                 OR prev_show != show_id
+                 OR (ts - prev_ts) > ?
+               THEN 1 ELSE 0
+             END AS is_new
+      FROM plays
+    )
     SELECT
-      date(ts / 1000, 'unixepoch') AS day,
-      json_extract(props, '$.show_id') AS show_id,
-      COUNT(DISTINCT iid || '|' || sid) AS sessions,
-      COUNT(*) AS plays
-    FROM analytics_events
-    WHERE event = 'playback_start'
-      AND date(ts / 1000, 'unixepoch') = ?
-      AND json_extract(props, '$.show_id') IS NOT NULL
-    GROUP BY day, show_id
-  `).run(day);
+      ?         AS window,
+      show_id,
+      SUM(is_new)         AS listens,
+      COUNT(*)            AS plays,
+      COUNT(DISTINCT iid) AS installs
+    FROM listens
+    WHERE ts > ?
+    GROUP BY show_id
+    HAVING SUM(is_new) > 0
+    ORDER BY listens DESC, plays DESC
+    LIMIT ?
+  `);
+
+  const tx = db.transaction(() => {
+    db.exec(`DELETE FROM show_listens_rollup`);
+    for (const name of TRENDING_WINDOWS) {
+      insertWindow.run(LISTEN_GAP_MS, name, windowSinceMs(name, now), ROLLUP_PER_WINDOW);
+    }
+  });
+  tx();
 }
 
 /**
- * Trending shows across four time windows. Used by the home screen.
- *
- * The "now" window is rolling 24h queried directly from analytics_events,
- * so it stays current between hourly rollups. The other windows aggregate
- * from `show_plays_daily`, summing per show. Summing sessions across days
- * slightly overcounts because a single human spanning multiple days is
- * counted per day — that's an engagement-weighted signal we prefer for
- * ranking, per ADR-0004.
+ * Trending shows across four time windows. Reads precomputed rows from
+ * `show_listens_rollup` — no event scan, no Redis round-trip — so it's
+ * cheap even under traffic spikes.
  */
 export function getTrending(limit = 10): TrendingResponse {
   const db = getAnalyticsDb();
-  const now = Date.now();
-  const dayAgo = now - 24 * 3600 * 1000;
-  const weekStart = todayUtcMinusDays(6); // inclusive of today = 7 days
-  const monthStart = todayUtcMinusDays(29);
-
-  const nowRows = db
-    .prepare(
-      `SELECT
-         json_extract(props, '$.show_id') AS show_id,
-         COUNT(DISTINCT iid || '|' || sid) AS sessions,
-         COUNT(*) AS plays
-       FROM analytics_events
-       WHERE event = 'playback_start'
-         AND ts > ?
-         AND json_extract(props, '$.show_id') IS NOT NULL
-       GROUP BY show_id
-       ORDER BY sessions DESC, plays DESC
-       LIMIT ?`,
-    )
-    .all(dayAgo, limit) as TrendingShow[];
-
-  const weekRows = trendingFromRollup(weekStart, limit);
-  const monthRows = trendingFromRollup(monthStart, limit);
-  const allRows = trendingFromRollup(null, limit);
+  const stmt = db.prepare(
+    `SELECT show_id, listens, plays, installs
+     FROM show_listens_rollup
+     WHERE window = ?
+     ORDER BY listens DESC, plays DESC
+     LIMIT ?`,
+  );
+  const fetch = (name: TrendingWindowName): TrendingShow[] =>
+    stmt.all(name, limit) as TrendingShow[];
 
   return {
-    generated_at: new Date(now).toISOString(),
+    generated_at: new Date().toISOString(),
     windows: {
-      now: nowRows,
-      week: weekRows,
-      month: monthRows,
-      all: allRows,
+      now: fetch("now"),
+      week: fetch("week"),
+      month: fetch("month"),
+      all: fetch("all"),
     },
   };
-}
-
-/**
- * Backfill any day present in analytics_events that has no rows in
- * show_plays_daily yet. Runs every startup — cheap when there's nothing
- * to do, self-heals after `make db-pull-analytics` or any other event
- * that introduces historical days the rollup never saw.
- *
- * Returns the number of days rolled up (0 = nothing to backfill).
- */
-export function backfillShowPlaysIfEmpty(): number {
-  const db = getAnalyticsDb();
-
-  const missingDays = db
-    .prepare(
-      `SELECT DISTINCT date(e.ts / 1000, 'unixepoch') AS day
-       FROM analytics_events e
-       WHERE e.event = 'playback_start'
-         AND json_extract(e.props, '$.show_id') IS NOT NULL
-         AND NOT EXISTS (
-           SELECT 1 FROM show_plays_daily r
-           WHERE r.day = date(e.ts / 1000, 'unixepoch')
-         )
-       ORDER BY day`,
-    )
-    .all() as Array<{ day: string }>;
-
-  for (const { day } of missingDays) rollupShowPlaysDay(day);
-  return missingDays.length;
-}
-
-function trendingFromRollup(sinceDay: string | null, limit: number): TrendingShow[] {
-  const db = getAnalyticsDb();
-  const where = sinceDay ? "WHERE day >= ?" : "";
-  const params: (string | number)[] = sinceDay ? [sinceDay, limit] : [limit];
-  return db
-    .prepare(
-      `SELECT show_id,
-              SUM(sessions) AS sessions,
-              SUM(plays) AS plays
-       FROM show_plays_daily
-       ${where}
-       GROUP BY show_id
-       ORDER BY sessions DESC, plays DESC
-       LIMIT ?`,
-    )
-    .all(...params) as TrendingShow[];
-}
-
-function todayUtcMinusDays(daysBack: number): string {
-  const d = new Date();
-  d.setUTCDate(d.getUTCDate() - daysBack);
-  return d.toISOString().slice(0, 10);
 }
 
 // ── Cleanup ──────────────────────────────────────────────────────────
