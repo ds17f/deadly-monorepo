@@ -36,6 +36,7 @@ fun SettingsScreen(
     val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
+    val homeTrendingWindow by viewModel.homeTrendingWindow.collectAsState()
     val authState by viewModel.authState.collectAsState()
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
@@ -138,6 +139,13 @@ fun SettingsScreen(
             PlayerControlsStyleRow(
                 currentStyle = PlayerControlsStyle.fromString(playerControlsStyle),
                 onStyleSelected = { viewModel.setPlayerControlsStyle(it.name) }
+            )
+        }
+
+        item {
+            HomeTrendingWindowRow(
+                currentKey = homeTrendingWindow,
+                onSelected = { viewModel.setHomeTrendingWindow(it) }
             )
         }
 
@@ -525,6 +533,46 @@ private fun PlayerControlsStyleRow(
 }
 
 // ── Source badge style selector ──────────────────────────────────────────────
+
+@Composable
+private fun HomeTrendingWindowRow(
+    currentKey: String,
+    onSelected: (String) -> Unit
+) {
+    val options = listOf(
+        "now" to "24h",
+        "week" to "Week",
+        "month" to "Month",
+        "all" to "All-Time",
+    )
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Trending window on home", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "Which time range \"Trending on The Deadly\" shows",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            options.forEachIndexed { index, (key, label) ->
+                SegmentedButton(
+                    selected = currentKey == key,
+                    onClick = { onSelected(key) },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index,
+                        count = options.size
+                    )
+                ) {
+                    Text(label)
+                }
+            }
+        }
+    }
+}
 
 @Composable
 private fun SourceBadgeStyleRow(

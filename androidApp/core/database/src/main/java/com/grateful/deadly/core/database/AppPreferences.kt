@@ -53,6 +53,19 @@ class AppPreferences @Inject constructor(
         private const val KEY_HAS_ADDED_FAVORITE = "has_added_favorite"
         private const val KEY_DEVELOPER_MODE_UNLOCKED = "developer_mode_unlocked"
         private const val KEY_PLAYER_CONTROLS_STYLE = "player_controls_style"
+        private const val KEY_HOME_TRENDING_WINDOW = "home_trending_window"
+    }
+
+    private val _homeTrendingWindow = MutableStateFlow(
+        prefs.getString(KEY_HOME_TRENDING_WINDOW, null) ?: "now"
+    )
+
+    /** Which trending window the home screen shows. One of "now"/"week"/"month"/"all". */
+    val homeTrendingWindow: StateFlow<String> = _homeTrendingWindow.asStateFlow()
+
+    fun setHomeTrendingWindow(value: String) {
+        prefs.edit().putString(KEY_HOME_TRENDING_WINDOW, value).apply()
+        _homeTrendingWindow.value = value
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(

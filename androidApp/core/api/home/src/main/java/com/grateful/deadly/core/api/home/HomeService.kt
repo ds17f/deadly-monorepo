@@ -38,6 +38,10 @@ data class HomeContent(
     val recentShows: List<Show>,
     val todayInHistory: List<Show>,
     val featuredCollections: List<DeadCollection>,
+    /** Shows for the user's currently-selected trending window. */
+    val trendingShows: List<Show>,
+    /** Which window [trendingShows] came from — drives section subtitle / docs. */
+    val trendingWindow: TrendingWindow,
     val lastRefresh: Long
 ) {
     companion object {
@@ -45,6 +49,8 @@ data class HomeContent(
             recentShows = emptyList(),
             todayInHistory = emptyList(),
             featuredCollections = emptyList(),
+            trendingShows = emptyList(),
+            trendingWindow = TrendingWindow.NOW,
             lastRefresh = 0L
         )
     }

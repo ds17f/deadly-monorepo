@@ -3,8 +3,11 @@ package com.grateful.deadly.core.home
 import android.util.Log
 import com.grateful.deadly.core.api.home.HomeService
 import com.grateful.deadly.core.api.home.HomeContent
+import com.grateful.deadly.core.api.home.TrendingService
+import com.grateful.deadly.core.api.home.TrendingWindow
 import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.api.collections.DeadCollectionsService
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.*
 import kotlinx.coroutines.CoroutineScope
@@ -35,7 +38,9 @@ import javax.inject.Singleton
 class HomeServiceImpl @Inject constructor(
     private val showRepository: ShowRepository,
     private val recentShowsService: RecentShowsService,
-    private val collectionsService: DeadCollectionsService
+    private val collectionsService: DeadCollectionsService,
+    private val trendingService: TrendingService,
+    private val appPreferences: AppPreferences
 ) : HomeService {
     
     companion object {
@@ -48,12 +53,17 @@ class HomeServiceImpl @Inject constructor(
     override val homeContent: StateFlow<HomeContent> = combine(
         recentShowsService.recentShows,
         loadTodayInHistoryFlow(),
-        collectionsService.featuredCollections
-    ) { recentShows, todayInHistory, featuredCollections ->
+        collectionsService.featuredCollections,
+        trendingService.trending,
+        appPreferences.homeTrendingWindow
+    ) { recentShows, todayInHistory, featuredCollections, trending, windowKey ->
+        val window = parseWindow(windowKey)
         HomeContent(
             recentShows = recentShows,
             todayInHistory = todayInHistory,
             featuredCollections = featuredCollections,
+            trendingShows = trending.forWindow(window),
+            trendingWindow = window,
             lastRefresh = System.currentTimeMillis()
         )
     }.stateIn(
@@ -64,6 +74,13 @@ class HomeServiceImpl @Inject constructor(
     
     init {
         Log.d(TAG, "HomeServiceImpl initialized with reactive RecentShowsService integration")
+    }
+
+    private fun parseWindow(key: String): TrendingWindow = when (key) {
+        "week" -> TrendingWindow.WEEK
+        "month" -> TrendingWindow.MONTH
+        "all" -> TrendingWindow.ALL
+        else -> TrendingWindow.NOW
     }
     
     /**

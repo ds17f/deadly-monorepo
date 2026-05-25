@@ -13,6 +13,7 @@ import com.grateful.deadly.feature.home.screens.main.components.HorizontalCollec
 import com.grateful.deadly.feature.home.screens.main.components.HorizontalCollectionItem
 import com.grateful.deadly.feature.home.screens.main.components.CollectionItemType
 import com.grateful.deadly.feature.home.screens.main.components.RecentShowsGrid
+import com.grateful.deadly.feature.home.screens.main.components.TrendingNowSection
 
 /**
  * HomeScreen - Rich home interface with content discovery
@@ -62,6 +63,15 @@ fun HomeScreen(
                     }
                 )
             }
+        }
+
+        // Trending Section — above Today In History per ADR-0004
+        item {
+            TrendingNowSection(
+                shows = uiState.homeContent.trendingShows,
+                window = uiState.homeContent.trendingWindow,
+                onShowClick = { show -> onNavigateToShow(show.id) },
+            )
         }
 
         // Today In Grateful Dead History Section

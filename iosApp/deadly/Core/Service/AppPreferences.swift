@@ -19,6 +19,7 @@ final class AppPreferences {
     private static let analyticsEnabledKey = "analytics_enabled"
     private static let installIdKey = "install_id"
     private static let playerControlsStyleKey = "player_controls_style"
+    private static let homeTrendingWindowKey = "home_trending_window"
 
     /// Server environment: "prod", "beta", or "custom".
     var serverEnvironment: String {
@@ -97,6 +98,11 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(playerControlsStyle, forKey: Self.playerControlsStyleKey) }
     }
 
+    /// Which trending window the home screen shows: "now"/"week"/"month"/"all".
+    var homeTrendingWindow: String {
+        didSet { UserDefaults.standard.set(homeTrendingWindow, forKey: Self.homeTrendingWindowKey) }
+    }
+
     /// Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles.
     let installId: String
 
@@ -118,6 +124,7 @@ final class AppPreferences {
             Self.shareAttachImageKey: false,
             Self.sourceBadgeStyleKey: "LONG",
             Self.playerControlsStyleKey: "skipTrack",
+            Self.homeTrendingWindowKey: "now",
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
@@ -138,6 +145,7 @@ final class AppPreferences {
         shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
         playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
+        homeTrendingWindow = UserDefaults.standard.string(forKey: Self.homeTrendingWindowKey) ?? "now"
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)

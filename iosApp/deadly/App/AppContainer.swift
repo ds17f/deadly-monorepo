@@ -17,6 +17,7 @@ final class AppContainer {
     let showRepository: any ShowRepository
     let searchService: SearchServiceImpl
     let homeService: HomeServiceImpl
+    let trendingService: TrendingServiceImpl
     let favoritesService: FavoritesServiceImpl
     let collectionsService: CollectionsServiceImpl
     let streamPlayer: StreamPlayer
@@ -156,6 +157,15 @@ final class AppContainer {
                 collectionsDAO: CollectionsDAO(database: db),
                 recentShowsService: recentService
             )
+
+            // Trending pulls from /api/trending and resolves IDs against
+            // the local show catalog. @MainActor; safe to init inline.
+            trendingService = MainActor.assumeIsolated {
+                TrendingServiceImpl(
+                    appPreferences: prefs,
+                    showRepository: showRepo
+                )
+            }
 
             let archive = URLSessionArchiveMetadataClient()
             archiveClient = archive

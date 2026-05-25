@@ -44,6 +44,7 @@ dependencies {
     implementation(project(":core:api:recent"))
     implementation(project(":core:model"))
     implementation(project(":core:domain"))
+    implementation(project(":core:database"))
     
     // Hilt
     implementation("com.google.dagger:hilt-android:2.56.1")

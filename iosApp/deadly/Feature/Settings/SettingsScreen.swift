@@ -181,6 +181,29 @@ struct SettingsScreen: View {
                         .font(.callout)
                         .foregroundStyle(.secondary)
                 }
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Trending window on home")
+                    Picker("Trending window on home", selection: Binding(
+                        get: { TrendingWindow(preferenceKey: container.appPreferences.homeTrendingWindow) },
+                        set: { newWindow in
+                            container.appPreferences.homeTrendingWindow = newWindow.rawValue
+                            container.analyticsService.track("feature_use", props: [
+                                "feature": "set_home_trending_window",
+                                "category": "preference",
+                                "value": newWindow.rawValue,
+                            ])
+                        }
+                    )) {
+                        ForEach(TrendingWindow.allCases) { window in
+                            Text(window.label).tag(window)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    Text("Which time range \"Trending on The Deadly\" shows.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             // MARK: - Audio

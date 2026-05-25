@@ -99,6 +99,17 @@ class SettingsViewModel @Inject constructor(
         ))
     }
 
+    val homeTrendingWindow: StateFlow<String> = appPreferences.homeTrendingWindow
+
+    fun setHomeTrendingWindow(value: String) {
+        appPreferences.setHomeTrendingWindow(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_trending_window",
+            "category" to "preference",
+            "value" to value,
+        ))
+    }
+
     val authState: StateFlow<AuthState> = authService.authState
 
     val useBetaMode: StateFlow<Boolean> = appPreferences.useBetaModeFlow

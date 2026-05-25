@@ -4,13 +4,25 @@ struct HomeScreen: View {
     @Environment(\.appContainer) private var container
 
     private var homeService: HomeServiceImpl { container.homeService }
+    private var trendingService: TrendingServiceImpl { container.trendingService }
+    private var appPreferences: AppPreferences { container.appPreferences }
     private var content: HomeContent { homeService.content }
+    private var trendingWindow: TrendingWindow {
+        TrendingWindow(preferenceKey: appPreferences.homeTrendingWindow)
+    }
+    private var trendingShows: [Show] {
+        trendingService.content.shows(for: trendingWindow)
+    }
 
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: DeadlySpacing.sectionSpacing) {
                 if !content.recentShows.isEmpty {
                     recentShowsSection
+                }
+
+                if !trendingShows.isEmpty {
+                    trendingSection
                 }
 
                 if !content.todayInHistory.isEmpty {
@@ -28,7 +40,40 @@ struct HomeScreen: View {
             .padding(DeadlySpacing.screenPadding)
         }
         .navigationBarTitleDisplayMode(.inline)
-        .task { await homeService.refresh() }
+        .task {
+            await homeService.refresh()
+            await trendingService.refresh()
+        }
+    }
+
+    // MARK: - Trending
+
+    private var trendingSection: some View {
+        VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
+            Text("Trending on The Deadly")
+                .font(.title2)
+                .fontWeight(.bold)
+
+            Text(trendingWindow.subtitle)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(spacing: DeadlySpacing.itemSpacing) {
+                    ForEach(trendingShows) { show in
+                        NavigationLink(value: show.id) {
+                            ShowCarouselCard(
+                                imageRecordingId: show.bestRecordingId,
+                                imageUrl: show.coverImageUrl,
+                                lines: [show.date, show.venue.name, show.location.displayText],
+                                recordingCount: show.recordingCount
+                            )
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+            }
+        }
     }
 
     // MARK: - Sections
