@@ -78,6 +78,15 @@ function initSchema(db: Database.Database): void {
       PRIMARY KEY (day, event, platform, app_version)
     );
 
+    CREATE TABLE IF NOT EXISTS show_plays_daily (
+      day TEXT NOT NULL,
+      show_id TEXT NOT NULL,
+      sessions INTEGER NOT NULL,
+      plays INTEGER NOT NULL,
+      PRIMARY KEY (day, show_id)
+    );
+    CREATE INDEX IF NOT EXISTS idx_show_plays_day ON show_plays_daily(day);
+
     CREATE TABLE IF NOT EXISTS watched_installs (
       iid TEXT PRIMARY KEY,
       name TEXT,
@@ -1717,6 +1726,153 @@ export function getInstallEvents(iid: string): InstallSummary | null {
   `).all(iid) as InstallEvent[];
 
   return { ...summary, events };
+}
+
+// ── Trending shows ──────────────────────────────────────────────────
+
+export interface TrendingShow {
+  show_id: string;
+  sessions: number;
+  plays: number;
+}
+
+export interface TrendingResponse {
+  generated_at: string;
+  windows: {
+    now: TrendingShow[];
+    week: TrendingShow[];
+    month: TrendingShow[];
+    all: TrendingShow[];
+  };
+}
+
+/**
+ * Upserts a day's row in `show_plays_daily` from raw events. Called hourly for
+ * today, once at startup for yesterday. "Day" is UTC-aligned to match the
+ * `date(ts/1000, 'unixepoch')` expression used everywhere else in this file.
+ *
+ * `sessions` counts distinct (iid, sid) tuples for the day — one app session
+ * sitting down to play a show counts once, regardless of how many tracks they
+ * played through. `plays` is the raw track-start count.
+ */
+export function rollupShowPlaysDay(day: string): void {
+  const db = getAnalyticsDb();
+  db.prepare(`
+    DELETE FROM show_plays_daily WHERE day = ?
+  `).run(day);
+  db.prepare(`
+    INSERT INTO show_plays_daily (day, show_id, sessions, plays)
+    SELECT
+      date(ts / 1000, 'unixepoch') AS day,
+      json_extract(props, '$.show_id') AS show_id,
+      COUNT(DISTINCT iid || '|' || sid) AS sessions,
+      COUNT(*) AS plays
+    FROM analytics_events
+    WHERE event = 'playback_start'
+      AND date(ts / 1000, 'unixepoch') = ?
+      AND json_extract(props, '$.show_id') IS NOT NULL
+    GROUP BY day, show_id
+  `).run(day);
+}
+
+/**
+ * Trending shows across four time windows. Used by the home screen.
+ *
+ * The "now" window is rolling 24h queried directly from analytics_events,
+ * so it stays current between hourly rollups. The other windows aggregate
+ * from `show_plays_daily`, summing per show. Summing sessions across days
+ * slightly overcounts because a single human spanning multiple days is
+ * counted per day — that's an engagement-weighted signal we prefer for
+ * ranking, per ADR-0004.
+ */
+export function getTrending(limit = 10): TrendingResponse {
+  const db = getAnalyticsDb();
+  const now = Date.now();
+  const dayAgo = now - 24 * 3600 * 1000;
+  const weekStart = todayUtcMinusDays(6); // inclusive of today = 7 days
+  const monthStart = todayUtcMinusDays(29);
+
+  const nowRows = db
+    .prepare(
+      `SELECT
+         json_extract(props, '$.show_id') AS show_id,
+         COUNT(DISTINCT iid || '|' || sid) AS sessions,
+         COUNT(*) AS plays
+       FROM analytics_events
+       WHERE event = 'playback_start'
+         AND ts > ?
+         AND json_extract(props, '$.show_id') IS NOT NULL
+       GROUP BY show_id
+       ORDER BY sessions DESC, plays DESC
+       LIMIT ?`,
+    )
+    .all(dayAgo, limit) as TrendingShow[];
+
+  const weekRows = trendingFromRollup(weekStart, limit);
+  const monthRows = trendingFromRollup(monthStart, limit);
+  const allRows = trendingFromRollup(null, limit);
+
+  return {
+    generated_at: new Date(now).toISOString(),
+    windows: {
+      now: nowRows,
+      week: weekRows,
+      month: monthRows,
+      all: allRows,
+    },
+  };
+}
+
+/**
+ * One-shot backfill: rolls up every distinct day present in
+ * analytics_events. No-op if show_plays_daily already has rows. Returns
+ * the number of days rolled (0 means already populated). Intended to
+ * run once at startup so /api/trending isn't blank against a freshly
+ * pulled prod DB.
+ */
+export function backfillShowPlaysIfEmpty(): number {
+  const db = getAnalyticsDb();
+  const existing = db
+    .prepare(`SELECT COUNT(*) AS c FROM show_plays_daily`)
+    .get() as { c: number };
+  if (existing.c > 0) return 0;
+
+  const days = db
+    .prepare(
+      `SELECT DISTINCT date(ts / 1000, 'unixepoch') AS day
+       FROM analytics_events
+       WHERE event = 'playback_start'
+         AND json_extract(props, '$.show_id') IS NOT NULL
+       ORDER BY day`,
+    )
+    .all() as Array<{ day: string }>;
+
+  for (const { day } of days) rollupShowPlaysDay(day);
+  return days.length;
+}
+
+function trendingFromRollup(sinceDay: string | null, limit: number): TrendingShow[] {
+  const db = getAnalyticsDb();
+  const where = sinceDay ? "WHERE day >= ?" : "";
+  const params: (string | number)[] = sinceDay ? [sinceDay, limit] : [limit];
+  return db
+    .prepare(
+      `SELECT show_id,
+              SUM(sessions) AS sessions,
+              SUM(plays) AS plays
+       FROM show_plays_daily
+       ${where}
+       GROUP BY show_id
+       ORDER BY sessions DESC, plays DESC
+       LIMIT ?`,
+    )
+    .all(...params) as TrendingShow[];
+}
+
+function todayUtcMinusDays(daysBack: number): string {
+  const d = new Date();
+  d.setUTCDate(d.getUTCDate() - daysBack);
+  return d.toISOString().slice(0, 10);
 }
 
 // ── Cleanup ──────────────────────────────────────────────────────────
