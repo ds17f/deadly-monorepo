@@ -54,6 +54,19 @@ class AppPreferences @Inject constructor(
         private const val KEY_DEVELOPER_MODE_UNLOCKED = "developer_mode_unlocked"
         private const val KEY_PLAYER_CONTROLS_STYLE = "player_controls_style"
         private const val KEY_HOME_TRENDING_WINDOW = "home_trending_window"
+        private const val KEY_HOME_TRENDING_ABOVE_TODAY = "home_trending_above_today"
+    }
+
+    private val _homeTrendingAboveToday = MutableStateFlow(
+        prefs.getBoolean(KEY_HOME_TRENDING_ABOVE_TODAY, true)
+    )
+
+    /** When true, the Trending section renders above Today in History; otherwise below. */
+    val homeTrendingAboveToday: StateFlow<Boolean> = _homeTrendingAboveToday.asStateFlow()
+
+    fun setHomeTrendingAboveToday(value: Boolean) {
+        prefs.edit().putBoolean(KEY_HOME_TRENDING_ABOVE_TODAY, value).apply()
+        _homeTrendingAboveToday.value = value
     }
 
     private val _homeTrendingWindow = MutableStateFlow(

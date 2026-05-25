@@ -6,19 +6,20 @@ enum TrendingWindow: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .now: return "24h"
+        case .now: return "Day"
         case .week: return "Week"
         case .month: return "Month"
-        case .all: return "All-Time"
+        case .all: return "All"
         }
     }
 
-    var subtitle: String {
+    /// Next window in cycle order. `.all` wraps back to `.now`.
+    var next: TrendingWindow {
         switch self {
-        case .now: return "Last 24 hours"
-        case .week: return "Last 7 days"
-        case .month: return "Last 30 days"
-        case .all: return "All time"
+        case .now: return .week
+        case .week: return .month
+        case .month: return .all
+        case .all: return .now
         }
     }
 

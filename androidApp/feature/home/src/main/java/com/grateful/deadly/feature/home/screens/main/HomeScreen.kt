@@ -65,17 +65,17 @@ fun HomeScreen(
             }
         }
 
-        // Trending Section — above Today In History per ADR-0004
-        item {
+        // Trending + Today In History — order toggled by the
+        // "Show trending above Today" preference.
+        val trendingItem: @Composable () -> Unit = {
             TrendingNowSection(
                 shows = uiState.homeContent.trendingShows,
                 window = uiState.homeContent.trendingWindow,
                 onShowClick = { show -> onNavigateToShow(show.id) },
+                onCycleWindow = { viewModel.cycleTrendingWindow() },
             )
         }
-
-        // Today In Grateful Dead History Section
-        item {
+        val todayItem: @Composable () -> Unit = {
             val todayItems = uiState.homeContent.todayInHistory.map { show ->
                 HorizontalCollectionItem(
                     id = show.id,
@@ -90,11 +90,17 @@ fun HomeScreen(
                 title = "Today In Grateful Dead History",
                 items = todayItems,
                 onItemClick = { item ->
-                    // Find the show and navigate
                     val show = uiState.homeContent.todayInHistory.find { it.id == item.id }
                     show?.let { onNavigateToShow(it.id) }
                 }
             )
+        }
+        if (uiState.homeContent.trendingAboveToday) {
+            item { trendingItem() }
+            item { todayItem() }
+        } else {
+            item { todayItem() }
+            item { trendingItem() }
         }
 
         // Featured Collections Section

@@ -21,12 +21,18 @@ struct HomeScreen: View {
                     recentShowsSection
                 }
 
-                if !trendingShows.isEmpty {
-                    trendingSection
-                }
-
-                if !content.todayInHistory.isEmpty {
-                    carouselSection("Today in Grateful Dead History", shows: content.todayInHistory)
+                // Trending + Today in History — order honors the
+                // "Show trending above Today" preference.
+                if appPreferences.homeTrendingAboveToday {
+                    if !trendingShows.isEmpty { trendingSection }
+                    if !content.todayInHistory.isEmpty {
+                        carouselSection("Today in Grateful Dead History", shows: content.todayInHistory)
+                    }
+                } else {
+                    if !content.todayInHistory.isEmpty {
+                        carouselSection("Today in Grateful Dead History", shows: content.todayInHistory)
+                    }
+                    if !trendingShows.isEmpty { trendingSection }
                 }
 
                 if !content.featuredCollections.isEmpty {
@@ -50,13 +56,29 @@ struct HomeScreen: View {
 
     private var trendingSection: some View {
         VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
-            Text("Trending on The Deadly")
-                .font(.title2)
-                .fontWeight(.bold)
-
-            Text(trendingWindow.subtitle)
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            HStack(spacing: 12) {
+                Text("Trending on The Deadly")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Spacer(minLength: 8)
+                Button {
+                    let next = trendingWindow.next
+                    appPreferences.homeTrendingWindow = next.rawValue
+                    container.analyticsService.track("feature_use", props: [
+                        "feature": "set_home_trending_window",
+                        "category": "preference",
+                        "value": next.rawValue,
+                    ])
+                } label: {
+                    Text(trendingWindow.label)
+                        .font(.headline)
+                        .padding(.horizontal, 14)
+                        .padding(.vertical, 6)
+                        .background(.thinMaterial, in: Capsule())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Trending window: \(trendingWindow.label). Tap to change.")
+            }
 
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: DeadlySpacing.itemSpacing) {

@@ -81,6 +81,11 @@ class HomeViewModel @Inject constructor(
         }
     }
     
+    /** Cycle the trending window forward (Day → Week → Month → All → Day). */
+    fun cycleTrendingWindow() {
+        homeService.cycleTrendingWindow()
+    }
+
     /**
      * Clear error state
      */

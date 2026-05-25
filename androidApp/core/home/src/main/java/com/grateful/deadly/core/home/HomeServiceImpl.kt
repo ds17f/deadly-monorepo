@@ -50,20 +50,29 @@ class HomeServiceImpl @Inject constructor(
     private val serviceScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
     
     // Reactive combination of all home content sources
+    // Pair the two preference flows so the main combine stays at 5 args
+    // (Flow.combine's typed overloads top out at 5).
+    private val trendingPrefs = combine(
+        appPreferences.homeTrendingWindow,
+        appPreferences.homeTrendingAboveToday,
+    ) { windowKey, aboveToday -> windowKey to aboveToday }
+
     override val homeContent: StateFlow<HomeContent> = combine(
         recentShowsService.recentShows,
         loadTodayInHistoryFlow(),
         collectionsService.featuredCollections,
         trendingService.trending,
-        appPreferences.homeTrendingWindow
-    ) { recentShows, todayInHistory, featuredCollections, trending, windowKey ->
-        val window = parseWindow(windowKey)
+        trendingPrefs
+    ) { recentShows, todayInHistory, featuredCollections, trending, prefs ->
+        val (windowKey, aboveToday) = prefs
+        val window = TrendingWindow.fromKey(windowKey)
         HomeContent(
             recentShows = recentShows,
             todayInHistory = todayInHistory,
             featuredCollections = featuredCollections,
             trendingShows = trending.forWindow(window),
             trendingWindow = window,
+            trendingAboveToday = aboveToday,
             lastRefresh = System.currentTimeMillis()
         )
     }.stateIn(
@@ -76,12 +85,6 @@ class HomeServiceImpl @Inject constructor(
         Log.d(TAG, "HomeServiceImpl initialized with reactive RecentShowsService integration")
     }
 
-    private fun parseWindow(key: String): TrendingWindow = when (key) {
-        "week" -> TrendingWindow.WEEK
-        "month" -> TrendingWindow.MONTH
-        "all" -> TrendingWindow.ALL
-        else -> TrendingWindow.NOW
-    }
     
     /**
      * Reactive flow for today in history shows
@@ -109,6 +112,11 @@ class HomeServiceImpl @Inject constructor(
         return showRepository.getShowsForDate(today.monthValue, today.dayOfMonth)
     }
     
+    override fun cycleTrendingWindow() {
+        val current = TrendingWindow.fromKey(appPreferences.homeTrendingWindow.value)
+        appPreferences.setHomeTrendingWindow(current.next().key)
+    }
+
     override suspend fun refreshAll(): Result<Unit> {
         Log.d(TAG, "refreshAll() called - reactive flows will auto-refresh")
         

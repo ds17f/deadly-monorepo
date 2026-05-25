@@ -27,6 +27,9 @@ interface HomeService {
      * @return Result indicating success or failure with error details
      */
     suspend fun refreshAll(): Result<Unit>
+
+    /** Advance the trending window preference one step (Day → Week → Month → All → Day). */
+    fun cycleTrendingWindow()
 }
 
 /**
@@ -42,6 +45,8 @@ data class HomeContent(
     val trendingShows: List<Show>,
     /** Which window [trendingShows] came from — drives section subtitle / docs. */
     val trendingWindow: TrendingWindow,
+    /** When true, Trending renders above Today in History; otherwise below. */
+    val trendingAboveToday: Boolean,
     val lastRefresh: Long
 ) {
     companion object {
@@ -51,6 +56,7 @@ data class HomeContent(
             featuredCollections = emptyList(),
             trendingShows = emptyList(),
             trendingWindow = TrendingWindow.NOW,
+            trendingAboveToday = true,
             lastRefresh = 0L
         )
     }

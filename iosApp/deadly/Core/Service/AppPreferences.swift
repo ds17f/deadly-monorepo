@@ -20,6 +20,7 @@ final class AppPreferences {
     private static let installIdKey = "install_id"
     private static let playerControlsStyleKey = "player_controls_style"
     private static let homeTrendingWindowKey = "home_trending_window"
+    private static let homeTrendingAboveTodayKey = "home_trending_above_today"
 
     /// Server environment: "prod", "beta", or "custom".
     var serverEnvironment: String {
@@ -103,6 +104,11 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(homeTrendingWindow, forKey: Self.homeTrendingWindowKey) }
     }
 
+    /// When true, Trending renders above Today in History; otherwise below.
+    var homeTrendingAboveToday: Bool {
+        didSet { UserDefaults.standard.set(homeTrendingAboveToday, forKey: Self.homeTrendingAboveTodayKey) }
+    }
+
     /// Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles.
     let installId: String
 
@@ -125,6 +131,7 @@ final class AppPreferences {
             Self.sourceBadgeStyleKey: "LONG",
             Self.playerControlsStyleKey: "skipTrack",
             Self.homeTrendingWindowKey: "now",
+            Self.homeTrendingAboveTodayKey: true,
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
@@ -146,6 +153,7 @@ final class AppPreferences {
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
         playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
         homeTrendingWindow = UserDefaults.standard.string(forKey: Self.homeTrendingWindowKey) ?? "now"
+        homeTrendingAboveToday = UserDefaults.standard.bool(forKey: Self.homeTrendingAboveTodayKey)
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)

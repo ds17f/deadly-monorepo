@@ -110,6 +110,18 @@ class SettingsViewModel @Inject constructor(
         ))
     }
 
+    val homeTrendingAboveToday: StateFlow<Boolean> = appPreferences.homeTrendingAboveToday
+
+    fun toggleHomeTrendingAboveToday() {
+        val newValue = !appPreferences.homeTrendingAboveToday.value
+        appPreferences.setHomeTrendingAboveToday(newValue)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_trending_above_today",
+            "category" to "preference",
+            "value" to newValue.toString(),
+        ))
+    }
+
     val authState: StateFlow<AuthState> = authService.authState
 
     val useBetaMode: StateFlow<Boolean> = appPreferences.useBetaModeFlow

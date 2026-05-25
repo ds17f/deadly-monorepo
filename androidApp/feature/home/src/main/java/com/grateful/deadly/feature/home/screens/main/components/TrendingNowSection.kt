@@ -3,8 +3,10 @@ package com.grateful.deadly.feature.home.screens.main.components
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -12,15 +14,17 @@ import com.grateful.deadly.core.api.home.TrendingWindow
 import com.grateful.deadly.core.model.Show
 
 /**
- * "Trending on The Deadly" home section. Renders a single time window's
- * worth of shows; the choice of window is a user preference set in
- * Settings (defaults to NOW = rolling 24h).
+ * "Trending on The Deadly" home section. Renders one time window's shows
+ * with a chip on the right that cycles Day → Week → Month → All on tap.
+ * The chosen window persists via [onCycleWindow] which writes to
+ * AppPreferences, keeping in sync with the Settings selector.
  */
 @Composable
 fun TrendingNowSection(
     shows: List<Show>,
     window: TrendingWindow,
     onShowClick: (Show) -> Unit,
+    onCycleWindow: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     if (shows.isEmpty()) return
@@ -29,16 +33,19 @@ fun TrendingNowSection(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        Text(
-            text = "Trending on The Deadly",
-            style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.Bold,
-        )
-        Text(
-            text = window.subtitle,
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            Text(
+                text = "Trending on The Deadly",
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.weight(1f),
+            )
+            WindowChip(window = window, onClick = onCycleWindow)
+        }
         LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             items(shows, key = { it.id }) { show ->
                 CollectionItemCard(
@@ -56,10 +63,16 @@ fun TrendingNowSection(
     }
 }
 
-private val TrendingWindow.subtitle: String
-    get() = when (this) {
-        TrendingWindow.NOW -> "Last 24 hours"
-        TrendingWindow.WEEK -> "Last 7 days"
-        TrendingWindow.MONTH -> "Last 30 days"
-        TrendingWindow.ALL -> "All time"
-    }
+@Composable
+private fun WindowChip(window: TrendingWindow, onClick: () -> Unit) {
+    AssistChip(
+        onClick = onClick,
+        label = {
+            Text(
+                text = window.shortLabel,
+                style = MaterialTheme.typography.titleMedium,
+            )
+        },
+        shape = RoundedCornerShape(20.dp),
+    )
+}

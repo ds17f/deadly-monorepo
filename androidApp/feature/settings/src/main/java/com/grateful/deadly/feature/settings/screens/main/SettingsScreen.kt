@@ -37,6 +37,7 @@ fun SettingsScreen(
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
     val homeTrendingWindow by viewModel.homeTrendingWindow.collectAsState()
+    val homeTrendingAboveToday by viewModel.homeTrendingAboveToday.collectAsState()
     val authState by viewModel.authState.collectAsState()
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
@@ -146,6 +147,15 @@ fun SettingsScreen(
             HomeTrendingWindowRow(
                 currentKey = homeTrendingWindow,
                 onSelected = { viewModel.setHomeTrendingWindow(it) }
+            )
+        }
+
+        item {
+            PreferenceToggleRow(
+                title = "Show Trending above Today",
+                subtitle = "Move the Trending section below \"Today In Grateful Dead History\" by turning this off.",
+                checked = homeTrendingAboveToday,
+                onCheckedChange = { viewModel.toggleHomeTrendingAboveToday() }
             )
         }
 
@@ -540,10 +550,10 @@ private fun HomeTrendingWindowRow(
     onSelected: (String) -> Unit
 ) {
     val options = listOf(
-        "now" to "24h",
+        "now" to "Day",
         "week" to "Week",
         "month" to "Month",
-        "all" to "All-Time",
+        "all" to "All",
     )
     Column(
         modifier = Modifier

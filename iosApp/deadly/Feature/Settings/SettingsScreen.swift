@@ -204,6 +204,25 @@ struct SettingsScreen: View {
                         .font(.callout)
                         .foregroundStyle(.secondary)
                 }
+
+                Toggle(isOn: Binding(
+                    get: { container.appPreferences.homeTrendingAboveToday },
+                    set: { newValue in
+                        container.appPreferences.homeTrendingAboveToday = newValue
+                        container.analyticsService.track("feature_use", props: [
+                            "feature": "set_home_trending_above_today",
+                            "category": "preference",
+                            "value": String(newValue),
+                        ])
+                    }
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Show Trending above Today")
+                        Text("Move the Trending section below \"Today in Grateful Dead History\" by turning this off.")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
+                }
             }
 
             // MARK: - Audio
