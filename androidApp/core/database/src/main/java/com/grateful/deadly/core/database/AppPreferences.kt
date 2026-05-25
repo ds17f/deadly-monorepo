@@ -53,6 +53,86 @@ class AppPreferences @Inject constructor(
         private const val KEY_HAS_ADDED_FAVORITE = "has_added_favorite"
         private const val KEY_DEVELOPER_MODE_UNLOCKED = "developer_mode_unlocked"
         private const val KEY_PLAYER_CONTROLS_STYLE = "player_controls_style"
+        private const val KEY_HOME_TRENDING_WINDOW = "home_trending_window"
+        private const val KEY_HOME_TRENDING_ABOVE_TODAY = "home_trending_above_today"
+        private const val KEY_HOME_RECENT_ROWS = "home_recent_rows"
+        private const val KEY_HOME_TRENDING_CARD_SIZE = "home_trending_card_size"
+        private const val KEY_HOME_TODAY_CARD_SIZE = "home_today_card_size"
+        private const val KEY_HOME_COLLECTIONS_CARD_SIZE = "home_collections_card_size"
+    }
+
+    private val _homeTrendingCardSize = MutableStateFlow(
+        prefs.getString(KEY_HOME_TRENDING_CARD_SIZE, null) ?: "small"
+    )
+    val homeTrendingCardSize: StateFlow<String> = _homeTrendingCardSize.asStateFlow()
+    fun setHomeTrendingCardSize(value: String) {
+        prefs.edit().putString(KEY_HOME_TRENDING_CARD_SIZE, value).apply()
+        _homeTrendingCardSize.value = value
+    }
+
+    private val _homeTodayCardSize = MutableStateFlow(
+        prefs.getString(KEY_HOME_TODAY_CARD_SIZE, null) ?: "large"
+    )
+    val homeTodayCardSize: StateFlow<String> = _homeTodayCardSize.asStateFlow()
+    fun setHomeTodayCardSize(value: String) {
+        prefs.edit().putString(KEY_HOME_TODAY_CARD_SIZE, value).apply()
+        _homeTodayCardSize.value = value
+    }
+
+    private val _homeCollectionsCardSize = MutableStateFlow(
+        prefs.getString(KEY_HOME_COLLECTIONS_CARD_SIZE, null) ?: "large"
+    )
+    val homeCollectionsCardSize: StateFlow<String> = _homeCollectionsCardSize.asStateFlow()
+    fun setHomeCollectionsCardSize(value: String) {
+        prefs.edit().putString(KEY_HOME_COLLECTIONS_CARD_SIZE, value).apply()
+        _homeCollectionsCardSize.value = value
+    }
+
+    /** Restore all Home Screen preferences to defaults. */
+    fun resetHomePreferences() {
+        setHomeTrendingWindow("now")
+        setHomeTrendingAboveToday(false)
+        setHomeRecentRows(2)
+        setHomeTrendingCardSize("small")
+        setHomeTodayCardSize("large")
+        setHomeCollectionsCardSize("large")
+    }
+
+    private val _homeTrendingAboveToday = MutableStateFlow(
+        prefs.getBoolean(KEY_HOME_TRENDING_ABOVE_TODAY, false)
+    )
+
+    /** When true, the Trending section renders above Today in History; otherwise below. */
+    val homeTrendingAboveToday: StateFlow<Boolean> = _homeTrendingAboveToday.asStateFlow()
+
+    fun setHomeTrendingAboveToday(value: Boolean) {
+        prefs.edit().putBoolean(KEY_HOME_TRENDING_ABOVE_TODAY, value).apply()
+        _homeTrendingAboveToday.value = value
+    }
+
+    private val _homeRecentRows = MutableStateFlow(
+        prefs.getInt(KEY_HOME_RECENT_ROWS, 2).coerceIn(1, 4)
+    )
+
+    /** How many rows of Recently Played to render on the home screen (1..4). Each row holds 2 shows. */
+    val homeRecentRows: StateFlow<Int> = _homeRecentRows.asStateFlow()
+
+    fun setHomeRecentRows(value: Int) {
+        val clamped = value.coerceIn(1, 4)
+        prefs.edit().putInt(KEY_HOME_RECENT_ROWS, clamped).apply()
+        _homeRecentRows.value = clamped
+    }
+
+    private val _homeTrendingWindow = MutableStateFlow(
+        prefs.getString(KEY_HOME_TRENDING_WINDOW, null) ?: "now"
+    )
+
+    /** Which trending window the home screen shows. One of "now"/"week"/"month"/"all". */
+    val homeTrendingWindow: StateFlow<String> = _homeTrendingWindow.asStateFlow()
+
+    fun setHomeTrendingWindow(value: String) {
+        prefs.edit().putString(KEY_HOME_TRENDING_WINDOW, value).apply()
+        _homeTrendingWindow.value = value
     }
 
     private val _includeShowsWithoutRecordings = MutableStateFlow(

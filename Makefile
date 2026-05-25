@@ -59,9 +59,13 @@ docker-redeploy: docker-destroy docker-up
 # Destroy + rebuild + start + tail logs
 docker-redeploy-logs: docker-redeploy docker-logs
 
-# Run API locally without Docker (for quick iteration)
+# Run API locally without Docker (for quick iteration).
+# Reads analytics/users from ./api-data so `make db-pull-analytics` and
+# `make db-restore` land where dev actually looks.
 api-dev:
-	cd api && npm run dev
+	cd api && ANALYTICS_DB_PATH=$(PWD)/api-data/analytics.db \
+		USERS_DB_PATH=$(PWD)/api-data/users.db \
+		npm run dev
 
 # Install API dependencies
 api-install:

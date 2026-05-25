@@ -5,6 +5,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.component.ShowDetailBottomSheet
@@ -13,6 +14,7 @@ import com.grateful.deadly.feature.home.screens.main.components.HorizontalCollec
 import com.grateful.deadly.feature.home.screens.main.components.HorizontalCollectionItem
 import com.grateful.deadly.feature.home.screens.main.components.CollectionItemType
 import com.grateful.deadly.feature.home.screens.main.components.RecentShowsGrid
+import com.grateful.deadly.feature.home.screens.main.components.TrendingNowSection
 
 /**
  * HomeScreen - Rich home interface with content discovery
@@ -56,6 +58,7 @@ fun HomeScreen(
             item {
                 RecentShowsGrid(
                     shows = uiState.homeContent.recentShows,
+                    rows = uiState.homeContent.recentRows,
                     onShowClick = onNavigateToShow,
                     onShowLongPress = { show ->
                         detailShow = show
@@ -64,12 +67,28 @@ fun HomeScreen(
             }
         }
 
-        // Today In Grateful Dead History Section
-        item {
+        // Trending + Today In History — order toggled by the
+        // "Show trending above Today" preference.
+        val todayCardWidth = cardWidthFor(uiState.homeContent.todayCardSize)
+        val collectionsCardWidth = cardWidthFor(uiState.homeContent.collectionsCardSize)
+        val isTodayCompact = uiState.homeContent.todayCardSize == "small"
+
+        val trendingItem: @Composable () -> Unit = {
+            TrendingNowSection(
+                shows = uiState.homeContent.trendingShows,
+                window = uiState.homeContent.trendingWindow,
+                cardSize = uiState.homeContent.trendingCardSize,
+                onShowClick = { show -> onNavigateToShow(show.id) },
+                onShowLongPress = { show -> detailShow = show },
+                onCycleWindow = { viewModel.cycleTrendingWindow() },
+            )
+        }
+        val todayItem: @Composable () -> Unit = {
             val todayItems = uiState.homeContent.todayInHistory.map { show ->
                 HorizontalCollectionItem(
                     id = show.id,
-                    displayText = "${show.date}\n${show.venue.name}\n${show.location.displayText}",
+                    displayText = if (isTodayCompact) show.date
+                        else "${show.date}\n${show.venue.name}\n${show.location.displayText}",
                     type = CollectionItemType.SHOW,
                     recordingId = show.bestRecordingId,
                     imageUrl = show.coverImageUrl
@@ -79,12 +98,23 @@ fun HomeScreen(
             HorizontalCollection(
                 title = "Today In Grateful Dead History",
                 items = todayItems,
+                cardWidth = todayCardWidth,
                 onItemClick = { item ->
-                    // Find the show and navigate
                     val show = uiState.homeContent.todayInHistory.find { it.id == item.id }
                     show?.let { onNavigateToShow(it.id) }
+                },
+                onItemLongPress = { item ->
+                    uiState.homeContent.todayInHistory.find { it.id == item.id }
+                        ?.let { detailShow = it }
                 }
             )
+        }
+        if (uiState.homeContent.trendingAboveToday) {
+            item { trendingItem() }
+            item { todayItem() }
+        } else {
+            item { todayItem() }
+            item { trendingItem() }
         }
 
         // Featured Collections Section
@@ -100,6 +130,7 @@ fun HomeScreen(
             HorizontalCollection(
                 title = "Featured Collections",
                 items = collectionItems,
+                cardWidth = collectionsCardWidth,
                 onItemClick = { item ->
                     onNavigateToCollection(item.id)
                 }
@@ -107,3 +138,5 @@ fun HomeScreen(
         }
     }
 }
+
+private fun cardWidthFor(size: String): Dp = if (size == "small") 100.dp else 160.dp

@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -24,20 +25,23 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.model.Show
 
 /**
- * Recent Shows Grid - Dynamic 2-column layout showing recently played shows
- * Automatically adjusts height based on number of shows (1-8 shows, 1-4 rows)
+ * Recent Shows Grid - 2-column layout. The number of rows is a user
+ * preference (1..4); each row holds 2 shows. Set in Settings.
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun RecentShowsGrid(
     shows: List<Show>,
+    rows: Int,
     onShowClick: (String) -> Unit,
     onShowLongPress: (Show) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val displayShows = shows.take(8) // Maximum 8 shows for 2x4 grid
-    val rowCount = (displayShows.size + 1) / 2 // Calculate rows needed (ceiling division)
-    val gridHeight = (rowCount * 80 + (rowCount - 1) * 4).dp // rows × card height + spacing
+    val clampedRows = rows.coerceIn(1, 4)
+    val displayShows = shows.take(clampedRows * 2)
+    val rowCount = (displayShows.size + 1) / 2
+    if (rowCount == 0) return
+    val gridHeight = (rowCount * 80 + (rowCount - 1) * 4).dp
 
     Column(modifier = modifier.fillMaxWidth()) {
         Text(
@@ -50,11 +54,11 @@ fun RecentShowsGrid(
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             modifier = Modifier
-                .height(gridHeight) // Fixed height required — nested in LazyColumn
+                .height(gridHeight)
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalArrangement = Arrangement.spacedBy(4.dp),
-            userScrollEnabled = false // Disable scrolling to hold its size
+            userScrollEnabled = false
         ) {
             items(displayShows) { show ->
                 RecentShowCard(

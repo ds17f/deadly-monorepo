@@ -99,6 +99,79 @@ class SettingsViewModel @Inject constructor(
         ))
     }
 
+    val homeTrendingWindow: StateFlow<String> = appPreferences.homeTrendingWindow
+
+    fun setHomeTrendingWindow(value: String) {
+        appPreferences.setHomeTrendingWindow(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_trending_window",
+            "category" to "preference",
+            "value" to value,
+        ))
+    }
+
+    val homeTrendingAboveToday: StateFlow<Boolean> = appPreferences.homeTrendingAboveToday
+
+    fun toggleHomeTrendingAboveToday() {
+        val newValue = !appPreferences.homeTrendingAboveToday.value
+        appPreferences.setHomeTrendingAboveToday(newValue)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_trending_above_today",
+            "category" to "preference",
+            "value" to newValue.toString(),
+        ))
+    }
+
+    val homeRecentRows: StateFlow<Int> = appPreferences.homeRecentRows
+
+    fun setHomeRecentRows(value: Int) {
+        appPreferences.setHomeRecentRows(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_recent_rows",
+            "category" to "preference",
+            "value" to value.toString(),
+        ))
+    }
+
+    val homeTrendingCardSize: StateFlow<String> = appPreferences.homeTrendingCardSize
+    val homeTodayCardSize: StateFlow<String> = appPreferences.homeTodayCardSize
+    val homeCollectionsCardSize: StateFlow<String> = appPreferences.homeCollectionsCardSize
+
+    fun setHomeTrendingCardSize(value: String) {
+        appPreferences.setHomeTrendingCardSize(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_trending_card_size",
+            "category" to "preference",
+            "value" to value,
+        ))
+    }
+
+    fun setHomeTodayCardSize(value: String) {
+        appPreferences.setHomeTodayCardSize(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_today_card_size",
+            "category" to "preference",
+            "value" to value,
+        ))
+    }
+
+    fun setHomeCollectionsCardSize(value: String) {
+        appPreferences.setHomeCollectionsCardSize(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_collections_card_size",
+            "category" to "preference",
+            "value" to value,
+        ))
+    }
+
+    fun resetHomePreferences() {
+        appPreferences.resetHomePreferences()
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "reset_home_preferences",
+            "category" to "preference",
+        ))
+    }
+
     val authState: StateFlow<AuthState> = authService.authState
 
     val useBetaMode: StateFlow<Boolean> = appPreferences.useBetaModeFlow

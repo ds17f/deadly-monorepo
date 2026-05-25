@@ -27,6 +27,9 @@ interface HomeService {
      * @return Result indicating success or failure with error details
      */
     suspend fun refreshAll(): Result<Unit>
+
+    /** Advance the trending window preference one step (Day → Week → Month → All → Day). */
+    fun cycleTrendingWindow()
 }
 
 /**
@@ -38,6 +41,20 @@ data class HomeContent(
     val recentShows: List<Show>,
     val todayInHistory: List<Show>,
     val featuredCollections: List<DeadCollection>,
+    /** Shows for the user's currently-selected trending window. */
+    val trendingShows: List<Show>,
+    /** Which window [trendingShows] came from — drives section subtitle / docs. */
+    val trendingWindow: TrendingWindow,
+    /** When true, Trending renders above Today in History; otherwise below. */
+    val trendingAboveToday: Boolean,
+    /** How many rows of Recently Played to render (1..4). Each row = 2 shows. */
+    val recentRows: Int,
+    /** Card size for the Trending carousel: "small" or "large". */
+    val trendingCardSize: String,
+    /** Card size for the Today In History carousel: "small" or "large". */
+    val todayCardSize: String,
+    /** Card size for the Featured Collections carousel: "small" or "large". */
+    val collectionsCardSize: String,
     val lastRefresh: Long
 ) {
     companion object {
@@ -45,6 +62,13 @@ data class HomeContent(
             recentShows = emptyList(),
             todayInHistory = emptyList(),
             featuredCollections = emptyList(),
+            trendingShows = emptyList(),
+            trendingWindow = TrendingWindow.NOW,
+            trendingAboveToday = false,
+            recentRows = 2,
+            trendingCardSize = "small",
+            todayCardSize = "large",
+            collectionsCardSize = "large",
             lastRefresh = 0L
         )
     }

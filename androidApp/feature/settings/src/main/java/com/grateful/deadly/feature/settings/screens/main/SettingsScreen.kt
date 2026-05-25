@@ -36,6 +36,12 @@ fun SettingsScreen(
     val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
+    val homeTrendingWindow by viewModel.homeTrendingWindow.collectAsState()
+    val homeTrendingAboveToday by viewModel.homeTrendingAboveToday.collectAsState()
+    val homeRecentRows by viewModel.homeRecentRows.collectAsState()
+    val homeTrendingCardSize by viewModel.homeTrendingCardSize.collectAsState()
+    val homeTodayCardSize by viewModel.homeTodayCardSize.collectAsState()
+    val homeCollectionsCardSize by viewModel.homeCollectionsCardSize.collectAsState()
     val authState by viewModel.authState.collectAsState()
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
@@ -139,6 +145,65 @@ fun SettingsScreen(
                 currentStyle = PlayerControlsStyle.fromString(playerControlsStyle),
                 onStyleSelected = { viewModel.setPlayerControlsStyle(it.name) }
             )
+        }
+
+        item { HorizontalDivider() }
+
+        // ── HOME SCREEN ──────────────────────────────────────────────
+        item { SectionHeader("Home Screen") }
+
+        item {
+            HomeTrendingWindowRow(
+                currentKey = homeTrendingWindow,
+                onSelected = { viewModel.setHomeTrendingWindow(it) }
+            )
+        }
+
+        item {
+            PreferenceToggleRow(
+                title = "Show Trending above Today",
+                subtitle = "Move the Trending section below \"Today In Grateful Dead History\" by turning this off.",
+                checked = homeTrendingAboveToday,
+                onCheckedChange = { viewModel.toggleHomeTrendingAboveToday() }
+            )
+        }
+
+        item {
+            HomeRecentRowsRow(
+                currentRows = homeRecentRows,
+                onSelected = { viewModel.setHomeRecentRows(it) }
+            )
+        }
+
+        item {
+            HomeCardSizeRow(
+                title = "Trending card size",
+                subtitle = "Size of cards in the Trending carousel.",
+                current = homeTrendingCardSize,
+                onSelected = { viewModel.setHomeTrendingCardSize(it) }
+            )
+        }
+
+        item {
+            HomeCardSizeRow(
+                title = "Today In History card size",
+                subtitle = "Size of cards in the Today In Grateful Dead History carousel.",
+                current = homeTodayCardSize,
+                onSelected = { viewModel.setHomeTodayCardSize(it) }
+            )
+        }
+
+        item {
+            HomeCardSizeRow(
+                title = "Featured Collections card size",
+                subtitle = "Size of cards in the Featured Collections carousel.",
+                current = homeCollectionsCardSize,
+                onSelected = { viewModel.setHomeCollectionsCardSize(it) }
+            )
+        }
+
+        item {
+            HomeResetRow(onReset = { viewModel.resetHomePreferences() })
         }
 
         item { HorizontalDivider() }
@@ -525,6 +590,134 @@ private fun PlayerControlsStyleRow(
 }
 
 // ── Source badge style selector ──────────────────────────────────────────────
+
+@Composable
+private fun HomeRecentRowsRow(
+    currentRows: Int,
+    onSelected: (Int) -> Unit
+) {
+    val options = listOf(1, 2, 3, 4)
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Recently Played rows", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "How many rows of recent shows on the home screen (2 shows per row)",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            options.forEachIndexed { index, rows ->
+                SegmentedButton(
+                    selected = currentRows == rows,
+                    onClick = { onSelected(rows) },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index,
+                        count = options.size
+                    )
+                ) {
+                    Text(rows.toString())
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun HomeResetRow(onReset: () -> Unit) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+    ) {
+        TextButton(onClick = onReset) {
+            Text(
+                text = "Reset Home Screen to Defaults",
+                color = MaterialTheme.colorScheme.error
+            )
+        }
+    }
+}
+
+@Composable
+private fun HomeCardSizeRow(
+    title: String,
+    subtitle: String,
+    current: String,
+    onSelected: (String) -> Unit,
+) {
+    val options = listOf("small" to "Small", "large" to "Large")
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = title, style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = subtitle,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            options.forEachIndexed { index, (key, label) ->
+                SegmentedButton(
+                    selected = current == key,
+                    onClick = { onSelected(key) },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index,
+                        count = options.size
+                    )
+                ) {
+                    Text(label)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun HomeTrendingWindowRow(
+    currentKey: String,
+    onSelected: (String) -> Unit
+) {
+    val options = listOf(
+        "now" to "Day",
+        "week" to "Week",
+        "month" to "Month",
+        "all" to "All",
+    )
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Trending window on home", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "Which time range \"Trending on The Deadly\" shows",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            options.forEachIndexed { index, (key, label) ->
+                SegmentedButton(
+                    selected = currentKey == key,
+                    onClick = { onSelected(key) },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index,
+                        count = options.size
+                    )
+                ) {
+                    Text(label)
+                }
+            }
+        }
+    }
+}
 
 @Composable
 private fun SourceBadgeStyleRow(

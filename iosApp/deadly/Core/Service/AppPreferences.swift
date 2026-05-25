@@ -19,6 +19,12 @@ final class AppPreferences {
     private static let analyticsEnabledKey = "analytics_enabled"
     private static let installIdKey = "install_id"
     private static let playerControlsStyleKey = "player_controls_style"
+    private static let homeTrendingWindowKey = "home_trending_window"
+    private static let homeTrendingAboveTodayKey = "home_trending_above_today"
+    private static let homeRecentRowsKey = "home_recent_rows"
+    private static let homeTrendingCardSizeKey = "home_trending_card_size"
+    private static let homeTodayCardSizeKey = "home_today_card_size"
+    private static let homeCollectionsCardSizeKey = "home_collections_card_size"
 
     /// Server environment: "prod", "beta", or "custom".
     var serverEnvironment: String {
@@ -97,6 +103,50 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(playerControlsStyle, forKey: Self.playerControlsStyleKey) }
     }
 
+    /// Which trending window the home screen shows: "now"/"week"/"month"/"all".
+    var homeTrendingWindow: String {
+        didSet { UserDefaults.standard.set(homeTrendingWindow, forKey: Self.homeTrendingWindowKey) }
+    }
+
+    /// When true, Trending renders above Today in History; otherwise below.
+    var homeTrendingAboveToday: Bool {
+        didSet { UserDefaults.standard.set(homeTrendingAboveToday, forKey: Self.homeTrendingAboveTodayKey) }
+    }
+
+    /// Rows of Recently Played to render on home (1..4). Each row = 2 shows.
+    var homeRecentRows: Int {
+        didSet {
+            let clamped = max(1, min(4, homeRecentRows))
+            if clamped != homeRecentRows { homeRecentRows = clamped; return }
+            UserDefaults.standard.set(homeRecentRows, forKey: Self.homeRecentRowsKey)
+        }
+    }
+
+    /// Card size for the Trending carousel: "small" or "large".
+    var homeTrendingCardSize: String {
+        didSet { UserDefaults.standard.set(homeTrendingCardSize, forKey: Self.homeTrendingCardSizeKey) }
+    }
+
+    /// Card size for the Today in History carousel: "small" or "large".
+    var homeTodayCardSize: String {
+        didSet { UserDefaults.standard.set(homeTodayCardSize, forKey: Self.homeTodayCardSizeKey) }
+    }
+
+    /// Card size for the Featured Collections carousel: "small" or "large".
+    var homeCollectionsCardSize: String {
+        didSet { UserDefaults.standard.set(homeCollectionsCardSize, forKey: Self.homeCollectionsCardSizeKey) }
+    }
+
+    /// Restore all Home Screen preferences to defaults.
+    func resetHomePreferences() {
+        homeTrendingWindow = "now"
+        homeTrendingAboveToday = false
+        homeRecentRows = 2
+        homeTrendingCardSize = "small"
+        homeTodayCardSize = "large"
+        homeCollectionsCardSize = "large"
+    }
+
     /// Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles.
     let installId: String
 
@@ -118,6 +168,12 @@ final class AppPreferences {
             Self.shareAttachImageKey: false,
             Self.sourceBadgeStyleKey: "LONG",
             Self.playerControlsStyleKey: "skipTrack",
+            Self.homeTrendingWindowKey: "now",
+            Self.homeTrendingAboveTodayKey: false,
+            Self.homeRecentRowsKey: 2,
+            Self.homeTrendingCardSizeKey: "small",
+            Self.homeTodayCardSizeKey: "large",
+            Self.homeCollectionsCardSizeKey: "large",
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
@@ -138,6 +194,12 @@ final class AppPreferences {
         shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
         playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
+        homeTrendingWindow = UserDefaults.standard.string(forKey: Self.homeTrendingWindowKey) ?? "now"
+        homeTrendingAboveToday = UserDefaults.standard.bool(forKey: Self.homeTrendingAboveTodayKey)
+        homeRecentRows = max(1, min(4, UserDefaults.standard.integer(forKey: Self.homeRecentRowsKey)))
+        homeTrendingCardSize = UserDefaults.standard.string(forKey: Self.homeTrendingCardSizeKey) ?? "small"
+        homeTodayCardSize = UserDefaults.standard.string(forKey: Self.homeTodayCardSizeKey) ?? "large"
+        homeCollectionsCardSize = UserDefaults.standard.string(forKey: Self.homeCollectionsCardSizeKey) ?? "large"
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)
