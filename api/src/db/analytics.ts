@@ -1824,31 +1824,32 @@ export function getTrending(limit = 10): TrendingResponse {
 }
 
 /**
- * One-shot backfill: rolls up every distinct day present in
- * analytics_events. No-op if show_plays_daily already has rows. Returns
- * the number of days rolled (0 means already populated). Intended to
- * run once at startup so /api/trending isn't blank against a freshly
- * pulled prod DB.
+ * Backfill any day present in analytics_events that has no rows in
+ * show_plays_daily yet. Runs every startup — cheap when there's nothing
+ * to do, self-heals after `make db-pull-analytics` or any other event
+ * that introduces historical days the rollup never saw.
+ *
+ * Returns the number of days rolled up (0 = nothing to backfill).
  */
 export function backfillShowPlaysIfEmpty(): number {
   const db = getAnalyticsDb();
-  const existing = db
-    .prepare(`SELECT COUNT(*) AS c FROM show_plays_daily`)
-    .get() as { c: number };
-  if (existing.c > 0) return 0;
 
-  const days = db
+  const missingDays = db
     .prepare(
-      `SELECT DISTINCT date(ts / 1000, 'unixepoch') AS day
-       FROM analytics_events
-       WHERE event = 'playback_start'
-         AND json_extract(props, '$.show_id') IS NOT NULL
+      `SELECT DISTINCT date(e.ts / 1000, 'unixepoch') AS day
+       FROM analytics_events e
+       WHERE e.event = 'playback_start'
+         AND json_extract(e.props, '$.show_id') IS NOT NULL
+         AND NOT EXISTS (
+           SELECT 1 FROM show_plays_daily r
+           WHERE r.day = date(e.ts / 1000, 'unixepoch')
+         )
        ORDER BY day`,
     )
     .all() as Array<{ day: string }>;
 
-  for (const { day } of days) rollupShowPlaysDay(day);
-  return days.length;
+  for (const { day } of missingDays) rollupShowPlaysDay(day);
+  return missingDays.length;
 }
 
 function trendingFromRollup(sinceDay: string | null, limit: number): TrendingShow[] {
