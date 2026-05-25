@@ -1,11 +1,15 @@
 # Changelog
 
+## [2.30.0] - 2026-05-25
+
+### New Features
+* trending shows + home polish (#42) (bbb74e71)
+
+
 ## [2.29.1] - 2026-05-24
 
 ### Bug Fixes
 * always show ticket images; rename carousel to match Android (4a7e2810)
-
-
 ## [2.29.0] - 2026-05-24
 
 ### New Features
