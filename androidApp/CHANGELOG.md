@@ -1,11 +1,15 @@
 # Changelog
 
+## [2.29.0] - 2026-05-25
+
+### New Features
+* trending shows + home polish (#42) (bbb74e71)
+
+
 ## [2.28.0] - 2026-05-24
 
 ### New Features
 * add 10s skip buttons in notification & Android Auto (DEAD-342) (35a2814d)
-
-
 ## [2.27.1] - 2026-05-17
 
 ### Bug Fixes
