@@ -19,6 +19,7 @@ final class AppPreferences {
     private static let analyticsEnabledKey = "analytics_enabled"
     private static let installIdKey = "install_id"
     private static let showTicketImagesKey = "show_ticket_images"
+    private static let playerControlsStyleKey = "player_controls_style"
 
     /// Server environment: "prod", "beta", or "custom".
     var serverEnvironment: String {
@@ -96,6 +97,11 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(showTicketImages, forKey: Self.showTicketImagesKey) }
     }
 
+    /// Which transport controls appear on lock screen / CarPlay: "skipTrack", "skipSeconds", or "both".
+    var playerControlsStyle: String {
+        didSet { UserDefaults.standard.set(playerControlsStyle, forKey: Self.playerControlsStyleKey) }
+    }
+
     /// Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles.
     let installId: String
 
@@ -117,6 +123,7 @@ final class AppPreferences {
             Self.shareAttachImageKey: false,
             Self.sourceBadgeStyleKey: "LONG",
             Self.showTicketImagesKey: false,
+            Self.playerControlsStyleKey: "skipTrack",
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
@@ -137,6 +144,7 @@ final class AppPreferences {
         shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
         showTicketImages = UserDefaults.standard.bool(forKey: Self.showTicketImagesKey)
+        playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)

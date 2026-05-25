@@ -375,10 +375,6 @@ public final class StreamPlayer {
         tracks.append(track)
         engine.appendTrack(url: track.url)
         updateQueueState(index: engine.currentIndex)
-        remoteCommandManager.updateCommandState(
-            hasNext: queueState.hasNext,
-            hasPrevious: queueState.hasPrevious
-        )
     }
 
     public func insertNext(_ track: TrackItem) {
@@ -390,10 +386,6 @@ public final class StreamPlayer {
         }
         engine.insertNext(url: track.url)
         updateQueueState(index: engine.currentIndex)
-        remoteCommandManager.updateCommandState(
-            hasNext: queueState.hasNext,
-            hasPrevious: queueState.hasPrevious
-        )
     }
 
     public func remove(at index: Int) {
@@ -402,10 +394,6 @@ public final class StreamPlayer {
         if removed {
             tracks.remove(at: index)
             updateQueueState(index: engine.currentIndex)
-            remoteCommandManager.updateCommandState(
-                hasNext: queueState.hasNext,
-                hasPrevious: queueState.hasPrevious
-            )
         }
     }
 
@@ -519,6 +507,14 @@ public final class StreamPlayer {
         }
     }
 
+    // MARK: - Control style
+
+    /// Update which transport controls are exposed on lock screen / CarPlay.
+    /// Safe to call at any time; applies immediately.
+    public func setControlStyle(_ style: PlayerControlsStyle) {
+        remoteCommandManager.setControlStyle(style)
+    }
+
     // MARK: - Private: remote command callbacks
 
     private func setupRemoteCommandCallbacks() {
@@ -546,14 +542,18 @@ public final class StreamPlayer {
         updateQueueState(index: index)
         updateNowPlaying()
         nowPlayingManager.loadArtwork(from: currentTrack?.artworkURL)
-        remoteCommandManager.updateCommandState(
-            hasNext: queueState.hasNext,
-            hasPrevious: queueState.hasPrevious
-        )
     }
 
     private func updateQueueState(index: Int) {
         queueState = QueueState(currentIndex: index, totalTracks: tracks.count)
+        // Always mirror queue position to the remote command manager so the lock
+        // screen's prev/next buttons reflect reality from the first frame —
+        // including session restore, where loadQueue() runs before any track-
+        // change event would otherwise sync the state.
+        remoteCommandManager.updateCommandState(
+            hasNext: queueState.hasNext,
+            hasPrevious: queueState.hasPrevious
+        )
     }
 
     private func updateNowPlaying() {

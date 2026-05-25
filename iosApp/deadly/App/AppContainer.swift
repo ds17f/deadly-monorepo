@@ -111,6 +111,11 @@ final class AppContainer {
             let player = MainActor.assumeIsolated { StreamPlayer() }
             streamPlayer = player
 
+            // Apply the persisted lock-screen / CarPlay control style.
+            MainActor.assumeIsolated {
+                player.setControlStyle(PlayerControlsStyle(rawValueOrDefault: prefs.playerControlsStyle))
+            }
+
             // Set app logo as fallback for lock screen / Now Playing when artwork unavailable
             #if os(iOS)
             MainActor.assumeIsolated {

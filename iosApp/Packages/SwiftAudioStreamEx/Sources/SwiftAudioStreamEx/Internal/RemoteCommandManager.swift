@@ -17,6 +17,9 @@ final class RemoteCommandManager {
     var onSkipBackward: ((TimeInterval) -> Void)?
 
     private var commandTargets: [Any] = []
+    private var currentStyle: PlayerControlsStyle = .skipTrack
+    private var lastHasNext: Bool = false
+    private var lastHasPrevious: Bool = false
 
     func setup() {
         teardown()
@@ -47,14 +50,12 @@ final class RemoteCommandManager {
             self?.onNext?()
             return .success
         }
-        center.nextTrackCommand.isEnabled = true
         commandTargets.append(nextTarget)
 
         let prevTarget = center.previousTrackCommand.addTarget { [weak self] _ in
             self?.onPrevious?()
             return .success
         }
-        center.previousTrackCommand.isEnabled = true
         commandTargets.append(prevTarget)
 
         let seekTarget = center.changePlaybackPositionCommand.addTarget { [weak self] event in
@@ -75,7 +76,6 @@ final class RemoteCommandManager {
             self?.onSkipForward?(skipEvent.interval)
             return .success
         }
-        center.skipForwardCommand.isEnabled = true
         commandTargets.append(skipFwdTarget)
 
         center.skipBackwardCommand.preferredIntervals = [15]
@@ -86,16 +86,36 @@ final class RemoteCommandManager {
             self?.onSkipBackward?(skipEvent.interval)
             return .success
         }
-        center.skipBackwardCommand.isEnabled = true
         commandTargets.append(skipBkTarget)
 
-        logger.info("Remote commands registered")
+        applyEnabledState()
+        logger.info("Remote commands registered (style=\(self.currentStyle.rawValue))")
     }
 
     func updateCommandState(hasNext: Bool, hasPrevious: Bool) {
+        lastHasNext = hasNext
+        lastHasPrevious = hasPrevious
+        applyEnabledState()
+    }
+
+    func setControlStyle(_ style: PlayerControlsStyle) {
+        guard style != currentStyle else { return }
+        currentStyle = style
+        applyEnabledState()
+        logger.info("Remote command style updated to \(style.rawValue)")
+    }
+
+    /// Toggle which command groups are exposed based on the current style and queue state.
+    /// iOS lock screen / CarPlay choose buttons from whichever commands are enabled, so
+    /// disabling skip commands is what makes next/prev appear prominently (and vice versa).
+    private func applyEnabledState() {
         let center = MPRemoteCommandCenter.shared()
-        center.nextTrackCommand.isEnabled = hasNext
-        center.previousTrackCommand.isEnabled = hasPrevious
+        let trackEnabled = currentStyle != .skipSeconds
+        let skipEnabled = currentStyle != .skipTrack
+        center.nextTrackCommand.isEnabled = trackEnabled && lastHasNext
+        center.previousTrackCommand.isEnabled = trackEnabled && lastHasPrevious
+        center.skipForwardCommand.isEnabled = skipEnabled
+        center.skipBackwardCommand.isEnabled = skipEnabled
     }
 
     func teardown() {

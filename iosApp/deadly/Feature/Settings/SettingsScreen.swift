@@ -1,4 +1,5 @@
 import AuthenticationServices
+import SwiftAudioStreamEx
 import SwiftUI
 import UIKit
 import UniformTypeIdentifiers
@@ -151,6 +152,29 @@ struct SettingsScreen: View {
                             .font(.callout)
                             .foregroundStyle(.secondary)
                     }
+                }
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Lock screen & CarPlay controls")
+                    Picker("Lock screen & CarPlay controls", selection: Binding(
+                        get: { PlayerControlsStyle(rawValueOrDefault: container.appPreferences.playerControlsStyle) },
+                        set: { newStyle in
+                            container.appPreferences.playerControlsStyle = newStyle.rawValue
+                            container.streamPlayer.setControlStyle(newStyle)
+                            container.analyticsService.track("feature_use", props: [
+                                "feature": "set_player_controls_style",
+                                "category": "preference",
+                                "value": newStyle.rawValue,
+                            ])
+                        }
+                    )) {
+                        Text("Tracks").tag(PlayerControlsStyle.skipTrack)
+                        Text("15s skip").tag(PlayerControlsStyle.skipSeconds)
+                    }
+                    .pickerStyle(.segmented)
+                    Text("Previous/next track buttons or 15-second skip on the lock screen and CarPlay.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
                 }
 
                 VStack(alignment: .leading, spacing: 6) {
