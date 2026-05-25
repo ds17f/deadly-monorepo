@@ -1,11 +1,15 @@
 # Changelog
 
+## [2.29.0] - 2026-05-24
+
+### New Features
+* add lock screen & CarPlay control style preference (DEAD-338) (ce2b53e5)
+
+
 ## [2.28.1] - 2026-05-14
 
 ### Bug Fixes
 * DEAD-335 — race + auto-advance + retry recovery (#40) (479f58dd)
-
-
 ## [2.28.0] - 2026-05-10
 
 ### New Features
