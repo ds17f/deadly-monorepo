@@ -52,12 +52,31 @@ class HomeServiceImpl @Inject constructor(
     // Reactive combination of all home content sources
     // Bundle the preference flows so the main combine stays at 5 args
     // (Flow.combine's typed overloads top out at 5).
-    private data class HomePrefs(val windowKey: String, val aboveToday: Boolean, val recentRows: Int)
+    private data class HomePrefs(
+        val windowKey: String,
+        val aboveToday: Boolean,
+        val recentRows: Int,
+        val trendingCardSize: String,
+        val todayCardSize: String,
+        val collectionsCardSize: String,
+    )
     private val homePrefs = combine(
         appPreferences.homeTrendingWindow,
         appPreferences.homeTrendingAboveToday,
         appPreferences.homeRecentRows,
-    ) { windowKey, aboveToday, recentRows -> HomePrefs(windowKey, aboveToday, recentRows) }
+        appPreferences.homeTrendingCardSize,
+        appPreferences.homeTodayCardSize,
+        appPreferences.homeCollectionsCardSize,
+    ) { values ->
+        HomePrefs(
+            windowKey = values[0] as String,
+            aboveToday = values[1] as Boolean,
+            recentRows = values[2] as Int,
+            trendingCardSize = values[3] as String,
+            todayCardSize = values[4] as String,
+            collectionsCardSize = values[5] as String,
+        )
+    }
 
     override val homeContent: StateFlow<HomeContent> = combine(
         recentShowsService.recentShows,
@@ -75,6 +94,9 @@ class HomeServiceImpl @Inject constructor(
             trendingWindow = window,
             trendingAboveToday = prefs.aboveToday,
             recentRows = prefs.recentRows,
+            trendingCardSize = prefs.trendingCardSize,
+            todayCardSize = prefs.todayCardSize,
+            collectionsCardSize = prefs.collectionsCardSize,
             lastRefresh = System.currentTimeMillis()
         )
     }.stateIn(

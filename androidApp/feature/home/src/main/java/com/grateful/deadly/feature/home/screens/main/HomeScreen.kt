@@ -5,6 +5,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.component.ShowDetailBottomSheet
@@ -68,11 +69,17 @@ fun HomeScreen(
 
         // Trending + Today In History — order toggled by the
         // "Show trending above Today" preference.
+        val todayCardWidth = cardWidthFor(uiState.homeContent.todayCardSize)
+        val collectionsCardWidth = cardWidthFor(uiState.homeContent.collectionsCardSize)
+        val isTodayCompact = uiState.homeContent.todayCardSize == "small"
+
         val trendingItem: @Composable () -> Unit = {
             TrendingNowSection(
                 shows = uiState.homeContent.trendingShows,
                 window = uiState.homeContent.trendingWindow,
+                cardSize = uiState.homeContent.trendingCardSize,
                 onShowClick = { show -> onNavigateToShow(show.id) },
+                onShowLongPress = { show -> detailShow = show },
                 onCycleWindow = { viewModel.cycleTrendingWindow() },
             )
         }
@@ -80,7 +87,8 @@ fun HomeScreen(
             val todayItems = uiState.homeContent.todayInHistory.map { show ->
                 HorizontalCollectionItem(
                     id = show.id,
-                    displayText = "${show.date}\n${show.venue.name}\n${show.location.displayText}",
+                    displayText = if (isTodayCompact) show.date
+                        else "${show.date}\n${show.venue.name}\n${show.location.displayText}",
                     type = CollectionItemType.SHOW,
                     recordingId = show.bestRecordingId,
                     imageUrl = show.coverImageUrl
@@ -90,9 +98,14 @@ fun HomeScreen(
             HorizontalCollection(
                 title = "Today In Grateful Dead History",
                 items = todayItems,
+                cardWidth = todayCardWidth,
                 onItemClick = { item ->
                     val show = uiState.homeContent.todayInHistory.find { it.id == item.id }
                     show?.let { onNavigateToShow(it.id) }
+                },
+                onItemLongPress = { item ->
+                    uiState.homeContent.todayInHistory.find { it.id == item.id }
+                        ?.let { detailShow = it }
                 }
             )
         }
@@ -117,6 +130,7 @@ fun HomeScreen(
             HorizontalCollection(
                 title = "Featured Collections",
                 items = collectionItems,
+                cardWidth = collectionsCardWidth,
                 onItemClick = { item ->
                     onNavigateToCollection(item.id)
                 }
@@ -124,3 +138,5 @@ fun HomeScreen(
         }
     }
 }
+
+private fun cardWidthFor(size: String): Dp = if (size == "small") 100.dp else 160.dp

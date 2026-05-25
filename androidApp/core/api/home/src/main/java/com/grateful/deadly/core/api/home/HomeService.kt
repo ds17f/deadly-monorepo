@@ -49,6 +49,12 @@ data class HomeContent(
     val trendingAboveToday: Boolean,
     /** How many rows of Recently Played to render (1..4). Each row = 2 shows. */
     val recentRows: Int,
+    /** Card size for the Trending carousel: "small" or "large". */
+    val trendingCardSize: String,
+    /** Card size for the Today In History carousel: "small" or "large". */
+    val todayCardSize: String,
+    /** Card size for the Featured Collections carousel: "small" or "large". */
+    val collectionsCardSize: String,
     val lastRefresh: Long
 ) {
     companion object {
@@ -60,6 +66,9 @@ data class HomeContent(
             trendingWindow = TrendingWindow.NOW,
             trendingAboveToday = false,
             recentRows = 2,
+            trendingCardSize = "small",
+            todayCardSize = "large",
+            collectionsCardSize = "large",
             lastRefresh = 0L
         )
     }

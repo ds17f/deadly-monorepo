@@ -6,10 +6,10 @@ enum TrendingWindow: String, CaseIterable, Identifiable {
 
     var label: String {
         switch self {
-        case .now: return "Day"
-        case .week: return "Week"
-        case .month: return "Month"
-        case .all: return "All"
+        case .now: return "now"
+        case .week: return "this week"
+        case .month: return "this month"
+        case .all: return "all time"
         }
     }
 

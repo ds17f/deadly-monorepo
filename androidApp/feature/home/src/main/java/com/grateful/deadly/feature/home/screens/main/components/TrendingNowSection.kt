@@ -1,9 +1,11 @@
 package com.grateful.deadly.feature.home.screens.main.components
 
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -14,20 +16,24 @@ import com.grateful.deadly.core.api.home.TrendingWindow
 import com.grateful.deadly.core.model.Show
 
 /**
- * "Trending on The Deadly" home section. Renders one time window's shows
- * with a chip on the right that cycles Day → Week → Month → All on tap.
- * The chosen window persists via [onCycleWindow] which writes to
- * AppPreferences, keeping in sync with the Settings selector.
+ * "Trending <window>" home section. The title itself is tappable and cycles
+ * Day → Week → Month → All on tap; the chosen window persists via
+ * [onCycleWindow] which writes to AppPreferences, keeping in sync with the
+ * Settings selector.
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TrendingNowSection(
     shows: List<Show>,
     window: TrendingWindow,
+    cardSize: String,
     onShowClick: (Show) -> Unit,
+    onShowLongPress: (Show) -> Unit,
     onCycleWindow: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     if (shows.isEmpty()) return
+    val isCompact = cardSize == "small"
 
     Column(
         modifier = modifier.fillMaxWidth(),
@@ -39,40 +45,43 @@ fun TrendingNowSection(
             modifier = Modifier.fillMaxWidth(),
         ) {
             Text(
-                text = "Trending on The Deadly",
+                text = "Trending ${window.titleLabel}",
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.weight(1f),
+                maxLines = 1,
+                modifier = Modifier
+                    .weight(1f)
+                    .clickable(onClick = onCycleWindow),
             )
-            WindowChip(window = window, onClick = onCycleWindow)
+            Text(
+                text = "Show ${window.next().titleLabel}",
+                style = MaterialTheme.typography.bodyMedium,
+                fontWeight = FontWeight.Medium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1,
+                modifier = Modifier.clickable(onClick = onCycleWindow),
+            )
         }
         LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             items(shows, key = { it.id }) { show ->
+                val display = if (isCompact) {
+                    show.date
+                } else {
+                    "${show.date}\n${show.venue.name}\n${show.location.displayText}"
+                }
                 CollectionItemCard(
                     item = HorizontalCollectionItem(
                         id = show.id,
-                        displayText = "${show.date}\n${show.venue.name}\n${show.location.displayText}",
+                        displayText = display,
                         type = CollectionItemType.SHOW,
                         recordingId = show.bestRecordingId,
                         imageUrl = show.coverImageUrl,
                     ),
+                    cardWidth = if (isCompact) 100.dp else 160.dp,
                     onItemClick = { onShowClick(show) },
+                    onItemLongPress = { onShowLongPress(show) },
                 )
             }
         }
     }
-}
-
-@Composable
-private fun WindowChip(window: TrendingWindow, onClick: () -> Unit) {
-    AssistChip(
-        onClick = onClick,
-        label = {
-            Text(
-                text = window.shortLabel,
-                style = MaterialTheme.typography.titleMedium,
-            )
-        },
-        shape = RoundedCornerShape(20.dp),
-    )
 }

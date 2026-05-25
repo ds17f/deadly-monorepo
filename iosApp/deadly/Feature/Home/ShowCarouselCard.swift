@@ -5,13 +5,16 @@ struct ShowCarouselCard: View {
     let imageUrl: String?
     let lines: [String]
     var recordingCount: Int? = nil
+    var size: CGFloat = DeadlySize.carouselCard
+
+    private var isCompact: Bool { size <= DeadlySize.carouselCardSmall }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: isCompact ? 6 : 12) {
             ShowArtwork(
                 recordingId: imageRecordingId,
                 imageUrl: imageUrl,
-                size: DeadlySize.carouselCard,
+                size: size,
                 cornerRadius: DeadlySize.carouselCornerRadius
             )
             VStack(alignment: .leading, spacing: 2) {
@@ -28,7 +31,7 @@ struct ShowCarouselCard: View {
                 }
             }
         }
-        .frame(width: DeadlySize.carouselCard)
+        .frame(width: size)
         .opacity(recordingCount == 0 ? 0.5 : 1.0)
         .accessibilityElement(children: .combine)
     }

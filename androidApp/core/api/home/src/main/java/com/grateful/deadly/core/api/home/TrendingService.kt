@@ -26,6 +26,14 @@ enum class TrendingWindow {
         ALL -> "All"
     }
 
+    /** Label suffix used in the dynamic home title "Trending <titleLabel>". */
+    val titleLabel: String get() = when (this) {
+        NOW -> "now"
+        WEEK -> "this week"
+        MONTH -> "this month"
+        ALL -> "all time"
+    }
+
     /** Persisted preference key. Stable across renames of shortLabel. */
     val key: String get() = when (this) {
         NOW -> "now"

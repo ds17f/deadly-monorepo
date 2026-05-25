@@ -39,6 +39,9 @@ fun SettingsScreen(
     val homeTrendingWindow by viewModel.homeTrendingWindow.collectAsState()
     val homeTrendingAboveToday by viewModel.homeTrendingAboveToday.collectAsState()
     val homeRecentRows by viewModel.homeRecentRows.collectAsState()
+    val homeTrendingCardSize by viewModel.homeTrendingCardSize.collectAsState()
+    val homeTodayCardSize by viewModel.homeTodayCardSize.collectAsState()
+    val homeCollectionsCardSize by viewModel.homeCollectionsCardSize.collectAsState()
     val authState by viewModel.authState.collectAsState()
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
@@ -144,6 +147,11 @@ fun SettingsScreen(
             )
         }
 
+        item { HorizontalDivider() }
+
+        // ── HOME SCREEN ──────────────────────────────────────────────
+        item { SectionHeader("Home Screen") }
+
         item {
             HomeTrendingWindowRow(
                 currentKey = homeTrendingWindow,
@@ -165,6 +173,37 @@ fun SettingsScreen(
                 currentRows = homeRecentRows,
                 onSelected = { viewModel.setHomeRecentRows(it) }
             )
+        }
+
+        item {
+            HomeCardSizeRow(
+                title = "Trending card size",
+                subtitle = "Size of cards in the Trending carousel.",
+                current = homeTrendingCardSize,
+                onSelected = { viewModel.setHomeTrendingCardSize(it) }
+            )
+        }
+
+        item {
+            HomeCardSizeRow(
+                title = "Today In History card size",
+                subtitle = "Size of cards in the Today In Grateful Dead History carousel.",
+                current = homeTodayCardSize,
+                onSelected = { viewModel.setHomeTodayCardSize(it) }
+            )
+        }
+
+        item {
+            HomeCardSizeRow(
+                title = "Featured Collections card size",
+                subtitle = "Size of cards in the Featured Collections carousel.",
+                current = homeCollectionsCardSize,
+                onSelected = { viewModel.setHomeCollectionsCardSize(it) }
+            )
+        }
+
+        item {
+            HomeResetRow(onReset = { viewModel.resetHomePreferences() })
         }
 
         item { HorizontalDivider() }
@@ -581,6 +620,59 @@ private fun HomeRecentRowsRow(
                     )
                 ) {
                     Text(rows.toString())
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun HomeResetRow(onReset: () -> Unit) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+    ) {
+        TextButton(onClick = onReset) {
+            Text(
+                text = "Reset Home Screen to Defaults",
+                color = MaterialTheme.colorScheme.error
+            )
+        }
+    }
+}
+
+@Composable
+private fun HomeCardSizeRow(
+    title: String,
+    subtitle: String,
+    current: String,
+    onSelected: (String) -> Unit,
+) {
+    val options = listOf("small" to "Small", "large" to "Large")
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = title, style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = subtitle,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            options.forEachIndexed { index, (key, label) ->
+                SegmentedButton(
+                    selected = current == key,
+                    onClick = { onSelected(key) },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index,
+                        count = options.size
+                    )
+                ) {
+                    Text(label)
                 }
             }
         }

@@ -42,9 +42,26 @@ enum DeadlySpacing {
 
 enum DeadlySize {
     static let carouselCard: CGFloat = 160
+    static let carouselCardSmall: CGFloat = 100
     static let recentCardHeight: CGFloat = 64
     static let recentArtwork: CGFloat = 56
     static let artworkCornerRadius: CGFloat = 6
     static let cardCornerRadius: CGFloat = 8
     static let carouselCornerRadius: CGFloat = 12
+}
+
+/// Per-section carousel sizing on Home. Persisted as raw strings.
+enum CarouselCardSize: String, CaseIterable, Identifiable {
+    case small, large
+    var id: String { rawValue }
+    var label: String { self == .small ? "Small" : "Large" }
+    var width: CGFloat {
+        switch self {
+        case .small: return DeadlySize.carouselCardSmall
+        case .large: return DeadlySize.carouselCard
+        }
+    }
+    init(preferenceKey: String) {
+        self = CarouselCardSize(rawValue: preferenceKey) ?? .large
+    }
 }

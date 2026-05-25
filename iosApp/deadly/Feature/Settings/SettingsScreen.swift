@@ -18,6 +18,37 @@ struct SettingsScreen: View {
     @State private var showingImportAlert = false
     @State private var authError: String?
     @State private var showingAuthError = false
+    private func cardSizePicker(
+        title: String,
+        helper: String,
+        feature: String,
+        get: @escaping () -> String,
+        set: @escaping (String) -> Void
+    ) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(title)
+            Picker(title, selection: Binding(
+                get: { CarouselCardSize(preferenceKey: get()) },
+                set: { newSize in
+                    set(newSize.rawValue)
+                    container.analyticsService.track("feature_use", props: [
+                        "feature": feature,
+                        "category": "preference",
+                        "value": newSize.rawValue,
+                    ])
+                }
+            )) {
+                ForEach(CarouselCardSize.allCases) { size in
+                    Text(size.label).tag(size)
+                }
+            }
+            .pickerStyle(.segmented)
+            Text(helper)
+                .font(.callout)
+                .foregroundStyle(.secondary)
+        }
+    }
+
     private func settingsRow(_ title: String, systemImage: String) -> some View {
         HStack {
             Image(systemName: systemImage)
@@ -182,6 +213,10 @@ struct SettingsScreen: View {
                         .foregroundStyle(.secondary)
                 }
 
+            }
+
+            // MARK: - Home Screen
+            Section("Home Screen") {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Trending window on home")
                     Picker("Trending window on home", selection: Binding(
@@ -245,6 +280,40 @@ struct SettingsScreen: View {
                     Text("How many rows of recent shows on the home screen (2 shows per row).")
                         .font(.callout)
                         .foregroundStyle(.secondary)
+                }
+
+                cardSizePicker(
+                    title: "Trending card size",
+                    helper: "Size of cards in the Trending carousel.",
+                    feature: "set_home_trending_card_size",
+                    get: { container.appPreferences.homeTrendingCardSize },
+                    set: { container.appPreferences.homeTrendingCardSize = $0 }
+                )
+
+                cardSizePicker(
+                    title: "Today in History card size",
+                    helper: "Size of cards in the Today in Grateful Dead History carousel.",
+                    feature: "set_home_today_card_size",
+                    get: { container.appPreferences.homeTodayCardSize },
+                    set: { container.appPreferences.homeTodayCardSize = $0 }
+                )
+
+                cardSizePicker(
+                    title: "Featured Collections card size",
+                    helper: "Size of cards in the Featured Collections carousel.",
+                    feature: "set_home_collections_card_size",
+                    get: { container.appPreferences.homeCollectionsCardSize },
+                    set: { container.appPreferences.homeCollectionsCardSize = $0 }
+                )
+
+                Button(role: .destructive) {
+                    container.appPreferences.resetHomePreferences()
+                    container.analyticsService.track("feature_use", props: [
+                        "feature": "reset_home_preferences",
+                        "category": "preference",
+                    ])
+                } label: {
+                    Text("Reset Home Screen to Defaults")
                 }
             }
 
