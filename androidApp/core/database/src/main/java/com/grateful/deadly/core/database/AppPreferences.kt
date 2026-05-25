@@ -58,7 +58,7 @@ class AppPreferences @Inject constructor(
     }
 
     private val _homeTrendingAboveToday = MutableStateFlow(
-        prefs.getBoolean(KEY_HOME_TRENDING_ABOVE_TODAY, true)
+        prefs.getBoolean(KEY_HOME_TRENDING_ABOVE_TODAY, false)
     )
 
     /** When true, the Trending section renders above Today in History; otherwise below. */

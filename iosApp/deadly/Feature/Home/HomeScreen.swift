@@ -2,6 +2,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     @Environment(\.appContainer) private var container
+    @State private var recentExpanded = false
 
     private var homeService: HomeServiceImpl { container.homeService }
     private var trendingService: TrendingServiceImpl { container.trendingService }
@@ -101,7 +102,14 @@ struct HomeScreen: View {
     // MARK: - Sections
 
     private var recentShowsSection: some View {
-        VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
+        // Default to 4 (2×2) to save vertical real estate; reveal up to 8
+        // when the user expands. Local UI state — doesn't persist across
+        // launches by design.
+        let limit = recentExpanded ? 8 : 4
+        let shows = Array(content.recentShows.prefix(limit))
+        let canExpand = content.recentShows.count > 4
+
+        return VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
             Text("Recently Played")
                 .font(.title2)
                 .fontWeight(.bold)
@@ -113,7 +121,7 @@ struct HomeScreen: View {
                 ],
                 spacing: DeadlySpacing.gridVerticalSpacing
             ) {
-                ForEach(content.recentShows) { show in
+                ForEach(shows) { show in
                     NavigationLink(value: show.id) {
                         RecentShowCard(show: show)
                     }
@@ -131,6 +139,18 @@ struct HomeScreen: View {
                         )
                     }
                 }
+            }
+
+            if canExpand {
+                Button {
+                    withAnimation { recentExpanded.toggle() }
+                } label: {
+                    Text(recentExpanded ? "Show less" : "Show more")
+                        .font(.body)
+                        .frame(maxWidth: .infinity, minHeight: 36)
+                }
+                .buttonStyle(.plain)
+                .foregroundStyle(.tint)
             }
         }
     }

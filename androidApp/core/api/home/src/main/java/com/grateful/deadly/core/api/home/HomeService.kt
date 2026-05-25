@@ -56,7 +56,7 @@ data class HomeContent(
             featuredCollections = emptyList(),
             trendingShows = emptyList(),
             trendingWindow = TrendingWindow.NOW,
-            trendingAboveToday = true,
+            trendingAboveToday = false,
             lastRefresh = 0L
         )
     }

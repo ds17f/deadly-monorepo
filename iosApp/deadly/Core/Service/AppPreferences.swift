@@ -131,7 +131,7 @@ final class AppPreferences {
             Self.sourceBadgeStyleKey: "LONG",
             Self.playerControlsStyleKey: "skipTrack",
             Self.homeTrendingWindowKey: "now",
-            Self.homeTrendingAboveTodayKey: true,
+            Self.homeTrendingAboveTodayKey: false,
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""

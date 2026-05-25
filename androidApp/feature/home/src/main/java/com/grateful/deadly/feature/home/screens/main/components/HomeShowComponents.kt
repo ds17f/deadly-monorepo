@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -24,8 +25,9 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.model.Show
 
 /**
- * Recent Shows Grid - Dynamic 2-column layout showing recently played shows
- * Automatically adjusts height based on number of shows (1-8 shows, 1-4 rows)
+ * Recent Shows Grid - 2-column layout showing recently played shows.
+ * Defaults to 4 (2x2) to keep the home screen short; a "Show more" /
+ * "Show less" footer reveals up to 8.
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -35,9 +37,12 @@ fun RecentShowsGrid(
     onShowLongPress: (Show) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val displayShows = shows.take(8) // Maximum 8 shows for 2x4 grid
-    val rowCount = (displayShows.size + 1) / 2 // Calculate rows needed (ceiling division)
-    val gridHeight = (rowCount * 80 + (rowCount - 1) * 4).dp // rows × card height + spacing
+    var expanded by rememberSaveable { mutableStateOf(false) }
+    val limit = if (expanded) 8 else 4
+    val displayShows = shows.take(limit)
+    val rowCount = (displayShows.size + 1) / 2
+    val gridHeight = (rowCount * 80 + (rowCount - 1) * 4).dp
+    val canExpand = shows.size > 4
 
     Column(modifier = modifier.fillMaxWidth()) {
         Text(
@@ -50,11 +55,11 @@ fun RecentShowsGrid(
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             modifier = Modifier
-                .height(gridHeight) // Fixed height required — nested in LazyColumn
+                .height(gridHeight)
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalArrangement = Arrangement.spacedBy(4.dp),
-            userScrollEnabled = false // Disable scrolling to hold its size
+            userScrollEnabled = false
         ) {
             items(displayShows) { show ->
                 RecentShowCard(
@@ -62,6 +67,17 @@ fun RecentShowsGrid(
                     onShowClick = { onShowClick(show.id) },
                     onShowLongPress = { onShowLongPress(show) }
                 )
+            }
+        }
+
+        if (canExpand) {
+            TextButton(
+                onClick = { expanded = !expanded },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 4.dp),
+            ) {
+                Text(if (expanded) "Show less" else "Show more")
             }
         }
     }
