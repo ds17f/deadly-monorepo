@@ -16,6 +16,12 @@ const {
   closeAnalyticsDb,
 } = await import("../analytics.js");
 
+// Pin to a single rotation window for deterministic shuffles. Picked
+// arbitrarily — any fixed instant works.
+const FIXED_NOW = Date.parse("2026-05-27T12:00:00Z");
+const ROTATION_HOURS = 4;
+const BUCKET_MS = ROTATION_HOURS * 3600 * 1000;
+
 function favAction(
   iid: string,
   showId: string,
@@ -51,6 +57,34 @@ function play(iid: string, showId: string, ts: number, trackIndex = 0) {
   };
 }
 
+/** Build a show_id whose decade matches. */
+function showId(year: number, slug = "01"): string {
+  return `gd${year}-06-${slug}.sbd.miller`;
+}
+
+/** Seed `count` shows in a single decade with `favsPerShow` distinct favoriters. */
+function seedDecade(
+  decadeYears: number[],
+  favsPerShow: number,
+  baseTs: number,
+) {
+  const events: ReturnType<typeof favAction>[] = [];
+  let ev = 0;
+  for (const year of decadeYears) {
+    for (let f = 0; f < favsPerShow; f++) {
+      events.push(
+        favAction(
+          `user-${year}-${f}`,
+          showId(year, String(year).slice(-2)),
+          "add_favorite",
+          baseTs + ev++,
+        ),
+      );
+    }
+  }
+  return events;
+}
+
 beforeEach(() => {
   const db = getAnalyticsDb();
   db.exec(`DELETE FROM analytics_events; DELETE FROM show_listens_rollup;`);
@@ -61,117 +95,235 @@ afterAll(() => {
   if (fs.existsSync(TMP_DB)) fs.unlinkSync(TMP_DB);
 });
 
-describe("getPopularShows", () => {
-  it("ranks by favorites/listens ratio; high-ratio show beats high-play show", () => {
-    const t = Date.now() - 86400_000;
+describe("getPopularShows — per-decade pools", () => {
+  it("buckets slug-format show_ids (no `gd` prefix) — the prod format", () => {
+    const t = FIXED_NOW - 86400_000;
     insertEvents([
-      // show-A: 2 distinct favorites, 1 listen → ratio 2.0
-      favAction("alice", "show-A", "add_favorite", t),
-      favAction("bob", "show-A", "add_favorite", t),
-      play("alice", "show-A", t + 100),
-      // show-B: 2 favorites, 10 listens → ratio 0.2
-      favAction("carol", "show-B", "add_favorite", t),
-      favAction("dave", "show-B", "add_favorite", t),
-      ...Array.from({ length: 10 }, (_, i) =>
-        play(`listener${i}`, "show-B", t + i * 1000),
-      ),
+      favAction("alice", "1977-05-11-st-paul-civic-center-st-paul-mn-usa", "add_favorite", t),
+      favAction("bob",   "1977-05-11-st-paul-civic-center-st-paul-mn-usa", "add_favorite", t + 1),
+      favAction("carol", "1969-04-05-avalon-ballroom-san-francisco-ca-usa", "add_favorite", t + 2),
+      favAction("dave",  "1969-04-05-avalon-ballroom-san-francisco-ca-usa", "add_favorite", t + 3),
     ]);
 
-    const ids = getPopularShows(10).shows.map((s) => s.show_id);
-    expect(ids[0]).toBe("show-A");
-    expect(ids[1]).toBe("show-B");
+    const { decades } = getPopularShows({
+      nowMs: FIXED_NOW,
+      minFavorites: 2,
+      perDecade: 8,
+      rotationHours: ROTATION_HOURS,
+    });
+
+    expect(decades["70s"].map((s) => s.show_id)).toContain(
+      "1977-05-11-st-paul-civic-center-st-paul-mn-usa",
+    );
+    expect(decades["60s"].map((s) => s.show_id)).toContain(
+      "1969-04-05-avalon-ballroom-san-francisco-ca-usa",
+    );
+  });
+
+  it("buckets shows into 60s/70s/80s/90s by show_id year", () => {
+    const t = FIXED_NOW - 86400_000;
+    insertEvents([
+      ...seedDecade([1968], 2, t),
+      ...seedDecade([1977], 2, t + 1000),
+      ...seedDecade([1985], 2, t + 2000),
+      ...seedDecade([1993], 2, t + 3000),
+    ]);
+
+    const { decades } = getPopularShows({
+      nowMs: FIXED_NOW,
+      minFavorites: 2,
+      perDecade: 8,
+      rotationHours: ROTATION_HOURS,
+    });
+
+    expect(decades["60s"].map((s) => s.show_id)).toEqual([showId(1968, "68")]);
+    expect(decades["70s"].map((s) => s.show_id)).toEqual([showId(1977, "77")]);
+    expect(decades["80s"].map((s) => s.show_id)).toEqual([showId(1985, "85")]);
+    expect(decades["90s"].map((s) => s.show_id)).toEqual([showId(1993, "93")]);
+    // Response no longer carries an `all` bucket — the client computes it.
+    expect("all" in decades).toBe(false);
+  });
+
+  it("enforces the minFavorites floor server-side", () => {
+    const t = FIXED_NOW - 86400_000;
+    insertEvents([
+      // One favoriter — should be filtered when floor=2
+      favAction("alice", showId(1977, "77"), "add_favorite", t),
+      // Two favoriters — passes the floor
+      favAction("alice", showId(1978, "78"), "add_favorite", t + 1),
+      favAction("bob",   showId(1978, "78"), "add_favorite", t + 2),
+    ]);
+
+    const { decades } = getPopularShows({
+      nowMs: FIXED_NOW,
+      minFavorites: 2,
+      perDecade: 8,
+      rotationHours: ROTATION_HOURS,
+    });
+
+    expect(decades["70s"].map((s) => s.show_id)).toEqual([showId(1978, "78")]);
+  });
+
+  it("caps each decade pool at perDecade", () => {
+    const t = FIXED_NOW - 86400_000;
+    // 10 shows in the 70s, all qualifying
+    const years = [1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979];
+    insertEvents(seedDecade(years, 2, t));
+
+    const { decades } = getPopularShows({
+      nowMs: FIXED_NOW,
+      minFavorites: 2,
+      perDecade: 5,
+      rotationHours: ROTATION_HOURS,
+    });
+
+    expect(decades["70s"]).toHaveLength(5);
+    // Pool order is shuffled (client picks + sorts); we don't assert order.
+  });
+
+  it("returns the same sample within a rotation window", () => {
+    const t = FIXED_NOW - 86400_000;
+    const years = Array.from({ length: 20 }, (_, i) => 1970 + (i % 10));
+    insertEvents(
+      years.flatMap((y, i) => [
+        favAction(`a${i}`, showId(y, String(i).padStart(2, "0")), "add_favorite", t + i * 2),
+        favAction(`b${i}`, showId(y, String(i).padStart(2, "0")), "add_favorite", t + i * 2 + 1),
+      ]),
+    );
+
+    const a = getPopularShows({
+      nowMs: FIXED_NOW,
+      minFavorites: 2,
+      perDecade: 5,
+      rotationHours: ROTATION_HOURS,
+    });
+    const b = getPopularShows({
+      nowMs: FIXED_NOW + BUCKET_MS - 1, // same bucket
+      minFavorites: 2,
+      perDecade: 5,
+      rotationHours: ROTATION_HOURS,
+    });
+
+    expect(b.decades["70s"].map((s) => s.show_id)).toEqual(
+      a.decades["70s"].map((s) => s.show_id),
+    );
+  });
+
+  it("returns a different sample once the rotation window rolls", () => {
+    const t = FIXED_NOW - 86400_000;
+    // Enough shows that the shuffled top-N is very unlikely to coincide
+    // across two seeds by accident.
+    const events: ReturnType<typeof favAction>[] = [];
+    for (let i = 0; i < 30; i++) {
+      const year = 1970 + (i % 10);
+      const id = showId(year, String(i).padStart(2, "0"));
+      events.push(favAction(`a${i}`, id, "add_favorite", t + i * 2));
+      events.push(favAction(`b${i}`, id, "add_favorite", t + i * 2 + 1));
+    }
+    insertEvents(events);
+
+    const a = getPopularShows({
+      nowMs: FIXED_NOW,
+      minFavorites: 2,
+      perDecade: 5,
+      rotationHours: ROTATION_HOURS,
+    });
+    const b = getPopularShows({
+      nowMs: FIXED_NOW + BUCKET_MS, // next bucket
+      minFavorites: 2,
+      perDecade: 5,
+      rotationHours: ROTATION_HOURS,
+    });
+
+    const sampleA = a.decades["70s"].map((s) => s.show_id);
+    const sampleB = b.decades["70s"].map((s) => s.show_id);
+    expect(sampleB).not.toEqual(sampleA);
+  });
+
+  it("returns empty pools for decades with no qualifying shows", () => {
+    const t = FIXED_NOW - 86400_000;
+    insertEvents([
+      ...seedDecade([1977], 2, t),
+      ...seedDecade([1985], 2, t + 100),
+    ]);
+
+    const { decades } = getPopularShows({
+      nowMs: FIXED_NOW,
+      minFavorites: 2,
+      perDecade: 8,
+      rotationHours: ROTATION_HOURS,
+    });
+
+    expect(decades["70s"]).toHaveLength(1);
+    expect(decades["80s"]).toHaveLength(1);
+    expect(decades["60s"]).toEqual([]);
+    expect(decades["90s"]).toEqual([]);
   });
 
   it("nets out add-then-remove favorites (last action wins)", () => {
-    const t = Date.now() - 86400_000;
+    const t = FIXED_NOW - 86400_000;
+    const id = showId(1977, "77");
     insertEvents([
       // alice: add then remove → net 0
-      favAction("alice", "show-X", "add_favorite", t),
-      favAction("alice", "show-X", "remove_favorite", t + 1000),
+      favAction("alice", id, "add_favorite", t),
+      favAction("alice", id, "remove_favorite", t + 1000),
       // bob: add only → net 1
-      favAction("bob", "show-X", "add_favorite", t),
+      favAction("bob", id, "add_favorite", t),
       // carol: remove then re-add → net 1
-      favAction("carol", "show-X", "remove_favorite", t),
-      favAction("carol", "show-X", "add_favorite", t + 1000),
-      // dave: just an add to satisfy the floor
-      favAction("dave", "show-X", "add_favorite", t),
+      favAction("carol", id, "remove_favorite", t),
+      favAction("carol", id, "add_favorite", t + 1000),
     ]);
 
-    const row = getPopularShows(10).shows.find((s) => s.show_id === "show-X");
+    const { decades } = getPopularShows({
+      nowMs: FIXED_NOW,
+      minFavorites: 2,
+      perDecade: 8,
+      rotationHours: ROTATION_HOURS,
+    });
+    const row = decades["70s"].find((s) => s.show_id === id);
     expect(row).toBeDefined();
-    expect(row!.favorites).toBe(3); // bob, carol, dave (not alice)
+    expect(row!.favorites).toBe(2); // bob, carol (not alice)
   });
 
-  it("sorts higher-favorites shows above single-favorite shows", () => {
-    const t = Date.now() - 86400_000;
-    // ts values must differ for the same install — the analytics_events
-    // unique index is (iid, sid, event, ts), so two same-ts events from
-    // alice would dedupe to one.
+  it("ignores legacy NULL-target_type favorites and recording_track favorites", () => {
+    const t = FIXED_NOW - 86400_000;
     insertEvents([
-      // show-Y: 1 favorite (recently added)
-      favAction("alice", "show-Y", "add_favorite", t),
-      // show-Z: 2 favorites
-      favAction("alice", "show-Z", "add_favorite", t + 1000),
-      favAction("bob", "show-Z", "add_favorite", t),
+      favAction("alice", showId(1977, "77"), "add_favorite", t, null),
+      favAction("bob",   showId(1977, "77"), "add_favorite", t + 1, null),
+      favAction("alice", "gd1977-05-08.../03", "add_favorite", t + 2, "recording_track"),
+      favAction("bob",   "gd1977-05-08.../03", "add_favorite", t + 3, "recording_track"),
     ]);
 
-    const ids = getPopularShows(10).shows.map((s) => s.show_id);
-    // Both surface at floor=1, but the 2-favorite show is pinned first.
-    expect(ids[0]).toBe("show-Z");
-    expect(ids).toContain("show-Y");
-  });
-
-  it("orders single-favorite shows by recency of the last favorite action", () => {
-    // Among shows tied on favorites count, the recency tiebreaker keeps
-    // the rail from feeling static — the most recently favorited shows
-    // float toward the top.
-    const t = Date.now() - 86400_000;
-    insertEvents([
-      favAction("alice", "show-old", "add_favorite", t),
-      favAction("bob", "show-recent", "add_favorite", t + 60_000),
-      favAction("carol", "show-newest", "add_favorite", t + 120_000),
-    ]);
-
-    const ids = getPopularShows(10).shows.map((s) => s.show_id);
-    expect(ids).toEqual(["show-newest", "show-recent", "show-old"]);
-  });
-
-  it("ignores legacy NULL-target_type favorites (unrecoverable)", () => {
-    const t = Date.now() - 86400_000;
-    insertEvents([
-      favAction("alice", "show-Legacy", "add_favorite", t, null),
-      favAction("bob", "show-Legacy", "add_favorite", t, null),
-    ]);
-
-    expect(getPopularShows(10).shows).toEqual([]);
-  });
-
-  it("ignores recording_track favorites (Unit 3 territory)", () => {
-    const t = Date.now() - 86400_000;
-    insertEvents([
-      favAction("alice", "gd1977-05-08.../03", "add_favorite", t, "recording_track"),
-      favAction("bob", "gd1977-05-08.../03", "add_favorite", t, "recording_track"),
-    ]);
-
-    expect(getPopularShows(10).shows).toEqual([]);
+    const { decades } = getPopularShows({
+      nowMs: FIXED_NOW,
+      minFavorites: 2,
+      perDecade: 8,
+      rotationHours: ROTATION_HOURS,
+    });
+    expect(decades["70s"]).toEqual([]);
   });
 
   it("counts logical listens (not raw playback_start) per show", () => {
-    // Same listener firing 5 starts on the same show within an hour =
-    // 1 logical listen. The rail's denominator should reflect that.
-    const t = Date.now() - 86400_000;
+    const t = FIXED_NOW - 86400_000;
+    const id = showId(1977, "77");
     insertEvents([
-      favAction("alice", "show-L", "add_favorite", t),
-      favAction("bob", "show-L", "add_favorite", t),
-      // alice listens to 5 tracks of show-L back-to-back
-      play("alice", "show-L", t + 100, 0),
-      play("alice", "show-L", t + 200, 1),
-      play("alice", "show-L", t + 300, 2),
-      play("alice", "show-L", t + 400, 3),
-      play("alice", "show-L", t + 500, 4),
+      favAction("alice", id, "add_favorite", t),
+      favAction("bob",   id, "add_favorite", t + 1),
+      // alice listens to 5 tracks of the show back-to-back
+      play("alice", id, t + 100, 0),
+      play("alice", id, t + 200, 1),
+      play("alice", id, t + 300, 2),
+      play("alice", id, t + 400, 3),
+      play("alice", id, t + 500, 4),
     ]);
 
-    const row = getPopularShows(10).shows.find((s) => s.show_id === "show-L");
+    const { decades } = getPopularShows({
+      nowMs: FIXED_NOW,
+      minFavorites: 2,
+      perDecade: 8,
+      rotationHours: ROTATION_HOURS,
+    });
+    const row = decades["70s"].find((s) => s.show_id === id);
     expect(row!.listens).toBe(1);
     expect(row!.favorites).toBe(2);
     expect(row!.ratio).toBe(2);

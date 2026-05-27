@@ -2,12 +2,12 @@ import type { FastifyInstance } from "fastify";
 import { getPopularShows } from "../db/analytics.js";
 import { getPublisher } from "../db/redis.js";
 
-// Cache only the default home-rail size; a future "View All" page can
-// hit ?limit=100 etc. and skip the cache (uncached query is cheap).
-const CACHE_KEY_DEFAULT = "popular:v1";
-const CACHE_TTL_SECONDS = 600; // 10 minutes — matches trending
-const POPULAR_LIMIT_DEFAULT = 5;
-const POPULAR_LIMIT_MAX = 100;
+// Response is stable for the duration of the rotation window (see
+// POPULAR_ROTATION_HOURS in analytics.ts). The cache key includes the
+// current bucket index so a new rotation gets a fresh key and old keys
+// age out naturally via TTL.
+const CACHE_KEY_PREFIX = "popular:v3:b";
+const CACHE_TTL_SECONDS = 6 * 3600; // > one rotation window, ages out old buckets
 
 const popularShowSchema = {
   type: "object",
@@ -19,67 +19,73 @@ const popularShowSchema = {
   },
 } as const;
 
+const decadeArraySchema = { type: "array", items: popularShowSchema } as const;
+
+function envNum(name: string, fallback: number): number {
+  const raw = process.env[name];
+  if (!raw) return fallback;
+  const n = Number(raw);
+  return Number.isFinite(n) && n > 0 ? n : fallback;
+}
+
 export async function popularRoutes(app: FastifyInstance): Promise<void> {
-  app.get<{ Querystring: { limit?: number } }>(
+  app.get(
     "/api/popular",
     {
       schema: {
         tags: ["analytics"],
-        summary: "Popular shows for the home screen",
+        summary: "Popular shows by decade for the home screen",
         description:
-          "Shows ranked first by net-favorites count, then by recency of " +
-          "the most recent favorite action, then by saved-vs-played ratio. " +
-          "Default returns the top 5 for the home rail; pass ?limit=N " +
-          "(capped at 100) for a deeper list (future \"View All\" page).",
-        querystring: {
-          type: "object",
-          properties: { limit: { type: "number", default: POPULAR_LIMIT_DEFAULT } },
-        },
+          "Returns four per-decade pools (60s/70s/80s/90s) of shows people " +
+          "kept (net favorites ≥ floor), uniformly sampled via a " +
+          "deterministic shuffle seeded by the current rotation window. " +
+          "The client picks its 4-show display set from these pools and " +
+          "re-rolls locally on 'Show more'. Floor, per-decade pool size, " +
+          "and rotation window are env-tunable.",
         response: {
           200: {
             type: "object",
             properties: {
               generated_at: { type: "string" },
-              shows: { type: "array", items: popularShowSchema },
+              decades: {
+                type: "object",
+                properties: {
+                  "60s": decadeArraySchema,
+                  "70s": decadeArraySchema,
+                  "80s": decadeArraySchema,
+                  "90s": decadeArraySchema,
+                },
+              },
             },
           },
         },
       },
     },
-    async (request, reply) => {
-      const requested = request.query?.limit ?? POPULAR_LIMIT_DEFAULT;
-      const limit = Math.min(Math.max(requested, 1), POPULAR_LIMIT_MAX);
-      const isDefault = limit === POPULAR_LIMIT_DEFAULT;
+    async (_request, reply) => {
+      const rotationHours = envNum("POPULAR_ROTATION_HOURS", 4);
+      const bucket = Math.floor(Date.now() / (rotationHours * 3600 * 1000));
+      const cacheKey = `${CACHE_KEY_PREFIX}${bucket}`;
 
-      if (isDefault) {
-        try {
-          const cached = await getPublisher().get(CACHE_KEY_DEFAULT);
-          if (cached) {
-            reply.header("X-Popular-Cache", "hit");
-            return reply.type("application/json").send(cached);
-          }
-        } catch {
-          // Fall through to live query — better uncached than 500.
+      try {
+        const cached = await getPublisher().get(cacheKey);
+        if (cached) {
+          reply.header("X-Popular-Cache", "hit");
+          return reply.type("application/json").send(cached);
         }
+      } catch {
+        // Fall through to live query — better uncached than 500.
       }
 
-      const fresh = getPopularShows(limit);
+      const fresh = getPopularShows();
       const payload = JSON.stringify(fresh);
 
-      if (isDefault) {
-        try {
-          await getPublisher().set(
-            CACHE_KEY_DEFAULT,
-            payload,
-            "EX",
-            CACHE_TTL_SECONDS,
-          );
-        } catch {
-          // Cache write best-effort.
-        }
+      try {
+        await getPublisher().set(cacheKey, payload, "EX", CACHE_TTL_SECONDS);
+      } catch {
+        // Cache write best-effort.
       }
 
-      reply.header("X-Popular-Cache", isDefault ? "miss" : "bypass");
+      reply.header("X-Popular-Cache", "miss");
       return reply.type("application/json").send(payload);
     },
   );

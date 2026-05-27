@@ -1981,22 +1981,114 @@ export interface PopularShow {
   ratio: number;
 }
 
-export interface PopularResponse {
-  generated_at: string;
-  shows: PopularShow[];
+export type PopularDecade = "60s" | "70s" | "80s" | "90s";
+
+export interface PopularDecadeBuckets {
+  "60s": PopularShow[];
+  "70s": PopularShow[];
+  "80s": PopularShow[];
+  "90s": PopularShow[];
 }
 
-/** Default minimum distinct favoriters required to surface a show.
- *  Floor=1 in the early stage: with a small install base, requiring 2+
- *  produces a near-empty rail. Recency-ordered tiebreakers keep the
- *  list feeling fresh rather than dumping all 1-favorite shows in
- *  arbitrary order. Raise as volume grows. */
-const POPULAR_MIN_FAVORITES = 1;
+export interface PopularResponse {
+  generated_at: string;
+  decades: PopularDecadeBuckets;
+}
+
+export interface PopularOptions {
+  /** Override Date.now() for deterministic tests. */
+  nowMs?: number;
+  /** Minimum distinct favoriters required to surface a show in the pool. */
+  minFavorites?: number;
+  /** Target sample size drawn from each decade's qualifying pool. */
+  perDecade?: number;
+  /** Rotation window in hours — the time bucket that seeds the shuffle. */
+  rotationHours?: number;
+}
+
+function envNum(name: string, fallback: number): number {
+  const raw = process.env[name];
+  if (!raw) return fallback;
+  const n = Number(raw);
+  return Number.isFinite(n) && n > 0 ? n : fallback;
+}
+
+// Server-tunable so we don't need an app release to retune the rail.
+// Floor stays at 1 in the early stage — current prod data has most shows
+// sitting at 1–2 favoriters, so floor=2 produces empty buckets. Raise via
+// env var once volume grows.
+const POPULAR_MIN_FAVORITES = envNum("POPULAR_MIN_FAVORITES", 1);
+/** Per-decade pool size returned to the client. The client picks 4
+ *  display shows from these pools and re-rolls on "Show more" without
+ *  another round trip, so we want a healthy pool but not the whole tail. */
+const POPULAR_PER_DECADE = envNum("POPULAR_PER_DECADE", 20);
+const POPULAR_ROTATION_HOURS = envNum("POPULAR_ROTATION_HOURS", 4);
+
+const DECADE_KEYS = ["60s", "70s", "80s", "90s"] as const;
+type DecadeKey = (typeof DECADE_KEYS)[number];
+
+function decadeOf(showId: string): DecadeKey | null {
+  // Two show_id formats in the wild:
+  //   - slug:   "1977-05-11-st-paul-civic-center-..." (prod canonical)
+  //   - legacy: "gd1977-05-11.sbd.miller..." (older / test fixtures)
+  // Pull the first 4-digit run regardless of any leading prefix.
+  const m = showId.match(/(\d{4})/);
+  if (!m) return null;
+  const year = parseInt(m[1]!, 10);
+  if (year >= 1960 && year < 1970) return "60s";
+  if (year >= 1970 && year < 1980) return "70s";
+  if (year >= 1980 && year < 1990) return "80s";
+  if (year >= 1990 && year < 2000) return "90s";
+  return null;
+}
+
+/** Sortable date key (`YYYY-MM-DD`) extracted from either show_id format. */
+function dateKey(showId: string): string {
+  const m = showId.match(/(\d{4}-\d{2}-\d{2})/);
+  return m ? m[1]! : showId;
+}
+
+// mulberry32 — small, fast, deterministic PRNG. Good enough for shuffle.
+function mulberry32(seed: number): () => number {
+  let s = seed | 0;
+  return function () {
+    s = (s + 0x6d2b79f5) | 0;
+    let t = s;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function seededShuffle<T>(arr: readonly T[], seed: number): T[] {
+  const rng = mulberry32(seed);
+  const out = arr.slice();
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    const tmp = out[i]!;
+    out[i] = out[j]!;
+    out[j] = tmp;
+  }
+  return out;
+}
+
+/** Hash the (bucket index, decade) pair into a 32-bit seed. */
+function decadeSeed(bucket: number, decade: string): number {
+  let h = (bucket * 0x01000193) | 0;
+  for (let i = 0; i < decade.length; i++) {
+    h = Math.imul(h ^ decade.charCodeAt(i), 0x01000193) | 0;
+  }
+  return h >>> 0;
+}
 
 /**
- * "Popular" shows ranked by retention signal — net favorites (adds minus
- * subsequent removes per install), divided by all-time logical listens to
- * favor shows people *kept* over shows that just got tapped a lot.
+ * "Popular" shows surfaced as four decade *pools* (60s/70s/80s/90s). Each
+ * pool is `perDecade` shows drawn via a uniform shuffle seeded by the
+ * current rotation window, so the underlying pool is stable for
+ * ~`rotationHours` and rotates on its own. The client picks the 4-show
+ * display set from these pools and re-rolls on "Show more" without
+ * another round trip — that's why the server returns pools, not a
+ * pre-picked display set.
  *
  * `target_type` filter:
  *   - 'show' → this surface (Unit 2).
@@ -2005,8 +2097,12 @@ const POPULAR_MIN_FAVORITES = 1;
  *     also have no target_id. Unrecoverable; filtered out implicitly by
  *     the IS NOT NULL on target_id.
  */
-export function getPopularShows(limit = 10): PopularResponse {
+export function getPopularShows(options: PopularOptions = {}): PopularResponse {
   const db = getAnalyticsDb();
+  const nowMs = options.nowMs ?? Date.now();
+  const minFavorites = options.minFavorites ?? POPULAR_MIN_FAVORITES;
+  const perDecade = options.perDecade ?? POPULAR_PER_DECADE;
+  const rotationHours = options.rotationHours ?? POPULAR_ROTATION_HOURS;
 
   // Listens are computed inline (not from show_listens_rollup) because the
   // rollup only retains the top-50 per window — favorited shows outside
@@ -2014,7 +2110,7 @@ export function getPopularShows(limit = 10): PopularResponse {
   // the ratio. The CTE mirrors rebuildShowListensRollup's logical-listen
   // definition: count distinct "listen runs" per (iid, show_id), where a
   // run is broken either by a different show or a gap > LISTEN_GAP_MS.
-  const shows = db
+  const pool = db
     .prepare(
       `WITH actions AS (
          SELECT
@@ -2029,9 +2125,6 @@ export function getPopularShows(limit = 10): PopularResponse {
            AND json_extract(props, '$.target_id') IS NOT NULL
        ),
        latest AS (
-         -- For each (iid, show_id) keep only the most recent action.
-         -- An install who added then removed nets to a "remove" and is
-         -- excluded; one who removed then re-added nets to "add".
          SELECT iid, show_id, feature, ts
          FROM actions a
          WHERE a.ts = (
@@ -2042,8 +2135,7 @@ export function getPopularShows(limit = 10): PopularResponse {
        favs AS (
          SELECT
            show_id,
-           COUNT(DISTINCT iid) AS favorites,
-           MAX(ts) AS last_favorite_ts
+           COUNT(DISTINCT iid) AS favorites
          FROM latest
          WHERE feature = 'add_favorite'
          GROUP BY show_id
@@ -2083,19 +2175,39 @@ export function getPopularShows(limit = 10): PopularResponse {
            CASE WHEN COALESCE(sl.listens, 0) > 0 THEN sl.listens ELSE 1 END
            AS ratio
        FROM favs f
-       LEFT JOIN show_listens sl ON sl.show_id = f.show_id
-       -- favorites DESC keeps the genuinely-popular shows (2+ favoriters)
-       -- pinned at the top; recency tiebreaker keeps the rail feeling
-       -- fresh in the long single-favorite tail. Pure random would shuffle
-       -- the list on every refresh and feel unstable.
-       ORDER BY f.favorites DESC, f.last_favorite_ts DESC, ratio DESC
-       LIMIT ?`,
+       LEFT JOIN show_listens sl ON sl.show_id = f.show_id`,
     )
-    .all(POPULAR_MIN_FAVORITES, LISTEN_GAP_MS, limit) as PopularShow[];
+    .all(minFavorites, LISTEN_GAP_MS) as PopularShow[];
+
+  const byDecade: Record<DecadeKey, PopularShow[]> = {
+    "60s": [],
+    "70s": [],
+    "80s": [],
+    "90s": [],
+  };
+  for (const row of pool) {
+    const d = decadeOf(row.show_id);
+    if (d) byDecade[d].push(row);
+  }
+
+  const bucket = Math.floor(nowMs / (rotationHours * 3600 * 1000));
+  const buckets: PopularDecadeBuckets = {
+    "60s": [],
+    "70s": [],
+    "80s": [],
+    "90s": [],
+  };
+  for (const d of DECADE_KEYS) {
+    // Stable per-rotation shuffle, then take the per-decade pool. The
+    // client picks the 4-show display set from these pools and re-rolls
+    // on "Show more" without another round trip.
+    const shuffled = seededShuffle(byDecade[d], decadeSeed(bucket, d));
+    buckets[d] = shuffled.slice(0, perDecade);
+  }
 
   return {
-    generated_at: new Date().toISOString(),
-    shows,
+    generated_at: new Date(nowMs).toISOString(),
+    decades: buckets,
   };
 }
 
