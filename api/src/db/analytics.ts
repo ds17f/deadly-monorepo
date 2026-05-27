@@ -812,30 +812,34 @@ export interface LiveListener {
 
 /**
  * "Currently listening" set, defined as: each install's most recent
- * `playback_start` / `playback_end` event whose timestamp is within
- * LIVE_WINDOW_MS. The "soft" boundary (events of *either* kind count)
- * keeps a listener live across the autoplay gap between tracks: when
- * track N ends naturally, the brief moment before track N+1's
- * `playback_start` fires would otherwise drop them into Recent
- * Listening and they'd show as "36s ago" while still actively
- * listening. Sessions that crash or get force-killed without emitting
- * `playback_end` still linger for up to LIVE_WINDOW_MS — same trade
- * as before, just shorter than the old 45-minute window. The
- * shorter window is fine because the new definition no longer
- * relies on "unmatched start" semantics.
+ * `playback_start` keeps a listener live for a long time (mid-track
+ * keepalive — Grateful Dead jams routinely run 25–35 min with no
+ * intervening events) while a recent `playback_end` only keeps them
+ * live for a short window (between-tracks autoplay gap). Together
+ * they cover the three real cases:
+ *   - mid-track:      latest event is a start within START window → live
+ *   - between tracks: latest is an end within END window           → live
+ *   - finished:       latest is an end past END window              → not live
+ *
+ * Replaced the earlier single-window approach: a 45-min "unmatched
+ * start" rule mis-classified between-tracks users as Recent, and a
+ * 90-second soft window dropped mid-jam users out of Live.
  */
-const LIVE_WINDOW_MS = 90 * 1000;
+const LIVE_START_WINDOW_MS = 45 * 60 * 1000;
+const LIVE_END_WINDOW_MS = 2 * 60 * 1000;
 
 export function getLiveListeners(): LiveListener[] {
   const db = getAnalyticsDb();
-  const windowStart = Date.now() - LIVE_WINDOW_MS;
+  const now = Date.now();
+  const startWindowStart = now - LIVE_START_WINDOW_MS;
+  const endWindowStart = now - LIVE_END_WINDOW_MS;
+  const lookbackStart = now - 6 * 3600 * 1000;
 
   // Pick the latest playback event per iid (start or end), then keep
-  // only those whose latest event is inside the live window AND
-  // describes a show. `started_at` is resolved separately as the most
-  // recent `playback_start` for this (iid, show_id) within a generous
-  // lookback so the UI can render "started X ago" correctly even when
-  // the live-keepalive event is an end.
+  // only those whose latest event qualifies under the dual-window rule.
+  // `started_at` is resolved separately as the most recent
+  // `playback_start` for this (iid, show_id) so the UI can render
+  // "started X ago" correctly even when the keepalive event is an end.
   const rows = db
     .prepare(
       `WITH latest AS (
@@ -875,17 +879,13 @@ export function getLiveListeners(): LiveListener[] {
          l.source
        FROM latest l
        WHERE l.rn = 1
-         AND l.ts >= ?
+         AND (
+           (l.event = 'playback_start' AND l.ts >= ?)
+           OR (l.event = 'playback_end' AND l.ts >= ?)
+         )
        ORDER BY l.ts DESC`,
     )
-    .all(
-      // Latest-event lookback: a bit wider than LIVE_WINDOW_MS so the
-      // ROW_NUMBER pick is robust against clock skew / batch flushes.
-      Date.now() - 6 * 3600 * 1000,
-      // started_at lookup: look back 6h to find the original session start.
-      Date.now() - 6 * 3600 * 1000,
-      windowStart,
-    ) as Array<{
+    .all(lookbackStart, lookbackStart, startWindowStart, endWindowStart) as Array<{
       iid: string;
       sid: string;
       platform: string;
@@ -1263,7 +1263,11 @@ export function getRecentListening(
   const db = getAnalyticsDb();
   const now = Date.now();
   const windowStart = now - hours * 3600 * 1000;
-  const liveWindowStart = now - LIVE_WINDOW_MS;
+  const liveStartWindow = now - LIVE_START_WINDOW_MS;
+  const liveEndWindow = now - LIVE_END_WINDOW_MS;
+  // Inner lookback for "what's this iid's most recent event overall" —
+  // must be at least as wide as the longer of the two live windows.
+  const liveLookbackStart = liveStartWindow;
 
   const rows = db
     .prepare(
@@ -1321,14 +1325,14 @@ export function getRecentListening(
               AND event = 'playback_start'
             ORDER BY ts ASC LIMIT 1) AS source
        FROM agg a
-       -- Mirror the live definition in getLiveListeners: exclude
-       -- (iid, show_id) pairs where this iid's most recent playback
-       -- event is within LIVE_WINDOW_MS AND describes this show.
+       -- Mirror the dual-window live definition in getLiveListeners:
+       -- exclude (iid, show_id) pairs where this iid's most recent event
+       -- describes this show AND qualifies as live under either
+       -- (start within START window) OR (end within END window).
        WHERE NOT EXISTS (
          SELECT 1 FROM analytics_events latest
          WHERE latest.event IN ('playback_start', 'playback_end')
            AND latest.iid = a.iid
-           AND latest.ts >= ?
            AND json_extract(latest.props, '$.show_id') = a.show_id
            AND latest.ts = (
              SELECT MAX(x.ts) FROM analytics_events x
@@ -1336,11 +1340,21 @@ export function getRecentListening(
                AND x.iid = a.iid
                AND x.ts >= ?
            )
+           AND (
+             (latest.event = 'playback_start' AND latest.ts >= ?)
+             OR (latest.event = 'playback_end' AND latest.ts >= ?)
+           )
        )
        ORDER BY a.last_event_at DESC
        LIMIT ?`,
     )
-    .all(windowStart, liveWindowStart, liveWindowStart, limit) as Array<{
+    .all(
+      windowStart,
+      liveLookbackStart,
+      liveStartWindow,
+      liveEndWindow,
+      limit,
+    ) as Array<{
       iid: string;
       show_id: string;
       started_at: number;
