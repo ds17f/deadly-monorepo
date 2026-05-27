@@ -38,10 +38,10 @@ export default function RootLayout({
         <ConnectProvider>
         <PlayerProvider>
           <nav className="border-b border-white/10 px-6 py-4">
-            <div className="mx-auto flex max-w-5xl items-center justify-between">
+            <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 overflow-hidden">
               <Link
                 href="/"
-                className="flex items-center gap-2 text-xl font-bold text-white"
+                className="flex flex-shrink-0 items-center gap-2 text-xl font-bold text-white"
               >
                 <Image
                   src="/logo.png"
@@ -51,7 +51,11 @@ export default function RootLayout({
                 />
                 The Deadly
               </Link>
-              <div className="flex items-center gap-4">
+              {/* min-w-0 lets the player shrink instead of blowing out the
+                  page width on narrow viewports; without it a long track
+                  title pushed the right edge past max-w-5xl and broke
+                  downstream page layout. */}
+              <div className="flex min-w-0 flex-1 items-center justify-end gap-4">
                 <HeaderPlayerWrapper />
                 <UserMenu />
               </div>

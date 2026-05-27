@@ -50,6 +50,7 @@ export default function HeaderPlayer() {
     playTrack,
     seek,
     playShow,
+    dismiss,
   } = usePlayer();
 
   const { isConnected, userState, isActiveDevice, claimSession, sendCommand } = useConnect();
@@ -328,6 +329,22 @@ export default function HeaderPlayer() {
           </svg>
         </button>
       </div>
+
+      {/* Clear/close — visible whenever a show is loaded (active, parked, or
+          remote). Without this, a stuck show occupies the header forever and
+          there's no escape from the player state. */}
+      {(isActive || isParked || isRemoteActive) && (
+        <button
+          onClick={dismiss}
+          className="flex-shrink-0 rounded-full p-1.5 text-white/40 transition-colors hover:text-white/70"
+          aria-label="Clear player"
+          title="Clear player"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+      )}
 
       {/* Queue toggle — only when local playback */}
       {isActive && isActiveDevice && (
