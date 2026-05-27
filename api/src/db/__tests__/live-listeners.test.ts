@@ -47,11 +47,10 @@ afterAll(() => {
   if (fs.existsSync(TMP_DB)) fs.unlinkSync(TMP_DB);
 });
 
-describe("getLiveListeners — soft live boundary", () => {
-  it("a user 30s past a playback_end still counts as live", () => {
-    // This is the reported bug: between tracks (after end of N, before
-    // start of N+1) the user was dropping into Recent Listening with a
-    // "36 seconds ago" timestamp despite actively listening.
+describe("getLiveListeners — dual live boundary", () => {
+  it("a user 30s past a playback_end still counts as live (between-tracks gap)", () => {
+    // Reported bug: between tracks, the user was dropping into Recent
+    // Listening as "36 seconds ago" while still actively listening.
     const now = Date.now();
     insertEvents([
       ev("playback_start", "alice", "s1", "show-A", 0, now - 60_000),
@@ -64,42 +63,49 @@ describe("getLiveListeners — soft live boundary", () => {
     expect(live).toHaveLength(1);
     expect(live[0].iid).toBe("alice");
     expect(live[0].show_id).toBe("show-A");
-    // started_at should reflect the original playback_start, not the end.
     expect(live[0].started_at).toBe(now - 60_000);
   });
 
-  it("a user with only a playback_start within 90s is live", () => {
+  it("a user mid-long-track is live even with no events for 30 minutes", () => {
+    // The case the previous fix broke: Dark Star can run 30+ minutes
+    // with no intervening events. The 45-min START window covers this.
     const now = Date.now();
     insertEvents([
-      ev("playback_start", "bob", "s1", "show-B", 0, now - 10_000),
+      ev("playback_start", "bob", "s1", "show-B", 5, now - 30 * 60_000),
     ]);
 
     const live = getLiveListeners();
     expect(live.map((l) => l.iid)).toEqual(["bob"]);
+    expect(live[0].show_id).toBe("show-B");
   });
 
-  it("a user whose latest event is >90s old is not live", () => {
+  it("a user whose start was >45min ago is no longer live", () => {
     const now = Date.now();
     insertEvents([
-      ev("playback_start", "carol", "s1", "show-C", 0, now - 5 * 60_000),
-      ev("playback_end", "carol", "s1", "show-C", 0, now - 2 * 60_000, {
-        reason: "skipped_next",
-      }),
+      ev("playback_start", "carol", "s1", "show-C", 0, now - 60 * 60_000),
     ]);
-
     expect(getLiveListeners()).toEqual([]);
   });
 
-  it("the latest event wins — switching shows in <90s updates current state", () => {
+  it("a user whose latest end is >2min ago is no longer live (finished)", () => {
     const now = Date.now();
     insertEvents([
-      // Started show A 5 minutes ago, then ended it 60s ago…
-      ev("playback_start", "dave", "s1", "show-A", 0, now - 5 * 60_000),
-      ev("playback_end", "dave", "s1", "show-A", 0, now - 60_000, {
+      ev("playback_start", "dave", "s1", "show-D", 0, now - 5 * 60_000),
+      ev("playback_end", "dave", "s1", "show-D", 0, now - 3 * 60_000, {
+        reason: "completed",
+      }),
+    ]);
+    expect(getLiveListeners()).toEqual([]);
+  });
+
+  it("switching shows updates current state — latest event wins", () => {
+    const now = Date.now();
+    insertEvents([
+      ev("playback_start", "eve", "s1", "show-A", 0, now - 10 * 60_000),
+      ev("playback_end", "eve", "s1", "show-A", 0, now - 60_000, {
         reason: "skipped_next",
       }),
-      // …then started show B 20s ago.
-      ev("playback_start", "dave", "s1", "show-B", 0, now - 20_000),
+      ev("playback_start", "eve", "s1", "show-B", 0, now - 20_000),
     ]);
 
     const live = getLiveListeners();
@@ -108,13 +114,10 @@ describe("getLiveListeners — soft live boundary", () => {
   });
 
   it("at most one row per iid even with multiple unmatched starts", () => {
-    // Crashed-without-end scenario: client emits a second start without
-    // ending the first. We still want one row per listener, picking the
-    // latest event.
     const now = Date.now();
     insertEvents([
-      ev("playback_start", "eve", "s1", "show-A", 0, now - 60_000),
-      ev("playback_start", "eve", "s2", "show-B", 0, now - 20_000),
+      ev("playback_start", "frank", "s1", "show-A", 0, now - 5 * 60_000),
+      ev("playback_start", "frank", "s2", "show-B", 0, now - 60_000),
     ]);
 
     const live = getLiveListeners();
@@ -141,11 +144,11 @@ describe("getRecentListening excludes live listeners under the new boundary", ()
     expect(recent.find((r) => r.iid === "alice" && r.show_id === "show-A")).toBeUndefined();
   });
 
-  it("a user 2 min past their last event appears in Recent, not Live", () => {
+  it("a user 5 min past their last end appears in Recent, not Live", () => {
     const now = Date.now();
     insertEvents([
-      ev("playback_start", "bob", "s1", "show-B", 0, now - 5 * 60_000),
-      ev("playback_end", "bob", "s1", "show-B", 0, now - 2 * 60_000, {
+      ev("playback_start", "bob", "s1", "show-B", 0, now - 10 * 60_000),
+      ev("playback_end", "bob", "s1", "show-B", 0, now - 5 * 60_000, {
         reason: "skipped_next",
       }),
     ]);
