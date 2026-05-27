@@ -135,6 +135,29 @@ class SettingsViewModel @Inject constructor(
         ))
     }
 
+    val homePopularEnabled: StateFlow<Boolean> = appPreferences.homePopularEnabled
+
+    fun toggleHomePopularEnabled() {
+        val newValue = !appPreferences.homePopularEnabled.value
+        appPreferences.setHomePopularEnabled(newValue)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_popular_enabled",
+            "category" to "preference",
+            "value" to newValue.toString(),
+        ))
+    }
+
+    val homePopularCardSize: StateFlow<String> = appPreferences.homePopularCardSize
+
+    fun setHomePopularCardSize(value: String) {
+        appPreferences.setHomePopularCardSize(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_popular_card_size",
+            "category" to "preference",
+            "value" to value,
+        ))
+    }
+
     val homeRecentRows: StateFlow<Int> = appPreferences.homeRecentRows
 
     fun setHomeRecentRows(value: Int) {

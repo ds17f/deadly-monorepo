@@ -18,6 +18,7 @@ final class AppContainer {
     let searchService: SearchServiceImpl
     let homeService: HomeServiceImpl
     let trendingService: TrendingServiceImpl
+    let popularService: PopularServiceImpl
     let favoritesService: FavoritesServiceImpl
     let collectionsService: CollectionsServiceImpl
     let streamPlayer: StreamPlayer
@@ -162,6 +163,14 @@ final class AppContainer {
             // the local show catalog. @MainActor; safe to init inline.
             trendingService = MainActor.assumeIsolated {
                 TrendingServiceImpl(
+                    appPreferences: prefs,
+                    showRepository: showRepo
+                )
+            }
+
+            // "Fan Favorites" — show favorites ranked by kept/listened ratio.
+            popularService = MainActor.assumeIsolated {
+                PopularServiceImpl(
                     appPreferences: prefs,
                     showRepository: showRepo
                 )

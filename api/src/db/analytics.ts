@@ -25,6 +25,16 @@ export function getAnalyticsDb(): Database.Database {
  * Existing dupes block index creation, so we pre-dedupe on first run only —
  * the check on `sqlite_master` keeps subsequent startups O(1) instead of
  * scanning the table.
+ *
+ * FOOTGUN: the index keys on primitive columns only — `props` is not
+ * considered. Two events from the same install/session at the exact same
+ * millisecond with *different* props (e.g. two `add_favorite`s for
+ * different shows, two `playback_start`s for different tracks) collide and
+ * one gets silently dropped. In practice clients emit events serially so
+ * collisions are vanishingly rare; if we ever ship a bulk-action UI (e.g.
+ * "favorite all", batch import), the client must stagger timestamps or we
+ * widen the index. Surfaced during getPopularShows test setup — see the
+ * popular.test.ts comments and PLANS/home-discovery-rails.md.
  */
 function ensureUniqueEventIndex(db: Database.Database): void {
   const exists = db

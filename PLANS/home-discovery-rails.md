@@ -25,7 +25,12 @@ session can pick up cold.
 
 ## Upcoming units
 
-### Unit 2 — "Popular" rail (show favorites)
+### Unit 2 — "Fan Favorites" rail (show favorites)
+
+**Display name:** "Fan Favorites" in UI. Internal name stays `popular`
+(API path `/api/popular`, prefs `homePopularCardSize`, etc.).
+
+**Card size:** default **small**, like Trending. Same plumbing pattern.
 
 **Source of truth.** `analytics_events` where `event='feature_use' AND
 feature='add_favorite'`. Show id is in `target_id` (with a legacy `show_id`
@@ -120,6 +125,37 @@ designing the browsable-content hierarchy from scratch.
   is what makes the surface worthwhile.
 - **Track favorites exist** but mixed in with show favorites in `target_id`
   — needs schema verification before Unit 3.
+
+## Deferred (parked, not dropped)
+
+### Drag-list home reorder
+
+Replace the current `homeTrendingAboveToday` boolean with an ordered
+list of section IDs (recent / trending / today / fan-favorites /
+collections / …). A Settings sub-screen lets the user drag to reorder.
+
+- iOS: trivial (`List` + `.onMove`, ~40 lines).
+- Android: medium — no native equivalent. Either pull in
+  `sh.calvin.reorderable` or hand-roll with `detectDragGesturesAfterLongPress`.
+  ~150 lines hand-rolled.
+- Migration: derive initial list from existing pref.
+
+Held until after Unit 2 ships so we have multiple rails to actually
+reorder. The Trending-above-Today toggle stays in place until then.
+
+## Index footgun (worth knowing)
+
+`analytics_events` has a unique index on `(iid, sid, event, ts)` to
+neutralize client retries. The index keys on primitive columns only —
+`props` is *not* part of the key. Two same-ms events from the same
+install/session with different `props` collide and one is silently
+dropped by `INSERT OR IGNORE`. Surfaced while writing the popular
+tests (alice favoriting two shows at the same `t` lost one favorite).
+
+Real-world risk is low (clients emit serially with ms granularity).
+Becomes a real bug if we ever build a bulk-action UI ("favorite all",
+batch import). Mitigations when needed: stagger timestamps client-side
+or widen the index to include `props` (or a hash of it).
 
 ## Things explicitly out of scope (don't drift)
 

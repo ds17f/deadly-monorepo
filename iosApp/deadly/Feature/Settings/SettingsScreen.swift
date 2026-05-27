@@ -325,6 +325,33 @@ struct SettingsScreen: View {
                     set: { container.appPreferences.homeCollectionsCardSize = $0 }
                 )
 
+                Toggle(isOn: Binding(
+                    get: { container.appPreferences.homePopularEnabled },
+                    set: { newValue in
+                        container.appPreferences.homePopularEnabled = newValue
+                        container.analyticsService.track("feature_use", props: [
+                            "feature": "set_home_popular_enabled",
+                            "category": "preference",
+                            "value": String(newValue),
+                        ])
+                    }
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Show Fan Favorites")
+                        Text("Shows other listeners kept — ranked by saved-vs-played ratio.")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
+                cardSizePicker(
+                    title: "Fan Favorites card size",
+                    helper: "Size of cards in the Fan Favorites carousel.",
+                    feature: "set_home_popular_card_size",
+                    get: { container.appPreferences.homePopularCardSize },
+                    set: { container.appPreferences.homePopularCardSize = $0 }
+                )
+
                 Button(role: .destructive) {
                     container.appPreferences.resetHomePreferences()
                     container.analyticsService.track("feature_use", props: [

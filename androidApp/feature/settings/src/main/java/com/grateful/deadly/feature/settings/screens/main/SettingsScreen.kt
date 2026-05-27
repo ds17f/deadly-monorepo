@@ -43,6 +43,8 @@ fun SettingsScreen(
     val homeTrendingCardSize by viewModel.homeTrendingCardSize.collectAsState()
     val homeTodayCardSize by viewModel.homeTodayCardSize.collectAsState()
     val homeCollectionsCardSize by viewModel.homeCollectionsCardSize.collectAsState()
+    val homePopularEnabled by viewModel.homePopularEnabled.collectAsState()
+    val homePopularCardSize by viewModel.homePopularCardSize.collectAsState()
     val authState by viewModel.authState.collectAsState()
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
@@ -209,6 +211,24 @@ fun SettingsScreen(
                 subtitle = "Size of cards in the Featured Collections carousel.",
                 current = homeCollectionsCardSize,
                 onSelected = { viewModel.setHomeCollectionsCardSize(it) }
+            )
+        }
+
+        item {
+            PreferenceToggleRow(
+                title = "Show Fan Favorites",
+                subtitle = "Shows other listeners kept — ranked by saved-vs-played ratio.",
+                checked = homePopularEnabled,
+                onCheckedChange = { viewModel.toggleHomePopularEnabled() }
+            )
+        }
+
+        item {
+            HomeCardSizeRow(
+                title = "Fan Favorites card size",
+                subtitle = "Size of cards in the Fan Favorites carousel.",
+                current = homePopularCardSize,
+                onSelected = { viewModel.setHomePopularCardSize(it) }
             )
         }
 

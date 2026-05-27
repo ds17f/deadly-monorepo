@@ -117,6 +117,37 @@ fun HomeScreen(
             item { trendingItem() }
         }
 
+        // Fan Favorites — sits below the Trending/Today pair. Hidden when
+        // the user has the rail off, or when the rail has no results
+        // (e.g. small install base, nothing has met the favorites floor).
+        if (uiState.homeContent.popularEnabled && uiState.homeContent.popularShows.isNotEmpty()) {
+            item {
+                val popularCardWidth = cardWidthFor(uiState.homeContent.popularCardSize)
+                val popularItems = uiState.homeContent.popularShows.map { show ->
+                    HorizontalCollectionItem(
+                        id = show.id,
+                        displayText = show.date,
+                        type = CollectionItemType.SHOW,
+                        recordingId = show.bestRecordingId,
+                        imageUrl = show.coverImageUrl
+                    )
+                }
+                HorizontalCollection(
+                    title = "Fan Favorites",
+                    items = popularItems,
+                    cardWidth = popularCardWidth,
+                    onItemClick = { item ->
+                        uiState.homeContent.popularShows.find { it.id == item.id }
+                            ?.let { onNavigateToShow(it.id) }
+                    },
+                    onItemLongPress = { item ->
+                        uiState.homeContent.popularShows.find { it.id == item.id }
+                            ?.let { detailShow = it }
+                    }
+                )
+            }
+        }
+
         // Featured Collections Section
         item {
             val collectionItems = uiState.homeContent.featuredCollections.map { collection ->

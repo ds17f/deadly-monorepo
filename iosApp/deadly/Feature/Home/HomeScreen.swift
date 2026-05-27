@@ -5,6 +5,7 @@ struct HomeScreen: View {
 
     private var homeService: HomeServiceImpl { container.homeService }
     private var trendingService: TrendingServiceImpl { container.trendingService }
+    private var popularService: PopularServiceImpl { container.popularService }
     private var appPreferences: AppPreferences { container.appPreferences }
     private var content: HomeContent { homeService.content }
     private var trendingWindow: TrendingWindow {
@@ -15,6 +16,12 @@ struct HomeScreen: View {
     }
     private var trendingCardSize: CarouselCardSize {
         CarouselCardSize(preferenceKey: appPreferences.homeTrendingCardSize)
+    }
+    private var popularShows: [Show] {
+        popularService.content.shows
+    }
+    private var popularCardSize: CarouselCardSize {
+        CarouselCardSize(preferenceKey: appPreferences.homePopularCardSize)
     }
     private var todayCardSize: CarouselCardSize {
         CarouselCardSize(preferenceKey: appPreferences.homeTodayCardSize)
@@ -44,6 +51,12 @@ struct HomeScreen: View {
                     if !trendingShows.isEmpty { trendingSection }
                 }
 
+                // "Fan Favorites" — sits below the Trending/Today pair until
+                // the drag-list reorder lands.
+                if appPreferences.homePopularEnabled && !popularShows.isEmpty {
+                    fanFavoritesSection
+                }
+
                 if !content.featuredCollections.isEmpty {
                     collectionsSection
                 }
@@ -58,6 +71,7 @@ struct HomeScreen: View {
         .task {
             await homeService.refresh()
             await trendingService.refresh()
+            await popularService.refresh()
         }
         // The trending response depends on the include-anniversaries pref —
         // SwiftUI .task only fires on appearance, so flip-the-toggle-and-stay
@@ -115,6 +129,45 @@ struct HomeScreen: View {
                                 lines: [show.date],
                                 recordingCount: show.recordingCount,
                                 size: trendingCardSize.width
+                            )
+                        }
+                        .buttonStyle(.plain)
+                        .contextMenu {
+                            NavigationLink(value: show.id) {
+                                Label("View Show", systemImage: "eye")
+                            }
+                        } preview: {
+                            ShowDetailPopover(
+                                date: show.date,
+                                venue: show.venue.name,
+                                location: show.location.displayText,
+                                rating: show.hasRating ? show.displayRating : nil
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // MARK: - Fan Favorites
+
+    private var fanFavoritesSection: some View {
+        VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
+            Text("Fan Favorites")
+                .font(.title2)
+                .fontWeight(.bold)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(spacing: DeadlySpacing.itemSpacing) {
+                    ForEach(popularShows) { show in
+                        NavigationLink(value: show.id) {
+                            ShowCarouselCard(
+                                imageRecordingId: show.bestRecordingId,
+                                imageUrl: show.coverImageUrl,
+                                lines: [show.date],
+                                recordingCount: show.recordingCount,
+                                size: popularCardSize.width
                             )
                         }
                         .buttonStyle(.plain)

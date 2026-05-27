@@ -60,6 +60,8 @@ class AppPreferences @Inject constructor(
         private const val KEY_HOME_TODAY_CARD_SIZE = "home_today_card_size"
         private const val KEY_HOME_COLLECTIONS_CARD_SIZE = "home_collections_card_size"
         private const val KEY_HOME_TRENDING_INCLUDE_ANNIVERSARIES = "home_trending_include_anniversaries"
+        private const val KEY_HOME_POPULAR_ENABLED = "home_popular_enabled"
+        private const val KEY_HOME_POPULAR_CARD_SIZE = "home_popular_card_size"
     }
 
     private val _homeTrendingCardSize = MutableStateFlow(
@@ -98,6 +100,29 @@ class AppPreferences @Inject constructor(
         setHomeTodayCardSize("large")
         setHomeCollectionsCardSize("large")
         setHomeTrendingIncludeAnniversaries(false)
+        setHomePopularEnabled(true)
+        setHomePopularCardSize("small")
+    }
+
+    private val _homePopularEnabled = MutableStateFlow(
+        prefs.getBoolean(KEY_HOME_POPULAR_ENABLED, true)
+    )
+
+    /** Show the "Fan Favorites" home rail. On by default. */
+    val homePopularEnabled: StateFlow<Boolean> = _homePopularEnabled.asStateFlow()
+
+    fun setHomePopularEnabled(value: Boolean) {
+        prefs.edit().putBoolean(KEY_HOME_POPULAR_ENABLED, value).apply()
+        _homePopularEnabled.value = value
+    }
+
+    private val _homePopularCardSize = MutableStateFlow(
+        prefs.getString(KEY_HOME_POPULAR_CARD_SIZE, null) ?: "small"
+    )
+    val homePopularCardSize: StateFlow<String> = _homePopularCardSize.asStateFlow()
+    fun setHomePopularCardSize(value: String) {
+        prefs.edit().putString(KEY_HOME_POPULAR_CARD_SIZE, value).apply()
+        _homePopularCardSize.value = value
     }
 
     private val _homeTrendingIncludeAnniversaries = MutableStateFlow(

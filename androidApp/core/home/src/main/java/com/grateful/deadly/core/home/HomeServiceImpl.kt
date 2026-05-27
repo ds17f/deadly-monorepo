@@ -3,6 +3,7 @@ package com.grateful.deadly.core.home
 import android.util.Log
 import com.grateful.deadly.core.api.home.HomeService
 import com.grateful.deadly.core.api.home.HomeContent
+import com.grateful.deadly.core.api.home.PopularService
 import com.grateful.deadly.core.api.home.TrendingService
 import com.grateful.deadly.core.api.home.TrendingWindow
 import com.grateful.deadly.core.api.recent.RecentShowsService
@@ -40,6 +41,7 @@ class HomeServiceImpl @Inject constructor(
     private val recentShowsService: RecentShowsService,
     private val collectionsService: DeadCollectionsService,
     private val trendingService: TrendingService,
+    private val popularService: PopularService,
     private val appPreferences: AppPreferences
 ) : HomeService {
     
@@ -52,6 +54,10 @@ class HomeServiceImpl @Inject constructor(
     // Reactive combination of all home content sources
     // Bundle the preference flows so the main combine stays at 5 args
     // (Flow.combine's typed overloads top out at 5).
+    // Bundle all home-screen preference flows so the main combine stays
+    // under combine()'s typed-overload limit. Two preference groups now:
+    // trending/layout prefs and popular prefs, kept separate to mirror
+    // which service consumes them.
     private data class HomePrefs(
         val windowKey: String,
         val aboveToday: Boolean,
@@ -59,6 +65,8 @@ class HomeServiceImpl @Inject constructor(
         val trendingCardSize: String,
         val todayCardSize: String,
         val collectionsCardSize: String,
+        val popularEnabled: Boolean,
+        val popularCardSize: String,
     )
     private val homePrefs = combine(
         appPreferences.homeTrendingWindow,
@@ -67,6 +75,8 @@ class HomeServiceImpl @Inject constructor(
         appPreferences.homeTrendingCardSize,
         appPreferences.homeTodayCardSize,
         appPreferences.homeCollectionsCardSize,
+        appPreferences.homePopularEnabled,
+        appPreferences.homePopularCardSize,
     ) { values ->
         HomePrefs(
             windowKey = values[0] as String,
@@ -75,24 +85,40 @@ class HomeServiceImpl @Inject constructor(
             trendingCardSize = values[3] as String,
             todayCardSize = values[4] as String,
             collectionsCardSize = values[5] as String,
+            popularEnabled = values[6] as Boolean,
+            popularCardSize = values[7] as String,
         )
     }
+
+    // Bundle trending + popular into a single flow so the main combine
+    // doesn't exceed combine()'s 5-arg typed overloads.
+    private data class HomeRails(
+        val trending: com.grateful.deadly.core.api.home.TrendingContent,
+        val popular: com.grateful.deadly.core.api.home.PopularContent,
+    )
+    private val homeRails = combine(
+        trendingService.trending,
+        popularService.popular,
+    ) { t, p -> HomeRails(t, p) }
 
     override val homeContent: StateFlow<HomeContent> = combine(
         recentShowsService.recentShows,
         loadTodayInHistoryFlow(),
         collectionsService.featuredCollections,
-        trendingService.trending,
+        homeRails,
         homePrefs
-    ) { recentShows, todayInHistory, featuredCollections, trending, prefs ->
+    ) { recentShows, todayInHistory, featuredCollections, rails, prefs ->
         val window = TrendingWindow.fromKey(prefs.windowKey)
         HomeContent(
             recentShows = recentShows,
             todayInHistory = todayInHistory,
             featuredCollections = featuredCollections,
-            trendingShows = trending.forWindow(window),
+            trendingShows = rails.trending.forWindow(window),
             trendingWindow = window,
             trendingAboveToday = prefs.aboveToday,
+            popularShows = rails.popular.shows,
+            popularEnabled = prefs.popularEnabled,
+            popularCardSize = prefs.popularCardSize,
             recentRows = prefs.recentRows,
             trendingCardSize = prefs.trendingCardSize,
             todayCardSize = prefs.todayCardSize,
