@@ -18,47 +18,67 @@ session can pick up cold.
   - `playback_start` within 45 min OR `playback_end` within 2 min → live.
   - Covers mid-long-jam (Dark Star = 30+ min) and between-tracks gap.
 
+### Shipped (on `feat/popular-rail`, not yet on main)
+- Unit 2 — "Fan Favorites" rail (see [ADR-0005](../docs/adr/0005-fan-favorites-rail.md)
+  for the design rationale). Final shape diverged materially from the
+  original plan below — what shipped:
+  - `/api/popular` returns four per-decade *pools* (60s/70s/80s/90s),
+    each ≤20 shows, drawn via a 4h-rotated deterministic shuffle.
+  - Client picks the 4-show display set locally:
+    - `all` pref → 1 show per non-empty decade.
+    - Specific decade pref → 4 shows from that pool with year-spread.
+  - "Show more" link bumps a local seed → instant re-roll, no fetch.
+  - Decade choice lives in Settings → Home Screen (segmented picker).
+  - Env-tunable: `POPULAR_MIN_FAVORITES` (floor, default 1),
+    `POPULAR_PER_DECADE` (pool size, default 20),
+    `POPULAR_ROTATION_HOURS` (default 4).
+- Commits: `67057322` (initial ratio-ranked, replaced),
+  `5d626407` (mobile rail + in-header cycler, replaced),
+  `fa59ea67` (floor/limit tuning, replaced),
+  `19a9ea6b` (decade pools — current), `d8383e9b` (Show More — current).
+
 ### Not yet released
 - Trending toggle ships in the mobile app on next iOS/Android release. Until
   then, existing app users hit the server with no query param → see filtered
   trending (the new default), which is what we want.
+- Fan Favorites rail ships in the next iOS/Android release.
 
 ## Upcoming units
 
-### Unit 2 — "Fan Favorites" rail (show favorites)
+### Unit 2 — "Fan Favorites" rail (show favorites) — SHIPPED
 
-**Display name:** "Fan Favorites" in UI. Internal name stays `popular`
-(API path `/api/popular`, prefs `homePopularCardSize`, etc.).
+Final design is documented in [ADR-0005](../docs/adr/0005-fan-favorites-rail.md).
 
-**Card size:** default **small**, like Trending. Same plumbing pattern.
+The original plan in this doc proposed a ratio-ranked top-5 globally,
+with a floor of ~3 favoriters. That shipped briefly in `67057322` and
+was replaced — see ADR-0005 *Alternatives considered* for the full
+reasoning. **Lessons worth carrying into Units 3/4:**
 
-**Source of truth.** `analytics_events` where `event='feature_use' AND
-feature='add_favorite'`. Show id is in `target_id` (with a legacy `show_id`
-fallback). `top_shows_by_action.favorited` in the analytics summary already
-computes this — we'd surface the same signal as a home rail.
-
-**Sort.** Default: ratio of favorites to logical listens (the "people *kept*
-this" signal, not "people *tapped* it"). Use logical listens as denominator
-(already computed in `show_listens_rollup`) since raw `playback_start` is
-inflated by per-track events. Min-favorites floor (e.g. 3 users) to avoid
-single-favorite shows topping the list.
-
-**Window.** Last 30 days, like the summary endpoint uses.
-
-**Server.** New rollup row type, or query at request time — favorites
-volume is low enough (425 adds over 30d at current scale) that an on-demand
-query is cheap. Lean toward on-demand first.
-
-**Endpoint shape.** `GET /api/popular` returning `{ shows: [{ show_id,
-favorites, listens, ratio }] }`. Or fold into `/api/trending` as a fifth
-window. Standalone endpoint reads cleaner.
-
-**Client.** Home rail under Trending. Each platform's `HomeService`
-combines the new flow alongside trending. Mirror the existing TrendingService
-plumbing (it's the closest pattern).
-
-**Settings.** Position toggle (above/below Trending?), card-size pref like
-the others. Track `set_home_popular_card_size`, etc.
+- **Distribution is flatter than expected** at the current install base.
+  ~97 users across ~84 favorited shows means most shows sit at 1–2
+  favoriters; any minimum-volume floor ≥ 2 produces an empty rail.
+  Plan Units 3/4 (track favorites) assuming a similar shape until
+  proven otherwise — the per-track distribution will almost certainly
+  be even sparser.
+- **Pure ranking made the rail feel dead.** Refreshes happen only when
+  someone favorites a show, which at current volume is every 1–2
+  hours. The 4h-rotated shuffle + client re-roll combination is what
+  made the rail feel alive without sacrificing return-visit stability.
+  Same trick is reusable for Unit 3.
+- **The catalog has era texture worth preserving.** Decade-bucketed
+  pools surface 60s and 90s shows that would never crack a global
+  ranking. Track favorites will have analogous song-era texture
+  (early Pigpen-era setlist staples vs late Brent-era openers vs
+  Vince-era setlists) — worth designing for from the start.
+- **Server-tunable knobs save you.** `POPULAR_MIN_FAVORITES`,
+  `POPULAR_PER_DECADE`, `POPULAR_ROTATION_HOURS` as env vars meant
+  we could fix the floor-too-tight problem in prod without an app
+  release. Build the equivalent into Unit 3 from day one.
+- **Show ID format gotcha.** Prod uses slug-form
+  (`1977-05-11-st-paul-...`), older fixtures use `gd1977-...`. The
+  decade extractor matches the first 4-digit run regardless. If
+  Unit 3 keys on track IDs (`<show-slug>/<track-index>`), the same
+  liberal parsing applies.
 
 ### Unit 3 — "Best..." rail (track favorites)
 
@@ -123,6 +143,13 @@ designing the browsable-content hierarchy from scratch.
   Healthy add/remove ratio, but distribution is flat — top shows sit at
   1–2 users each. Low volume isn't the bug; the *signal* (people kept it)
   is what makes the surface worthwhile.
+- **Show-id format in prod:** slug form
+  `1977-05-11-st-paul-civic-center-...` (year is the first 4-digit run).
+  Older test fixtures use `gd1977-...`. Liberal parsing handles both.
+- **Decade distribution of favorited shows (snapshot):** mostly 70s
+  and 80s, with a meaningful 60s tail and a smaller 90s presence.
+  Decade-bucketed pools surface all four; a global ranking would
+  strip the 60s/90s entirely.
 - **Track favorites exist** but mixed in with show favorites in `target_id`
   — needs schema verification before Unit 3.
 
@@ -142,6 +169,11 @@ collections / …). A Settings sub-screen lets the user drag to reorder.
 
 Held until after Unit 2 ships so we have multiple rails to actually
 reorder. The Trending-above-Today toggle stays in place until then.
+
+Now unblocked since Unit 2 is on the branch — main has Trending + Today
++ Featured Collections + Recently Played, and Fan Favorites lands next
+release. Worth picking up before Unit 3 so the new track-favorites rail
+slots into the ordered list rather than getting another bespoke toggle.
 
 ## Index footgun (worth knowing)
 
