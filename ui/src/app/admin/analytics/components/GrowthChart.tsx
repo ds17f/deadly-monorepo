@@ -30,7 +30,7 @@ export default function GrowthChart({
 }: {
   onDayClick?: (day: string) => void;
 }) {
-  const [days, setDays] = useState<number>(30);
+  const [days, setDays] = useState<number>(7);
   const [data, setData] = useState<GrowthDay[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState<GrowthDay | null>(null);
@@ -132,27 +132,39 @@ export default function GrowthChart({
       </div>
 
       {/* Selection readout — fixed height so the chart doesn't jump when
-          a bar is tapped/clicked. Empty state shows a hint. */}
-      <div className="h-5 text-xs">
+          a bar is tapped. Tap once selects; the "View detail" link is the
+          explicit drill-in path, which is what people rarely want by
+          default. */}
+      <div className="flex h-5 items-center gap-2 text-xs">
         {selected ? (
-          <span className="text-zinc-200">
-            <span className="font-mono">{selected.day}</span>
-            <span className="text-zinc-500"> · </span>
-            <span className="font-semibold">{selected.total}</span> total
-            <span className="text-zinc-500"> · </span>
-            <span className="text-blue-400">{selected.ios} iOS</span>
-            <span className="text-zinc-500"> · </span>
-            <span className="text-green-400">{selected.android} Android</span>
-            {selected.web > 0 && (
-              <>
-                <span className="text-zinc-500"> · </span>
-                <span className="text-purple-400">{selected.web} web</span>
-              </>
+          <>
+            <span className="text-zinc-200">
+              <span className="font-mono">{selected.day}</span>
+              <span className="text-zinc-500"> · </span>
+              <span className="font-semibold">{selected.total}</span> total
+              <span className="text-zinc-500"> · </span>
+              <span className="text-blue-400">{selected.ios} iOS</span>
+              <span className="text-zinc-500"> · </span>
+              <span className="text-green-400">{selected.android} Android</span>
+              {selected.web > 0 && (
+                <>
+                  <span className="text-zinc-500"> · </span>
+                  <span className="text-purple-400">{selected.web} web</span>
+                </>
+              )}
+            </span>
+            {onDayClick && (
+              <button
+                onClick={() => onDayClick(selected.day)}
+                className="ml-auto text-zinc-400 underline-offset-2 hover:text-zinc-200 hover:underline"
+              >
+                View detail →
+              </button>
             )}
-          </span>
+          </>
         ) : (
           <span className="text-zinc-600 italic">
-            Tap a bar for details.
+            Tap a bar for stats.
           </span>
         )}
       </div>
@@ -190,8 +202,14 @@ export default function GrowthChart({
                 <button
                   key={p.day}
                   onClick={() => {
-                    setSelected(p);
-                    onDayClick?.(p.day);
+                    // Tap → select. A second tap on the same bar drills in.
+                    // Most of the time the user just wants the stats, so
+                    // detail is opt-in rather than the default.
+                    if (isSelected) {
+                      onDayClick?.(p.day);
+                    } else {
+                      setSelected(p);
+                    }
                   }}
                   className="flex-1 group relative h-full"
                   title={`${p.day}: ${p.ios} iOS + ${p.android} Android${p.web ? ` + ${p.web} web` : ""} = ${p.total}`}
