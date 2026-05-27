@@ -1954,6 +1954,132 @@ export function getTrending(
   };
 }
 
+// ── Popular shows (favorites-driven) ──────────────────────────────────
+
+export interface PopularShow {
+  show_id: string;
+  /** Distinct installs whose latest favorite action on this show is `add`
+   *  (i.e. currently favorited — adds minus subsequent removes). */
+  favorites: number;
+  /** All-time logical listens from show_listens_rollup. */
+  listens: number;
+  /**
+   * favorites / max(listens, 1). The differentiator from Trending: surfaces
+   * shows people *kept*, not shows people *played a lot*. A high ratio
+   * means a high fraction of people who heard it favorited it.
+   */
+  ratio: number;
+}
+
+export interface PopularResponse {
+  generated_at: string;
+  shows: PopularShow[];
+}
+
+/** Default minimum distinct favoriters required to surface a show. Set
+ *  low — current install base is small and a higher floor produces a
+ *  near-empty rail. Revisit as volume grows. */
+const POPULAR_MIN_FAVORITES = 2;
+
+/**
+ * "Popular" shows ranked by retention signal — net favorites (adds minus
+ * subsequent removes per install), divided by all-time logical listens to
+ * favor shows people *kept* over shows that just got tapped a lot.
+ *
+ * `target_type` filter:
+ *   - 'show' → this surface (Unit 2).
+ *   - 'recording_track' → reserved for the future "Best …" rail (Unit 3).
+ *   - NULL → legacy events emitted before target_type was added, which
+ *     also have no target_id. Unrecoverable; filtered out implicitly by
+ *     the IS NOT NULL on target_id.
+ */
+export function getPopularShows(limit = 10): PopularResponse {
+  const db = getAnalyticsDb();
+
+  // Listens are computed inline (not from show_listens_rollup) because the
+  // rollup only retains the top-50 per window — favorited shows outside
+  // the top-50 listened set would otherwise read `listens = 0` and skew
+  // the ratio. The CTE mirrors rebuildShowListensRollup's logical-listen
+  // definition: count distinct "listen runs" per (iid, show_id), where a
+  // run is broken either by a different show or a gap > LISTEN_GAP_MS.
+  const shows = db
+    .prepare(
+      `WITH actions AS (
+         SELECT
+           iid,
+           json_extract(props, '$.target_id') AS show_id,
+           json_extract(props, '$.feature')   AS feature,
+           ts
+         FROM analytics_events
+         WHERE event = 'feature_use'
+           AND json_extract(props, '$.target_type') = 'show'
+           AND json_extract(props, '$.feature') IN ('add_favorite', 'remove_favorite')
+           AND json_extract(props, '$.target_id') IS NOT NULL
+       ),
+       latest AS (
+         -- For each (iid, show_id) keep only the most recent action.
+         -- An install who added then removed nets to a "remove" and is
+         -- excluded; one who removed then re-added nets to "add".
+         SELECT iid, show_id, feature
+         FROM actions a
+         WHERE a.ts = (
+           SELECT MAX(a2.ts) FROM actions a2
+           WHERE a2.iid = a.iid AND a2.show_id = a.show_id
+         )
+       ),
+       favs AS (
+         SELECT show_id, COUNT(DISTINCT iid) AS favorites
+         FROM latest
+         WHERE feature = 'add_favorite'
+         GROUP BY show_id
+         HAVING favorites >= ?
+       ),
+       plays AS (
+         SELECT iid,
+                json_extract(props, '$.show_id') AS show_id,
+                ts,
+                LAG(json_extract(props, '$.show_id')) OVER w AS prev_show,
+                LAG(ts)                              OVER w AS prev_ts
+         FROM analytics_events
+         WHERE event = 'playback_start'
+           AND json_extract(props, '$.show_id') IN (SELECT show_id FROM favs)
+         WINDOW w AS (PARTITION BY iid ORDER BY ts)
+       ),
+       listen_runs AS (
+         SELECT show_id,
+                CASE
+                  WHEN prev_show IS NULL
+                    OR prev_show != show_id
+                    OR (ts - prev_ts) > ?
+                  THEN 1 ELSE 0
+                END AS is_new
+         FROM plays
+       ),
+       show_listens AS (
+         SELECT show_id, SUM(is_new) AS listens
+         FROM listen_runs
+         GROUP BY show_id
+       )
+       SELECT
+         f.show_id,
+         f.favorites,
+         COALESCE(sl.listens, 0) AS listens,
+         CAST(f.favorites AS REAL) /
+           CASE WHEN COALESCE(sl.listens, 0) > 0 THEN sl.listens ELSE 1 END
+           AS ratio
+       FROM favs f
+       LEFT JOIN show_listens sl ON sl.show_id = f.show_id
+       ORDER BY ratio DESC, f.favorites DESC, listens DESC
+       LIMIT ?`,
+    )
+    .all(POPULAR_MIN_FAVORITES, LISTEN_GAP_MS, limit) as PopularShow[];
+
+  return {
+    generated_at: new Date().toISOString(),
+    shows,
+  };
+}
+
 // ── Cleanup ──────────────────────────────────────────────────────────
 
 export function closeAnalyticsDb(): void {

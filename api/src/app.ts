@@ -13,6 +13,7 @@ import { authMiddleware } from "./auth/middleware.js";
 import { connectRoutes } from "./connect/routes.js";
 import { analyticsRoutes } from "./routes/analytics.js";
 import { trendingRoutes } from "./routes/trending.js";
+import { popularRoutes } from "./routes/popular.js";
 import { betaRoutes } from "./routes/beta.js";
 import { devTokenRoutes } from "./auth/dev-token.js";
 import { isDev } from "./env.js";
@@ -65,6 +66,7 @@ export function buildApp() {
   app.register(connectRoutes);
   app.register(analyticsRoutes);
   app.register(trendingRoutes);
+  app.register(popularRoutes);
   app.register(betaRoutes);
 
   if (isDev) {
