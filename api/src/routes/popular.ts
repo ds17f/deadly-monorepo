@@ -2,9 +2,12 @@ import type { FastifyInstance } from "fastify";
 import { getPopularShows } from "../db/analytics.js";
 import { getPublisher } from "../db/redis.js";
 
-const CACHE_KEY = "popular:v1";
+// Cache only the default home-rail size; a future "View All" page can
+// hit ?limit=100 etc. and skip the cache (uncached query is cheap).
+const CACHE_KEY_DEFAULT = "popular:v1";
 const CACHE_TTL_SECONDS = 600; // 10 minutes — matches trending
-const POPULAR_LIMIT = 10;
+const POPULAR_LIMIT_DEFAULT = 5;
+const POPULAR_LIMIT_MAX = 100;
 
 const popularShowSchema = {
   type: "object",
@@ -17,16 +20,21 @@ const popularShowSchema = {
 } as const;
 
 export async function popularRoutes(app: FastifyInstance): Promise<void> {
-  app.get(
+  app.get<{ Querystring: { limit?: number } }>(
     "/api/popular",
     {
       schema: {
         tags: ["analytics"],
         summary: "Popular shows for the home screen",
         description:
-          "Shows ranked by net favorites / all-time logical listens. " +
-          "Surfaces what listeners *kept*, complementing Trending's " +
-          "what-just-got-played signal. Cached for 10 minutes in Redis.",
+          "Shows ranked first by net-favorites count, then by recency of " +
+          "the most recent favorite action, then by saved-vs-played ratio. " +
+          "Default returns the top 5 for the home rail; pass ?limit=N " +
+          "(capped at 100) for a deeper list (future \"View All\" page).",
+        querystring: {
+          type: "object",
+          properties: { limit: { type: "number", default: POPULAR_LIMIT_DEFAULT } },
+        },
         response: {
           200: {
             type: "object",
@@ -38,27 +46,40 @@ export async function popularRoutes(app: FastifyInstance): Promise<void> {
         },
       },
     },
-    async (_request, reply) => {
-      try {
-        const cached = await getPublisher().get(CACHE_KEY);
-        if (cached) {
-          reply.header("X-Popular-Cache", "hit");
-          return reply.type("application/json").send(cached);
+    async (request, reply) => {
+      const requested = request.query?.limit ?? POPULAR_LIMIT_DEFAULT;
+      const limit = Math.min(Math.max(requested, 1), POPULAR_LIMIT_MAX);
+      const isDefault = limit === POPULAR_LIMIT_DEFAULT;
+
+      if (isDefault) {
+        try {
+          const cached = await getPublisher().get(CACHE_KEY_DEFAULT);
+          if (cached) {
+            reply.header("X-Popular-Cache", "hit");
+            return reply.type("application/json").send(cached);
+          }
+        } catch {
+          // Fall through to live query — better uncached than 500.
         }
-      } catch {
-        // Fall through to live query — better uncached than 500.
       }
 
-      const fresh = getPopularShows(POPULAR_LIMIT);
+      const fresh = getPopularShows(limit);
       const payload = JSON.stringify(fresh);
 
-      try {
-        await getPublisher().set(CACHE_KEY, payload, "EX", CACHE_TTL_SECONDS);
-      } catch {
-        // Cache write best-effort.
+      if (isDefault) {
+        try {
+          await getPublisher().set(
+            CACHE_KEY_DEFAULT,
+            payload,
+            "EX",
+            CACHE_TTL_SECONDS,
+          );
+        } catch {
+          // Cache write best-effort.
+        }
       }
 
-      reply.header("X-Popular-Cache", "miss");
+      reply.header("X-Popular-Cache", isDefault ? "miss" : "bypass");
       return reply.type("application/json").send(payload);
     },
   );

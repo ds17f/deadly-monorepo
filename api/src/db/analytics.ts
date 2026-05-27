@@ -1986,10 +1986,12 @@ export interface PopularResponse {
   shows: PopularShow[];
 }
 
-/** Default minimum distinct favoriters required to surface a show. Set
- *  low — current install base is small and a higher floor produces a
- *  near-empty rail. Revisit as volume grows. */
-const POPULAR_MIN_FAVORITES = 2;
+/** Default minimum distinct favoriters required to surface a show.
+ *  Floor=1 in the early stage: with a small install base, requiring 2+
+ *  produces a near-empty rail. Recency-ordered tiebreakers keep the
+ *  list feeling fresh rather than dumping all 1-favorite shows in
+ *  arbitrary order. Raise as volume grows. */
+const POPULAR_MIN_FAVORITES = 1;
 
 /**
  * "Popular" shows ranked by retention signal — net favorites (adds minus
@@ -2030,7 +2032,7 @@ export function getPopularShows(limit = 10): PopularResponse {
          -- For each (iid, show_id) keep only the most recent action.
          -- An install who added then removed nets to a "remove" and is
          -- excluded; one who removed then re-added nets to "add".
-         SELECT iid, show_id, feature
+         SELECT iid, show_id, feature, ts
          FROM actions a
          WHERE a.ts = (
            SELECT MAX(a2.ts) FROM actions a2
@@ -2038,7 +2040,10 @@ export function getPopularShows(limit = 10): PopularResponse {
          )
        ),
        favs AS (
-         SELECT show_id, COUNT(DISTINCT iid) AS favorites
+         SELECT
+           show_id,
+           COUNT(DISTINCT iid) AS favorites,
+           MAX(ts) AS last_favorite_ts
          FROM latest
          WHERE feature = 'add_favorite'
          GROUP BY show_id
@@ -2079,7 +2084,11 @@ export function getPopularShows(limit = 10): PopularResponse {
            AS ratio
        FROM favs f
        LEFT JOIN show_listens sl ON sl.show_id = f.show_id
-       ORDER BY ratio DESC, f.favorites DESC, listens DESC
+       -- favorites DESC keeps the genuinely-popular shows (2+ favoriters)
+       -- pinned at the top; recency tiebreaker keeps the rail feeling
+       -- fresh in the long single-favorite tail. Pure random would shuffle
+       -- the list on every refresh and feel unstable.
+       ORDER BY f.favorites DESC, f.last_favorite_ts DESC, ratio DESC
        LIMIT ?`,
     )
     .all(POPULAR_MIN_FAVORITES, LISTEN_GAP_MS, limit) as PopularShow[];

@@ -102,22 +102,38 @@ describe("getPopularShows", () => {
     expect(row!.favorites).toBe(3); // bob, carol, dave (not alice)
   });
 
-  it("respects the min-favorites floor", () => {
+  it("sorts higher-favorites shows above single-favorite shows", () => {
     const t = Date.now() - 86400_000;
     // ts values must differ for the same install — the analytics_events
     // unique index is (iid, sid, event, ts), so two same-ts events from
     // alice would dedupe to one.
     insertEvents([
-      // show-Y: 1 favorite — below the default floor of 2
+      // show-Y: 1 favorite (recently added)
       favAction("alice", "show-Y", "add_favorite", t),
-      // show-Z: 2 favorites — meets the floor
+      // show-Z: 2 favorites
       favAction("alice", "show-Z", "add_favorite", t + 1000),
       favAction("bob", "show-Z", "add_favorite", t),
     ]);
 
     const ids = getPopularShows(10).shows.map((s) => s.show_id);
-    expect(ids).toContain("show-Z");
-    expect(ids).not.toContain("show-Y");
+    // Both surface at floor=1, but the 2-favorite show is pinned first.
+    expect(ids[0]).toBe("show-Z");
+    expect(ids).toContain("show-Y");
+  });
+
+  it("orders single-favorite shows by recency of the last favorite action", () => {
+    // Among shows tied on favorites count, the recency tiebreaker keeps
+    // the rail from feeling static — the most recently favorited shows
+    // float toward the top.
+    const t = Date.now() - 86400_000;
+    insertEvents([
+      favAction("alice", "show-old", "add_favorite", t),
+      favAction("bob", "show-recent", "add_favorite", t + 60_000),
+      favAction("carol", "show-newest", "add_favorite", t + 120_000),
+    ]);
+
+    const ids = getPopularShows(10).shows.map((s) => s.show_id);
+    expect(ids).toEqual(["show-newest", "show-recent", "show-old"]);
   });
 
   it("ignores legacy NULL-target_type favorites (unrecoverable)", () => {
