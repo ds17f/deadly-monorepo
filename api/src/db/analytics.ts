@@ -1852,29 +1852,77 @@ export function rebuildShowListensRollup(): void {
 }
 
 /**
+ * MM-DD strings for today and ±1 day, used to exclude "Today in Grateful
+ * Dead History" shows from the `now` window of trending. The 24h window
+ * straddles two calendar dates, and the OTD home rail promotes the
+ * matching anniversary shows, so without this filter the `now` ranking
+ * is dominated by anniversary plays rather than organic listening.
+ * ±1 covers the calendar boundary (yesterday's anniversary plays from
+ * 23:00 are still inside the 24h window at 22:00 today).
+ */
+function anniversaryMonthDays(now: Date): string[] {
+  const fmt = (d: Date): string =>
+    `${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
+  const today = new Date(now);
+  const yesterday = new Date(now.getTime() - 24 * 3600 * 1000);
+  const tomorrow = new Date(now.getTime() + 24 * 3600 * 1000);
+  return [fmt(yesterday), fmt(today), fmt(tomorrow)];
+}
+
+/**
  * Trending shows across four time windows. Reads precomputed rows from
  * `show_listens_rollup` — no event scan, no Redis round-trip — so it's
  * cheap even under traffic spikes.
+ *
+ * `includeAnniversaries` controls whether shows whose date matches
+ * today (MM-DD ±1) are filtered out of the `now` window. Defaults to
+ * false so trending surfaces organic momentum rather than echoing the
+ * OTD home rail. Other windows are never filtered — week/month/all are
+ * long enough that anniversary spikes wash out.
  */
-export function getTrending(limit = 10): TrendingResponse {
+export function getTrending(
+  limit = 10,
+  includeAnniversaries = false,
+): TrendingResponse {
   const db = getAnalyticsDb();
-  const stmt = db.prepare(
+
+  const plainStmt = db.prepare(
     `SELECT show_id, listens, plays, installs
      FROM show_listens_rollup
      WHERE window = ?
      ORDER BY listens DESC, plays DESC
      LIMIT ?`,
   );
-  const fetch = (name: TrendingWindowName): TrendingShow[] =>
-    stmt.all(name, limit) as TrendingShow[];
+
+  // show_id is `YYYY-MM-DD-...`; matching on substr(show_id, 6, 5) lets
+  // SQLite use the WHERE clause without pulling rows through JS.
+  const filteredNowStmt = db.prepare(
+    `SELECT show_id, listens, plays, installs
+     FROM show_listens_rollup
+     WHERE window = 'now'
+       AND substr(show_id, 6, 5) NOT IN (?, ?, ?)
+     ORDER BY listens DESC, plays DESC
+     LIMIT ?`,
+  );
+
+  const fetchPlain = (name: TrendingWindowName): TrendingShow[] =>
+    plainStmt.all(name, limit) as TrendingShow[];
+
+  let nowRows: TrendingShow[];
+  if (includeAnniversaries) {
+    nowRows = fetchPlain("now");
+  } else {
+    const [yest, today, tmrw] = anniversaryMonthDays(new Date());
+    nowRows = filteredNowStmt.all(yest, today, tmrw, limit) as TrendingShow[];
+  }
 
   return {
     generated_at: new Date().toISOString(),
     windows: {
-      now: fetch("now"),
-      week: fetch("week"),
-      month: fetch("month"),
-      all: fetch("all"),
+      now: nowRows,
+      week: fetchPlain("week"),
+      month: fetchPlain("month"),
+      all: fetchPlain("all"),
     },
   };
 }
