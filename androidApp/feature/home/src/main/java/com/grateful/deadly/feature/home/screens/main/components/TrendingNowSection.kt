@@ -6,6 +6,7 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -62,7 +63,16 @@ fun TrendingNowSection(
                 modifier = Modifier.clickable(onClick = onCycleWindow),
             )
         }
-        LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+        // Reset scroll to the start when the trending set changes (window
+        // switch, anniversaries toggle, etc.). Without this the user stays
+        // mid-rail and the visible items happen to look similar across
+        // toggles, making it look like nothing updated.
+        val listState = rememberLazyListState()
+        val firstId = shows.firstOrNull()?.id
+        LaunchedEffect(firstId, window) {
+            listState.scrollToItem(0)
+        }
+        LazyRow(state = listState, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             items(shows, key = { it.id }) { show ->
                 val display = if (isCompact) {
                     show.date

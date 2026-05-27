@@ -47,6 +47,7 @@ dependencies {
     implementation(project(":core:design"))
     implementation(project(":core:api:home"))
     implementation(project(":core:home"))
+    implementation(project(":core:database"))
     implementation(project(":core:model"))
     
     // V2 Feature Dependencies
