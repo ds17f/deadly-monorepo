@@ -26,6 +26,7 @@ final class AppPreferences {
     private static let homeTrendingIncludeAnniversariesKey = "home_trending_include_anniversaries"
     private static let homePopularEnabledKey = "home_popular_enabled"
     private static let homePopularCardSizeKey = "home_popular_card_size"
+    private static let homePopularDecadeKey = "home_popular_decade"
     private static let homeTodayCardSizeKey = "home_today_card_size"
     private static let homeCollectionsCardSizeKey = "home_collections_card_size"
 
@@ -147,6 +148,11 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(homePopularCardSize, forKey: Self.homePopularCardSizeKey) }
     }
 
+    /// Which decade the Fan Favorites home rail shows: "all"/"60s"/"70s"/"80s"/"90s".
+    var homePopularDecade: String {
+        didSet { UserDefaults.standard.set(homePopularDecade, forKey: Self.homePopularDecadeKey) }
+    }
+
     /// Card size for the Today in History carousel: "small" or "large".
     var homeTodayCardSize: String {
         didSet { UserDefaults.standard.set(homeTodayCardSize, forKey: Self.homeTodayCardSizeKey) }
@@ -168,6 +174,7 @@ final class AppPreferences {
         homeTrendingIncludeAnniversaries = false
         homePopularEnabled = true
         homePopularCardSize = "small"
+        homePopularDecade = "all"
     }
 
     /// Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles.
@@ -200,6 +207,7 @@ final class AppPreferences {
             Self.homeTrendingIncludeAnniversariesKey: false,
             Self.homePopularEnabledKey: true,
             Self.homePopularCardSizeKey: "small",
+            Self.homePopularDecadeKey: "all",
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
@@ -231,6 +239,7 @@ final class AppPreferences {
             ? true
             : UserDefaults.standard.bool(forKey: Self.homePopularEnabledKey)
         homePopularCardSize = UserDefaults.standard.string(forKey: Self.homePopularCardSizeKey) ?? "small"
+        homePopularDecade = UserDefaults.standard.string(forKey: Self.homePopularDecadeKey) ?? "all"
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)

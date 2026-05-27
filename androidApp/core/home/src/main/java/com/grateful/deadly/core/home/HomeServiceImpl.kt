@@ -3,6 +3,7 @@ package com.grateful.deadly.core.home
 import android.util.Log
 import com.grateful.deadly.core.api.home.HomeService
 import com.grateful.deadly.core.api.home.HomeContent
+import com.grateful.deadly.core.api.home.PopularDecade
 import com.grateful.deadly.core.api.home.PopularService
 import com.grateful.deadly.core.api.home.TrendingService
 import com.grateful.deadly.core.api.home.TrendingWindow
@@ -67,6 +68,7 @@ class HomeServiceImpl @Inject constructor(
         val collectionsCardSize: String,
         val popularEnabled: Boolean,
         val popularCardSize: String,
+        val popularDecadeKey: String,
     )
     private val homePrefs = combine(
         appPreferences.homeTrendingWindow,
@@ -77,6 +79,7 @@ class HomeServiceImpl @Inject constructor(
         appPreferences.homeCollectionsCardSize,
         appPreferences.homePopularEnabled,
         appPreferences.homePopularCardSize,
+        appPreferences.homePopularDecade,
     ) { values ->
         HomePrefs(
             windowKey = values[0] as String,
@@ -87,6 +90,7 @@ class HomeServiceImpl @Inject constructor(
             collectionsCardSize = values[5] as String,
             popularEnabled = values[6] as Boolean,
             popularCardSize = values[7] as String,
+            popularDecadeKey = values[8] as String,
         )
     }
 
@@ -109,6 +113,7 @@ class HomeServiceImpl @Inject constructor(
         homePrefs
     ) { recentShows, todayInHistory, featuredCollections, rails, prefs ->
         val window = TrendingWindow.fromKey(prefs.windowKey)
+        val decade = PopularDecade.fromKey(prefs.popularDecadeKey)
         HomeContent(
             recentShows = recentShows,
             todayInHistory = todayInHistory,
@@ -116,9 +121,10 @@ class HomeServiceImpl @Inject constructor(
             trendingShows = rails.trending.forWindow(window),
             trendingWindow = window,
             trendingAboveToday = prefs.aboveToday,
-            popularShows = rails.popular.shows,
+            popularContent = rails.popular,
             popularEnabled = prefs.popularEnabled,
             popularCardSize = prefs.popularCardSize,
+            popularDecade = decade,
             recentRows = prefs.recentRows,
             trendingCardSize = prefs.trendingCardSize,
             todayCardSize = prefs.todayCardSize,

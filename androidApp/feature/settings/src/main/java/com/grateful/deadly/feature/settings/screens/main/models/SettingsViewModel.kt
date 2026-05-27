@@ -158,6 +158,17 @@ class SettingsViewModel @Inject constructor(
         ))
     }
 
+    val homePopularDecade: StateFlow<String> = appPreferences.homePopularDecade
+
+    fun setHomePopularDecade(value: String) {
+        appPreferences.setHomePopularDecade(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_popular_decade",
+            "category" to "preference",
+            "value" to value,
+        ))
+    }
+
     val homeRecentRows: StateFlow<Int> = appPreferences.homeRecentRows
 
     fun setHomeRecentRows(value: Int) {

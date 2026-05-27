@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.json.JSONArray
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
@@ -22,9 +23,10 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Fetches "Fan Favorites" shows from /api/popular and resolves the
- * returned IDs into Show domain models via the local catalog. Single
- * list (no windows). Refreshes on init and periodically.
+ * Fetches "Fan Favorites" pools from /api/popular and resolves returned
+ * IDs into Show domain models via the local catalog. Server returns four
+ * per-decade pools (60s/70s/80s/90s); the home rail picks its 4-show
+ * display set locally — see PopularContent.displayShows.
  */
 @Singleton
 class PopularServiceImpl @Inject constructor(
@@ -53,16 +55,28 @@ class PopularServiceImpl @Inject constructor(
     override suspend fun refresh(): Result<Unit> = withContext(Dispatchers.IO) {
         runCatching {
             val raw = fetchJson()
-            val arr = raw.optJSONArray("shows") ?: return@runCatching
-            val ids = List(arr.length()) { i -> arr.getJSONObject(i).getString("show_id") }
-            val byId = showRepository.getShowsByIds(ids).associateBy { it.id }
+            val decades = raw.optJSONObject("decades") ?: return@runCatching
+            val ids60 = extractIds(decades.optJSONArray("60s"))
+            val ids70 = extractIds(decades.optJSONArray("70s"))
+            val ids80 = extractIds(decades.optJSONArray("80s"))
+            val ids90 = extractIds(decades.optJSONArray("90s"))
+            val unionIds = (ids60 + ids70 + ids80 + ids90).distinct()
+            val byId = showRepository.getShowsByIds(unionIds).associateBy { it.id }
             _popular.value = PopularContent(
-                shows = ids.mapNotNull { byId[it] },
+                pool60 = ids60.mapNotNull { byId[it] },
+                pool70 = ids70.mapNotNull { byId[it] },
+                pool80 = ids80.mapNotNull { byId[it] },
+                pool90 = ids90.mapNotNull { byId[it] },
                 lastRefresh = System.currentTimeMillis(),
             )
         }.onFailure {
             Log.w(TAG, "Popular refresh failed: ${it.message}")
         }
+    }
+
+    private fun extractIds(arr: JSONArray?): List<String> {
+        if (arr == null) return emptyList()
+        return List(arr.length()) { i -> arr.getJSONObject(i).getString("show_id") }
     }
 
     private fun fetchJson(): JSONObject {

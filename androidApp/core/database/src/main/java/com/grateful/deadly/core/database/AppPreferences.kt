@@ -62,6 +62,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_HOME_TRENDING_INCLUDE_ANNIVERSARIES = "home_trending_include_anniversaries"
         private const val KEY_HOME_POPULAR_ENABLED = "home_popular_enabled"
         private const val KEY_HOME_POPULAR_CARD_SIZE = "home_popular_card_size"
+        private const val KEY_HOME_POPULAR_DECADE = "home_popular_decade"
     }
 
     private val _homeTrendingCardSize = MutableStateFlow(
@@ -102,6 +103,7 @@ class AppPreferences @Inject constructor(
         setHomeTrendingIncludeAnniversaries(false)
         setHomePopularEnabled(true)
         setHomePopularCardSize("small")
+        setHomePopularDecade("all")
     }
 
     private val _homePopularEnabled = MutableStateFlow(
@@ -123,6 +125,16 @@ class AppPreferences @Inject constructor(
     fun setHomePopularCardSize(value: String) {
         prefs.edit().putString(KEY_HOME_POPULAR_CARD_SIZE, value).apply()
         _homePopularCardSize.value = value
+    }
+
+    private val _homePopularDecade = MutableStateFlow(
+        prefs.getString(KEY_HOME_POPULAR_DECADE, null) ?: "all"
+    )
+    /** Which decade the Fan Favorites home rail shows: "all"/"60s"/"70s"/"80s"/"90s". */
+    val homePopularDecade: StateFlow<String> = _homePopularDecade.asStateFlow()
+    fun setHomePopularDecade(value: String) {
+        prefs.edit().putString(KEY_HOME_POPULAR_DECADE, value).apply()
+        _homePopularDecade.value = value
     }
 
     private val _homeTrendingIncludeAnniversaries = MutableStateFlow(

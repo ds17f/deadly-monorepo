@@ -1,9 +1,10 @@
 import Foundation
 
 /// Fetches /api/popular and resolves returned show IDs into Show domain
-/// models from the local catalog. Single window (no trending-style
-/// now/week/month/all variations) — "Fan Favorites" is an all-time
-/// retention signal, not a time-window leaderboard.
+/// models from the local catalog. The server returns four decade *pools*
+/// (60s/70s/80s/90s); the home rail picks its display set from those
+/// pools locally via PopularContent.displayShows(for:seed:) — see ADR /
+/// PLANS for the design.
 @Observable
 @MainActor
 final class PopularServiceImpl: PopularService {
@@ -26,11 +27,21 @@ final class PopularServiceImpl: PopularService {
     func refresh() async {
         do {
             let payload = try await fetchPayload()
-            let ids = payload.shows.map(\.show_id)
-            let byId: [String: Show] = Dictionary(
-                uniqueKeysWithValues: try showRepository.getShowsByIds(ids).map { ($0.id, $0) }
+            let allIds = Set(
+                payload.decades.s60.map(\.show_id)
+                + payload.decades.s70.map(\.show_id)
+                + payload.decades.s80.map(\.show_id)
+                + payload.decades.s90.map(\.show_id)
             )
-            content = PopularContent(shows: ids.compactMap { byId[$0] })
+            let byId: [String: Show] = Dictionary(
+                uniqueKeysWithValues: try showRepository.getShowsByIds(Array(allIds)).map { ($0.id, $0) }
+            )
+            content = PopularContent(
+                pool60: payload.decades.s60.compactMap { byId[$0.show_id] },
+                pool70: payload.decades.s70.compactMap { byId[$0.show_id] },
+                pool80: payload.decades.s80.compactMap { byId[$0.show_id] },
+                pool90: payload.decades.s90.compactMap { byId[$0.show_id] }
+            )
         } catch {
             // Leave previous content in place on failure.
         }
@@ -48,7 +59,19 @@ final class PopularServiceImpl: PopularService {
     // MARK: - Wire format
 
     private struct PopularPayload: Decodable {
-        let shows: [Entry]
+        let decades: Decades
+        struct Decades: Decodable {
+            let s60: [Entry]
+            let s70: [Entry]
+            let s80: [Entry]
+            let s90: [Entry]
+            enum CodingKeys: String, CodingKey {
+                case s60 = "60s"
+                case s70 = "70s"
+                case s80 = "80s"
+                case s90 = "90s"
+            }
+        }
         struct Entry: Decodable {
             let show_id: String
         }

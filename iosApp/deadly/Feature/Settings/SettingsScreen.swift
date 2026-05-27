@@ -344,6 +344,29 @@ struct SettingsScreen: View {
                     }
                 }
 
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Fan Favorites decade")
+                    Picker("Fan Favorites decade", selection: Binding(
+                        get: { PopularDecade(preferenceKey: container.appPreferences.homePopularDecade) },
+                        set: { newDecade in
+                            container.appPreferences.homePopularDecade = newDecade.rawValue
+                            container.analyticsService.track("feature_use", props: [
+                                "feature": "set_home_popular_decade",
+                                "category": "preference",
+                                "value": newDecade.rawValue,
+                            ])
+                        }
+                    )) {
+                        ForEach(PopularDecade.allCases) { decade in
+                            Text(decade.label).tag(decade)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    Text("Default decade filter for the Fan Favorites rail. Tap the header to cycle.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                }
+
                 cardSizePicker(
                     title: "Fan Favorites card size",
                     helper: "Size of cards in the Fan Favorites carousel.",

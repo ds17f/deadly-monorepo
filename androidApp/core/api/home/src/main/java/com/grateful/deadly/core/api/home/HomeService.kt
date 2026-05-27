@@ -47,12 +47,14 @@ data class HomeContent(
     val trendingWindow: TrendingWindow,
     /** When true, Trending renders above Today in History; otherwise below. */
     val trendingAboveToday: Boolean,
-    /** "Fan Favorites" — shows ranked by net favorites / all-time logical listens. */
-    val popularShows: List<Show>,
+    /** "Fan Favorites" — per-decade pools; the section picks its 4-show display set. */
+    val popularContent: PopularContent,
     /** When true, render the Fan Favorites carousel on the home screen. */
     val popularEnabled: Boolean,
     /** Card size for the Fan Favorites carousel: "small" or "large". */
     val popularCardSize: String,
+    /** Currently-selected decade filter for the Fan Favorites rail (from Settings). */
+    val popularDecade: PopularDecade,
     /** How many rows of Recently Played to render (1..4). Each row = 2 shows. */
     val recentRows: Int,
     /** Card size for the Trending carousel: "small" or "large". */
@@ -71,9 +73,10 @@ data class HomeContent(
             trendingShows = emptyList(),
             trendingWindow = TrendingWindow.NOW,
             trendingAboveToday = false,
-            popularShows = emptyList(),
+            popularContent = PopularContent.initial(),
             popularEnabled = true,
             popularCardSize = "small",
+            popularDecade = PopularDecade.ALL,
             recentRows = 2,
             trendingCardSize = "small",
             todayCardSize = "large",
