@@ -811,68 +811,81 @@ export interface LiveListener {
 }
 
 /**
- * Approximate "currently listening" set. Returns each `playback_start`
- * from the last 45 minutes that has no subsequent `playback_end` for
- * the same (iid, sid, show_id, track_index). The window is long enough
- * to cover the longest Grateful Dead jams ("Dark Star", "Playin' in
- * the Band", etc, which routinely exceed 25 minutes) without losing
- * an active listener mid-track. Sessions that crash or are force-killed
- * without emitting `playback_end` will linger for up to 45 minutes —
- * a deliberate trade for not requiring a heartbeat.
+ * "Currently listening" set, defined as: each install's most recent
+ * `playback_start` / `playback_end` event whose timestamp is within
+ * LIVE_WINDOW_MS. The "soft" boundary (events of *either* kind count)
+ * keeps a listener live across the autoplay gap between tracks: when
+ * track N ends naturally, the brief moment before track N+1's
+ * `playback_start` fires would otherwise drop them into Recent
+ * Listening and they'd show as "36s ago" while still actively
+ * listening. Sessions that crash or get force-killed without emitting
+ * `playback_end` still linger for up to LIVE_WINDOW_MS — same trade
+ * as before, just shorter than the old 45-minute window. The
+ * shorter window is fine because the new definition no longer
+ * relies on "unmatched start" semantics.
  */
+const LIVE_WINDOW_MS = 90 * 1000;
+
 export function getLiveListeners(): LiveListener[] {
   const db = getAnalyticsDb();
-  const windowStart = Date.now() - 45 * 60 * 1000;
+  const windowStart = Date.now() - LIVE_WINDOW_MS;
 
-  // Pull `sid` too so we can resolve the bitmap for *this* listening session
-  // of this show (rather than every time the listener has ever played it).
-  //
-  // A user can only listen to one thing at a time. The unmatched-start filter
-  // can leave multiple ghosts per iid when the client emits a new
-  // `playback_start` without a corresponding `playback_end` for the previous
-  // one (force-quit, crash, network drop, rapid show switches). Take only the
-  // most recent unmatched start per iid as the listener's current state.
+  // Pick the latest playback event per iid (start or end), then keep
+  // only those whose latest event is inside the live window AND
+  // describes a show. `started_at` is resolved separately as the most
+  // recent `playback_start` for this (iid, show_id) within a generous
+  // lookback so the UI can render "started X ago" correctly even when
+  // the live-keepalive event is an end.
   const rows = db
     .prepare(
-      `SELECT
-         s.iid,
-         s.sid,
-         s.platform,
-         s.app_version,
-         s.ts AS started_at,
-         json_extract(s.props, '$.show_id') AS show_id,
-         json_extract(s.props, '$.recording_id') AS recording_id,
-         json_extract(s.props, '$.track_index') AS track_index,
-         json_extract(s.props, '$.source') AS source
-       FROM analytics_events s
-       WHERE s.event = 'playback_start' AND s.ts >= ?
-         AND NOT EXISTS (
-           SELECT 1 FROM analytics_events e
-           WHERE e.event = 'playback_end'
-             AND e.iid = s.iid
-             AND e.sid = s.sid
-             AND e.ts >= s.ts
-             AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
-             AND json_extract(e.props, '$.track_index') = json_extract(s.props, '$.track_index')
-         )
-         AND s.ts = (
-           SELECT MAX(s2.ts) FROM analytics_events s2
-           WHERE s2.event = 'playback_start'
-             AND s2.iid = s.iid
-             AND s2.ts >= ?
-             AND NOT EXISTS (
-               SELECT 1 FROM analytics_events e2
-               WHERE e2.event = 'playback_end'
-                 AND e2.iid = s2.iid
-                 AND e2.sid = s2.sid
-                 AND e2.ts >= s2.ts
-                 AND json_extract(e2.props, '$.show_id') = json_extract(s2.props, '$.show_id')
-                 AND json_extract(e2.props, '$.track_index') = json_extract(s2.props, '$.track_index')
-             )
-         )
-       ORDER BY s.ts DESC`,
+      `WITH latest AS (
+         SELECT
+           iid,
+           sid,
+           ts,
+           event,
+           platform,
+           app_version,
+           json_extract(props, '$.show_id') AS show_id,
+           json_extract(props, '$.recording_id') AS recording_id,
+           CAST(json_extract(props, '$.track_index') AS INTEGER) AS track_index,
+           json_extract(props, '$.source') AS source,
+           ROW_NUMBER() OVER (PARTITION BY iid ORDER BY ts DESC) AS rn
+         FROM analytics_events
+         WHERE event IN ('playback_start', 'playback_end')
+           AND ts >= ?
+           AND json_extract(props, '$.show_id') IS NOT NULL
+       )
+       SELECT
+         l.iid,
+         l.sid,
+         l.platform,
+         l.app_version,
+         COALESCE(
+           (SELECT MAX(s.ts) FROM analytics_events s
+              WHERE s.event = 'playback_start'
+                AND s.iid = l.iid
+                AND json_extract(s.props, '$.show_id') = l.show_id
+                AND s.ts >= ?),
+           l.ts
+         ) AS started_at,
+         l.show_id,
+         l.recording_id,
+         l.track_index,
+         l.source
+       FROM latest l
+       WHERE l.rn = 1
+         AND l.ts >= ?
+       ORDER BY l.ts DESC`,
     )
-    .all(windowStart, windowStart) as Array<{
+    .all(
+      // Latest-event lookback: a bit wider than LIVE_WINDOW_MS so the
+      // ROW_NUMBER pick is robust against clock skew / batch flushes.
+      Date.now() - 6 * 3600 * 1000,
+      // started_at lookup: look back 6h to find the original session start.
+      Date.now() - 6 * 3600 * 1000,
+      windowStart,
+    ) as Array<{
       iid: string;
       sid: string;
       platform: string;
@@ -1250,7 +1263,7 @@ export function getRecentListening(
   const db = getAnalyticsDb();
   const now = Date.now();
   const windowStart = now - hours * 3600 * 1000;
-  const liveWindowStart = now - 45 * 60 * 1000;
+  const liveWindowStart = now - LIVE_WINDOW_MS;
 
   const rows = db
     .prepare(
@@ -1308,26 +1321,26 @@ export function getRecentListening(
               AND event = 'playback_start'
             ORDER BY ts ASC LIMIT 1) AS source
        FROM agg a
+       -- Mirror the live definition in getLiveListeners: exclude
+       -- (iid, show_id) pairs where this iid's most recent playback
+       -- event is within LIVE_WINDOW_MS AND describes this show.
        WHERE NOT EXISTS (
-         SELECT 1 FROM analytics_events s
-         WHERE s.event = 'playback_start'
-           AND s.iid = a.iid
-           AND json_extract(s.props, '$.show_id') = a.show_id
-           AND s.ts >= ?
-           AND NOT EXISTS (
-             SELECT 1 FROM analytics_events e
-             WHERE e.event = 'playback_end'
-               AND e.iid = s.iid
-               AND e.sid = s.sid
-               AND e.ts >= s.ts
-               AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
-               AND json_extract(e.props, '$.track_index') = json_extract(s.props, '$.track_index')
+         SELECT 1 FROM analytics_events latest
+         WHERE latest.event IN ('playback_start', 'playback_end')
+           AND latest.iid = a.iid
+           AND latest.ts >= ?
+           AND json_extract(latest.props, '$.show_id') = a.show_id
+           AND latest.ts = (
+             SELECT MAX(x.ts) FROM analytics_events x
+             WHERE x.event IN ('playback_start', 'playback_end')
+               AND x.iid = a.iid
+               AND x.ts >= ?
            )
        )
        ORDER BY a.last_event_at DESC
        LIMIT ?`,
     )
-    .all(windowStart, liveWindowStart, limit) as Array<{
+    .all(windowStart, liveWindowStart, liveWindowStart, limit) as Array<{
       iid: string;
       show_id: string;
       started_at: number;
@@ -1852,29 +1865,77 @@ export function rebuildShowListensRollup(): void {
 }
 
 /**
+ * MM-DD strings for today and ±1 day, used to exclude "Today in Grateful
+ * Dead History" shows from the `now` window of trending. The 24h window
+ * straddles two calendar dates, and the OTD home rail promotes the
+ * matching anniversary shows, so without this filter the `now` ranking
+ * is dominated by anniversary plays rather than organic listening.
+ * ±1 covers the calendar boundary (yesterday's anniversary plays from
+ * 23:00 are still inside the 24h window at 22:00 today).
+ */
+function anniversaryMonthDays(now: Date): string[] {
+  const fmt = (d: Date): string =>
+    `${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
+  const today = new Date(now);
+  const yesterday = new Date(now.getTime() - 24 * 3600 * 1000);
+  const tomorrow = new Date(now.getTime() + 24 * 3600 * 1000);
+  return [fmt(yesterday), fmt(today), fmt(tomorrow)];
+}
+
+/**
  * Trending shows across four time windows. Reads precomputed rows from
  * `show_listens_rollup` — no event scan, no Redis round-trip — so it's
  * cheap even under traffic spikes.
+ *
+ * `includeAnniversaries` controls whether shows whose date matches
+ * today (MM-DD ±1) are filtered out of the `now` window. Defaults to
+ * false so trending surfaces organic momentum rather than echoing the
+ * OTD home rail. Other windows are never filtered — week/month/all are
+ * long enough that anniversary spikes wash out.
  */
-export function getTrending(limit = 10): TrendingResponse {
+export function getTrending(
+  limit = 10,
+  includeAnniversaries = false,
+): TrendingResponse {
   const db = getAnalyticsDb();
-  const stmt = db.prepare(
+
+  const plainStmt = db.prepare(
     `SELECT show_id, listens, plays, installs
      FROM show_listens_rollup
      WHERE window = ?
      ORDER BY listens DESC, plays DESC
      LIMIT ?`,
   );
-  const fetch = (name: TrendingWindowName): TrendingShow[] =>
-    stmt.all(name, limit) as TrendingShow[];
+
+  // show_id is `YYYY-MM-DD-...`; matching on substr(show_id, 6, 5) lets
+  // SQLite use the WHERE clause without pulling rows through JS.
+  const filteredNowStmt = db.prepare(
+    `SELECT show_id, listens, plays, installs
+     FROM show_listens_rollup
+     WHERE window = 'now'
+       AND substr(show_id, 6, 5) NOT IN (?, ?, ?)
+     ORDER BY listens DESC, plays DESC
+     LIMIT ?`,
+  );
+
+  const fetchPlain = (name: TrendingWindowName): TrendingShow[] =>
+    plainStmt.all(name, limit) as TrendingShow[];
+
+  let nowRows: TrendingShow[];
+  if (includeAnniversaries) {
+    nowRows = fetchPlain("now");
+  } else {
+    const [yest, today, tmrw] = anniversaryMonthDays(new Date());
+    nowRows = filteredNowStmt.all(yest, today, tmrw, limit) as TrendingShow[];
+  }
 
   return {
     generated_at: new Date().toISOString(),
     windows: {
-      now: fetch("now"),
-      week: fetch("week"),
-      month: fetch("month"),
-      all: fetch("all"),
+      now: nowRows,
+      week: fetchPlain("week"),
+      month: fetchPlain("month"),
+      all: fetchPlain("all"),
     },
   };
 }

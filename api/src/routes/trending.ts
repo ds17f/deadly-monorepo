@@ -2,7 +2,8 @@ import type { FastifyInstance } from "fastify";
 import { getTrending, rebuildShowListensRollup } from "../db/analytics.js";
 import { getPublisher } from "../db/redis.js";
 
-const CACHE_KEY = "trending:v1";
+const CACHE_KEY_DEFAULT = "trending:v2";
+const CACHE_KEY_WITH_ANNIVERSARIES = "trending:v2:anniv";
 const CACHE_TTL_SECONDS = 600; // 10 minutes
 const TRENDING_LIMIT = 10;
 
@@ -17,7 +18,9 @@ const trendingShowSchema = {
 } as const;
 
 export async function trendingRoutes(app: FastifyInstance): Promise<void> {
-  app.get(
+  app.get<{
+    Querystring: { include_anniversaries?: string };
+  }>(
     "/api/trending",
     {
       schema: {
@@ -25,8 +28,17 @@ export async function trendingRoutes(app: FastifyInstance): Promise<void> {
         summary: "Trending shows for the home screen",
         description:
           "Returns four time windows (now=24h, week, month, all-time) of " +
-          "the most-played shows ranked by logical listens. Cached for 10 " +
-          "minutes in Redis. See ADR-0004 for the ranking algorithm.",
+          "the most-played shows ranked by logical listens. The `now` " +
+          "window excludes shows whose date matches today (MM-DD ±1) by " +
+          "default to avoid echoing the 'Today in History' home rail. " +
+          "Pass `?include_anniversaries=true` to include them. Cached for " +
+          "10 minutes in Redis. See ADR-0004 for the ranking algorithm.",
+        querystring: {
+          type: "object",
+          properties: {
+            include_anniversaries: { type: "string" },
+          },
+        },
         response: {
           200: {
             type: "object",
@@ -46,11 +58,17 @@ export async function trendingRoutes(app: FastifyInstance): Promise<void> {
         },
       },
     },
-    async (_request, reply) => {
+    async (request, reply) => {
+      const includeAnniversaries =
+        request.query?.include_anniversaries === "true";
+      const cacheKey = includeAnniversaries
+        ? CACHE_KEY_WITH_ANNIVERSARIES
+        : CACHE_KEY_DEFAULT;
+
       // Try Redis first. Failure (no Redis available, network blip) falls
       // through to the rollup table — better to be uncached than to 500.
       try {
-        const cached = await getPublisher().get(CACHE_KEY);
+        const cached = await getPublisher().get(cacheKey);
         if (cached) {
           reply.header("X-Trending-Cache", "hit");
           return reply.type("application/json").send(cached);
@@ -59,11 +77,11 @@ export async function trendingRoutes(app: FastifyInstance): Promise<void> {
         // Fall through to rollup read.
       }
 
-      const fresh = getTrending(TRENDING_LIMIT);
+      const fresh = getTrending(TRENDING_LIMIT, includeAnniversaries);
       const payload = JSON.stringify(fresh);
 
       try {
-        await getPublisher().set(CACHE_KEY, payload, "EX", CACHE_TTL_SECONDS);
+        await getPublisher().set(cacheKey, payload, "EX", CACHE_TTL_SECONDS);
       } catch {
         // Cache write best-effort.
       }
@@ -87,10 +105,10 @@ export function startTrendingSchedules(): void {
   const runRollup = (): void => {
     try {
       rebuildShowListensRollup();
-      // Bust cache so the next request reflects the fresh rollup.
-      getPublisher()
-        .del(CACHE_KEY)
-        .catch(() => {});
+      // Bust both cache variants so the next request reflects the fresh rollup.
+      const pub = getPublisher();
+      pub.del(CACHE_KEY_DEFAULT).catch(() => {});
+      pub.del(CACHE_KEY_WITH_ANNIVERSARIES).catch(() => {});
     } catch (err) {
       console.error("Trending rollup error:", err);
     }

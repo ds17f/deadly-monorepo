@@ -59,6 +59,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_HOME_TRENDING_CARD_SIZE = "home_trending_card_size"
         private const val KEY_HOME_TODAY_CARD_SIZE = "home_today_card_size"
         private const val KEY_HOME_COLLECTIONS_CARD_SIZE = "home_collections_card_size"
+        private const val KEY_HOME_TRENDING_INCLUDE_ANNIVERSARIES = "home_trending_include_anniversaries"
     }
 
     private val _homeTrendingCardSize = MutableStateFlow(
@@ -96,6 +97,24 @@ class AppPreferences @Inject constructor(
         setHomeTrendingCardSize("small")
         setHomeTodayCardSize("large")
         setHomeCollectionsCardSize("large")
+        setHomeTrendingIncludeAnniversaries(false)
+    }
+
+    private val _homeTrendingIncludeAnniversaries = MutableStateFlow(
+        prefs.getBoolean(KEY_HOME_TRENDING_INCLUDE_ANNIVERSARIES, false)
+    )
+
+    /**
+     * When true, "Today in Grateful Dead History" shows are included in the
+     * `now` trending window. Off by default so the 24h ranking surfaces
+     * organic momentum instead of echoing the OTD home rail.
+     */
+    val homeTrendingIncludeAnniversaries: StateFlow<Boolean> =
+        _homeTrendingIncludeAnniversaries.asStateFlow()
+
+    fun setHomeTrendingIncludeAnniversaries(value: Boolean) {
+        prefs.edit().putBoolean(KEY_HOME_TRENDING_INCLUDE_ANNIVERSARIES, value).apply()
+        _homeTrendingIncludeAnniversaries.value = value
     }
 
     private val _homeTrendingAboveToday = MutableStateFlow(

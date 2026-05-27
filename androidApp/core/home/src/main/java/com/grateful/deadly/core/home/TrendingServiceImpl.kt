@@ -13,6 +13,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -49,6 +50,13 @@ class TrendingServiceImpl @Inject constructor(
                 delay(REFRESH_INTERVAL_MS)
             }
         }
+        // Refetch immediately when the user flips the anniversaries filter
+        // — the param changes the response, so the cached content is stale.
+        scope.launch {
+            appPreferences.homeTrendingIncludeAnniversaries
+                .drop(1)
+                .collect { refresh() }
+        }
     }
 
     override suspend fun refresh(): Result<Unit> = withContext(Dispatchers.IO) {
@@ -79,7 +87,9 @@ class TrendingServiceImpl @Inject constructor(
     }
 
     private fun fetchTrendingJson(): JSONObject {
-        val url = URL("${appPreferences.apiBaseUrl}/api/trending")
+        val includeAnniv = appPreferences.homeTrendingIncludeAnniversaries.value
+        val query = if (includeAnniv) "?include_anniversaries=true" else ""
+        val url = URL("${appPreferences.apiBaseUrl}/api/trending$query")
         val conn = url.openConnection() as HttpURLConnection
         try {
             conn.requestMethod = "GET"

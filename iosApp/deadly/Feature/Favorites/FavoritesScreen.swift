@@ -406,6 +406,11 @@ struct FavoritesScreen: View {
                     let newMode: FavoritesDisplayMode = displayMode == .list ? .grid : .list
                     displayMode = newMode
                     container.appPreferences.favoritesDisplayMode = newMode.rawValue
+                    container.analyticsService.track("feature_use", props: [
+                        "feature": "set_favorites_display_mode",
+                        "category": "preference",
+                        "value": newMode.rawValue,
+                    ])
                 } label: {
                     Image(systemName: displayMode == .list ? "square.grid.2x2" : "list.bullet")
                         .font(.body)

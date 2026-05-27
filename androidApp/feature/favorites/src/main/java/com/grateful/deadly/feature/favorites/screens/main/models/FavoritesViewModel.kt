@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.service.BackupImportExportService
 import com.grateful.deadly.core.model.*
@@ -43,6 +44,7 @@ class FavoritesViewModel @Inject constructor(
     private val reviewService: ReviewService,
     val appPreferences: AppPreferences,
     private val backupImportExportService: BackupImportExportService,
+    private val analyticsService: AnalyticsService,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
@@ -75,6 +77,11 @@ class FavoritesViewModel @Inject constructor(
 
     fun setDisplayMode(mode: FavoritesDisplayMode) {
         appPreferences.setFavoritesDisplayMode(mode.name)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_favorites_display_mode",
+            "category" to "preference",
+            "value" to mode.name,
+        ))
     }
 
     init {

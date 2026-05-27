@@ -50,7 +50,11 @@ final class TrendingServiceImpl: TrendingService {
     }
 
     private func fetchPayload() async throws -> TrendingPayload {
-        let url = URL(string: "\(appPreferences.apiBaseUrl)/api/trending")!
+        var components = URLComponents(string: "\(appPreferences.apiBaseUrl)/api/trending")!
+        if appPreferences.homeTrendingIncludeAnniversaries {
+            components.queryItems = [URLQueryItem(name: "include_anniversaries", value: "true")]
+        }
+        let url = components.url!
         let (data, response) = try await session.data(from: url)
         if let http = response as? HTTPURLResponse, !(200..<300).contains(http.statusCode) {
             throw URLError(.badServerResponse)

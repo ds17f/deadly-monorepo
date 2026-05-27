@@ -59,6 +59,12 @@ struct HomeScreen: View {
             await homeService.refresh()
             await trendingService.refresh()
         }
+        // The trending response depends on the include-anniversaries pref —
+        // SwiftUI .task only fires on appearance, so flip-the-toggle-and-stay
+        // wouldn't refetch without this observer.
+        .onChange(of: appPreferences.homeTrendingIncludeAnniversaries) { _, _ in
+            Task { await trendingService.refresh() }
+        }
     }
 
     // MARK: - Trending

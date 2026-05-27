@@ -5,10 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.home.HomeService
 import com.grateful.deadly.core.api.home.HomeContent
+import com.grateful.deadly.core.api.home.TrendingService
+import com.grateful.deadly.core.database.AppPreferences
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -22,19 +25,32 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val homeService: HomeService
+    private val homeService: HomeService,
+    private val trendingService: TrendingService,
+    private val appPreferences: AppPreferences,
 ) : ViewModel() {
-    
+
     companion object {
         private const val TAG = "HomeViewModel"
     }
-    
+
     private val _uiState = MutableStateFlow(HomeUiState.initial())
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
-    
+
     init {
         Log.d(TAG, "HomeViewModel initialized")
         observeHomeService()
+        // Refetch trending when the user flips the anniversaries filter.
+        // The TrendingService has its own observer too — this is belt-and-
+        // suspenders to make sure the VM's lifecycle catches the change.
+        viewModelScope.launch {
+            appPreferences.homeTrendingIncludeAnniversaries
+                .drop(1)
+                .collect {
+                    Log.d(TAG, "anniversaries pref changed → refresh trending")
+                    trendingService.refresh()
+                }
+        }
     }
     
     /**

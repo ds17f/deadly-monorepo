@@ -38,6 +38,7 @@ fun SettingsScreen(
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
     val homeTrendingWindow by viewModel.homeTrendingWindow.collectAsState()
     val homeTrendingAboveToday by viewModel.homeTrendingAboveToday.collectAsState()
+    val homeTrendingIncludeAnniversaries by viewModel.homeTrendingIncludeAnniversaries.collectAsState()
     val homeRecentRows by viewModel.homeRecentRows.collectAsState()
     val homeTrendingCardSize by viewModel.homeTrendingCardSize.collectAsState()
     val homeTodayCardSize by viewModel.homeTodayCardSize.collectAsState()
@@ -165,6 +166,15 @@ fun SettingsScreen(
                 subtitle = "Move the Trending section below \"Today In Grateful Dead History\" by turning this off.",
                 checked = homeTrendingAboveToday,
                 onCheckedChange = { viewModel.toggleHomeTrendingAboveToday() }
+            )
+        }
+
+        item {
+            PreferenceToggleRow(
+                title = "Include \"Today in History\" in Trending",
+                subtitle = "Off by default — recommended for variety. The 24-hour Trending window is otherwise dominated by anniversary plays.",
+                checked = homeTrendingIncludeAnniversaries,
+                onCheckedChange = { viewModel.toggleHomeTrendingIncludeAnniversaries() }
             )
         }
 

@@ -225,6 +225,48 @@ describe("getTrending window correctness", () => {
     expect(first.windows.all).toEqual(second.windows.all);
   });
 
+  it("filters anniversary shows from the now window by default", () => {
+    // Build show_ids whose date prefix matches today / yesterday / tomorrow
+    // and one that doesn't. Filter should drop the first three from `now`
+    // but leave them in `week` and `all`.
+    const now = new Date();
+    const fmt = (d: Date): string =>
+      `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
+    const yest = new Date(now.getTime() - DAY_MS);
+    const tmrw = new Date(now.getTime() + DAY_MS);
+    // Make the anniversary show-ids look real — `YYYY-MM-DD-venue` — but
+    // shift the year way back so they don't accidentally fall outside the
+    // 7-day "week" window via their own date prefix (the filter is on
+    // show_id, the window is on event ts).
+    const today1977 = `1977-${fmt(now).slice(5)}-venue-a`;
+    const yest1977 = `1977-${fmt(yest).slice(5)}-venue-b`;
+    const tmrw1977 = `1977-${fmt(tmrw).slice(5)}-venue-c`;
+    const nonAnniv = "1985-12-31-venue-d";
+
+    const t = Date.now() - HOUR_MS;
+    insertEvents([
+      play("u1", "s1", today1977, t),
+      play("u2", "s2", yest1977, t),
+      play("u3", "s3", tmrw1977, t),
+      play("u4", "s4", nonAnniv, t),
+    ]);
+    rebuildShowListensRollup();
+
+    const filtered = getTrending(10).windows.now.map((r) => r.show_id);
+    expect(filtered).toEqual([nonAnniv]);
+
+    const withAnniv = getTrending(10, true).windows.now.map((r) => r.show_id);
+    expect(withAnniv.sort()).toEqual(
+      [today1977, yest1977, tmrw1977, nonAnniv].sort(),
+    );
+
+    // Filter is now-only — `all` keeps everything regardless of the flag.
+    const allIds = getTrending(10).windows.all.map((r) => r.show_id).sort();
+    expect(allIds).toEqual(
+      [today1977, yest1977, tmrw1977, nonAnniv].sort(),
+    );
+  });
+
   it("ignores events without a show_id", () => {
     const t = Date.now() - HOUR_MS;
     getAnalyticsDb()
