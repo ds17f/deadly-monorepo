@@ -122,6 +122,19 @@ class SettingsViewModel @Inject constructor(
         ))
     }
 
+    val homeTrendingIncludeAnniversaries: StateFlow<Boolean> =
+        appPreferences.homeTrendingIncludeAnniversaries
+
+    fun toggleHomeTrendingIncludeAnniversaries() {
+        val newValue = !appPreferences.homeTrendingIncludeAnniversaries.value
+        appPreferences.setHomeTrendingIncludeAnniversaries(newValue)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_trending_include_anniversaries",
+            "category" to "preference",
+            "value" to newValue.toString(),
+        ))
+    }
+
     val homeRecentRows: StateFlow<Int> = appPreferences.homeRecentRows
 
     fun setHomeRecentRows(value: Int) {

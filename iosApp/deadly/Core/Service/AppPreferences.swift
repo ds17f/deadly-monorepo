@@ -23,6 +23,7 @@ final class AppPreferences {
     private static let homeTrendingAboveTodayKey = "home_trending_above_today"
     private static let homeRecentRowsKey = "home_recent_rows"
     private static let homeTrendingCardSizeKey = "home_trending_card_size"
+    private static let homeTrendingIncludeAnniversariesKey = "home_trending_include_anniversaries"
     private static let homeTodayCardSizeKey = "home_today_card_size"
     private static let homeCollectionsCardSizeKey = "home_collections_card_size"
 
@@ -127,6 +128,13 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(homeTrendingCardSize, forKey: Self.homeTrendingCardSizeKey) }
     }
 
+    /// When true, "Today in Grateful Dead History" shows are included in the
+    /// `now` trending window. Off by default so the 24h ranking surfaces
+    /// organic momentum instead of echoing the OTD home rail.
+    var homeTrendingIncludeAnniversaries: Bool {
+        didSet { UserDefaults.standard.set(homeTrendingIncludeAnniversaries, forKey: Self.homeTrendingIncludeAnniversariesKey) }
+    }
+
     /// Card size for the Today in History carousel: "small" or "large".
     var homeTodayCardSize: String {
         didSet { UserDefaults.standard.set(homeTodayCardSize, forKey: Self.homeTodayCardSizeKey) }
@@ -145,6 +153,7 @@ final class AppPreferences {
         homeTrendingCardSize = "small"
         homeTodayCardSize = "large"
         homeCollectionsCardSize = "large"
+        homeTrendingIncludeAnniversaries = false
     }
 
     /// Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles.
@@ -174,6 +183,7 @@ final class AppPreferences {
             Self.homeTrendingCardSizeKey: "small",
             Self.homeTodayCardSizeKey: "large",
             Self.homeCollectionsCardSizeKey: "large",
+            Self.homeTrendingIncludeAnniversariesKey: false,
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
@@ -200,6 +210,7 @@ final class AppPreferences {
         homeTrendingCardSize = UserDefaults.standard.string(forKey: Self.homeTrendingCardSizeKey) ?? "small"
         homeTodayCardSize = UserDefaults.standard.string(forKey: Self.homeTodayCardSizeKey) ?? "large"
         homeCollectionsCardSize = UserDefaults.standard.string(forKey: Self.homeCollectionsCardSizeKey) ?? "large"
+        homeTrendingIncludeAnniversaries = UserDefaults.standard.bool(forKey: Self.homeTrendingIncludeAnniversariesKey)
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)

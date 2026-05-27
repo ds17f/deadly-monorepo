@@ -259,6 +259,25 @@ struct SettingsScreen: View {
                     }
                 }
 
+                Toggle(isOn: Binding(
+                    get: { container.appPreferences.homeTrendingIncludeAnniversaries },
+                    set: { newValue in
+                        container.appPreferences.homeTrendingIncludeAnniversaries = newValue
+                        container.analyticsService.track("feature_use", props: [
+                            "feature": "set_home_trending_include_anniversaries",
+                            "category": "preference",
+                            "value": String(newValue),
+                        ])
+                    }
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Include \"Today in History\" in Trending")
+                        Text("Off by default — recommended for variety. The 24-hour Trending window is otherwise dominated by anniversary plays.")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Recently Played rows")
                     Picker("Recently Played rows", selection: Binding(
