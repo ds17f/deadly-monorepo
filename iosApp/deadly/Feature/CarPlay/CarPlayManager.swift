@@ -213,8 +213,9 @@ final class CarPlayManager {
 
         Task {
             await container.popularService.refresh()
-            // seed=0 — CarPlay surface is stable; no "Show more" re-roll in-car.
-            let shows = container.popularService.content.displayShows(for: decade, seed: 0)
+            // CarPlay has no "Show more" affordance — surface the full pool
+            // rather than the 4-show home-rail teaser.
+            let shows = container.popularService.content.allShows(for: decade)
             let items = shows.map { buildShowItem($0) }
             template.updateSections([CPListSection(items: items.isEmpty ? [emptyItem("No favorites yet")] : items)])
         }

@@ -66,6 +66,24 @@ data class PopularContent(
      * [seed] controls the random selection; bumping it on "Show more"
      * re-rolls without re-fetching. Returned shows are date-sorted.
      */
+    /**
+     * Full pool(s) for the in-car surface, date-sorted.
+     * - [PopularDecade.ALL]: every show across all four decade pools.
+     * - Specific decade: that decade's full pool.
+     * Android Auto / CarPlay have no "Show more" affordance, so we surface
+     * the whole pool rather than the 4-show home-rail teaser.
+     */
+    fun allShows(decade: PopularDecade): List<Show> {
+        val shows = when (decade) {
+            PopularDecade.ALL -> pool60 + pool70 + pool80 + pool90
+            PopularDecade.S60 -> pool60
+            PopularDecade.S70 -> pool70
+            PopularDecade.S80 -> pool80
+            PopularDecade.S90 -> pool90
+        }
+        return shows.sortedBy { it.date }
+    }
+
     fun displayShows(decade: PopularDecade, seed: Int): List<Show> {
         val picks: List<Show> = when (decade) {
             PopularDecade.ALL -> pickOnePerDecade(seed)

@@ -95,8 +95,9 @@ class BrowseTreeProvider @Inject constructor(
             parentId == BrowseMediaId.POPULAR -> {
                 popularService.refresh()
                 val decade = PopularDecade.fromKey(appPreferences.homePopularDecade.value)
-                // seed=0 — AA surface is stable; no "Show more" re-roll in-car.
-                popularService.popular.value.displayShows(decade, seed = 0).map(::buildShowItem)
+                // Android Auto has no "Show more" affordance — surface the
+                // full pool rather than the 4-show home-rail teaser.
+                popularService.popular.value.allShows(decade).map(::buildShowItem)
             }
             parentId == BrowseMediaId.TODAY -> {
                 val cal = Calendar.getInstance()

@@ -47,6 +47,23 @@ struct PopularContent: Sendable {
     ///   distinct years within the decade so the rail spans the era.
     /// `seed` controls the random selection; bumping it on "Show more"
     /// re-rolls without re-fetching. Returned shows are date-sorted.
+    /// Full pool(s) for the in-car surface, date-sorted.
+    /// - `.all`: every show across all four decade pools.
+    /// - specific decade: that decade's full pool.
+    /// CarPlay/Android Auto have no "Show more" affordance, so we surface
+    /// the whole pool rather than the 4-show home-rail teaser.
+    func allShows(for decade: PopularDecade) -> [Show] {
+        let shows: [Show]
+        switch decade {
+        case .all: shows = pool60 + pool70 + pool80 + pool90
+        case .s60: shows = pool60
+        case .s70: shows = pool70
+        case .s80: shows = pool80
+        case .s90: shows = pool90
+        }
+        return shows.sorted { $0.date < $1.date }
+    }
+
     func displayShows(for decade: PopularDecade, seed: Int) -> [Show] {
         let picks: [Show]
         switch decade {
