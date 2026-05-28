@@ -831,12 +831,25 @@ export interface LiveListener {
  *   - between tracks: latest is an end within END window           → live
  *   - finished:       latest is an end past END window              → not live
  *
+ * `playback_end` with reason `app_backgrounded` is excluded from the
+ * latest-event picker: backgrounding the app does not stop audio
+ * (locked phone in pocket is the modal listening posture). Treating
+ * those as real ends dropped ~25% of finishes off Live within 2 min
+ * even though playback continued. The preceding `playback_start`
+ * remains the keepalive anchor.
+ *
  * Replaced the earlier single-window approach: a 45-min "unmatched
  * start" rule mis-classified between-tracks users as Recent, and a
  * 90-second soft window dropped mid-jam users out of Live.
  */
 const LIVE_START_WINDOW_MS = 45 * 60 * 1000;
 const LIVE_END_WINDOW_MS = 2 * 60 * 1000;
+
+/** Reasons on `playback_end` that do NOT actually stop audio — exclude
+ *  these from the "latest event" calculation so a backgrounded user
+ *  stays Live until their `playback_start` ages out of the 45-min
+ *  window. */
+const NON_TERMINAL_END_REASONS_SQL = `('app_backgrounded')`;
 
 export function getLiveListeners(): LiveListener[] {
   const db = getAnalyticsDb();
@@ -869,6 +882,10 @@ export function getLiveListeners(): LiveListener[] {
          WHERE event IN ('playback_start', 'playback_end')
            AND ts >= ?
            AND json_extract(props, '$.show_id') IS NOT NULL
+           AND NOT (
+             event = 'playback_end'
+             AND json_extract(props, '$.reason') IN ${NON_TERMINAL_END_REASONS_SQL}
+           )
        )
        SELECT
          l.iid,
@@ -1344,11 +1361,19 @@ export function getRecentListening(
          WHERE latest.event IN ('playback_start', 'playback_end')
            AND latest.iid = a.iid
            AND json_extract(latest.props, '$.show_id') = a.show_id
+           AND NOT (
+             latest.event = 'playback_end'
+             AND json_extract(latest.props, '$.reason') IN ${NON_TERMINAL_END_REASONS_SQL}
+           )
            AND latest.ts = (
              SELECT MAX(x.ts) FROM analytics_events x
              WHERE x.event IN ('playback_start', 'playback_end')
                AND x.iid = a.iid
                AND x.ts >= ?
+               AND NOT (
+                 x.event = 'playback_end'
+                 AND json_extract(x.props, '$.reason') IN ${NON_TERMINAL_END_REASONS_SQL}
+               )
            )
            AND (
              (latest.event = 'playback_start' AND latest.ts >= ?)
