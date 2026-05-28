@@ -136,9 +136,16 @@ fun HomeScreen(
             }
         }
 
-        // Featured Collections Section
+        // Featured Collections Section — stable shuffle per seed so the
+        // rail order is consistent within a session but "Show more" can
+        // re-roll without a re-fetch. Mirrors the Fan Favorites pattern.
         item {
-            val collectionItems = uiState.homeContent.featuredCollections.map { collection ->
+            var collectionsSeed by remember { mutableIntStateOf(0) }
+            val shuffledCollections = remember(uiState.homeContent.featuredCollections, collectionsSeed) {
+                if (uiState.homeContent.featuredCollections.isEmpty()) emptyList()
+                else uiState.homeContent.featuredCollections.shuffled(kotlin.random.Random(collectionsSeed))
+            }
+            val collectionItems = shuffledCollections.map { collection ->
                 HorizontalCollectionItem(
                     id = collection.id,
                     displayText = "${collection.name}\n${collection.showCountText}",
@@ -152,7 +159,12 @@ fun HomeScreen(
                 cardWidth = collectionsCardWidth,
                 onItemClick = { item ->
                     onNavigateToCollection(item.id)
-                }
+                },
+                actionLabel = if (collectionItems.size > 1) "Show more" else null,
+                onActionClick = {
+                    collectionsSeed++
+                    viewModel.trackCollectionsShowMore()
+                },
             )
         }
     }

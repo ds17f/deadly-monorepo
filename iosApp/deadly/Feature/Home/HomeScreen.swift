@@ -3,6 +3,7 @@ import SwiftUI
 struct HomeScreen: View {
     @Environment(\.appContainer) private var container
     @State private var popularShuffleSeed: Int = 0
+    @State private var collectionsShuffleSeed: Int = 0
 
     private var homeService: HomeServiceImpl { container.homeService }
     private var trendingService: TrendingServiceImpl { container.trendingService }
@@ -312,14 +313,44 @@ struct HomeScreen: View {
     }
 
     private var collectionsSection: some View {
-        VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
-            Text("Featured Collections")
-                .font(.title2)
-                .fontWeight(.bold)
+        // Stable shuffle per seed so the rail order is consistent within a
+        // session but "Show more" can re-roll without a re-fetch. Mirrors
+        // the Fan Favorites pattern.
+        var rng = SeededGenerator(seed: UInt64(bitPattern: Int64(collectionsShuffleSeed)) &+ 0x636f6c6c)
+        let shuffled = content.featuredCollections.shuffled(using: &rng)
+        let showMore = {
+            collectionsShuffleSeed &+= 1
+            container.analyticsService.track("feature_use", props: [
+                "feature": "collections_show_more",
+                "category": "action",
+            ])
+        }
+        return VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
+            HStack(spacing: 12) {
+                Text("Featured Collections")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
+
+                Spacer(minLength: 8)
+
+                if shuffled.count > 1 {
+                    Button(action: showMore) {
+                        Text("Show more")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Show more Featured Collections. Tap to re-roll.")
+                }
+            }
 
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: DeadlySpacing.itemSpacing) {
-                    ForEach(content.featuredCollections) { collection in
+                    ForEach(shuffled) { collection in
                         NavigationLink(value: CollectionRoute.detail(collection.id)) {
                             ShowCarouselCard(
                                 imageRecordingId: nil,
