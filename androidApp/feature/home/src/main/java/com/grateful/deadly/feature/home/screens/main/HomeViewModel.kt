@@ -113,6 +113,14 @@ class HomeViewModel @Inject constructor(
         ))
     }
 
+    /** Telemetry hook for the Featured Collections "Show more" re-roll. */
+    fun trackCollectionsShowMore() {
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "collections_show_more",
+            "category" to "action",
+        ))
+    }
+
     /**
      * Clear error state
      */
