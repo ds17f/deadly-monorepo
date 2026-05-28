@@ -51,9 +51,9 @@ class BrowseTreeProvider @Inject constructor(
     fun getRootItems(): List<MediaItem> = listOf(
         buildBrowsableItem(BrowseMediaId.RECENT, "Recent", "Recently played shows"),
         buildBrowsableItem(BrowseMediaId.LIBRARY, "Favorites", "Shows you've saved"),
+        buildBrowsableItem(BrowseMediaId.TODAY, "TIGDH", "Today in Grateful Dead History"),
         buildBrowsableItem(BrowseMediaId.TRENDING, "Trending", "What others are playing"),
         buildBrowsableItem(BrowseMediaId.POPULAR, "Fan Favorites", "Shows people kept"),
-        buildBrowsableItem(BrowseMediaId.TODAY, "TIGDH", "Today in Grateful Dead History"),
         buildBrowsableItem(BrowseMediaId.YEARS, "Browse by Year", "1965\u20131995"),
         buildBrowsableItem(BrowseMediaId.TOP_RATED, "Top Rated", "Highest rated shows"),
     )
