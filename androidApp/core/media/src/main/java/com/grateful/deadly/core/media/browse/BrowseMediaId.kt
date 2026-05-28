@@ -8,6 +8,8 @@ package com.grateful.deadly.core.media.browse
  * ├── library             → My Library
  * │   ├── library_shows   → Favorite Shows
  * │   └── library_songs   → Favorite Songs
+ * ├── trending            → Trending Now (respects user's window pref)
+ * ├── popular             → Fan Favorites (respects user's decade pref)
  * ├── top_rated           → Top Rated Shows
  * ├── today               → Today in Dead History
  * ├── collections         → Collections list
@@ -26,6 +28,8 @@ object BrowseMediaId {
     const val LIBRARY = "library"
     const val LIBRARY_SHOWS = "library_shows"
     const val LIBRARY_SONGS = "library_songs"
+    const val TRENDING = "trending"
+    const val POPULAR = "popular"
     const val TOP_RATED = "top_rated"
     const val TODAY = "today"
     const val COLLECTIONS = "collections"

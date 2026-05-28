@@ -83,6 +83,18 @@ final class CarPlayManager {
     }
 
     private func buildDiscoverTab() -> CPListTemplate {
+        let trendingItem = CPListItem(text: "Trending", detailText: "What others are playing")
+        trendingItem.handler = { [weak self] _, completion in
+            self?.showTrending()
+            completion()
+        }
+
+        let popularItem = CPListItem(text: "Fan Favorites", detailText: "Shows people kept")
+        popularItem.handler = { [weak self] _, completion in
+            self?.showFanFavorites()
+            completion()
+        }
+
         let yearsItem = CPListItem(text: "Browse by Year", detailText: "1965–1995")
         yearsItem.handler = { [weak self] _, completion in
             self?.showYearsList()
@@ -95,7 +107,10 @@ final class CarPlayManager {
             completion()
         }
 
-        let template = CPListTemplate(title: "Discover", sections: [CPListSection(items: [yearsItem, topRatedItem])])
+        let template = CPListTemplate(
+            title: "Discover",
+            sections: [CPListSection(items: [trendingItem, popularItem, yearsItem, topRatedItem])]
+        )
         template.tabTitle = "Discover"
         template.tabImage = UIImage(systemName: "magnifyingglass")
         return template
@@ -173,6 +188,35 @@ final class CarPlayManager {
             let shows = (try? container.showRepository.getTopRatedShows(limit: 50)) ?? []
             let items = shows.map { buildShowItem($0) }
             template.updateSections([CPListSection(items: items.isEmpty ? [emptyItem("No shows found")] : items)])
+        }
+    }
+
+    private func showTrending() {
+        let window = TrendingWindow(preferenceKey: container.appPreferences.homeTrendingWindow)
+        let title = "Trending \(window.label)"
+        let template = CPListTemplate(title: title, sections: [CPListSection(items: [loadingItem()])])
+        interfaceController.pushTemplate(template, animated: true, completion: nil)
+
+        Task {
+            await container.trendingService.refresh()
+            let shows = container.trendingService.content.shows(for: window)
+            let items = shows.map { buildShowItem($0) }
+            template.updateSections([CPListSection(items: items.isEmpty ? [emptyItem("No trending shows yet")] : items)])
+        }
+    }
+
+    private func showFanFavorites() {
+        let decade = PopularDecade(preferenceKey: container.appPreferences.homePopularDecade)
+        let title = decade == .all ? "Fan Favorites" : "Fan Favorites \(decade.label)"
+        let template = CPListTemplate(title: title, sections: [CPListSection(items: [loadingItem()])])
+        interfaceController.pushTemplate(template, animated: true, completion: nil)
+
+        Task {
+            await container.popularService.refresh()
+            // seed=0 — CarPlay surface is stable; no "Show more" re-roll in-car.
+            let shows = container.popularService.content.displayShows(for: decade, seed: 0)
+            let items = shows.map { buildShowItem($0) }
+            template.updateSections([CPListSection(items: items.isEmpty ? [emptyItem("No favorites yet")] : items)])
         }
     }
 
