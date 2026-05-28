@@ -1,11 +1,20 @@
 # Changelog
 
+## [2.30.0] - 2026-05-28
+
+### New Features
+* stable-random Featured Collections with Show more (#47) (3d038a2d)
+* Fan Favorites rail (decade-bucketed popular shows) (#46) (d97f12ce)
+
+### Bug Fixes
+* dual-window live boundary covers long tracks (743daba6)
+* logical-listen ranking (#43) (acde63ef)
+
+
 ## [2.29.0] - 2026-05-25
 
 ### New Features
 * trending shows + home polish (#42) (bbb74e71)
-
-
 ## [2.28.0] - 2026-05-24
 
 ### New Features
