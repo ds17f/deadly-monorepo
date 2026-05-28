@@ -260,13 +260,44 @@ platform :android do
     UI.success("✅ Promoted latest build from Internal to Open Testing (Beta)!")
   end
 
-  desc "Promote from Alpha to Production"
+  desc "Promote from Alpha to Production (auto-escalates Internal → Alpha if needed)"
   lane :promote_alpha_to_production do
     release_notes_text = (ENV['RELEASE_NOTES'] || '').strip
     has_notes = !release_notes_text.empty?
 
-    version_codes = google_play_track_version_codes(track: 'alpha')
-    vc = version_codes.max
+    internal_codes = google_play_track_version_codes(track: 'internal') || []
+    alpha_codes = google_play_track_version_codes(track: 'alpha') || []
+    internal_max = internal_codes.max
+    alpha_max = alpha_codes.max || 0
+
+    # If the latest build on Internal isn't on Alpha yet, promote it first.
+    # Why: upload_to_play_store(track: 'alpha', track_promote_to: 'production')
+    # promotes whatever's already on alpha. Without this escalation, calling
+    # this lane right after a fresh internal upload re-ships a stale alpha
+    # build and the new version never reaches the store.
+    if internal_max && internal_max > alpha_max
+      if has_notes
+        changelog_dir = "/tmp/fl_metadata/en-US/changelogs"
+        sh("mkdir -p '#{changelog_dir}'")
+        File.write("#{changelog_dir}/#{internal_max}.txt", release_notes_text)
+      end
+
+      upload_to_play_store(
+        track: 'internal',
+        track_promote_to: 'alpha',
+        version_code: internal_max,
+        skip_upload_aab: true,
+        skip_upload_metadata: true,
+        skip_upload_images: true,
+        skip_upload_screenshots: true,
+        skip_upload_changelogs: !has_notes,
+        metadata_path: has_notes ? "/tmp/fl_metadata" : nil
+      )
+      alpha_max = internal_max
+      UI.success("✅ Auto-escalated #{internal_max} from Internal to Alpha.")
+    end
+
+    vc = alpha_max
 
     if has_notes && vc
       changelog_dir = "/tmp/fl_metadata/en-US/changelogs"
@@ -286,7 +317,7 @@ platform :android do
       metadata_path: has_notes ? "/tmp/fl_metadata" : nil
     )
 
-    UI.success("✅ Promoted latest build from Alpha to Production!")
+    UI.success("✅ Promoted #{vc} from Alpha to Production!")
   end
 
   desc "Promote from Alpha to Beta"
