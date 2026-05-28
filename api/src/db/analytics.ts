@@ -1419,6 +1419,161 @@ export function getRecentListening(
   }));
 }
 
+// ── Network error outcomes ────────────────────────────────────────────
+
+export type NetworkErrorOutcome =
+  | "recover_same_track"
+  | "skipped_to_next"
+  | "skipped_ahead"
+  | "jumped_back"
+  | "next_event_is_end"
+  | "no_followup";
+
+export interface NetworkErrorSummary {
+  /** Window inspected, in days. */
+  days: number;
+  /** Platform filter applied, or null for all platforms. */
+  platform: string | null;
+  /** Total network_error events in the window. */
+  total: number;
+  /** Count by outcome. */
+  outcomes: Array<{ outcome: NetworkErrorOutcome; count: number; avg_gap_s: number | null }>;
+  /** Most recent N errors with their classified outcome. */
+  recent: Array<{
+    ts: number;
+    iid: string;
+    platform: string;
+    app_version: string;
+    show_id: string | null;
+    recording_id: string | null;
+    track_index: number | null;
+    outcome: NetworkErrorOutcome;
+    /** Seconds until the next playback event for this iid+show, if any. */
+    gap_s: number | null;
+    next_track_index: number | null;
+  }>;
+}
+
+export function getNetworkErrorOutcomes(
+  days = 30,
+  platform: string | null = null,
+  recentLimit = 50,
+): NetworkErrorSummary {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+
+  // Each network_error end is classified by the next playback_start /
+  // playback_end for the same (iid, show_id) — same logic as the
+  // exploratory query that surfaced the 75%-skip pattern.
+  const classifySql = `
+    WITH ne AS (
+      SELECT id, iid, ts, platform, app_version,
+             json_extract(props, '$.show_id') AS show_id,
+             json_extract(props, '$.recording_id') AS recording_id,
+             CAST(json_extract(props, '$.track_index') AS INTEGER) AS track_index
+      FROM analytics_events
+      WHERE event = 'playback_end'
+        AND json_extract(props, '$.reason') = 'network_error'
+        AND ts >= ?
+        ${platform ? "AND platform = ?" : ""}
+    ),
+    classified AS (
+      SELECT
+        ne.id, ne.iid, ne.ts, ne.platform, ne.app_version,
+        ne.show_id, ne.recording_id, ne.track_index,
+        (SELECT n.event FROM analytics_events n
+           WHERE n.iid = ne.iid AND n.ts > ne.ts
+             AND n.event IN ('playback_start','playback_end')
+             AND json_extract(n.props, '$.show_id') = ne.show_id
+           ORDER BY n.ts LIMIT 1) AS next_event,
+        (SELECT CAST(json_extract(n.props, '$.track_index') AS INTEGER) FROM analytics_events n
+           WHERE n.iid = ne.iid AND n.ts > ne.ts
+             AND n.event IN ('playback_start','playback_end')
+             AND json_extract(n.props, '$.show_id') = ne.show_id
+           ORDER BY n.ts LIMIT 1) AS next_trk,
+        (SELECT (n.ts - ne.ts) / 1000.0 FROM analytics_events n
+           WHERE n.iid = ne.iid AND n.ts > ne.ts
+             AND n.event IN ('playback_start','playback_end')
+             AND json_extract(n.props, '$.show_id') = ne.show_id
+           ORDER BY n.ts LIMIT 1) AS gap_s
+      FROM ne
+    )
+    SELECT
+      id, iid, ts, platform, app_version, show_id, recording_id, track_index,
+      gap_s, next_trk,
+      CASE
+        WHEN next_event IS NULL THEN 'no_followup'
+        WHEN next_event = 'playback_end' THEN 'next_event_is_end'
+        WHEN next_event = 'playback_start' AND next_trk = track_index THEN 'recover_same_track'
+        WHEN next_event = 'playback_start' AND next_trk = track_index + 1 THEN 'skipped_to_next'
+        WHEN next_event = 'playback_start' AND next_trk > track_index + 1 THEN 'skipped_ahead'
+        WHEN next_event = 'playback_start' AND next_trk < track_index THEN 'jumped_back'
+        ELSE 'no_followup'
+      END AS outcome
+    FROM classified
+  `;
+
+  const params: Array<number | string> = [cutoff];
+  if (platform) params.push(platform);
+
+  const all = db.prepare(classifySql).all(...params) as Array<{
+    id: number;
+    iid: string;
+    ts: number;
+    platform: string;
+    app_version: string;
+    show_id: string | null;
+    recording_id: string | null;
+    track_index: number | null;
+    gap_s: number | null;
+    next_trk: number | null;
+    outcome: NetworkErrorOutcome;
+  }>;
+
+  const buckets = new Map<NetworkErrorOutcome, { count: number; gapSum: number; gapN: number }>();
+  for (const r of all) {
+    const b = buckets.get(r.outcome) ?? { count: 0, gapSum: 0, gapN: 0 };
+    b.count++;
+    if (r.gap_s !== null) {
+      b.gapSum += r.gap_s;
+      b.gapN++;
+    }
+    buckets.set(r.outcome, b);
+  }
+  const outcomes = Array.from(buckets.entries())
+    .map(([outcome, b]) => ({
+      outcome,
+      count: b.count,
+      avg_gap_s: b.gapN > 0 ? Math.round((b.gapSum / b.gapN) * 10) / 10 : null,
+    }))
+    .sort((a, b) => b.count - a.count);
+
+  const recent = all
+    .slice()
+    .sort((a, b) => b.ts - a.ts)
+    .slice(0, recentLimit)
+    .map((r) => ({
+      ts: r.ts,
+      iid: r.iid,
+      platform: r.platform,
+      app_version: r.app_version,
+      show_id: r.show_id,
+      recording_id: r.recording_id,
+      track_index: r.track_index,
+      outcome: r.outcome,
+      gap_s: r.gap_s,
+      next_track_index: r.next_trk,
+    }));
+
+  return {
+    days,
+    platform,
+    total: all.length,
+    outcomes,
+    recent,
+  };
+}
+
 export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
   const db = getAnalyticsDb();
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
