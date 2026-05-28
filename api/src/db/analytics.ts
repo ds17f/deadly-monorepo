@@ -25,6 +25,16 @@ export function getAnalyticsDb(): Database.Database {
  * Existing dupes block index creation, so we pre-dedupe on first run only —
  * the check on `sqlite_master` keeps subsequent startups O(1) instead of
  * scanning the table.
+ *
+ * FOOTGUN: the index keys on primitive columns only — `props` is not
+ * considered. Two events from the same install/session at the exact same
+ * millisecond with *different* props (e.g. two `add_favorite`s for
+ * different shows, two `playback_start`s for different tracks) collide and
+ * one gets silently dropped. In practice clients emit events serially so
+ * collisions are vanishingly rare; if we ever ship a bulk-action UI (e.g.
+ * "favorite all", batch import), the client must stagger timestamps or we
+ * widen the index. Surfaced during getPopularShows test setup — see the
+ * popular.test.ts comments and PLANS/home-discovery-rails.md.
  */
 function ensureUniqueEventIndex(db: Database.Database): void {
   const exists = db
@@ -821,12 +831,25 @@ export interface LiveListener {
  *   - between tracks: latest is an end within END window           → live
  *   - finished:       latest is an end past END window              → not live
  *
+ * `playback_end` with reason `app_backgrounded` is excluded from the
+ * latest-event picker: backgrounding the app does not stop audio
+ * (locked phone in pocket is the modal listening posture). Treating
+ * those as real ends dropped ~25% of finishes off Live within 2 min
+ * even though playback continued. The preceding `playback_start`
+ * remains the keepalive anchor.
+ *
  * Replaced the earlier single-window approach: a 45-min "unmatched
  * start" rule mis-classified between-tracks users as Recent, and a
  * 90-second soft window dropped mid-jam users out of Live.
  */
 const LIVE_START_WINDOW_MS = 45 * 60 * 1000;
 const LIVE_END_WINDOW_MS = 2 * 60 * 1000;
+
+/** Reasons on `playback_end` that do NOT actually stop audio — exclude
+ *  these from the "latest event" calculation so a backgrounded user
+ *  stays Live until their `playback_start` ages out of the 45-min
+ *  window. */
+const NON_TERMINAL_END_REASONS_SQL = `('app_backgrounded')`;
 
 export function getLiveListeners(): LiveListener[] {
   const db = getAnalyticsDb();
@@ -859,6 +882,10 @@ export function getLiveListeners(): LiveListener[] {
          WHERE event IN ('playback_start', 'playback_end')
            AND ts >= ?
            AND json_extract(props, '$.show_id') IS NOT NULL
+           AND NOT (
+             event = 'playback_end'
+             AND json_extract(props, '$.reason') IN ${NON_TERMINAL_END_REASONS_SQL}
+           )
        )
        SELECT
          l.iid,
@@ -1334,11 +1361,19 @@ export function getRecentListening(
          WHERE latest.event IN ('playback_start', 'playback_end')
            AND latest.iid = a.iid
            AND json_extract(latest.props, '$.show_id') = a.show_id
+           AND NOT (
+             latest.event = 'playback_end'
+             AND json_extract(latest.props, '$.reason') IN ${NON_TERMINAL_END_REASONS_SQL}
+           )
            AND latest.ts = (
              SELECT MAX(x.ts) FROM analytics_events x
              WHERE x.event IN ('playback_start', 'playback_end')
                AND x.iid = a.iid
                AND x.ts >= ?
+               AND NOT (
+                 x.event = 'playback_end'
+                 AND json_extract(x.props, '$.reason') IN ${NON_TERMINAL_END_REASONS_SQL}
+               )
            )
            AND (
              (latest.event = 'playback_start' AND latest.ts >= ?)
@@ -1382,6 +1417,161 @@ export function getRecentListening(
     session_count: r.session_count,
     ended: r.has_end === 1,
   }));
+}
+
+// ── Network error outcomes ────────────────────────────────────────────
+
+export type NetworkErrorOutcome =
+  | "recover_same_track"
+  | "skipped_to_next"
+  | "skipped_ahead"
+  | "jumped_back"
+  | "next_event_is_end"
+  | "no_followup";
+
+export interface NetworkErrorSummary {
+  /** Window inspected, in days. */
+  days: number;
+  /** Platform filter applied, or null for all platforms. */
+  platform: string | null;
+  /** Total network_error events in the window. */
+  total: number;
+  /** Count by outcome. */
+  outcomes: Array<{ outcome: NetworkErrorOutcome; count: number; avg_gap_s: number | null }>;
+  /** Most recent N errors with their classified outcome. */
+  recent: Array<{
+    ts: number;
+    iid: string;
+    platform: string;
+    app_version: string;
+    show_id: string | null;
+    recording_id: string | null;
+    track_index: number | null;
+    outcome: NetworkErrorOutcome;
+    /** Seconds until the next playback event for this iid+show, if any. */
+    gap_s: number | null;
+    next_track_index: number | null;
+  }>;
+}
+
+export function getNetworkErrorOutcomes(
+  days = 30,
+  platform: string | null = null,
+  recentLimit = 50,
+): NetworkErrorSummary {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+
+  // Each network_error end is classified by the next playback_start /
+  // playback_end for the same (iid, show_id) — same logic as the
+  // exploratory query that surfaced the 75%-skip pattern.
+  const classifySql = `
+    WITH ne AS (
+      SELECT id, iid, ts, platform, app_version,
+             json_extract(props, '$.show_id') AS show_id,
+             json_extract(props, '$.recording_id') AS recording_id,
+             CAST(json_extract(props, '$.track_index') AS INTEGER) AS track_index
+      FROM analytics_events
+      WHERE event = 'playback_end'
+        AND json_extract(props, '$.reason') = 'network_error'
+        AND ts >= ?
+        ${platform ? "AND platform = ?" : ""}
+    ),
+    classified AS (
+      SELECT
+        ne.id, ne.iid, ne.ts, ne.platform, ne.app_version,
+        ne.show_id, ne.recording_id, ne.track_index,
+        (SELECT n.event FROM analytics_events n
+           WHERE n.iid = ne.iid AND n.ts > ne.ts
+             AND n.event IN ('playback_start','playback_end')
+             AND json_extract(n.props, '$.show_id') = ne.show_id
+           ORDER BY n.ts LIMIT 1) AS next_event,
+        (SELECT CAST(json_extract(n.props, '$.track_index') AS INTEGER) FROM analytics_events n
+           WHERE n.iid = ne.iid AND n.ts > ne.ts
+             AND n.event IN ('playback_start','playback_end')
+             AND json_extract(n.props, '$.show_id') = ne.show_id
+           ORDER BY n.ts LIMIT 1) AS next_trk,
+        (SELECT (n.ts - ne.ts) / 1000.0 FROM analytics_events n
+           WHERE n.iid = ne.iid AND n.ts > ne.ts
+             AND n.event IN ('playback_start','playback_end')
+             AND json_extract(n.props, '$.show_id') = ne.show_id
+           ORDER BY n.ts LIMIT 1) AS gap_s
+      FROM ne
+    )
+    SELECT
+      id, iid, ts, platform, app_version, show_id, recording_id, track_index,
+      gap_s, next_trk,
+      CASE
+        WHEN next_event IS NULL THEN 'no_followup'
+        WHEN next_event = 'playback_end' THEN 'next_event_is_end'
+        WHEN next_event = 'playback_start' AND next_trk = track_index THEN 'recover_same_track'
+        WHEN next_event = 'playback_start' AND next_trk = track_index + 1 THEN 'skipped_to_next'
+        WHEN next_event = 'playback_start' AND next_trk > track_index + 1 THEN 'skipped_ahead'
+        WHEN next_event = 'playback_start' AND next_trk < track_index THEN 'jumped_back'
+        ELSE 'no_followup'
+      END AS outcome
+    FROM classified
+  `;
+
+  const params: Array<number | string> = [cutoff];
+  if (platform) params.push(platform);
+
+  const all = db.prepare(classifySql).all(...params) as Array<{
+    id: number;
+    iid: string;
+    ts: number;
+    platform: string;
+    app_version: string;
+    show_id: string | null;
+    recording_id: string | null;
+    track_index: number | null;
+    gap_s: number | null;
+    next_trk: number | null;
+    outcome: NetworkErrorOutcome;
+  }>;
+
+  const buckets = new Map<NetworkErrorOutcome, { count: number; gapSum: number; gapN: number }>();
+  for (const r of all) {
+    const b = buckets.get(r.outcome) ?? { count: 0, gapSum: 0, gapN: 0 };
+    b.count++;
+    if (r.gap_s !== null) {
+      b.gapSum += r.gap_s;
+      b.gapN++;
+    }
+    buckets.set(r.outcome, b);
+  }
+  const outcomes = Array.from(buckets.entries())
+    .map(([outcome, b]) => ({
+      outcome,
+      count: b.count,
+      avg_gap_s: b.gapN > 0 ? Math.round((b.gapSum / b.gapN) * 10) / 10 : null,
+    }))
+    .sort((a, b) => b.count - a.count);
+
+  const recent = all
+    .slice()
+    .sort((a, b) => b.ts - a.ts)
+    .slice(0, recentLimit)
+    .map((r) => ({
+      ts: r.ts,
+      iid: r.iid,
+      platform: r.platform,
+      app_version: r.app_version,
+      show_id: r.show_id,
+      recording_id: r.recording_id,
+      track_index: r.track_index,
+      outcome: r.outcome,
+      gap_s: r.gap_s,
+      next_track_index: r.next_trk,
+    }));
+
+  return {
+    days,
+    platform,
+    total: all.length,
+    outcomes,
+    recent,
+  };
 }
 
 export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
@@ -1951,6 +2141,253 @@ export function getTrending(
       month: fetchPlain("month"),
       all: fetchPlain("all"),
     },
+  };
+}
+
+// ── Popular shows (favorites-driven) ──────────────────────────────────
+
+export interface PopularShow {
+  show_id: string;
+  /** Distinct installs whose latest favorite action on this show is `add`
+   *  (i.e. currently favorited — adds minus subsequent removes). */
+  favorites: number;
+  /** All-time logical listens from show_listens_rollup. */
+  listens: number;
+  /**
+   * favorites / max(listens, 1). The differentiator from Trending: surfaces
+   * shows people *kept*, not shows people *played a lot*. A high ratio
+   * means a high fraction of people who heard it favorited it.
+   */
+  ratio: number;
+}
+
+export type PopularDecade = "60s" | "70s" | "80s" | "90s";
+
+export interface PopularDecadeBuckets {
+  "60s": PopularShow[];
+  "70s": PopularShow[];
+  "80s": PopularShow[];
+  "90s": PopularShow[];
+}
+
+export interface PopularResponse {
+  generated_at: string;
+  decades: PopularDecadeBuckets;
+}
+
+export interface PopularOptions {
+  /** Override Date.now() for deterministic tests. */
+  nowMs?: number;
+  /** Minimum distinct favoriters required to surface a show in the pool. */
+  minFavorites?: number;
+  /** Target sample size drawn from each decade's qualifying pool. */
+  perDecade?: number;
+  /** Rotation window in hours — the time bucket that seeds the shuffle. */
+  rotationHours?: number;
+}
+
+function envNum(name: string, fallback: number): number {
+  const raw = process.env[name];
+  if (!raw) return fallback;
+  const n = Number(raw);
+  return Number.isFinite(n) && n > 0 ? n : fallback;
+}
+
+// Server-tunable so we don't need an app release to retune the rail.
+// Floor stays at 1 in the early stage — current prod data has most shows
+// sitting at 1–2 favoriters, so floor=2 produces empty buckets. Raise via
+// env var once volume grows.
+const POPULAR_MIN_FAVORITES = envNum("POPULAR_MIN_FAVORITES", 1);
+/** Per-decade pool size returned to the client. The client picks 4
+ *  display shows from these pools and re-rolls on "Show more" without
+ *  another round trip, so we want a healthy pool but not the whole tail. */
+const POPULAR_PER_DECADE = envNum("POPULAR_PER_DECADE", 20);
+const POPULAR_ROTATION_HOURS = envNum("POPULAR_ROTATION_HOURS", 4);
+
+const DECADE_KEYS = ["60s", "70s", "80s", "90s"] as const;
+type DecadeKey = (typeof DECADE_KEYS)[number];
+
+function decadeOf(showId: string): DecadeKey | null {
+  // Two show_id formats in the wild:
+  //   - slug:   "1977-05-11-st-paul-civic-center-..." (prod canonical)
+  //   - legacy: "gd1977-05-11.sbd.miller..." (older / test fixtures)
+  // Pull the first 4-digit run regardless of any leading prefix.
+  const m = showId.match(/(\d{4})/);
+  if (!m) return null;
+  const year = parseInt(m[1]!, 10);
+  if (year >= 1960 && year < 1970) return "60s";
+  if (year >= 1970 && year < 1980) return "70s";
+  if (year >= 1980 && year < 1990) return "80s";
+  if (year >= 1990 && year < 2000) return "90s";
+  return null;
+}
+
+/** Sortable date key (`YYYY-MM-DD`) extracted from either show_id format. */
+function dateKey(showId: string): string {
+  const m = showId.match(/(\d{4}-\d{2}-\d{2})/);
+  return m ? m[1]! : showId;
+}
+
+// mulberry32 — small, fast, deterministic PRNG. Good enough for shuffle.
+function mulberry32(seed: number): () => number {
+  let s = seed | 0;
+  return function () {
+    s = (s + 0x6d2b79f5) | 0;
+    let t = s;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function seededShuffle<T>(arr: readonly T[], seed: number): T[] {
+  const rng = mulberry32(seed);
+  const out = arr.slice();
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    const tmp = out[i]!;
+    out[i] = out[j]!;
+    out[j] = tmp;
+  }
+  return out;
+}
+
+/** Hash the (bucket index, decade) pair into a 32-bit seed. */
+function decadeSeed(bucket: number, decade: string): number {
+  let h = (bucket * 0x01000193) | 0;
+  for (let i = 0; i < decade.length; i++) {
+    h = Math.imul(h ^ decade.charCodeAt(i), 0x01000193) | 0;
+  }
+  return h >>> 0;
+}
+
+/**
+ * "Popular" shows surfaced as four decade *pools* (60s/70s/80s/90s). Each
+ * pool is `perDecade` shows drawn via a uniform shuffle seeded by the
+ * current rotation window, so the underlying pool is stable for
+ * ~`rotationHours` and rotates on its own. The client picks the 4-show
+ * display set from these pools and re-rolls on "Show more" without
+ * another round trip — that's why the server returns pools, not a
+ * pre-picked display set.
+ *
+ * `target_type` filter:
+ *   - 'show' → this surface (Unit 2).
+ *   - 'recording_track' → reserved for the future "Best …" rail (Unit 3).
+ *   - NULL → legacy events emitted before target_type was added, which
+ *     also have no target_id. Unrecoverable; filtered out implicitly by
+ *     the IS NOT NULL on target_id.
+ */
+export function getPopularShows(options: PopularOptions = {}): PopularResponse {
+  const db = getAnalyticsDb();
+  const nowMs = options.nowMs ?? Date.now();
+  const minFavorites = options.minFavorites ?? POPULAR_MIN_FAVORITES;
+  const perDecade = options.perDecade ?? POPULAR_PER_DECADE;
+  const rotationHours = options.rotationHours ?? POPULAR_ROTATION_HOURS;
+
+  // Listens are computed inline (not from show_listens_rollup) because the
+  // rollup only retains the top-50 per window — favorited shows outside
+  // the top-50 listened set would otherwise read `listens = 0` and skew
+  // the ratio. The CTE mirrors rebuildShowListensRollup's logical-listen
+  // definition: count distinct "listen runs" per (iid, show_id), where a
+  // run is broken either by a different show or a gap > LISTEN_GAP_MS.
+  const pool = db
+    .prepare(
+      `WITH actions AS (
+         SELECT
+           iid,
+           json_extract(props, '$.target_id') AS show_id,
+           json_extract(props, '$.feature')   AS feature,
+           ts
+         FROM analytics_events
+         WHERE event = 'feature_use'
+           AND json_extract(props, '$.target_type') = 'show'
+           AND json_extract(props, '$.feature') IN ('add_favorite', 'remove_favorite')
+           AND json_extract(props, '$.target_id') IS NOT NULL
+       ),
+       latest AS (
+         SELECT iid, show_id, feature, ts
+         FROM actions a
+         WHERE a.ts = (
+           SELECT MAX(a2.ts) FROM actions a2
+           WHERE a2.iid = a.iid AND a2.show_id = a.show_id
+         )
+       ),
+       favs AS (
+         SELECT
+           show_id,
+           COUNT(DISTINCT iid) AS favorites
+         FROM latest
+         WHERE feature = 'add_favorite'
+         GROUP BY show_id
+         HAVING favorites >= ?
+       ),
+       plays AS (
+         SELECT iid,
+                json_extract(props, '$.show_id') AS show_id,
+                ts,
+                LAG(json_extract(props, '$.show_id')) OVER w AS prev_show,
+                LAG(ts)                              OVER w AS prev_ts
+         FROM analytics_events
+         WHERE event = 'playback_start'
+           AND json_extract(props, '$.show_id') IN (SELECT show_id FROM favs)
+         WINDOW w AS (PARTITION BY iid ORDER BY ts)
+       ),
+       listen_runs AS (
+         SELECT show_id,
+                CASE
+                  WHEN prev_show IS NULL
+                    OR prev_show != show_id
+                    OR (ts - prev_ts) > ?
+                  THEN 1 ELSE 0
+                END AS is_new
+         FROM plays
+       ),
+       show_listens AS (
+         SELECT show_id, SUM(is_new) AS listens
+         FROM listen_runs
+         GROUP BY show_id
+       )
+       SELECT
+         f.show_id,
+         f.favorites,
+         COALESCE(sl.listens, 0) AS listens,
+         CAST(f.favorites AS REAL) /
+           CASE WHEN COALESCE(sl.listens, 0) > 0 THEN sl.listens ELSE 1 END
+           AS ratio
+       FROM favs f
+       LEFT JOIN show_listens sl ON sl.show_id = f.show_id`,
+    )
+    .all(minFavorites, LISTEN_GAP_MS) as PopularShow[];
+
+  const byDecade: Record<DecadeKey, PopularShow[]> = {
+    "60s": [],
+    "70s": [],
+    "80s": [],
+    "90s": [],
+  };
+  for (const row of pool) {
+    const d = decadeOf(row.show_id);
+    if (d) byDecade[d].push(row);
+  }
+
+  const bucket = Math.floor(nowMs / (rotationHours * 3600 * 1000));
+  const buckets: PopularDecadeBuckets = {
+    "60s": [],
+    "70s": [],
+    "80s": [],
+    "90s": [],
+  };
+  for (const d of DECADE_KEYS) {
+    // Stable per-rotation shuffle, then take the per-decade pool. The
+    // client picks the 4-show display set from these pools and re-rolls
+    // on "Show more" without another round trip.
+    const shuffled = seededShuffle(byDecade[d], decadeSeed(bucket, d));
+    buckets[d] = shuffled.slice(0, perDecade);
+  }
+
+  return {
+    generated_at: new Date(nowMs).toISOString(),
+    decades: buckets,
   };
 }
 

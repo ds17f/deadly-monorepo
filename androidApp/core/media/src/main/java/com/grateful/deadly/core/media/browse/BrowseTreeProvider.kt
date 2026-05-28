@@ -8,8 +8,13 @@ import androidx.media3.common.MediaMetadata
 import com.grateful.deadly.core.api.collections.DeadCollectionsService
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
+import com.grateful.deadly.core.api.home.PopularDecade
+import com.grateful.deadly.core.api.home.PopularService
+import com.grateful.deadly.core.api.home.TrendingService
+import com.grateful.deadly.core.api.home.TrendingWindow
 import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.api.search.SearchService
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.DeadCollection
 import com.grateful.deadly.core.model.FavoriteTrack
@@ -31,7 +36,10 @@ class BrowseTreeProvider @Inject constructor(
     private val favoritesService: FavoritesService,
     private val reviewService: ReviewService,
     private val searchService: SearchService,
-    private val archiveService: ArchiveService
+    private val archiveService: ArchiveService,
+    private val trendingService: TrendingService,
+    private val popularService: PopularService,
+    private val appPreferences: AppPreferences,
 ) {
     companion object {
         private const val TAG = "BrowseTreeProvider"
@@ -44,6 +52,8 @@ class BrowseTreeProvider @Inject constructor(
         buildBrowsableItem(BrowseMediaId.RECENT, "Recent", "Recently played shows"),
         buildBrowsableItem(BrowseMediaId.LIBRARY, "Favorites", "Shows you've saved"),
         buildBrowsableItem(BrowseMediaId.TODAY, "TIGDH", "Today in Grateful Dead History"),
+        buildBrowsableItem(BrowseMediaId.TRENDING, "Trending", "What others are playing"),
+        buildBrowsableItem(BrowseMediaId.POPULAR, "Fan Favorites", "Shows people kept"),
         buildBrowsableItem(BrowseMediaId.YEARS, "Browse by Year", "1965\u20131995"),
         buildBrowsableItem(BrowseMediaId.TOP_RATED, "Top Rated", "Highest rated shows"),
     )
@@ -73,6 +83,21 @@ class BrowseTreeProvider @Inject constructor(
             }
             parentId == BrowseMediaId.TOP_RATED -> {
                 showRepository.getTopRatedShows(50).map(::buildShowItem)
+            }
+            parentId == BrowseMediaId.TRENDING -> {
+                // Trigger a refresh in case the StateFlow hasn't populated yet
+                // (e.g., AA connected before the service's auto-refresh tick).
+                // refresh() returns Result<Unit> — failures are logged inside.
+                trendingService.refresh()
+                val window = TrendingWindow.fromKey(appPreferences.homeTrendingWindow.value)
+                trendingService.trending.value.forWindow(window).map(::buildShowItem)
+            }
+            parentId == BrowseMediaId.POPULAR -> {
+                popularService.refresh()
+                val decade = PopularDecade.fromKey(appPreferences.homePopularDecade.value)
+                // Android Auto has no "Show more" affordance — surface the
+                // full pool rather than the 4-show home-rail teaser.
+                popularService.popular.value.allShows(decade).map(::buildShowItem)
             }
             parentId == BrowseMediaId.TODAY -> {
                 val cal = Calendar.getInstance()
@@ -124,6 +149,10 @@ class BrowseTreeProvider @Inject constructor(
             buildBrowsableItem(BrowseMediaId.LIBRARY_SONGS, "Songs", "Favorite songs")
         mediaId == BrowseMediaId.TOP_RATED ->
             buildBrowsableItem(BrowseMediaId.TOP_RATED, "Top Rated", "Highest rated shows")
+        mediaId == BrowseMediaId.TRENDING ->
+            buildBrowsableItem(BrowseMediaId.TRENDING, "Trending", "What others are playing")
+        mediaId == BrowseMediaId.POPULAR ->
+            buildBrowsableItem(BrowseMediaId.POPULAR, "Fan Favorites", "Shows people kept")
         mediaId == BrowseMediaId.TODAY ->
             buildBrowsableItem(BrowseMediaId.TODAY, "TIGDH", "Today in Grateful Dead History")
         mediaId == BrowseMediaId.COLLECTIONS ->

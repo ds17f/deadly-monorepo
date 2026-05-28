@@ -105,10 +105,12 @@ export function startTrendingSchedules(): void {
   const runRollup = (): void => {
     try {
       rebuildShowListensRollup();
-      // Bust both cache variants so the next request reflects the fresh rollup.
+      // Bust caches so the next request reflects the fresh rollup.
+      // Popular reads `listens` from the same rollup, so it gets busted too.
       const pub = getPublisher();
       pub.del(CACHE_KEY_DEFAULT).catch(() => {});
       pub.del(CACHE_KEY_WITH_ANNIVERSARIES).catch(() => {});
+      pub.del("popular:v1").catch(() => {});
     } catch (err) {
       console.error("Trending rollup error:", err);
     }

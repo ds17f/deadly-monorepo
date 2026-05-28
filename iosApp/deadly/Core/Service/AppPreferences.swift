@@ -24,6 +24,9 @@ final class AppPreferences {
     private static let homeRecentRowsKey = "home_recent_rows"
     private static let homeTrendingCardSizeKey = "home_trending_card_size"
     private static let homeTrendingIncludeAnniversariesKey = "home_trending_include_anniversaries"
+    private static let homePopularEnabledKey = "home_popular_enabled"
+    private static let homePopularCardSizeKey = "home_popular_card_size"
+    private static let homePopularDecadeKey = "home_popular_decade"
     private static let homeTodayCardSizeKey = "home_today_card_size"
     private static let homeCollectionsCardSizeKey = "home_collections_card_size"
 
@@ -135,6 +138,21 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(homeTrendingIncludeAnniversaries, forKey: Self.homeTrendingIncludeAnniversariesKey) }
     }
 
+    /// Show the "Fan Favorites" home rail. On by default.
+    var homePopularEnabled: Bool {
+        didSet { UserDefaults.standard.set(homePopularEnabled, forKey: Self.homePopularEnabledKey) }
+    }
+
+    /// Card size for the Fan Favorites carousel: "small" or "large".
+    var homePopularCardSize: String {
+        didSet { UserDefaults.standard.set(homePopularCardSize, forKey: Self.homePopularCardSizeKey) }
+    }
+
+    /// Which decade the Fan Favorites home rail shows: "all"/"60s"/"70s"/"80s"/"90s".
+    var homePopularDecade: String {
+        didSet { UserDefaults.standard.set(homePopularDecade, forKey: Self.homePopularDecadeKey) }
+    }
+
     /// Card size for the Today in History carousel: "small" or "large".
     var homeTodayCardSize: String {
         didSet { UserDefaults.standard.set(homeTodayCardSize, forKey: Self.homeTodayCardSizeKey) }
@@ -154,6 +172,9 @@ final class AppPreferences {
         homeTodayCardSize = "large"
         homeCollectionsCardSize = "large"
         homeTrendingIncludeAnniversaries = false
+        homePopularEnabled = true
+        homePopularCardSize = "small"
+        homePopularDecade = "all"
     }
 
     /// Persistent install ID (UUID). Generated once on first access, survives opt-out/opt-in cycles.
@@ -184,6 +205,9 @@ final class AppPreferences {
             Self.homeTodayCardSizeKey: "large",
             Self.homeCollectionsCardSizeKey: "large",
             Self.homeTrendingIncludeAnniversariesKey: false,
+            Self.homePopularEnabledKey: true,
+            Self.homePopularCardSizeKey: "small",
+            Self.homePopularDecadeKey: "all",
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
@@ -211,6 +235,11 @@ final class AppPreferences {
         homeTodayCardSize = UserDefaults.standard.string(forKey: Self.homeTodayCardSizeKey) ?? "large"
         homeCollectionsCardSize = UserDefaults.standard.string(forKey: Self.homeCollectionsCardSizeKey) ?? "large"
         homeTrendingIncludeAnniversaries = UserDefaults.standard.bool(forKey: Self.homeTrendingIncludeAnniversariesKey)
+        homePopularEnabled = UserDefaults.standard.object(forKey: Self.homePopularEnabledKey) == nil
+            ? true
+            : UserDefaults.standard.bool(forKey: Self.homePopularEnabledKey)
+        homePopularCardSize = UserDefaults.standard.string(forKey: Self.homePopularCardSizeKey) ?? "small"
+        homePopularDecade = UserDefaults.standard.string(forKey: Self.homePopularDecadeKey) ?? "all"
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)

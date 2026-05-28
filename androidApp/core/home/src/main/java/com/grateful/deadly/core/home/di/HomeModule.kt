@@ -1,8 +1,10 @@
 package com.grateful.deadly.core.home.di
 
 import com.grateful.deadly.core.api.home.HomeService
+import com.grateful.deadly.core.api.home.PopularService
 import com.grateful.deadly.core.api.home.TrendingService
 import com.grateful.deadly.core.home.HomeServiceImpl
+import com.grateful.deadly.core.home.PopularServiceImpl
 import com.grateful.deadly.core.home.TrendingServiceImpl
 import dagger.Binds
 import dagger.Module
@@ -34,4 +36,10 @@ abstract class HomeModule {
     abstract fun bindTrendingService(
         impl: TrendingServiceImpl
     ): TrendingService
+
+    @Binds
+    @Singleton
+    abstract fun bindPopularService(
+        impl: PopularServiceImpl
+    ): PopularService
 }

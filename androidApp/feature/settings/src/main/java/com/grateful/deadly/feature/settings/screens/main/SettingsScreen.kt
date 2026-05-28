@@ -43,6 +43,9 @@ fun SettingsScreen(
     val homeTrendingCardSize by viewModel.homeTrendingCardSize.collectAsState()
     val homeTodayCardSize by viewModel.homeTodayCardSize.collectAsState()
     val homeCollectionsCardSize by viewModel.homeCollectionsCardSize.collectAsState()
+    val homePopularEnabled by viewModel.homePopularEnabled.collectAsState()
+    val homePopularCardSize by viewModel.homePopularCardSize.collectAsState()
+    val homePopularDecade by viewModel.homePopularDecade.collectAsState()
     val authState by viewModel.authState.collectAsState()
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
@@ -209,6 +212,31 @@ fun SettingsScreen(
                 subtitle = "Size of cards in the Featured Collections carousel.",
                 current = homeCollectionsCardSize,
                 onSelected = { viewModel.setHomeCollectionsCardSize(it) }
+            )
+        }
+
+        item {
+            PreferenceToggleRow(
+                title = "Show Fan Favorites",
+                subtitle = "Shows other listeners kept — ranked by saved-vs-played ratio.",
+                checked = homePopularEnabled,
+                onCheckedChange = { viewModel.toggleHomePopularEnabled() }
+            )
+        }
+
+        item {
+            HomePopularDecadeRow(
+                currentKey = homePopularDecade,
+                onSelected = { viewModel.setHomePopularDecade(it) }
+            )
+        }
+
+        item {
+            HomeCardSizeRow(
+                title = "Fan Favorites card size",
+                subtitle = "Size of cards in the Fan Favorites carousel.",
+                current = homePopularCardSize,
+                onSelected = { viewModel.setHomePopularCardSize(it) }
             )
         }
 
@@ -676,6 +704,47 @@ private fun HomeCardSizeRow(
             options.forEachIndexed { index, (key, label) ->
                 SegmentedButton(
                     selected = current == key,
+                    onClick = { onSelected(key) },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index,
+                        count = options.size
+                    )
+                ) {
+                    Text(label)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun HomePopularDecadeRow(
+    currentKey: String,
+    onSelected: (String) -> Unit
+) {
+    val options = listOf(
+        "all" to "All",
+        "60s" to "60s",
+        "70s" to "70s",
+        "80s" to "80s",
+        "90s" to "90s",
+    )
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Fan Favorites decade", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "Default decade filter for the Fan Favorites rail. Tap the header to cycle.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            options.forEachIndexed { index, (key, label) ->
+                SegmentedButton(
+                    selected = currentKey == key,
                     onClick = { onSelected(key) },
                     shape = SegmentedButtonDefaults.itemShape(
                         index = index,

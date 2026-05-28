@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.home.HomeService
 import com.grateful.deadly.core.api.home.HomeContent
 import com.grateful.deadly.core.api.home.TrendingService
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -28,6 +29,7 @@ class HomeViewModel @Inject constructor(
     private val homeService: HomeService,
     private val trendingService: TrendingService,
     private val appPreferences: AppPreferences,
+    private val analyticsService: AnalyticsService,
 ) : ViewModel() {
 
     companion object {
@@ -100,6 +102,15 @@ class HomeViewModel @Inject constructor(
     /** Cycle the trending window forward (Day → Week → Month → All → Day). */
     fun cycleTrendingWindow() {
         homeService.cycleTrendingWindow()
+    }
+
+    /** Telemetry hook for the Fan Favorites "Show more" re-roll. */
+    fun trackPopularShowMore() {
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "popular_show_more",
+            "category" to "action",
+            "value" to appPreferences.homePopularDecade.value,
+        ))
     }
 
     /**

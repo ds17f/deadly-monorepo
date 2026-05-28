@@ -43,7 +43,8 @@ dependencies {
     implementation(project(":core:api:collections"))
     implementation(project(":core:api:favorites"))
     implementation(project(":core:api:search"))
-    
+    implementation(project(":core:api:home"))
+
     implementation("androidx.core:core-ktx:1.12.0")
     
     // Media3/ExoPlayer - Latest stable versions

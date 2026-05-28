@@ -14,6 +14,7 @@ import com.grateful.deadly.feature.home.screens.main.components.HorizontalCollec
 import com.grateful.deadly.feature.home.screens.main.components.HorizontalCollectionItem
 import com.grateful.deadly.feature.home.screens.main.components.CollectionItemType
 import com.grateful.deadly.feature.home.screens.main.components.RecentShowsGrid
+import com.grateful.deadly.feature.home.screens.main.components.FanFavoritesSection
 import com.grateful.deadly.feature.home.screens.main.components.TrendingNowSection
 
 /**
@@ -115,6 +116,24 @@ fun HomeScreen(
         } else {
             item { todayItem() }
             item { trendingItem() }
+        }
+
+        // Fan Favorites — sits below the Trending/Today pair. Hidden when
+        // the user has the rail off, or when no decade has any results
+        // (small install base, nothing has met the floor). The selected
+        // decade may be empty even when others aren't; FanFavoritesSection
+        // renders an empty hint in that case so the user can cycle back.
+        if (uiState.homeContent.popularEnabled && uiState.homeContent.popularContent.hasAnyContent) {
+            item {
+                FanFavoritesSection(
+                    popularContent = uiState.homeContent.popularContent,
+                    decade = uiState.homeContent.popularDecade,
+                    cardSize = uiState.homeContent.popularCardSize,
+                    onShowClick = { show -> onNavigateToShow(show.id) },
+                    onShowLongPress = { show -> detailShow = show },
+                    onShowMore = { viewModel.trackPopularShowMore() },
+                )
+            }
         }
 
         // Featured Collections Section

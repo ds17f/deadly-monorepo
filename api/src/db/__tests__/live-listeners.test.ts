@@ -113,6 +113,45 @@ describe("getLiveListeners — dual live boundary", () => {
     expect(live[0].show_id).toBe("show-B");
   });
 
+  it("app_backgrounded ends do not stop the live keepalive (phone in pocket)", () => {
+    // ~25% of playback_end events in prod are app_backgrounded — the
+    // user locked their phone but audio kept playing. Treating those
+    // as real ends dropped them off Live within 2 min; we now ignore
+    // them so the preceding playback_start remains the keepalive
+    // anchor under the 45-min START window.
+    const now = Date.now();
+    insertEvents([
+      ev("playback_start", "gina", "s1", "show-G", 0, now - 10 * 60_000),
+      ev("playback_end", "gina", "s1", "show-G", 0, now - 9 * 60_000, {
+        reason: "app_backgrounded",
+      }),
+    ]);
+
+    const live = getLiveListeners();
+    expect(live).toHaveLength(1);
+    expect(live[0].iid).toBe("gina");
+    expect(live[0].show_id).toBe("show-G");
+    // started_at should reflect the original start, not the bg end.
+    expect(live[0].started_at).toBe(now - 10 * 60_000);
+
+    // And the same user must NOT also appear in Recent.
+    const recent = getRecentListening(24);
+    expect(recent.find((r) => r.iid === "gina")).toBeUndefined();
+  });
+
+  it("backgrounded user falls off Live once their start ages past 45min", () => {
+    const now = Date.now();
+    insertEvents([
+      ev("playback_start", "harry", "s1", "show-H", 0, now - 50 * 60_000),
+      ev("playback_end", "harry", "s1", "show-H", 0, now - 49 * 60_000, {
+        reason: "app_backgrounded",
+      }),
+    ]);
+    expect(getLiveListeners()).toEqual([]);
+    const recent = getRecentListening(24);
+    expect(recent.find((r) => r.iid === "harry")).toBeDefined();
+  });
+
   it("at most one row per iid even with multiple unmatched starts", () => {
     const now = Date.now();
     insertEvents([

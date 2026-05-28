@@ -13,6 +13,7 @@ import SearchQuality from "./components/SearchQuality";
 import PlaysBySource from "./components/PlaysBySource";
 import ListeningNow from "./components/ListeningNow";
 import RecentListening from "./components/RecentListening";
+import NetworkErrorOutcomes from "./components/NetworkErrorOutcomes";
 import GrowthChart from "./components/GrowthChart";
 import FeatureAdoption from "./components/FeatureAdoption";
 import CollapsibleSection from "./components/CollapsibleSection";
@@ -358,6 +359,14 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
           onOpenInstall={openInstall}
           watchedOnly={watchedOnly}
         />
+      </CollapsibleSection>
+
+      {/* Network error recovery */}
+      <CollapsibleSection
+        title="Network error recovery"
+        forceOpen={forceOpen}
+      >
+        <NetworkErrorOutcomes showMap={showMap} onOpenInstall={openInstall} />
       </CollapsibleSection>
 
       {watchedOnly ? null : <>

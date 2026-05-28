@@ -17,6 +17,7 @@ import {
   getSearchQuality,
   getLiveListeners,
   getRecentListening,
+  getNetworkErrorOutcomes,
   getGrowthByPlatform,
   getTopShows,
   getWatchedInstalls,
@@ -740,6 +741,40 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       return {
         sessions: getRecentListening(clampedHours, clampedLimit),
       };
+    },
+  );
+
+  // GET /api/analytics/network-errors — outcome of each network_error end.
+  app.get(
+    "/api/analytics/network-errors",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Network error recovery outcomes (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            days: { type: "number", default: 30 },
+            platform: { type: "string" },
+            limit: { type: "number", default: 50 },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days, platform, limit } = request.query as {
+        days?: number;
+        platform?: string;
+        limit?: number;
+      };
+      const clampedDays = Math.min(Math.max(days ?? 30, 1), 90);
+      const clampedLimit = Math.min(Math.max(limit ?? 50, 1), 200);
+      const platformFilter =
+        platform === "ios" || platform === "android" || platform === "web"
+          ? platform
+          : null;
+      return getNetworkErrorOutcomes(clampedDays, platformFilter, clampedLimit);
     },
   );
 
