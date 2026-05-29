@@ -214,6 +214,9 @@ function initSchema(db: Database.Database): void {
   // user_settings) don't need tombstones because the row is replaced
   // wholesale. show_player_tags doesn't need them — tags travel with
   // their parent review.
+  //
+  // SQLite forbids non-constant defaults on ALTER TABLE ADD COLUMN, so
+  // updated_at columns are added with DEFAULT 0 then backfilled.
   const addColumnIfMissing = (table: string, column: string, ddl: string) => {
     const c = db!.prepare(`SELECT name FROM pragma_table_info('${table}')`).all() as { name: string }[];
     if (!c.some((r) => r.name === column)) {
@@ -221,13 +224,16 @@ function initSchema(db: Database.Database): void {
     }
   };
 
-  addColumnIfMissing("favorite_shows", "updated_at", "INTEGER NOT NULL DEFAULT (unixepoch())");
+  addColumnIfMissing("favorite_shows", "updated_at", "INTEGER NOT NULL DEFAULT 0");
   addColumnIfMissing("favorite_shows", "deleted_at", "INTEGER");
-  addColumnIfMissing("favorite_songs", "updated_at", "INTEGER NOT NULL DEFAULT (unixepoch())");
+  addColumnIfMissing("favorite_songs", "updated_at", "INTEGER NOT NULL DEFAULT 0");
   addColumnIfMissing("favorite_songs", "deleted_at", "INTEGER");
   addColumnIfMissing("show_reviews", "deleted_at", "INTEGER");
   addColumnIfMissing("recording_preferences", "deleted_at", "INTEGER");
   addColumnIfMissing("recent_shows", "deleted_at", "INTEGER");
+
+  db.exec(`UPDATE favorite_shows SET updated_at = unixepoch() WHERE updated_at = 0`);
+  db.exec(`UPDATE favorite_songs SET updated_at = unixepoch() WHERE updated_at = 0`);
 }
 
 export function createAppUser(authUserId: string, email: string, name: string | null, provider: string): string {
