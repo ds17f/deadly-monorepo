@@ -239,12 +239,19 @@ object DatabaseMigrations {
      */
     val MIGRATION_22_23 = object : Migration(22, 23) {
         override fun migrate(db: SupportSQLiteDatabase) {
-            // strftime returns seconds since epoch as TEXT, hence the CAST.
-            val nowSql = "(CAST(strftime('%s','now') AS INTEGER))"
-            db.execSQL("ALTER TABLE favorite_shows ADD COLUMN updatedAt INTEGER NOT NULL DEFAULT $nowSql")
+            // SQLite ALTER TABLE requires a *constant* default, so we can't
+            // use strftime('%s','now') directly. Two-step: add with default 0,
+            // then UPDATE existing rows to a real timestamp.
+            val now = "CAST(strftime('%s','now') AS INTEGER)"
+
+            db.execSQL("ALTER TABLE favorite_shows ADD COLUMN updatedAt INTEGER NOT NULL DEFAULT 0")
             db.execSQL("ALTER TABLE favorite_shows ADD COLUMN deletedAt INTEGER DEFAULT NULL")
-            db.execSQL("ALTER TABLE favorite_songs ADD COLUMN updatedAt INTEGER NOT NULL DEFAULT $nowSql")
+            db.execSQL("UPDATE favorite_shows SET updatedAt = $now WHERE updatedAt = 0")
+
+            db.execSQL("ALTER TABLE favorite_songs ADD COLUMN updatedAt INTEGER NOT NULL DEFAULT 0")
             db.execSQL("ALTER TABLE favorite_songs ADD COLUMN deletedAt INTEGER DEFAULT NULL")
+            db.execSQL("UPDATE favorite_songs SET updatedAt = $now WHERE updatedAt = 0")
+
             db.execSQL("ALTER TABLE show_reviews ADD COLUMN deletedAt INTEGER DEFAULT NULL")
             db.execSQL("ALTER TABLE recording_preferences ADD COLUMN deletedAt INTEGER DEFAULT NULL")
             db.execSQL("ALTER TABLE recent_shows ADD COLUMN deletedAt INTEGER DEFAULT NULL")

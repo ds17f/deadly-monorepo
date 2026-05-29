@@ -1,5 +1,6 @@
 package com.grateful.deadly.core.database.entities
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
@@ -54,6 +55,7 @@ data class FavoriteShowEntity(
     val tags: String? = null,              // Comma-separated user tags
 
     // Sync support (see PLANS/mobile-server-sync.md)
+    @ColumnInfo(defaultValue = "0")
     val updatedAt: Long = 0L,              // LWW comparator
     val deletedAt: Long? = null            // Tombstone — non-null = deleted
 )

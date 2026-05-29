@@ -134,6 +134,10 @@ struct AppDatabase: @unchecked Sendable {
     /// Additive sync support: per-row updated_at (LWW comparator) and
     /// deleted_at (tombstone). Matches the server contract in
     /// api/src/db/userdata.ts. Singletons don't need tombstones.
+    ///
+    /// SQLite ALTER TABLE requires a *constant* default, so we add the
+    /// updated_at columns with DEFAULT 0 then backfill existing rows
+    /// to the current timestamp in a follow-up UPDATE.
     private static func addSyncColumns(_ db: Database) throws {
         func addColumn(_ table: String, _ name: String, _ sql: String) throws {
             let cols = try Row.fetchAll(db, sql: "PRAGMA table_info(\(table))")
@@ -143,13 +147,17 @@ struct AppDatabase: @unchecked Sendable {
             }
         }
 
-        try addColumn("favorite_shows", "updated_at", "INTEGER NOT NULL DEFAULT (CAST(strftime('%s','now') AS INTEGER))")
+        try addColumn("favorite_shows", "updated_at", "INTEGER NOT NULL DEFAULT 0")
         try addColumn("favorite_shows", "deleted_at", "INTEGER")
-        try addColumn("favorite_songs", "updated_at", "INTEGER NOT NULL DEFAULT (CAST(strftime('%s','now') AS INTEGER))")
+        try addColumn("favorite_songs", "updated_at", "INTEGER NOT NULL DEFAULT 0")
         try addColumn("favorite_songs", "deleted_at", "INTEGER")
         try addColumn("show_reviews", "deleted_at", "INTEGER")
         try addColumn("recording_preferences", "deleted_at", "INTEGER")
         try addColumn("recent_shows", "deleted_at", "INTEGER")
+
+        let now = "CAST(strftime('%s','now') AS INTEGER)"
+        try db.execute(sql: "UPDATE favorite_shows SET updated_at = \(now) WHERE updated_at = 0")
+        try db.execute(sql: "UPDATE favorite_songs SET updated_at = \(now) WHERE updated_at = 0")
     }
 
     // MARK: - Schema
