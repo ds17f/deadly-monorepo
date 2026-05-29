@@ -19,5 +19,6 @@ data class RecordingPreferenceEntity(
     @PrimaryKey
     val showId: String,
     val recordingId: String,
-    val updatedAt: Long
+    val updatedAt: Long,
+    val deletedAt: Long? = null
 )

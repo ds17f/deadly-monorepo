@@ -27,5 +27,8 @@ data class FavoriteSongEntity(
     val trackTitle: String,
     val trackNumber: Int? = null,
     val recordingId: String? = null,
-    val createdAt: Long
+    val createdAt: Long,
+    // Sync support (see PLANS/mobile-server-sync.md)
+    val updatedAt: Long = 0L,
+    val deletedAt: Long? = null
 )

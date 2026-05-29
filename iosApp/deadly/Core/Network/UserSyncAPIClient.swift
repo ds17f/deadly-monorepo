@@ -37,13 +37,18 @@ struct SyncFavoriteShowV3: Codable {
     let recordingQuality: Int?
     let playingQuality: Int?
     let customRating: Double?
+    let updatedAt: Int64
+    let deletedAt: Int64?
 }
 
 struct SyncFavoriteTrackV3: Codable {
+    let id: Int64?
     let showId: String
     let trackTitle: String
     let trackNumber: Int?
     let recordingId: String?
+    let updatedAt: Int64
+    let deletedAt: Int64?
 }
 
 struct SyncReviewV3: Codable {
@@ -54,6 +59,8 @@ struct SyncReviewV3: Codable {
     let playingQuality: Int?
     let reviewedRecordingId: String?
     let playerTags: [SyncPlayerTagV3]?
+    let updatedAt: Int64
+    let deletedAt: Int64?
 }
 
 struct SyncPlayerTagV3: Codable {
@@ -66,6 +73,8 @@ struct SyncPlayerTagV3: Codable {
 struct SyncRecordingPrefV3: Codable {
     let showId: String
     let recordingId: String
+    let updatedAt: Int64
+    let deletedAt: Int64?
 }
 
 struct SyncSettingsV3: Codable {
@@ -77,6 +86,7 @@ struct SyncSettingsV3: Codable {
     let eqEnabled: Bool?
     let eqPreset: String?
     let eqBandLevels: String?
+    let updatedAt: Int64
 }
 
 struct SyncRecentShowV3: Codable {
@@ -84,6 +94,7 @@ struct SyncRecentShowV3: Codable {
     let lastPlayedAt: Int64
     let firstPlayedAt: Int64
     let totalPlayCount: Int
+    let deletedAt: Int64?
 }
 
 struct SyncPlaybackPositionV3: Codable {
@@ -94,6 +105,7 @@ struct SyncPlaybackPositionV3: Codable {
     let date: String?
     let venue: String?
     let location: String?
+    let updatedAt: Int64
 }
 
 // MARK: - Errors

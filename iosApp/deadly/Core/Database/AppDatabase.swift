@@ -125,7 +125,31 @@ struct AppDatabase: @unchecked Sendable {
                 WHERE bestSourceType IS NULL
             """)
         }
+        migrator.registerMigration("v11-sync-columns") { db in
+            try AppDatabase.addSyncColumns(db)
+        }
         try migrator.migrate(dbWriter)
+    }
+
+    /// Additive sync support: per-row updated_at (LWW comparator) and
+    /// deleted_at (tombstone). Matches the server contract in
+    /// api/src/db/userdata.ts. Singletons don't need tombstones.
+    private static func addSyncColumns(_ db: Database) throws {
+        func addColumn(_ table: String, _ name: String, _ sql: String) throws {
+            let cols = try Row.fetchAll(db, sql: "PRAGMA table_info(\(table))")
+            let has = cols.contains { ($0["name"] as? String) == name }
+            if !has {
+                try db.execute(sql: "ALTER TABLE \(table) ADD COLUMN \(name) \(sql)")
+            }
+        }
+
+        try addColumn("favorite_shows", "updated_at", "INTEGER NOT NULL DEFAULT (CAST(strftime('%s','now') AS INTEGER))")
+        try addColumn("favorite_shows", "deleted_at", "INTEGER")
+        try addColumn("favorite_songs", "updated_at", "INTEGER NOT NULL DEFAULT (CAST(strftime('%s','now') AS INTEGER))")
+        try addColumn("favorite_songs", "deleted_at", "INTEGER")
+        try addColumn("show_reviews", "deleted_at", "INTEGER")
+        try addColumn("recording_preferences", "deleted_at", "INTEGER")
+        try addColumn("recent_shows", "deleted_at", "INTEGER")
     }
 
     // MARK: - Schema

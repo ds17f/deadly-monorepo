@@ -40,14 +40,19 @@ data class SyncFavoriteShowV3(
     val recordingQuality: Int? = null,
     val playingQuality: Int? = null,
     val customRating: Double? = null,
+    val updatedAt: Long,
+    val deletedAt: Long? = null,
 )
 
 @Serializable
 data class SyncFavoriteTrackV3(
+    val id: Long? = null,
     val showId: String,
     val trackTitle: String,
     val trackNumber: Int? = null,
     val recordingId: String? = null,
+    val updatedAt: Long,
+    val deletedAt: Long? = null,
 )
 
 @Serializable
@@ -59,6 +64,8 @@ data class SyncReviewV3(
     val playingQuality: Int? = null,
     val reviewedRecordingId: String? = null,
     val playerTags: List<SyncPlayerTagV3>? = null,
+    val updatedAt: Long,
+    val deletedAt: Long? = null,
 )
 
 @Serializable
@@ -73,6 +80,8 @@ data class SyncPlayerTagV3(
 data class SyncRecordingPrefV3(
     val showId: String,
     val recordingId: String,
+    val updatedAt: Long,
+    val deletedAt: Long? = null,
 )
 
 @Serializable
@@ -85,6 +94,7 @@ data class SyncSettingsV3(
     val eqEnabled: Boolean? = null,
     val eqPreset: String? = null,
     val eqBandLevels: String? = null,
+    val updatedAt: Long,
 )
 
 @Serializable
@@ -93,6 +103,7 @@ data class SyncRecentShowV3(
     val lastPlayedAt: Long,
     val firstPlayedAt: Long,
     val totalPlayCount: Int,
+    val deletedAt: Long? = null,
 )
 
 @Serializable
@@ -104,4 +115,5 @@ data class SyncPlaybackPositionV3(
     val date: String? = null,
     val venue: String? = null,
     val location: String? = null,
+    val updatedAt: Long,
 )

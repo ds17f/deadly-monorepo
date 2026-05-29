@@ -231,6 +231,26 @@ object DatabaseMigrations {
         }
     }
 
+    /**
+     * v22 → v23: Sync support — per-row updated_at (LWW comparator) and
+     * deleted_at (tombstone). Matches the server contract in
+     * api/src/db/userdata.ts. Singletons don't need tombstones.
+     * See PLANS/mobile-server-sync.md.
+     */
+    val MIGRATION_22_23 = object : Migration(22, 23) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            // strftime returns seconds since epoch as TEXT, hence the CAST.
+            val nowSql = "(CAST(strftime('%s','now') AS INTEGER))"
+            db.execSQL("ALTER TABLE favorite_shows ADD COLUMN updatedAt INTEGER NOT NULL DEFAULT $nowSql")
+            db.execSQL("ALTER TABLE favorite_shows ADD COLUMN deletedAt INTEGER DEFAULT NULL")
+            db.execSQL("ALTER TABLE favorite_songs ADD COLUMN updatedAt INTEGER NOT NULL DEFAULT $nowSql")
+            db.execSQL("ALTER TABLE favorite_songs ADD COLUMN deletedAt INTEGER DEFAULT NULL")
+            db.execSQL("ALTER TABLE show_reviews ADD COLUMN deletedAt INTEGER DEFAULT NULL")
+            db.execSQL("ALTER TABLE recording_preferences ADD COLUMN deletedAt INTEGER DEFAULT NULL")
+            db.execSQL("ALTER TABLE recent_shows ADD COLUMN deletedAt INTEGER DEFAULT NULL")
+        }
+    }
+
     val MIGRATION_19_20 = object : Migration(19, 20) {
         override fun migrate(db: SupportSQLiteDatabase) {
             db.execSQL("""
