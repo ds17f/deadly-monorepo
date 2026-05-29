@@ -32,9 +32,15 @@ serializer to HTTP and add the inverse on Android."
 - **Last-write-wins by timestamp** for conflict resolution. Every V3
   record already carries `addedAt` / `updatedAt`; later timestamp wins on
   merge. No CRDT, no operational transform, no per-field merge.
-- **Dev/Settings toggle** gates everything. Default off. Flip to default
-  on once we trust the round-trip. Lets us ship to TestFlight/internal
-  without touching production users.
+- **Dev/Settings toggle** gates everything *in the final shipping
+  build*. During dev work, sync is unconditionally on — the toggle is
+  noise that slows down iteration. Toggle gets added at the end before
+  we cut a TestFlight/internal build (see new final work item).
+- **DB migrations must be additive / non-destructive.** Every schema
+  change here (adding `deleted_at` columns, sync-state columns) is a
+  pure addition. Never drop or rename columns; never write a migration
+  that destroys existing local user data. iOS users have years of
+  favorites in their local stores.
 - **iOS and Android in parallel**, same contract on both. iOS has a head
   start because the V3 serializer exists; Android starts from scratch.
 - **Local-first reads, API as sync target.** All user-data reads
@@ -78,14 +84,16 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
 
 ## Work breakdown
 
-### 1. Settings toggle + HTTP client scaffolding (iOS + Android)
-- iOS: `ServerSyncEnabled` UserDefaults key, surfaced in
-  `SettingsScreen.swift` under a "Developer" section.
-- Android: equivalent in DataStore + Settings UI.
+### 1. HTTP client scaffolding (iOS + Android)
 - Typed API client on each platform against `/api/user/*`. Reuse the
   existing auth session (whatever currently drives the Connect WS auth).
-- Smoke test: with toggle on, `GET /api/user/sync` returns 200 and the
-  app parses it without crashing. No merging yet.
+- iOS: new `UserDataAPIClient` alongside `Core/Network/APIClient.swift`,
+  reusing the existing Bearer-token plumbing.
+- Android: new `core/api/usersync` module + impl using the existing
+  `NetworkModule` and `AuthServiceImpl`.
+- Smoke test: signed in, `GET /api/user/sync` returns 200 and the app
+  parses it to `BackupV3` without crashing. No merging yet.
+- **Toggle is deferred** — sync is unconditionally on during dev work.
 
 ### 2. First-pull from `/api/user/sync` with LWW merge
 - On sign-in OR when the toggle flips on OR on app cold launch (rate-limited):
@@ -116,7 +124,14 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
   while playing, once on pause, once on track change. (Already matches
   the iOS reporting cadence in `PlayerProvider`.)
 
-### 5. LWW conflict policy doc + dev smoke test
+### 5a. Add the Settings toggle before shipping
+- `ServerSyncEnabled` preference on each platform, default off.
+- iOS: surface in `SettingsScreen.swift` → `DeveloperView`.
+- Android: surface in `feature/settings/screens/developer/DeveloperScreen.kt`.
+- All sync code paths from issues 1–4 gated on the flag. Flip default-on
+  once the round-trip is trusted in TestFlight/internal.
+
+### 5b. LWW conflict policy doc + dev smoke test
 - Short doc in `docs/` (or appended here) describing:
   - The merge rule per record kind (which timestamp is the comparator).
   - Behavior when timestamps tie (prefer remote — arbitrary but consistent).
