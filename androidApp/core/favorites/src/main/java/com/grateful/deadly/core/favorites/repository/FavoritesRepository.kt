@@ -1,6 +1,7 @@
 package com.grateful.deadly.core.favorites.repository
 
 import android.util.Log
+import com.grateful.deadly.core.api.usersync.FavoritesPushService
 import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
@@ -31,7 +32,8 @@ class FavoritesRepository @Inject constructor(
     @AppDatabase private val showReviewDao: ShowReviewDao,
     @AppDatabase private val recordingPreferenceDao: RecordingPreferenceDao,
     private val showRepository: ShowRepository,
-    private val mediaDownloadManager: MediaDownloadManager
+    private val mediaDownloadManager: MediaDownloadManager,
+    private val favoritesPushService: FavoritesPushService,
 ) {
 
     companion object {
@@ -93,14 +95,20 @@ class FavoritesRepository @Inject constructor(
                 return Result.failure(Exception("Show not found"))
             }
 
-            // Create favorite entity
+            // Create favorite entity. Sync support: stamp updatedAt; clearing
+            // deletedAt is implicit because OnConflictStrategy.REPLACE means we
+            // re-insert from scratch on re-favorite.
+            val now = System.currentTimeMillis()
             val favoriteEntity = FavoriteShowEntity(
                 showId = showId,
-                addedToFavoritesAt = System.currentTimeMillis(),
-                isPinned = false
+                addedToFavoritesAt = now,
+                isPinned = false,
+                updatedAt = now,
+                deletedAt = null,
             )
 
             favoritesDao.addToFavorites(favoriteEntity)
+            favoritesPushService.enqueueAndPush(showId)
             Log.d(TAG, "Successfully added show '$showId' to favorites")
             Result.success(Unit)
 
@@ -117,8 +125,10 @@ class FavoritesRepository @Inject constructor(
         Log.d(TAG, "removeShowFromFavorites('$showId')")
 
         return try {
-            favoritesDao.removeFromFavoritesById(showId)
-            Log.d(TAG, "Successfully removed show '$showId' from favorites")
+            // Soft-delete so sync can propagate the removal across devices.
+            favoritesDao.softDelete(showId, System.currentTimeMillis())
+            favoritesPushService.enqueueAndPush(showId)
+            Log.d(TAG, "Successfully soft-deleted show '$showId' from favorites")
             Result.success(Unit)
 
         } catch (e: Exception) {

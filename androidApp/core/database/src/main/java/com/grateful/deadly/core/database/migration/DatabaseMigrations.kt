@@ -237,6 +237,28 @@ object DatabaseMigrations {
      * api/src/db/userdata.ts. Singletons don't need tombstones.
      * See PLANS/mobile-server-sync.md.
      */
+    /**
+     * v23 → v24: sync_outbox table for issue 3 of PLANS/mobile-server-sync.md.
+     * One row per pending server push, UNIQUE(kind, refId) so re-enqueue collapses.
+     */
+    val MIGRATION_23_24 = object : Migration(23, 24) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("""
+                CREATE TABLE IF NOT EXISTS sync_outbox (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                    kind TEXT NOT NULL,
+                    refId TEXT NOT NULL,
+                    createdAt INTEGER NOT NULL,
+                    lastAttemptAt INTEGER,
+                    attemptCount INTEGER NOT NULL DEFAULT 0,
+                    lastError TEXT
+                )
+            """.trimIndent())
+            db.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS index_sync_outbox_kind_refId ON sync_outbox(kind, refId)")
+            db.execSQL("CREATE INDEX IF NOT EXISTS index_sync_outbox_kind ON sync_outbox(kind)")
+        }
+    }
+
     val MIGRATION_22_23 = object : Migration(22, 23) {
         override fun migrate(db: SupportSQLiteDatabase) {
             // SQLite ALTER TABLE requires a *constant* default, so we can't

@@ -141,6 +141,8 @@ fun DeveloperScreen(
 
         item { UserSyncPullRow(viewModel) }
 
+        item { FavoritesPushRow(viewModel) }
+
         item { UserSyncLog(viewModel) }
 
         item { HorizontalDivider() }
@@ -164,6 +166,16 @@ private fun UserSyncPullRow(viewModel: SettingsViewModel) {
     DevRow(
         title = if (inFlight) "Pulling…" else "Pull from server",
         onClick = { if (!inFlight) viewModel.pullUserSync() }
+    )
+}
+
+@Composable
+private fun FavoritesPushRow(viewModel: SettingsViewModel) {
+    val inFlight by viewModel.syncInFlight.collectAsState()
+    val pending by viewModel.favoritesPushPending.collectAsState()
+    DevRow(
+        title = if (inFlight) "Pushing…" else "Push pending favorites ($pending)",
+        onClick = { if (!inFlight) viewModel.pushPendingFavorites() }
     )
 }
 

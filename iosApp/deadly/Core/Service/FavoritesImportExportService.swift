@@ -156,13 +156,9 @@ struct FavoritesImportExportService {
                 showId: fav.showId,
                 addedToFavoritesAt: fav.addedAt,
                 isPinned: fav.isPinned,
-                notes: nil,
-                preferredRecordingId: nil,
-                downloadedRecordingId: nil,
-                downloadedFormat: nil,
-                customRating: nil,
                 lastAccessedAt: fav.lastAccessedAt,
-                tags: fav.tags.map { $0.joined(separator: ",") }
+                tags: fav.tags.map { $0.joined(separator: ",") },
+                updatedAt: now
             )
             try? favoritesDAO.add(record)
             favoritesImported += 1
@@ -281,13 +277,9 @@ struct FavoritesImportExportService {
                 showId: entry.showId,
                 addedToFavoritesAt: entry.addedToLibraryAt,
                 isPinned: entry.isPinned,
-                notes: nil,
-                preferredRecordingId: nil,
-                downloadedRecordingId: nil,
-                downloadedFormat: nil,
-                customRating: nil,
                 lastAccessedAt: entry.lastAccessedAt,
-                tags: entry.tags.map { $0.joined(separator: ",") }
+                tags: entry.tags.map { $0.joined(separator: ",") },
+                updatedAt: Int64(Date().timeIntervalSince1970 * 1000)
             )
             try? favoritesDAO.add(record)
 

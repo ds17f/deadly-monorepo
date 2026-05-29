@@ -128,7 +128,27 @@ struct AppDatabase: @unchecked Sendable {
         migrator.registerMigration("v11-sync-columns") { db in
             try AppDatabase.addSyncColumns(db)
         }
+        migrator.registerMigration("v12-sync-outbox") { db in
+            try AppDatabase.createSyncOutboxTable(db)
+        }
         try migrator.migrate(dbWriter)
+    }
+
+    /// Outbox of pending server pushes. One row per (kind, refId) — re-enqueue
+    /// is a no-op via the UNIQUE constraint. Flusher reads current local row
+    /// state at push time and decides PUT vs DELETE based on deleted_at.
+    private static func createSyncOutboxTable(_ db: Database) throws {
+        try db.create(table: "sync_outbox", ifNotExists: true) { t in
+            t.autoIncrementedPrimaryKey("id")
+            t.column("kind", .text).notNull()
+            t.column("refId", .text).notNull()
+            t.column("createdAt", .integer).notNull()
+            t.column("lastAttemptAt", .integer)
+            t.column("attemptCount", .integer).notNull().defaults(to: 0)
+            t.column("lastError", .text)
+            t.uniqueKey(["kind", "refId"])
+        }
+        try db.create(index: "idx_sync_outbox_kind", on: "sync_outbox", columns: ["kind"], ifNotExists: true)
     }
 
     /// Additive sync support: per-row updated_at (LWW comparator) and

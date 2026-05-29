@@ -167,8 +167,12 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
 
 ## Open questions
 
-(None blocking — tombstones and anon-to-authed migration resolved in
-"Decisions already made" above.)
+- **Favorite songs are misplaced on iOS `ReviewService`.** Conceptually
+  they belong on `FavoritesService` (alongside favorite shows) but
+  legacy migration paths bolted them onto `ReviewService`. Not blocking
+  — sync still works wired there — but when we land issue 3b
+  (granular push for songs), decide in-flight whether to extract them
+  to `FavoritesService` first or carry them on the smelly service.
 
 ## How to track progress
 

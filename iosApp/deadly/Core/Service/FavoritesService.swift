@@ -12,6 +12,8 @@ final class FavoritesServiceImpl {
     private let showRepository: any ShowRepository
     private let reviewService: ReviewService
     private let analyticsService: AnalyticsService?
+    /// Optional so tests / preview builds without auth still work.
+    var favoritesPushService: FavoritesPushService?
 
     private(set) var shows: [FavoriteShow] = []
     private(set) var songs: [FavoriteTrack] = []
@@ -42,15 +44,10 @@ final class FavoritesServiceImpl {
                 showId: showId,
                 addedToFavoritesAt: now,
                 isPinned: false,
-                notes: nil,
-                preferredRecordingId: nil,
-                downloadedRecordingId: nil,
-                downloadedFormat: nil,
-                customRating: nil,
-                lastAccessedAt: nil,
-                tags: nil
+                updatedAt: now,
+                deletedAt: nil
             )
-            try record.insert(db)
+            try record.insert(db, onConflict: .replace)
             try ShowRecord
                 .filter(Column("showId") == showId)
                 .updateAll(db,
@@ -58,6 +55,7 @@ final class FavoritesServiceImpl {
                     Column("favoritedAt").set(to: now)
                 )
         }
+        favoritesPushService?.enqueueAndPush(showId: showId)
         analyticsService?.track("feature_use", props: [
             "feature": "add_favorite",
             "category": "action",
@@ -67,8 +65,15 @@ final class FavoritesServiceImpl {
     }
 
     func removeFromFavorites(showId: String) throws {
+        let now = Int64(Date().timeIntervalSince1970 * 1000)
         try database.write { db in
-            try FavoriteShowRecord.deleteOne(db, key: showId)
+            // Soft-delete: row stays with deletedAt set so sync can propagate.
+            try FavoriteShowRecord
+                .filter(Column("showId") == showId)
+                .updateAll(db,
+                    Column("deletedAt").set(to: now),
+                    Column("updatedAt").set(to: now)
+                )
             try ShowRecord
                 .filter(Column("showId") == showId)
                 .updateAll(db,
@@ -76,6 +81,7 @@ final class FavoritesServiceImpl {
                     Column("favoritedAt").set(to: nil as Int64?)
                 )
         }
+        favoritesPushService?.enqueueAndPush(showId: showId)
         analyticsService?.track("feature_use", props: [
             "feature": "remove_favorite",
             "category": "action",

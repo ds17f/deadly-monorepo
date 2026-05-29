@@ -142,6 +142,28 @@ struct UserSyncAPIClient {
         return try JSONDecoder().decode(SyncBackupV3.self, from: data)
     }
 
+    func putFavoriteShow(_ show: SyncFavoriteShowV3) async throws {
+        let body = try JSONEncoder().encode(show)
+        let (data, response) = try await request(
+            method: "PUT",
+            path: "/api/user/favorites/shows/\(show.showId)",
+            body: body
+        )
+        try ensureOK(data: data, response: response)
+    }
+
+    func deleteFavoriteShow(showId: String) async throws {
+        let (data, response) = try await request(
+            method: "DELETE",
+            path: "/api/user/favorites/shows/\(showId)",
+            body: nil
+        )
+        // 404 is fine — server already lacks the row (e.g., previous attempt
+        // succeeded but we didn't get to record it).
+        if let http = response as? HTTPURLResponse, http.statusCode == 404 { return }
+        try ensureOK(data: data, response: response)
+    }
+
     // MARK: - Internals
 
     private func client() throws -> APIClient {
@@ -151,6 +173,19 @@ struct UserSyncAPIClient {
 
     private func get(path: String) async throws -> (Data, URLResponse) {
         try await client().get(path: path)
+    }
+
+    private func request(method: String, path: String, body: Data?) async throws -> (Data, URLResponse) {
+        guard let token = authService.token else { throw UserSyncError.notSignedIn }
+        let baseURL = appPreferences.apiBaseUrl
+        var req = URLRequest(url: URL(string: "\(baseURL)\(path)")!)
+        req.httpMethod = method
+        req.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        if body != nil {
+            req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            req.httpBody = body
+        }
+        return try await URLSession.shared.data(for: req)
     }
 
     private func ensureOK(data: Data, response: URLResponse) throws {

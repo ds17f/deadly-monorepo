@@ -32,6 +32,7 @@ final class AppContainer {
     let equalizerService: EqualizerService
     let authService: AuthService
     let userSyncAPIClient: UserSyncAPIClient
+    let favoritesPushService: FavoritesPushService
     let playbackRestorationService: PlaybackRestorationService
     let analyticsService: AnalyticsService
 
@@ -56,9 +57,10 @@ final class AppContainer {
             let analytics = AnalyticsService(appPreferences: prefs, apiKey: Secrets.analyticsApiKey)
             let auth = MainActor.assumeIsolated { AuthService(appPreferences: prefs, analyticsService: analytics) }
             authService = auth
-            userSyncAPIClient = MainActor.assumeIsolated {
+            let userSync = MainActor.assumeIsolated {
                 UserSyncAPIClient(appPreferences: prefs, authService: auth)
             }
+            userSyncAPIClient = userSync
             dataImportService = DataImportService(
                 gitHubClient: URLSessionGitHubReleasesClient(),
                 zipExtractor: ZipExtractor(),
@@ -91,7 +93,7 @@ final class AppContainer {
                 analyticsService: analytics
             )
             reviewService = revService
-            favoritesService = FavoritesServiceImpl(
+            let favSvc = FavoritesServiceImpl(
                 database: db,
                 favoritesDAO: FavoritesDAO(database: db),
                 showReviewDAO: ShowReviewDAO(database: db),
@@ -99,6 +101,17 @@ final class AppContainer {
                 reviewService: revService,
                 analyticsService: analytics
             )
+            favoritesService = favSvc
+            let pushSvc = MainActor.assumeIsolated {
+                FavoritesPushService(
+                    outbox: SyncOutboxDAO(database: db),
+                    favoritesDAO: FavoritesDAO(database: db),
+                    apiClient: userSync,
+                    authService: auth
+                )
+            }
+            favoritesPushService = pushSvc
+            MainActor.assumeIsolated { favSvc.favoritesPushService = pushSvc }
             favoritesImportExportService = FavoritesImportExportService(
                 favoritesDAO: FavoritesDAO(database: db),
                 showDAO: ShowDAO(database: db),

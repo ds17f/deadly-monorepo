@@ -20,6 +20,7 @@ import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
+import com.grateful.deadly.core.database.dao.SyncOutboxDao
 import com.grateful.deadly.core.database.repository.ShowRepositoryImpl
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import kotlinx.serialization.json.Json
@@ -99,6 +100,12 @@ object DatabaseModule {
     @AppDatabase
     fun provideRecordingPreferenceDao(database: DeadlyDatabase): RecordingPreferenceDao {
         return database.recordingPreferenceDao()
+    }
+
+    @Provides
+    @AppDatabase
+    fun provideSyncOutboxDao(database: DeadlyDatabase): SyncOutboxDao {
+        return database.syncOutboxDao()
     }
 
     // Services are automatically provided by @Singleton @Inject constructor:

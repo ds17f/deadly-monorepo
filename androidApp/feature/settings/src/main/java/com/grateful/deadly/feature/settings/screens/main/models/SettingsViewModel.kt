@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.auth.AuthState
+import com.grateful.deadly.core.api.usersync.FavoritesPushService
 import com.grateful.deadly.core.api.usersync.UserSyncService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
@@ -37,6 +38,7 @@ class SettingsViewModel @Inject constructor(
     private val appPreferences: AppPreferences,
     private val authService: AuthService,
     private val userSyncService: UserSyncService,
+    private val favoritesPushService: FavoritesPushService,
     private val analyticsService: AnalyticsService,
     private val appReviewManager: AppReviewManager,
     @ApplicationContext private val context: Context
@@ -323,6 +325,36 @@ class SettingsViewModel @Inject constructor(
 
     fun clearSyncLog() {
         _syncLog.value = emptyList()
+    }
+
+    private val _favoritesPushPending = MutableStateFlow(0)
+    val favoritesPushPending: StateFlow<Int> = _favoritesPushPending
+
+    init {
+        viewModelScope.launch {
+            _favoritesPushPending.value = favoritesPushService.pendingCount()
+        }
+    }
+
+    fun pushPendingFavorites() {
+        if (_syncInFlight.value) return
+        _syncInFlight.value = true
+        viewModelScope.launch {
+            val ts = SimpleDateFormat("HH:mm:ss", Locale.US).format(Date())
+            val results = favoritesPushService.flushPending()
+            val lines = buildList {
+                add("[$ts] Push: ${results.size} entries")
+                if (results.isEmpty()) add("  (outbox empty)")
+                for (r in results) {
+                    val status = if (r.success) "OK" else "FAIL"
+                    val tail = r.error?.let { " ($it)" } ?: ""
+                    add("  ${r.operation} ${r.refId} → $status$tail")
+                }
+            }
+            _syncLog.value = lines + _syncLog.value
+            _favoritesPushPending.value = favoritesPushService.pendingCount()
+            _syncInFlight.value = false
+        }
     }
 
     fun signInWithGoogle(activity: android.app.Activity, onError: (String) -> Unit) {

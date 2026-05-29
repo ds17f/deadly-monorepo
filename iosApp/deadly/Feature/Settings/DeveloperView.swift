@@ -106,6 +106,11 @@ struct DeveloperView: View {
                 }
                 .disabled(syncInFlight)
 
+                Button(syncInFlight ? "Pushing…" : "Push pending favorites (\(container.favoritesPushService.pendingCount()))") {
+                    pushPending()
+                }
+                .disabled(syncInFlight)
+
                 if !syncLog.isEmpty {
                     Button("Clear log") { syncLog.removeAll() }
                         .foregroundStyle(.secondary)
@@ -203,6 +208,29 @@ struct DeveloperView: View {
             } catch {
                 syncLog.insert("[\(timestamp())] FAILED: \(error.localizedDescription)", at: 0)
             }
+            syncInFlight = false
+        }
+    }
+
+    private func pushPending() {
+        guard !syncInFlight else { return }
+        syncInFlight = true
+        let svc = container.favoritesPushService
+        Task {
+            let ts = timestamp()
+            let results = await svc.flushPending()
+            var lines: [String] = ["[\(ts)] Push: \(results.count) entries"]
+            if results.isEmpty {
+                lines.append("  (outbox empty)")
+            } else {
+                for r in results {
+                    let status = r.success ? "OK" : "FAIL"
+                    var line = "  \(r.operation) \(r.refId) → \(status)"
+                    if let err = r.error { line += " (\(err))" }
+                    lines.append(line)
+                }
+            }
+            syncLog.insert(contentsOf: lines, at: 0)
             syncInFlight = false
         }
     }
