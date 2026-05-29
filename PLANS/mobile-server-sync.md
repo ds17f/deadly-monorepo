@@ -84,6 +84,14 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
 
 ## Work breakdown
 
+> **Order note**: After issue 1 landed, we re-ordered the rest. Issue 2
+> (bulk pull + LWW merge) now comes *last* because building the
+> granular push (issues 3+4) first means LWW has both directions
+> available the moment merge lands. New issue 1.5 adds the additive
+> soft-delete schema migration that issues 3/4 depend on. The toggle
+> was dropped — there's no automatic behavior to gate; dev buttons are
+> the explicit triggers.
+
 ### 1. HTTP client scaffolding (iOS + Android)
 - Typed API client on each platform against `/api/user/*`. Reuse the
   existing auth session (whatever currently drives the Connect WS auth).
@@ -95,7 +103,19 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
   parses it to `BackupV3` without crashing. No merging yet.
 - **Toggle is deferred** — sync is unconditionally on during dev work.
 
-### 2. First-pull from `/api/user/sync` with LWW merge
+### 1.5. Additive soft-delete schema migration (iOS + Android)
+- Add `deleted_at` (and any missing `updated_at`) columns to local
+  favorites / favorite-songs / reviews / recents / playback-position /
+  recording-preference tables. Pure additive, never destroys data.
+- Update all read paths to filter `WHERE deleted_at IS NULL`.
+- Switch delete code paths to soft-delete (set `deleted_at`).
+- Why now: issue 3 (granular push) needs to know "what was deleted
+  recently" to fire `DELETE /api/user/favorites/shows/:id`. Without
+  tombstones, deletes are invisible to the push queue.
+- Hard-delete locally after server confirms propagation or after a
+  ~30-day TTL — not implemented until merge lands and we have ack.
+
+### 2. First-pull from `/api/user/sync` with LWW merge (last)
 - On sign-in OR when the toggle flips on OR on app cold launch (rate-limited):
   - `GET /api/user/sync` → `BackupV3` blob.
   - For each record kind, merge into local store: keep whichever side has
@@ -124,14 +144,7 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
   while playing, once on pause, once on track change. (Already matches
   the iOS reporting cadence in `PlayerProvider`.)
 
-### 5a. Add the Settings toggle before shipping
-- `ServerSyncEnabled` preference on each platform, default off.
-- iOS: surface in `SettingsScreen.swift` → `DeveloperView`.
-- Android: surface in `feature/settings/screens/developer/DeveloperScreen.kt`.
-- All sync code paths from issues 1–4 gated on the flag. Flip default-on
-  once the round-trip is trusted in TestFlight/internal.
-
-### 5b. LWW conflict policy doc + dev smoke test
+### 5. LWW conflict policy doc + dev smoke test
 - Short doc in `docs/` (or appended here) describing:
   - The merge rule per record kind (which timestamp is the comparator).
   - Behavior when timestamps tie (prefer remote — arbitrary but consistent).

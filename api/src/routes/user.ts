@@ -47,13 +47,15 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
       schema: { tags: ["user"], summary: "Upsert favorite show" },
       preHandler: requireAuth,
     }, async (request, reply) => {
+      const now = Math.floor(Date.now() / 1000);
+      const body = request.body as Partial<FavoriteShowV3>;
       const show: FavoriteShowV3 = {
+        ...body,
         showId: request.params.showId,
-        addedAt: (request.body as FavoriteShowV3).addedAt ?? Math.floor(Date.now() / 1000),
-        isPinned: (request.body as FavoriteShowV3).isPinned ?? false,
-        ...(request.body as Partial<FavoriteShowV3>),
+        addedAt: body.addedAt ?? now,
+        isPinned: body.isPinned ?? false,
+        updatedAt: body.updatedAt ?? now,
       };
-      show.showId = request.params.showId;
       upsertFavoriteShow(request.user!.id, show);
       return reply.code(200).send({ ok: true });
     });

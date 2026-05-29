@@ -68,6 +68,7 @@ export function unregisterDevice(userId: string, deviceId: string): void {
       date: state.date,
       venue: state.venue,
       location: state.location,
+      updatedAt: Math.floor(Date.now() / 1000),
     });
 
     broadcastUserState(userId, state);

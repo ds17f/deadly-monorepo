@@ -67,6 +67,8 @@ function initSchema(db: Database.Database): void {
       custom_rating REAL,
       last_accessed_at INTEGER,
       tags TEXT,
+      updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      deleted_at INTEGER,
       PRIMARY KEY (user_id, show_id)
     );
 
@@ -77,7 +79,9 @@ function initSchema(db: Database.Database): void {
       track_title TEXT NOT NULL,
       track_number INTEGER,
       recording_id TEXT,
-      created_at INTEGER NOT NULL DEFAULT (unixepoch())
+      created_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      deleted_at INTEGER
     );
 
     CREATE TABLE IF NOT EXISTS show_reviews (
@@ -90,6 +94,7 @@ function initSchema(db: Database.Database): void {
       reviewed_recording_id TEXT,
       created_at INTEGER NOT NULL DEFAULT (unixepoch()),
       updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      deleted_at INTEGER,
       PRIMARY KEY (user_id, show_id)
     );
 
@@ -109,6 +114,7 @@ function initSchema(db: Database.Database): void {
       show_id TEXT NOT NULL,
       recording_id TEXT NOT NULL,
       updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      deleted_at INTEGER,
       PRIMARY KEY (user_id, show_id)
     );
 
@@ -118,6 +124,7 @@ function initSchema(db: Database.Database): void {
       last_played_at INTEGER NOT NULL,
       first_played_at INTEGER NOT NULL,
       total_play_count INTEGER NOT NULL DEFAULT 1,
+      deleted_at INTEGER,
       PRIMARY KEY (user_id, show_id)
     );
 
@@ -200,6 +207,27 @@ function initSchema(db: Database.Database): void {
   if (!colNames.has("location")) {
     db.exec(`ALTER TABLE playback_position ADD COLUMN location TEXT`);
   }
+
+  // ── Sync support: per-row updated_at and deleted_at (tombstones) ────
+  // Each user-data table needs an LWW comparator and a way to communicate
+  // deletions across devices. Singleton tables (playback_position,
+  // user_settings) don't need tombstones because the row is replaced
+  // wholesale. show_player_tags doesn't need them — tags travel with
+  // their parent review.
+  const addColumnIfMissing = (table: string, column: string, ddl: string) => {
+    const c = db!.prepare(`SELECT name FROM pragma_table_info('${table}')`).all() as { name: string }[];
+    if (!c.some((r) => r.name === column)) {
+      db!.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${ddl}`);
+    }
+  };
+
+  addColumnIfMissing("favorite_shows", "updated_at", "INTEGER NOT NULL DEFAULT (unixepoch())");
+  addColumnIfMissing("favorite_shows", "deleted_at", "INTEGER");
+  addColumnIfMissing("favorite_songs", "updated_at", "INTEGER NOT NULL DEFAULT (unixepoch())");
+  addColumnIfMissing("favorite_songs", "deleted_at", "INTEGER");
+  addColumnIfMissing("show_reviews", "deleted_at", "INTEGER");
+  addColumnIfMissing("recording_preferences", "deleted_at", "INTEGER");
+  addColumnIfMissing("recent_shows", "deleted_at", "INTEGER");
 }
 
 export function createAppUser(authUserId: string, email: string, name: string | null, provider: string): string {
