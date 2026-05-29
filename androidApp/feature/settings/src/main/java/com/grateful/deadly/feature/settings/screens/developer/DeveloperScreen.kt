@@ -132,6 +132,20 @@ fun DeveloperScreen(
         item { HorizontalDivider() }
 
         item {
+            Text(
+                text = "User Sync",
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+            )
+        }
+
+        item { UserSyncPullRow(viewModel) }
+
+        item { UserSyncLog(viewModel) }
+
+        item { HorizontalDivider() }
+
+        item {
             DevRow(
                 title = "Hide developer settings",
                 titleColor = MaterialTheme.colorScheme.error,
@@ -139,6 +153,31 @@ fun DeveloperScreen(
                     viewModel.lockDeveloperMode()
                     onNavigateBack()
                 }
+            )
+        }
+    }
+}
+
+@Composable
+private fun UserSyncPullRow(viewModel: SettingsViewModel) {
+    val inFlight by viewModel.syncInFlight.collectAsState()
+    DevRow(
+        title = if (inFlight) "Pulling…" else "Pull from server",
+        onClick = { if (!inFlight) viewModel.pullUserSync() }
+    )
+}
+
+@Composable
+private fun UserSyncLog(viewModel: SettingsViewModel) {
+    val lines by viewModel.syncLog.collectAsState()
+    if (lines.isEmpty()) return
+    Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)) {
+        TextButton(onClick = { viewModel.clearSyncLog() }) { Text("Clear log") }
+        lines.forEach { line ->
+            Text(
+                text = line,
+                style = MaterialTheme.typography.bodySmall,
+                fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
             )
         }
     }

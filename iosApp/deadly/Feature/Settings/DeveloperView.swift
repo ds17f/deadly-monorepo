@@ -13,6 +13,8 @@ struct DeveloperView: View {
     @State private var flushSuccess = false
     @State private var flushCount = 0
     @State private var flushError: String?
+    @State private var syncInFlight = false
+    @State private var syncLog: [String] = []
 
     var body: some View {
         List {
@@ -97,6 +99,24 @@ struct DeveloperView: View {
             } footer: {
                 Text("Advanced tools for debugging and data recovery.")
             }
+
+            Section("User Sync") {
+                Button(syncInFlight ? "Pulling…" : "Pull from server") {
+                    pullFromServer()
+                }
+                .disabled(syncInFlight)
+
+                if !syncLog.isEmpty {
+                    Button("Clear log") { syncLog.removeAll() }
+                        .foregroundStyle(.secondary)
+
+                    ForEach(Array(syncLog.enumerated()), id: \.offset) { _, line in
+                        Text(line)
+                            .font(.system(.caption, design: .monospaced))
+                            .textSelection(.enabled)
+                    }
+                }
+            }
         }
         .navigationTitle("Developer")
         .navigationBarTitleDisplayMode(.inline)
@@ -157,6 +177,40 @@ struct DeveloperView: View {
                 }
             }
         }
+    }
+
+    private func pullFromServer() {
+        guard !syncInFlight else { return }
+        syncInFlight = true
+        let client = container.userSyncAPIClient
+        Task {
+            let start = Date()
+            do {
+                let backup = try await client.pullFullBackup()
+                let elapsedMs = Int(Date().timeIntervalSince(start) * 1000)
+                let lines: [String] = [
+                    "[\(timestamp())] GET /api/user/sync OK in \(elapsedMs)ms",
+                    "  version=\(backup.version) app=\(backup.app)",
+                    "  favorites.shows=\(backup.favorites.shows.count)",
+                    "  favorites.tracks=\(backup.favorites.tracks.count)",
+                    "  reviews=\(backup.reviews.count)",
+                    "  recordingPreferences=\(backup.recordingPreferences.count)",
+                    "  recentShows=\(backup.recentShows?.count ?? 0)",
+                    "  playbackPosition=\(backup.playbackPosition == nil ? "none" : "present")",
+                    "  settings=\(backup.settings == nil ? "none" : "present")",
+                ]
+                syncLog.insert(contentsOf: lines, at: 0)
+            } catch {
+                syncLog.insert("[\(timestamp())] FAILED: \(error.localizedDescription)", at: 0)
+            }
+            syncInFlight = false
+        }
+    }
+
+    private func timestamp() -> String {
+        let f = DateFormatter()
+        f.dateFormat = "HH:mm:ss"
+        return f.string(from: Date())
     }
 
     private func clearAllCaches() -> Bool {

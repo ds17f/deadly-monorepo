@@ -31,6 +31,7 @@ final class AppContainer {
     let downloadService: DownloadServiceImpl
     let equalizerService: EqualizerService
     let authService: AuthService
+    let userSyncAPIClient: UserSyncAPIClient
     let playbackRestorationService: PlaybackRestorationService
     let analyticsService: AnalyticsService
 
@@ -53,7 +54,11 @@ final class AppContainer {
             let prefs = AppPreferences()
             appPreferences = prefs
             let analytics = AnalyticsService(appPreferences: prefs, apiKey: Secrets.analyticsApiKey)
-            authService = MainActor.assumeIsolated { AuthService(appPreferences: prefs, analyticsService: analytics) }
+            let auth = MainActor.assumeIsolated { AuthService(appPreferences: prefs, analyticsService: analytics) }
+            authService = auth
+            userSyncAPIClient = MainActor.assumeIsolated {
+                UserSyncAPIClient(appPreferences: prefs, authService: auth)
+            }
             dataImportService = DataImportService(
                 gitHubClient: URLSessionGitHubReleasesClient(),
                 zipExtractor: ZipExtractor(),
