@@ -24,6 +24,24 @@ function saveToStorage(data: UserDataBackupV3): void {
   } catch { /* storage full — ignore */ }
 }
 
+// /api/user/sync returns tombstones (deletedAt set) so mobile can apply remote
+// deletes via its outbox. Web has no outbox and just calls DELETE directly, so
+// it strips tombstones on ingest and treats sync as a live snapshot.
+function stripTombstones(remote: UserDataBackupV3): UserDataBackupV3 {
+  const live = <T,>(rows: T[] | undefined): T[] =>
+    (rows ?? []).filter((r) => (r as { deletedAt?: number | null }).deletedAt == null);
+  return {
+    ...remote,
+    favorites: {
+      shows: live(remote.favorites?.shows),
+      tracks: live(remote.favorites?.tracks),
+    },
+    reviews: live(remote.reviews),
+    recordingPreferences: live(remote.recordingPreferences),
+    recentShows: remote.recentShows ? live(remote.recentShows) : remote.recentShows,
+  };
+}
+
 function emptyBackup(): UserDataBackupV3 {
   return {
     version: 3,
@@ -58,8 +76,9 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
     const refetch = (reason: string) => {
       console.log("[UserData] Fetching sync for user", user.id, `(${reason})`);
       fetchUserSync()
-        .then((remote) => {
+        .then((raw) => {
           if (cancelled) return;
+          const remote = stripTombstones(raw);
           console.log("[UserData] Sync loaded:", remote.favorites.shows.length, "favorites,", remote.reviews.length, "reviews");
           setData(remote);
           saveToStorage(remote);
