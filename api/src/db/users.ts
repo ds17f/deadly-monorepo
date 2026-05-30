@@ -259,6 +259,13 @@ export function getAppUserById(accountId: string): { id: string; email: string; 
   ).get(accountId) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
 }
 
+export function getAppUserByEmail(email: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
+  const db = getUsersDb();
+  return db.prepare(
+    `SELECT id, email, name, is_admin FROM accounts WHERE email = ?`
+  ).get(email) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
+}
+
 export function closeUsersDb(): void {
   if (db) {
     db.close();
