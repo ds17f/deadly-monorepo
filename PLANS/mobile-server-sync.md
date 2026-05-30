@@ -167,12 +167,19 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
 
 ## Open questions
 
-- **Favorite songs are misplaced on iOS `ReviewService`.** Conceptually
-  they belong on `FavoritesService` (alongside favorite shows) but
-  legacy migration paths bolted them onto `ReviewService`. Not blocking
-  — sync still works wired there — but when we land issue 3b
-  (granular push for songs), decide in-flight whether to extract them
-  to `FavoritesService` first or carry them on the smelly service.
+- **Favorite songs are misplaced on `ReviewService` (both platforms).**
+  Conceptually they belong on `FavoritesService` (alongside favorite
+  shows) but legacy migration paths bolted them onto `ReviewService` —
+  this exists on iOS *and* Android (`ReviewService.kt` /
+  `ReviewServiceImpl.kt` own song favorites on Android too). Decision
+  for issue 3b: **carry them on the smelly service.** Both platforms
+  have a single `toggleFavoriteSong` chokepoint that's a clean hook for
+  outbox enqueue, and extracting on both platforms is its own refactor
+  with call-site churn (`FavoritesViewModel`, `PlayerViewModel`,
+  `PlaylistViewModel`, `FavoriteSongItems`, browse/media services on
+  Android; equivalents on iOS). **TODO: file a Linear tech-debt ticket
+  to extract favorite-songs to `FavoritesService` on both platforms,
+  done after this branch merges.**
 
 ## How to track progress
 
