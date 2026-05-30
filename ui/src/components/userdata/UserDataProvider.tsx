@@ -53,16 +53,38 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
       console.log("[UserData] No user.id, skipping API sync");
       return;
     }
-    console.log("[UserData] Fetching sync for user", user.id);
-    fetchUserSync()
-      .then((remote) => {
-        console.log("[UserData] Sync loaded:", remote.favorites.shows.length, "favorites,", remote.reviews.length, "reviews");
-        setData(remote);
-        saveToStorage(remote);
-      })
-      .catch((err) => {
-        console.error("[UserData] Sync fetch failed:", err);
-      });
+
+    let cancelled = false;
+    const refetch = (reason: string) => {
+      console.log("[UserData] Fetching sync for user", user.id, `(${reason})`);
+      fetchUserSync()
+        .then((remote) => {
+          if (cancelled) return;
+          console.log("[UserData] Sync loaded:", remote.favorites.shows.length, "favorites,", remote.reviews.length, "reviews");
+          setData(remote);
+          saveToStorage(remote);
+        })
+        .catch((err) => {
+          console.error("[UserData] Sync fetch failed:", err);
+        });
+    };
+
+    refetch("mount");
+
+    // Cheap near-real-time: pick up changes made on other devices when the
+    // user returns to this tab. True push (WS) is the planned upgrade — see
+    // memory note `project-userdata-realtime-deferred`.
+    const onVisible = () => {
+      if (document.visibilityState === "visible") refetch("visible");
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    window.addEventListener("focus", onVisible);
+
+    return () => {
+      cancelled = true;
+      document.removeEventListener("visibilitychange", onVisible);
+      window.removeEventListener("focus", onVisible);
+    };
   }, [user?.id]);
 
   const updateData = useCallback((updater: (prev: UserDataBackupV3) => UserDataBackupV3) => {
