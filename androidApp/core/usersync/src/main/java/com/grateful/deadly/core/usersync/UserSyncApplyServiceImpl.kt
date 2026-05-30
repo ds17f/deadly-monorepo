@@ -5,10 +5,14 @@ import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.api.usersync.ApplyResult
 import com.grateful.deadly.core.api.usersync.SyncFavoriteShowV3
+import com.grateful.deadly.core.api.usersync.SyncFavoriteTrackV3
 import com.grateful.deadly.core.api.usersync.UserSyncApplyService
 import com.grateful.deadly.core.api.usersync.UserSyncService
+import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.FavoritesDao
+import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.entities.FavoriteShowEntity
+import com.grateful.deadly.core.database.entities.FavoriteSongEntity
 import com.grateful.deadly.core.model.AppDatabase
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -19,6 +23,8 @@ import javax.inject.Singleton
 class UserSyncApplyServiceImpl @Inject constructor(
     private val userSyncService: UserSyncService,
     @AppDatabase private val favoritesDao: FavoritesDao,
+    @AppDatabase private val favoriteSongDao: FavoriteSongDao,
+    @AppDatabase private val showDao: ShowDao,
     private val authService: AuthService,
 ) : UserSyncApplyService {
 
@@ -26,7 +32,6 @@ class UserSyncApplyServiceImpl @Inject constructor(
         private const val TAG = "UserSyncApply"
     }
 
-    /** Serialize concurrent applies so two triggers (e.g. foreground + post-push) don't race. */
     private val applyLock = Mutex()
 
     override suspend fun pullAndApply(): Result<ApplyResult> {
@@ -35,7 +40,14 @@ class UserSyncApplyServiceImpl @Inject constructor(
         }
         return applyLock.withLock {
             userSyncService.pullFullBackup().mapCatching { backup ->
-                applyFavoriteShows(backup.favorites.shows)
+                val shows = applyFavoriteShows(backup.favorites.shows)
+                val songs = applyFavoriteSongs(backup.favorites.tracks)
+                shows.copy(
+                    favoriteSongsScanned = songs.favoriteSongsScanned,
+                    favoriteSongsApplied = songs.favoriteSongsApplied,
+                    favoriteSongsSkippedLocalNewer = songs.favoriteSongsSkippedLocalNewer,
+                    favoriteSongsSkippedMissingShow = songs.favoriteSongsSkippedMissingShow,
+                )
             }
         }
     }
@@ -53,8 +65,6 @@ class UserSyncApplyServiceImpl @Inject constructor(
                 continue
             }
 
-            // LWW: keep local if its updatedAt is newer or equal. Server timestamps
-            // are seconds; local are ms. Compare in ms.
             val remoteUpdatedMs = dto.updatedAt * 1000
             if (local != null && local.updatedAt >= remoteUpdatedMs) {
                 skippedLocalNewer++
@@ -66,8 +76,6 @@ class UserSyncApplyServiceImpl @Inject constructor(
                 favoritesDao.addToFavorites(entity)
                 applied++
             } catch (e: android.database.sqlite.SQLiteConstraintException) {
-                // FK to shows: the show isn't in the local catalog (older data version).
-                // Skip — next data refresh will let this row import.
                 Log.w(TAG, "skip ${dto.showId}: show not in local catalog")
                 skippedMissingShow++
             } catch (e: Exception) {
@@ -88,7 +96,80 @@ class UserSyncApplyServiceImpl @Inject constructor(
         )
     }
 
-    /** Map a server DTO onto a Room entity, preserving any download fields we shouldn't trample. */
+    private suspend fun applyFavoriteSongs(remote: List<SyncFavoriteTrackV3>): ApplyResult {
+        var applied = 0
+        var skippedLocalNewer = 0
+        var skippedMissingShow = 0
+
+        for (dto in remote) {
+            // Skip rows for shows we don't know about — FK would blow up anyway.
+            if (showDao.getShowById(dto.showId) == null) {
+                skippedMissingShow++
+                continue
+            }
+
+            val local = try {
+                favoriteSongDao.findByKeyIncludingTombstones(dto.showId, dto.trackTitle, dto.recordingId)
+            } catch (e: Exception) {
+                Log.w(TAG, "song read failed for ${dto.showId}/${dto.trackTitle}: ${e.message}")
+                continue
+            }
+
+            val remoteUpdatedMs = dto.updatedAt * 1000
+            if (local != null && local.updatedAt >= remoteUpdatedMs) {
+                skippedLocalNewer++
+                continue
+            }
+
+            try {
+                if (local != null) {
+                    favoriteSongDao.applyFromSyncUpdate(
+                        id = local.id,
+                        trackNumber = dto.trackNumber,
+                        recordingId = dto.recordingId,
+                        createdAt = local.createdAt,
+                        updatedAt = remoteUpdatedMs,
+                        deletedAt = dto.deletedAt?.let { it * 1000 },
+                    )
+                } else {
+                    favoriteSongDao.insert(
+                        FavoriteSongEntity(
+                            showId = dto.showId,
+                            trackTitle = dto.trackTitle,
+                            trackNumber = dto.trackNumber,
+                            recordingId = dto.recordingId,
+                            createdAt = remoteUpdatedMs,
+                            updatedAt = remoteUpdatedMs,
+                            deletedAt = dto.deletedAt?.let { it * 1000 },
+                        )
+                    )
+                }
+                applied++
+            } catch (e: android.database.sqlite.SQLiteConstraintException) {
+                Log.w(TAG, "skip song ${dto.showId}/${dto.trackTitle}: constraint")
+                skippedMissingShow++
+            } catch (e: Exception) {
+                Log.w(TAG, "apply song ${dto.showId}/${dto.trackTitle} failed: ${e.message}")
+            }
+        }
+
+        Log.d(
+            TAG,
+            "favorite_songs: scanned=${remote.size} applied=$applied " +
+                "skippedLocalNewer=$skippedLocalNewer skippedMissingShow=$skippedMissingShow"
+        )
+        return ApplyResult(
+            favoriteShowsScanned = 0,
+            favoriteShowsApplied = 0,
+            favoriteShowsSkippedLocalNewer = 0,
+            favoriteShowsSkippedMissingShow = 0,
+            favoriteSongsScanned = remote.size,
+            favoriteSongsApplied = applied,
+            favoriteSongsSkippedLocalNewer = skippedLocalNewer,
+            favoriteSongsSkippedMissingShow = skippedMissingShow,
+        )
+    }
+
     private fun SyncFavoriteShowV3.toEntity(existing: FavoriteShowEntity?): FavoriteShowEntity {
         return FavoriteShowEntity(
             showId = showId,
@@ -96,9 +177,6 @@ class UserSyncApplyServiceImpl @Inject constructor(
             isPinned = isPinned,
             notes = notes,
             preferredRecordingId = preferredRecordingId,
-            // Downloads are device-local concerns. Keep whatever we already have
-            // locally rather than overwriting with server's (which may be null or
-            // reflect a different device's download).
             downloadedRecordingId = existing?.downloadedRecordingId ?: downloadedRecordingId,
             downloadedFormat = existing?.downloadedFormat ?: downloadedFormat,
             recordingQuality = recordingQuality,

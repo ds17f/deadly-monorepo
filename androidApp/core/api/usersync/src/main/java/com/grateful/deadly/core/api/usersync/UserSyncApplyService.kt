@@ -21,4 +21,8 @@ data class ApplyResult(
     val favoriteShowsApplied: Int,
     val favoriteShowsSkippedLocalNewer: Int,
     val favoriteShowsSkippedMissingShow: Int,
+    val favoriteSongsScanned: Int = 0,
+    val favoriteSongsApplied: Int = 0,
+    val favoriteSongsSkippedLocalNewer: Int = 0,
+    val favoriteSongsSkippedMissingShow: Int = 0,
 )

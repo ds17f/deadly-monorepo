@@ -164,6 +164,31 @@ struct UserSyncAPIClient {
         try ensureOK(data: data, response: response)
     }
 
+    func putFavoriteSong(_ song: SyncFavoriteTrackV3) async throws {
+        let body = try JSONEncoder().encode(song)
+        let (data, response) = try await request(
+            method: "PUT",
+            path: "/api/user/favorites/songs",
+            body: body
+        )
+        try ensureOK(data: data, response: response)
+    }
+
+    /// Delete by natural key. Server resolves the row by (user, showId, trackTitle);
+    /// mobile clients don't track the server-side autoincrement id.
+    func deleteFavoriteSong(showId: String, trackTitle: String) async throws {
+        var components = URLComponents()
+        components.path = "/api/user/favorites/songs"
+        components.queryItems = [
+            URLQueryItem(name: "showId", value: showId),
+            URLQueryItem(name: "trackTitle", value: trackTitle),
+        ]
+        let path = components.percentEncodedPath + "?" + (components.percentEncodedQuery ?? "")
+        let (data, response) = try await request(method: "DELETE", path: path, body: nil)
+        if let http = response as? HTTPURLResponse, http.statusCode == 404 { return }
+        try ensureOK(data: data, response: response)
+    }
+
     // MARK: - Internals
 
     private func client() throws -> APIClient {

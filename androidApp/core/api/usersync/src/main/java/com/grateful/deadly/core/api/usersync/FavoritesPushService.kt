@@ -10,11 +10,14 @@ package com.grateful.deadly.core.api.usersync
  */
 interface FavoritesPushService {
     fun enqueueAndPush(showId: String)
+    /** Enqueue a favorite-song change by local row id. */
+    fun enqueueAndPushFavoriteSong(localId: Long)
     suspend fun flushPending(): List<PushResult>
     suspend fun pendingCount(): Int
 }
 
 data class PushResult(
+    val kind: String,
     val refId: String,
     val operation: String,   // "PUT" / "DELETE" / "NOOP"
     val success: Boolean,

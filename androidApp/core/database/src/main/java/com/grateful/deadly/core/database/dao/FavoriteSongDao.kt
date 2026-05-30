@@ -7,30 +7,99 @@ import androidx.room.Query
 import com.grateful.deadly.core.database.entities.FavoriteSongEntity
 import kotlinx.coroutines.flow.Flow
 
+/**
+ * Favorite-songs DAO. UI reads filter `deletedAt IS NULL`. Sync paths that
+ * need tombstones use the *IncludingTombstones variants. Soft-delete semantics
+ * mirror FavoritesDao (issue 3b of PLANS/mobile-server-sync.md).
+ */
 @Dao
 interface FavoriteSongDao {
 
+    // ── Mutation ───────────────────────────────────────────────────────
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(entity: FavoriteSongEntity)
+    suspend fun insert(entity: FavoriteSongEntity): Long
 
-    @Query("DELETE FROM favorite_songs WHERE showId = :showId AND trackTitle = :trackTitle AND (recordingId = :recordingId OR (recordingId IS NULL AND :recordingId IS NULL))")
-    suspend fun delete(showId: String, trackTitle: String, recordingId: String?)
+    /**
+     * Resurrect a tombstoned row by natural key. Returns the number of rows
+     * updated (0 means no live or tombstoned row existed; caller should insert).
+     */
+    @Query("""
+        UPDATE favorite_songs
+           SET trackNumber = :trackNumber, recordingId = :recordingId,
+               updatedAt = :now, deletedAt = NULL
+         WHERE showId = :showId AND trackTitle = :trackTitle
+           AND (recordingId = :recordingId OR (recordingId IS NULL AND :recordingId IS NULL))
+    """)
+    suspend fun resurrect(
+        showId: String, trackTitle: String,
+        trackNumber: Int?, recordingId: String?, now: Long
+    ): Int
 
+    /** Soft-delete: row stays as a tombstone. */
+    @Query("""
+        UPDATE favorite_songs
+           SET deletedAt = :now, updatedAt = :now
+         WHERE showId = :showId AND trackTitle = :trackTitle
+           AND (recordingId = :recordingId OR (recordingId IS NULL AND :recordingId IS NULL))
+    """)
+    suspend fun softDelete(showId: String, trackTitle: String, recordingId: String?, now: Long)
+
+    /** Hard delete used by show-review wipe; not part of sync flow. */
     @Query("DELETE FROM favorite_songs WHERE showId = :showId")
     suspend fun deleteForShow(showId: String)
 
-    @Query("SELECT EXISTS(SELECT 1 FROM favorite_songs WHERE showId = :showId AND trackTitle = :trackTitle AND (recordingId = :recordingId OR (recordingId IS NULL AND :recordingId IS NULL)))")
+    // ── Sync apply ─────────────────────────────────────────────────────
+
+    /** Upsert from a sync pull — writes deletedAt verbatim so server tombstones propagate. */
+    @Query("""
+        UPDATE favorite_songs
+           SET trackNumber = :trackNumber, recordingId = :recordingId,
+               createdAt = :createdAt, updatedAt = :updatedAt, deletedAt = :deletedAt
+         WHERE id = :id
+    """)
+    suspend fun applyFromSyncUpdate(
+        id: Long,
+        trackNumber: Int?, recordingId: String?,
+        createdAt: Long, updatedAt: Long, deletedAt: Long?
+    ): Int
+
+    // ── Query ──────────────────────────────────────────────────────────
+
+    @Query("""
+        SELECT * FROM favorite_songs
+         WHERE showId = :showId AND trackTitle = :trackTitle
+           AND (recordingId = :recordingId OR (recordingId IS NULL AND :recordingId IS NULL))
+    """)
+    suspend fun findByKeyIncludingTombstones(
+        showId: String, trackTitle: String, recordingId: String?
+    ): FavoriteSongEntity?
+
+    @Query("SELECT * FROM favorite_songs WHERE id = :id")
+    suspend fun findByLocalIdIncludingTombstones(id: Long): FavoriteSongEntity?
+
+    @Query("""
+        SELECT EXISTS(SELECT 1 FROM favorite_songs
+                       WHERE showId = :showId AND trackTitle = :trackTitle
+                         AND (recordingId = :recordingId OR (recordingId IS NULL AND :recordingId IS NULL))
+                         AND deletedAt IS NULL)
+    """)
     suspend fun isFavorite(showId: String, trackTitle: String, recordingId: String?): Boolean
 
-    @Query("SELECT EXISTS(SELECT 1 FROM favorite_songs WHERE showId = :showId AND trackTitle = :trackTitle AND (recordingId = :recordingId OR (recordingId IS NULL AND :recordingId IS NULL)))")
+    @Query("""
+        SELECT EXISTS(SELECT 1 FROM favorite_songs
+                       WHERE showId = :showId AND trackTitle = :trackTitle
+                         AND (recordingId = :recordingId OR (recordingId IS NULL AND :recordingId IS NULL))
+                         AND deletedAt IS NULL)
+    """)
     fun isFavoriteFlow(showId: String, trackTitle: String, recordingId: String?): Flow<Boolean>
 
-    @Query("SELECT trackTitle FROM favorite_songs WHERE showId = :showId")
+    @Query("SELECT trackTitle FROM favorite_songs WHERE showId = :showId AND deletedAt IS NULL")
     fun getFavoriteTitlesForShowFlow(showId: String): Flow<List<String>>
 
-    @Query("SELECT * FROM favorite_songs ORDER BY createdAt DESC")
+    @Query("SELECT * FROM favorite_songs WHERE deletedAt IS NULL ORDER BY createdAt DESC")
     suspend fun getAllFavorites(): List<FavoriteSongEntity>
 
-    @Query("SELECT * FROM favorite_songs ORDER BY createdAt DESC")
+    @Query("SELECT * FROM favorite_songs WHERE deletedAt IS NULL ORDER BY createdAt DESC")
     fun getAllFavoritesFlow(): Flow<List<FavoriteSongEntity>>
 }

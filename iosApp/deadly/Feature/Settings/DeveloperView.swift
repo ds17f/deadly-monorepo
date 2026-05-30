@@ -225,7 +225,7 @@ struct DeveloperView: View {
             } else {
                 for r in results {
                     let status = r.success ? "OK" : "FAIL"
-                    var line = "  \(r.operation) \(r.refId) → \(status)"
+                    var line = "  [\(r.kind)] \(r.operation) \(r.refId) → \(status)"
                     if let err = r.error { line += " (\(err))" }
                     lines.append(line)
                 }

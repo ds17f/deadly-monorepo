@@ -7,13 +7,24 @@ struct ReviewService: Sendable {
     private let showPlayerTagDAO: ShowPlayerTagDAO
     private let showDAO: ShowDAO
     private let analyticsService: AnalyticsService?
+    /// Optional so tests / preview builds without auth still work. Wired by
+    /// AppContainer after both services exist. See PLANS/mobile-server-sync.md.
+    private let favoritesPushService: FavoritesPushService?
 
-    init(showReviewDAO: ShowReviewDAO, favoriteSongDAO: FavoriteSongDAO, showPlayerTagDAO: ShowPlayerTagDAO, showDAO: ShowDAO, analyticsService: AnalyticsService? = nil) {
+    init(
+        showReviewDAO: ShowReviewDAO,
+        favoriteSongDAO: FavoriteSongDAO,
+        showPlayerTagDAO: ShowPlayerTagDAO,
+        showDAO: ShowDAO,
+        analyticsService: AnalyticsService? = nil,
+        favoritesPushService: FavoritesPushService? = nil
+    ) {
         self.showReviewDAO = showReviewDAO
         self.favoriteSongDAO = favoriteSongDAO
         self.showPlayerTagDAO = showPlayerTagDAO
         self.showDAO = showDAO
         self.analyticsService = analyticsService
+        self.favoritesPushService = favoritesPushService
     }
 
     // MARK: - Show-level review
@@ -59,18 +70,19 @@ struct ReviewService: Sendable {
         showId: String, trackTitle: String, trackNumber: Int? = nil, recordingId: String? = nil
     ) throws {
         let isFav = try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
+        let localId: Int64?
         if isFav {
-            try favoriteSongDAO.delete(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
+            localId = try favoriteSongDAO.softDelete(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
         } else {
-            let record = FavoriteSongRecord(
-                id: nil,
-                showId: showId,
-                trackTitle: trackTitle,
-                trackNumber: trackNumber,
-                recordingId: recordingId,
-                createdAt: Int64(Date().timeIntervalSince1970 * 1000)
+            localId = try favoriteSongDAO.upsertOrResurrect(
+                showId: showId, trackTitle: trackTitle,
+                trackNumber: trackNumber, recordingId: recordingId
             )
-            try favoriteSongDAO.insert(record)
+        }
+        if let localId, let push = favoritesPushService {
+            Task { @MainActor in
+                push.enqueueAndPushFavoriteSong(localId: localId)
+            }
         }
         let targetId = "\(showId)/\(recordingId ?? "")/\(trackNumber ?? 0)"
         analyticsService?.track("feature_use", props: [

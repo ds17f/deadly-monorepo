@@ -15,6 +15,10 @@ struct SyncOutboxRecord: Codable, Sendable, Equatable, FetchableRecord, MutableP
 
     enum Kind {
         static let favoriteShow = "favorite_show"
+        /// refId is the local favorite_songs row id as a string (Int64). The
+        /// server identifies songs by natural key (showId + trackTitle), which
+        /// the flusher reads off the row at push time.
+        static let favoriteSong = "favorite_song"
     }
 
     mutating func didInsert(_ inserted: InsertionSuccess) {

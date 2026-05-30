@@ -1,6 +1,7 @@
 package com.grateful.deadly.core.favorites.service
 
 import com.grateful.deadly.core.api.favorites.ReviewService
+import com.grateful.deadly.core.api.usersync.FavoritesPushService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.ShowDao
@@ -26,6 +27,7 @@ class ReviewServiceImpl @Inject constructor(
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
     @AppDatabase private val showDao: ShowDao,
     private val analyticsService: AnalyticsService,
+    private val favoritesPushService: FavoritesPushService,
 ) : ReviewService {
 
     override suspend fun getShowReview(showId: String): ShowReview? {
@@ -88,20 +90,37 @@ class ReviewServiceImpl @Inject constructor(
         trackNumber: Int?,
         recordingId: String?
     ) {
+        val now = System.currentTimeMillis()
         val isFav = favoriteSongDao.isFavorite(showId, trackTitle, recordingId)
-        if (isFav) {
-            favoriteSongDao.delete(showId, trackTitle, recordingId)
+        val localId: Long? = if (isFav) {
+            // Soft-delete keeps the row as a tombstone so sync propagates the
+            // removal. Look up the local row id afterward for the outbox enqueue.
+            favoriteSongDao.softDelete(showId, trackTitle, recordingId, now)
+            favoriteSongDao.findByKeyIncludingTombstones(showId, trackTitle, recordingId)?.id
         } else {
-            favoriteSongDao.insert(
-                FavoriteSongEntity(
-                    showId = showId,
-                    trackTitle = trackTitle,
-                    trackNumber = trackNumber,
-                    recordingId = recordingId,
-                    createdAt = System.currentTimeMillis()
-                )
-            )
+            // Resurrect a tombstoned row if present; otherwise insert fresh.
+            val resurrected = favoriteSongDao.resurrect(showId, trackTitle, trackNumber, recordingId, now)
+            if (resurrected > 0) {
+                favoriteSongDao.findByKeyIncludingTombstones(showId, trackTitle, recordingId)?.id
+            } else {
+                favoriteSongDao.insert(
+                    FavoriteSongEntity(
+                        showId = showId,
+                        trackTitle = trackTitle,
+                        trackNumber = trackNumber,
+                        recordingId = recordingId,
+                        createdAt = now,
+                        updatedAt = now,
+                        deletedAt = null,
+                    )
+                ).takeIf { it > 0 }
+            }
         }
+
+        if (localId != null) {
+            favoritesPushService.enqueueAndPushFavoriteSong(localId)
+        }
+
         val targetId = "$showId/${recordingId.orEmpty()}/${trackNumber ?: 0}"
         analyticsService.track("feature_use", mapOf(
             "feature" to if (isFav) "remove_favorite" else "add_favorite",

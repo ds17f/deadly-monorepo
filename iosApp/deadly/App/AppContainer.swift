@@ -86,12 +86,25 @@ final class AppContainer {
                 appPreferences: prefs,
                 analyticsService: analytics
             )
+            // Build push service first — ReviewService needs it injected at
+            // init for the song-favorite outbox enqueue.
+            let pushSvc = MainActor.assumeIsolated {
+                FavoritesPushService(
+                    outbox: SyncOutboxDAO(database: db),
+                    favoritesDAO: FavoritesDAO(database: db),
+                    favoriteSongDAO: FavoriteSongDAO(database: db),
+                    apiClient: userSync,
+                    authService: auth
+                )
+            }
+            favoritesPushService = pushSvc
             let revService = ReviewService(
                 showReviewDAO: ShowReviewDAO(database: db),
                 favoriteSongDAO: FavoriteSongDAO(database: db),
                 showPlayerTagDAO: ShowPlayerTagDAO(database: db),
                 showDAO: ShowDAO(database: db),
-                analyticsService: analytics
+                analyticsService: analytics,
+                favoritesPushService: pushSvc
             )
             reviewService = revService
             let favSvc = FavoritesServiceImpl(
@@ -103,20 +116,13 @@ final class AppContainer {
                 analyticsService: analytics
             )
             favoritesService = favSvc
-            let pushSvc = MainActor.assumeIsolated {
-                FavoritesPushService(
-                    outbox: SyncOutboxDAO(database: db),
-                    favoritesDAO: FavoritesDAO(database: db),
-                    apiClient: userSync,
-                    authService: auth
-                )
-            }
-            favoritesPushService = pushSvc
             MainActor.assumeIsolated { favSvc.favoritesPushService = pushSvc }
             let applySvc = MainActor.assumeIsolated {
                 UserSyncApplyService(
                     apiClient: userSync,
                     favoritesDAO: FavoritesDAO(database: db),
+                    favoriteSongDAO: FavoriteSongDAO(database: db),
+                    showDAO: ShowDAO(database: db),
                     authService: auth
                 )
             }

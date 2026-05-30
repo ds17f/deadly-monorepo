@@ -28,5 +28,8 @@ data class SyncOutboxEntity(
 ) {
     companion object {
         const val KIND_FAVORITE_SHOW = "favorite_show"
+        /** refId is the local favorite_songs row id (Long.toString()). The
+         *  flusher reads showId/trackTitle off the row at push time. */
+        const val KIND_FAVORITE_SONG = "favorite_song"
     }
 }

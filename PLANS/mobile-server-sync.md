@@ -136,6 +136,16 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
 - Retry policy: queue failed writes, retry on next foreground / network
   regain. Don't block the UI.
 
+**Status:**
+- 3a (shows) — landed in 85e5b91f, tested end-to-end across iOS/Android/web.
+- 3b (songs) — code landed; **needs device testing**. Server contract
+  changed: `DELETE /api/user/favorites/songs/:id` replaced with
+  `DELETE /api/user/favorites/songs?showId=X&trackTitle=Y` (natural key,
+  since mobile clients don't track the server autoincrement id). Web has
+  no favorite-songs UI yet so no client coordination needed. Smoke path:
+  favorite a track on phone → another device foregrounds → track appears
+  / disappears.
+
 ### 4. Granular push for recent shows + playback position
 - Recent: `PUT /api/user/recent/:showId` on play-start (or first track
   advance). Server already tracks `last_played_at` / `total_play_count`,

@@ -173,7 +173,9 @@ struct FavoritesImportExportService {
                 trackTitle: track.trackTitle,
                 trackNumber: track.trackNumber,
                 recordingId: track.recordingId,
-                createdAt: now
+                createdAt: now,
+                updatedAt: now,
+                deletedAt: nil
             )
             try? favoriteSongDAO.insert(record)
             tracksImported += 1
@@ -308,7 +310,9 @@ struct FavoritesImportExportService {
                         trackTitle: tr.trackTitle,
                         trackNumber: tr.trackNumber,
                         recordingId: tr.recordingId,
-                        createdAt: now
+                        createdAt: now,
+                        updatedAt: now,
+                        deletedAt: nil
                     )
                     try? favoriteSongDAO.insert(record)
                 }
