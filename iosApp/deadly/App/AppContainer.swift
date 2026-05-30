@@ -33,6 +33,7 @@ final class AppContainer {
     let authService: AuthService
     let userSyncAPIClient: UserSyncAPIClient
     let favoritesPushService: FavoritesPushService
+    let userSyncApplyService: UserSyncApplyService
     let playbackRestorationService: PlaybackRestorationService
     let analyticsService: AnalyticsService
 
@@ -112,6 +113,16 @@ final class AppContainer {
             }
             favoritesPushService = pushSvc
             MainActor.assumeIsolated { favSvc.favoritesPushService = pushSvc }
+            let applySvc = MainActor.assumeIsolated {
+                UserSyncApplyService(
+                    apiClient: userSync,
+                    favoritesDAO: FavoritesDAO(database: db),
+                    authService: auth
+                )
+            }
+            userSyncApplyService = applySvc
+            MainActor.assumeIsolated { pushSvc.userSyncApplyService = applySvc }
+            MainActor.assumeIsolated { applySvc.favoritesService = favSvc }
             favoritesImportExportService = FavoritesImportExportService(
                 favoritesDAO: FavoritesDAO(database: db),
                 showDAO: ShowDAO(database: db),

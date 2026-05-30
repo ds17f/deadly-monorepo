@@ -131,6 +131,9 @@ struct AppDatabase: @unchecked Sendable {
         migrator.registerMigration("v12-sync-outbox") { db in
             try AppDatabase.createSyncOutboxTable(db)
         }
+        migrator.registerMigration("v13-sync-columns-camelcase") { db in
+            try AppDatabase.renameSyncColumnsToCamelCase(db)
+        }
         try migrator.migrate(dbWriter)
     }
 
@@ -167,17 +170,37 @@ struct AppDatabase: @unchecked Sendable {
             }
         }
 
-        try addColumn("favorite_shows", "updated_at", "INTEGER NOT NULL DEFAULT 0")
-        try addColumn("favorite_shows", "deleted_at", "INTEGER")
-        try addColumn("favorite_songs", "updated_at", "INTEGER NOT NULL DEFAULT 0")
-        try addColumn("favorite_songs", "deleted_at", "INTEGER")
-        try addColumn("show_reviews", "deleted_at", "INTEGER")
-        try addColumn("recording_preferences", "deleted_at", "INTEGER")
-        try addColumn("recent_shows", "deleted_at", "INTEGER")
+        try addColumn("favorite_shows", "updatedAt", "INTEGER NOT NULL DEFAULT 0")
+        try addColumn("favorite_shows", "deletedAt", "INTEGER")
+        try addColumn("favorite_songs", "updatedAt", "INTEGER NOT NULL DEFAULT 0")
+        try addColumn("favorite_songs", "deletedAt", "INTEGER")
+        try addColumn("show_reviews", "deletedAt", "INTEGER")
+        try addColumn("recording_preferences", "deletedAt", "INTEGER")
+        try addColumn("recent_shows", "deletedAt", "INTEGER")
 
         let now = "CAST(strftime('%s','now') AS INTEGER)"
-        try db.execute(sql: "UPDATE favorite_shows SET updated_at = \(now) WHERE updated_at = 0")
-        try db.execute(sql: "UPDATE favorite_songs SET updated_at = \(now) WHERE updated_at = 0")
+        try db.execute(sql: "UPDATE favorite_shows SET updatedAt = \(now) WHERE updatedAt = 0")
+        try db.execute(sql: "UPDATE favorite_songs SET updatedAt = \(now) WHERE updatedAt = 0")
+    }
+
+    /// Fix for an earlier v11 that created snake_case columns
+    /// (`updated_at`, `deleted_at`) while the Swift records and DAOs
+    /// use camelCase. Rename in place when the bad columns are present.
+    private static func renameSyncColumnsToCamelCase(_ db: Database) throws {
+        func renameIfPresent(_ table: String, _ from: String, _ to: String) throws {
+            let cols = try Row.fetchAll(db, sql: "PRAGMA table_info(\(table))")
+            let names = cols.compactMap { $0["name"] as? String }
+            if names.contains(from) && !names.contains(to) {
+                try db.execute(sql: "ALTER TABLE \(table) RENAME COLUMN \(from) TO \(to)")
+            }
+        }
+        try renameIfPresent("favorite_shows", "updated_at", "updatedAt")
+        try renameIfPresent("favorite_shows", "deleted_at", "deletedAt")
+        try renameIfPresent("favorite_songs", "updated_at", "updatedAt")
+        try renameIfPresent("favorite_songs", "deleted_at", "deletedAt")
+        try renameIfPresent("show_reviews", "deleted_at", "deletedAt")
+        try renameIfPresent("recording_preferences", "deleted_at", "deletedAt")
+        try renameIfPresent("recent_shows", "deleted_at", "deletedAt")
     }
 
     // MARK: - Schema

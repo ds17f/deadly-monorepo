@@ -16,6 +16,16 @@ struct FavoritesDAO: Sendable {
         }
     }
 
+    /// Sync-apply upsert. Writes the record verbatim — does NOT clear the
+    /// tombstone the way [add] does. Used by [UserSyncApplyService] so that
+    /// a server tombstone propagates to the local DB.
+    func applyFromSync(_ favoriteShow: FavoriteShowRecord) throws {
+        try database.write { db in
+            var record = favoriteShow
+            try record.insert(db, onConflict: .replace)
+        }
+    }
+
     func addAll(_ favoriteShows: [FavoriteShowRecord]) throws {
         try database.write { db in
             for favoriteShow in favoriteShows {

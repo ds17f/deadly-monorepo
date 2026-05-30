@@ -111,6 +111,30 @@ struct deadlyApp: App {
                         // Restore last playback position if the app was killed mid-playback.
                         await container.playbackRestorationService.restoreIfAvailable()
                     }
+                    // Cold-start sync pull: if the user is already signed in
+                    // when the app launches, reconcile with the server.
+                    if container.authService.isSignedIn {
+                        _ = await container.userSyncApplyService.pullAndApply(reason: "cold_start")
+                    }
+                }
+                .onChange(of: container.authService.isSignedIn) { _, signedIn in
+                    if signedIn {
+                        Task {
+                            _ = await container.userSyncApplyService.pullAndApply(reason: "sign_in")
+                        }
+                    }
+                }
+                // Foreground sync pull: cheap near-real-time pickup of changes
+                // made on other devices while the app was backgrounded.
+                // Scene-level .onChange(of: scenePhase) doesn't fire reliably
+                // when a UIApplicationDelegateAdaptor is in use, so we listen
+                // to the UIKit notification directly.
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+                    if container.authService.isSignedIn {
+                        Task {
+                            _ = await container.userSyncApplyService.pullAndApply(reason: "foreground")
+                        }
+                    }
                 }
         }
         .onChange(of: scenePhase) { _, newPhase in

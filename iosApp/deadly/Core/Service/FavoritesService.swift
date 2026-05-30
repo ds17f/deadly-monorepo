@@ -19,6 +19,11 @@ final class FavoritesServiceImpl {
     private(set) var songs: [FavoriteTrack] = []
     private(set) var isLoading = false
 
+    /// Last sort applied by [refresh]. Used by [refreshWithLastSort] so other
+    /// services (sync apply, push) can re-fetch without knowing the UI's sort.
+    private var lastSortOption: FavoritesSortOption = .dateAdded
+    private var lastSortDirection: FavoritesSortDirection = .descending
+
     nonisolated init(
         database: AppDatabase,
         favoritesDAO: FavoritesDAO,
@@ -101,7 +106,13 @@ final class FavoritesServiceImpl {
 
     // MARK: - Fetch
 
+    func refreshWithLastSort() {
+        refresh(sortedBy: lastSortOption, direction: lastSortDirection)
+    }
+
     func refresh(sortedBy option: FavoritesSortOption = .dateAdded, direction: FavoritesSortDirection = .descending) {
+        lastSortOption = option
+        lastSortDirection = direction
         isLoading = true
         defer { isLoading = false }
         do {

@@ -14,6 +14,10 @@ final class FavoritesPushService {
     private let favoritesDAO: FavoritesDAO
     private let apiClient: UserSyncAPIClient
     private let authService: AuthService
+    /// Set by AppContainer after both services are constructed. Used to fire
+    /// a pull after a successful flush so we reconcile changes other devices
+    /// made during our window.
+    weak var userSyncApplyService: UserSyncApplyService?
 
     init(
         outbox: SyncOutboxDAO,
@@ -72,6 +76,14 @@ final class FavoritesPushService {
             case .failure(let operation, let error):
                 try? outbox.recordFailure(id: entryId, error: error)
                 results.append(PushResult(refId: entry.refId, operation: operation, success: false, error: error))
+            }
+        }
+        // Reconcile after pushing — the server may have learned about changes
+        // from other devices during our window. Only fire when something
+        // actually shipped, so an empty flush stays free.
+        if results.contains(where: { $0.success && $0.operation != "NOOP" }) {
+            Task { [weak userSyncApplyService] in
+                _ = await userSyncApplyService?.pullAndApply(reason: "after_push_flush")
             }
         }
         return results
