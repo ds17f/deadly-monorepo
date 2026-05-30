@@ -253,14 +253,21 @@ export function upsertFavoriteSong(userId: string, song: FavoriteTrackV3): numbe
   return Number(result.lastInsertRowid);
 }
 
-export function deleteFavoriteSong(userId: string, id: number): boolean {
+/**
+ * Soft-delete a favorite song by natural key (showId + trackTitle). Mobile
+ * clients don't know the server-side autoincrement id, but they do know the
+ * stable identity tuple — matches what upsertFavoriteSong does.
+ */
+export function deleteFavoriteSongByKey(
+  userId: string, showId: string, trackTitle: string
+): boolean {
   const db = getUsersDb();
   const now = Math.floor(Date.now() / 1000);
   const result = db.prepare(
     `UPDATE favorite_songs
         SET deleted_at = ?, updated_at = ?
-      WHERE id = ? AND user_id = ? AND deleted_at IS NULL`
-  ).run(now, now, id, userId);
+      WHERE user_id = ? AND show_id = ? AND track_title = ? AND deleted_at IS NULL`
+  ).run(now, now, userId, showId, trackTitle);
   return result.changes > 0;
 }
 

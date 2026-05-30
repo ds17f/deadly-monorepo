@@ -2,7 +2,7 @@ import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
 import {
   getFavoriteShows, upsertFavoriteShow, deleteFavoriteShow,
-  getFavoriteSongs, upsertFavoriteSong, deleteFavoriteSong,
+  getFavoriteSongs, upsertFavoriteSong, deleteFavoriteSongByKey,
   getReviews, upsertReview, deleteReview,
   getRecordingPreferences, upsertRecordingPreference,
   getRecentShows, upsertRecentShow,
@@ -86,12 +86,26 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     return reply.code(200).send({ id });
   });
 
-  app.delete<{ Params: { id: string } }>(
-    "/api/user/favorites/songs/:id", {
-      schema: { tags: ["user"], summary: "Remove favorite song" },
+  // Delete by natural key (showId + trackTitle). Mobile clients don't have the
+  // server's autoincrement id, but they do have the stable identity tuple.
+  app.delete<{ Querystring: { showId?: string; trackTitle?: string } }>(
+    "/api/user/favorites/songs", {
+      schema: {
+        tags: ["user"],
+        summary: "Remove favorite song by (showId, trackTitle)",
+        querystring: {
+          type: "object",
+          required: ["showId", "trackTitle"],
+          properties: {
+            showId: { type: "string" },
+            trackTitle: { type: "string" },
+          },
+        },
+      },
       preHandler: requireAuth,
     }, async (request, reply) => {
-      const deleted = deleteFavoriteSong(request.user!.id, Number(request.params.id));
+      const { showId, trackTitle } = request.query;
+      const deleted = deleteFavoriteSongByKey(request.user!.id, showId!, trackTitle!);
       return reply.code(deleted ? 200 : 404).send({ ok: deleted });
     });
 
