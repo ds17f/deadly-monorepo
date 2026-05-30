@@ -26,6 +26,7 @@ class FavoritesPushServiceImpl @Inject constructor(
     @AppDatabase private val favoritesDao: FavoritesDao,
     private val userSyncService: UserSyncService,
     private val authService: AuthService,
+    private val syncCoordinator: UserSyncCoordinator,
 ) : FavoritesPushService {
 
     companion object {
@@ -68,6 +69,12 @@ class FavoritesPushServiceImpl @Inject constructor(
             val results = mutableListOf<PushResult>()
             for (entry in pending) {
                 results += pushOne(entry)
+            }
+            // Reconcile after pushing — server may have learned about changes
+            // from other devices during our window. Only fire when we actually
+            // pushed something so an empty flush stays free.
+            if (results.any { it.success && it.operation != "NOOP" }) {
+                syncCoordinator.triggerPull("after_push_flush")
             }
             results
         }

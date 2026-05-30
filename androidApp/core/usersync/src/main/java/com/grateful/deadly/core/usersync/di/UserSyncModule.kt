@@ -1,8 +1,10 @@
 package com.grateful.deadly.core.usersync.di
 
 import com.grateful.deadly.core.api.usersync.FavoritesPushService
+import com.grateful.deadly.core.api.usersync.UserSyncApplyService
 import com.grateful.deadly.core.api.usersync.UserSyncService
 import com.grateful.deadly.core.usersync.FavoritesPushServiceImpl
+import com.grateful.deadly.core.usersync.UserSyncApplyServiceImpl
 import com.grateful.deadly.core.usersync.UserSyncServiceImpl
 import dagger.Binds
 import dagger.Module
@@ -21,4 +23,8 @@ abstract class UserSyncModule {
     @Binds
     @Singleton
     abstract fun bindFavoritesPushService(impl: FavoritesPushServiceImpl): FavoritesPushService
+
+    @Binds
+    @Singleton
+    abstract fun bindUserSyncApplyService(impl: UserSyncApplyServiceImpl): UserSyncApplyService
 }
