@@ -23,6 +23,8 @@ final class FavoritesServiceImpl {
     /// services (sync apply, push) can re-fetch without knowing the UI's sort.
     private var lastSortOption: FavoritesSortOption = .dateAdded
     private var lastSortDirection: FavoritesSortDirection = .descending
+    private var lastSongSortOption: FavoritesSongSortOption = .dateAdded
+    private var lastSongSortDirection: FavoritesSortDirection = .descending
 
     nonisolated init(
         database: AppDatabase,
@@ -108,6 +110,7 @@ final class FavoritesServiceImpl {
 
     func refreshWithLastSort() {
         refresh(sortedBy: lastSortOption, direction: lastSortDirection)
+        refreshSongs(sortedBy: lastSongSortOption, direction: lastSongSortDirection)
     }
 
     func refresh(sortedBy option: FavoritesSortOption = .dateAdded, direction: FavoritesSortDirection = .descending) {
@@ -147,6 +150,8 @@ final class FavoritesServiceImpl {
     // MARK: - Songs
 
     func refreshSongs(sortedBy option: FavoritesSongSortOption = .dateAdded, direction: FavoritesSortDirection = .descending) {
+        lastSongSortOption = option
+        lastSongSortDirection = direction
         do {
             let tracks = try reviewService.getFavoriteTracks()
             songs = sortSongs(tracks, by: option, direction: direction)

@@ -163,6 +163,23 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
     authoritative if it has a later timestamp — pick one and document).
 - "Favorite on phone → see on web" smoke test checklist for QA.
 
+## Follow-ups (not blocking this branch)
+
+- **Replace imperative caches with reactive observation on both platforms.**
+  Surfaced during 3b device testing: iOS `FavoritesServiceImpl.songs` and
+  Android `FavoritesViewModel._favoriteSongs` are imperative caches set by
+  explicit refresh calls, so anything that writes to the underlying SQLite
+  (sync apply, in particular) leaves the UI stale until the next manual
+  refresh / app restart. Other view paths (per-track favorite indicators)
+  already use GRDB `ValueObservation` (iOS) and Room `Flow` (Android) and
+  Just Work. We patched the favorites-songs list specifically — iOS by
+  having `refreshWithLastSort` cover songs, Android by collecting
+  `getFavoriteTracksFlow` — but this same shape needs to repeat for shows,
+  recents, reviews, playback position, etc. The right fix is to make every
+  user-data cache observation-driven and have sync apply just write to the
+  DAO. File a Linear ticket; tackle as its own session before piling on
+  issue 4 (recents + position) and issue 5+ work.
+
 ## Out of scope (explicit non-goals)
 
 - **Tombstones / deletion tracking across devices.** v0 LWW means

@@ -168,9 +168,19 @@ class ReviewServiceImpl @Inject constructor(
 
     override suspend fun getFavoriteTracks(): List<FavoriteTrack> {
         val favoriteEntities = favoriteSongDao.getAllFavorites()
-        val showIds = favoriteEntities.map { it.showId }.distinct()
+        return enrichFavoriteSongs(favoriteEntities)
+    }
+
+    override fun getFavoriteTracksFlow(): Flow<List<FavoriteTrack>> {
+        return favoriteSongDao.getAllFavoritesFlow().map { entities ->
+            enrichFavoriteSongs(entities)
+        }
+    }
+
+    private suspend fun enrichFavoriteSongs(entities: List<FavoriteSongEntity>): List<FavoriteTrack> {
+        val showIds = entities.map { it.showId }.distinct()
         val shows = showDao.getShowsByIds(showIds).associateBy { it.showId }
-        return favoriteEntities.mapNotNull { entity ->
+        return entities.mapNotNull { entity ->
             val show = shows[entity.showId] ?: return@mapNotNull null
             FavoriteTrack(
                 showId = entity.showId,

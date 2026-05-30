@@ -47,5 +47,10 @@ interface ReviewService {
 
     suspend fun getFavoriteTracks(): List<FavoriteTrack>
 
+    /** Room-backed live view of [getFavoriteTracks]. The favorites songs screen
+     *  collects this so server-side changes (sync apply) propagate without an
+     *  explicit refresh hook. */
+    fun getFavoriteTracksFlow(): Flow<List<FavoriteTrack>>
+
     suspend fun deleteShowReview(showId: String)
 }
