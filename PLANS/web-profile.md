@@ -68,11 +68,17 @@ endpoints that already work."
     Map at boot; `GET /api/user/recent` is enriched with
     date/venue/city/state. The catalog is the reusable source — favorites
     enrichment will reuse `getShowMeta`.
-  - **Follow-up:** wire `make api-show-index` into the deploy pipeline
-    (it's a manual step today; the index must exist in the `api-data`
-    volume before the API boots, else recents render bare). Also: a
-    generic batch lookup (`GET /api/shows?ids=`) if a consumer needs
-    arbitrary showIds rather than a pre-joined list.
+  - **Deploy wiring: done.** The index is **baked into the API image**
+    and loaded via `SHOW_INDEX_PATH=/app/show-index.json`. Local:
+    `docker-up` depends on `api-show-index` (regenerates into the build
+    context before `--build`). CI: `build-images.yml` generates it right
+    after the data download, before the API image build — so it
+    auto-refreshes whenever `data/version` bumps (that path already
+    triggers the workflow). No runtime volume/deploy coordination; the
+    generator is non-fatal if data is absent (empty index → bare records).
+  - **Remaining (optional):** a generic batch lookup
+    (`GET /api/shows?ids=`) if a consumer ever needs arbitrary showIds
+    rather than a pre-joined list.
 - **V3 schema is the contract.** Web client types mirror the server's
   `FavoriteShowV3`, `RecentShowV3`, etc. No web-flavored variants.
 
