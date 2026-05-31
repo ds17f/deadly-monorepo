@@ -50,6 +50,12 @@ export function deleteFavoriteShow(showId: string): Promise<void> {
   return apiFetch(`/favorites/shows/${showId}`, { method: "DELETE" });
 }
 
+// Returns the user's favorite shows, enriched with display metadata
+// (venue/city/date) from the API show catalog.
+export function fetchFavoriteShows(): Promise<FavoriteShow[]> {
+  return apiFetch<FavoriteShow[]>("/favorites/shows");
+}
+
 export function updateReview(showId: string, review: Omit<ShowReview, "showId">): Promise<void> {
   return apiFetch(`/reviews/${showId}`, {
     method: "PUT",

@@ -1,24 +1,32 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { fetchRecentShows } from "@/lib/userDataApi";
-import type { RecentShow } from "@/types/userdata";
+import { fetchFavoriteShows } from "@/lib/userDataApi";
+import type { FavoriteShow } from "@/types/userdata";
 import ShowRow from "./ShowRow";
 import { formatShowDate, formatLocation } from "./showFormat";
 
 type LoadState =
   | { status: "loading" }
   | { status: "error" }
-  | { status: "ready"; shows: RecentShow[] };
+  | { status: "ready"; shows: FavoriteShow[] };
 
-export default function RecentTab() {
+// Pinned first, then most-recently-favorited.
+function sortFavorites(shows: FavoriteShow[]): FavoriteShow[] {
+  return [...shows].sort((a, b) => {
+    if (a.isPinned !== b.isPinned) return a.isPinned ? -1 : 1;
+    return b.addedAt - a.addedAt;
+  });
+}
+
+export default function FavoritesTab() {
   const [state, setState] = useState<LoadState>({ status: "loading" });
 
   useEffect(() => {
     let cancelled = false;
-    fetchRecentShows()
+    fetchFavoriteShows()
       .then((shows) => {
-        if (!cancelled) setState({ status: "ready", shows });
+        if (!cancelled) setState({ status: "ready", shows: sortFavorites(shows) });
       })
       .catch(() => {
         if (!cancelled) setState({ status: "error" });
@@ -45,7 +53,7 @@ export default function RecentTab() {
     return (
       <div className="rounded-lg border border-white/10 bg-deadly-surface p-8 text-center">
         <p className="text-sm text-white/50">
-          Couldn&apos;t load your recent shows. Try again in a moment.
+          Couldn&apos;t load your favorites. Try again in a moment.
         </p>
       </div>
     );
@@ -54,9 +62,10 @@ export default function RecentTab() {
   if (state.shows.length === 0) {
     return (
       <div className="rounded-lg border border-white/10 bg-deadly-surface p-8 text-center">
-        <h2 className="text-lg font-medium text-white">Recent shows</h2>
+        <h2 className="text-lg font-medium text-white">Favorites</h2>
         <p className="mx-auto mt-2 max-w-md text-sm text-white/50">
-          Play something on any device to fill this in.
+          Tap the heart on any show — on this site or any device — and it&apos;ll
+          show up here.
         </p>
       </div>
     );
@@ -65,12 +74,11 @@ export default function RecentTab() {
   return (
     <ul className="space-y-2">
       {state.shows.map((show) => {
-        // Lead with the venue when known; otherwise the date carries the row.
         const primary = show.venue ?? formatShowDate(show);
         const secondary = [
           show.venue ? formatShowDate(show) : null,
           formatLocation(show),
-          show.totalPlayCount > 0 ? `Played ${show.totalPlayCount}×` : null,
+          show.isPinned ? "Pinned" : null,
         ]
           .filter(Boolean)
           .join(" · ");

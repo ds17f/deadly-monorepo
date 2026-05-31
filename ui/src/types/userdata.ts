@@ -9,6 +9,13 @@ export interface FavoriteShow {
   recordingQuality?: number | null;
   playingQuality?: number | null;
   customRating?: number | null;
+  // Display metadata merged in by the API show catalog (GET
+  // /api/user/favorites/shows). Absent for shows not in the index.
+  date?: string | null;
+  venue?: string | null;
+  city?: string | null;
+  state?: string | null;
+  country?: string | null;
 }
 
 export interface FavoriteTrack {
