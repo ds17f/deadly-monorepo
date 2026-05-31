@@ -92,6 +92,21 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
 > was dropped — there's no automatic behavior to gate; dev buttons are
 > the explicit triggers.
 
+> **Re-scope (2026-05-31)**: With issue 3 (favorites) done and tested
+> on device, we re-prioritized the tail of this epic:
+> - **Playback-position sync is cut from issue 4.** Per-action REST push
+>   for position is heavy and low-value on its own — the place it actually
+>   matters is Spotify-Connect-style remote control, which is WebSocket-
+>   based, not this REST sync. Position moves to the connect/WS work
+>   (see *Connect-v2 / WebSocket* below). Issue 4 is now recents-only.
+> - **Recents stays** (issue 4) — cheap, already naturally debounced.
+> - **The web user-profile UI ([web-profile.md](./web-profile.md)) is the
+>   next thing we build** — more impactful and ships immediately, vs. WS
+>   which is a larger effort. Mobile push (issue 3) already feeds it.
+> - **Connect-v2 / WebSocket is the strong follow-on**, MVP'd from the
+>   existing `connect-v2` branch + `docs/connect-v2-architecture` branch
+>   rather than from scratch.
+
 ### 1. HTTP client scaffolding (iOS + Android)
 - Typed API client on each platform against `/api/user/*`. Reuse the
   existing auth session (whatever currently drives the Connect WS auth).
@@ -136,23 +151,42 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
 - Retry policy: queue failed writes, retry on next foreground / network
   regain. Don't block the UI.
 
-**Status:**
+**Status: DONE.**
 - 3a (shows) — landed in 85e5b91f, tested end-to-end across iOS/Android/web.
-- 3b (songs) — code landed; **needs device testing**. Server contract
-  changed: `DELETE /api/user/favorites/songs/:id` replaced with
+- 3b (songs) — landed and **device-tested**. Server contract changed:
+  `DELETE /api/user/favorites/songs/:id` replaced with
   `DELETE /api/user/favorites/songs?showId=X&trackTitle=Y` (natural key,
   since mobile clients don't track the server autoincrement id). Web has
-  no favorite-songs UI yet so no client coordination needed. Smoke path:
-  favorite a track on phone → another device foregrounds → track appears
-  / disappears.
+  no favorite-songs UI yet so no client coordination needed.
+  - Device testing surfaced a phantom-duplicate bug: the local natural key
+    was `(showId, trackTitle, recordingId)` but the server keys on
+    `(user, showId, trackTitle)`. Fixed in c4b7e26b — local identity
+    relaxed to `(showId, trackTitle)` on both platforms (recordingId is
+    now metadata only), with additive dedupe migrations (Android v24→25,
+    iOS v14).
 
-### 4. Granular push for recent shows + playback position
-- Recent: `PUT /api/user/recent/:showId` on play-start (or first track
-  advance). Server already tracks `last_played_at` / `total_play_count`,
-  so we just announce the play; no client-side counter math.
-- Playback position: `PUT /api/user/position` debounced to once per 15s
-  while playing, once on pause, once on track change. (Already matches
-  the iOS reporting cadence in `PlayerProvider`.)
+### 4. Granular push for recent shows (recents-only — position cut)
+- Recent: `PUT /api/user/recent/:showId`. Server already tracks
+  `last_played_at` / `total_play_count`, so we just announce the play; no
+  client-side counter math.
+- **No server spam — the local model already debounces for us.** Both
+  platforms record a recent through a single `recordShowPlay(showId)`
+  chokepoint (`RecentShowsServiceImpl` on iOS + Android) gated by:
+  - a "meaningful play" filter — ≥10s of playback, or ≥25% for tracks
+    under 40s; and
+  - a `hasRecordedCurrentTrack` flag that is reset **only when the show
+    changes** (`currentTrackShowId`), not per track.
+  So sitting and listening to tracks 1→2→3 of one show fires
+  `recordShowPlay` exactly once. The outbox enqueue slots into that same
+  chokepoint (same pattern as the favorites outbox in issue 3) and
+  inherits the once-per-show-session dedup for free — no per-tick or
+  per-track pushes. Re-playing a show later legitimately bumps it (a new
+  session → a new push → server updates `last_played_at`), which is
+  correct "most-recent-first" behavior.
+- **Playback position is cut** (was the second half of this issue). REST
+  per-action position push is heavy and only pays off for Connect-style
+  remote control, which is WebSocket-based. Position lives with the
+  connect/WS work, not here. See *Connect-v2 / WebSocket* below.
 
 ### 5. LWW conflict policy doc + dev smoke test
 - Short doc in `docs/` (or appended here) describing:
@@ -166,19 +200,54 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
 ## Follow-ups (not blocking this branch)
 
 - **Replace imperative caches with reactive observation on both platforms.**
-  Surfaced during 3b device testing: iOS `FavoritesServiceImpl.songs` and
-  Android `FavoritesViewModel._favoriteSongs` are imperative caches set by
-  explicit refresh calls, so anything that writes to the underlying SQLite
-  (sync apply, in particular) leaves the UI stale until the next manual
-  refresh / app restart. Other view paths (per-track favorite indicators)
+  Surfaced during 3b device testing: imperative caches set by explicit
+  refresh calls leave the UI stale when something else writes the
+  underlying SQLite (sync apply, in particular). Per-track indicators
   already use GRDB `ValueObservation` (iOS) and Room `Flow` (Android) and
-  Just Work. We patched the favorites-songs list specifically — iOS by
-  having `refreshWithLastSort` cover songs, Android by collecting
-  `getFavoriteTracksFlow` — but this same shape needs to repeat for shows,
-  recents, reviews, playback position, etc. The right fix is to make every
-  user-data cache observation-driven and have sync apply just write to the
-  DAO. File a Linear ticket; tackle as its own session before piling on
-  issue 4 (recents + position) and issue 5+ work.
+  Just Work; the list caches did not.
+  - **iOS: done (b5decdb7).** `FavoritesServiceImpl` is now fully
+    observation-driven — both `shows` and `songs` subscribe to GRDB
+    `ValueObservation`, the `reviewService` dependency is gone, and the
+    sync-apply refresh band-aid (ab22ea5c) was removed.
+  - **Android: still a band-aid.** `FavoritesViewModel` collects
+    `getFavoriteTracksFlow` for songs but the broader cache shape isn't
+    observation-driven yet. Bring it to parity with iOS.
+  - **Other record kinds** (recents, reviews, position) still need the
+    same treatment on both platforms once they sync.
+  File a Linear ticket; tackle as its own session.
+
+## Connect-v2 / WebSocket (strong follow-on, after web profile)
+
+Real-time, Spotify-Connect-style cross-device control: see what's playing
+elsewhere, transfer playback, push position/transport in real time. This
+is the *right* home for playback-position sync (cut from issue 4) — it
+needs a live channel, not REST per-action writes.
+
+We are **not designing this from scratch.** A lot of good work already
+exists and is going a bit stale:
+- `connect-v2` branch — the main draft implementation.
+- `docs/connect-v2-architecture` branch — carries `docs/connect-v2-architecture.md`
+  plus an `api/src/connect/` surface (`registry.ts`, `routes.ts`,
+  `types.ts`) and `PlayerConnectSheet.kt`.
+- Related: `connect/full-draft`, `connect/device-sheet`,
+  `mobile/connect-device-sheet`.
+
+The core value there was **a relatively clean, simple model for connect
+state + WS message types.** Plan to MVP by either:
+1. Rebasing `connect-v2` onto current head (preferred if not too painful), or
+2. Reading through it and porting the WS implementation + message pattern
+   onto head deliberately.
+
+Then promote `docs/connect-v2-architecture.md` into a numbered ADR
+(`docs/adr/0006-*`) so the model is captured in head, not stranded on a
+branch.
+
+**Open question — web changes the model.** The connect-v2 state/message
+design predates the web app having a real signed-in presence. A browser
+tab is now a potential connect participant (controller and/or target),
+which may change device identity, presence/liveness, and which transport
+events a non-native player can honor. Revisit the state model with web as
+a first-class participant before committing to the ported design.
 
 ## Out of scope (explicit non-goals)
 
