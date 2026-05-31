@@ -10,11 +10,11 @@ type LoadState =
   | { status: "error" }
   | { status: "ready"; shows: RecentShow[] };
 
-// showId is the date-prefixed slug (e.g. "1977-05-08-barton-hall-…").
-// Pull the leading YYYY-MM-DD off it for a clean header line; the rest of
-// the metadata (venue/city) comes from the linked show page for now.
-function formatShowDate(showId: string): string {
-  const iso = showId.slice(0, 10);
+// Format an ISO date (YYYY-MM-DD). The API enriches recents with `date`;
+// when it's missing we fall back to the leading YYYY-MM-DD of the
+// date-prefixed showId slug (e.g. "1977-05-08-barton-hall-…").
+function formatShowDate(show: RecentShow): string {
+  const iso = (show.date ?? show.showId).slice(0, 10);
   const d = new Date(`${iso}T00:00:00`);
   if (Number.isNaN(d.getTime())) return iso;
   return d.toLocaleDateString(undefined, {
@@ -22,6 +22,12 @@ function formatShowDate(showId: string): string {
     month: "long",
     day: "numeric",
   });
+}
+
+// City + state when known, e.g. "Ithaca, NY".
+function formatLocation(show: RecentShow): string | null {
+  const parts = [show.city, show.state].filter(Boolean);
+  return parts.length ? parts.join(", ") : null;
 }
 
 export default function RecentTab() {
@@ -77,26 +83,38 @@ export default function RecentTab() {
 
   return (
     <ul className="space-y-2">
-      {state.shows.map((show) => (
-        <li key={show.showId}>
-          <Link
-            href={`/shows/${show.showId}`}
-            className="flex items-center justify-between gap-4 rounded-lg border border-white/10 bg-deadly-surface px-4 py-3 transition hover:border-white/30"
-          >
-            <div className="min-w-0">
-              <p className="truncate font-medium text-white">
-                {formatShowDate(show.showId)}
-              </p>
-              {show.totalPlayCount > 0 && (
-                <p className="mt-0.5 text-xs text-white/40">
-                  Played {show.totalPlayCount}×
-                </p>
-              )}
-            </div>
-            <span className="flex-shrink-0 text-sm text-white/40">View show →</span>
-          </Link>
-        </li>
-      ))}
+      {state.shows.map((show) => {
+        const location = formatLocation(show);
+        // Lead with the venue when known; otherwise the date carries the row.
+        const primary = show.venue ?? formatShowDate(show);
+        const secondary = [
+          show.venue ? formatShowDate(show) : null,
+          location,
+          show.totalPlayCount > 0 ? `Played ${show.totalPlayCount}×` : null,
+        ]
+          .filter(Boolean)
+          .join(" · ");
+        return (
+          <li key={show.showId}>
+            <Link
+              href={`/shows/${show.showId}`}
+              className="flex items-center justify-between gap-4 rounded-lg border border-white/10 bg-deadly-surface px-4 py-3 transition hover:border-white/30"
+            >
+              <div className="min-w-0">
+                <p className="truncate font-medium text-white">{primary}</p>
+                {secondary && (
+                  <p className="mt-0.5 truncate text-xs text-white/40">
+                    {secondary}
+                  </p>
+                )}
+              </div>
+              <span className="flex-shrink-0 text-sm text-white/40">
+                View show →
+              </span>
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 }

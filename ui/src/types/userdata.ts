@@ -63,6 +63,15 @@ export interface RecentShow {
   lastPlayedAt: number;
   firstPlayedAt: number;
   totalPlayCount: number;
+  // Display metadata merged in by the API show catalog. Absent for shows
+  // not in the index; clients fall back to the date-prefixed showId.
+  date?: string | null;
+  venue?: string | null;
+  city?: string | null;
+  state?: string | null;
+  country?: string | null;
+  rating?: number;
+  recordingCount?: number;
 }
 
 export interface UserDataBackupV3 {
