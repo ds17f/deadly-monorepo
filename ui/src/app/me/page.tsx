@@ -1,12 +1,7 @@
-import TabPlaceholder from "./_components/TabPlaceholder";
+import RecentTab from "./_components/RecentTab";
 
-// Recent is the default tab and lives at the /me index — no redirect, so
-// this works cleanly under static export. Other tabs are sub-routes.
+// Recent is the default tab and lives at the /me index. The content is a
+// client shell that fetches fresh data from /api/user/recent on mount.
 export default function MePage() {
-  return (
-    <TabPlaceholder
-      title="Recent shows"
-      copy="Play something on any device to fill this in."
-    />
-  );
+  return <RecentTab />;
 }

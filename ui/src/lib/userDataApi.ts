@@ -4,6 +4,7 @@ import type {
   ShowReview,
   PlaybackPosition,
   UserSettings,
+  RecentShow,
 } from "@/types/userdata";
 
 const API_BASE = "/api/user";
@@ -76,4 +77,12 @@ export function updateSettings(settings: UserSettings): Promise<void> {
 
 export function addRecentShow(showId: string): Promise<void> {
   return apiFetch(`/recent/${showId}`, { method: "PUT" });
+}
+
+// Returns the user's recent shows, newest first. Bare records (showId +
+// timestamps + play count) — display metadata (venue/city) is derived
+// client-side for now; swap to an enriched endpoint when the API gains a
+// show-metadata source.
+export function fetchRecentShows(): Promise<RecentShow[]> {
+  return apiFetch<RecentShow[]>("/recent");
 }
