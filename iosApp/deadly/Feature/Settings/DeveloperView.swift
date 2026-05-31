@@ -111,6 +111,11 @@ struct DeveloperView: View {
                 }
                 .disabled(syncInFlight)
 
+                Button(syncInFlight ? "Pushing…" : "Push all local data") {
+                    pushAll()
+                }
+                .disabled(syncInFlight)
+
                 if !syncLog.isEmpty {
                     Button("Clear log") { syncLog.removeAll() }
                         .foregroundStyle(.secondary)
@@ -222,6 +227,29 @@ struct DeveloperView: View {
             var lines: [String] = ["[\(ts)] Push: \(results.count) entries"]
             if results.isEmpty {
                 lines.append("  (outbox empty)")
+            } else {
+                for r in results {
+                    let status = r.success ? "OK" : "FAIL"
+                    var line = "  [\(r.kind)] \(r.operation) \(r.refId) → \(status)"
+                    if let err = r.error { line += " (\(err))" }
+                    lines.append(line)
+                }
+            }
+            syncLog.insert(contentsOf: lines, at: 0)
+            syncInFlight = false
+        }
+    }
+
+    private func pushAll() {
+        guard !syncInFlight else { return }
+        syncInFlight = true
+        let svc = container.favoritesPushService
+        Task {
+            let ts = timestamp()
+            let results = await svc.enqueueAllLocalAndFlush()
+            var lines: [String] = ["[\(ts)] Push all: \(results.count) entries"]
+            if results.isEmpty {
+                lines.append("  (nothing local)")
             } else {
                 for r in results {
                     let status = r.success ? "OK" : "FAIL"

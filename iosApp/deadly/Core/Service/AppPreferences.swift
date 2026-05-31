@@ -4,6 +4,7 @@ import Foundation
 final class AppPreferences {
     private static let includeShowsWithoutRecordingsKey = "include_shows_without_recordings"
     private static let forceOnlineKey = "force_online"
+    private static let localBackfilledV1Key = "local_backfilled_v1"
     private static let favoritesDisplayModeKey = "favorites_display_mode"
     private static let legacyLibraryDisplayModeKey = "library_display_mode"
     private static let eqEnabledKey = "eq_enabled"
@@ -76,6 +77,12 @@ final class AppPreferences {
 
     var forceOnline: Bool {
         didSet { UserDefaults.standard.set(forceOnline, forKey: Self.forceOnlineKey) }
+    }
+
+    /// Set once local data (favorites + top recents) has been pushed to the
+    /// server, so the one-time startup backfill doesn't re-run.
+    var localBackfilledV1: Bool {
+        didSet { UserDefaults.standard.set(localBackfilledV1, forKey: Self.localBackfilledV1Key) }
     }
 
     var favoritesDisplayMode: String {
@@ -192,6 +199,7 @@ final class AppPreferences {
             Self.includeShowsWithoutRecordingsKey: false,
             Self.useBetaModeKey: false,
             Self.forceOnlineKey: false,
+            Self.localBackfilledV1Key: false,
             Self.favoritesDisplayModeKey: "LIST",
             Self.eqEnabledKey: false,
             Self.eqPresetKey: "flat",
@@ -221,6 +229,7 @@ final class AppPreferences {
             serverEnvironment = UserDefaults.standard.bool(forKey: Self.useBetaShareLinksKey) ? "beta" : "prod"
         }
         forceOnline = UserDefaults.standard.bool(forKey: Self.forceOnlineKey)
+        localBackfilledV1 = UserDefaults.standard.bool(forKey: Self.localBackfilledV1Key)
         // Read new key first, fall back to legacy key for migration
         favoritesDisplayMode = UserDefaults.standard.string(forKey: Self.favoritesDisplayModeKey)
             ?? UserDefaults.standard.string(forKey: Self.legacyLibraryDisplayModeKey)

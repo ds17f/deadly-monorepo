@@ -93,6 +93,7 @@ final class AppContainer {
                     outbox: SyncOutboxDAO(database: db),
                     favoritesDAO: FavoritesDAO(database: db),
                     favoriteSongDAO: FavoriteSongDAO(database: db),
+                    recentShowDAO: RecentShowDAO(database: db),
                     apiClient: userSync,
                     authService: auth
                 )
@@ -191,6 +192,17 @@ final class AppContainer {
                 )
             }
             recentShowsService = recentService
+
+            // One-time startup backfill: push all local data (favorites +
+            // top recents) so a freshly-synced web profile isn't empty.
+            // Best-effort — enqueued rows flush once signed in; the flag stops
+            // it re-running. The same routine backs a manual "Sync now".
+            MainActor.assumeIsolated {
+                if !prefs.localBackfilledV1 {
+                    prefs.localBackfilledV1 = true
+                    Task { await pushSvc.enqueueAllLocalAndFlush() }
+                }
+            }
 
             // HomeService depends on RecentShowsService
             homeService = HomeServiceImpl(

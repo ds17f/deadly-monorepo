@@ -14,6 +14,7 @@ final class FavoritesPushService {
     private let outbox: SyncOutboxDAO
     private let favoritesDAO: FavoritesDAO
     private let favoriteSongDAO: FavoriteSongDAO
+    private let recentShowDAO: RecentShowDAO
     private let apiClient: UserSyncAPIClient
     private let authService: AuthService
     /// Set by AppContainer after both services are constructed. Used to fire
@@ -25,14 +26,39 @@ final class FavoritesPushService {
         outbox: SyncOutboxDAO,
         favoritesDAO: FavoritesDAO,
         favoriteSongDAO: FavoriteSongDAO,
+        recentShowDAO: RecentShowDAO,
         apiClient: UserSyncAPIClient,
         authService: AuthService
     ) {
         self.outbox = outbox
         self.favoritesDAO = favoritesDAO
         self.favoriteSongDAO = favoriteSongDAO
+        self.recentShowDAO = recentShowDAO
         self.apiClient = apiClient
         self.authService = authService
+    }
+
+    /// Enqueue every local favorite (shows + songs) plus the top recents,
+    /// then flush. Backs both the one-time startup backfill and a manual
+    /// "Sync now". Idempotent for favorites (server upserts by natural key);
+    /// recents re-announce, which is cheap and self-corrects.
+    @discardableResult
+    func enqueueAllLocalAndFlush() async -> [PushResult] {
+        let shows = (try? favoritesDAO.fetchAll()) ?? []
+        for show in shows {
+            enqueueRow(kind: SyncOutboxRecord.Kind.favoriteShow, refId: show.showId)
+        }
+        let songs = (try? favoriteSongDAO.fetchAll()) ?? []
+        for song in songs {
+            if let id = song.id {
+                enqueueRow(kind: SyncOutboxRecord.Kind.favoriteSong, refId: String(id))
+            }
+        }
+        let recents = (try? recentShowDAO.fetchRecent(limit: 4)) ?? []
+        for record in recents {
+            enqueueRow(kind: SyncOutboxRecord.Kind.recent, refId: record.showId)
+        }
+        return await flushPending()
     }
 
     // MARK: - Public API
@@ -54,12 +80,12 @@ final class FavoritesPushService {
         enqueue(kind: SyncOutboxRecord.Kind.recent, refId: showId)
     }
 
+    private func enqueueRow(kind: String, refId: String) {
+        try? outbox.enqueue(kind: kind, refId: refId)
+    }
+
     private func enqueue(kind: String, refId: String) {
-        do {
-            try outbox.enqueue(kind: kind, refId: refId)
-        } catch {
-            return
-        }
+        enqueueRow(kind: kind, refId: refId)
         Task { [weak self] in
             _ = await self?.flushPending()
         }
