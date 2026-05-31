@@ -141,6 +141,24 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
   upload local state" dev button — disaster recovery, not the steady-state
   path.
 
+**Backfill gap (surfaced 2026-05-31).** Granular push only fires on *new*
+actions, so anything already in the local store before sync existed — and
+recents prior to issue 4 — was never pushed. A user with years of local
+favorites sees an empty web profile until they re-toggle. Options to close
+it:
+- **(a) Bulk push** `PUT /api/user/sync` from the local V3 backup on
+  sign-in (or a dev button). One call backfills *everything* — favorites,
+  recents (with real timestamps, unlike the announce endpoint), reviews.
+  Downside: it's last-write-wins-wholesale, so it can clobber server-newer
+  data — fine for the dev/empty-server case, risky multi-device.
+- **(b) Enqueue-all** existing local rows into the outbox once, letting the
+  granular push drain them (LWW per row via `updatedAt`). Safer, but
+  recents still can't be backfilled faithfully (announce endpoint has no
+  client timestamp).
+- Recommended: (a) gated to "server has no/less data" or behind an
+  explicit one-time "upload my library" action, since the realistic case
+  is phone-is-source-of-truth → mostly-empty server.
+
 ### 3. Granular push for favorite shows + songs
 - iOS + Android: every favorite/unfavorite call site additionally fires:
   - Add: `PUT /api/user/favorites/shows/:showId` (or `/songs`) with the
@@ -165,7 +183,15 @@ V3 types of record (defined in `api/src/db/userdata.ts`):
     now metadata only), with additive dedupe migrations (Android v24→25,
     iOS v14).
 
-### 4. Granular push for recent shows (recents-only — position cut)
+### 4. Granular push for recent shows (recents-only — position cut) — LANDED
+- **Landed both platforms** (Android `443d56f0`, iOS `03d19780`; iOS build
+  verified on the remote Mac). `recordShowPlay` now enqueues a
+  `KIND_RECENT` outbox row (refId = showId) flushed alongside the favorite
+  kinds; `UserSyncService.putRecent` / `UserSyncAPIClient.putRecent` →
+  `PUT /api/user/recent/:showId`.
+- **Announce-on-play only (v0)**: no recent tombstone/clear propagation,
+  and **no backfill** of pre-existing local recents (the endpoint takes no
+  client timestamp). See the backfill note under issue 2.
 - Recent: `PUT /api/user/recent/:showId`. Server already tracks
   `last_played_at` / `total_play_count`, so we just announce the play; no
   client-side counter math.
