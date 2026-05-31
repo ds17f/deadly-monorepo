@@ -110,13 +110,18 @@ final class AppContainer {
             let favSvc = FavoritesServiceImpl(
                 database: db,
                 favoritesDAO: FavoritesDAO(database: db),
+                favoriteSongDAO: FavoriteSongDAO(database: db),
                 showReviewDAO: ShowReviewDAO(database: db),
                 showRepository: showRepo,
-                reviewService: revService,
                 analyticsService: analytics
             )
             favoritesService = favSvc
-            MainActor.assumeIsolated { favSvc.favoritesPushService = pushSvc }
+            MainActor.assumeIsolated {
+                favSvc.favoritesPushService = pushSvc
+                // Start observation after construction so the @MainActor task
+                // is launched in a defined place rather than inside init.
+                favSvc.startObserving()
+            }
             let applySvc = MainActor.assumeIsolated {
                 UserSyncApplyService(
                     apiClient: userSync,
@@ -128,7 +133,6 @@ final class AppContainer {
             }
             userSyncApplyService = applySvc
             MainActor.assumeIsolated { pushSvc.userSyncApplyService = applySvc }
-            MainActor.assumeIsolated { applySvc.favoritesService = favSvc }
             favoritesImportExportService = FavoritesImportExportService(
                 favoritesDAO: FavoritesDAO(database: db),
                 showDAO: ShowDAO(database: db),

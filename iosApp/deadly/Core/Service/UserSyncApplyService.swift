@@ -17,10 +17,6 @@ final class UserSyncApplyService {
     private let favoriteSongDAO: FavoriteSongDAO
     private let showDAO: ShowDAO
     private let authService: AuthService
-    /// Set by AppContainer after both services are constructed. Used to nudge
-    /// the favorites screen to re-fetch after we land remote changes — the
-    /// service holds an imperative cache, not a GRDB observation.
-    weak var favoritesService: FavoritesServiceImpl?
 
     /// Serialize concurrent applies so two triggers (foreground + post-push)
     /// don't race.
@@ -84,9 +80,9 @@ final class UserSyncApplyService {
         do {
             let result = try await task.value
             print("[UserSyncApply] pull[\(reason)] ok: \(result)")
-            if result.favoriteShowsApplied > 0 || result.favoriteSongsApplied > 0 {
-                favoritesService?.refreshWithLastSort()
-            }
+            // FavoritesServiceImpl observes the underlying tables — the UI
+            // re-publishes automatically on apply writes. No explicit refresh
+            // needed here (was the imperative-cache band-aid).
             return .success(result)
         } catch {
             print("[UserSyncApply] pull[\(reason)] failed: \(error.localizedDescription)")
