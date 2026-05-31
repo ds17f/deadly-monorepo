@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { fetchRecentShows } from "@/lib/userDataApi";
 import type { RecentShow } from "@/types/userdata";
-import ShowRow from "./ShowRow";
-import { formatShowDate, formatLocation } from "./showFormat";
+import ShowRow from "@/components/show/ShowRow";
+import { formatShowDate, formatLocation } from "@/components/show/showFormat";
 
 type LoadState =
   | { status: "loading" }
