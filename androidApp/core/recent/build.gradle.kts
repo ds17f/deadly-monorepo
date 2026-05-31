@@ -45,6 +45,8 @@ dependencies {
     implementation(project(":core:database"))
     implementation(project(":core:domain"))
     implementation(project(":core:media"))
+    // Server sync: announce recent plays via the outbox push service (issue 4)
+    implementation(project(":core:api:usersync"))
     
     // Kotlin Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")

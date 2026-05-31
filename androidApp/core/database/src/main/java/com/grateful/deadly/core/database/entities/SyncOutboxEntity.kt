@@ -31,5 +31,7 @@ data class SyncOutboxEntity(
         /** refId is the local favorite_songs row id (Long.toString()). The
          *  flusher reads showId/trackTitle off the row at push time. */
         const val KIND_FAVORITE_SONG = "favorite_song"
+        /** refId is the showId. Announces a play; the server stamps the time. */
+        const val KIND_RECENT = "recent"
     }
 }

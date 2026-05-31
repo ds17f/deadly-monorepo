@@ -8,4 +8,7 @@ interface UserSyncService {
     /** Delete by natural key (showId + trackTitle). Server resolves the row;
      *  mobile clients don't know the autoincrement id. */
     suspend fun deleteFavoriteSong(showId: String, trackTitle: String): Result<Unit>
+    /** Announce a play of [showId]. The server stamps last_played_at and
+     *  bumps the play count; no client timestamp is sent. */
+    suspend fun putRecent(showId: String): Result<Unit>
 }

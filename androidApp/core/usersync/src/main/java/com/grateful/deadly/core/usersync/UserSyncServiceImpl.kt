@@ -169,4 +169,31 @@ class UserSyncServiceImpl @Inject constructor(
             Result.failure(e)
         }
     }
+
+    override suspend fun putRecent(showId: String): Result<Unit> {
+        val token = authService.getAuthToken()
+            ?: return Result.failure(IllegalStateException("Not signed in"))
+        val baseUrl = appPreferences.apiBaseUrl
+
+        return try {
+            withContext(Dispatchers.IO) {
+                val request = Request.Builder()
+                    .url("$baseUrl/api/user/recent/$showId")
+                    .addHeader("Authorization", "Bearer $token")
+                    // Server takes no body — it just announces the play.
+                    .put("{}".toRequestBody("application/json".toMediaType()))
+                    .build()
+                httpClient.newCall(request).execute().use { response ->
+                    if (!response.isSuccessful) {
+                        val bodyText = response.body?.string().orEmpty()
+                        throw RuntimeException("HTTP ${response.code}: $bodyText")
+                    }
+                }
+            }
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Log.w(TAG, "putRecent failed for $showId", e)
+            Result.failure(e)
+        }
+    }
 }

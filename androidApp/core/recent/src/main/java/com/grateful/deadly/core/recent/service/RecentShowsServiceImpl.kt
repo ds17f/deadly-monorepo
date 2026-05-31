@@ -2,6 +2,7 @@ package com.grateful.deadly.core.recent.service
 
 import android.util.Log
 import com.grateful.deadly.core.api.recent.RecentShowsService
+import com.grateful.deadly.core.api.usersync.FavoritesPushService
 import com.grateful.deadly.core.database.dao.RecentShowDao
 import com.grateful.deadly.core.database.entities.RecentShowEntity
 import com.grateful.deadly.core.domain.repository.ShowRepository
@@ -49,6 +50,7 @@ class RecentShowsServiceImpl @Inject constructor(
     @AppDatabase private val recentShowDao: RecentShowDao,
     private val showRepository: ShowRepository,
     private val mediaControllerRepository: MediaControllerRepository,
+    private val favoritesPushService: FavoritesPushService,
     @Named("RecentShowsApplicationScope") private val applicationScope: CoroutineScope
 ) : RecentShowsService {
     
@@ -225,6 +227,9 @@ class RecentShowsServiceImpl @Inject constructor(
                 recentShowDao.insert(newEntity)
                 Log.d(TAG, "Inserted new show $showId")
             }
+            // Announce the play to the server (issue 4). Fire-and-forget via
+            // the outbox; this chokepoint already fires once per show-session.
+            favoritesPushService.enqueueAndPushRecent(showId)
         } catch (e: Exception) {
             Log.e(TAG, "Failed to record show play for $showId", e)
         }

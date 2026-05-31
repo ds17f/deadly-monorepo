@@ -47,6 +47,10 @@ class FavoritesPushServiceImpl @Inject constructor(
         enqueueAndFlush(SyncOutboxEntity.KIND_FAVORITE_SONG, localId.toString())
     }
 
+    override fun enqueueAndPushRecent(showId: String) {
+        enqueueAndFlush(SyncOutboxEntity.KIND_RECENT, showId)
+    }
+
     private fun enqueueAndFlush(kind: String, refId: String) {
         scope.launch {
             try {
@@ -72,6 +76,7 @@ class FavoritesPushServiceImpl @Inject constructor(
             val results = mutableListOf<PushResult>()
             results += flushKind(SyncOutboxEntity.KIND_FAVORITE_SHOW)
             results += flushKind(SyncOutboxEntity.KIND_FAVORITE_SONG)
+            results += flushKind(SyncOutboxEntity.KIND_RECENT)
             if (results.any { it.success && it.operation != "NOOP" }) {
                 syncCoordinator.triggerPull("after_push_flush")
             }
@@ -82,7 +87,8 @@ class FavoritesPushServiceImpl @Inject constructor(
     override suspend fun pendingCount(): Int =
         try {
             outbox.pendingCount(SyncOutboxEntity.KIND_FAVORITE_SHOW) +
-                outbox.pendingCount(SyncOutboxEntity.KIND_FAVORITE_SONG)
+                outbox.pendingCount(SyncOutboxEntity.KIND_FAVORITE_SONG) +
+                outbox.pendingCount(SyncOutboxEntity.KIND_RECENT)
         } catch (_: Exception) { 0 }
 
     private suspend fun flushKind(kind: String): List<PushResult> {
@@ -103,6 +109,7 @@ class FavoritesPushServiceImpl @Inject constructor(
         when (entry.kind) {
             SyncOutboxEntity.KIND_FAVORITE_SHOW -> pushFavoriteShow(entry)
             SyncOutboxEntity.KIND_FAVORITE_SONG -> pushFavoriteSong(entry)
+            SyncOutboxEntity.KIND_RECENT -> pushRecent(entry)
             else -> {
                 // Unknown kind — drop it so the queue doesn't get stuck.
                 outbox.delete(entry.id)
@@ -175,6 +182,13 @@ class FavoritesPushServiceImpl @Inject constructor(
             userSyncService.putFavoriteSong(dto)
                 .fold({ success(entry, "PUT") }, { failure(entry, "PUT", it.message ?: it::class.simpleName ?: "error") })
         }
+    }
+
+    // Recents are announce-on-play: refId is the showId and the server stamps
+    // the time, so there's no local row to read or tombstone to honor (v0).
+    private suspend fun pushRecent(entry: SyncOutboxEntity): PushResult {
+        return userSyncService.putRecent(entry.refId)
+            .fold({ success(entry, "PUT") }, { failure(entry, "PUT", it.message ?: it::class.simpleName ?: "error") })
     }
 
     private suspend fun success(entry: SyncOutboxEntity, op: String): PushResult {

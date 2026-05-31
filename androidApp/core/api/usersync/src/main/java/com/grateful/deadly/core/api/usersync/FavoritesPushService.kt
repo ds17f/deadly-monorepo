@@ -12,6 +12,8 @@ interface FavoritesPushService {
     fun enqueueAndPush(showId: String)
     /** Enqueue a favorite-song change by local row id. */
     fun enqueueAndPushFavoriteSong(localId: Long)
+    /** Enqueue a recent-show play (refId is the showId). Issue 4. */
+    fun enqueueAndPushRecent(showId: String)
     suspend fun flushPending(): List<PushResult>
     suspend fun pendingCount(): Int
 }
