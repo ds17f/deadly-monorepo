@@ -1,5 +1,6 @@
 import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
+import { getShowMeta } from "../showCatalog.js";
 import {
   getFavoriteShows, upsertFavoriteShow, deleteFavoriteShow,
   getFavoriteSongs, upsertFavoriteSong, deleteFavoriteSongByKey,
@@ -165,7 +166,13 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     schema: { tags: ["user"], summary: "List recent shows" },
     preHandler: requireAuth,
   }, async (request) => {
-    return getRecentShows(request.user!.id);
+    // Enrich each recent with show display metadata (venue/city/date) from
+    // the in-memory catalog. Bare record fields are preserved; meta is
+    // merged in when known (null/omitted for shows not in the index).
+    return getRecentShows(request.user!.id).map((r) => {
+      const meta = getShowMeta(r.showId);
+      return meta ? { ...r, ...meta } : r;
+    });
   });
 
   app.put<{ Params: { showId: string } }>(

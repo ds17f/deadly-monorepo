@@ -79,6 +79,12 @@ api-build:
 api-typecheck:
 	cd api && npm run typecheck
 
+# Build the compact show-metadata index the API loads at boot to enrich
+# user-data responses (recents/favorites) with venue/city/date. Reads the
+# static show JSON in ui/data/shows; writes into the api-data volume.
+api-show-index:
+	node api/scripts/build-show-index.mjs ui/data/shows api-data/show-index.json
+
 api-test:
 	cd api && npm test
 

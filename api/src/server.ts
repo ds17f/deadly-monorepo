@@ -5,6 +5,7 @@ import { closeRedis } from "./db/redis.js";
 import { startAnalyticsSchedules } from "./routes/analytics.js";
 import { startTrendingSchedules } from "./routes/trending.js";
 import { startBetaSyncSchedule } from "./routes/beta.js";
+import { loadShowCatalog } from "./showCatalog.js";
 
 const HOST = process.env.HOST ?? "0.0.0.0";
 const PORT = Number(process.env.PORT ?? 3001);
@@ -13,6 +14,8 @@ const app = buildApp();
 
 async function start() {
   try {
+    const shows = loadShowCatalog();
+    app.log.info(`show catalog loaded: ${shows} shows`);
     await app.listen({ host: HOST, port: PORT });
     startAnalyticsSchedules();
     startTrendingSchedules();
