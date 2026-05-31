@@ -176,13 +176,24 @@ Realistic web v1 mirrors a subset of iOS's
   still wanted (v1): "Pick up where you left off" (recents), "Your
   favorites". Future: recommendations, "more like…".
 
-### 6. Settings page
-- Display name (read-only for v1 unless trivial to make editable).
-- Sign out.
-- "Delete my account" with a confirm. Hits whatever the existing account
-  surface supports; if there's no DELETE endpoint, file a separate issue.
-- Anything else lives under iOS Settings doesn't necessarily translate;
-  resist scope creep.
+### 6. Settings page — LANDED
+- `/me/settings` (`SettingsTab`): Account section (display name + email,
+  read-only from session) with **Sign out**, and a **Delete account**
+  danger zone.
+- **Delete account** is confirmation-gated: a "Delete account…" button
+  opens an inline confirm where you must **type `DELETE`** before the
+  destructive button enables — not one-click. On confirm it calls
+  `DELETE /api/user/account`, signs out, and returns home.
+- **Tombstone, not hard-delete** (per decision): `accounts.deleted_at` is
+  set; the row + user-data are retained but every auth getter filters
+  `deleted_at IS NULL`, so a deleted account is rejected everywhere (401).
+  **Signing back in reactivates** the account (adapter clears the
+  tombstone) — avoids the UNIQUE-email collision and is a friendly
+  soft-delete. Verified the create→delete→reject→reactivate lifecycle.
+- **Follow-ups:** (1) a TTL/cron purge of long-tombstoned accounts and
+  their orphaned user-data (hard delete). (2) editable display name. (3)
+  the dev (credentials) sign-in path doesn't run the adapter's
+  `linkAccount`, so dev reactivation isn't wired — dev-only, fine for now.
 
 ### 7. Anonymous event tracking on `/me` surfaces
 - Cheap, no PII, no cookie banner. Events worth tracking:
