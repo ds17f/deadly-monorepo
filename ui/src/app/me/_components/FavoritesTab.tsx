@@ -38,14 +38,14 @@ export default function FavoritesTab() {
 
   if (state.status === "loading") {
     return (
-      <ul className="space-y-2">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <li
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <div
             key={i}
-            className="h-14 animate-pulse rounded-lg border border-white/10 bg-deadly-surface"
+            className="h-[76px] animate-pulse rounded-xl border border-white/10 bg-deadly-surface"
           />
         ))}
-      </ul>
+      </div>
     );
   }
 
@@ -72,22 +72,20 @@ export default function FavoritesTab() {
   }
 
   return (
-    <ul className="space-y-2">
-      {state.shows.map((show) => {
-        const primary = show.venue ?? formatShowDate(show);
-        const secondary = [
-          show.venue ? formatShowDate(show) : null,
-          formatLocation(show),
-          show.isPinned ? "Pinned" : null,
-        ]
-          .filter(Boolean)
-          .join(" · ");
-        return (
-          <li key={show.showId}>
-            <ShowRow showId={show.showId} primary={primary} secondary={secondary} />
-          </li>
-        );
-      })}
+    <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {state.shows.map((show) => (
+        <li key={show.showId}>
+          <ShowRow
+            showId={show.showId}
+            image={show.image}
+            bestRecordingId={show.bestRecordingId}
+            date={formatShowDate(show)}
+            location={formatLocation(show)}
+            venue={show.venue}
+            pinned={show.isPinned}
+          />
+        </li>
+      ))}
     </ul>
   );
 }

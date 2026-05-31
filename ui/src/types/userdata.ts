@@ -16,6 +16,8 @@ export interface FavoriteShow {
   city?: string | null;
   state?: string | null;
   country?: string | null;
+  image?: string | null;
+  bestRecordingId?: string | null;
 }
 
 export interface FavoriteTrack {
@@ -79,6 +81,8 @@ export interface RecentShow {
   country?: string | null;
   rating?: number;
   recordingCount?: number;
+  image?: string | null;
+  bestRecordingId?: string | null;
 }
 
 export interface UserDataBackupV3 {
