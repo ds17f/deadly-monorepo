@@ -40,7 +40,12 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     schema: { tags: ["user"], summary: "List favorite shows" },
     preHandler: requireAuth,
   }, async (request) => {
-    return getFavoriteShows(request.user!.id);
+    // Enrich with show display metadata (venue/city/date) from the catalog,
+    // same as recents. Additive — mobile consumers ignore the extra fields.
+    return getFavoriteShows(request.user!.id).map((f) => {
+      const meta = getShowMeta(f.showId);
+      return meta ? { ...f, ...meta } : f;
+    });
   });
 
   app.put<{ Params: { showId: string }; Body: Partial<FavoriteShowV3> }>(
