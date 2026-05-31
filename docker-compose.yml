@@ -30,6 +30,7 @@ services:
       - HOST=0.0.0.0
       - LOG_LEVEL=${LOG_LEVEL:-info}
       - USERS_DB_PATH=/app/data/users.db
+      - SHOW_INDEX_PATH=/app/show-index.json
       - CORS_ORIGIN=${CORS_ORIGIN:-*}
       - AUTH_SECRET=${AUTH_SECRET}
       - AUTH_URL=${AUTH_URL}

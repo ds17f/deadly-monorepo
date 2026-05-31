@@ -15,10 +15,14 @@ import path from "node:path";
 const showsDir = process.argv[2] ?? "ui/data/shows";
 const outFile = process.argv[3] ?? "api-data/show-index.json";
 
+// Non-fatal if the data isn't present: write an empty index so the image
+// build (and boot) still succeed — the API just returns bare records and
+// the catalog can be regenerated once data is available.
 if (!fs.existsSync(showsDir)) {
-  console.error(`[build-show-index] shows dir not found: ${showsDir}`);
-  console.error("  Populate it first (e.g. make ui-data / make data-download).");
-  process.exit(1);
+  console.warn(`[build-show-index] shows dir not found: ${showsDir} — writing empty index.`);
+  fs.mkdirSync(path.dirname(outFile), { recursive: true });
+  fs.writeFileSync(outFile, "{}");
+  process.exit(0);
 }
 
 const files = fs.readdirSync(showsDir).filter((f) => f.endsWith(".json"));
