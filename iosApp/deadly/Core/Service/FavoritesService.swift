@@ -66,16 +66,24 @@ final class FavoritesServiceImpl {
 
         observationTasks.append(Task { @MainActor [weak self] in
             guard let self else { return }
-            for await records in self.database.observe(showsObs) {
-                self.rawShows = self.enrichShows(records: records)
-                self.republishShows()
+            do {
+                for try await records in self.database.observe(showsObs) {
+                    self.rawShows = self.enrichShows(records: records)
+                    self.republishShows()
+                }
+            } catch {
+                // Observation ended on a DB error; nothing to recover.
             }
         })
         observationTasks.append(Task { @MainActor [weak self] in
             guard let self else { return }
-            for await records in self.database.observe(songsObs) {
-                self.rawSongs = self.enrichSongs(records: records)
-                self.republishSongs()
+            do {
+                for try await records in self.database.observe(songsObs) {
+                    self.rawSongs = self.enrichSongs(records: records)
+                    self.republishSongs()
+                }
+            } catch {
+                // Observation ended on a DB error; nothing to recover.
             }
         })
     }
