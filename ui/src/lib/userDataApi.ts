@@ -56,6 +56,12 @@ export function fetchFavoriteShows(): Promise<FavoriteShow[]> {
   return apiFetch<FavoriteShow[]>("/favorites/shows");
 }
 
+// Soft-deletes (tombstones) the current account. Caller should sign out
+// afterward. Signing in again reactivates the account.
+export function deleteAccount(): Promise<void> {
+  return apiFetch("/account", { method: "DELETE" });
+}
+
 export function updateReview(showId: string, review: Omit<ShowReview, "showId">): Promise<void> {
   return apiFetch(`/reviews/${showId}`, {
     method: "PUT",

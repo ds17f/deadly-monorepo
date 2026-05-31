@@ -1,10 +1,5 @@
-import TabPlaceholder from "../_components/TabPlaceholder";
+import SettingsTab from "../_components/SettingsTab";
 
 export default function SettingsPage() {
-  return (
-    <TabPlaceholder
-      title="Settings"
-      copy="Account settings will live here."
-    />
-  );
+  return <SettingsTab />;
 }
