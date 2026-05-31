@@ -32,6 +32,16 @@ endpoints that already work."
 - **Home strategy**: at `/`, replace the marketing/landing home with a
   personalized home for signed-in users. Signed-out users see the
   current home unchanged. Matches Spotify/YouTube Music behavior.
+- **`/me` is the user's profile, not a library index.** (Added
+  2026-05-31.) `/me` = "Me": identity + social. Top level is the person —
+  avatar/profile picture, screen name, and **social** (friends/contacts,
+  and privacy controls over who can see and hear what you're listening
+  to). The library surfaces — Recent, Shows, Favorites — live *underneath*
+  the profile as sub-sections, not as the primary thing. Route shape:
+  `/me` (profile landing) · `/me/recent` · `/me/favorites` · `/me/settings`.
+  Social/contacts have **no backend yet** — scaffold the profile shell
+  with clearly-labeled "coming soon" placeholders; design that domain
+  (friend model, presence/listening-privacy model) as its own effort.
 - **Dynamic, endpoint-hydrated shells — not static rendering.** (Revised
   2026-05-31.) The original "no new server endpoints / consume only the
   existing surface" rule is dropped. `/me` is inherently dynamic per-user
@@ -74,11 +84,23 @@ Realistic web v1 mirrors a subset of iOS's
 
 ## Work breakdown
 
-### 1. Profile route shell — `/me` with nav
-- Auth-gated layout at `ui/src/app/me/`.
-- Tabs: Recent / Favorites / Settings. Pure layout, no data wiring.
-- `UserMenu.tsx` gets a "Your library" (or similar) link to `/me`.
-- Redirect signed-out users to `/signin?callbackUrl=/me`.
+### 1. Profile route shell — `/me` with nav — LANDED (restructured 2026-05-31)
+- Auth-gated layout at `ui/src/app/me/` (client gate mirrors `/admin`,
+  redirects signed-out users to `/signin?callbackUrl=/me`).
+- Identity header (avatar + display name from the session) + sub-nav:
+  **Profile / Recent / Favorites / Settings**.
+- `/me` is the **Profile** landing (identity + social placeholders).
+  `/me/recent`, `/me/favorites`, `/me/settings` are the sub-sections.
+- `UserMenu.tsx` has a "Your library" link to `/me`.
+
+### 1b. Profile & social (NEW — backend to design)
+- Profile landing content: profile picture upload, editable screen name,
+  and social — friends/contacts (add/remove) and listening-privacy
+  controls (who can see / hear what you're playing).
+- None of this has a backend yet. v1 = honest "coming soon" placeholders
+  showing the real session avatar + name. The social domain (friend
+  graph, presence, privacy model) is its own design + API effort; it also
+  overlaps the connect/WS presence work (who's listening to what).
 
 ### 2. Recent shows on web — v1 LANDED (d50b7ea6)
 - `GET /api/user/recent` → list of recent shows. `fetchRecentShows()` in
