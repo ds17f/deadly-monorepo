@@ -186,7 +186,8 @@ final class AppContainer {
                 RecentShowsServiceImpl(
                     recentShowDAO: RecentShowDAO(database: db),
                     showRepository: showRepo,
-                    streamPlayer: player
+                    streamPlayer: player,
+                    favoritesPushService: pushSvc
                 )
             }
             recentShowsService = recentService

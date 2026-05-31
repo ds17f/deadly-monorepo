@@ -19,6 +19,8 @@ struct SyncOutboxRecord: Codable, Sendable, Equatable, FetchableRecord, MutableP
         /// server identifies songs by natural key (showId + trackTitle), which
         /// the flusher reads off the row at push time.
         static let favoriteSong = "favorite_song"
+        /// refId is the showId. Announces a play; the server stamps the time.
+        static let recent = "recent"
     }
 
     mutating func didInsert(_ inserted: InsertionSuccess) {

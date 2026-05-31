@@ -49,6 +49,11 @@ final class FavoritesPushService {
         enqueue(kind: SyncOutboxRecord.Kind.favoriteSong, refId: String(localId))
     }
 
+    /// Enqueue a recent-show play (refId is the showId). Fire-and-forget.
+    func enqueueAndPushRecent(showId: String) {
+        enqueue(kind: SyncOutboxRecord.Kind.recent, refId: showId)
+    }
+
     private func enqueue(kind: String, refId: String) {
         do {
             try outbox.enqueue(kind: kind, refId: refId)
@@ -76,6 +81,7 @@ final class FavoritesPushService {
         var results: [PushResult] = []
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.favoriteShow))
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.favoriteSong))
+        results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.recent))
 
         // Reconcile after pushing — the server may have learned about changes
         // from other devices during our window. Only fire when something
@@ -115,7 +121,8 @@ final class FavoritesPushService {
     func pendingCount() -> Int {
         let shows = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.favoriteShow)) ?? 0
         let songs = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.favoriteSong)) ?? 0
-        return shows + songs
+        let recents = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.recent)) ?? 0
+        return shows + songs + recents
     }
 
     // MARK: - Internals
@@ -131,8 +138,21 @@ final class FavoritesPushService {
             return await pushFavoriteShow(refId: entry.refId)
         case SyncOutboxRecord.Kind.favoriteSong:
             return await pushFavoriteSong(refId: entry.refId)
+        case SyncOutboxRecord.Kind.recent:
+            return await pushRecent(refId: entry.refId)
         default:
             return .success(operation: "NOOP")
+        }
+    }
+
+    // Recents are announce-on-play: refId is the showId and the server stamps
+    // the time, so there's no local row to read or tombstone to honor (v0).
+    private func pushRecent(refId: String) async -> FlushOutcome {
+        do {
+            try await apiClient.putRecent(showId: refId)
+            return .success(operation: "PUT")
+        } catch {
+            return .failure(operation: "PUT", error: error.localizedDescription)
         }
     }
 

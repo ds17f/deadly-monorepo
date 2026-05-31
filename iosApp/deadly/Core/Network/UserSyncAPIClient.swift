@@ -152,6 +152,17 @@ struct UserSyncAPIClient {
         try ensureOK(data: data, response: response)
     }
 
+    /// Announce a play. The server stamps last_played_at and bumps the count;
+    /// no client timestamp or body is sent.
+    func putRecent(showId: String) async throws {
+        let (data, response) = try await request(
+            method: "PUT",
+            path: "/api/user/recent/\(showId)",
+            body: nil
+        )
+        try ensureOK(data: data, response: response)
+    }
+
     func deleteFavoriteShow(showId: String) async throws {
         let (data, response) = try await request(
             method: "DELETE",
