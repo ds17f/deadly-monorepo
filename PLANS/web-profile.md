@@ -62,6 +62,17 @@ endpoints that already work."
   expose enriched recents/favorites or a generic show lookup). This is
   shared infrastructure for Recent *and* Favorites — build it before the
   Favorites list needs nice display.
+  - **Implemented 2026-05-31.** `api/src/showCatalog.ts` loads a compact
+    index (`make api-show-index` distills `ui/data/shows/*.json` →
+    `api-data/show-index.json`, ~414 KB / 2313 shows) into an in-memory
+    Map at boot; `GET /api/user/recent` is enriched with
+    date/venue/city/state. The catalog is the reusable source — favorites
+    enrichment will reuse `getShowMeta`.
+  - **Follow-up:** wire `make api-show-index` into the deploy pipeline
+    (it's a manual step today; the index must exist in the `api-data`
+    volume before the API boots, else recents render bare). Also: a
+    generic batch lookup (`GET /api/shows?ids=`) if a consumer needs
+    arbitrary showIds rather than a pre-joined list.
 - **V3 schema is the contract.** Web client types mirror the server's
   `FavoriteShowV3`, `RecentShowV3`, etc. No web-flavored variants.
 
@@ -99,8 +110,14 @@ Realistic web v1 mirrors a subset of iOS's
   controls (who can see / hear what you're playing).
 - None of this has a backend yet. v1 = honest "coming soon" placeholders
   showing the real session avatar + name. The social domain (friend
-  graph, presence, privacy model) is its own design + API effort; it also
-  overlaps the connect/WS presence work (who's listening to what).
+  graph, presence, privacy model) is its own design + API effort.
+- **"See" before "hear".** The privacy control splits in two: *seeing*
+  what a friend is/was playing (friends + basic activity) can ship on
+  plain request/response and comes first. *Hearing* — live, real-time
+  "what they're playing right now" — is presence and **requires
+  connect-v2 / WebSocket as a prerequisite**; it comes later, after that
+  backbone exists. Connect-v2 is effectively the presence layer for the
+  social "hear" feature.
 
 ### 2. Recent shows on web — v1 LANDED (d50b7ea6)
 - `GET /api/user/recent` → list of recent shows. `fetchRecentShows()` in
