@@ -146,7 +146,13 @@ Realistic web v1 mirrors a subset of iOS's
   `GET /api/user/favorites/shows` (reuses `getShowMeta`), pinned-first then
   most-recently-added, rows link to the show page. Read-only — the toggle
   lives on the show page, per this issue.
-- Recent + Favorites now share `ShowRow` + `showFormat` helpers.
+- Recent + Favorites now share `ShowRow` + `ShowArtwork` + `showFormat`
+  helpers, modeled on the mobile show cards: square **ticket artwork**
+  (ticket stub / photo → Archive.org thumbnail → logo), then **date
+  (primary) · city (secondary) · venue (tertiary)** — date + city are
+  emphasized over the venue name, per design. Responsive grid (1/2/3
+  columns). The catalog index now carries `image` + `bestRecordingId`
+  (`make api-show-index`).
 - Lives at `/me/favorites` (not `/me/favorites/shows`); favorite *songs*
   (issue 4) can become a sub-view there later.
 
