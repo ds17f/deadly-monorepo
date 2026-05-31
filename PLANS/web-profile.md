@@ -32,9 +32,26 @@ endpoints that already work."
 - **Home strategy**: at `/`, replace the marketing/landing home with a
   personalized home for signed-in users. Signed-out users see the
   current home unchanged. Matches Spotify/YouTube Music behavior.
-- **No new server endpoints.** Everything consumed from existing
-  `/api/user/*` surface. If something's missing, file a separate issue;
-  don't grow this epic.
+- **Dynamic, endpoint-hydrated shells — not static rendering.** (Revised
+  2026-05-31.) The original "no new server endpoints / consume only the
+  existing surface" rule is dropped. `/me` is inherently dynamic per-user
+  data; the right model is a client-side shell that fetches fresh data
+  from the API on interaction and hydrates, rather than being rigid about
+  where/when data is downloaded. Static rendering was chosen for the
+  *show catalog* (which barely changes) — that rationale does not apply
+  to a personal library. Add server endpoints where they're the best
+  solution. Choose correctness/freshness over design purity.
+- **Show-metadata enrichment is a real gap.** `GET /api/user/recent` (and
+  the favorites endpoints) return bare records keyed by `showId`. Show
+  *display* metadata (venue/city/date/rating) currently lives ONLY in the
+  static site's server-side JSON (`ui/src/lib/shows.ts`, `fs`-based) —
+  neither the API nor the client can resolve an arbitrary `showId` → show
+  at runtime. Recent v1 (landed) shows date (parsed from the showId slug)
+  + a link to the show page. Proper venue/city needs a **show-metadata
+  source in the API** (e.g. load a compact index from the data pipeline,
+  expose enriched recents/favorites or a generic show lookup). This is
+  shared infrastructure for Recent *and* Favorites — build it before the
+  Favorites list needs nice display.
 - **V3 schema is the contract.** Web client types mirror the server's
   `FavoriteShowV3`, `RecentShowV3`, etc. No web-flavored variants.
 
@@ -63,13 +80,18 @@ Realistic web v1 mirrors a subset of iOS's
 - `UserMenu.tsx` gets a "Your library" (or similar) link to `/me`.
 - Redirect signed-out users to `/signin?callbackUrl=/me`.
 
-### 2. Recent shows on web
-- `GET /api/user/recent` → list of recent shows.
-- Read-only list, click row to play (reuses existing `playShow()` from
-  `PlayerProvider`).
-- Empty state copy explains: "Play something on any device to fill this
-  in" (acknowledges the mobile-sync dependency).
-- First real API client wiring — establishes the pattern.
+### 2. Recent shows on web — v1 LANDED (d50b7ea6)
+- `GET /api/user/recent` → list of recent shows. `fetchRecentShows()` in
+  `ui/src/lib/userDataApi.ts`; `RecentTab` client shell hydrates on mount
+  with loading / error / empty states.
+- v1 rows show date (parsed from the showId slug) + play count and **link
+  to `/shows/[id]`** (the user's "show a little header info, then link to
+  the show page"). Inline `playShow()` and real venue/city are deferred —
+  see the show-metadata-enrichment decision above.
+- Empty state: "Play something on any device to fill this in."
+- First real API client wiring — establishes the pattern for Favorites.
+- **Remaining**: enriched display (venue/city) once the API has a
+  show-metadata source; optional inline play.
 
 ### 3. Favorites — shows
 - `GET /api/user/favorites/shows` → list view at `/me/favorites/shows`.
