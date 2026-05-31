@@ -69,6 +69,13 @@ export default function UserMenu() {
               <p className="text-xs text-white/50">{user.email}</p>
             )}
           </div>
+          <a
+            href="/me"
+            onClick={() => setOpen(false)}
+            className="block w-full rounded-md px-2 py-1.5 text-left text-sm text-white/70 transition hover:bg-white/10 hover:text-white"
+          >
+            Your library
+          </a>
           {user.isAdmin && (
             <a
               href="/admin"
