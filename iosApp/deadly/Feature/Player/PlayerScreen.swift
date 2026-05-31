@@ -431,7 +431,7 @@ struct PlayerScreen: View {
             return
         }
         isCurrentTrackFavorite = (try? container.reviewService.isSongFavorite(
-            showId: showId, trackTitle: trackTitle, recordingId: currentRecordingId
+            showId: showId, trackTitle: trackTitle
         )) ?? false
     }
 

@@ -45,7 +45,7 @@ import com.grateful.deadly.core.database.dao.SyncOutboxDao
         RecordingPreferenceEntity::class,
         SyncOutboxEntity::class
     ],
-    version = 24,
+    version = 25,
     exportSchema = false
 )
 abstract class DeadlyDatabase : RoomDatabase() {
@@ -72,7 +72,7 @@ abstract class DeadlyDatabase : RoomDatabase() {
                 DeadlyDatabase::class.java,
                 DATABASE_NAME
             )
-            .addMigrations(DatabaseMigrations.MIGRATION_12_13, DatabaseMigrations.MIGRATION_13_14, DatabaseMigrations.MIGRATION_14_15, DatabaseMigrations.MIGRATION_15_16, DatabaseMigrations.MIGRATION_16_17, DatabaseMigrations.MIGRATION_17_18, DatabaseMigrations.MIGRATION_18_19, DatabaseMigrations.MIGRATION_19_20, DatabaseMigrations.MIGRATION_20_21, DatabaseMigrations.MIGRATION_21_22, DatabaseMigrations.MIGRATION_22_23, DatabaseMigrations.MIGRATION_23_24)
+            .addMigrations(DatabaseMigrations.MIGRATION_12_13, DatabaseMigrations.MIGRATION_13_14, DatabaseMigrations.MIGRATION_14_15, DatabaseMigrations.MIGRATION_15_16, DatabaseMigrations.MIGRATION_16_17, DatabaseMigrations.MIGRATION_17_18, DatabaseMigrations.MIGRATION_18_19, DatabaseMigrations.MIGRATION_19_20, DatabaseMigrations.MIGRATION_20_21, DatabaseMigrations.MIGRATION_21_22, DatabaseMigrations.MIGRATION_22_23, DatabaseMigrations.MIGRATION_23_24, DatabaseMigrations.MIGRATION_24_25)
             // Intentionally NOT calling fallbackToDestructiveMigration(): users
             // have real local favorites we will never wipe. If a migration
             // path is missing we want a crash so we hear about it, not silent

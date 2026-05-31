@@ -16,9 +16,13 @@ import androidx.room.PrimaryKey
             onDelete = ForeignKey.CASCADE
         )
     ],
+    // Identity is (showId, trackTitle) — matches the server. recordingId is
+    // a property the row carries (used to navigate from favorites to "the
+    // recording the user favorited it from") but does NOT participate in
+    // uniqueness. See PLANS/mobile-server-sync.md.
     indices = [
         Index(value = ["showId"]),
-        Index(value = ["showId", "trackTitle", "recordingId"], unique = true)
+        Index(value = ["showId", "trackTitle"], unique = true)
     ]
 )
 data class FavoriteSongEntity(

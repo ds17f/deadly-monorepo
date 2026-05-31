@@ -91,17 +91,16 @@ class ReviewServiceImpl @Inject constructor(
         recordingId: String?
     ) {
         val now = System.currentTimeMillis()
-        val isFav = favoriteSongDao.isFavorite(showId, trackTitle, recordingId)
+        // Identity is (showId, trackTitle) — recordingId is metadata.
+        val isFav = favoriteSongDao.isFavorite(showId, trackTitle)
         val localId: Long? = if (isFav) {
-            // Soft-delete keeps the row as a tombstone so sync propagates the
-            // removal. Look up the local row id afterward for the outbox enqueue.
-            favoriteSongDao.softDelete(showId, trackTitle, recordingId, now)
-            favoriteSongDao.findByKeyIncludingTombstones(showId, trackTitle, recordingId)?.id
+            favoriteSongDao.softDelete(showId, trackTitle, now)
+            favoriteSongDao.findByKeyIncludingTombstones(showId, trackTitle)?.id
         } else {
             // Resurrect a tombstoned row if present; otherwise insert fresh.
             val resurrected = favoriteSongDao.resurrect(showId, trackTitle, trackNumber, recordingId, now)
             if (resurrected > 0) {
-                favoriteSongDao.findByKeyIncludingTombstones(showId, trackTitle, recordingId)?.id
+                favoriteSongDao.findByKeyIncludingTombstones(showId, trackTitle)?.id
             } else {
                 favoriteSongDao.insert(
                     FavoriteSongEntity(
@@ -130,8 +129,8 @@ class ReviewServiceImpl @Inject constructor(
         ))
     }
 
-    override fun isSongFavoriteFlow(showId: String, trackTitle: String, recordingId: String?): Flow<Boolean> {
-        return favoriteSongDao.isFavoriteFlow(showId, trackTitle, recordingId)
+    override fun isSongFavoriteFlow(showId: String, trackTitle: String): Flow<Boolean> {
+        return favoriteSongDao.isFavoriteFlow(showId, trackTitle)
     }
 
     override fun getFavoriteSongTitlesFlow(showId: String): Flow<Set<String>> {

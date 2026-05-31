@@ -196,7 +196,7 @@ class PlayerViewModel @Inject constructor(
         favoriteStateJob?.cancel()
         favoriteStateJob = viewModelScope.launch {
             try {
-                reviewService.isSongFavoriteFlow(showId, trackInfo.songTitle, trackInfo.recordingId)
+                reviewService.isSongFavoriteFlow(showId, trackInfo.songTitle)
                     .collect { isFav ->
                         _isCurrentTrackFavorite.value = isFav
                     }

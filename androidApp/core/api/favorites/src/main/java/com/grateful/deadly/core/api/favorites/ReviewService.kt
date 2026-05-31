@@ -29,7 +29,7 @@ interface ReviewService {
         recordingId: String? = null
     )
 
-    fun isSongFavoriteFlow(showId: String, trackTitle: String, recordingId: String?): Flow<Boolean>
+    fun isSongFavoriteFlow(showId: String, trackTitle: String): Flow<Boolean>
 
     fun getFavoriteSongTitlesFlow(showId: String): Flow<Set<String>>
 

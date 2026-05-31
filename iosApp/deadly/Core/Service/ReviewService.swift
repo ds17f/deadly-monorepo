@@ -69,10 +69,13 @@ struct ReviewService: Sendable {
     func toggleFavoriteSong(
         showId: String, trackTitle: String, trackNumber: Int? = nil, recordingId: String? = nil
     ) throws {
-        let isFav = try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
+        // Identity is (showId, trackTitle) — recordingId is recorded as
+        // metadata on add (so the favorites screen knows which recording to
+        // navigate to) but doesn't participate in matching.
+        let isFav = try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle)
         let localId: Int64?
         if isFav {
-            localId = try favoriteSongDAO.softDelete(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
+            localId = try favoriteSongDAO.softDelete(showId: showId, trackTitle: trackTitle)
         } else {
             localId = try favoriteSongDAO.upsertOrResurrect(
                 showId: showId, trackTitle: trackTitle,
@@ -93,16 +96,16 @@ struct ReviewService: Sendable {
         ])
     }
 
-    func isSongFavorite(showId: String, trackTitle: String, recordingId: String?) throws -> Bool {
-        try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
+    func isSongFavorite(showId: String, trackTitle: String) throws -> Bool {
+        try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle)
     }
 
     func observeFavoriteTitles(showId: String) -> AsyncValueObservation<Set<String>> {
         favoriteSongDAO.database.observe(favoriteSongDAO.observeFavoriteTitles(showId: showId))
     }
 
-    func observeIsSongFavorite(showId: String, trackTitle: String, recordingId: String?) -> AsyncValueObservation<Bool> {
-        favoriteSongDAO.database.observe(favoriteSongDAO.observeIsFavorite(showId: showId, trackTitle: trackTitle, recordingId: recordingId))
+    func observeIsSongFavorite(showId: String, trackTitle: String) -> AsyncValueObservation<Bool> {
+        favoriteSongDAO.database.observe(favoriteSongDAO.observeIsFavorite(showId: showId, trackTitle: trackTitle))
     }
 
     // MARK: - Player tags

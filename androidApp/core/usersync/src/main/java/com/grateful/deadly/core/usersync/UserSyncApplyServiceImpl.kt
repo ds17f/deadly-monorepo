@@ -109,7 +109,7 @@ class UserSyncApplyServiceImpl @Inject constructor(
             }
 
             val local = try {
-                favoriteSongDao.findByKeyIncludingTombstones(dto.showId, dto.trackTitle, dto.recordingId)
+                favoriteSongDao.findByKeyIncludingTombstones(dto.showId, dto.trackTitle)
             } catch (e: Exception) {
                 Log.w(TAG, "song read failed for ${dto.showId}/${dto.trackTitle}: ${e.message}")
                 continue

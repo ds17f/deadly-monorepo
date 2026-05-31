@@ -8,9 +8,11 @@ struct FavoriteSongDAO: Sendable {
 
     // MARK: - Mutation
     //
-    // Toggle is the only meaningful write — favorite vs unfavorite a track.
-    // Soft-delete semantics mirror FavoritesDAO: a tombstoned row stays in
-    // the table so other devices learn the row was removed.
+    // A song favorite is identified by (showId, trackTitle) — same as the
+    // server. recordingId rides along as a property so the favorites screen
+    // can navigate to "the recording the user favorited it from", but it
+    // does NOT participate in identity. Soft-delete semantics mirror
+    // FavoritesDAO. See PLANS/mobile-server-sync.md.
 
     /// Insert a new row, or resurrect an existing tombstoned one. Returns
     /// the local row id (caller passes it into the outbox refId).
@@ -21,7 +23,7 @@ struct FavoriteSongDAO: Sendable {
     ) throws -> Int64 {
         let now = Int64(Date().timeIntervalSince1970 * 1000)
         return try database.write { db in
-            if let existing = try Self.fetchByKey(db, showId: showId, trackTitle: trackTitle, recordingId: recordingId) {
+            if let existing = try Self.fetchByKey(db, showId: showId, trackTitle: trackTitle) {
                 try db.execute(
                     sql: """
                         UPDATE favorite_songs
@@ -51,10 +53,10 @@ struct FavoriteSongDAO: Sendable {
     /// Soft-delete by natural key. Returns the local row id of the
     /// tombstoned row so callers can enqueue the outbox push.
     @discardableResult
-    func softDelete(showId: String, trackTitle: String, recordingId: String?) throws -> Int64? {
+    func softDelete(showId: String, trackTitle: String) throws -> Int64? {
         let now = Int64(Date().timeIntervalSince1970 * 1000)
         return try database.write { db in
-            guard let existing = try Self.fetchByKey(db, showId: showId, trackTitle: trackTitle, recordingId: recordingId) else {
+            guard let existing = try Self.fetchByKey(db, showId: showId, trackTitle: trackTitle) else {
                 return nil
             }
             try db.execute(
@@ -78,8 +80,8 @@ struct FavoriteSongDAO: Sendable {
     /// tombstone the way [upsertOrResurrect] does. Mirrors FavoritesDAO.
     func applyFromSync(_ record: FavoriteSongRecord) throws {
         try database.write { db in
-            // Match by natural key, not local id (server id differs).
-            if let existing = try Self.fetchByKey(db, showId: record.showId, trackTitle: record.trackTitle, recordingId: record.recordingId) {
+            // Match by natural key (showId, trackTitle), not local id.
+            if let existing = try Self.fetchByKey(db, showId: record.showId, trackTitle: record.trackTitle) {
                 try db.execute(
                     sql: """
                         UPDATE favorite_songs
@@ -105,9 +107,9 @@ struct FavoriteSongDAO: Sendable {
 
     // MARK: - Query
 
-    func isFavorite(showId: String, trackTitle: String, recordingId: String?) throws -> Bool {
+    func isFavorite(showId: String, trackTitle: String) throws -> Bool {
         try database.read { db in
-            try Self.fetchByKey(db, showId: showId, trackTitle: trackTitle, recordingId: recordingId, liveOnly: true) != nil
+            try Self.fetchByKey(db, showId: showId, trackTitle: trackTitle, liveOnly: true) != nil
         }
     }
 
@@ -135,16 +137,28 @@ struct FavoriteSongDAO: Sendable {
     }
 
     /// Sync helper used by [UserSyncApplyService] when applying a server row.
-    /// Server rows arrive keyed by (showId, trackTitle, recordingId); we look up
-    /// the matching local row so applyFromSync can update it in place rather
+    /// Server rows arrive keyed by (showId, trackTitle); we look up the
+    /// matching local row so applyFromSync can update it in place rather
     /// than violating the natural-key uniqueness constraint.
     func fetchByLocalIdIncludingTombstones(forNaturalKey dto: SyncFavoriteTrackV3) throws -> FavoriteSongRecord? {
         try database.read { db in
-            try Self.fetchByKey(db, showId: dto.showId, trackTitle: dto.trackTitle, recordingId: dto.recordingId)
+            try Self.fetchByKey(db, showId: dto.showId, trackTitle: dto.trackTitle)
         }
     }
 
     // MARK: - Observation
+
+    /// Stream of all live favorite songs (tombstones filtered). Used by
+    /// FavoritesServiceImpl so the favorites screen auto-refreshes on any
+    /// write — including sync-apply writes from /api/user/sync pulls.
+    func observeAll() -> ValueObservation<ValueReducers.Fetch<[FavoriteSongRecord]>> {
+        ValueObservation.tracking { db in
+            try FavoriteSongRecord
+                .filter(Self.live)
+                .order(Column("createdAt").desc)
+                .fetchAll(db)
+        }
+    }
 
     func observeFavoriteTitles(showId: String) -> ValueObservation<ValueReducers.Fetch<Set<String>>> {
         ValueObservation.tracking { db in
@@ -156,9 +170,9 @@ struct FavoriteSongDAO: Sendable {
         }
     }
 
-    func observeIsFavorite(showId: String, trackTitle: String, recordingId: String?) -> ValueObservation<ValueReducers.Fetch<Bool>> {
+    func observeIsFavorite(showId: String, trackTitle: String) -> ValueObservation<ValueReducers.Fetch<Bool>> {
         ValueObservation.tracking { db in
-            try Self.fetchByKey(db, showId: showId, trackTitle: trackTitle, recordingId: recordingId, liveOnly: true) != nil
+            try Self.fetchByKey(db, showId: showId, trackTitle: trackTitle, liveOnly: true) != nil
         }
     }
 
@@ -166,16 +180,11 @@ struct FavoriteSongDAO: Sendable {
 
     private static func fetchByKey(
         _ db: Database,
-        showId: String, trackTitle: String, recordingId: String?,
+        showId: String, trackTitle: String,
         liveOnly: Bool = false
     ) throws -> FavoriteSongRecord? {
         var query = FavoriteSongRecord
             .filter(Column("showId") == showId && Column("trackTitle") == trackTitle)
-        if let rid = recordingId {
-            query = query.filter(Column("recordingId") == rid)
-        } else {
-            query = query.filter(Column("recordingId") == nil)
-        }
         if liveOnly {
             query = query.filter(live)
         }
