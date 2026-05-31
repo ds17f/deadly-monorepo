@@ -161,12 +161,16 @@ Realistic web v1 mirrors a subset of iOS's
   and/or ShowDetail.
 - `GET /api/user/favorites/songs`, `PUT`/`DELETE`.
 
-### 5. Personalized signed-in home at `/`
-- When `user` is present, render the personalized home; otherwise the
-  current marketing/landing home.
-- Sections (v1):
-  - "Pick up where you left off" — top of `/api/user/recent`.
-  - "Your favorites" — sample from `/api/user/favorites/shows`.
+### 5. Personalized signed-in home at `/` — LANDED
+- `PersonalizedHome` renders a strip above the catalog for signed-in users;
+  returns null when signed-out / still resolving / no data, so the static
+  landing home (and its SEO) is unchanged. Verified: signed-out `/` has no
+  personalized markup.
+- Sections (v1), reusing the shared `ShowRow` cards:
+  - "Pick up where you left off" — top of `GET /api/user/recent`.
+  - "Your favorites" — pinned-first sample of `GET /api/user/favorites/shows`.
+  - "See all →" links to `/me/recent` / `/me/favorites`.
+- Shared card components moved to `components/show/` (used by `/me` + home).
 - Future sections (deferred): "More like shows you favorited",
   recommendations, etc.
 
