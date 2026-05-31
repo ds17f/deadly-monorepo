@@ -232,6 +232,11 @@ function initSchema(db: Database.Database): void {
   addColumnIfMissing("recording_preferences", "deleted_at", "INTEGER");
   addColumnIfMissing("recent_shows", "deleted_at", "INTEGER");
 
+  // Account tombstone: a deleted account keeps its row (and orphaned data)
+  // but is treated as gone — the getters below filter deleted_at IS NULL, so
+  // every auth path rejects it. Re-signing in reactivates (see adapter).
+  addColumnIfMissing("accounts", "deleted_at", "INTEGER");
+
   db.exec(`UPDATE favorite_shows SET updated_at = unixepoch() WHERE updated_at = 0`);
   db.exec(`UPDATE favorite_songs SET updated_at = unixepoch() WHERE updated_at = 0`);
 }
@@ -248,22 +253,39 @@ export function createAppUser(authUserId: string, email: string, name: string | 
 export function getAppUserByAuthId(authUserId: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
   const db = getUsersDb();
   return db.prepare(
-    `SELECT id, email, name, is_admin FROM accounts WHERE auth_user_id = ?`
+    `SELECT id, email, name, is_admin FROM accounts WHERE auth_user_id = ? AND deleted_at IS NULL`
   ).get(authUserId) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
 }
 
 export function getAppUserById(accountId: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
   const db = getUsersDb();
   return db.prepare(
-    `SELECT id, email, name, is_admin FROM accounts WHERE id = ?`
+    `SELECT id, email, name, is_admin FROM accounts WHERE id = ? AND deleted_at IS NULL`
   ).get(accountId) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
 }
 
 export function getAppUserByEmail(email: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
   const db = getUsersDb();
   return db.prepare(
-    `SELECT id, email, name, is_admin FROM accounts WHERE email = ?`
+    `SELECT id, email, name, is_admin FROM accounts WHERE email = ? AND deleted_at IS NULL`
   ).get(email) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
+}
+
+/** Tombstone an account. Idempotent; returns true if a live account was deleted. */
+export function deleteAppUser(accountId: string): boolean {
+  const db = getUsersDb();
+  const res = db.prepare(
+    `UPDATE accounts SET deleted_at = unixepoch() WHERE id = ? AND deleted_at IS NULL`
+  ).run(accountId);
+  return res.changes > 0;
+}
+
+/** Clear an account's tombstone (reactivate on re-sign-in). */
+export function reactivateAppUserByAuthId(authUserId: string): void {
+  const db = getUsersDb();
+  db.prepare(
+    `UPDATE accounts SET deleted_at = NULL WHERE auth_user_id = ? AND deleted_at IS NOT NULL`
+  ).run(authUserId);
 }
 
 export function closeUsersDb(): void {

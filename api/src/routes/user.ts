@@ -1,6 +1,7 @@
 import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
 import { getShowMeta } from "../showCatalog.js";
+import { deleteAppUser } from "../db/users.js";
 import {
   getFavoriteShows, upsertFavoriteShow, deleteFavoriteShow,
   getFavoriteSongs, upsertFavoriteSong, deleteFavoriteSongByKey,
@@ -221,5 +222,19 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
   }, async (request, reply) => {
     upsertSettings(request.user!.id, request.body as SettingsV3);
     return reply.code(200).send({ ok: true });
+  });
+
+  // ── Account ─────────────────────────────────────────────────────
+
+  // Soft-delete (tombstone) the account. The row and its user-data stay,
+  // but every auth path rejects a tombstoned account, so the user is
+  // effectively gone until they sign in again (which reactivates it). The
+  // client signs out after calling this.
+  app.delete("/api/user/account", {
+    schema: { tags: ["user"], summary: "Delete (tombstone) the current account" },
+    preHandler: requireAuth,
+  }, async (request, reply) => {
+    const deleted = deleteAppUser(request.user!.id);
+    return reply.code(200).send({ ok: deleted });
   });
 }
