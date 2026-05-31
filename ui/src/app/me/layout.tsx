@@ -6,7 +6,8 @@ import { useEffect } from "react";
 import Link from "next/link";
 
 const TABS = [
-  { href: "/me", label: "Recent" },
+  { href: "/me", label: "Profile" },
+  { href: "/me/recent", label: "Recent" },
   { href: "/me/favorites", label: "Favorites" },
   { href: "/me/settings", label: "Settings" },
 ];
@@ -37,15 +38,34 @@ export default function MeLayout({
     );
   }
 
-  const firstName = user.name?.split(" ")[0] ?? null;
+  const displayName = user.name ?? "You";
+  const initial = displayName.trim()[0]?.toUpperCase() ?? "?";
 
   return (
     <div>
-      <header className="mb-6">
-        <h1 className="text-2xl font-bold text-white">Your library</h1>
-        {firstName && (
-          <p className="mt-1 text-sm text-white/50">Signed in as {firstName}</p>
+      {/* Identity header — "Me". Persists across all sub-sections. */}
+      <header className="mb-6 flex items-center gap-4">
+        {user.image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={user.image}
+            alt=""
+            className="h-14 w-14 rounded-full"
+            referrerPolicy="no-referrer"
+          />
+        ) : (
+          <span className="flex h-14 w-14 items-center justify-center rounded-full bg-deadly-accent text-xl font-bold text-white">
+            {initial}
+          </span>
         )}
+        <div className="min-w-0">
+          <h1 className="truncate text-2xl font-bold text-white">
+            {displayName}
+          </h1>
+          {user.email && (
+            <p className="truncate text-sm text-white/50">{user.email}</p>
+          )}
+        </div>
       </header>
 
       <nav className="mb-8 flex gap-6 border-b border-white/10">

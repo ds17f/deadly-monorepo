@@ -1,7 +1,7 @@
-import RecentTab from "./_components/RecentTab";
+import ProfileTab from "./_components/ProfileTab";
 
-// Recent is the default tab and lives at the /me index. The content is a
-// client shell that fetches fresh data from /api/user/recent on mount.
+// /me is "Me" — the profile landing. Identity lives in the shared header;
+// this body holds profile + social management (placeholders for now).
 export default function MePage() {
-  return <RecentTab />;
+  return <ProfileTab />;
 }
