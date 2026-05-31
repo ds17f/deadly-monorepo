@@ -28,6 +28,22 @@ if (!fs.existsSync(showsDir)) {
 const files = fs.readdirSync(showsDir).filter((f) => f.endsWith(".json"));
 const index = {};
 
+// Card "ticket" image: prefer a ticket stub (front, then unknown, then any),
+// then a show photo thumbnail. Mirrors resolveCoverImageUrl on the web show
+// page. Null when none — the client falls back to the Archive.org thumbnail
+// for bestRecordingId, then the logo.
+function resolveImage(s) {
+  const tickets = s.ticket_images ?? [];
+  const front = tickets.find((t) => t.side === "front");
+  if (front?.url) return front.url;
+  const unknown = tickets.find((t) => t.side === "unknown");
+  if (unknown?.url) return unknown.url;
+  if (tickets[0]?.url) return tickets[0].url;
+  const photo = (s.photos ?? [])[0];
+  if (photo) return photo.thumbnail_url ?? photo.url ?? null;
+  return null;
+}
+
 for (const file of files) {
   try {
     const s = JSON.parse(fs.readFileSync(path.join(showsDir, file), "utf-8"));
@@ -40,6 +56,8 @@ for (const file of files) {
       country: s.country ?? null,
       rating: s.ai_show_review?.ratings?.ai_rating ?? 0,
       recordingCount: s.recording_count ?? 0,
+      image: resolveImage(s),
+      bestRecordingId: s.best_recording ?? null,
     };
   } catch (err) {
     console.warn(`[build-show-index] skip ${file}: ${err.message}`);

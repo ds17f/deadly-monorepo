@@ -15,6 +15,10 @@ export interface ShowMeta {
   country: string | null;
   rating: number;
   recordingCount: number;
+  // Card "ticket" image (ticket stub / photo), null when none.
+  image: string | null;
+  // Archive.org recording id, for the thumbnail fallback when image is null.
+  bestRecordingId: string | null;
 }
 
 let catalog = new Map<string, ShowMeta>();
