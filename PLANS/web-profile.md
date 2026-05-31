@@ -161,18 +161,20 @@ Realistic web v1 mirrors a subset of iOS's
   and/or ShowDetail.
 - `GET /api/user/favorites/songs`, `PUT`/`DELETE`.
 
-### 5. Personalized signed-in home at `/` — LANDED
-- `PersonalizedHome` renders a strip above the catalog for signed-in users;
-  returns null when signed-out / still resolving / no data, so the static
-  landing home (and its SEO) is unchanged. Verified: signed-out `/` has no
-  personalized markup.
-- Sections (v1), reusing the shared `ShowRow` cards:
-  - "Pick up where you left off" — top of `GET /api/user/recent`.
-  - "Your favorites" — pinned-first sample of `GET /api/user/favorites/shows`.
-  - "See all →" links to `/me/recent` / `/me/favorites`.
-- Shared card components moved to `components/show/` (used by `/me` + home).
-- Future sections (deferred): "More like shows you favorited",
-  recommendations, etc.
+### 5. Personalized signed-in home at `/` — REVERTED, NEEDS DESIGN
+- A first cut (`PersonalizedHome` strip above the catalog: recents +
+  favorites) was built and **reverted** — the layout didn't look good
+  bolted on top of the existing home. The plumbing is sound (reused the
+  enriched endpoints + shared cards), but the **home page wants real
+  design work** before we reintroduce personalization: how the
+  signed-in home is composed (replace vs. augment the catalog, hero
+  treatment, section layout/density) is a design question, not just a
+  data-wiring one.
+- Kept from that attempt: shared card components moved to
+  `components/show/` (used by `/me`); they'll be reusable when we redo this.
+- **TODO: design pass on the signed-in home** before rebuilding. Sections
+  still wanted (v1): "Pick up where you left off" (recents), "Your
+  favorites". Future: recommendations, "more like…".
 
 ### 6. Settings page
 - Display name (read-only for v1 unless trivial to make editable).

@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import type { ShowIndexEntry, CollectionSummary, YearBucket } from "@/types/homepage";
 import HeroSection from "./HeroSection";
-import PersonalizedHome from "./PersonalizedHome";
 import GetTheApp from "./GetTheApp";
 import TopRatedShows from "./TopRatedShows";
 import CollectionsGrid from "./CollectionsGrid";
@@ -143,12 +142,7 @@ export default function HomeContent({
   }
 
   return (
-    <>
-      {/* Signed-in users get a personalized strip above the catalog; it
-          renders nothing for signed-out users so the landing home (and its
-          SEO) is unchanged. */}
-      <PersonalizedHome />
-      <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-3">
       <div className="lg:col-span-2">
         <HeroSection totalShows={totalShows} />
         <YearTimeline
@@ -182,7 +176,6 @@ export default function HomeContent({
         <TopRatedShows shows={topRated} filterLabel={topRatedFilterLabel} />
         <CollectionsGrid collections={collections} />
       </div>
-      </div>
-    </>
+    </div>
   );
 }
