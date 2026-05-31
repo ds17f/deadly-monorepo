@@ -12,8 +12,11 @@ import "./globals.css";
 
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.grateful.deadly";
-const GOOGLE_PLAY_BADGE_URL =
-  "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png";
+// Self-hosted (vendored into /public). Hot-linking the badge straight from
+// play.google.com rendered intermittently — ad/tracker blockers commonly
+// block that host and there was no local fallback. Google's brand
+// guidelines also call for self-hosting the badge.
+const GOOGLE_PLAY_BADGE_URL = "/google-play-badge.png";
 
 export const metadata: Metadata = {
   title: "The Deadly — Every Grateful Dead Concert",

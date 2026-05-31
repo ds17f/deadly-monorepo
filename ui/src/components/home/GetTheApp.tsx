@@ -5,8 +5,9 @@ import AppStoreBadge from "@/components/AppStoreBadge";
 
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.grateful.deadly";
-const GOOGLE_PLAY_BADGE_URL =
-  "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png";
+// Self-hosted (vendored into /public) — hot-linking from play.google.com
+// rendered intermittently (blockers / remote hiccups, no local fallback).
+const GOOGLE_PLAY_BADGE_URL = "/google-play-badge.png";
 
 export default function GetTheApp() {
   return (
