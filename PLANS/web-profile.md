@@ -138,11 +138,17 @@ Realistic web v1 mirrors a subset of iOS's
 - **Remaining**: enriched display (venue/city) once the API has a
   show-metadata source; optional inline play.
 
-### 3. Favorites — shows
-- `GET /api/user/favorites/shows` → list view at `/me/favorites/shows`.
-- Heart icon on `/show/[id]` (`ShowDetail`) toggles favorite via
-  `PUT`/`DELETE`.
-- Optimistic update on click; reconcile from server response.
+### 3. Favorites — shows — LANDED
+- **Toggle already existed**: `FavoriteButton` on `/shows/[id]` uses
+  `UserDataProvider.toggleFavorite` — optimistic update + `PUT`/`DELETE`,
+  with cross-tab refetch from `/api/user/sync` on focus.
+- **List added** at `/me/favorites`: `FavoritesTab` fetches the enriched
+  `GET /api/user/favorites/shows` (reuses `getShowMeta`), pinned-first then
+  most-recently-added, rows link to the show page. Read-only — the toggle
+  lives on the show page, per this issue.
+- Recent + Favorites now share `ShowRow` + `showFormat` helpers.
+- Lives at `/me/favorites` (not `/me/favorites/shows`); favorite *songs*
+  (issue 4) can become a sub-view there later.
 
 ### 4. Favorites — songs
 - Same pattern as #3 applied to track rows in the player's track list
