@@ -143,6 +143,8 @@ fun DeveloperScreen(
 
         item { FavoritesPushRow(viewModel) }
 
+        item { PushAllLocalDataRow(viewModel) }
+
         item { UserSyncLog(viewModel) }
 
         item { HorizontalDivider() }
@@ -176,6 +178,15 @@ private fun FavoritesPushRow(viewModel: SettingsViewModel) {
     DevRow(
         title = if (inFlight) "Pushing…" else "Push pending favorites ($pending)",
         onClick = { if (!inFlight) viewModel.pushPendingFavorites() }
+    )
+}
+
+@Composable
+private fun PushAllLocalDataRow(viewModel: SettingsViewModel) {
+    val inFlight by viewModel.syncInFlight.collectAsState()
+    DevRow(
+        title = if (inFlight) "Pushing…" else "Push all local data",
+        onClick = { if (!inFlight) viewModel.pushAllLocalData() }
     )
 }
 

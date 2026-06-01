@@ -14,6 +14,9 @@ interface FavoritesPushService {
     fun enqueueAndPushFavoriteSong(localId: Long)
     /** Enqueue a recent-show play (refId is the showId). Issue 4. */
     fun enqueueAndPushRecent(showId: String)
+    /** Enqueue all local favorites (shows + songs) + top recents, then flush.
+     *  Backs the one-time startup backfill and a manual "Sync now". */
+    suspend fun enqueueAllLocalAndFlush(): List<PushResult>
     suspend fun flushPending(): List<PushResult>
     suspend fun pendingCount(): Int
 }

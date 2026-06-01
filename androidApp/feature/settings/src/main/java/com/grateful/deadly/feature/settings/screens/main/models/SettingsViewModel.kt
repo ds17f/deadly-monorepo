@@ -357,6 +357,27 @@ class SettingsViewModel @Inject constructor(
         }
     }
 
+    fun pushAllLocalData() {
+        if (_syncInFlight.value) return
+        _syncInFlight.value = true
+        viewModelScope.launch {
+            val ts = SimpleDateFormat("HH:mm:ss", Locale.US).format(Date())
+            val results = favoritesPushService.enqueueAllLocalAndFlush()
+            val lines = buildList {
+                add("[$ts] Push all: ${results.size} entries")
+                if (results.isEmpty()) add("  (nothing local)")
+                for (r in results) {
+                    val status = if (r.success) "OK" else "FAIL"
+                    val tail = r.error?.let { " ($it)" } ?: ""
+                    add("  [${r.kind}] ${r.operation} ${r.refId} → $status$tail")
+                }
+            }
+            _syncLog.value = lines + _syncLog.value
+            _favoritesPushPending.value = favoritesPushService.pendingCount()
+            _syncInFlight.value = false
+        }
+    }
+
     fun signInWithGoogle(activity: android.app.Activity, onError: (String) -> Unit) {
         viewModelScope.launch {
             try {

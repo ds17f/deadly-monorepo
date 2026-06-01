@@ -10,6 +10,7 @@ import com.grateful.deadly.core.api.usersync.SyncFavoriteTrackV3
 import com.grateful.deadly.core.api.usersync.UserSyncService
 import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.FavoritesDao
+import com.grateful.deadly.core.database.dao.RecentShowDao
 import com.grateful.deadly.core.database.dao.SyncOutboxDao
 import com.grateful.deadly.core.database.entities.SyncOutboxEntity
 import com.grateful.deadly.core.model.AppDatabase
@@ -27,6 +28,7 @@ class FavoritesPushServiceImpl @Inject constructor(
     @AppDatabase private val outbox: SyncOutboxDao,
     @AppDatabase private val favoritesDao: FavoritesDao,
     @AppDatabase private val favoriteSongDao: FavoriteSongDao,
+    @AppDatabase private val recentShowDao: RecentShowDao,
     private val userSyncService: UserSyncService,
     private val authService: AuthService,
     private val syncCoordinator: UserSyncCoordinator,
@@ -49,6 +51,39 @@ class FavoritesPushServiceImpl @Inject constructor(
 
     override fun enqueueAndPushRecent(showId: String) {
         enqueueAndFlush(SyncOutboxEntity.KIND_RECENT, showId)
+    }
+
+    override suspend fun enqueueAllLocalAndFlush(): List<PushResult> {
+        val shows = try { favoritesDao.getAllFavoriteShows() } catch (e: Exception) {
+            Log.w(TAG, "getAllFavoriteShows failed", e); emptyList()
+        }
+        for (show in shows) enqueueRow(SyncOutboxEntity.KIND_FAVORITE_SHOW, show.showId)
+
+        val songs = try { favoriteSongDao.getAllFavorites() } catch (e: Exception) {
+            Log.w(TAG, "getAllFavorites failed", e); emptyList()
+        }
+        for (song in songs) enqueueRow(SyncOutboxEntity.KIND_FAVORITE_SONG, song.id.toString())
+
+        val recents = try { recentShowDao.getRecentShows(4) } catch (e: Exception) {
+            Log.w(TAG, "getRecentShows failed", e); emptyList()
+        }
+        for (recent in recents) enqueueRow(SyncOutboxEntity.KIND_RECENT, recent.showId)
+
+        return flushPending()
+    }
+
+    private suspend fun enqueueRow(kind: String, refId: String) {
+        try {
+            outbox.enqueue(
+                SyncOutboxEntity(
+                    kind = kind,
+                    refId = refId,
+                    createdAt = System.currentTimeMillis(),
+                )
+            )
+        } catch (e: Exception) {
+            Log.w(TAG, "enqueue($kind, $refId) failed", e)
+        }
     }
 
     private fun enqueueAndFlush(kind: String, refId: String) {
