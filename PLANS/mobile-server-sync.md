@@ -223,6 +223,30 @@ Android `87981e0b`.
   remote control, which is WebSocket-based. Position lives with the
   connect/WS work, not here. See *Connect-v2 / WebSocket* below.
 
+### 4b. Granular + apply sync for reviews — LANDED
+- **Landed both platforms** (Android `7d584844`, iOS `b35ae703`; iOS build
+  verified on the remote Mac). Reviews now sync **bidirectionally**,
+  mirroring the favorite-song stack:
+  - **Push**: a `review` outbox kind (refId = showId) enqueued at every
+    write site — rating/notes/recording+playing quality, *and* player-tag
+    edits. The flusher reads the review row + its player tags and
+    `PUT`s `/api/user/reviews/:showId`; a tombstoned row flushes as
+    `DELETE`. Backfill (`enqueueAllLocalAndFlush`) includes reviews.
+  - **Apply**: `applyReviews` merges the backup's reviews with LWW by
+    `updatedAt`, skips shows missing from the local catalog, and replaces
+    local player tags with the remote set.
+- **Player tags travel with the review.** The server's `upsertReview`
+  *replaces all tags* for the show on every PUT, so omitting them would
+  wipe them — they're always gathered on push and replaced on apply. LWW
+  is at the review level (tags are children of the review).
+- **Delete is now a tombstone** (was a hard delete): review reads filter
+  `deletedAt`, with a tombstone-inclusive reader backing the push. iOS
+  `show_reviews.deletedAt` column already existed (v15 migration); only the
+  record struct needed the field.
+- **Reactive indicator** (`b0d00ad9`): the playlist "you have a review"
+  marker observes the review now (Android `getShowReviewFlow`, iOS
+  `observeShowReview`) so a synced review flips it live.
+
 ### 5. LWW conflict policy doc + dev smoke test
 - Short doc in `docs/` (or appended here) describing:
   - The merge rule per record kind (which timestamp is the comparator).

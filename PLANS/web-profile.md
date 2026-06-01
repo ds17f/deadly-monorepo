@@ -92,6 +92,7 @@ Realistic web v1 mirrors a subset of iOS's
 | Home | Yes | Personalized when signed in |
 | Favorites (shows + songs) | Yes | List + toggle on ShowDetail |
 | Recent / Library | Yes | Read-only list, click to play |
+| Reviews | Yes | `/me/reviews` list; bidirectional sync with mobile |
 | Settings | Yes (minimal) | Display name, sign out, delete account |
 | Collections | Later | Curated; lower personalization value |
 | Downloads | Never | No web equivalent |
@@ -148,11 +149,17 @@ Realistic web v1 mirrors a subset of iOS's
   lives on the show page, per this issue.
 - Recent + Favorites now share `ShowRow` + `ShowArtwork` + `showFormat`
   helpers, modeled on the mobile show cards: square **ticket artwork**
-  (ticket stub / photo → Archive.org thumbnail → logo), then **date
-  (primary) · city (secondary) · venue (tertiary)** — date + city are
-  emphasized over the venue name, per design. Responsive grid (1/2/3
-  columns). The catalog index now carries `image` + `bestRecordingId`
-  (`make api-show-index`).
+  (ticket stub / photo → **Deadly logo**), then **date (primary) · city
+  (secondary) · venue (tertiary)** — date + city are emphasized over the
+  venue name, per design. Responsive grid (1/2/3 columns). The catalog
+  index carries `image` + `bestRecordingId` (`make api-show-index`).
+  - **Artwork fallback fixed (2f8a4c9b).** The chain was image →
+    Archive.org thumbnail → logo, but `archive.org/services/img/<id>`
+    returns a generic grey placeholder with HTTP 200 for art-less
+    recordings, so `onError` never fired and the logo was never reached.
+    Dropped the Archive.org source: real catalog image or the logo
+    (rendered `object-contain` so it reads as an intentional mark),
+    nothing in between.
 - Lives at `/me/favorites` (not `/me/favorites/shows`); favorite *songs*
   (issue 4) can become a sub-view there later.
 
@@ -195,6 +202,46 @@ Realistic web v1 mirrors a subset of iOS's
   the dev (credentials) sign-in path doesn't run the adapter's
   `linkAccount`, so dev reactivation isn't wired — dev-only, fine for now.
 
+### 6b. Sync-version banner on `/me` — LANDED (50b3db5a, 30c1ce41)
+- Resolves the empty-state open question (see below) via option (b) + a
+  version floor. A dismissible banner across the whole `/me` section
+  (`SyncVersionBanner`, in the layout) explains that favorites / recents /
+  reviews sync from the app and require a minimum version.
+- The floor lives in one constant, `ui/src/lib/syncVersions.ts`
+  (`MIN_SYNC_VERSION` = iOS 2.32 / Android 2.31 — the first releases
+  carrying the sync-push code). **Update it when the real release is cut.**
+- Context: the apps are live, but App Store / Play review takes ~a week, so
+  during rollout *every* existing app user is below the floor until the new
+  build propagates — the banner is written for that, not as an edge case.
+
+### 8. Reviews — tab + bidirectional sync — LANDED (30c1ce41, 7d584844, b35ae703, b0d00ad9)
+- **Web tab** (`30c1ce41`): `/me/reviews` (`ReviewsTab`) fetches
+  `GET /api/user/reviews`, now enriched with show display metadata
+  (date/venue/city) server-side like recent/favorites. Each review renders
+  as a show card with the overall rating + notes. Nav tab added to the
+  `/me` layout.
+- **Mobile sync** (`7d584844` Android, `b35ae703` iOS): reviews now sync
+  **both directions**, mirroring the favorite-song stack — a `review`
+  outbox kind enqueued at every write site (rating/notes/qualities +
+  player-tag edits), flushed to `PUT /api/user/reviews/:showId`; deletes
+  tombstone (soft-delete) and flush as `DELETE`. Pull merges with LWW by
+  `updatedAt`. **Player tags travel with the review** (the server replaces
+  all tags on every upsert, so omitting them would wipe them) — gathered on
+  push, replaced on apply. Review reads filter tombstones; backfill
+  includes reviews. See [mobile-server-sync.md](./mobile-server-sync.md).
+- **Reactive indicator** (`b0d00ad9`): the playlist "you have a review"
+  marker was a one-shot read, so a review arriving via sync didn't flip it.
+  Now observed live — Android `getShowReviewFlow`, iOS `observeShowReview`.
+
+### 9. Sorting / filtering controls on `/me` — NEXT (not started)
+- Add controls to the `/me` library sub-sections (Recent / Favorites /
+  Reviews) for sorting and the like — e.g. sort by date / recently
+  added / rating, possibly filter. Lists are currently fixed-order
+  (Favorites: pinned-then-recent; Recent: newest; Reviews: newest-edited).
+- Scope TBD next session: which sorts per tab, whether it's client-side
+  over the already-fetched list (simplest — the lists are small) or needs
+  server support, and a shared control component vs. per-tab.
+
 ### 7. Anonymous event tracking on `/me` surfaces
 - Cheap, no PII, no cookie banner. Events worth tracking:
   - `me_visited`, `favorites_viewed`, `recent_viewed`,
@@ -217,11 +264,10 @@ Realistic web v1 mirrors a subset of iOS's
 
 ## Open questions
 
-- **Empty-state handling before sync is live.** If we ship the web
-  profile before mobile-sync is on by default, every signed-in user sees
-  empty lists. Options: (a) gate `/me` link behind a feature flag until
-  sync ships; (b) ship anyway with friendly empty-state copy
-  ("Connect your phone to fill this in"). Worth a call when we get there.
+- ~~**Empty-state handling before sync is live.**~~ **RESOLVED** via
+  option (b) + a version floor — see issue 6b. Shipped with the
+  `SyncVersionBanner` explaining favorites/recents/reviews sync from the
+  app and the minimum version required.
 - **Favorites toggle UI on track rows.** Per-track heart icons can get
   visually busy. Look at iOS for the right pattern before designing the
   web one from scratch.
