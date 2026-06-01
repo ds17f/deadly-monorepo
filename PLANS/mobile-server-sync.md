@@ -159,6 +159,15 @@ it:
   explicit one-time "upload my library" action, since the realistic case
   is phone-is-source-of-truth → mostly-empty server.
 
+**Resolved (2026-06-01) via option (b).** Both platforms now run
+`enqueueAllLocalAndFlush()` once on startup (gated by a `localBackfilledV1`
+pref flag) and expose a manual "Push all local data" dev button. It enqueues
+every local favorite (shows + songs) + top 4 recents into the outbox and
+drains via the granular push (LWW per row). Recents are still
+announce-on-play (top 4, no faithful timestamps) per the "we don't care
+about backfill, pull the top 4 and post them" call. iOS `34c0cce2`,
+Android `87981e0b`.
+
 ### 3. Granular push for favorite shows + songs
 - iOS + Android: every favorite/unfavorite call site additionally fires:
   - Add: `PUT /api/user/favorites/shows/:showId` (or `/songs`) with the
