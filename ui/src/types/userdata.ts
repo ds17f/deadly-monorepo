@@ -35,6 +35,16 @@ export interface ShowReview {
   playingQuality?: number | null;
   reviewedRecordingId?: string | null;
   playerTags?: PlayerTag[] | null;
+  updatedAt?: number;
+  // Display metadata merged in by the API show catalog (GET
+  // /api/user/reviews). Absent for shows not in the index.
+  date?: string | null;
+  venue?: string | null;
+  city?: string | null;
+  state?: string | null;
+  country?: string | null;
+  image?: string | null;
+  bestRecordingId?: string | null;
 }
 
 export interface PlayerTag {

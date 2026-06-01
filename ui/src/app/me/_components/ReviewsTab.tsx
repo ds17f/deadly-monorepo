@@ -1,32 +1,35 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { fetchFavoriteShows } from "@/lib/userDataApi";
-import type { FavoriteShow } from "@/types/userdata";
+import { fetchReviews } from "@/lib/userDataApi";
+import type { ShowReview } from "@/types/userdata";
 import ShowRow from "@/components/show/ShowRow";
 import { formatShowDate, formatLocation } from "@/components/show/showFormat";
 
 type LoadState =
   | { status: "loading" }
   | { status: "error" }
-  | { status: "ready"; shows: FavoriteShow[] };
+  | { status: "ready"; reviews: ShowReview[] };
 
-// Pinned first, then most-recently-favorited.
-function sortFavorites(shows: FavoriteShow[]): FavoriteShow[] {
-  return [...shows].sort((a, b) => {
-    if (a.isPinned !== b.isPinned) return a.isPinned ? -1 : 1;
-    return b.addedAt - a.addedAt;
-  });
+// Newest-edited first.
+function sortReviews(reviews: ShowReview[]): ShowReview[] {
+  return [...reviews].sort((a, b) => (b.updatedAt ?? 0) - (a.updatedAt ?? 0));
 }
 
-export default function FavoritesTab() {
+function ratingLabel(review: ShowReview): string | null {
+  const r = review.overallRating;
+  if (r == null) return null;
+  return `★ ${Number.isInteger(r) ? r : r.toFixed(1)}`;
+}
+
+export default function ReviewsTab() {
   const [state, setState] = useState<LoadState>({ status: "loading" });
 
   useEffect(() => {
     let cancelled = false;
-    fetchFavoriteShows()
-      .then((shows) => {
-        if (!cancelled) setState({ status: "ready", shows: sortFavorites(shows) });
+    fetchReviews()
+      .then((reviews) => {
+        if (!cancelled) setState({ status: "ready", reviews: sortReviews(reviews) });
       })
       .catch(() => {
         if (!cancelled) setState({ status: "error" });
@@ -53,18 +56,18 @@ export default function FavoritesTab() {
     return (
       <div className="rounded-lg border border-white/10 bg-deadly-surface p-8 text-center">
         <p className="text-sm text-white/50">
-          Couldn&apos;t load your favorites. Try again in a moment.
+          Couldn&apos;t load your reviews. Try again in a moment.
         </p>
       </div>
     );
   }
 
-  if (state.shows.length === 0) {
+  if (state.reviews.length === 0) {
     return (
       <div className="rounded-lg border border-white/10 bg-deadly-surface p-8 text-center">
-        <h2 className="text-lg font-medium text-white">Favorites</h2>
+        <h2 className="text-lg font-medium text-white">Reviews</h2>
         <p className="mx-auto mt-2 max-w-md text-sm text-white/50">
-          Tap the heart on any show — on this site or any device — and it&apos;ll
+          Rate and review a show — on this site or any device — and it&apos;ll
           show up here.
         </p>
       </div>
@@ -73,17 +76,22 @@ export default function FavoritesTab() {
 
   return (
     <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      {state.shows.map((show) => (
-        <li key={show.showId}>
+      {state.reviews.map((review) => (
+        <li key={review.showId} className="flex flex-col gap-1.5">
           <ShowRow
-            showId={show.showId}
-            image={show.image}
-            bestRecordingId={show.bestRecordingId}
-            date={formatShowDate(show)}
-            location={formatLocation(show)}
-            venue={show.venue}
-            pinned={show.isPinned}
+            showId={review.showId}
+            image={review.image}
+            bestRecordingId={review.bestRecordingId}
+            date={formatShowDate(review)}
+            location={formatLocation(review)}
+            venue={review.venue}
+            trailing={ratingLabel(review)}
           />
+          {review.notes && (
+            <p className="px-1 text-sm text-white/60 line-clamp-3">
+              {review.notes}
+            </p>
+          )}
         </li>
       ))}
     </ul>

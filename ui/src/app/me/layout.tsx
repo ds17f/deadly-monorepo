@@ -4,11 +4,13 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Link from "next/link";
+import SyncVersionBanner from "@/components/userdata/SyncVersionBanner";
 
 const TABS = [
   { href: "/me", label: "Profile" },
   { href: "/me/recent", label: "Recent" },
   { href: "/me/favorites", label: "Favorites" },
+  { href: "/me/reviews", label: "Reviews" },
   { href: "/me/settings", label: "Settings" },
 ];
 
@@ -91,6 +93,8 @@ export default function MeLayout({
           );
         })}
       </nav>
+
+      <SyncVersionBanner />
 
       <div>{children}</div>
     </div>

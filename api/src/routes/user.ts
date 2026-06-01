@@ -122,7 +122,13 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     schema: { tags: ["user"], summary: "List reviews" },
     preHandler: requireAuth,
   }, async (request) => {
-    return getReviews(request.user!.id);
+    // Enrich each review with show display metadata (venue/city/date) from
+    // the in-memory catalog, same as recent/favorites, so the web profile
+    // can render a proper show card without a second lookup.
+    return getReviews(request.user!.id).map((r) => {
+      const meta = getShowMeta(r.showId);
+      return meta ? { ...r, ...meta } : r;
+    });
   });
 
   app.put<{ Params: { showId: string } }>(

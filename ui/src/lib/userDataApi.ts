@@ -62,6 +62,12 @@ export function deleteAccount(): Promise<void> {
   return apiFetch("/account", { method: "DELETE" });
 }
 
+// Returns the user's reviews, enriched with display metadata
+// (venue/city/date) from the API show catalog.
+export function fetchReviews(): Promise<ShowReview[]> {
+  return apiFetch<ShowReview[]>("/reviews");
+}
+
 export function updateReview(showId: string, review: Omit<ShowReview, "showId">): Promise<void> {
   return apiFetch(`/reviews/${showId}`, {
     method: "PUT",
