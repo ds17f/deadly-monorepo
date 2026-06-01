@@ -15,6 +15,8 @@ final class FavoritesPushService {
     private let favoritesDAO: FavoritesDAO
     private let favoriteSongDAO: FavoriteSongDAO
     private let recentShowDAO: RecentShowDAO
+    private let showReviewDAO: ShowReviewDAO
+    private let showPlayerTagDAO: ShowPlayerTagDAO
     private let apiClient: UserSyncAPIClient
     private let authService: AuthService
     /// Set by AppContainer after both services are constructed. Used to fire
@@ -27,6 +29,8 @@ final class FavoritesPushService {
         favoritesDAO: FavoritesDAO,
         favoriteSongDAO: FavoriteSongDAO,
         recentShowDAO: RecentShowDAO,
+        showReviewDAO: ShowReviewDAO,
+        showPlayerTagDAO: ShowPlayerTagDAO,
         apiClient: UserSyncAPIClient,
         authService: AuthService
     ) {
@@ -34,6 +38,8 @@ final class FavoritesPushService {
         self.favoritesDAO = favoritesDAO
         self.favoriteSongDAO = favoriteSongDAO
         self.recentShowDAO = recentShowDAO
+        self.showReviewDAO = showReviewDAO
+        self.showPlayerTagDAO = showPlayerTagDAO
         self.apiClient = apiClient
         self.authService = authService
     }
@@ -58,6 +64,10 @@ final class FavoritesPushService {
         for record in recents {
             enqueueRow(kind: SyncOutboxRecord.Kind.recent, refId: record.showId)
         }
+        let reviews = (try? showReviewDAO.fetchAll()) ?? []
+        for review in reviews {
+            enqueueRow(kind: SyncOutboxRecord.Kind.review, refId: review.showId)
+        }
         return await flushPending()
     }
 
@@ -78,6 +88,13 @@ final class FavoritesPushService {
     /// Enqueue a recent-show play (refId is the showId). Fire-and-forget.
     func enqueueAndPushRecent(showId: String) {
         enqueue(kind: SyncOutboxRecord.Kind.recent, refId: showId)
+    }
+
+    /// Enqueue a review change (refId is the showId). Fire-and-forget. The
+    /// flusher reads the review row + its player tags at push time; a tombstone
+    /// becomes a DELETE.
+    func enqueueAndPushReview(showId: String) {
+        enqueue(kind: SyncOutboxRecord.Kind.review, refId: showId)
     }
 
     private func enqueueRow(kind: String, refId: String) {
@@ -108,6 +125,7 @@ final class FavoritesPushService {
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.favoriteShow))
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.favoriteSong))
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.recent))
+        results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.review))
 
         // Reconcile after pushing — the server may have learned about changes
         // from other devices during our window. Only fire when something
@@ -148,7 +166,8 @@ final class FavoritesPushService {
         let shows = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.favoriteShow)) ?? 0
         let songs = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.favoriteSong)) ?? 0
         let recents = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.recent)) ?? 0
-        return shows + songs + recents
+        let reviews = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.review)) ?? 0
+        return shows + songs + recents + reviews
     }
 
     // MARK: - Internals
@@ -166,6 +185,8 @@ final class FavoritesPushService {
             return await pushFavoriteSong(refId: entry.refId)
         case SyncOutboxRecord.Kind.recent:
             return await pushRecent(refId: entry.refId)
+        case SyncOutboxRecord.Kind.review:
+            return await pushReview(refId: entry.refId)
         default:
             return .success(operation: "NOOP")
         }
@@ -179,6 +200,54 @@ final class FavoritesPushService {
             return .success(operation: "PUT")
         } catch {
             return .failure(operation: "PUT", error: error.localizedDescription)
+        }
+    }
+
+    // Reviews push by showId. Player tags travel with the review (the server
+    // replaces all tags for the show on PUT), so we gather them at push time.
+    // A tombstoned review row becomes a DELETE.
+    private func pushReview(refId: String) async -> FlushOutcome {
+        let row: ShowReviewRecord?
+        do {
+            row = try showReviewDAO.fetchByShowIdIncludingTombstones(refId)
+        } catch {
+            return .failure(operation: "?", error: "local read failed: \(error.localizedDescription)")
+        }
+        guard let row else { return .success(operation: "NOOP") }
+
+        if row.deletedAt != nil {
+            do {
+                try await apiClient.deleteReview(showId: row.showId)
+                return .success(operation: "DELETE")
+            } catch {
+                return .failure(operation: "DELETE", error: error.localizedDescription)
+            }
+        } else {
+            let tags = ((try? showPlayerTagDAO.fetchForShow(row.showId)) ?? []).map {
+                SyncPlayerTagV3(
+                    playerName: $0.playerName,
+                    instruments: $0.instruments,
+                    isStandout: $0.isStandout,
+                    notes: $0.notes
+                )
+            }
+            let dto = SyncReviewV3(
+                showId: row.showId,
+                notes: row.notes,
+                overallRating: row.customRating,
+                recordingQuality: row.recordingQuality,
+                playingQuality: row.playingQuality,
+                reviewedRecordingId: row.reviewedRecordingId,
+                playerTags: tags.isEmpty ? nil : tags,
+                updatedAt: row.updatedAt / 1000,
+                deletedAt: nil
+            )
+            do {
+                try await apiClient.putReview(dto)
+                return .success(operation: "PUT")
+            } catch {
+                return .failure(operation: "PUT", error: error.localizedDescription)
+            }
         }
     }
 

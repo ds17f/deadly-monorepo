@@ -47,21 +47,25 @@ struct ReviewService: Sendable {
     func updateShowNotes(_ showId: String, notes: String?) throws {
         try ensureShowReviewExists(showId)
         try showReviewDAO.updateNotes(showId, notes: notes)
+        enqueueReviewPush(showId)
     }
 
     func updateShowRating(_ showId: String, rating: Double?) throws {
         try ensureShowReviewExists(showId)
         try showReviewDAO.updateCustomRating(showId, rating: rating)
+        enqueueReviewPush(showId)
     }
 
     func updateRecordingQuality(_ showId: String, quality: Int?, recordingId: String? = nil) throws {
         try ensureShowReviewExists(showId)
         try showReviewDAO.updateRecordingQuality(showId, quality: quality, recordingId: recordingId)
+        enqueueReviewPush(showId)
     }
 
     func updatePlayingQuality(_ showId: String, quality: Int?) throws {
         try ensureShowReviewExists(showId)
         try showReviewDAO.updatePlayingQuality(showId, quality: quality)
+        enqueueReviewPush(showId)
     }
 
     // MARK: - Favorite songs
@@ -129,10 +133,18 @@ struct ReviewService: Sendable {
             createdAt: existing?.createdAt ?? Int64(Date().timeIntervalSince1970 * 1000)
         )
         try showPlayerTagDAO.upsert(record)
+        // Tags travel with the review on sync — ensure a review row exists and
+        // bump its timestamp so the change carries an LWW stamp, then push.
+        try ensureShowReviewExists(showId)
+        try showReviewDAO.touchUpdatedAt(showId)
+        enqueueReviewPush(showId)
     }
 
     func removePlayerTag(showId: String, playerName: String) throws {
         try showPlayerTagDAO.remove(showId: showId, playerName: playerName)
+        try ensureShowReviewExists(showId)
+        try showReviewDAO.touchUpdatedAt(showId)
+        enqueueReviewPush(showId)
     }
 
     // MARK: - Favorites
@@ -161,10 +173,20 @@ struct ReviewService: Sendable {
     func deleteShowReview(_ showId: String) throws {
         try showPlayerTagDAO.removeForShow(showId)
         try favoriteSongDAO.deleteForShow(showId)
-        try showReviewDAO.deleteByShowId(showId)
+        // Tombstone (not hard-delete) so the deletion syncs. The server DELETE
+        // clears the review and its player tags together.
+        try showReviewDAO.softDelete(showId)
+        enqueueReviewPush(showId)
     }
 
     // MARK: - Private
+
+    /// Fire-and-forget review push, hopping to the @MainActor push service
+    /// (mirrors the favorite-song path). No-op when push isn't wired (tests).
+    private func enqueueReviewPush(_ showId: String) {
+        guard let push = favoritesPushService else { return }
+        Task { @MainActor in push.enqueueAndPushReview(showId: showId) }
+    }
 
     private func ensureShowReviewExists(_ showId: String) throws {
         if try showReviewDAO.fetchByShowId(showId) == nil {

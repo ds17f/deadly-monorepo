@@ -21,6 +21,9 @@ struct SyncOutboxRecord: Codable, Sendable, Equatable, FetchableRecord, MutableP
         static let favoriteSong = "favorite_song"
         /// refId is the showId. Announces a play; the server stamps the time.
         static let recent = "recent"
+        /// refId is the showId. The flusher reads the review row + its player
+        /// tags at push time; a tombstoned row becomes a DELETE.
+        static let review = "review"
     }
 
     mutating func didInsert(_ inserted: InsertionSuccess) {

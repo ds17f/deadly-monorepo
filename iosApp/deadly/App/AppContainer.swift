@@ -94,6 +94,8 @@ final class AppContainer {
                     favoritesDAO: FavoritesDAO(database: db),
                     favoriteSongDAO: FavoriteSongDAO(database: db),
                     recentShowDAO: RecentShowDAO(database: db),
+                    showReviewDAO: ShowReviewDAO(database: db),
+                    showPlayerTagDAO: ShowPlayerTagDAO(database: db),
                     apiClient: userSync,
                     authService: auth
                 )
@@ -128,6 +130,8 @@ final class AppContainer {
                     apiClient: userSync,
                     favoritesDAO: FavoritesDAO(database: db),
                     favoriteSongDAO: FavoriteSongDAO(database: db),
+                    showReviewDAO: ShowReviewDAO(database: db),
+                    showPlayerTagDAO: ShowPlayerTagDAO(database: db),
                     showDAO: ShowDAO(database: db),
                     authService: auth
                 )

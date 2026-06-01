@@ -200,6 +200,28 @@ struct UserSyncAPIClient {
         try ensureOK(data: data, response: response)
     }
 
+    /// Upsert a review. Player tags travel in the body — the server replaces
+    /// all tags for the show on every PUT.
+    func putReview(_ review: SyncReviewV3) async throws {
+        let body = try JSONEncoder().encode(review)
+        let (data, response) = try await request(
+            method: "PUT",
+            path: "/api/user/reviews/\(review.showId)",
+            body: body
+        )
+        try ensureOK(data: data, response: response)
+    }
+
+    func deleteReview(showId: String) async throws {
+        let (data, response) = try await request(
+            method: "DELETE",
+            path: "/api/user/reviews/\(showId)",
+            body: nil
+        )
+        if let http = response as? HTTPURLResponse, http.statusCode == 404 { return }
+        try ensureOK(data: data, response: response)
+    }
+
     // MARK: - Internals
 
     private func client() throws -> APIClient {

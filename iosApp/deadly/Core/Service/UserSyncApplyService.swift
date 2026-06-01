@@ -15,6 +15,8 @@ final class UserSyncApplyService {
     private let apiClient: UserSyncAPIClient
     private let favoritesDAO: FavoritesDAO
     private let favoriteSongDAO: FavoriteSongDAO
+    private let showReviewDAO: ShowReviewDAO
+    private let showPlayerTagDAO: ShowPlayerTagDAO
     private let showDAO: ShowDAO
     private let authService: AuthService
 
@@ -31,6 +33,10 @@ final class UserSyncApplyService {
         let favoriteSongsApplied: Int
         let favoriteSongsSkippedLocalNewer: Int
         let favoriteSongsSkippedMissingShow: Int
+        let reviewsScanned: Int
+        let reviewsApplied: Int
+        let reviewsSkippedLocalNewer: Int
+        let reviewsSkippedMissingShow: Int
     }
 
     enum ApplyError: Error {
@@ -41,12 +47,16 @@ final class UserSyncApplyService {
         apiClient: UserSyncAPIClient,
         favoritesDAO: FavoritesDAO,
         favoriteSongDAO: FavoriteSongDAO,
+        showReviewDAO: ShowReviewDAO,
+        showPlayerTagDAO: ShowPlayerTagDAO,
         showDAO: ShowDAO,
         authService: AuthService
     ) {
         self.apiClient = apiClient
         self.favoritesDAO = favoritesDAO
         self.favoriteSongDAO = favoriteSongDAO
+        self.showReviewDAO = showReviewDAO
+        self.showPlayerTagDAO = showPlayerTagDAO
         self.showDAO = showDAO
         self.authService = authService
     }
@@ -65,6 +75,7 @@ final class UserSyncApplyService {
             let backup = try await apiClient.pullFullBackup()
             let shows = try applyFavoriteShows(backup.favorites.shows)
             let songs = try applyFavoriteSongs(backup.favorites.tracks)
+            let reviews = try applyReviews(backup.reviews)
             return ApplyResult(
                 favoriteShowsScanned: shows.scanned,
                 favoriteShowsApplied: shows.applied,
@@ -73,7 +84,11 @@ final class UserSyncApplyService {
                 favoriteSongsScanned: songs.scanned,
                 favoriteSongsApplied: songs.applied,
                 favoriteSongsSkippedLocalNewer: songs.skippedLocalNewer,
-                favoriteSongsSkippedMissingShow: songs.skippedMissingShow
+                favoriteSongsSkippedMissingShow: songs.skippedMissingShow,
+                reviewsScanned: reviews.scanned,
+                reviewsApplied: reviews.applied,
+                reviewsSkippedLocalNewer: reviews.skippedLocalNewer,
+                reviewsSkippedMissingShow: reviews.skippedMissingShow
             )
         }
         inFlight = task
@@ -180,6 +195,71 @@ final class UserSyncApplyService {
                 c.skippedMissingShow += 1
             } catch {
                 print("[UserSyncApply] apply song \(dto.showId)/\(dto.trackTitle) failed: \(error.localizedDescription)")
+            }
+        }
+        return c
+    }
+
+    private func applyReviews(_ remote: [SyncReviewV3]) throws -> Counts {
+        var c = Counts()
+        c.scanned = remote.count
+
+        for dto in remote {
+            // Reviews FK to shows — skip ones missing from the local catalog.
+            if (try? showDAO.fetchById(dto.showId)) == nil {
+                c.skippedMissingShow += 1
+                continue
+            }
+
+            let local: ShowReviewRecord?
+            do {
+                local = try showReviewDAO.fetchByShowIdIncludingTombstones(dto.showId)
+            } catch {
+                print("[UserSyncApply] review read failed for \(dto.showId): \(error.localizedDescription)")
+                continue
+            }
+
+            let remoteUpdatedMs = dto.updatedAt * 1000
+            if let local, local.updatedAt >= remoteUpdatedMs {
+                c.skippedLocalNewer += 1
+                continue
+            }
+
+            let record = ShowReviewRecord(
+                showId: dto.showId,
+                notes: dto.notes,
+                customRating: dto.overallRating,
+                recordingQuality: dto.recordingQuality,
+                playingQuality: dto.playingQuality,
+                reviewedRecordingId: dto.reviewedRecordingId,
+                createdAt: local?.createdAt ?? remoteUpdatedMs,
+                updatedAt: remoteUpdatedMs,
+                deletedAt: dto.deletedAt.map { $0 * 1000 }
+            )
+            do {
+                try showReviewDAO.upsert(record)
+                // Player tags travel with the review — replace the local set
+                // (skip when the review is tombstoned; there are no tags then).
+                try showPlayerTagDAO.removeForShow(dto.showId)
+                if dto.deletedAt == nil, let tags = dto.playerTags {
+                    for tag in tags {
+                        try showPlayerTagDAO.upsert(ShowPlayerTagRecord(
+                            id: nil,
+                            showId: dto.showId,
+                            playerName: tag.playerName,
+                            instruments: tag.instruments,
+                            isStandout: tag.isStandout,
+                            notes: tag.notes,
+                            createdAt: remoteUpdatedMs
+                        ))
+                    }
+                }
+                c.applied += 1
+            } catch let error as DatabaseError where error.resultCode == .SQLITE_CONSTRAINT {
+                print("[UserSyncApply] skip review \(dto.showId): constraint")
+                c.skippedMissingShow += 1
+            } catch {
+                print("[UserSyncApply] apply review \(dto.showId) failed: \(error.localizedDescription)")
             }
         }
         return c
