@@ -5,6 +5,7 @@ import { fetchRecentShows } from "@/lib/userDataApi";
 import type { RecentShow } from "@/types/userdata";
 import ShowRow from "@/components/show/ShowRow";
 import { formatShowDate, formatLocation } from "@/components/show/showFormat";
+import SyncVersionNote from "@/components/userdata/SyncVersionNote";
 
 type LoadState =
   | { status: "loading" }
@@ -58,6 +59,7 @@ export default function RecentTab() {
         <p className="mx-auto mt-2 max-w-md text-sm text-white/50">
           Play something on any device to fill this in.
         </p>
+        <SyncVersionNote />
       </div>
     );
   }

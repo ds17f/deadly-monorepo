@@ -5,6 +5,7 @@ import { fetchFavoriteShows } from "@/lib/userDataApi";
 import type { FavoriteShow } from "@/types/userdata";
 import ShowRow from "@/components/show/ShowRow";
 import { formatShowDate, formatLocation } from "@/components/show/showFormat";
+import SyncVersionNote from "@/components/userdata/SyncVersionNote";
 
 type LoadState =
   | { status: "loading" }
@@ -67,6 +68,7 @@ export default function FavoritesTab() {
           Tap the heart on any show — on this site or any device — and it&apos;ll
           show up here.
         </p>
+        <SyncVersionNote />
       </div>
     );
   }
