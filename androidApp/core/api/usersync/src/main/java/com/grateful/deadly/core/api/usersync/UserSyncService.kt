@@ -11,4 +11,9 @@ interface UserSyncService {
     /** Announce a play of [showId]. The server stamps last_played_at and
      *  bumps the play count; no client timestamp is sent. */
     suspend fun putRecent(showId: String): Result<Unit>
+    /** Upsert a review (rating/notes/qualities + player tags travel together;
+     *  the server replaces all tags for the show). */
+    suspend fun putReview(review: SyncReviewV3): Result<Unit>
+    /** Delete a review (and its player tags) by showId. */
+    suspend fun deleteReview(showId: String): Result<Unit>
 }

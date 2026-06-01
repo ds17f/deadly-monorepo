@@ -5,6 +5,7 @@ import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.usersync.SyncBackupV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteShowV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteTrackV3
+import com.grateful.deadly.core.api.usersync.SyncReviewV3
 import com.grateful.deadly.core.api.usersync.UserSyncService
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import com.grateful.deadly.core.database.AppPreferences
@@ -193,6 +194,60 @@ class UserSyncServiceImpl @Inject constructor(
             Result.success(Unit)
         } catch (e: Exception) {
             Log.w(TAG, "putRecent failed for $showId", e)
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun putReview(review: SyncReviewV3): Result<Unit> {
+        val token = authService.getAuthToken()
+            ?: return Result.failure(IllegalStateException("Not signed in"))
+        val baseUrl = appPreferences.apiBaseUrl
+        val bodyJson = json.encodeToString(SyncReviewV3.serializer(), review)
+
+        return try {
+            withContext(Dispatchers.IO) {
+                val request = Request.Builder()
+                    .url("$baseUrl/api/user/reviews/${review.showId}")
+                    .addHeader("Authorization", "Bearer $token")
+                    .put(bodyJson.toRequestBody("application/json".toMediaType()))
+                    .build()
+                httpClient.newCall(request).execute().use { response ->
+                    if (!response.isSuccessful) {
+                        val bodyText = response.body?.string().orEmpty()
+                        throw RuntimeException("HTTP ${response.code}: $bodyText")
+                    }
+                }
+            }
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Log.w(TAG, "putReview failed for ${review.showId}", e)
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun deleteReview(showId: String): Result<Unit> {
+        val token = authService.getAuthToken()
+            ?: return Result.failure(IllegalStateException("Not signed in"))
+        val baseUrl = appPreferences.apiBaseUrl
+
+        return try {
+            withContext(Dispatchers.IO) {
+                val request = Request.Builder()
+                    .url("$baseUrl/api/user/reviews/$showId")
+                    .addHeader("Authorization", "Bearer $token")
+                    .delete()
+                    .build()
+                httpClient.newCall(request).execute().use { response ->
+                    // 404 = server already lacks the row, treat as success.
+                    if (!response.isSuccessful && response.code != 404) {
+                        val bodyText = response.body?.string().orEmpty()
+                        throw RuntimeException("HTTP ${response.code}: $bodyText")
+                    }
+                }
+            }
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Log.w(TAG, "deleteReview failed for $showId", e)
             Result.failure(e)
         }
     }

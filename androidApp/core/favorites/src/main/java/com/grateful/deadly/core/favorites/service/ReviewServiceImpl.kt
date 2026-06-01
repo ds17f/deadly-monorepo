@@ -67,21 +67,25 @@ class ReviewServiceImpl @Inject constructor(
     override suspend fun updateShowNotes(showId: String, notes: String?) {
         ensureShowReviewExists(showId)
         showReviewDao.updateNotes(showId, notes)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun updateShowRating(showId: String, rating: Float?) {
         ensureShowReviewExists(showId)
         showReviewDao.updateCustomRating(showId, rating)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun updateRecordingQuality(showId: String, quality: Int?, recordingId: String?) {
         ensureShowReviewExists(showId)
         showReviewDao.updateRecordingQuality(showId, quality, recordingId)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun updatePlayingQuality(showId: String, quality: Int?) {
         ensureShowReviewExists(showId)
         showReviewDao.updatePlayingQuality(showId, quality)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun toggleFavoriteSong(
@@ -159,10 +163,18 @@ class ReviewServiceImpl @Inject constructor(
             createdAt = existing?.createdAt ?: System.currentTimeMillis()
         )
         showPlayerTagDao.upsert(entity)
+        // Tags travel with the review on sync — make sure a review row exists
+        // and bump its timestamp so the change carries an LWW stamp, then push.
+        ensureShowReviewExists(showId)
+        showReviewDao.touchUpdatedAt(showId)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun removePlayerTag(showId: String, playerName: String) {
         showPlayerTagDao.removeTag(showId, playerName)
+        ensureShowReviewExists(showId)
+        showReviewDao.touchUpdatedAt(showId)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun getFavoriteTracks(): List<FavoriteTrack> {
@@ -196,7 +208,10 @@ class ReviewServiceImpl @Inject constructor(
     override suspend fun deleteShowReview(showId: String) {
         showPlayerTagDao.removeTagsForShow(showId)
         favoriteSongDao.deleteForShow(showId)
-        showReviewDao.deleteByShowId(showId)
+        // Tombstone (not hard-delete) so the deletion syncs. The server DELETE
+        // clears the review and its player tags together.
+        showReviewDao.softDelete(showId)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     private suspend fun ensureShowReviewExists(showId: String) {

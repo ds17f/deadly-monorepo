@@ -6,13 +6,18 @@ import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.api.usersync.ApplyResult
 import com.grateful.deadly.core.api.usersync.SyncFavoriteShowV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteTrackV3
+import com.grateful.deadly.core.api.usersync.SyncReviewV3
 import com.grateful.deadly.core.api.usersync.UserSyncApplyService
 import com.grateful.deadly.core.api.usersync.UserSyncService
 import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.ShowDao
+import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
+import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.entities.FavoriteShowEntity
 import com.grateful.deadly.core.database.entities.FavoriteSongEntity
+import com.grateful.deadly.core.database.entities.ShowPlayerTagEntity
+import com.grateful.deadly.core.database.entities.ShowReviewEntity
 import com.grateful.deadly.core.model.AppDatabase
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -24,6 +29,8 @@ class UserSyncApplyServiceImpl @Inject constructor(
     private val userSyncService: UserSyncService,
     @AppDatabase private val favoritesDao: FavoritesDao,
     @AppDatabase private val favoriteSongDao: FavoriteSongDao,
+    @AppDatabase private val showReviewDao: ShowReviewDao,
+    @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
     @AppDatabase private val showDao: ShowDao,
     private val authService: AuthService,
 ) : UserSyncApplyService {
@@ -42,11 +49,16 @@ class UserSyncApplyServiceImpl @Inject constructor(
             userSyncService.pullFullBackup().mapCatching { backup ->
                 val shows = applyFavoriteShows(backup.favorites.shows)
                 val songs = applyFavoriteSongs(backup.favorites.tracks)
+                val reviews = applyReviews(backup.reviews)
                 shows.copy(
                     favoriteSongsScanned = songs.favoriteSongsScanned,
                     favoriteSongsApplied = songs.favoriteSongsApplied,
                     favoriteSongsSkippedLocalNewer = songs.favoriteSongsSkippedLocalNewer,
                     favoriteSongsSkippedMissingShow = songs.favoriteSongsSkippedMissingShow,
+                    reviewsScanned = reviews.reviewsScanned,
+                    reviewsApplied = reviews.reviewsApplied,
+                    reviewsSkippedLocalNewer = reviews.reviewsSkippedLocalNewer,
+                    reviewsSkippedMissingShow = reviews.reviewsSkippedMissingShow,
                 )
             }
         }
@@ -167,6 +179,89 @@ class UserSyncApplyServiceImpl @Inject constructor(
             favoriteSongsApplied = applied,
             favoriteSongsSkippedLocalNewer = skippedLocalNewer,
             favoriteSongsSkippedMissingShow = skippedMissingShow,
+        )
+    }
+
+    private suspend fun applyReviews(remote: List<SyncReviewV3>): ApplyResult {
+        var applied = 0
+        var skippedLocalNewer = 0
+        var skippedMissingShow = 0
+
+        for (dto in remote) {
+            // Reviews FK to shows — skip ones we don't have in the catalog.
+            if (showDao.getShowById(dto.showId) == null) {
+                skippedMissingShow++
+                continue
+            }
+
+            val local = try {
+                showReviewDao.getByShowIdIncludingTombstones(dto.showId)
+            } catch (e: Exception) {
+                Log.w(TAG, "review read failed for ${dto.showId}: ${e.message}")
+                continue
+            }
+
+            val remoteUpdatedMs = dto.updatedAt * 1000
+            if (local != null && local.updatedAt >= remoteUpdatedMs) {
+                skippedLocalNewer++
+                continue
+            }
+
+            try {
+                showReviewDao.upsert(
+                    ShowReviewEntity(
+                        showId = dto.showId,
+                        notes = dto.notes,
+                        customRating = dto.overallRating?.toFloat(),
+                        recordingQuality = dto.recordingQuality,
+                        playingQuality = dto.playingQuality,
+                        reviewedRecordingId = dto.reviewedRecordingId,
+                        createdAt = local?.createdAt ?: remoteUpdatedMs,
+                        updatedAt = remoteUpdatedMs,
+                        deletedAt = dto.deletedAt?.let { it * 1000 },
+                    )
+                )
+
+                // Player tags travel with the review — replace the local set
+                // (skip when the review is tombstoned; there are no tags then).
+                showPlayerTagDao.removeTagsForShow(dto.showId)
+                if (dto.deletedAt == null) {
+                    dto.playerTags?.forEach { tag ->
+                        showPlayerTagDao.upsert(
+                            ShowPlayerTagEntity(
+                                showId = dto.showId,
+                                playerName = tag.playerName,
+                                instruments = tag.instruments,
+                                isStandout = tag.isStandout,
+                                notes = tag.notes,
+                                createdAt = remoteUpdatedMs,
+                            )
+                        )
+                    }
+                }
+                applied++
+            } catch (e: android.database.sqlite.SQLiteConstraintException) {
+                Log.w(TAG, "skip review ${dto.showId}: constraint")
+                skippedMissingShow++
+            } catch (e: Exception) {
+                Log.w(TAG, "apply review ${dto.showId} failed: ${e.message}")
+            }
+        }
+
+        Log.d(
+            TAG,
+            "reviews: scanned=${remote.size} applied=$applied " +
+                "skippedLocalNewer=$skippedLocalNewer skippedMissingShow=$skippedMissingShow"
+        )
+        return ApplyResult(
+            favoriteShowsScanned = 0,
+            favoriteShowsApplied = 0,
+            favoriteShowsSkippedLocalNewer = 0,
+            favoriteShowsSkippedMissingShow = 0,
+            reviewsScanned = remote.size,
+            reviewsApplied = applied,
+            reviewsSkippedLocalNewer = skippedLocalNewer,
+            reviewsSkippedMissingShow = skippedMissingShow,
         )
     }
 

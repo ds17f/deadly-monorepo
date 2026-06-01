@@ -7,10 +7,14 @@ import com.grateful.deadly.core.api.usersync.FavoritesPushService
 import com.grateful.deadly.core.api.usersync.PushResult
 import com.grateful.deadly.core.api.usersync.SyncFavoriteShowV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteTrackV3
+import com.grateful.deadly.core.api.usersync.SyncPlayerTagV3
+import com.grateful.deadly.core.api.usersync.SyncReviewV3
 import com.grateful.deadly.core.api.usersync.UserSyncService
 import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.RecentShowDao
+import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
+import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.dao.SyncOutboxDao
 import com.grateful.deadly.core.database.entities.SyncOutboxEntity
 import com.grateful.deadly.core.model.AppDatabase
@@ -29,6 +33,8 @@ class FavoritesPushServiceImpl @Inject constructor(
     @AppDatabase private val favoritesDao: FavoritesDao,
     @AppDatabase private val favoriteSongDao: FavoriteSongDao,
     @AppDatabase private val recentShowDao: RecentShowDao,
+    @AppDatabase private val showReviewDao: ShowReviewDao,
+    @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
     private val userSyncService: UserSyncService,
     private val authService: AuthService,
     private val syncCoordinator: UserSyncCoordinator,
@@ -53,6 +59,10 @@ class FavoritesPushServiceImpl @Inject constructor(
         enqueueAndFlush(SyncOutboxEntity.KIND_RECENT, showId)
     }
 
+    override fun enqueueAndPushReview(showId: String) {
+        enqueueAndFlush(SyncOutboxEntity.KIND_REVIEW, showId)
+    }
+
     override suspend fun enqueueAllLocalAndFlush(): List<PushResult> {
         val shows = try { favoritesDao.getAllFavoriteShows() } catch (e: Exception) {
             Log.w(TAG, "getAllFavoriteShows failed", e); emptyList()
@@ -68,6 +78,11 @@ class FavoritesPushServiceImpl @Inject constructor(
             Log.w(TAG, "getRecentShows failed", e); emptyList()
         }
         for (recent in recents) enqueueRow(SyncOutboxEntity.KIND_RECENT, recent.showId)
+
+        val reviews = try { showReviewDao.getAll() } catch (e: Exception) {
+            Log.w(TAG, "getAll reviews failed", e); emptyList()
+        }
+        for (review in reviews) enqueueRow(SyncOutboxEntity.KIND_REVIEW, review.showId)
 
         return flushPending()
     }
@@ -112,6 +127,7 @@ class FavoritesPushServiceImpl @Inject constructor(
             results += flushKind(SyncOutboxEntity.KIND_FAVORITE_SHOW)
             results += flushKind(SyncOutboxEntity.KIND_FAVORITE_SONG)
             results += flushKind(SyncOutboxEntity.KIND_RECENT)
+            results += flushKind(SyncOutboxEntity.KIND_REVIEW)
             if (results.any { it.success && it.operation != "NOOP" }) {
                 syncCoordinator.triggerPull("after_push_flush")
             }
@@ -123,7 +139,8 @@ class FavoritesPushServiceImpl @Inject constructor(
         try {
             outbox.pendingCount(SyncOutboxEntity.KIND_FAVORITE_SHOW) +
                 outbox.pendingCount(SyncOutboxEntity.KIND_FAVORITE_SONG) +
-                outbox.pendingCount(SyncOutboxEntity.KIND_RECENT)
+                outbox.pendingCount(SyncOutboxEntity.KIND_RECENT) +
+                outbox.pendingCount(SyncOutboxEntity.KIND_REVIEW)
         } catch (_: Exception) { 0 }
 
     private suspend fun flushKind(kind: String): List<PushResult> {
@@ -145,6 +162,7 @@ class FavoritesPushServiceImpl @Inject constructor(
             SyncOutboxEntity.KIND_FAVORITE_SHOW -> pushFavoriteShow(entry)
             SyncOutboxEntity.KIND_FAVORITE_SONG -> pushFavoriteSong(entry)
             SyncOutboxEntity.KIND_RECENT -> pushRecent(entry)
+            SyncOutboxEntity.KIND_REVIEW -> pushReview(entry)
             else -> {
                 // Unknown kind — drop it so the queue doesn't get stuck.
                 outbox.delete(entry.id)
@@ -224,6 +242,54 @@ class FavoritesPushServiceImpl @Inject constructor(
     private suspend fun pushRecent(entry: SyncOutboxEntity): PushResult {
         return userSyncService.putRecent(entry.refId)
             .fold({ success(entry, "PUT") }, { failure(entry, "PUT", it.message ?: it::class.simpleName ?: "error") })
+    }
+
+    // Reviews push by showId. Player tags travel with the review (the server
+    // replaces all tags for the show on PUT), so we gather them at push time.
+    // A tombstoned review row becomes a DELETE.
+    private suspend fun pushReview(entry: SyncOutboxEntity): PushResult {
+        val showId = entry.refId
+        val row = try {
+            showReviewDao.getByShowIdIncludingTombstones(showId)
+        } catch (e: Exception) {
+            return failure(entry, "?", "local read failed: ${e.message}")
+        }
+        if (row == null) {
+            outbox.delete(entry.id)
+            return PushResult(entry.kind, entry.refId, "NOOP", success = true, error = null)
+        }
+
+        return if (row.deletedAt != null) {
+            userSyncService.deleteReview(showId)
+                .fold({ success(entry, "DELETE") }, { failure(entry, "DELETE", it.message ?: it::class.simpleName ?: "error") })
+        } else {
+            val tags = try {
+                showPlayerTagDao.getTagsForShow(showId).map {
+                    SyncPlayerTagV3(
+                        playerName = it.playerName,
+                        instruments = it.instruments,
+                        isStandout = it.isStandout,
+                        notes = it.notes,
+                    )
+                }
+            } catch (e: Exception) {
+                Log.w(TAG, "getTagsForShow($showId) failed", e)
+                emptyList()
+            }
+            val dto = SyncReviewV3(
+                showId = row.showId,
+                notes = row.notes,
+                overallRating = row.customRating?.toDouble(),
+                recordingQuality = row.recordingQuality,
+                playingQuality = row.playingQuality,
+                reviewedRecordingId = row.reviewedRecordingId,
+                playerTags = tags.ifEmpty { null },
+                updatedAt = row.updatedAt / 1000,
+                deletedAt = null,
+            )
+            userSyncService.putReview(dto)
+                .fold({ success(entry, "PUT") }, { failure(entry, "PUT", it.message ?: it::class.simpleName ?: "error") })
+        }
     }
 
     private suspend fun success(entry: SyncOutboxEntity, op: String): PushResult {

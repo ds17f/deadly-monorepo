@@ -33,5 +33,8 @@ data class SyncOutboxEntity(
         const val KIND_FAVORITE_SONG = "favorite_song"
         /** refId is the showId. Announces a play; the server stamps the time. */
         const val KIND_RECENT = "recent"
+        /** refId is the showId. The flusher reads the review row + its player
+         *  tags at push time; a tombstoned row becomes a DELETE. */
+        const val KIND_REVIEW = "review"
     }
 }
