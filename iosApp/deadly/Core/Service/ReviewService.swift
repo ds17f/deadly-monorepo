@@ -108,6 +108,32 @@ struct ReviewService: Sendable {
         favoriteSongDAO.database.observe(favoriteSongDAO.observeFavoriteTitles(showId: showId))
     }
 
+    /// Live view of a show's review (record + player tags). Re-emits when sync
+    /// applies a remote review, so the "has review" indicator updates without
+    /// reopening the show. Excludes tombstoned reviews.
+    func observeShowReview(showId: String) -> AsyncValueObservation<ShowReview> {
+        showReviewDAO.database.observe(
+            ValueObservation.tracking { db in
+                let reviewRecord = try ShowReviewRecord
+                    .filter(Column("showId") == showId && Column("deletedAt") == nil)
+                    .fetchOne(db)
+                let tagRecords = try ShowPlayerTagRecord
+                    .filter(Column("showId") == showId)
+                    .order(Column("playerName").asc)
+                    .fetchAll(db)
+                return ShowReview(
+                    showId: showId,
+                    notes: reviewRecord?.notes,
+                    overallRating: reviewRecord?.customRating,
+                    recordingQuality: reviewRecord?.recordingQuality,
+                    playingQuality: reviewRecord?.playingQuality,
+                    reviewedRecordingId: reviewRecord?.reviewedRecordingId,
+                    playerTags: tagRecords.map { $0.toDomain() }
+                )
+            }
+        )
+    }
+
     func observeIsSongFavorite(showId: String, trackTitle: String) -> AsyncValueObservation<Bool> {
         favoriteSongDAO.database.observe(favoriteSongDAO.observeIsFavorite(showId: showId, trackTitle: trackTitle))
     }

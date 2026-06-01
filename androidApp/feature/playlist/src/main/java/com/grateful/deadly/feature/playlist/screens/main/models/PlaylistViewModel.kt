@@ -133,20 +133,20 @@ class PlaylistViewModel @Inject constructor(
                 }
         }
 
-        // Reactive user review loading - watch for showId changes
+        // Reactive user review loading - observe the review so a review that
+        // arrives via sync/apply updates the "has review" indicator live,
+        // without needing to reopen the page.
         viewModelScope.launch {
             _baseUiState
                 .map { it.showData?.showId }
                 .distinctUntilChanged()
-                .collect { showId ->
-                    if (showId != null) {
-                        val review = reviewService.getShowReview(showId) ?: ShowReview(showId = showId)
-                        _userReview.value = review
-                        _hasUserReview.value = review.hasContent
-                    } else {
-                        _userReview.value = ShowReview(showId = "")
-                        _hasUserReview.value = false
-                    }
+                .flatMapLatest { showId ->
+                    if (showId != null) reviewService.getShowReviewFlow(showId)
+                    else flowOf(ShowReview(showId = ""))
+                }
+                .collect { review ->
+                    _userReview.value = review
+                    _hasUserReview.value = review.hasContent
                 }
         }
 
