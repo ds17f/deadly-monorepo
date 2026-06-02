@@ -297,27 +297,22 @@ function AmbientFactoids({ cards }: { cards: Factoid[] }) {
 
   if (cards.length === 0) return null;
   const card = cards[Math.min(idx, cards.length - 1)];
-  // Multi-paragraph prose (the long review) reads at a slightly smaller size;
-  // shorter cards get bigger, across-the-room type.
+  // Slightly smaller for the long, multi-paragraph review.
   const big = !(card.paragraphs && card.paragraphs.length > 1);
   const bodyCls = big
-    ? "text-xl leading-relaxed text-white/85 lg:text-2xl"
-    : "text-lg leading-relaxed text-white/85 lg:text-xl";
+    ? "text-lg leading-relaxed text-white/85 lg:text-xl"
+    : "text-base leading-relaxed text-white/80 lg:text-lg";
 
   return (
-    <div className="w-full max-w-3xl">
-      <div
-        className={`rounded-2xl border border-white/10 bg-white/[0.05] p-7 shadow-xl shadow-black/20 transition-opacity duration-700 lg:p-10 ${
-          visible ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <p className="mb-5 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-deadly-title lg:text-base">
+    <div className="w-full">
+      <div className={`transition-opacity duration-700 ${visible ? "opacity-100" : "opacity-0"}`}>
+        <p className="mb-4 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-deadly-title">
           {card.label}
           {card.meta && <span className="text-deadly-star">{card.meta}</span>}
         </p>
 
         {card.paragraphs && (
-          <div className={`space-y-5 ${bodyCls}`}>
+          <div className={`space-y-4 ${bodyCls}`}>
             {card.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -325,7 +320,7 @@ function AmbientFactoids({ cards }: { cards: Factoid[] }) {
         )}
 
         {card.bullets && (
-          <ul className={`space-y-4 ${bodyCls}`}>
+          <ul className={`space-y-3 ${bodyCls}`}>
             {card.bullets.map((b, i) => (
               <li key={i} className="flex gap-3">
                 <span className="mt-px text-deadly-highlight">&bull;</span>
@@ -336,7 +331,7 @@ function AmbientFactoids({ cards }: { cards: Factoid[] }) {
         )}
 
         {card.members && (
-          <div className={`space-y-4 ${bodyCls}`}>
+          <div className={`space-y-3 ${bodyCls}`}>
             {card.members.map(([member, text]) => (
               <p key={member}>
                 <span className="font-semibold text-white">{member}</span>
@@ -349,7 +344,7 @@ function AmbientFactoids({ cards }: { cards: Factoid[] }) {
       </div>
 
       {cards.length > 1 && (
-        <div className="mt-4 flex flex-wrap justify-center gap-2">
+        <div className="mt-5 flex flex-wrap gap-2">
           {cards.map((_, i) => (
             <span
               key={i}
@@ -1000,12 +995,18 @@ export default function HeaderPlayer() {
           )}
         </div>
 
-        {/* ── Desktop layout: immersive — cover art + now-playing, then a
-            rotating themed review card. The ambient party/TV view; only the
-            top bar + docked controls fade when idle. ── */}
+        {/* ── Desktop layout: immersive. The cover art + now-playing stay
+            anchored at the top (never scroll away — the ticket is the star);
+            the rotating review content flows wide below it and scrolls on its
+            own if long. Ambient party/TV view. ── */}
         <div className="hidden min-h-0 flex-1 flex-col overflow-hidden lg:flex">
-          {/* Centered column: art → now-playing → rotating review card. */}
-          <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-6 overflow-y-auto px-10 py-8">
+          {/* Anchored header: cover art + now-playing. Centers vertically when
+              there's no review content to show below. */}
+          <div
+            className={`flex flex-col items-center gap-4 px-10 ${
+              factoids.length > 0 ? "flex-shrink-0 pt-10 pb-4" : "flex-1 justify-center py-8"
+            }`}
+          >
             {/* Full ticket in fullscreen — show the whole stub (contain),
                 not the square crop the mini bar uses. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -1032,12 +1033,17 @@ export default function HeaderPlayer() {
                 </p>
               )}
             </div>
-            {factoids.length > 0 && (
-              <div className="flex w-full flex-shrink-0 justify-center">
+          </div>
+
+          {/* Review content — flows wide (~80%), scrolls here if long so the
+              ticket above stays put. */}
+          {factoids.length > 0 && (
+            <div className="min-h-0 flex-1 overflow-y-auto px-[10%] pb-6 pt-2">
+              <div className="mx-auto w-full max-w-5xl">
                 <AmbientFactoids cards={factoids} />
               </div>
-            )}
-          </div>
+            </div>
+          )}
 
           {/* docked controls (chrome — fades when idle) */}
           <div
