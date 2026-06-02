@@ -5,14 +5,18 @@
  * centered nav/main/footer layout.
  *
  *   top bar  : logo · global search · auth/avatar
- *   left     : persistent LibraryRail (hidden < lg)
- *   middle   : the routed page (children) — scrolls independently
- *   bottom   : transport bar = the EXISTING HeaderPlayer, repositioned
- *              (we do not fork player state — same PlayerProvider)
+ *   left     : persistent LibraryRail
+ *   middle   : the routed page (children)
+ *   right    : route-driven slot (RightRail) — liner notes on a show, etc.
+ *   bottom   : transport bar = the EXISTING HeaderPlayer (same
+ *              PlayerProvider — not forked)
  *
- * Auth/admin routes render "bare" (just a slim top bar + centered content),
- * since the library rail and transport make no sense there.
+ * Desktop (lg+): locked to the viewport height; each pane scrolls
+ * independently. Mobile: panes stack into one natural page scroll — the
+ * library rail collapses away, the right-pane content (e.g. liner notes)
+ * flows below the page content, and the transport sticks to the bottom.
  *
+ * Auth/admin routes render "bare" (slim top bar + centered content).
  * Static-export safe: client component; per-user panes hydrate from the API.
  */
 
@@ -22,6 +26,7 @@ import { usePathname } from "next/navigation";
 import UserMenu from "@/components/auth/UserMenu";
 import HeaderPlayerWrapper from "@/components/player/HeaderPlayerWrapper";
 import LibraryRail from "./LibraryRail";
+import { RightRailProvider, useRightRailNode } from "./RightRail";
 
 // Routes that should NOT get the full shell (no rail / no transport).
 const BARE_PREFIXES = ["/signin", "/auth", "/admin"];
@@ -38,24 +43,11 @@ function Logo() {
   );
 }
 
-export default function AppShell({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
-  const bare = BARE_PREFIXES.some((p) => pathname.startsWith(p));
-
-  if (bare) {
-    return (
-      <div className="min-h-screen bg-deadly-bg">
-        <header className="flex items-center justify-between border-b border-white/10 px-6 py-4">
-          <Logo />
-          <UserMenu />
-        </header>
-        <main className="mx-auto max-w-5xl px-6 py-8">{children}</main>
-      </div>
-    );
-  }
+function ShellChrome({ children }: { children: React.ReactNode }) {
+  const rightNode = useRightRailNode();
 
   return (
-    <div className="flex h-screen flex-col bg-black text-white">
+    <div className="flex min-h-screen flex-col bg-black text-white lg:h-screen lg:min-h-0">
       {/* top bar */}
       <header className="flex flex-shrink-0 items-center gap-4 px-4 py-2.5">
         <Logo />
@@ -82,18 +74,46 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         </div>
       </header>
 
-      {/* panes */}
-      <div className="flex min-h-0 flex-1 gap-2 px-2 pb-2">
+      {/* panes: row on desktop, stacked on mobile */}
+      <div className="flex flex-1 flex-col gap-2 px-2 pb-2 lg:min-h-0 lg:flex-row">
         <LibraryRail />
-        <main className="min-w-0 flex-1 overflow-y-auto rounded-lg bg-gradient-to-b from-deadly-surface to-deadly-bg">
+        <main className="min-w-0 flex-1 rounded-lg bg-gradient-to-b from-deadly-surface to-deadly-bg lg:overflow-y-auto">
           <div className="px-4 py-6 sm:px-8">{children}</div>
         </main>
+        {rightNode != null && (
+          <div className="w-full flex-shrink-0 lg:w-[360px] lg:overflow-y-auto">
+            {rightNode}
+          </div>
+        )}
       </div>
 
       {/* bottom transport — existing HeaderPlayer, do not fork */}
-      <div className="flex-shrink-0 border-t border-white/10 bg-deadly-bg px-4 py-2">
+      <div className="sticky bottom-0 z-20 flex-shrink-0 border-t border-white/10 bg-deadly-bg px-4 py-2">
         <HeaderPlayerWrapper />
       </div>
     </div>
+  );
+}
+
+export default function AppShell({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const bare = BARE_PREFIXES.some((p) => pathname.startsWith(p));
+
+  if (bare) {
+    return (
+      <div className="min-h-screen bg-deadly-bg">
+        <header className="flex items-center justify-between border-b border-white/10 px-6 py-4">
+          <Logo />
+          <UserMenu />
+        </header>
+        <main className="mx-auto max-w-5xl px-6 py-8">{children}</main>
+      </div>
+    );
+  }
+
+  return (
+    <RightRailProvider>
+      <ShellChrome>{children}</ShellChrome>
+    </RightRailProvider>
   );
 }

@@ -10,6 +10,7 @@ import ShowActions from "@/components/ShowActions";
 import Setlist from "@/components/Setlist";
 import ShowReview from "@/components/ShowReview";
 import ShowLinerNotes from "@/components/show/ShowLinerNotes";
+import { RightRailSlot } from "@/components/shell/RightRail";
 import ShowNav from "@/components/ShowNav";
 import ShowPlayerPanel from "@/components/player/ShowPlayerPanel";
 import FavoriteButton from "@/components/userdata/FavoriteButton";
@@ -137,34 +138,34 @@ export default async function ShowPage({
         </div>
       </div>
 
-      {/* Content (left/main) + liner-notes rail (right). Combined with the
-          shell's library rail, this is the three-pane show view. */}
-      <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-[minmax(0,1fr)_340px]">
-        <div className="min-w-0">
-          <ShowActions
-            showId={show.show_id}
-            bestRecordingId={show.best_recording}
-            firstRecordingId={show.recordings[0] ?? null}
-            recordings={recordings}
-            aiReview={show.ai_show_review}
-          />
-          <ShowPlayerPanel
-            recordings={recordings}
-            bestRecordingId={show.best_recording}
-            showId={show.show_id}
-            date={show.date}
-            venue={show.venue}
-            location={show.location_raw}
-          />
-          {show.setlist && show.setlist.length > 0 && (
-            <Setlist sets={show.setlist} songHighlights={songHighlights} />
-          )}
-          {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
-          <UserReview showId={show.show_id} />
-        </div>
+      {/* Middle pane content. The liner notes are pushed into the shell's
+          right pane via RightRailSlot, so library · content · liner notes are
+          three real sibling panes (and the liner notes flow below content on
+          mobile). */}
+      <ShowActions
+        showId={show.show_id}
+        bestRecordingId={show.best_recording}
+        firstRecordingId={show.recordings[0] ?? null}
+        recordings={recordings}
+        aiReview={show.ai_show_review}
+      />
+      <ShowPlayerPanel
+        recordings={recordings}
+        bestRecordingId={show.best_recording}
+        showId={show.show_id}
+        date={show.date}
+        venue={show.venue}
+        location={show.location_raw}
+      />
+      {show.setlist && show.setlist.length > 0 && (
+        <Setlist sets={show.setlist} songHighlights={songHighlights} />
+      )}
+      {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
+      <UserReview showId={show.show_id} />
 
+      <RightRailSlot>
         <ShowLinerNotes review={show.ai_show_review} lineup={show.lineup} />
-      </div>
+      </RightRailSlot>
     </article>
   );
 }
