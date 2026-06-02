@@ -13,6 +13,7 @@ import type { PlaybackState } from "@/contexts/ConnectContext";
 const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
 const GAPLESS_PRELOAD_THRESHOLD = 2; // seconds before end to start preloading
+const DEFAULT_VOLUME = 0.5; // mid-range until the user sets it themselves
 
 export default function PlayerProvider({
   children,
@@ -33,7 +34,7 @@ export default function PlayerProvider({
   );
   const [isLoadingTracks, setIsLoadingTracks] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [volume, setVolumeState] = useState(1);
+  const [volume, setVolumeState] = useState(DEFAULT_VOLUME);
   const [autoplayBlocked, setAutoplayBlocked] = useState(false);
   const [autoplayInfo, setAutoplayInfo] = useState<{ showDate: string; venue: string; fromDevice: string } | null>(null);
   const autoplayBlockedAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -53,7 +54,7 @@ export default function PlayerProvider({
   const selectedRecordingRef = useRef<string | null>(null);
   const sendPositionUpdateRef = useRef(sendPositionUpdate);
   const statusRef = useRef<PlaybackStatus>("idle");
-  const volumeRef = useRef(1);
+  const volumeRef = useRef(DEFAULT_VOLUME);
   const suppressAutoplayRef = useRef(false);
   const suppressAnnounceRef = useRef(false);
   const prevUserStateRef = useRef<{ isPlaying: boolean; trackIndex: number; positionMs: number } | null>(null);
@@ -235,9 +236,12 @@ export default function PlayerProvider({
   }
 
   // Restore persisted volume on mount, before the audio elements are created.
+  // Use the stored value only if it's a real, audible setting (> 0). A missing
+  // key coerces to 0 (Number(null) === 0), and an earlier bug persisted that 0
+  // back — so treat 0/invalid as "unset" and keep the mid-range default.
   useEffect(() => {
     const stored = Number(localStorage.getItem("deadly_volume"));
-    if (isFinite(stored) && stored >= 0 && stored <= 1) {
+    if (isFinite(stored) && stored > 0 && stored <= 1) {
       volumeRef.current = stored;
       setVolumeState(stored);
     }
