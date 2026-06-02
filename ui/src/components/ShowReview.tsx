@@ -37,13 +37,6 @@ export default function ShowReview({ review }: { review: AiShowReview }) {
           </button>
         </>
       )}
-
-      <p className="mt-3 text-[11px] uppercase tracking-wider text-white/30">
-        🤖 AI-generated review
-        {review.ratings?.confidence
-          ? ` · confidence ${review.ratings.confidence}`
-          : ""}
-      </p>
     </section>
   );
 }

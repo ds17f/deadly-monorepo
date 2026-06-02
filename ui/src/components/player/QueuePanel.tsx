@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { usePlayer } from "@/contexts/PlayerContext";
 import TrackList from "./TrackList";
+import RecordingSelector from "./RecordingSelector";
 
 const SOURCE_COLORS: Record<string, string> = {
   SBD: "bg-deadly-highlight text-white",
@@ -35,6 +36,7 @@ export default function QueuePanel({ onClose }: QueuePanelProps) {
     status,
     selectedRecording,
     playTrack,
+    selectRecording,
   } = usePlayer();
 
   // Close on Escape
@@ -86,6 +88,15 @@ export default function QueuePanel({ onClose }: QueuePanelProps) {
             )}
           </div>
           <p className="text-xs text-white/40">{venue}</p>
+
+          {/* Switch recordings from within the player */}
+          {activeShow.recordings.length > 1 && (
+            <RecordingSelector
+              recordings={activeShow.recordings}
+              selectedId={selectedRecording}
+              onSelect={selectRecording}
+            />
+          )}
         </div>
 
         {/* Track list */}

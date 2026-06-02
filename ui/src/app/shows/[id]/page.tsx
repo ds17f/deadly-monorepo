@@ -139,13 +139,12 @@ export default async function ShowPage({
         </div>
       </div>
 
-      {/* Middle pane content, ordered for the music first: about → play +
-          recording chooser → setlist → your review → secondary (get-the-app /
+      {/* Middle pane content. A single circular play button loads the bottom
+          player, which owns the tracklist + recording switching. Order:
+          play → your review → about → setlist → secondary (get-the-app /
           archive). The liner notes are pushed into the shell's right pane via
           RightRailSlot, so library · content · liner notes are three real
           sibling panes (and the liner notes flow below content on mobile). */}
-      {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
-
       <ShowPlayerPanel
         recordings={recordings}
         bestRecordingId={show.best_recording}
@@ -155,28 +154,29 @@ export default async function ShowPage({
         location={show.location_raw}
       />
 
-      {show.setlist && show.setlist.length > 0 && (
-        <div className="mt-8">
-          <Setlist sets={show.setlist} songHighlights={songHighlights} />
-        </div>
-      )}
+      <UserReview showId={show.show_id} />
 
-      <div className="mt-8">
-        <UserReview showId={show.show_id} />
-      </div>
+      {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
+
+      {show.setlist && show.setlist.length > 0 && (
+        <Setlist sets={show.setlist} songHighlights={songHighlights} />
+      )}
 
       <div className="mt-8">
         <ShowActions
           showId={show.show_id}
           bestRecordingId={show.best_recording}
           firstRecordingId={show.recordings[0] ?? null}
-          recordings={recordings}
-          aiReview={show.ai_show_review}
         />
       </div>
 
       <RightRailSlot>
-        <ShowLinerNotes review={show.ai_show_review} lineup={show.lineup} />
+        <ShowLinerNotes
+          review={show.ai_show_review}
+          lineup={show.lineup}
+          recordings={recordings}
+          bestRecordingId={show.best_recording}
+        />
       </RightRailSlot>
     </article>
   );
