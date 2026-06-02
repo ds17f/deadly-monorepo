@@ -77,7 +77,7 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
       {/* panes: row on desktop, stacked on mobile */}
       <div className="flex flex-1 flex-col gap-2 px-2 pb-2 lg:min-h-0 lg:flex-row">
         <LibraryRail />
-        <main className="min-w-0 flex-1 rounded-lg bg-gradient-to-b from-deadly-surface to-deadly-bg lg:overflow-y-auto">
+        <main className="min-w-0 rounded-lg bg-gradient-to-b from-deadly-surface to-deadly-bg lg:flex-1 lg:overflow-y-auto">
           <div className="px-4 py-6 sm:px-8">{children}</div>
         </main>
         {rightNode != null && (
