@@ -26,7 +26,7 @@ import { usePathname } from "next/navigation";
 import UserMenu from "@/components/auth/UserMenu";
 import HeaderPlayerWrapper from "@/components/player/HeaderPlayerWrapper";
 import LibraryRail from "./LibraryRail";
-import { RightRailProvider, useRightRailNode } from "./RightRail";
+import { RightRailProvider, useRightRailNode, useRightRailPlacement } from "./RightRail";
 
 // Routes that should NOT get the full shell (no rail / no transport).
 const BARE_PREFIXES = ["/signin", "/auth", "/admin"];
@@ -45,6 +45,7 @@ function Logo() {
 
 function ShellChrome({ children }: { children: React.ReactNode }) {
   const rightNode = useRightRailNode();
+  const placement = useRightRailPlacement();
 
   return (
     <div className="flex min-h-screen flex-col bg-black text-white lg:h-screen lg:min-h-0">
@@ -77,11 +78,15 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
       {/* panes: row on desktop, stacked on mobile */}
       <div className="flex flex-1 flex-col gap-2 px-2 pb-2 lg:min-h-0 lg:flex-row">
         <LibraryRail />
-        <main className="min-w-0 rounded-lg bg-gradient-to-b from-deadly-surface to-deadly-bg lg:flex-1 lg:overflow-y-auto">
+        <main className="min-w-0 rounded-lg bg-gradient-to-b from-deadly-surface to-deadly-bg lg:min-h-0 lg:flex-1 lg:overflow-y-auto">
           <div className="px-4 py-6 sm:px-8">{children}</div>
         </main>
         {rightNode != null && (
-          <div className="w-full flex-shrink-0 lg:w-[360px] lg:overflow-y-auto">
+          <div
+            className={`w-full flex-shrink-0 lg:order-none lg:max-h-full lg:w-[360px] lg:min-h-0 lg:overflow-y-auto ${
+              placement === "above" ? "order-first" : ""
+            }`}
+          >
             {rightNode}
           </div>
         )}

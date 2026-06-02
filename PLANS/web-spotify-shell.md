@@ -190,3 +190,94 @@ parity, rather than swapping `layout.tsx` on day one.
   written. No shell implementation started yet. Next: decide phase-1
   scope (shell skeleton behind a route vs. flagged in `layout.tsx`) and
   resolve the empty-left-rail open question.
+- **2026-06-02** — Shell is **built and live**. The empty-rail and
+  behind-a-flag open questions were resolved in the building: the shell
+  ships directly in `layout.tsx` (`AppShell` wraps everything — no flag),
+  and the empty left rail shows gated prompts when logged out / an
+  "open the app to sync" hint when empty. Phase-by-phase:
+
+  | # | Phase | State |
+  |---|-------|-------|
+  | 1 | Shell skeleton (top bar · 3 panes · bottom transport, responsive) | ✅ done & live — `components/shell/AppShell.tsx` |
+  | 2 | Middle = home | ✅ done — `HomeContent` in the middle pane |
+  | 3 | Left rail = library | ✅ done — live `/me` fetchers, filter pills, gated/loading/empty/error states (`LibraryRail.tsx`) |
+  | 4 | Right rail on home (get-the-app + now-playing) | ❌ not done — `GetTheApp` is still inline in `HomeContent` (~line 175); home renders no right pane |
+  | 5 | Show detail in-shell + liner-notes rail | ✅ mostly — `shows/[id]/page.tsx` uses `RightRailSlot` → `ShowLinerNotes`; ⚠️ verify full long-form `review` parity |
+  | 6 | Logged-out conversion | 🟡 partial — gated rail done; signup-banner-replacing-transport not done |
+  | 7 | Responsive / mobile | 🟡 mostly — pane stacking done; verify liner-notes collapse-to-sections |
+  | 8 | Cutover + cleanup | 🟡 cutover done & live, but `/mockup` still in tree and old `/me` tabs still present |
+
+  Cross-cutting gap: **global search isn't wired** — the top-bar search
+  box is a placeholder `Link` to `/#browse` (see `AppShell.tsx`).
+
+  Right-rail infra (`RightRail.tsx`) shipped with two layers: a page slot
+  (`RightRailSlot`, used by the show page for liner notes) and a player
+  override (`useRightRailOverride`, used by `HeaderPlayer` for the
+  queue/device picker) — the player layer wins when present.
+
+  **Remaining work:** phase 4 (home right rail), global search, logged-out
+  signup banner, cleanup (delete `/mockup`, retire superseded `/me` tabs),
+  and the two parity verifications (long-form review, mobile liner-notes
+  collapse). Most self-contained next step: phase 4.
+
+- **2026-06-02 (phase 4 design — in progress)** — The home right rail is
+  not "get-the-app + now-playing"; it becomes the **dynamic discovery
+  column**, porting the mobile home rails (`HomeScreen.swift`): Today in
+  Grateful Dead History, Trending, Fan Favorites. Driving principle that
+  resolves the SEO tension: **static/build-time content → middle window
+  (the SEO surface); dynamic/analytics/personal content → rails.** So:
+
+  - **Middle (static, SEO):** show catalog/browse, Top Rated, Featured
+    Collections — `TopRatedShows` + `CollectionsGrid` move OUT of the old
+    nested `lg:grid-cols-3` sidebar inside `HomeContent` into the middle
+    content flow (dissolves the sidebar-inside-a-pane).
+  - **Right rail (dynamic, client-hydrated, non-SEO):** new
+    `DiscoveryRail` — TIGDH (client-side date match on the in-memory
+    `showIndex`, "this week" fallback when empty), Trending
+    (`/api/trending` `now`/24h window), Fan Favorites (`/api/popular`
+    decade pools), demoted get-the-app card at the bottom. Web is the
+    FIRST web consumer of `/api/trending` + `/api/popular` (both
+    return bare `show_id`s; resolved against the `showIndex` already
+    hydrated into `HomeContent` — no enriched endpoint needed for v1).
+  - **Now-playing card deferred** — bottom transport + player's
+    `useRightRailOverride` (queue/devices) already cover it.
+
+  **Rail behavior across states (the priority stack already in
+  `RightRail.tsx`: player override > page slot > empty):**
+
+  | State | Left rail | Right rail |
+  |-------|-----------|------------|
+  | Home, logged out | gated prompts | DiscoveryRail + demoted get-the-app |
+  | Home, logged in | library | DiscoveryRail (now-playing later) |
+  | Show page | unchanged | liner notes (built) — replaces discovery |
+  | Playing + queue open | unchanged | player override wins (built) |
+
+  Left rail is **persistent nav** — constant across routes; only its
+  content swaps by auth. Right rail is route-driven page slot.
+
+  **Mobile lead:** on mobile web the discovery rail must *lead*, so the
+  slot carries a **placement hint** (`above` | `below`, default `below`);
+  `AppShell` applies flex `order` on mobile only. Home opts into `above`;
+  show pages keep the default (liner notes below content).
+
+  **Card treatment (revised after first cut):** the rail is narrow (280–
+  360px), so each unit is a **vertical list of `ShowRow` cards** (the
+  shared library card — cover · date · location), NOT a carousel. The
+  first cut used horizontal carousels mimicking mobile; they crammed to
+  ~2 cards in the rail. *Pinned follow-up:* carousels would suit a future
+  **main-window** discovery treatment (more horizontal room).
+
+  **Pane scroll:** the three panes scroll independently inside a fixed
+  `lg:h-screen` shell with the transport pinned; the right pane needs
+  `lg:min-h-0 lg:max-h-full lg:overflow-y-auto` (the flexbox
+  `min-height:auto` gotcha) or its tall list scrolls the whole view.
+  Verified with Playwright: wheel over each pane scrolls only that pane,
+  document never moves.
+
+  **Status: shipped on `feat/mobile-server-sync`** (v1). Verified desktop
+  + mobile via Playwright screenshots (`~/.cache/ms-playwright` chromium).
+
+  **Known follow-up:** the proper fix for ID→metadata is an enriched
+  trending/popular response (like the `/me` fetchers) rather than leaning
+  on the home-page `showIndex` — the "show-metadata API source is the
+  shared gap" called out in [web-profile.md](./web-profile.md).

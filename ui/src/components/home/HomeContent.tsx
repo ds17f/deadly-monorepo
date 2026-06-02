@@ -3,12 +3,13 @@
 import { useMemo, useState } from "react";
 import type { ShowIndexEntry, CollectionSummary, YearBucket } from "@/types/homepage";
 import HeroSection from "./HeroSection";
-import GetTheApp from "./GetTheApp";
+import DiscoveryRail from "./DiscoveryRail";
 import TopRatedShows from "./TopRatedShows";
 import CollectionsGrid from "./CollectionsGrid";
 import YearTimeline from "./YearTimeline";
 import SearchFilter, { type SortBy } from "./SearchFilter";
 import ShowList from "./ShowList";
+import { RightRailSlot } from "@/components/shell/RightRail";
 
 export default function HomeContent({
   showIndex,
@@ -142,40 +143,50 @@ export default function HomeContent({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-3">
-      <div className="lg:col-span-2">
-        <HeroSection totalShows={totalShows} />
-        <YearTimeline
-            yearData={yearData}
-            selectedYear={selectedYear}
-            onSelectYear={handleYearSelect}
-          />
-          <SearchFilter
-            searchQuery={searchQuery}
-            onSearchChange={handleSearchChange}
-            sortBy={sortBy}
-            onSortChange={handleSortChange}
-            selectedDecade={selectedDecade}
-            onDecadeChange={handleDecadeChange}
-            selectedSource={selectedSource}
-            onSourceChange={handleSourceChange}
-            includeNoRecordings={includeNoRecordings}
-            onIncludeNoRecordingsChange={(v) => {
-              setIncludeNoRecordings(v);
-              setCurrentPage(0);
-            }}
-          />
-          <ShowList
-            shows={filtered}
-            currentPage={currentPage}
-            onPageChange={setCurrentPage}
-          />
-        </div>
-      <div className="mt-6 lg:mt-0">
-        <GetTheApp />
+    <>
+      {/* Dynamic discovery (TIGDH / Trending / Fan Favorites) lives in the
+          shell's right pane on desktop; on mobile it stacks above this content
+          so home reads like the native app. The static catalog below is the
+          SEO surface. */}
+      <RightRailSlot mobilePlacement="above">
+        <DiscoveryRail showIndex={showIndex} />
+      </RightRailSlot>
+
+      {/* Single content column — the catalog browse, then the static
+          discovery blocks (Top Rated, Collections) that used to be a nested
+          sidebar. */}
+      <HeroSection totalShows={totalShows} />
+      <YearTimeline
+        yearData={yearData}
+        selectedYear={selectedYear}
+        onSelectYear={handleYearSelect}
+      />
+      <SearchFilter
+        searchQuery={searchQuery}
+        onSearchChange={handleSearchChange}
+        sortBy={sortBy}
+        onSortChange={handleSortChange}
+        selectedDecade={selectedDecade}
+        onDecadeChange={handleDecadeChange}
+        selectedSource={selectedSource}
+        onSourceChange={handleSourceChange}
+        includeNoRecordings={includeNoRecordings}
+        onIncludeNoRecordingsChange={(v) => {
+          setIncludeNoRecordings(v);
+          setCurrentPage(0);
+        }}
+      />
+      <ShowList
+        shows={filtered}
+        currentPage={currentPage}
+        onPageChange={setCurrentPage}
+      />
+      <div className="mt-10">
         <TopRatedShows shows={topRated} filterLabel={topRatedFilterLabel} />
+      </div>
+      <div className="mt-10">
         <CollectionsGrid collections={collections} />
       </div>
-    </div>
+    </>
   );
 }
