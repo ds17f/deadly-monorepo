@@ -8,6 +8,8 @@ import { useConnect } from "@/contexts/ConnectContext";
 import { useInterpolatedPosition } from "@/hooks/useInterpolatedPosition";
 import QueuePanel from "./QueuePanel";
 import AutoplayPrompt from "./AutoplayPrompt";
+import RecordingSelector from "./RecordingSelector";
+import TrackList from "./TrackList";
 import DevicePicker from "@/components/connect/DevicePicker";
 
 function formatTime(seconds: number): string {
@@ -43,6 +45,7 @@ export default function HeaderPlayer() {
     elapsed,
     duration,
     selectedRecording,
+    selectRecording,
     isLoadingTracks,
     togglePlayPause,
     nextTrack,
@@ -56,6 +59,9 @@ export default function HeaderPlayer() {
   const { isConnected, userState, isActiveDevice, claimSession, sendCommand } = useConnect();
   const [queueOpen, setQueueOpen] = useState(false);
   const [devicePickerOpen, setDevicePickerOpen] = useState(false);
+  // The mini bar expands into a full-screen "now playing" sheet that slides
+  // up; slide it back down to collapse.
+  const [expanded, setExpanded] = useState(false);
   const closeQueue = useCallback(() => setQueueOpen(false), []);
   const closeDevicePicker = useCallback(() => setDevicePickerOpen(false), []);
 
@@ -236,8 +242,15 @@ export default function HeaderPlayer() {
   return (
     <div className="relative flex flex-1 items-center pl-4">
     <div className="flex flex-1 items-center gap-3 overflow-hidden sm:gap-4">
-      {/* Show + track info */}
-      <div className="min-w-0 flex-1">
+      {/* Show + track info — click to expand into the now-playing sheet */}
+      <div
+        onClick={() => {
+          if (isActive || isParked || isRemoteActive) setExpanded(true);
+        }}
+        className={`min-w-0 flex-1 ${
+          isActive || isParked || isRemoteActive ? "cursor-pointer" : ""
+        }`}
+      >
         <div className="flex items-baseline gap-2">
           <p className="truncate text-sm font-medium text-white">
             {displayTrackTitle ?? showInfo?.date ?? "--"}
@@ -363,6 +376,20 @@ export default function HeaderPlayer() {
         </button>
       )}
 
+      {/* Expand into the full now-playing sheet */}
+      {(isActive || isParked || isRemoteActive) && (
+        <button
+          onClick={() => setExpanded(true)}
+          className="flex-shrink-0 rounded-full p-1.5 text-white/40 transition-colors hover:text-white/70"
+          aria-label="Expand player"
+          title="Expand player"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 14l5-5 5 5z" />
+          </svg>
+        </button>
+      )}
+
     </div>
 
       {/* Device picker — visible in all player states when connected */}
@@ -383,7 +410,7 @@ export default function HeaderPlayer() {
               <path d="M1 18v3h4v-3H1zm0-6v3h8v-3H1zm0-6v3h12V6H1zm20 12.59L17.42 15 16 16.41 21 21.41l5-5L24.59 15 21 18.59z" />
             </svg>
           </button>
-          {devicePickerOpen && (
+          {devicePickerOpen && !expanded && (
             <DevicePicker
               currentState={
                 isActive && isActiveDevice && activeShow && selectedRecording
@@ -421,6 +448,191 @@ export default function HeaderPlayer() {
       {/* Queue panel overlay */}
       {queueOpen && <QueuePanel onClose={closeQueue} />}
       <AutoplayPrompt />
+
+      {/* ── Full-screen "now playing" sheet — slides up on interaction ── */}
+      <div
+        className={`fixed inset-0 z-[60] flex flex-col bg-gradient-to-b from-deadly-surface to-deadly-bg text-white transition-transform duration-300 ease-out ${
+          expanded ? "translate-y-0" : "pointer-events-none translate-y-full"
+        }`}
+        aria-hidden={!expanded}
+      >
+        {/* top bar: collapse handle + devices */}
+        <div className="flex items-center justify-between px-4 py-3">
+          <button
+            onClick={() => setExpanded(false)}
+            aria-label="Collapse player"
+            className="rounded-full p-2 text-white/60 transition-colors hover:text-white"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7 10l5 5 5-5z" />
+            </svg>
+          </button>
+          <span className="text-xs font-semibold uppercase tracking-wider text-white/50">
+            Now Playing
+          </span>
+          <div className="relative">
+            {isConnected ? (
+              <button
+                onClick={() => setDevicePickerOpen((o) => !o)}
+                aria-label="Connect to device"
+                className={`rounded-full p-2 transition-colors ${
+                  isRemoteActive ? "text-deadly-highlight" : "text-white/60 hover:text-white"
+                }`}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M1 18v3h4v-3H1zm0-6v3h8v-3H1zm0-6v3h12V6H1zm20 12.59L17.42 15 16 16.41 21 21.41l5-5L24.59 15 21 18.59z" />
+                </svg>
+              </button>
+            ) : (
+              <span className="block w-9" />
+            )}
+            {devicePickerOpen && expanded && (
+              <DevicePicker
+                currentState={
+                  isActive && isActiveDevice && activeShow && selectedRecording
+                    ? {
+                        showId: activeShow.showId,
+                        recordingId: selectedRecording,
+                        trackIndex: currentTrackIndex,
+                        positionMs: Math.floor(elapsed * 1000),
+                        status: status === "playing" ? "playing" : "paused",
+                        date: activeShow.date,
+                        venue: activeShow.venue,
+                        location: activeShow.location,
+                      }
+                    : userState
+                      ? {
+                          showId: userState.showId,
+                          recordingId: userState.recordingId,
+                          trackIndex: userState.trackIndex,
+                          positionMs: Math.floor(interpolatedMs),
+                          durationMs: userState.durationMs,
+                          trackTitle: userState.trackTitle,
+                          status: userState.isPlaying ? "playing" : "paused",
+                          date: userState.date,
+                          venue: userState.venue,
+                          location: userState.location,
+                        }
+                      : null
+                }
+                onClose={closeDevicePicker}
+              />
+            )}
+          </div>
+        </div>
+
+        <div className="flex-1 overflow-y-auto px-5 pb-8">
+          <div className="mx-auto w-full max-w-md">
+            {/* artwork */}
+            <div className="mx-auto mt-2 aspect-square w-full max-w-[18rem] rounded-lg bg-gradient-to-br from-deadly-accent/40 to-deadly-blue/30 shadow-2xl" />
+
+            {/* show + track */}
+            <div className="mt-6">
+              <p className="text-xl font-bold text-white">
+                {displayTrackTitle ?? showInfo?.date ?? "--"}
+              </p>
+              {subtitleLine && (
+                <p
+                  className={`mt-1 text-sm ${
+                    isRemoteActive ? "text-deadly-highlight" : "text-white/50"
+                  }`}
+                >
+                  {subtitleLine}
+                </p>
+              )}
+              {displayTrackCount > 1 && (
+                <p className="mt-1 text-xs tabular-nums text-white/30">
+                  Track {displayTrackIndex + 1} of {displayTrackCount}
+                </p>
+              )}
+            </div>
+
+            {/* seek */}
+            <div className="mt-5">
+              <div
+                className="h-1.5 w-full cursor-pointer rounded-full bg-white/10"
+                onClick={handleSeek}
+              >
+                <div
+                  className="h-full rounded-full bg-deadly-highlight"
+                  style={{ width: `${Math.min(progress, 100)}%` }}
+                />
+              </div>
+              <div className="mt-1 flex justify-between text-[11px] tabular-nums text-white/40">
+                <span>{formatTime(displayElapsed)}</span>
+                <span>{formatTime(displayDuration)}</span>
+              </div>
+            </div>
+
+            {/* transport */}
+            <div className="mt-4 flex items-center justify-center gap-8">
+              <button
+                onClick={handlePrev}
+                disabled={!handlePrev}
+                className="text-white/70 transition-colors hover:text-white disabled:text-white/20"
+                aria-label="Previous track"
+              >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6 6h2v12H6zm3.5 6 8.5 6V6z" />
+                </svg>
+              </button>
+              <button
+                onClick={handleTogglePlayPause}
+                disabled={isLoadingTracks || !!(isActive && isActiveDevice && isLoading)}
+                className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-deadly-bg transition hover:scale-105 disabled:opacity-50"
+                aria-label={displayIsPlaying ? "Pause" : "Play"}
+              >
+                {isLoadingTracks || (isActive && isActiveDevice && isLoading) ? (
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" className="animate-spin">
+                    <path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z" />
+                  </svg>
+                ) : displayIsPlaying ? (
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6 19h4V5H6zm8-14v14h4V5z" />
+                  </svg>
+                ) : (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                )}
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={!handleNext}
+                className="text-white/70 transition-colors hover:text-white disabled:text-white/20"
+                aria-label="Next track"
+              >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                </svg>
+              </button>
+            </div>
+
+            {/* recording switcher */}
+            {activeShow && activeShow.recordings.length > 1 && (
+              <RecordingSelector
+                recordings={activeShow.recordings}
+                selectedId={selectedRecording}
+                onSelect={selectRecording}
+              />
+            )}
+
+            {/* track list */}
+            {isActive && (
+              <div className="mt-4">
+                <h4 className="mb-2 text-sm font-bold text-deadly-title">Tracks</h4>
+                <TrackList
+                  tracks={tracks}
+                  isLoading={isLoadingTracks}
+                  currentTrackIndex={currentTrackIndex}
+                  status={status}
+                  onPlayTrack={playTrack}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
