@@ -171,6 +171,24 @@ parity, rather than swapping `layout.tsx` on day one.
    `/mockup` route group, retire the old `/me` tab chrome where the rail
    supersedes it.
 
+## Collections — parked (revisit)
+
+Collections matter, but they're **hidden on the home for now**
+(`COLLECTIONS_ENABLED = false` in `HomeDiscovery.tsx`; data stays wired).
+Two things block doing them justice:
+
+1. **No card treatment.** Collections aren't shows — they have no cover
+   art, so they render as bare chips that read as "lost" next to the
+   cover-art carousels. Want a **"box set" icon** to use as the card art so
+   a Collections carousel matches the others visually.
+2. **No landing page.** There's no per-collection detail/route on web yet
+   (mobile has `CollectionRoute.detail`), so a collection card has nowhere
+   good to link — the temporary `/?collection=<id>` hook is a no-op.
+
+When picked up: add a box-set-icon collection card, a `/collections/<id>`
+(or in-shell) detail surface listing the collection's shows, then
+re-enable the home carousel and wire the cards to it.
+
 ## Relationship to other plans
 
 - **[web-profile.md](./web-profile.md)** — the `/me` surfaces, endpoint

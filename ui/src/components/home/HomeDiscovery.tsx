@@ -41,6 +41,10 @@ function toItem(s: ShowIndexEntry, trailing?: string): CarouselItem {
   };
 }
 
+// Collections are temporarily hidden on the home (no card treatment / landing
+// page yet). Flip to re-enable. See PLANS/web-spotify-shell.md.
+const COLLECTIONS_ENABLED = false;
+
 const todayKey = () => {
   const n = new Date();
   return `${String(n.getMonth() + 1).padStart(2, "0")}-${String(n.getDate()).padStart(2, "0")}`;
@@ -147,10 +151,14 @@ export default function HomeDiscovery({
       <ShowCarousel title="Trending" items={trending} />
       <ShowCarousel title="Fan Favorites" items={popular} />
 
-      {collections.length > 0 && (
+      {/* Collections are hidden for now: bare chips read as "lost" without a
+          proper card (want a box-set icon) and there's no collection landing
+          page to link to yet. Data stays wired for an easy re-enable — see the
+          Collections note in PLANS/web-spotify-shell.md. */}
+      {COLLECTIONS_ENABLED && collections.length > 0 && (
         <section className="mb-6">
           <h3 className="mb-2 text-lg font-bold text-white">Collections</h3>
-          <div className="-mx-1 flex snap-x gap-2 overflow-x-auto px-1 pb-2">
+          <div className="-mx-1 flex snap-x gap-2 overflow-x-auto px-1 pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
             {collections.map((c) => (
               <Link
                 key={c.id}
