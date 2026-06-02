@@ -283,20 +283,23 @@ export default function HeaderPlayer() {
     sendCommand("seek", seekMs);
   }, [userState, sendCommand]);
 
-  // Unified transport actions — local vs remote vs parked
-  const handleTogglePlayPause = isActive && isActiveDevice
+  // Unified transport actions — local vs remote vs parked. Local playback wins
+  // whenever this device has audio engaged (isActive); the Connect-session
+  // ownership (isActiveDevice) must NOT gate local pause/seek, or the controls
+  // misroute (e.g. pause → claimSession) whenever we're not in a session yet.
+  const handleTogglePlayPause = isActive
     ? togglePlayPause
     : isRemoteActive
       ? remoteTogglePlayPause
       : handleClaimSession; // parked — claim and play
 
-  const handleNext = isActive && isActiveDevice ? nextTrack : isRemoteActive ? remoteNext : isParked ? handleClaimAndNext : undefined;
-  const handlePrev = isActive && isActiveDevice ? prevTrack : isRemoteActive ? remotePrev : isParked ? handleClaimAndPrev : undefined;
+  const handleNext = isActive ? nextTrack : isRemoteActive ? remoteNext : isParked ? handleClaimAndNext : undefined;
+  const handlePrev = isActive ? prevTrack : isRemoteActive ? remotePrev : isParked ? handleClaimAndPrev : undefined;
 
   function handleSeek(e: React.MouseEvent<HTMLDivElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
     const fraction = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-    if (isActive && isActiveDevice) {
+    if (isActive) {
       seek(fraction);
     } else if (isRemoteActive || isParked) {
       remoteSeek(fraction);
@@ -304,8 +307,8 @@ export default function HeaderPlayer() {
   }
 
   // Show info for display
-  const displayElapsed = isActive && isActiveDevice ? elapsed : interpolatedMs / 1000;
-  const displayDuration = isActive && isActiveDevice
+  const displayElapsed = isActive ? elapsed : interpolatedMs / 1000;
+  const displayDuration = isActive
     ? duration
     : (userState?.durationMs ?? 0) / 1000;
   const progress = displayDuration > 0 ? (displayElapsed / displayDuration) * 100 : 0;
@@ -347,8 +350,8 @@ export default function HeaderPlayer() {
   const showLoaded = isActive || isParked || isRemoteActive;
 
   // Shared transport flags for the now-playing sheet.
-  const sheetToggleDisabled = isLoadingTracks || !!(isActive && isActiveDevice && isLoading);
-  const sheetIsLoadingIcon = isLoadingTracks || !!(isActive && isActiveDevice && isLoading);
+  const sheetToggleDisabled = isLoadingTracks || !!(isActive && isLoading);
+  const sheetIsLoadingIcon = isLoadingTracks || !!(isActive && isLoading);
 
   return (
     <div className="relative flex flex-1 items-center pl-4">
@@ -419,7 +422,7 @@ export default function HeaderPlayer() {
       <div className="flex flex-shrink-0 items-center gap-0.5">
         <button
           onClick={handlePrev}
-          disabled={!handlePrev || !!(isActive && isActiveDevice && !hasPrevious && elapsed < 3) || !!(isRemoteActive && !remoteHasPrevious && interpolatedMs < 3000)}
+          disabled={!handlePrev || !!(isActive && !hasPrevious && elapsed < 3) || !!(isRemoteActive && !remoteHasPrevious && interpolatedMs < 3000)}
           className="rounded-full p-1.5 text-white/60 transition-colors hover:text-white disabled:text-white/20"
           aria-label="Previous track"
         >
@@ -430,11 +433,11 @@ export default function HeaderPlayer() {
 
         <button
           onClick={handleTogglePlayPause}
-          disabled={isLoadingTracks || !!(isActive && isActiveDevice && isLoading)}
+          disabled={isLoadingTracks || !!(isActive && isLoading)}
           className="rounded-full bg-white p-1.5 text-deadly-bg transition-opacity hover:opacity-90 disabled:opacity-50"
           aria-label={displayIsPlaying ? "Pause" : "Play"}
         >
-          {isLoadingTracks || (isActive && isActiveDevice && isLoading) ? (
+          {isLoadingTracks || (isActive && isLoading) ? (
             <svg
               width="16"
               height="16"
@@ -457,7 +460,7 @@ export default function HeaderPlayer() {
 
         <button
           onClick={handleNext}
-          disabled={!handleNext || !!(isActive && isActiveDevice && !hasNext) || (isRemoteActive && !remoteHasNext)}
+          disabled={!handleNext || !!(isActive && !hasNext) || (isRemoteActive && !remoteHasNext)}
           className="rounded-full p-1.5 text-white/60 transition-colors hover:text-white disabled:text-white/20"
           aria-label="Next track"
         >
