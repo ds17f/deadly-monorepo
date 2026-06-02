@@ -69,7 +69,10 @@ export default function HeroActions({
   const canPlay = recordings.length > 0;
 
   function handlePlay() {
-    if (isActiveShow) {
+    // If this show is already loaded in the player, behave exactly like the
+    // player's own play/pause button (toggle). Only fall through to a fresh
+    // load when it's a different show or the player is idle/parked.
+    if (isActiveShow && player.status !== "idle") {
       player.togglePlayPause();
     } else {
       player.playShow({
