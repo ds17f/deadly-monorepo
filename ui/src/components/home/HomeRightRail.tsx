@@ -16,8 +16,7 @@ function NowPlaying() {
   if (!activeShow || status === "idle") return null;
   const track =
     tracks && currentTrackIndex >= 0 ? tracks[currentTrackIndex] : null;
-  const img = activeShow.image || "/logo.png";
-  const isLogo = img === "/logo.png";
+  const img = activeShow.image || "/cover-fallback.png";
   return (
     <section className="mb-6">
       <h4 className="mb-2 text-sm font-bold uppercase tracking-wider text-deadly-title/80">
@@ -32,9 +31,7 @@ function NowPlaying() {
           src={img}
           alt=""
           referrerPolicy="no-referrer"
-          className={`h-14 w-14 flex-shrink-0 rounded-md bg-white/5 ${
-            isLogo ? "object-contain p-1.5" : "object-cover"
-          }`}
+          className="h-14 w-14 flex-shrink-0 rounded-md bg-white/5 object-cover"
         />
         <span className="min-w-0 flex-1">
           {track && (

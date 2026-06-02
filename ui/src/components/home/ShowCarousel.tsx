@@ -21,8 +21,7 @@ export interface CarouselItem {
 
 function Card({ item }: { item: CarouselItem }) {
   const [broken, setBroken] = useState(false);
-  const src = item.image && !broken ? item.image : "/logo.png";
-  const isLogo = src === "/logo.png";
+  const src = item.image && !broken ? item.image : "/cover-fallback.png";
   return (
     <Link
       href={`/shows/${item.showId}`}
@@ -35,9 +34,7 @@ function Card({ item }: { item: CarouselItem }) {
         loading="lazy"
         referrerPolicy="no-referrer"
         onError={() => setBroken(true)}
-        className={`aspect-square w-full rounded-md bg-white/5 shadow-md ${
-          isLogo ? "object-contain p-5 opacity-70" : "object-cover"
-        }`}
+        className="aspect-square w-full rounded-md bg-white/5 object-cover shadow-md"
       />
       <div className="min-w-0">
         <p className="truncate text-sm font-semibold text-white">{item.date}</p>

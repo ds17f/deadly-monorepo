@@ -20,8 +20,8 @@ export default function ShowArtwork({
   const sources = [image].filter(Boolean) as string[];
 
   const [idx, setIdx] = useState(0);
-  const showingLogo = idx >= sources.length;
-  const src = showingLogo ? "/logo.png" : sources[idx];
+  const showingFallback = idx >= sources.length;
+  const src = showingFallback ? "/cover-fallback.png" : sources[idx];
 
   return (
     // eslint-disable-next-line @next/next/no-img-element
@@ -35,9 +35,7 @@ export default function ShowArtwork({
       onError={() => {
         if (idx < sources.length) setIdx((i) => i + 1);
       }}
-      className={`h-14 w-14 flex-shrink-0 rounded-md bg-white/5 ${
-        showingLogo ? "object-contain p-1.5" : "object-cover"
-      }`}
+      className="h-14 w-14 flex-shrink-0 rounded-md bg-white/5 object-cover"
     />
   );
 }

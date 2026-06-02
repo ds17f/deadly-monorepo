@@ -91,22 +91,15 @@ function buildItems(
 }
 
 function Tile({ image, label }: { image?: string | null; label: string }) {
-  if (image) {
-    return (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img
-        src={image}
-        alt=""
-        className="h-11 w-11 flex-shrink-0 rounded-md object-cover"
-        referrerPolicy="no-referrer"
-        loading="lazy"
-      />
-    );
-  }
   return (
-    <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-deadly-accent/30 to-deadly-blue/20 text-xs text-white/70">
-      ⚡<span className="sr-only">{label}</span>
-    </span>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={image || "/cover-fallback.png"}
+      alt={image ? "" : label}
+      className="h-11 w-11 flex-shrink-0 rounded-md object-cover"
+      referrerPolicy="no-referrer"
+      loading="lazy"
+    />
   );
 }
 
