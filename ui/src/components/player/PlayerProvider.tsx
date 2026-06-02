@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
 import { fetchArchiveTracks } from "@/lib/archive";
 import { updatePlaybackPosition } from "@/lib/userDataApi";
+import { rememberArt, lookupArt } from "@/lib/artCache";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
@@ -12,18 +13,6 @@ import type { PlaybackState } from "@/contexts/ConnectContext";
 const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
 const GAPLESS_PRELOAD_THRESHOLD = 2; // seconds before end to start preloading
-
-// Persist the cover for a show so a refresh (which rehydrates from the
-// server's art-less userState) can restore it. Never overwrite with an empty
-// image — Connect claim/handoff paths have no art and would otherwise wipe it.
-function rememberArt(showId: string, image?: string | null) {
-  if (!image) return;
-  try {
-    localStorage.setItem("deadly_now_art", JSON.stringify({ showId, image }));
-  } catch {
-    // ignore storage failures
-  }
-}
 
 export default function PlayerProvider({
   children,
@@ -466,18 +455,8 @@ export default function PlayerProvider({
     if (!userState || activeShow) return;
 
     hydratedRef.current = true;
-    // The server's userState has no cover art — restore it from the last
-    // locally-played show so a refresh doesn't fall back to the logo.
-    let storedImage: string | null = null;
-    try {
-      const raw = localStorage.getItem("deadly_now_art");
-      if (raw) {
-        const parsed = JSON.parse(raw) as { showId?: string; image?: string | null };
-        if (parsed.showId === userState.showId) storedImage = parsed.image ?? null;
-      }
-    } catch {
-      // ignore malformed storage
-    }
+    // The server's userState has no cover art — recover it by showId from the
+    // art cache (populated whenever this device viewed/played the show).
     setActiveShow({
       showId: userState.showId,
       recordings: [],
@@ -485,7 +464,7 @@ export default function PlayerProvider({
       date: userState.date ?? "",
       venue: userState.venue ?? "",
       location: userState.location ?? "",
-      image: storedImage,
+      image: lookupArt(userState.showId),
     });
     setSelectedRecording(userState.recordingId);
   }, [userState, activeShow]);

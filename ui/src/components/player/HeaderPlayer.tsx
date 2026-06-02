@@ -15,6 +15,7 @@ import TrackList from "./TrackList";
 import PlayerRailPanel from "./PlayerRailPanel";
 import DevicePicker from "@/components/connect/DevicePicker";
 import { useRightRailOverride } from "@/components/shell/RightRail";
+import { lookupArt } from "@/lib/artCache";
 
 function formatTime(seconds: number): string {
   if (!isFinite(seconds) || seconds < 0) return "0:00";
@@ -663,8 +664,10 @@ export default function HeaderPlayer() {
       ? `${showInfo.date} — ${showInfo.venue}`
       : null;
 
-  // Cover art (from the viewed/active show); logo when absent (e.g. remote).
-  const art = activeShow?.image ?? null;
+  // Cover art: prefer what playback handed us, else recover it by showId from
+  // the art cache (so claim/handoff/refresh paths that lack an image still show
+  // the cover). Logo only when we've genuinely never seen art for this show.
+  const art = activeShow?.image ?? lookupArt(activeShow?.showId) ?? null;
   const artIsLogo = !art || art.endsWith("/logo.png");
   const artSrc = art ?? "/logo.png";
   const showLoaded = isActive || isParked || isRemoteActive;
