@@ -121,18 +121,19 @@ export default async function ShowPage({
     <article>
       <ShowNav prevId={prev} nextId={next} />
 
-      {/* Album-style hero: cover + identity. */}
-      <div className="mb-6 flex flex-col gap-5 sm:flex-row sm:items-end">
+      {/* Album-style hero: cover + identity. Centered + stacked on mobile,
+          row + left-aligned on sm+. */}
+      <div className="mb-6 flex flex-col items-center gap-5 text-center sm:flex-row sm:items-end sm:text-left">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={coverUrl}
           alt=""
-          className={`h-40 w-40 flex-shrink-0 rounded-md bg-white/5 shadow-2xl ${
+          className={`h-44 w-44 flex-shrink-0 rounded-md bg-white/5 shadow-2xl sm:h-40 sm:w-40 ${
             coverIsLogo ? "object-contain p-3" : "object-cover"
           }`}
           referrerPolicy="no-referrer"
         />
-        <div className="flex flex-1 items-start justify-between gap-4">
+        <div className="flex w-full flex-1 flex-col items-center gap-3 sm:w-auto sm:flex-row sm:items-start sm:justify-between">
           <ShowHeader show={show} />
           <FavoriteButton showId={show.show_id} />
         </div>
