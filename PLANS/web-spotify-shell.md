@@ -282,6 +282,28 @@ parity, rather than swapping `layout.tsx` on day one.
   highlight) matching the left library rail — NOT the bordered `ShowRow`
   card, which crowded the narrow rail.
 
+- **2026-06-02 (global search — shipped)** — The open "search placement"
+  question is resolved: a real global shell search, client-side, song- and
+  member-aware (mobile FTS parity). Architecture, all client/no server:
+  - **Prebuilt artifact:** `scripts/build-search-index.mjs` (a `prebuild`
+    hook) emits `public/search-index.<dataVersion>.json` from the catalog —
+    dictionary-encoded songs + lineup members + source tags + date/venue/
+    city/state. ~542 KB raw / ~93 KB gzip. Gitignored (rebuilt each build).
+  - **Load/cache:** `lib/searchClient.ts` lazy-loads on first search focus,
+    builds a MiniSearch index, and caches the serialized index in IndexedDB
+    keyed by `NEXT_PUBLIC_DATA_VERSION` (exposed via `next.config.ts` from
+    `data/version`). Verified: fetched once, **zero refetch on reload**;
+    new data version invalidates.
+  - **Query:** AND-combined, prefix + light fuzzy, boosted venue/song/
+    member; source-tag synonyms (soundboard→SBD). "Brent Mydland Dark Star"
+    → the 8 shows with both (all within Brent's 1979–90 tenure).
+  - **UI:** `components/shell/SearchBox.tsx` in the top bar — live dropdown,
+    keyboard-nav, song/member match get a hint chip, links to the show.
+  - **Follow-ups:** mobile search entry (top-bar box is `sm:block`, hidden
+    on phones); richer date-format variants (mobile precomputes "5-8-77"
+    style — web relies on tokenization + year field for now); lineup is
+    core members only (12) — no guest sit-ins (same as mobile).
+
   **Status: shipped on `feat/mobile-server-sync`** (v1). Verified desktop
   + mobile via Playwright screenshots (`~/.cache/ms-playwright` chromium).
 
