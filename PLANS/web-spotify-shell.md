@@ -267,12 +267,20 @@ parity, rather than swapping `layout.tsx` on day one.
   ~2 cards in the rail. *Pinned follow-up:* carousels would suit a future
   **main-window** discovery treatment (more horizontal room).
 
-  **Pane scroll:** the three panes scroll independently inside a fixed
-  `lg:h-screen` shell with the transport pinned; the right pane needs
-  `lg:min-h-0 lg:max-h-full lg:overflow-y-auto` (the flexbox
-  `min-height:auto` gotcha) or its tall list scrolls the whole view.
-  Verified with Playwright: wheel over each pane scrolls only that pane,
-  document never moves.
+  **Pane scroll:** the shell is ALWAYS a fixed `h-[100dvh]` column — the
+  document itself never scrolls, on any width. Desktop: each pane scrolls
+  internally (`lg:min-h-0 lg:overflow-y-auto`, the flexbox
+  `min-height:auto` gotcha). Mobile: the stacked panes are ONE scroll
+  region (`overflow-y-auto` on the panes container, `lg:overflow-hidden`
+  to hand scrolling back to the panes on desktop). Because header +
+  transport sit OUTSIDE the scroll region, they're pinned without
+  `sticky`, and **wheeling over the player scrolls nothing** — the
+  earlier whole-document mobile scroll let the player area page the view.
+  Verified with Playwright at desktop + sub-`lg` widths.
+
+  **Rail rows:** borderless entries (ticket tile · date · location, hover
+  highlight) matching the left library rail — NOT the bordered `ShowRow`
+  card, which crowded the narrow rail.
 
   **Status: shipped on `feat/mobile-server-sync`** (v1). Verified desktop
   + mobile via Playwright screenshots (`~/.cache/ms-playwright` chromium).

@@ -17,8 +17,8 @@
  */
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import type { ShowIndexEntry } from "@/types/homepage";
-import ShowRow from "@/components/show/ShowRow";
 import GetTheApp from "./GetTheApp";
 import {
   fetchTrending,
@@ -53,6 +53,43 @@ function anniversaryKeys(): { today: string; week: Set<string> } {
   return { today: key(now), week };
 }
 
+// A clean, borderless entry matching the left library rail: small ticket
+// tile · date (primary) · location (secondary), hover highlight only.
+function Row({ show, trailing }: { show: ShowIndexEntry; trailing?: string }) {
+  return (
+    <Link
+      href={`/shows/${show.id}`}
+      className="flex items-center gap-3 rounded-md px-2 py-1.5 transition hover:bg-white/10"
+    >
+      {show.img ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={show.img}
+          alt=""
+          loading="lazy"
+          referrerPolicy="no-referrer"
+          className="h-11 w-11 flex-shrink-0 rounded-md object-cover"
+        />
+      ) : (
+        <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-deadly-accent/30 to-deadly-blue/20 text-xs text-white/70">
+          ⚡
+        </span>
+      )}
+      <span className="min-w-0 flex-1">
+        <span className="block truncate text-sm font-semibold text-white">
+          {formatDate(show.d)}
+        </span>
+        <span className="block truncate text-xs text-white/50">
+          {location(show)}
+        </span>
+      </span>
+      {trailing && (
+        <span className="flex-shrink-0 text-xs text-white/40">{trailing}</span>
+      )}
+    </Link>
+  );
+}
+
 function Unit({
   title,
   rows,
@@ -63,18 +100,10 @@ function Unit({
   if (rows.length === 0) return null;
   return (
     <section className="mb-5">
-      <h3 className="mb-2 text-sm font-bold text-white">{title}</h3>
-      <div className="space-y-1.5">
+      <h3 className="mb-1 px-2 text-sm font-bold text-white">{title}</h3>
+      <div className="space-y-0.5">
         {rows.map(({ show, trailing }) => (
-          <ShowRow
-            key={show.id}
-            showId={show.id}
-            image={show.img || null}
-            date={formatDate(show.d)}
-            location={location(show)}
-            venue={show.v}
-            trailing={trailing}
-          />
+          <Row key={show.id} show={show} trailing={trailing} />
         ))}
       </div>
     </section>

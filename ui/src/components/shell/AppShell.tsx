@@ -48,7 +48,7 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
   const placement = useRightRailPlacement();
 
   return (
-    <div className="flex min-h-screen flex-col bg-black text-white lg:h-screen lg:min-h-0">
+    <div className="flex h-[100dvh] flex-col bg-black text-white">
       {/* top bar */}
       <header className="flex flex-shrink-0 items-center gap-4 px-4 py-2.5">
         <Logo />
@@ -75,8 +75,11 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
         </div>
       </header>
 
-      {/* panes: row on desktop, stacked on mobile */}
-      <div className="flex flex-1 flex-col gap-2 px-2 pb-2 lg:min-h-0 lg:flex-row">
+      {/* panes: row on desktop (each pane scrolls internally), stacked into
+          ONE scroll region on mobile. Either way the document never scrolls,
+          so the header + transport stay fixed and wheeling over them moves
+          nothing. */}
+      <div className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-2 pb-2 lg:flex-row lg:overflow-hidden">
         <LibraryRail />
         <main className="min-w-0 rounded-lg bg-gradient-to-b from-deadly-surface to-deadly-bg lg:min-h-0 lg:flex-1 lg:overflow-y-auto">
           <div className="px-4 py-6 sm:px-8">{children}</div>
@@ -92,8 +95,9 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
         )}
       </div>
 
-      {/* bottom transport — existing HeaderPlayer, do not fork */}
-      <div className="sticky bottom-0 z-20 flex-shrink-0 border-t border-white/10 bg-deadly-bg px-4 py-2">
+      {/* bottom transport — existing HeaderPlayer, do not fork. A fixed flex
+          item outside the scroll region, so it's pinned without `sticky`. */}
+      <div className="flex-shrink-0 border-t border-white/10 bg-deadly-bg px-4 py-2">
         <HeaderPlayerWrapper />
       </div>
     </div>
