@@ -149,6 +149,7 @@ export default async function ShowPage({
         date={show.date}
         venue={show.venue}
         location={show.location_raw}
+        image={coverUrl}
       />
 
       {show.setlist && show.setlist.length > 0 && (

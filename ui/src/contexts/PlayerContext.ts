@@ -11,6 +11,9 @@ export interface ViewedShow {
   date: string;
   venue: string;
   location: string;
+  // Cover art URL (ticket stub / photo / logo fallback). Optional — remote/
+  // parked shows claimed from connect state won't have it.
+  image?: string | null;
 }
 
 export interface PlayerContextValue {

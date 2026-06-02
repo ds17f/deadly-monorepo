@@ -239,18 +239,36 @@ export default function HeaderPlayer() {
       ? `${showInfo.date} — ${showInfo.venue}`
       : null;
 
+  // Cover art (from the viewed/active show); logo when absent (e.g. remote).
+  const art = activeShow?.image ?? null;
+  const artIsLogo = !art || art.endsWith("/logo.png");
+  const artSrc = art ?? "/logo.png";
+  const showLoaded = isActive || isParked || isRemoteActive;
+
   return (
     <div className="relative flex flex-1 items-center pl-4">
     <div className="flex flex-1 items-center gap-3 overflow-hidden sm:gap-4">
       {/* Show + track info — click to expand into the now-playing sheet */}
       <div
         onClick={() => {
-          if (isActive || isParked || isRemoteActive) setExpanded(true);
+          if (showLoaded) setExpanded(true);
         }}
-        className={`min-w-0 flex-1 ${
-          isActive || isParked || isRemoteActive ? "cursor-pointer" : ""
+        className={`flex min-w-0 flex-1 items-center gap-3 ${
+          showLoaded ? "cursor-pointer" : ""
         }`}
       >
+        {showLoaded && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={artSrc}
+            alt=""
+            className={`h-10 w-10 flex-shrink-0 rounded bg-white/5 ${
+              artIsLogo ? "object-contain p-1" : "object-cover"
+            }`}
+            referrerPolicy="no-referrer"
+          />
+        )}
+        <div className="min-w-0 flex-1">
         <div className="flex items-baseline gap-2">
           <p className="truncate text-sm font-medium text-white">
             {displayTrackTitle ?? showInfo?.date ?? "--"}
@@ -270,6 +288,7 @@ export default function HeaderPlayer() {
             {showInfo.date} — {showInfo.venue}
           </p>
         ) : null}
+        </div>
       </div>
 
       {/* Seek bar */}
@@ -449,9 +468,10 @@ export default function HeaderPlayer() {
       {queueOpen && <QueuePanel onClose={closeQueue} />}
       <AutoplayPrompt />
 
-      {/* ── Full-screen "now playing" sheet — slides up on interaction ── */}
+      {/* ── "Now playing" sheet — full-screen on mobile, a docked landscape
+          panel on desktop. Slides up on interaction, down to collapse. ── */}
       <div
-        className={`fixed inset-0 z-[60] flex flex-col bg-gradient-to-b from-deadly-surface to-deadly-bg text-white transition-transform duration-300 ease-out ${
+        className={`fixed z-[60] flex flex-col bg-gradient-to-b from-deadly-surface to-deadly-bg text-white transition-transform duration-300 ease-out inset-0 lg:inset-x-0 lg:bottom-0 lg:top-auto lg:h-[460px] lg:rounded-t-2xl lg:border-t lg:border-white/10 lg:shadow-2xl lg:shadow-black/50 ${
           expanded ? "translate-y-0" : "pointer-events-none translate-y-full"
         }`}
         aria-hidden={!expanded}
@@ -521,13 +541,22 @@ export default function HeaderPlayer() {
           </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto px-5 pb-8">
-          <div className="mx-auto w-full max-w-md">
-            {/* artwork */}
-            <div className="mx-auto mt-2 aspect-square w-full max-w-[18rem] rounded-lg bg-gradient-to-br from-deadly-accent/40 to-deadly-blue/30 shadow-2xl" />
+        <div className="flex flex-1 flex-col overflow-y-auto lg:flex-row lg:gap-6 lg:overflow-hidden lg:px-6 lg:pb-6">
+          {/* media column: artwork + info + seek + transport + recordings */}
+          <div className="flex flex-col items-center px-5 pb-6 lg:w-[300px] lg:flex-shrink-0 lg:items-start lg:overflow-y-auto lg:px-0 lg:pb-0">
+            {/* artwork (real cover, logo fallback) */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={artSrc}
+              alt=""
+              referrerPolicy="no-referrer"
+              className={`mt-2 aspect-square w-full max-w-[18rem] rounded-lg bg-white/5 shadow-2xl lg:mt-0 lg:max-w-[240px] ${
+                artIsLogo ? "object-contain p-6 lg:p-4" : "object-cover"
+              }`}
+            />
 
             {/* show + track */}
-            <div className="mt-6">
+            <div className="mt-5 w-full text-center lg:text-left">
               <p className="text-xl font-bold text-white">
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
@@ -548,7 +577,7 @@ export default function HeaderPlayer() {
             </div>
 
             {/* seek */}
-            <div className="mt-5">
+            <div className="mt-5 w-full">
               <div
                 className="h-1.5 w-full cursor-pointer rounded-full bg-white/10"
                 onClick={handleSeek}
@@ -565,7 +594,7 @@ export default function HeaderPlayer() {
             </div>
 
             {/* transport */}
-            <div className="mt-4 flex items-center justify-center gap-8">
+            <div className="mt-4 flex w-full items-center justify-center gap-8">
               <button
                 onClick={handlePrev}
                 disabled={!handlePrev}
@@ -610,17 +639,23 @@ export default function HeaderPlayer() {
 
             {/* recording switcher */}
             {activeShow && activeShow.recordings.length > 1 && (
-              <RecordingSelector
-                recordings={activeShow.recordings}
-                selectedId={selectedRecording}
-                onSelect={selectRecording}
-              />
+              <div className="w-full">
+                <RecordingSelector
+                  recordings={activeShow.recordings}
+                  selectedId={selectedRecording}
+                  onSelect={selectRecording}
+                />
+              </div>
             )}
+          </div>
 
-            {/* track list */}
-            {isActive && (
-              <div className="mt-4">
-                <h4 className="mb-2 text-sm font-bold text-deadly-title">Tracks</h4>
+          {/* tracks column */}
+          <div className="px-5 pb-8 lg:flex-1 lg:overflow-y-auto lg:border-l lg:border-white/10 lg:px-6 lg:pb-0">
+            {isActive ? (
+              <>
+                <h4 className="mb-2 mt-4 text-sm font-bold text-deadly-title lg:mt-0">
+                  Tracks
+                </h4>
                 <TrackList
                   tracks={tracks}
                   isLoading={isLoadingTracks}
@@ -628,7 +663,11 @@ export default function HeaderPlayer() {
                   status={status}
                   onPlayTrack={playTrack}
                 />
-              </div>
+              </>
+            ) : (
+              <p className="mt-4 hidden text-sm text-white/30 lg:block">
+                Press play to load the track list.
+              </p>
             )}
           </div>
         </div>

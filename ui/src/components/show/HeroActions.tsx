@@ -17,6 +17,7 @@ export default function HeroActions({
   date,
   venue,
   location,
+  image,
 }: {
   showId: string;
   recordings: Recording[];
@@ -24,6 +25,7 @@ export default function HeroActions({
   date: string;
   venue: string;
   location: string;
+  image?: string | null;
 }) {
   const player = usePlayer();
   const { isFavorite, toggleFavorite, getReview, saveReview, removeReview } =
@@ -48,7 +50,7 @@ export default function HeroActions({
 
   // Register this show as the viewed show so the player knows what to load.
   useEffect(() => {
-    player.setViewedShow({ showId, recordings, bestRecordingId, date, venue, location });
+    player.setViewedShow({ showId, recordings, bestRecordingId, date, venue, location, image });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showId]);
 
@@ -74,6 +76,7 @@ export default function HeroActions({
         date,
         venue,
         location,
+        image,
       });
     }
   }
