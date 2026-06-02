@@ -454,6 +454,18 @@ export default function PlayerProvider({
     if (!userState || activeShow) return;
 
     hydratedRef.current = true;
+    // The server's userState has no cover art — restore it from the last
+    // locally-played show so a refresh doesn't fall back to the logo.
+    let storedImage: string | null = null;
+    try {
+      const raw = localStorage.getItem("deadly_now_art");
+      if (raw) {
+        const parsed = JSON.parse(raw) as { showId?: string; image?: string | null };
+        if (parsed.showId === userState.showId) storedImage = parsed.image ?? null;
+      }
+    } catch {
+      // ignore malformed storage
+    }
     setActiveShow({
       showId: userState.showId,
       recordings: [],
@@ -461,6 +473,7 @@ export default function PlayerProvider({
       date: userState.date ?? "",
       venue: userState.venue ?? "",
       location: userState.location ?? "",
+      image: storedImage,
     });
     setSelectedRecording(userState.recordingId);
   }, [userState, activeShow]);
@@ -542,6 +555,16 @@ export default function PlayerProvider({
   const playShow = useCallback(
     (show: ViewedShow) => {
       setActiveShow(show);
+      // Remember the cover so a page refresh (which rehydrates from the
+      // server's art-less userState) can restore it instead of the logo.
+      try {
+        localStorage.setItem(
+          "deadly_now_art",
+          JSON.stringify({ showId: show.showId, image: show.image ?? null }),
+        );
+      } catch {
+        // ignore storage failures
+      }
       const recId =
         show.bestRecordingId ?? show.recordings[0]?.identifier ?? null;
       setSelectedRecording(recId);
