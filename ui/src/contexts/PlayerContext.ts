@@ -28,9 +28,12 @@ export interface PlayerContextValue {
   selectedRecording: string | null;
   isLoadingTracks: boolean;
   errorMessage: string | null;
+  // Output volume, 0..1. Applies to local playback only.
+  volume: number;
 
   // Actions
   setViewedShow: (show: ViewedShow | null) => void;
+  setVolume: (volume: number) => void;
   selectRecording: (identifier: string) => void;
   playShow: (show: ViewedShow) => void;
   playRecording: (identifier: string) => void;

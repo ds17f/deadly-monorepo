@@ -32,6 +32,7 @@ export default function PlayerProvider({
   );
   const [isLoadingTracks, setIsLoadingTracks] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [volume, setVolumeState] = useState(1);
   const [autoplayBlocked, setAutoplayBlocked] = useState(false);
   const [autoplayInfo, setAutoplayInfo] = useState<{ showDate: string; venue: string; fromDevice: string } | null>(null);
   const autoplayBlockedAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -51,6 +52,7 @@ export default function PlayerProvider({
   const selectedRecordingRef = useRef<string | null>(null);
   const sendPositionUpdateRef = useRef(sendPositionUpdate);
   const statusRef = useRef<PlaybackStatus>("idle");
+  const volumeRef = useRef(1);
   const suppressAutoplayRef = useRef(false);
   const suppressAnnounceRef = useRef(false);
   const prevUserStateRef = useRef<{ isPlaying: boolean; trackIndex: number; positionMs: number } | null>(null);
@@ -231,14 +233,37 @@ export default function PlayerProvider({
     });
   }
 
+  // Restore persisted volume on mount, before the audio elements are created.
+  useEffect(() => {
+    const stored = Number(localStorage.getItem("deadly_volume"));
+    if (isFinite(stored) && stored >= 0 && stored <= 1) {
+      volumeRef.current = stored;
+      setVolumeState(stored);
+    }
+  }, []);
+
+  // Apply volume to both audio elements and persist it.
+  useEffect(() => {
+    volumeRef.current = volume;
+    if (audioARef.current) audioARef.current.volume = volume;
+    if (audioBRef.current) audioBRef.current.volume = volume;
+    localStorage.setItem("deadly_volume", String(volume));
+  }, [volume]);
+
+  const setVolume = useCallback((v: number) => {
+    setVolumeState(Math.max(0, Math.min(1, v)));
+  }, []);
+
   // Create audio elements once
   useEffect(() => {
     const audioA = new Audio();
     audioA.preload = "auto";
+    audioA.volume = volumeRef.current;
     audioARef.current = audioA;
 
     const audioB = new Audio();
     audioB.preload = "none";
+    audioB.volume = volumeRef.current;
     audioBRef.current = audioB;
 
     wireAudioEvents(audioA);
@@ -793,7 +818,9 @@ export default function PlayerProvider({
       selectedRecording,
       isLoadingTracks,
       errorMessage,
+      volume,
       setViewedShow,
+      setVolume,
       selectRecording,
       playShow,
       playRecording,
@@ -820,6 +847,8 @@ export default function PlayerProvider({
       selectedRecording,
       isLoadingTracks,
       errorMessage,
+      volume,
+      setVolume,
       selectRecording,
       playShow,
       playRecording,
