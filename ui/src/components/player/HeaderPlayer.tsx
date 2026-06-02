@@ -200,15 +200,18 @@ function VolumeControl({
   );
 }
 
-// A single rotating "factoid" drawn from the AI + user reviews, shown in the
-// fullscreen view — readable info for when you tab back or it's on a TV.
+// A themed "factoid" card drawn from the AI + user reviews, shown in the
+// fullscreen view — readable from across the room when you tab back or it's
+// up on a TV. One card per theme; content varies by shape.
 interface Factoid {
   label: string;
-  body: string;
   meta?: string;
+  paragraphs?: string[]; // prose, rendered with paragraph breaks
+  bullets?: string[]; // a list (e.g. highlights)
+  members?: [string, string][]; // name → note (band performance)
 }
 
-// Split long prose into readable paragraph-sized chunks for individual cards.
+// Split prose into paragraphs so the long review keeps its breaks.
 function splitProse(text: string): string[] {
   return text
     .split(/\n\s*\n/)
@@ -216,48 +219,58 @@ function splitProse(text: string): string[] {
     .filter((p) => p.length > 0);
 }
 
-// Build the rotation: about → the show (prose) → highlights → band → best
-// recording → your review. Each becomes its own readable card.
+// One card per theme: About the show (the review) → Highlights → About the
+// band (all members together) → About the recording → Your review.
 function buildFactoids(
   review: AiShowReview | null | undefined,
   userReview: ShowReview | null | undefined,
 ): Factoid[] {
   const cards: Factoid[] = [];
-  if (review?.summary) cards.push({ label: "About this show", body: review.summary });
-  if (review?.review) {
-    splitProse(review.review).forEach((p) =>
-      cards.push({ label: "The show", body: p }),
-    );
-  }
-  (review?.key_highlights ?? []).forEach((h) =>
-    cards.push({ label: "Highlight", body: h }),
-  );
-  Object.entries(review?.band_performance ?? {}).forEach(([member, text]) => {
-    if (text) cards.push({ label: member, body: text });
-  });
+
+  const showParas = review?.review
+    ? splitProse(review.review)
+    : review?.summary
+      ? [review.summary]
+      : [];
+  if (showParas.length) cards.push({ label: "About the show", paragraphs: showParas });
+
+  const highlights = review?.key_highlights ?? [];
+  if (highlights.length) cards.push({ label: "Highlights", bullets: highlights });
+
+  const band = Object.entries(review?.band_performance ?? {}).filter(
+    ([, text]) => text && text.length > 0,
+  ) as [string, string][];
+  if (band.length) cards.push({ label: "About the band", members: band });
+
   if (review?.best_recording?.reason) {
-    cards.push({ label: "Best recording", body: review.best_recording.reason });
+    cards.push({ label: "About the recording", paragraphs: [review.best_recording.reason] });
   }
+
   if (userReview && (userReview.notes || userReview.overallRating)) {
-    const stars = userReview.overallRating
-      ? "★".repeat(userReview.overallRating)
-      : undefined;
     cards.push({
       label: "Your review",
-      meta: stars,
-      body: userReview.notes || "You rated this show.",
+      meta: userReview.overallRating ? "★".repeat(userReview.overallRating) : undefined,
+      paragraphs: [userReview.notes || "You rated this show."],
     });
   }
   return cards;
 }
 
-// Dwell time scaled to length so there's enough time to read (≈200 wpm).
-function dwellFor(body: string): number {
-  const words = body.trim().split(/\s+/).length;
-  return Math.min(26000, Math.max(10000, (words / 3.2) * 1000 + 4500));
+function cardText(c: Factoid): string {
+  return [
+    ...(c.paragraphs ?? []),
+    ...(c.bullets ?? []),
+    ...(c.members ?? []).map(([m, t]) => `${m} ${t}`),
+  ].join(" ");
 }
 
-// Rotates through the factoid cards with a slow crossfade, each lingering long
+// Dwell scaled to length so there's time to actually read it (≈200 wpm).
+function dwellFor(c: Factoid): number {
+  const words = cardText(c).trim().split(/\s+/).filter(Boolean).length;
+  return Math.min(34000, Math.max(11000, (words / 3.4) * 1000 + 5000));
+}
+
+// Rotates through the themed cards with a slow crossfade, each lingering long
 // enough to read. Holds on a single card; stops when there are none.
 function AmbientFactoids({ cards }: { cards: Factoid[] }) {
   const [idx, setIdx] = useState(0);
@@ -270,7 +283,7 @@ function AmbientFactoids({ cards }: { cards: Factoid[] }) {
 
   useEffect(() => {
     if (cards.length <= 1) return;
-    const dwell = dwellFor(cards[idx]?.body ?? "");
+    const dwell = dwellFor(cards[idx] ?? cards[0]);
     const tOut = setTimeout(() => setVisible(false), dwell);
     const tNext = setTimeout(() => {
       setIdx((p) => (p + 1) % cards.length);
@@ -284,22 +297,59 @@ function AmbientFactoids({ cards }: { cards: Factoid[] }) {
 
   if (cards.length === 0) return null;
   const card = cards[Math.min(idx, cards.length - 1)];
+  // Multi-paragraph prose (the long review) reads at a slightly smaller size;
+  // shorter cards get bigger, across-the-room type.
+  const big = !(card.paragraphs && card.paragraphs.length > 1);
+  const bodyCls = big
+    ? "text-xl leading-relaxed text-white/85 lg:text-2xl"
+    : "text-lg leading-relaxed text-white/85 lg:text-xl";
 
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full max-w-3xl">
       <div
-        className={`rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20 transition-opacity duration-700 ${
+        className={`rounded-2xl border border-white/10 bg-white/[0.05] p-7 shadow-xl shadow-black/20 transition-opacity duration-700 lg:p-10 ${
           visible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-deadly-title/80">
+        <p className="mb-5 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-deadly-title lg:text-base">
           {card.label}
           {card.meta && <span className="text-deadly-star">{card.meta}</span>}
         </p>
-        <p className="text-[15px] leading-relaxed text-white/80">{card.body}</p>
+
+        {card.paragraphs && (
+          <div className={`space-y-5 ${bodyCls}`}>
+            {card.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+        )}
+
+        {card.bullets && (
+          <ul className={`space-y-4 ${bodyCls}`}>
+            {card.bullets.map((b, i) => (
+              <li key={i} className="flex gap-3">
+                <span className="mt-px text-deadly-highlight">&bull;</span>
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {card.members && (
+          <div className={`space-y-4 ${bodyCls}`}>
+            {card.members.map(([member, text]) => (
+              <p key={member}>
+                <span className="font-semibold text-white">{member}</span>
+                {" — "}
+                {text}
+              </p>
+            ))}
+          </div>
+        )}
       </div>
+
       {cards.length > 1 && (
-        <div className="mt-3 flex flex-wrap justify-center gap-1.5">
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
           {cards.map((_, i) => (
             <span
               key={i}
@@ -950,12 +1000,12 @@ export default function HeaderPlayer() {
           )}
         </div>
 
-        {/* ── Desktop layout: immersive — big art + now-playing on the left,
-            a rotating factoid card on the right (the ambient party/TV view).
-            Only the top bar + docked controls fade when idle. ── */}
+        {/* ── Desktop layout: immersive — cover art + now-playing, then a
+            rotating themed review card. The ambient party/TV view; only the
+            top bar + docked controls fade when idle. ── */}
         <div className="hidden min-h-0 flex-1 flex-col overflow-hidden lg:flex">
-          {/* Centered column: art → now-playing → rotating factoid card. */}
-          <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-6 overflow-y-auto px-10 py-6">
+          {/* Centered column: art → now-playing → rotating review card. */}
+          <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-6 overflow-y-auto px-10 py-8">
             {/* Full ticket in fullscreen — show the whole stub (contain),
                 not the square crop the mini bar uses. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -963,16 +1013,16 @@ export default function HeaderPlayer() {
               src={artSrc}
               alt=""
               referrerPolicy="no-referrer"
-              className={`max-h-[48vh] max-w-[min(90vw,40rem)] flex-shrink-0 rounded-xl object-contain shadow-2xl shadow-black/50 ${
-                artIsLogo ? "aspect-square w-full max-w-[min(42vh,24rem)] bg-white/5 p-10" : ""
+              className={`max-h-[34vh] max-w-[min(90vw,30rem)] flex-shrink-0 rounded-xl object-contain shadow-2xl shadow-black/50 ${
+                artIsLogo ? "aspect-square w-full max-w-[min(30vh,18rem)] bg-white/5 p-8" : ""
               }`}
             />
-            <div className="max-w-2xl flex-shrink-0 text-center">
-              <p className="text-2xl font-bold text-white">
+            <div className="max-w-3xl flex-shrink-0 text-center">
+              <p className="text-3xl font-bold text-white">
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
               {subtitleLine && (
-                <p className={`mt-1.5 text-base ${isRemoteActive ? "text-deadly-highlight" : "text-white/60"}`}>
+                <p className={`mt-2 text-lg ${isRemoteActive ? "text-deadly-highlight" : "text-white/70"}`}>
                   {subtitleLine}
                 </p>
               )}
