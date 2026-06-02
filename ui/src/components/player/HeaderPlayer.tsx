@@ -36,6 +36,107 @@ function showLabel(show: ViewedShow): { date: string; venue: string } {
   };
 }
 
+// Shared seek bar + transport, used by both the mobile sheet and the desktop
+// docked panel so the controls stay identical.
+function SeekBar({
+  progress,
+  elapsed,
+  duration,
+  onSeek,
+}: {
+  progress: number;
+  elapsed: number;
+  duration: number;
+  onSeek: (e: React.MouseEvent<HTMLDivElement>) => void;
+}) {
+  return (
+    <div className="w-full">
+      <div
+        className="h-1.5 w-full cursor-pointer rounded-full bg-white/10"
+        onClick={onSeek}
+      >
+        <div
+          className="h-full rounded-full bg-deadly-highlight"
+          style={{ width: `${Math.min(progress, 100)}%` }}
+        />
+      </div>
+      <div className="mt-1 flex justify-between text-[11px] tabular-nums text-white/40">
+        <span>{formatTime(elapsed)}</span>
+        <span>{formatTime(duration)}</span>
+      </div>
+    </div>
+  );
+}
+
+function Transport({
+  isPlaying,
+  isLoading,
+  onPrev,
+  onNext,
+  onToggle,
+  prevDisabled,
+  nextDisabled,
+  toggleDisabled,
+  big,
+}: {
+  isPlaying: boolean;
+  isLoading: boolean;
+  onPrev?: () => void;
+  onNext?: () => void;
+  onToggle: () => void;
+  prevDisabled: boolean;
+  nextDisabled: boolean;
+  toggleDisabled: boolean;
+  big?: boolean;
+}) {
+  return (
+    <div className="flex flex-shrink-0 items-center justify-center gap-6">
+      <button
+        onClick={onPrev}
+        disabled={prevDisabled}
+        className="text-white/70 transition-colors hover:text-white disabled:text-white/20"
+        aria-label="Previous track"
+      >
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 6h2v12H6zm3.5 6 8.5 6V6z" />
+        </svg>
+      </button>
+      <button
+        onClick={onToggle}
+        disabled={toggleDisabled}
+        className={`flex items-center justify-center rounded-full bg-white text-deadly-bg transition hover:scale-105 disabled:opacity-50 ${
+          big ? "h-16 w-16" : "h-12 w-12"
+        }`}
+        aria-label={isPlaying ? "Pause" : "Play"}
+      >
+        {isLoading ? (
+          <svg width={big ? 26 : 22} height={big ? 26 : 22} viewBox="0 0 24 24" fill="currentColor" className="animate-spin">
+            <path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z" />
+          </svg>
+        ) : isPlaying ? (
+          <svg width={big ? 26 : 22} height={big ? 26 : 22} viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6 19h4V5H6zm8-14v14h4V5z" />
+          </svg>
+        ) : (
+          <svg width={big ? 28 : 24} height={big ? 28 : 24} viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        )}
+      </button>
+      <button
+        onClick={onNext}
+        disabled={nextDisabled}
+        className="text-white/70 transition-colors hover:text-white disabled:text-white/20"
+        aria-label="Next track"
+      >
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+        </svg>
+      </button>
+    </div>
+  );
+}
+
 export default function HeaderPlayer() {
   const {
     activeShow,
@@ -244,6 +345,10 @@ export default function HeaderPlayer() {
   const artIsLogo = !art || art.endsWith("/logo.png");
   const artSrc = art ?? "/logo.png";
   const showLoaded = isActive || isParked || isRemoteActive;
+
+  // Shared transport flags for the now-playing sheet.
+  const sheetToggleDisabled = isLoadingTracks || !!(isActive && isActiveDevice && isLoading);
+  const sheetIsLoadingIcon = isLoadingTracks || !!(isActive && isActiveDevice && isLoading);
 
   return (
     <div className="relative flex flex-1 items-center pl-4">
@@ -541,105 +646,110 @@ export default function HeaderPlayer() {
           </div>
         </div>
 
-        <div className="flex flex-1 flex-col overflow-y-auto lg:flex-row lg:gap-6 lg:overflow-hidden lg:px-6 lg:pb-6">
-          {/* media column: artwork + info + seek + transport + recordings */}
-          <div className="flex flex-col items-center px-5 pb-6 lg:w-[300px] lg:flex-shrink-0 lg:items-start lg:overflow-y-auto lg:px-0 lg:pb-0">
-            {/* artwork (real cover, logo fallback) */}
+        {/* ── Mobile layout: vertical, full screen ── */}
+        <div className="flex flex-1 flex-col overflow-y-auto px-5 pb-8 lg:hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={artSrc}
+            alt=""
+            referrerPolicy="no-referrer"
+            className={`mx-auto mt-2 aspect-square w-full max-w-[18rem] rounded-lg bg-white/5 shadow-2xl ${
+              artIsLogo ? "object-contain p-6" : "object-cover"
+            }`}
+          />
+          <div className="mt-5 w-full text-center">
+            <p className="text-xl font-bold text-white">
+              {displayTrackTitle ?? showInfo?.date ?? "--"}
+            </p>
+            {subtitleLine && (
+              <p className={`mt-1 text-sm ${isRemoteActive ? "text-deadly-highlight" : "text-white/50"}`}>
+                {subtitleLine}
+              </p>
+            )}
+            {displayTrackCount > 1 && (
+              <p className="mt-1 text-xs tabular-nums text-white/30">
+                Track {displayTrackIndex + 1} of {displayTrackCount}
+              </p>
+            )}
+          </div>
+          <div className="mt-5">
+            <SeekBar progress={progress} elapsed={displayElapsed} duration={displayDuration} onSeek={handleSeek} />
+          </div>
+          <div className="mt-4">
+            <Transport
+              isPlaying={displayIsPlaying}
+              isLoading={sheetIsLoadingIcon}
+              onPrev={handlePrev}
+              onNext={handleNext}
+              onToggle={handleTogglePlayPause}
+              prevDisabled={!handlePrev}
+              nextDisabled={!handleNext}
+              toggleDisabled={sheetToggleDisabled}
+              big
+            />
+          </div>
+          {activeShow && activeShow.recordings.length > 1 && (
+            <RecordingSelector
+              recordings={activeShow.recordings}
+              selectedId={selectedRecording}
+              onSelect={selectRecording}
+            />
+          )}
+          {isActive && (
+            <div className="mt-4">
+              <h4 className="mb-2 text-sm font-bold text-deadly-title">Tracks</h4>
+              <TrackList tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={playTrack} />
+            </div>
+          )}
+        </div>
+
+        {/* ── Desktop layout: control bar on top, full-width tracks below ── */}
+        <div className="hidden flex-1 flex-col overflow-hidden px-6 pb-4 lg:flex">
+          {/* control bar */}
+          <div className="flex items-center gap-5 border-b border-white/10 py-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={artSrc}
               alt=""
               referrerPolicy="no-referrer"
-              className={`mt-2 aspect-square w-full max-w-[18rem] rounded-lg bg-white/5 shadow-2xl lg:mt-0 lg:max-w-[240px] ${
-                artIsLogo ? "object-contain p-6 lg:p-4" : "object-cover"
+              className={`h-16 w-16 flex-shrink-0 rounded-md bg-white/5 ${
+                artIsLogo ? "object-contain p-1.5" : "object-cover"
               }`}
             />
-
-            {/* show + track */}
-            <div className="mt-5 w-full text-center lg:text-left">
-              <p className="text-xl font-bold text-white">
+            <div className="w-56 min-w-0 flex-shrink-0">
+              <p className="truncate font-bold text-white">
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
               {subtitleLine && (
-                <p
-                  className={`mt-1 text-sm ${
-                    isRemoteActive ? "text-deadly-highlight" : "text-white/50"
-                  }`}
-                >
+                <p className={`truncate text-sm ${isRemoteActive ? "text-deadly-highlight" : "text-white/50"}`}>
                   {subtitleLine}
                 </p>
               )}
-              {displayTrackCount > 1 && (
-                <p className="mt-1 text-xs tabular-nums text-white/30">
-                  Track {displayTrackIndex + 1} of {displayTrackCount}
-                </p>
-              )}
             </div>
-
-            {/* seek */}
-            <div className="mt-5 w-full">
-              <div
-                className="h-1.5 w-full cursor-pointer rounded-full bg-white/10"
-                onClick={handleSeek}
-              >
-                <div
-                  className="h-full rounded-full bg-deadly-highlight"
-                  style={{ width: `${Math.min(progress, 100)}%` }}
-                />
-              </div>
-              <div className="mt-1 flex justify-between text-[11px] tabular-nums text-white/40">
-                <span>{formatTime(displayElapsed)}</span>
-                <span>{formatTime(displayDuration)}</span>
-              </div>
+            <Transport
+              isPlaying={displayIsPlaying}
+              isLoading={sheetIsLoadingIcon}
+              onPrev={handlePrev}
+              onNext={handleNext}
+              onToggle={handleTogglePlayPause}
+              prevDisabled={!handlePrev}
+              nextDisabled={!handleNext}
+              toggleDisabled={sheetToggleDisabled}
+            />
+            <div className="min-w-0 flex-1">
+              <SeekBar progress={progress} elapsed={displayElapsed} duration={displayDuration} onSeek={handleSeek} />
             </div>
+            {displayTrackCount > 1 && (
+              <span className="flex-shrink-0 text-xs tabular-nums text-white/40">
+                {displayTrackIndex + 1} / {displayTrackCount}
+              </span>
+            )}
+          </div>
 
-            {/* transport */}
-            <div className="mt-4 flex w-full items-center justify-center gap-8">
-              <button
-                onClick={handlePrev}
-                disabled={!handlePrev}
-                className="text-white/70 transition-colors hover:text-white disabled:text-white/20"
-                aria-label="Previous track"
-              >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6 6h2v12H6zm3.5 6 8.5 6V6z" />
-                </svg>
-              </button>
-              <button
-                onClick={handleTogglePlayPause}
-                disabled={isLoadingTracks || !!(isActive && isActiveDevice && isLoading)}
-                className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-deadly-bg transition hover:scale-105 disabled:opacity-50"
-                aria-label={displayIsPlaying ? "Pause" : "Play"}
-              >
-                {isLoadingTracks || (isActive && isActiveDevice && isLoading) ? (
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" className="animate-spin">
-                    <path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z" />
-                  </svg>
-                ) : displayIsPlaying ? (
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M6 19h4V5H6zm8-14v14h4V5z" />
-                  </svg>
-                ) : (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                )}
-              </button>
-              <button
-                onClick={handleNext}
-                disabled={!handleNext}
-                className="text-white/70 transition-colors hover:text-white disabled:text-white/20"
-                aria-label="Next track"
-              >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
-                </svg>
-              </button>
-            </div>
-
-            {/* recording switcher */}
+          {/* recordings + full-width track list */}
+          <div className="flex-1 overflow-y-auto pt-3">
             {activeShow && activeShow.recordings.length > 1 && (
-              <div className="w-full">
+              <div className="mb-3 max-w-md">
                 <RecordingSelector
                   recordings={activeShow.recordings}
                   selectedId={selectedRecording}
@@ -647,27 +757,10 @@ export default function HeaderPlayer() {
                 />
               </div>
             )}
-          </div>
-
-          {/* tracks column */}
-          <div className="px-5 pb-8 lg:flex-1 lg:overflow-y-auto lg:border-l lg:border-white/10 lg:px-6 lg:pb-0">
             {isActive ? (
-              <>
-                <h4 className="mb-2 mt-4 text-sm font-bold text-deadly-title lg:mt-0">
-                  Tracks
-                </h4>
-                <TrackList
-                  tracks={tracks}
-                  isLoading={isLoadingTracks}
-                  currentTrackIndex={currentTrackIndex}
-                  status={status}
-                  onPlayTrack={playTrack}
-                />
-              </>
+              <TrackList tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={playTrack} />
             ) : (
-              <p className="mt-4 hidden text-sm text-white/30 lg:block">
-                Press play to load the track list.
-              </p>
+              <p className="text-sm text-white/30">Press play to load the track list.</p>
             )}
           </div>
         </div>
