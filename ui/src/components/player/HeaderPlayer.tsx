@@ -761,13 +761,14 @@ export default function HeaderPlayer() {
 
         {/* ── Mobile layout: vertical, full screen ── */}
         <div className="flex flex-1 flex-col overflow-y-auto px-5 pb-8 lg:hidden">
+          {/* Full ticket in fullscreen — whole stub (contain), not cropped. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={artSrc}
             alt=""
             referrerPolicy="no-referrer"
-            className={`mx-auto mt-2 aspect-square w-full max-w-[18rem] rounded-lg bg-white/5 shadow-2xl ${
-              artIsLogo ? "object-contain p-6" : "object-cover"
+            className={`mx-auto mt-2 max-h-[42vh] w-full max-w-[20rem] rounded-lg object-contain shadow-2xl ${
+              artIsLogo ? "aspect-square max-w-[18rem] bg-white/5 p-6" : ""
             }`}
           />
           <div className="mt-5 w-full text-center">
@@ -823,13 +824,15 @@ export default function HeaderPlayer() {
           <div className="flex min-h-0 flex-1">
             {/* cover art + now-playing — always present (the ambient view) */}
             <div className="flex flex-1 flex-col items-center justify-center gap-6 p-10">
+              {/* Full ticket in fullscreen — show the whole stub (contain),
+                  not the square crop the mini bar uses. */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={artSrc}
                 alt=""
                 referrerPolicy="no-referrer"
-                className={`aspect-square w-full max-w-[min(48vh,30rem)] rounded-xl bg-white/5 shadow-2xl shadow-black/50 ${
-                  artIsLogo ? "object-contain p-10" : "object-cover"
+                className={`max-h-[58vh] max-w-[min(92vw,44rem)] rounded-xl object-contain shadow-2xl shadow-black/50 ${
+                  artIsLogo ? "aspect-square w-full max-w-[min(48vh,28rem)] bg-white/5 p-10" : ""
                 }`}
               />
               <div className="max-w-2xl text-center">
