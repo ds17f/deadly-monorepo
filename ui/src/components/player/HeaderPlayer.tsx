@@ -15,7 +15,7 @@ import TrackList from "./TrackList";
 import PlayerRailPanel from "./PlayerRailPanel";
 import DevicePicker from "@/components/connect/DevicePicker";
 import { useRightRailOverride } from "@/components/shell/RightRail";
-import { lookupArt } from "@/lib/artCache";
+import { lookupArt, lookupReview } from "@/lib/artCache";
 
 function formatTime(seconds: number): string {
   if (!isFinite(seconds) || seconds < 0) return "0:00";
@@ -419,7 +419,7 @@ export default function HeaderPlayer() {
   // own review. Memoized on content so the rotation doesn't reset each render.
   const userReview = activeShow ? getReview(activeShow.showId) : null;
   const factoids = useMemo(
-    () => buildFactoids(activeShow?.review, userReview),
+    () => buildFactoids(activeShow?.review ?? lookupReview(activeShow?.showId), userReview),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [activeShow?.showId, activeShow?.review, userReview?.notes, userReview?.overallRating],
   );

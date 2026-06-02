@@ -4,7 +4,7 @@ import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
 import { fetchArchiveTracks } from "@/lib/archive";
 import { updatePlaybackPosition } from "@/lib/userDataApi";
-import { rememberArt, lookupArt } from "@/lib/artCache";
+import { rememberArt, lookupArt, rememberReview, lookupReview } from "@/lib/artCache";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
@@ -551,6 +551,7 @@ export default function PlayerProvider({
       // Only when we actually have art — claim/handoff paths call playShow
       // with no image and must NOT clobber a previously-stored cover.
       rememberArt(show.showId, show.image);
+      rememberReview(show.showId, show.review);
       const recId =
         show.bestRecordingId ?? show.recordings[0]?.identifier ?? null;
       setSelectedRecording(recId);
@@ -821,6 +822,7 @@ export default function PlayerProvider({
   const updateViewedShow = useCallback((show: ViewedShow | null) => {
     setViewedShow(show);
     if (show?.image) rememberArt(show.showId, show.image);
+    if (show?.review) rememberReview(show.showId, show.review);
   }, []);
 
   const value = useMemo(
