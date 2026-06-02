@@ -224,11 +224,64 @@ export default function HeaderPlayer() {
   // Desktop: the queue / device list render into the shell's right column
   // (Spotify-style) rather than as popovers. null = show the page's content.
   const [railMode, setRailMode] = useState<null | "queue" | "devices">(null);
-  // The bar expands into a full-screen "now playing" sheet that slides up;
+  // The bar expands into a full-screen "now playing" view that slides up;
   // slide it back down to collapse.
   const [expanded, setExpanded] = useState(false);
+  // While expanded, chrome (controls + side panel) auto-hides after a few
+  // seconds of inactivity into an ambient art-only view; input reveals it.
+  const [chromeVisible, setChromeVisible] = useState(true);
+  const sheetRef = useRef<HTMLDivElement | null>(null);
   const closeDevicePicker = useCallback(() => setDevicePickerOpen(false), []);
   const setRailOverride = useRightRailOverride();
+
+  // Open the immersive view and ask the browser to go truly full-screen.
+  const openFullscreen = useCallback(() => {
+    setExpanded(true);
+    const el = sheetRef.current;
+    if (el?.requestFullscreen) {
+      el.requestFullscreen().catch(() => {});
+    }
+  }, []);
+
+  const collapsePlayer = useCallback(() => {
+    setExpanded(false);
+    if (typeof document !== "undefined" && document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }, []);
+
+  // Sync our state when the user leaves browser full-screen (e.g. via Esc).
+  useEffect(() => {
+    function onFsChange() {
+      if (!document.fullscreenElement) setExpanded(false);
+    }
+    document.addEventListener("fullscreenchange", onFsChange);
+    return () => document.removeEventListener("fullscreenchange", onFsChange);
+  }, []);
+
+  // Idle detection while expanded: reveal chrome on input, hide after a pause.
+  useEffect(() => {
+    if (!expanded) {
+      setChromeVisible(true);
+      return;
+    }
+    let timer: ReturnType<typeof setTimeout>;
+    const reveal = () => {
+      setChromeVisible(true);
+      clearTimeout(timer);
+      timer = setTimeout(() => setChromeVisible(false), 3500);
+    };
+    reveal();
+    window.addEventListener("mousemove", reveal);
+    window.addEventListener("keydown", reveal);
+    window.addEventListener("touchstart", reveal);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("mousemove", reveal);
+      window.removeEventListener("keydown", reveal);
+      window.removeEventListener("touchstart", reveal);
+    };
+  }, [expanded]);
 
   const pendingSeekRef = useRef<{ trackIndex: number; positionMs: number } | null>(null);
 
@@ -435,6 +488,11 @@ export default function HeaderPlayer() {
     if (!showLoaded && railMode) setRailMode(null);
   }, [showLoaded, railMode]);
 
+  // Fade the immersive chrome (desktop only) when idle → ambient art view.
+  const chromeCls = chromeVisible
+    ? "lg:opacity-100"
+    : "lg:pointer-events-none lg:opacity-0";
+
   return (
     <div className="relative flex flex-1 items-center pl-4">
     {/* ── Mobile bar: art + info (tap → full-screen sheet) + quick play ── */}
@@ -600,7 +658,7 @@ export default function HeaderPlayer() {
         {isActive && <VolumeControl volume={volume} setVolume={setVolume} />}
         {showLoaded && (
           <button
-            onClick={() => setExpanded(true)}
+            onClick={openFullscreen}
             className="rounded-full p-2 text-white/50 transition-colors hover:text-white/80"
             aria-label="Full screen"
             title="Full screen"
@@ -627,18 +685,19 @@ export default function HeaderPlayer() {
 
       <AutoplayPrompt />
 
-      {/* ── "Now playing" sheet — full-screen on mobile, a docked landscape
-          panel on desktop. Slides up on interaction, down to collapse. ── */}
+      {/* ── "Now playing" — full-screen on mobile, an immersive full-screen
+          view on desktop (real browser fullscreen + idle ambient mode). ── */}
       <div
-        className={`fixed z-[60] flex flex-col bg-gradient-to-b from-deadly-surface to-deadly-bg text-white transition-transform duration-300 ease-out inset-0 lg:inset-x-0 lg:bottom-0 lg:top-auto lg:h-[460px] lg:rounded-t-2xl lg:border-t lg:border-white/10 lg:shadow-2xl lg:shadow-black/50 ${
+        ref={sheetRef}
+        className={`fixed inset-0 z-[60] flex flex-col bg-gradient-to-b from-deadly-surface to-deadly-bg text-white transition-transform duration-300 ease-out ${
           expanded ? "translate-y-0" : "pointer-events-none translate-y-full"
         }`}
         aria-hidden={!expanded}
       >
-        {/* top bar: collapse handle + devices */}
-        <div className="flex items-center justify-between px-4 py-3">
+        {/* top bar: collapse handle + devices (chrome — fades when idle) */}
+        <div className={`flex items-center justify-between px-4 py-3 transition-opacity duration-500 ${chromeCls}`}>
           <button
-            onClick={() => setExpanded(false)}
+            onClick={collapsePlayer}
             aria-label="Collapse player"
             className="rounded-full p-2 text-white/60 transition-colors hover:text-white"
           >
@@ -757,19 +816,71 @@ export default function HeaderPlayer() {
           )}
         </div>
 
-        {/* ── Desktop layout: control bar on top, full-width tracks below ── */}
-        <div className="hidden flex-1 flex-col overflow-hidden px-6 pb-4 lg:flex">
-          {/* control bar */}
-          <div className="flex items-center gap-5 border-b border-white/10 py-3">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={artSrc}
-              alt=""
-              referrerPolicy="no-referrer"
-              className={`h-16 w-16 flex-shrink-0 rounded-md bg-white/5 ${
-                artIsLogo ? "object-contain p-1.5" : "object-cover"
+        {/* ── Desktop layout: immersive — big art + ambient title (center),
+            a collapsible side track panel, docked controls. The side panel
+            and controls fade/collapse when idle, leaving the art alone. ── */}
+        <div className="hidden min-h-0 flex-1 flex-col overflow-hidden lg:flex">
+          <div className="flex min-h-0 flex-1">
+            {/* cover art + now-playing — always present (the ambient view) */}
+            <div className="flex flex-1 flex-col items-center justify-center gap-6 p-10">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={artSrc}
+                alt=""
+                referrerPolicy="no-referrer"
+                className={`aspect-square w-full max-w-[min(48vh,30rem)] rounded-xl bg-white/5 shadow-2xl shadow-black/50 ${
+                  artIsLogo ? "object-contain p-10" : "object-cover"
+                }`}
+              />
+              <div className="max-w-2xl text-center">
+                <p className="text-2xl font-bold text-white">
+                  {displayTrackTitle ?? showInfo?.date ?? "--"}
+                </p>
+                {subtitleLine && (
+                  <p className={`mt-1.5 text-base ${isRemoteActive ? "text-deadly-highlight" : "text-white/60"}`}>
+                    {subtitleLine}
+                  </p>
+                )}
+                {displayTrackCount > 1 && (
+                  <p className="mt-1 text-sm tabular-nums text-white/30">
+                    Track {displayTrackIndex + 1} of {displayTrackCount}
+                  </p>
+                )}
+              </div>
+            </div>
+
+            {/* side panel: recordings + track list (collapses when idle) */}
+            <div
+              className={`flex flex-shrink-0 flex-col overflow-y-auto transition-all duration-500 ${
+                chromeVisible
+                  ? "w-[360px] border-l border-white/10 p-6 opacity-100"
+                  : "w-0 overflow-hidden p-0 opacity-0"
               }`}
-            />
+            >
+              {activeShow && activeShow.recordings.length > 1 && (
+                <RecordingSelector
+                  recordings={activeShow.recordings}
+                  selectedId={selectedRecording}
+                  onSelect={selectRecording}
+                />
+              )}
+              <h4 className="mb-2 mt-4 text-xs font-bold uppercase tracking-wider text-deadly-title/80">
+                Tracks
+              </h4>
+              {isActive ? (
+                <TrackList tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={playTrack} />
+              ) : (
+                <p className="text-sm text-white/30">Press play to load the track list.</p>
+              )}
+            </div>
+          </div>
+
+          {/* docked controls (chrome — fades when idle) */}
+          <div
+            className={`flex items-center gap-5 border-t border-white/10 px-8 py-4 transition-opacity duration-500 ${
+              chromeVisible ? "opacity-100" : "pointer-events-none opacity-0"
+            }`}
+          >
             <div className="w-56 min-w-0 flex-shrink-0">
               <p className="truncate font-bold text-white">
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
@@ -793,28 +904,11 @@ export default function HeaderPlayer() {
             <div className="min-w-0 flex-1">
               <SeekBar progress={progress} elapsed={displayElapsed} duration={displayDuration} onSeek={handleSeek} />
             </div>
+            <VolumeControl volume={volume} setVolume={setVolume} />
             {displayTrackCount > 1 && (
               <span className="flex-shrink-0 text-xs tabular-nums text-white/40">
                 {displayTrackIndex + 1} / {displayTrackCount}
               </span>
-            )}
-          </div>
-
-          {/* recordings + full-width track list */}
-          <div className="flex-1 overflow-y-auto pt-3">
-            {activeShow && activeShow.recordings.length > 1 && (
-              <div className="mb-3 max-w-md">
-                <RecordingSelector
-                  recordings={activeShow.recordings}
-                  selectedId={selectedRecording}
-                  onSelect={selectRecording}
-                />
-              </div>
-            )}
-            {isActive ? (
-              <TrackList tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={playTrack} />
-            ) : (
-              <p className="text-sm text-white/30">Press play to load the track list.</p>
             )}
           </div>
         </div>
