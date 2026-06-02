@@ -64,22 +64,30 @@ function Arrow({
   show: boolean;
   onClick: () => void;
 }) {
+  const left = dir === "left";
   return (
     <button
-      aria-label={dir === "left" ? "Scroll left" : "Scroll right"}
+      aria-label={left ? "Scroll left" : "Scroll right"}
       tabIndex={show ? 0 : -1}
       onClick={onClick}
-      className={`absolute top-[34%] z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-white shadow-lg backdrop-blur-sm transition hover:bg-black hover:scale-105 sm:flex ${
-        dir === "left" ? "left-0" : "right-0"
-      } ${
+      // Full-height, wide gutter: a big click target that fades in on hover and
+      // only intercepts pointer events while shown (so edge cards stay clickable
+      // otherwise). The gradient lets the cards behind fade rather than vanish.
+      className={`absolute inset-y-0 z-10 hidden w-14 items-center px-2 transition sm:flex ${
+        left
+          ? "left-0 justify-start bg-gradient-to-r"
+          : "right-0 justify-end bg-gradient-to-l"
+      } from-deadly-bg via-deadly-bg/70 to-transparent ${
         show
-          ? "opacity-0 group-hover:opacity-100"
+          ? "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"
           : "pointer-events-none opacity-0"
       }`}
     >
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-        {dir === "left" ? <path d="M15 18l-6-6 6-6" /> : <path d="M9 18l6-6-6-6" />}
-      </svg>
+      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black/80 text-white shadow-lg transition hover:scale-110">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          {left ? <path d="M15 18l-6-6 6-6" /> : <path d="M9 18l6-6-6-6" />}
+        </svg>
+      </span>
     </button>
   );
 }
@@ -123,18 +131,20 @@ export default function ShowCarousel({
 
   if (items.length === 0) return null;
   return (
-    <section className="group relative mb-6">
+    <section className="mb-6">
       <h3 className="mb-2 text-lg font-bold text-white">{title}</h3>
-      <Arrow dir="left" show={canLeft} onClick={() => page(-1)} />
-      <Arrow dir="right" show={canRight} onClick={() => page(1)} />
-      <div
-        ref={ref}
-        onScroll={update}
-        className="-mx-1 flex snap-x gap-1 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-      >
-        {items.map((it) => (
-          <Card key={it.showId} item={it} />
-        ))}
+      <div className="group relative">
+        <Arrow dir="left" show={canLeft} onClick={() => page(-1)} />
+        <Arrow dir="right" show={canRight} onClick={() => page(1)} />
+        <div
+          ref={ref}
+          onScroll={update}
+          className="-mx-1 flex snap-x gap-1 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {items.map((it) => (
+            <Card key={it.showId} item={it} />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -108,9 +108,9 @@ export default function HomeRightRail() {
 
       <GetTheApp />
 
-      <div className="hidden lg:block">
+      <div className="hidden flex-col items-center lg:flex">
         <p className="mb-2 text-xs text-white/50">Scan to open on your phone</p>
-        <div className="inline-block rounded-lg bg-white p-3">
+        <div className="rounded-lg bg-white p-3">
           <QRCodeSVG value={origin} size={120} level="M" bgColor="#ffffff" fgColor="#121212" />
         </div>
       </div>
