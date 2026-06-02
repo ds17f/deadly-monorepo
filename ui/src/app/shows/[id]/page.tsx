@@ -8,8 +8,8 @@ import {
 import ShowHeader from "@/components/ShowHeader";
 import ShowActions from "@/components/ShowActions";
 import Setlist from "@/components/Setlist";
-import Lineup from "@/components/Lineup";
 import ShowReview from "@/components/ShowReview";
+import ShowLinerNotes from "@/components/show/ShowLinerNotes";
 import ShowNav from "@/components/ShowNav";
 import ShowPlayerPanel from "@/components/player/ShowPlayerPanel";
 import FavoriteButton from "@/components/userdata/FavoriteButton";
@@ -113,22 +113,34 @@ export default async function ShowPage({
 
   const songHighlights = show.ai_show_review?.song_highlights ?? [];
 
+  const coverUrl = resolveCoverImageUrl(show);
+  const coverIsLogo = coverUrl.endsWith("/logo.png");
+
   return (
     <article>
       <ShowNav prevId={prev} nextId={next} />
-      <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <div className="flex items-start justify-between gap-4">
-            <ShowHeader show={show} />
-            <FavoriteButton showId={show.show_id} />
-          </div>
-          {show.setlist && show.setlist.length > 0 && (
-            <Setlist sets={show.setlist} songHighlights={songHighlights} />
-          )}
-          {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
-          <UserReview showId={show.show_id} />
+
+      {/* Album-style hero: cover + identity. */}
+      <div className="mb-6 flex flex-col gap-5 sm:flex-row sm:items-end">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={coverUrl}
+          alt=""
+          className={`h-40 w-40 flex-shrink-0 rounded-md bg-white/5 shadow-2xl ${
+            coverIsLogo ? "object-contain p-3" : "object-cover"
+          }`}
+          referrerPolicy="no-referrer"
+        />
+        <div className="flex flex-1 items-start justify-between gap-4">
+          <ShowHeader show={show} />
+          <FavoriteButton showId={show.show_id} />
         </div>
-        <div className="mt-6 lg:mt-0">
+      </div>
+
+      {/* Content (left/main) + liner-notes rail (right). Combined with the
+          shell's library rail, this is the three-pane show view. */}
+      <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-[minmax(0,1fr)_340px]">
+        <div className="min-w-0">
           <ShowActions
             showId={show.show_id}
             bestRecordingId={show.best_recording}
@@ -144,10 +156,14 @@ export default async function ShowPage({
             venue={show.venue}
             location={show.location_raw}
           />
-          {show.lineup && show.lineup.length > 0 && (
-            <Lineup members={show.lineup} />
+          {show.setlist && show.setlist.length > 0 && (
+            <Setlist sets={show.setlist} songHighlights={songHighlights} />
           )}
+          {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
+          <UserReview showId={show.show_id} />
         </div>
+
+        <ShowLinerNotes review={show.ai_show_review} lineup={show.lineup} />
       </div>
     </article>
   );
