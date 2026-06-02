@@ -6,11 +6,12 @@ import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
 
 import { useInterpolatedPosition } from "@/hooks/useInterpolatedPosition";
-import QueuePanel from "./QueuePanel";
 import AutoplayPrompt from "./AutoplayPrompt";
 import RecordingSelector from "./RecordingSelector";
 import TrackList from "./TrackList";
+import PlayerRailPanel from "./PlayerRailPanel";
 import DevicePicker from "@/components/connect/DevicePicker";
+import { useRightRailOverride } from "@/components/shell/RightRail";
 
 function formatTime(seconds: number): string {
   if (!isFinite(seconds) || seconds < 0) return "0:00";
@@ -77,7 +78,7 @@ function Transport({
   prevDisabled,
   nextDisabled,
   toggleDisabled,
-  big,
+  size = "md",
 }: {
   isPlaying: boolean;
   isLoading: boolean;
@@ -87,38 +88,41 @@ function Transport({
   prevDisabled: boolean;
   nextDisabled: boolean;
   toggleDisabled: boolean;
-  big?: boolean;
+  size?: "sm" | "md" | "lg";
 }) {
+  const play = size === "lg" ? "h-16 w-16" : size === "sm" ? "h-9 w-9" : "h-12 w-12";
+  const playIcon = size === "lg" ? 28 : size === "sm" ? 18 : 24;
+  const pauseIcon = size === "lg" ? 26 : size === "sm" ? 16 : 22;
+  const sideIcon = size === "sm" ? 20 : 26;
+  const gap = size === "sm" ? "gap-4" : "gap-6";
   return (
-    <div className="flex flex-shrink-0 items-center justify-center gap-6">
+    <div className={`flex flex-shrink-0 items-center justify-center ${gap}`}>
       <button
         onClick={onPrev}
         disabled={prevDisabled}
         className="text-white/70 transition-colors hover:text-white disabled:text-white/20"
         aria-label="Previous track"
       >
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <svg width={sideIcon} height={sideIcon} viewBox="0 0 24 24" fill="currentColor">
           <path d="M6 6h2v12H6zm3.5 6 8.5 6V6z" />
         </svg>
       </button>
       <button
         onClick={onToggle}
         disabled={toggleDisabled}
-        className={`flex items-center justify-center rounded-full bg-white text-deadly-bg transition hover:scale-105 disabled:opacity-50 ${
-          big ? "h-16 w-16" : "h-12 w-12"
-        }`}
+        className={`flex items-center justify-center rounded-full bg-white text-deadly-bg transition hover:scale-105 disabled:opacity-50 ${play}`}
         aria-label={isPlaying ? "Pause" : "Play"}
       >
         {isLoading ? (
-          <svg width={big ? 26 : 22} height={big ? 26 : 22} viewBox="0 0 24 24" fill="currentColor" className="animate-spin">
+          <svg width={pauseIcon} height={pauseIcon} viewBox="0 0 24 24" fill="currentColor" className="animate-spin">
             <path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z" />
           </svg>
         ) : isPlaying ? (
-          <svg width={big ? 26 : 22} height={big ? 26 : 22} viewBox="0 0 24 24" fill="currentColor">
+          <svg width={pauseIcon} height={pauseIcon} viewBox="0 0 24 24" fill="currentColor">
             <path d="M6 19h4V5H6zm8-14v14h4V5z" />
           </svg>
         ) : (
-          <svg width={big ? 28 : 24} height={big ? 28 : 24} viewBox="0 0 24 24" fill="currentColor">
+          <svg width={playIcon} height={playIcon} viewBox="0 0 24 24" fill="currentColor">
             <path d="M8 5v14l11-7z" />
           </svg>
         )}
@@ -129,10 +133,66 @@ function Transport({
         className="text-white/70 transition-colors hover:text-white disabled:text-white/20"
         aria-label="Next track"
       >
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <svg width={sideIcon} height={sideIcon} viewBox="0 0 24 24" fill="currentColor">
           <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
         </svg>
       </button>
+    </div>
+  );
+}
+
+// Speaker icon + horizontal slider for output volume (desktop docked bar).
+// Clicking the speaker toggles mute, remembering the prior level.
+function VolumeControl({
+  volume,
+  setVolume,
+}: {
+  volume: number;
+  setVolume: (v: number) => void;
+}) {
+  const prevRef = useRef(volume || 1);
+  const muted = volume === 0;
+
+  function toggleMute() {
+    if (muted) {
+      setVolume(prevRef.current || 1);
+    } else {
+      prevRef.current = volume;
+      setVolume(0);
+    }
+  }
+
+  return (
+    <div className="flex items-center gap-1.5">
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute" : "Mute"}
+        className="text-white/50 transition-colors hover:text-white/80"
+      >
+        {muted ? (
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.63 3.63a.996.996 0 0 0 0 1.41L7.29 8.7 7 9H4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h3l3.29 3.29c.63.63 1.71.18 1.71-.71v-4.17l4.18 4.18c-.49.37-1.02.68-1.6.91v2.06a8.99 8.99 0 0 0 3.02-1.4l1.34 1.34a.996.996 0 1 0 1.41-1.41L5.05 3.63a.996.996 0 0 0-1.42 0zM19 12c0 .82-.15 1.61-.41 2.34l1.53 1.53A8.95 8.95 0 0 0 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zm-7-8-1.88 1.88L12 7.76zm4.5 8A4.5 4.5 0 0 0 14 7.97v1.79l2.48 2.48c.01-.08.02-.16.02-.24z" />
+          </svg>
+        ) : volume < 0.5 ? (
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 9v6h3l4 4V5l-4 4H7zm9.5 3a4.5 4.5 0 0 0-2.5-4.03v8.05A4.5 4.5 0 0 0 16.5 12z" />
+          </svg>
+        ) : (
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05A4.5 4.5 0 0 0 16.5 12zM14 3.23v2.06A8.99 8.99 0 0 1 14 18.7v2.06A11 11 0 0 0 14 3.23z" />
+          </svg>
+        )}
+      </button>
+      <input
+        type="range"
+        min={0}
+        max={1}
+        step={0.01}
+        value={volume}
+        onChange={(e) => setVolume(Number(e.target.value))}
+        aria-label="Volume"
+        className="h-1 w-24 cursor-pointer accent-deadly-highlight"
+      />
     </div>
   );
 }
@@ -155,16 +215,20 @@ export default function HeaderPlayer() {
     seek,
     playShow,
     dismiss,
+    volume,
+    setVolume,
   } = usePlayer();
 
   const { isConnected, userState, isActiveDevice, claimSession, sendCommand } = useConnect();
-  const [queueOpen, setQueueOpen] = useState(false);
   const [devicePickerOpen, setDevicePickerOpen] = useState(false);
-  // The mini bar expands into a full-screen "now playing" sheet that slides
-  // up; slide it back down to collapse.
+  // Desktop: the queue / device list render into the shell's right column
+  // (Spotify-style) rather than as popovers. null = show the page's content.
+  const [railMode, setRailMode] = useState<null | "queue" | "devices">(null);
+  // The bar expands into a full-screen "now playing" sheet that slides up;
+  // slide it back down to collapse.
   const [expanded, setExpanded] = useState(false);
-  const closeQueue = useCallback(() => setQueueOpen(false), []);
   const closeDevicePicker = useCallback(() => setDevicePickerOpen(false), []);
+  const setRailOverride = useRightRailOverride();
 
   const pendingSeekRef = useRef<{ trackIndex: number; positionMs: number } | null>(null);
 
@@ -353,17 +417,34 @@ export default function HeaderPlayer() {
   const sheetToggleDisabled = isLoadingTracks || !!(isActive && isLoading);
   const sheetIsLoadingIcon = isLoadingTracks || !!(isActive && isLoading);
 
+  // Push the queue / device panel into the shell's right column when toggled
+  // (desktop). Releasing it (null) restores the page's right-pane content.
+  useEffect(() => {
+    if (railMode) {
+      setRailOverride(
+        <PlayerRailPanel mode={railMode} onClose={() => setRailMode(null)} />,
+      );
+    } else {
+      setRailOverride(null);
+    }
+    return () => setRailOverride(null);
+  }, [railMode, setRailOverride]);
+
+  // Don't strand an open rail panel once the player is cleared.
+  useEffect(() => {
+    if (!showLoaded && railMode) setRailMode(null);
+  }, [showLoaded, railMode]);
+
   return (
     <div className="relative flex flex-1 items-center pl-4">
-    <div className="flex flex-1 items-center gap-3 overflow-hidden sm:gap-4">
-      {/* Show + track info — click to expand into the now-playing sheet */}
-      <div
+    {/* ── Mobile bar: art + info (tap → full-screen sheet) + quick play ── */}
+    <div className="flex flex-1 items-center gap-2 overflow-hidden lg:hidden">
+      <button
         onClick={() => {
           if (showLoaded) setExpanded(true);
         }}
-        className={`flex min-w-0 flex-1 items-center gap-3 ${
-          showLoaded ? "cursor-pointer" : ""
-        }`}
+        disabled={!showLoaded}
+        className="flex min-w-0 flex-1 items-center gap-3 text-left disabled:cursor-default"
       >
         {showLoaded && (
           // eslint-disable-next-line @next/next/no-img-element
@@ -377,203 +458,173 @@ export default function HeaderPlayer() {
           />
         )}
         <div className="min-w-0 flex-1">
-        <div className="flex items-baseline gap-2">
           <p className="truncate text-sm font-medium text-white">
             {displayTrackTitle ?? showInfo?.date ?? "--"}
           </p>
-          {displayTrackCount > 1 && (
-            <span className="flex-shrink-0 text-xs tabular-nums text-white/30">
-              {displayTrackIndex + 1}/{displayTrackCount}
-            </span>
-          )}
+          {isRemoteActive ? (
+            <p className="truncate text-xs text-deadly-highlight">{subtitleLine}</p>
+          ) : showInfo ? (
+            <p className="truncate text-xs text-white/40">
+              {showInfo.date} — {showInfo.venue}
+            </p>
+          ) : null}
         </div>
-        {isRemoteActive ? (
-          <p className="truncate text-xs text-deadly-highlight">
-            {subtitleLine}
-          </p>
-        ) : showInfo ? (
-          <p className="truncate text-xs text-white/40">
-            {showInfo.date} — {showInfo.venue}
-          </p>
-        ) : null}
-        </div>
-      </div>
-
-      {/* Seek bar */}
-      <div className="flex flex-shrink-0 items-center gap-2">
-        <span className="hidden text-[10px] tabular-nums text-white/30 sm:inline">
-          {formatTime(displayElapsed)}
-        </span>
-        <div
-          className="h-1.5 w-20 cursor-pointer rounded-full bg-white/10 sm:w-28 md:w-36"
-          onClick={handleSeek}
-        >
-          <div
-            className="h-full rounded-full bg-deadly-highlight"
-            style={{ width: `${Math.min(progress, 100)}%` }}
-          />
-        </div>
-        <span className="hidden text-[10px] tabular-nums text-white/30 sm:inline">
-          {formatTime(displayDuration)}
-        </span>
-      </div>
-
-      {/* Transport controls */}
-      <div className="flex flex-shrink-0 items-center gap-0.5">
-        <button
-          onClick={handlePrev}
-          disabled={!handlePrev || !!(isActive && !hasPrevious && elapsed < 3) || !!(isRemoteActive && !remoteHasPrevious && interpolatedMs < 3000)}
-          className="rounded-full p-1.5 text-white/60 transition-colors hover:text-white disabled:text-white/20"
-          aria-label="Previous track"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M6 6h2v12H6zm3.5 6 8.5 6V6z" />
-          </svg>
-        </button>
-
+      </button>
+      {showLoaded && (
         <button
           onClick={handleTogglePlayPause}
           disabled={isLoadingTracks || !!(isActive && isLoading)}
-          className="rounded-full bg-white p-1.5 text-deadly-bg transition-opacity hover:opacity-90 disabled:opacity-50"
+          className="flex-shrink-0 rounded-full bg-white p-2 text-deadly-bg transition-opacity hover:opacity-90 disabled:opacity-50"
           aria-label={displayIsPlaying ? "Pause" : "Play"}
         >
           {isLoadingTracks || (isActive && isLoading) ? (
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="animate-spin"
-            >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="animate-spin">
               <path d="M12 2a10 10 0 0 1 10 10h-2a8 8 0 0 0-8-8V2z" />
             </svg>
           ) : displayIsPlaying ? (
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M6 19h4V5H6zm8-14v14h4V5z" />
             </svg>
           ) : (
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M8 5v14l11-7z" />
             </svg>
           )}
         </button>
-
-        <button
-          onClick={handleNext}
-          disabled={!handleNext || !!(isActive && !hasNext) || (isRemoteActive && !remoteHasNext)}
-          className="rounded-full p-1.5 text-white/60 transition-colors hover:text-white disabled:text-white/20"
-          aria-label="Next track"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Clear/close — visible whenever a show is loaded (active, parked, or
-          remote). Without this, a stuck show occupies the header forever and
-          there's no escape from the player state. */}
-      {(isActive || isParked || isRemoteActive) && (
-        <button
-          onClick={dismiss}
-          className="flex-shrink-0 rounded-full p-1.5 text-white/40 transition-colors hover:text-white/70"
-          aria-label="Clear player"
-          title="Clear player"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-          </svg>
-        </button>
       )}
-
-      {/* Queue toggle — only when local playback */}
-      {isActive && isActiveDevice && (
-        <button
-          onClick={() => setQueueOpen((o) => !o)}
-          className={`flex-shrink-0 rounded-full p-1.5 transition-colors ${
-            queueOpen
-              ? "text-deadly-highlight"
-              : "text-white/40 hover:text-white/70"
-          }`}
-          aria-label={queueOpen ? "Close queue" : "Show queue"}
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" />
-          </svg>
-        </button>
-      )}
-
-      {/* Expand into the full now-playing sheet */}
-      {(isActive || isParked || isRemoteActive) && (
-        <button
-          onClick={() => setExpanded(true)}
-          className="flex-shrink-0 rounded-full p-1.5 text-white/40 transition-colors hover:text-white/70"
-          aria-label="Expand player"
-          title="Expand player"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M7 14l5-5 5 5z" />
-          </svg>
-        </button>
-      )}
-
     </div>
 
-      {/* Device picker — visible in all player states when connected */}
-      {isConnected && (
-        <div className="relative flex-shrink-0">
+    {/* ── Desktop bar: 3 zones — info · transport over jog bar · actions ── */}
+    <div className="hidden flex-1 items-center gap-4 lg:flex">
+      {/* LEFT: art + info (click → full now-playing view) */}
+      <div className="flex w-1/4 min-w-0 items-center gap-3">
+        {showLoaded ? (
           <button
-            onClick={() => setDevicePickerOpen((o) => !o)}
-            className={`rounded-full p-1.5 transition-colors ${
-              devicePickerOpen
+            onClick={() => setExpanded(true)}
+            className="flex min-w-0 items-center gap-3 text-left"
+            title="Open full player"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={artSrc}
+              alt=""
+              className={`h-14 w-14 flex-shrink-0 rounded bg-white/5 ${
+                artIsLogo ? "object-contain p-1" : "object-cover"
+              }`}
+              referrerPolicy="no-referrer"
+            />
+            <div className="min-w-0">
+              <p className="truncate text-sm font-medium text-white">
+                {displayTrackTitle ?? showInfo?.date ?? "--"}
+              </p>
+              {isRemoteActive ? (
+                <p className="truncate text-xs text-deadly-highlight">{subtitleLine}</p>
+              ) : showInfo ? (
+                <p className="truncate text-xs text-white/40">
+                  {showInfo.date} — {showInfo.venue}
+                </p>
+              ) : null}
+            </div>
+          </button>
+        ) : (
+          <span className="truncate text-sm text-white/30">Nothing playing</span>
+        )}
+      </div>
+
+      {/* CENTER: transport stacked over the jog/seek bar */}
+      <div className="flex flex-1 flex-col items-center gap-1.5">
+        <Transport
+          isPlaying={displayIsPlaying}
+          isLoading={isLoadingTracks || !!(isActive && isLoading)}
+          onPrev={handlePrev}
+          onNext={handleNext}
+          onToggle={handleTogglePlayPause}
+          prevDisabled={!handlePrev || !!(isActive && !hasPrevious && elapsed < 3) || !!(isRemoteActive && !remoteHasPrevious && interpolatedMs < 3000)}
+          nextDisabled={!handleNext || !!(isActive && !hasNext) || (isRemoteActive && !remoteHasNext)}
+          toggleDisabled={!showLoaded || isLoadingTracks || !!(isActive && isLoading)}
+          size="sm"
+        />
+        <div className="flex w-full max-w-[520px] items-center gap-2">
+          <span className="w-10 text-right text-[11px] tabular-nums text-white/40">
+            {formatTime(displayElapsed)}
+          </span>
+          <div
+            className="group h-1.5 flex-1 cursor-pointer rounded-full bg-white/10"
+            onClick={handleSeek}
+          >
+            <div
+              className="h-full rounded-full bg-white/60 transition-colors group-hover:bg-deadly-highlight"
+              style={{ width: `${Math.min(progress, 100)}%` }}
+            />
+          </div>
+          <span className="w-10 text-[11px] tabular-nums text-white/40">
+            {formatTime(displayDuration)}
+          </span>
+        </div>
+      </div>
+
+      {/* RIGHT: queue · devices · volume · fullscreen · clear */}
+      <div className="flex w-1/4 items-center justify-end gap-1">
+        {isActive && (
+          <button
+            onClick={() => setRailMode((m) => (m === "queue" ? null : "queue"))}
+            className={`rounded-full p-2 transition-colors ${
+              railMode === "queue" ? "text-deadly-highlight" : "text-white/50 hover:text-white/80"
+            }`}
+            aria-label="Queue"
+            title="Queue"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" />
+            </svg>
+          </button>
+        )}
+        {isConnected && (
+          <button
+            onClick={() => setRailMode((m) => (m === "devices" ? null : "devices"))}
+            className={`rounded-full p-2 transition-colors ${
+              railMode === "devices"
                 ? "text-deadly-highlight"
                 : isRemoteActive
                   ? "text-deadly-highlight/70 hover:text-deadly-highlight"
-                  : "text-white/40 hover:text-white/70"
+                  : "text-white/50 hover:text-white/80"
             }`}
-            aria-label="Connect to device"
+            aria-label="Devices"
+            title="Connect to a device"
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M1 18v3h4v-3H1zm0-6v3h8v-3H1zm0-6v3h12V6H1zm20 12.59L17.42 15 16 16.41 21 21.41l5-5L24.59 15 21 18.59z" />
             </svg>
           </button>
-          {devicePickerOpen && !expanded && (
-            <DevicePicker
-              currentState={
-                isActive && isActiveDevice && activeShow && selectedRecording
-                  ? {
-                      showId: activeShow.showId,
-                      recordingId: selectedRecording,
-                      trackIndex: currentTrackIndex,
-                      positionMs: Math.floor(elapsed * 1000),
-                      status: status === "playing" ? "playing" : "paused",
-                      date: activeShow.date,
-                      venue: activeShow.venue,
-                      location: activeShow.location,
-                    }
-                  : userState
-                    ? {
-                        showId: userState.showId,
-                        recordingId: userState.recordingId,
-                        trackIndex: userState.trackIndex,
-                        positionMs: Math.floor(interpolatedMs),
-                        durationMs: userState.durationMs,
-                        trackTitle: userState.trackTitle,
-                        status: userState.isPlaying ? "playing" : "paused",
-                        date: userState.date,
-                        venue: userState.venue,
-                        location: userState.location,
-                      }
-                    : null
-              }
-              onClose={closeDevicePicker}
-            />
-          )}
-        </div>
-      )}
+        )}
+        {isActive && <VolumeControl volume={volume} setVolume={setVolume} />}
+        {showLoaded && (
+          <button
+            onClick={() => setExpanded(true)}
+            className="rounded-full p-2 text-white/50 transition-colors hover:text-white/80"
+            aria-label="Full screen"
+            title="Full screen"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+            </svg>
+          </button>
+        )}
+        {(isActive || isParked || isRemoteActive) && (
+          <button
+            onClick={dismiss}
+            className="rounded-full p-2 text-white/40 transition-colors hover:text-white/70"
+            aria-label="Clear player"
+            title="Clear player"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+            </svg>
+          </button>
+        )}
+      </div>
+    </div>
 
-      {/* Queue panel overlay */}
-      {queueOpen && <QueuePanel onClose={closeQueue} />}
       <AutoplayPrompt />
 
       {/* ── "Now playing" sheet — full-screen on mobile, a docked landscape
@@ -688,7 +739,7 @@ export default function HeaderPlayer() {
               prevDisabled={!handlePrev}
               nextDisabled={!handleNext}
               toggleDisabled={sheetToggleDisabled}
-              big
+              size="lg"
             />
           </div>
           {activeShow && activeShow.recordings.length > 1 && (
