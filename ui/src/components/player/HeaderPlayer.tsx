@@ -617,6 +617,27 @@ export default function HeaderPlayer() {
   const handleNext = isActive ? nextTrack : isRemoteActive ? remoteNext : isParked ? handleClaimAndNext : undefined;
   const handlePrev = isActive ? prevTrack : isRemoteActive ? remotePrev : isParked ? handleClaimAndPrev : undefined;
 
+  // Space toggles play/pause while the fullscreen view is open (like a TV
+  // remote). Read the handler through a ref so the listener isn't re-bound
+  // every render.
+  const toggleRef = useRef(handleTogglePlayPause);
+  toggleRef.current = handleTogglePlayPause;
+  useEffect(() => {
+    if (!expanded) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.code !== "Space" && e.key !== " ") return;
+      const el = e.target as HTMLElement | null;
+      const tag = el?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "BUTTON" || el?.isContentEditable) {
+        return; // don't hijack focused controls
+      }
+      e.preventDefault();
+      toggleRef.current();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [expanded]);
+
   function handleSeek(e: React.MouseEvent<HTMLDivElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
     const fraction = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
