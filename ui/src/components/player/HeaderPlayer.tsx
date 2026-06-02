@@ -211,12 +211,42 @@ interface Factoid {
   members?: [string, string][]; // name → note (band performance)
 }
 
-// Split prose into paragraphs so the long review keeps its breaks.
+// Split prose into paragraphs. Honor real breaks when the review has them;
+// most AI reviews are a single unbroken block, so synthesize paragraphs by
+// grouping sentences rather than render one giant wall of text.
 function splitProse(text: string): string[] {
-  return text
-    .split(/\n\s*\n/)
-    .map((p) => p.trim())
-    .filter((p) => p.length > 0);
+  const t = text.trim();
+  if (!t) return [];
+  if (/\n\s*\n/.test(t)) {
+    return t.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+  }
+  if (t.includes("\n")) {
+    return t.split(/\n+/).map((p) => p.trim()).filter(Boolean);
+  }
+  // Split into sentences (after .!? — tolerating a closing quote — when the
+  // next char looks like a new sentence), then group by length (~300 chars)
+  // so paragraphs read evenly whether sentences are short or long.
+  const sentences = t
+    .split(/(?<=[.!?]["”’']?)\s+(?=[“"'A-Z])/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (sentences.length <= 1) return [t];
+
+  const TARGET = 300;
+  const paras: string[] = [];
+  let cur = "";
+  for (const s of sentences) {
+    cur = cur ? `${cur} ${s}` : s;
+    if (cur.length >= TARGET) {
+      paras.push(cur);
+      cur = "";
+    }
+  }
+  if (cur) {
+    if (paras.length && cur.length < 140) paras[paras.length - 1] += ` ${cur}`;
+    else paras.push(cur);
+  }
+  return paras.length ? paras : [t];
 }
 
 // One card per theme: About the show (the review) → Highlights → About the
