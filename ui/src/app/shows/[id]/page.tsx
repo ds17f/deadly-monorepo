@@ -139,17 +139,13 @@ export default async function ShowPage({
         </div>
       </div>
 
-      {/* Middle pane content. The liner notes are pushed into the shell's
-          right pane via RightRailSlot, so library · content · liner notes are
-          three real sibling panes (and the liner notes flow below content on
-          mobile). */}
-      <ShowActions
-        showId={show.show_id}
-        bestRecordingId={show.best_recording}
-        firstRecordingId={show.recordings[0] ?? null}
-        recordings={recordings}
-        aiReview={show.ai_show_review}
-      />
+      {/* Middle pane content, ordered for the music first: about → play +
+          recording chooser → setlist → your review → secondary (get-the-app /
+          archive). The liner notes are pushed into the shell's right pane via
+          RightRailSlot, so library · content · liner notes are three real
+          sibling panes (and the liner notes flow below content on mobile). */}
+      {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
+
       <ShowPlayerPanel
         recordings={recordings}
         bestRecordingId={show.best_recording}
@@ -158,11 +154,26 @@ export default async function ShowPage({
         venue={show.venue}
         location={show.location_raw}
       />
+
       {show.setlist && show.setlist.length > 0 && (
-        <Setlist sets={show.setlist} songHighlights={songHighlights} />
+        <div className="mt-8">
+          <Setlist sets={show.setlist} songHighlights={songHighlights} />
+        </div>
       )}
-      {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
-      <UserReview showId={show.show_id} />
+
+      <div className="mt-8">
+        <UserReview showId={show.show_id} />
+      </div>
+
+      <div className="mt-8">
+        <ShowActions
+          showId={show.show_id}
+          bestRecordingId={show.best_recording}
+          firstRecordingId={show.recordings[0] ?? null}
+          recordings={recordings}
+          aiReview={show.ai_show_review}
+        />
+      </div>
 
       <RightRailSlot>
         <ShowLinerNotes review={show.ai_show_review} lineup={show.lineup} />

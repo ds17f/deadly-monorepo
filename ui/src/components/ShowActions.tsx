@@ -93,7 +93,11 @@ export default function ShowActions({
 
       <ListenOnDeadlyLink showId={showId} recordingId={archiveId} />
 
-      <ShowQRCode showId={showId} recordingId={archiveId ?? undefined} />
+      {/* The QR is for opening the show on a *different* device — useless on
+          the phone you're holding, so desktop only. */}
+      <div className="hidden lg:block">
+        <ShowQRCode showId={showId} recordingId={archiveId ?? undefined} />
+      </div>
 
       <div className="mt-3 flex items-center gap-3">
         <a
