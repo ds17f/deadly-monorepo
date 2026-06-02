@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build-search-index.mjs",
     "build": "next build",
-    "start": "next start"
+    "search-index": "node scripts/build-search-index.mjs"
   },
   "dependencies": {
     "next": "^16.2.6",
