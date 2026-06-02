@@ -13,6 +13,18 @@ const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
 const GAPLESS_PRELOAD_THRESHOLD = 2; // seconds before end to start preloading
 
+// Persist the cover for a show so a refresh (which rehydrates from the
+// server's art-less userState) can restore it. Never overwrite with an empty
+// image — Connect claim/handoff paths have no art and would otherwise wipe it.
+function rememberArt(showId: string, image?: string | null) {
+  if (!image) return;
+  try {
+    localStorage.setItem("deadly_now_art", JSON.stringify({ showId, image }));
+  } catch {
+    // ignore storage failures
+  }
+}
+
 export default function PlayerProvider({
   children,
 }: {
@@ -557,14 +569,9 @@ export default function PlayerProvider({
       setActiveShow(show);
       // Remember the cover so a page refresh (which rehydrates from the
       // server's art-less userState) can restore it instead of the logo.
-      try {
-        localStorage.setItem(
-          "deadly_now_art",
-          JSON.stringify({ showId: show.showId, image: show.image ?? null }),
-        );
-      } catch {
-        // ignore storage failures
-      }
+      // Only when we actually have art — claim/handoff paths call playShow
+      // with no image and must NOT clobber a previously-stored cover.
+      rememberArt(show.showId, show.image);
       const recId =
         show.bestRecordingId ?? show.recordings[0]?.identifier ?? null;
       setSelectedRecording(recId);
@@ -829,6 +836,14 @@ export default function PlayerProvider({
     pendingPlayOnInfoRef.current = null;
   }, []);
 
+  // Wrap setViewedShow so simply viewing a show page also remembers its art,
+  // giving hydration a cover to restore after a refresh even if the last
+  // playback came through an art-less Connect path.
+  const updateViewedShow = useCallback((show: ViewedShow | null) => {
+    setViewedShow(show);
+    if (show?.image) rememberArt(show.showId, show.image);
+  }, []);
+
   const value = useMemo(
     () => ({
       activeShow,
@@ -842,7 +857,7 @@ export default function PlayerProvider({
       isLoadingTracks,
       errorMessage,
       volume,
-      setViewedShow,
+      setViewedShow: updateViewedShow,
       setVolume,
       selectRecording,
       playShow,
