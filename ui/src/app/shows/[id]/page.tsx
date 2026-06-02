@@ -121,8 +121,8 @@ export default async function ShowPage({
     <article>
       <ShowNav prevId={prev} nextId={next} />
 
-      {/* Album-style hero: cover + identity. Centered + stacked on mobile,
-          row + left-aligned on sm+. */}
+      {/* Album-style hero: cover + identity, with the favorite + play actions
+          stacked on the right of the info (centered on mobile). */}
       <div className="mb-6 flex flex-col items-center gap-5 text-center sm:flex-row sm:items-end sm:text-left">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -133,33 +133,41 @@ export default async function ShowPage({
           }`}
           referrerPolicy="no-referrer"
         />
-        <div className="flex w-full flex-1 flex-col items-center gap-3 sm:w-auto sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex w-full flex-1 flex-col items-center gap-4 sm:w-auto sm:flex-row sm:items-end sm:justify-between">
           <ShowHeader show={show} />
-          <FavoriteButton showId={show.show_id} />
+          {/* Matched circular actions: favorite on top, play beneath it. */}
+          <div className="flex flex-shrink-0 flex-col items-center gap-3 sm:items-end">
+            <FavoriteButton showId={show.show_id} />
+            <ShowPlayerPanel
+              recordings={recordings}
+              bestRecordingId={show.best_recording}
+              showId={show.show_id}
+              date={show.date}
+              venue={show.venue}
+              location={show.location_raw}
+            />
+          </div>
         </div>
       </div>
 
-      {/* Middle pane content. A single circular play button loads the bottom
+      {/* Middle pane content. Pressing play (in the hero) loads the bottom
           player, which owns the tracklist + recording switching. Order:
-          play → your review → about → setlist → secondary (get-the-app /
-          archive). The liner notes are pushed into the shell's right pane via
+          your review → setlist → about → secondary (get-the-app / archive).
+          The liner notes are pushed into the shell's right pane via
           RightRailSlot, so library · content · liner notes are three real
           sibling panes (and the liner notes flow below content on mobile). */}
-      <ShowPlayerPanel
-        recordings={recordings}
-        bestRecordingId={show.best_recording}
-        showId={show.show_id}
-        date={show.date}
-        venue={show.venue}
-        location={show.location_raw}
-      />
-
       <UserReview showId={show.show_id} />
 
-      {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
-
       {show.setlist && show.setlist.length > 0 && (
-        <Setlist sets={show.setlist} songHighlights={songHighlights} />
+        <div className="mt-6">
+          <Setlist sets={show.setlist} songHighlights={songHighlights} />
+        </div>
+      )}
+
+      {show.ai_show_review && (
+        <div className="mt-8">
+          <ShowReview review={show.ai_show_review} />
+        </div>
       )}
 
       <div className="mt-8">
@@ -172,6 +180,7 @@ export default async function ShowPage({
 
       <RightRailSlot>
         <ShowLinerNotes
+          showId={show.show_id}
           review={show.ai_show_review}
           lineup={show.lineup}
           recordings={recordings}

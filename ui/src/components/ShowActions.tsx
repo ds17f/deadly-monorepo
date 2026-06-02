@@ -1,7 +1,6 @@
 import Image from "next/image";
 import AppStoreBadge from "@/components/AppStoreBadge";
 import ListenOnDeadlyLink from "@/components/ListenOnDeadlyLink";
-import ShowQRCode from "@/components/ShowQRCode";
 
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.grateful.deadly";
@@ -25,12 +24,6 @@ export default function ShowActions({
   return (
     <div id="listen">
       <ListenOnDeadlyLink showId={showId} recordingId={archiveId} />
-
-      {/* The QR is for opening the show on a *different* device — useless on
-          the phone you're holding, so desktop only. */}
-      <div className="hidden lg:block">
-        <ShowQRCode showId={showId} recordingId={archiveId ?? undefined} />
-      </div>
 
       <div className="mt-3 flex items-center gap-3">
         <a

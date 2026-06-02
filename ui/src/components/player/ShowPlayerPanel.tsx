@@ -59,30 +59,20 @@ export default function ShowPlayerPanel({
   }
 
   return (
-    <div className="my-6">
-      <div className="flex justify-center sm:justify-start">
-        <button
-          onClick={handleClick}
-          aria-label={isPlaying ? "Pause" : "Play"}
-          className="flex h-16 w-16 items-center justify-center rounded-full bg-deadly-accent text-black shadow-xl transition hover:scale-105"
-        >
-          {isPlaying ? (
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M6 5h4v14H6zM14 5h4v14h-4z" />
-            </svg>
-          ) : (
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          )}
-        </button>
-      </div>
-
-      {isActiveShow && ctx.errorMessage && (
-        <div className="mt-3 rounded-lg border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-300">
-          <p>{ctx.errorMessage}</p>
-        </div>
+    <button
+      onClick={handleClick}
+      aria-label={isPlaying ? "Pause" : "Play"}
+      className="flex h-14 w-14 items-center justify-center rounded-full bg-deadly-accent text-black shadow-xl transition hover:scale-105"
+    >
+      {isPlaying ? (
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 5h4v14H6zM14 5h4v14h-4z" />
+        </svg>
+      ) : (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z" />
+        </svg>
       )}
-    </div>
+    </button>
   );
 }

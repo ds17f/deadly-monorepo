@@ -1,5 +1,6 @@
 import type { AiShowReview, LineupMember } from "@/types/show";
 import type { Recording } from "@/types/recording";
+import ShowQRCode from "@/components/ShowQRCode";
 
 // The "liner notes" right rail on a show page — the editorial content that
 // makes The Deadly more than a Spotify clone. Surfaces the structured parts
@@ -39,18 +40,19 @@ function Panel({ title, children }: { title: string; children: React.ReactNode }
 }
 
 export default function ShowLinerNotes({
+  showId,
   review,
   lineup,
   recordings,
   bestRecordingId,
 }: {
+  showId: string;
   review: AiShowReview | null;
   lineup: LineupMember[] | null;
   recordings: Recording[];
   bestRecordingId: string | null;
 }) {
   const highlights = review?.key_highlights ?? [];
-  const sequences = review?.must_listen_sequences ?? [];
   const band = Object.entries(review?.band_performance ?? {}).filter(
     ([, text]) => text && text.length > 0,
   );
@@ -65,9 +67,10 @@ export default function ShowLinerNotes({
       : null;
   const otherCount = recordings.length > 0 ? recordings.length - 1 : 0;
   const reason = review?.best_recording?.reason;
+  const archiveId = bestRecordingId ?? recordings[0]?.identifier ?? null;
 
   const hasAnything =
-    highlights.length || sequences.length || band.length || bestRec || members.length;
+    highlights.length || band.length || bestRec || members.length;
   if (!hasAnything) return null;
 
   return (
@@ -82,21 +85,6 @@ export default function ShowLinerNotes({
               </li>
             ))}
           </ul>
-        </Panel>
-      )}
-
-      {sequences.length > 0 && (
-        <Panel title="Must-listen sequences">
-          <div className="flex flex-col gap-2">
-            {sequences.map((seq, i) => (
-              <span
-                key={i}
-                className="rounded-lg bg-white/5 px-3 py-2 text-sm text-white/80"
-              >
-                {seq.join(" → ")}
-              </span>
-            ))}
-          </div>
         </Panel>
       )}
 
@@ -156,6 +144,11 @@ export default function ShowLinerNotes({
           </ul>
         </Panel>
       )}
+
+      {/* QR to open the show on another device — only useful on desktop. */}
+      <div className="hidden lg:block">
+        <ShowQRCode showId={showId} recordingId={archiveId ?? undefined} />
+      </div>
     </aside>
   );
 }
