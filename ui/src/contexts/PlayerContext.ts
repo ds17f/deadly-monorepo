@@ -2,6 +2,7 @@
 
 import { createContext, useContext } from "react";
 import type { Recording } from "@/types/recording";
+import type { AiShowReview } from "@/types/show";
 import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
 
 export interface ViewedShow {
@@ -14,9 +15,10 @@ export interface ViewedShow {
   // Cover art URL (ticket stub / photo / logo fallback). Optional — remote/
   // parked shows claimed from connect state won't have it.
   image?: string | null;
-  // Key highlights from the AI review, for the fullscreen liner-note ticker.
-  // Only present when played from a show page; remote/parked won't have them.
-  highlights?: string[] | null;
+  // The full AI review, surfaced as rotating factoid cards in the fullscreen
+  // view. Only present when played from a show page; remote/parked won't have
+  // it (the cards just don't render).
+  review?: AiShowReview | null;
 }
 
 export interface PlayerContextValue {

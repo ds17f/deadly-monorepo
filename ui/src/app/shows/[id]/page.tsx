@@ -150,7 +150,7 @@ export default async function ShowPage({
         venue={show.venue}
         location={show.location_raw}
         image={coverUrl}
-        highlights={show.ai_show_review?.key_highlights ?? []}
+        review={show.ai_show_review}
       />
 
       {show.setlist && show.setlist.length > 0 && (

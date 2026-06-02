@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useUserData } from "@/contexts/UserDataContext";
 import { usePlayer } from "@/contexts/PlayerContext";
 import type { Recording } from "@/types/recording";
+import type { AiShowReview } from "@/types/show";
 import type { ShowReview } from "@/types/userdata";
 
 // The show's primary actions on one line: Play · Favorite · Review — each an
@@ -18,7 +19,7 @@ export default function HeroActions({
   venue,
   location,
   image,
-  highlights,
+  review,
 }: {
   showId: string;
   recordings: Recording[];
@@ -27,7 +28,7 @@ export default function HeroActions({
   venue: string;
   location: string;
   image?: string | null;
-  highlights?: string[];
+  review?: AiShowReview | null;
 }) {
   const player = usePlayer();
   const { isFavorite, toggleFavorite, getReview, saveReview, removeReview } =
@@ -52,7 +53,7 @@ export default function HeroActions({
 
   // Register this show as the viewed show so the player knows what to load.
   useEffect(() => {
-    player.setViewedShow({ showId, recordings, bestRecordingId, date, venue, location, image, highlights });
+    player.setViewedShow({ showId, recordings, bestRecordingId, date, venue, location, image, review });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showId]);
 
@@ -79,20 +80,20 @@ export default function HeroActions({
         venue,
         location,
         image,
-        highlights,
+        review,
       });
     }
   }
 
   function handleSave() {
-    const review: ShowReview = {
+    const newReview: ShowReview = {
       showId,
       notes: notes.trim() || null,
       overallRating: overallRating || null,
       recordingQuality: recordingQuality || null,
       playingQuality: playingQuality || null,
     };
-    saveReview(review);
+    saveReview(newReview);
     setReviewOpen(false);
   }
 

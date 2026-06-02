@@ -1,9 +1,12 @@
 "use client";
 
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { usePlayer } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
+import { useUserData } from "@/contexts/UserDataContext";
+import type { AiShowReview } from "@/types/show";
+import type { ShowReview } from "@/types/userdata";
 
 import { useInterpolatedPosition } from "@/hooks/useInterpolatedPosition";
 import AutoplayPrompt from "./AutoplayPrompt";
@@ -197,35 +200,117 @@ function VolumeControl({
   );
 }
 
-// Rotates through the show's key highlights in the fullscreen view, one at a
-// time with a slow crossfade — an ambient liner-note ticker.
-function LinerNotesTicker({ items }: { items: string[] }) {
+// A single rotating "factoid" drawn from the AI + user reviews, shown in the
+// fullscreen view — readable info for when you tab back or it's on a TV.
+interface Factoid {
+  label: string;
+  body: string;
+  meta?: string;
+}
+
+// Split long prose into readable paragraph-sized chunks for individual cards.
+function splitProse(text: string): string[] {
+  return text
+    .split(/\n\s*\n/)
+    .map((p) => p.trim())
+    .filter((p) => p.length > 0);
+}
+
+// Build the rotation: about → the show (prose) → highlights → band → best
+// recording → your review. Each becomes its own readable card.
+function buildFactoids(
+  review: AiShowReview | null | undefined,
+  userReview: ShowReview | null | undefined,
+): Factoid[] {
+  const cards: Factoid[] = [];
+  if (review?.summary) cards.push({ label: "About this show", body: review.summary });
+  if (review?.review) {
+    splitProse(review.review).forEach((p) =>
+      cards.push({ label: "The show", body: p }),
+    );
+  }
+  (review?.key_highlights ?? []).forEach((h) =>
+    cards.push({ label: "Highlight", body: h }),
+  );
+  Object.entries(review?.band_performance ?? {}).forEach(([member, text]) => {
+    if (text) cards.push({ label: member, body: text });
+  });
+  if (review?.best_recording?.reason) {
+    cards.push({ label: "Best recording", body: review.best_recording.reason });
+  }
+  if (userReview && (userReview.notes || userReview.overallRating)) {
+    const stars = userReview.overallRating
+      ? "★".repeat(userReview.overallRating)
+      : undefined;
+    cards.push({
+      label: "Your review",
+      meta: stars,
+      body: userReview.notes || "You rated this show.",
+    });
+  }
+  return cards;
+}
+
+// Dwell time scaled to length so there's enough time to read (≈200 wpm).
+function dwellFor(body: string): number {
+  const words = body.trim().split(/\s+/).length;
+  return Math.min(26000, Math.max(10000, (words / 3.2) * 1000 + 4500));
+}
+
+// Rotates through the factoid cards with a slow crossfade, each lingering long
+// enough to read. Holds on a single card; stops when there are none.
+function AmbientFactoids({ cards }: { cards: Factoid[] }) {
   const [idx, setIdx] = useState(0);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     setIdx(0);
     setVisible(true);
-    if (items.length <= 1) return;
-    const id = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setIdx((p) => (p + 1) % items.length);
-        setVisible(true);
-      }, 600);
-    }, 7000);
-    return () => clearInterval(id);
-  }, [items]);
+  }, [cards]);
 
-  if (items.length === 0) return null;
+  useEffect(() => {
+    if (cards.length <= 1) return;
+    const dwell = dwellFor(cards[idx]?.body ?? "");
+    const tOut = setTimeout(() => setVisible(false), dwell);
+    const tNext = setTimeout(() => {
+      setIdx((p) => (p + 1) % cards.length);
+      setVisible(true);
+    }, dwell + 700);
+    return () => {
+      clearTimeout(tOut);
+      clearTimeout(tNext);
+    };
+  }, [idx, cards]);
+
+  if (cards.length === 0) return null;
+  const card = cards[Math.min(idx, cards.length - 1)];
+
   return (
-    <p
-      className={`mx-auto max-w-xl text-balance text-sm italic leading-relaxed text-white/45 transition-opacity duration-500 ${
-        visible ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      &ldquo;{items[idx]}&rdquo;
-    </p>
+    <div className="w-full max-w-md">
+      <div
+        className={`rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20 transition-opacity duration-700 ${
+          visible ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <p className="mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-deadly-title/80">
+          {card.label}
+          {card.meta && <span className="text-deadly-star">{card.meta}</span>}
+        </p>
+        <p className="text-[15px] leading-relaxed text-white/80">{card.body}</p>
+      </div>
+      {cards.length > 1 && (
+        <div className="mt-3 flex flex-wrap justify-center gap-1.5">
+          {cards.map((_, i) => (
+            <span
+              key={i}
+              className={`h-1.5 w-1.5 rounded-full transition-colors ${
+                i === idx ? "bg-deadly-highlight" : "bg-white/20"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -252,6 +337,17 @@ export default function HeaderPlayer() {
   } = usePlayer();
 
   const { isConnected, userState, isActiveDevice, claimSession, sendCommand } = useConnect();
+  const { getReview } = useUserData();
+
+  // Factoid cards for the fullscreen ambient view: the AI review + the user's
+  // own review. Memoized on content so the rotation doesn't reset each render.
+  const userReview = activeShow ? getReview(activeShow.showId) : null;
+  const factoids = useMemo(
+    () => buildFactoids(activeShow?.review, userReview),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [activeShow?.showId, activeShow?.review, userReview?.notes, userReview?.overallRating],
+  );
+
   const [devicePickerOpen, setDevicePickerOpen] = useState(false);
   // Desktop: the queue / device list render into the shell's right column
   // (Spotify-style) rather than as popovers. null = show the page's content.
@@ -817,12 +913,12 @@ export default function HeaderPlayer() {
                 Track {displayTrackIndex + 1} of {displayTrackCount}
               </p>
             )}
-            {activeShow?.highlights && activeShow.highlights.length > 0 && (
-              <div className="mt-4">
-                <LinerNotesTicker items={activeShow.highlights} />
-              </div>
-            )}
           </div>
+          {factoids.length > 0 && (
+            <div className="mt-5 flex justify-center">
+              <AmbientFactoids cards={factoids} />
+            </div>
+          )}
           <div className="mt-5">
             <SeekBar progress={progress} elapsed={displayElapsed} duration={displayDuration} onSeek={handleSeek} />
           </div>
@@ -854,68 +950,43 @@ export default function HeaderPlayer() {
           )}
         </div>
 
-        {/* ── Desktop layout: immersive — big art + ambient title (center),
-            a collapsible side track panel, docked controls. The side panel
-            and controls fade/collapse when idle, leaving the art alone. ── */}
+        {/* ── Desktop layout: immersive — big art + now-playing on the left,
+            a rotating factoid card on the right (the ambient party/TV view).
+            Only the top bar + docked controls fade when idle. ── */}
         <div className="hidden min-h-0 flex-1 flex-col overflow-hidden lg:flex">
-          <div className="flex min-h-0 flex-1">
-            {/* cover art + now-playing — always present (the ambient view) */}
-            <div className="flex flex-1 flex-col items-center justify-center gap-6 p-10">
-              {/* Full ticket in fullscreen — show the whole stub (contain),
-                  not the square crop the mini bar uses. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={artSrc}
-                alt=""
-                referrerPolicy="no-referrer"
-                className={`max-h-[58vh] max-w-[min(92vw,44rem)] rounded-xl object-contain shadow-2xl shadow-black/50 ${
-                  artIsLogo ? "aspect-square w-full max-w-[min(48vh,28rem)] bg-white/5 p-10" : ""
-                }`}
-              />
-              <div className="max-w-2xl text-center">
-                <p className="text-2xl font-bold text-white">
-                  {displayTrackTitle ?? showInfo?.date ?? "--"}
-                </p>
-                {subtitleLine && (
-                  <p className={`mt-1.5 text-base ${isRemoteActive ? "text-deadly-highlight" : "text-white/60"}`}>
-                    {subtitleLine}
-                  </p>
-                )}
-                {displayTrackCount > 1 && (
-                  <p className="mt-1 text-sm tabular-nums text-white/30">
-                    Track {displayTrackIndex + 1} of {displayTrackCount}
-                  </p>
-                )}
-              </div>
-              {activeShow?.highlights && activeShow.highlights.length > 0 && (
-                <LinerNotesTicker items={activeShow.highlights} />
-              )}
-            </div>
-
-            {/* side panel: recordings + track list (collapses when idle) */}
-            <div
-              className={`flex flex-shrink-0 flex-col overflow-y-auto transition-all duration-500 ${
-                chromeVisible
-                  ? "w-[360px] border-l border-white/10 p-6 opacity-100"
-                  : "w-0 overflow-hidden p-0 opacity-0"
+          {/* Centered column: art → now-playing → rotating factoid card. */}
+          <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-6 overflow-y-auto px-10 py-6">
+            {/* Full ticket in fullscreen — show the whole stub (contain),
+                not the square crop the mini bar uses. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={artSrc}
+              alt=""
+              referrerPolicy="no-referrer"
+              className={`max-h-[48vh] max-w-[min(90vw,40rem)] flex-shrink-0 rounded-xl object-contain shadow-2xl shadow-black/50 ${
+                artIsLogo ? "aspect-square w-full max-w-[min(42vh,24rem)] bg-white/5 p-10" : ""
               }`}
-            >
-              {activeShow && activeShow.recordings.length > 1 && (
-                <RecordingSelector
-                  recordings={activeShow.recordings}
-                  selectedId={selectedRecording}
-                  onSelect={selectRecording}
-                />
+            />
+            <div className="max-w-2xl flex-shrink-0 text-center">
+              <p className="text-2xl font-bold text-white">
+                {displayTrackTitle ?? showInfo?.date ?? "--"}
+              </p>
+              {subtitleLine && (
+                <p className={`mt-1.5 text-base ${isRemoteActive ? "text-deadly-highlight" : "text-white/60"}`}>
+                  {subtitleLine}
+                </p>
               )}
-              <h4 className="mb-2 mt-4 text-xs font-bold uppercase tracking-wider text-deadly-title/80">
-                Tracks
-              </h4>
-              {isActive ? (
-                <TrackList tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={playTrack} />
-              ) : (
-                <p className="text-sm text-white/30">Press play to load the track list.</p>
+              {displayTrackCount > 1 && (
+                <p className="mt-1 text-sm tabular-nums text-white/30">
+                  Track {displayTrackIndex + 1} of {displayTrackCount}
+                </p>
               )}
             </div>
+            {factoids.length > 0 && (
+              <div className="flex w-full flex-shrink-0 justify-center">
+                <AmbientFactoids cards={factoids} />
+              </div>
+            )}
           </div>
 
           {/* docked controls (chrome — fades when idle) */}
