@@ -617,26 +617,34 @@ export default function HeaderPlayer() {
   const handleNext = isActive ? nextTrack : isRemoteActive ? remoteNext : isParked ? handleClaimAndNext : undefined;
   const handlePrev = isActive ? prevTrack : isRemoteActive ? remotePrev : isParked ? handleClaimAndPrev : undefined;
 
-  // Space toggles play/pause while the fullscreen view is open (like a TV
-  // remote). Read the handler through a ref so the listener isn't re-bound
-  // every render.
+  // Space toggles play/pause whenever a show is loaded (main screen or
+  // fullscreen) and stops the page from scrolling/paging. Read the handler
+  // through a ref so the listener isn't re-bound every render.
   const toggleRef = useRef(handleTogglePlayPause);
   toggleRef.current = handleTogglePlayPause;
+  const spaceControlsPlayback = isActive || isParked || isRemoteActive;
   useEffect(() => {
-    if (!expanded) return;
+    if (!spaceControlsPlayback) return;
     function onKey(e: KeyboardEvent) {
       if (e.code !== "Space" && e.key !== " ") return;
       const el = e.target as HTMLElement | null;
       const tag = el?.tagName;
-      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "BUTTON" || el?.isContentEditable) {
-        return; // don't hijack focused controls
+      // Don't hijack typing or a focused control (it handles Space itself).
+      if (
+        tag === "INPUT" ||
+        tag === "TEXTAREA" ||
+        tag === "SELECT" ||
+        tag === "BUTTON" ||
+        el?.isContentEditable
+      ) {
+        return;
       }
-      e.preventDefault();
+      e.preventDefault(); // no page scroll/paging
       toggleRef.current();
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [expanded]);
+  }, [spaceControlsPlayback]);
 
   function handleSeek(e: React.MouseEvent<HTMLDivElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
