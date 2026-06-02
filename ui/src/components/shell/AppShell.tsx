@@ -22,6 +22,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import UserMenu from "@/components/auth/UserMenu";
 import HeaderPlayerWrapper from "@/components/player/HeaderPlayerWrapper";
@@ -107,6 +108,19 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const bare = BARE_PREFIXES.some((p) => pathname.startsWith(p));
+
+  // The shell owns a fixed h-[100dvh] viewport — the document must NOT scroll,
+  // or wheeling over the pinned header/transport pages it (the body is
+  // min-h-screen). Bare routes keep normal document scroll.
+  useEffect(() => {
+    if (bare) return;
+    const html = document.documentElement;
+    const prev = html.style.overflow;
+    html.style.overflow = "hidden";
+    return () => {
+      html.style.overflow = prev;
+    };
+  }, [bare]);
 
   if (bare) {
     return (

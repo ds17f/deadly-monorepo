@@ -192,7 +192,7 @@ export default function DiscoveryRail({
   }, [byId]);
 
   return (
-    <div className="lg:pr-1">
+    <div className="rounded-lg bg-deadly-surface p-3 lg:min-h-full">
       <Unit
         title={tigdh.title}
         rows={tigdh.shows.map((show) => ({ show }))}
