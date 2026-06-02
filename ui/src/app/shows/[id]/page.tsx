@@ -10,11 +10,9 @@ import ShowActions from "@/components/ShowActions";
 import Setlist from "@/components/Setlist";
 import ShowReview from "@/components/ShowReview";
 import ShowLinerNotes from "@/components/show/ShowLinerNotes";
+import HeroActions from "@/components/show/HeroActions";
 import { RightRailSlot } from "@/components/shell/RightRail";
 import ShowNav from "@/components/ShowNav";
-import ShowPlayerPanel from "@/components/player/ShowPlayerPanel";
-import FavoriteButton from "@/components/userdata/FavoriteButton";
-import UserReview from "@/components/userdata/UserReview";
 import type { Recording } from "@/types/recording";
 import type { Show } from "@/types/show";
 
@@ -135,28 +133,23 @@ export default async function ShowPage({
         />
         <div className="flex w-full flex-1 flex-col items-center gap-4 sm:w-auto sm:flex-row sm:items-end sm:justify-between">
           <ShowHeader show={show} />
-          {/* Matched circular actions: favorite on top, play beneath it. */}
-          <div className="flex flex-shrink-0 flex-col items-center gap-3 sm:items-end">
-            <FavoriteButton showId={show.show_id} />
-            <ShowPlayerPanel
-              recordings={recordings}
-              bestRecordingId={show.best_recording}
-              showId={show.show_id}
-              date={show.date}
-              venue={show.venue}
-              location={show.location_raw}
-            />
-          </div>
         </div>
       </div>
 
-      {/* Middle pane content. Pressing play (in the hero) loads the bottom
-          player, which owns the tracklist + recording switching. Order:
-          your review → setlist → about → secondary (get-the-app / archive).
+      {/* Primary actions on one line: Play · Favorite · Review. Play loads the
+          bottom player, which owns the tracklist + recording switching. Order
+          below: actions → setlist → about → secondary (get-the-app / archive).
           The liner notes are pushed into the shell's right pane via
           RightRailSlot, so library · content · liner notes are three real
           sibling panes (and the liner notes flow below content on mobile). */}
-      <UserReview showId={show.show_id} />
+      <HeroActions
+        showId={show.show_id}
+        recordings={recordings}
+        bestRecordingId={show.best_recording}
+        date={show.date}
+        venue={show.venue}
+        location={show.location_raw}
+      />
 
       {show.setlist && show.setlist.length > 0 && (
         <div className="mt-6">
