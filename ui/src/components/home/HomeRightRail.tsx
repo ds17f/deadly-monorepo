@@ -54,6 +54,51 @@ function NowPlaying() {
   );
 }
 
+// Our mission — the app's own words (Settings → Our Mission), condensed for a
+// narrow column. Tells first-time visitors what this is and why it exists.
+function Mission() {
+  return (
+    <section className="mt-6 border-t border-white/10 pt-5">
+      <h4 className="mb-3 text-sm font-bold uppercase tracking-wider text-deadly-title/80">
+        Our Mission
+      </h4>
+      <div className="space-y-3 text-sm leading-relaxed text-white/60">
+        <p>
+          We built this for one reason: to make it easy to explore, enjoy, and
+          share live music from the Internet Archive&apos;s vast collection of
+          concert recordings — as easy as a modern streaming experience.
+        </p>
+        <p>
+          We have deep respect for the long-standing tradition of taping and
+          sharing live music freely, non-commercially, and in community.
+        </p>
+        <p>
+          The app is completely{" "}
+          <a
+            href="https://github.com/ds17f/deadly-monorepo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-deadly-heading hover:text-white"
+          >
+            open source
+          </a>
+          , and no money is made from streaming. It exists because one fan
+          wanted a modern way to listen to the music he loves.
+        </p>
+      </div>
+      <a
+        href="https://archive.org/donate/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-1.5 text-sm font-medium text-white/80 transition hover:border-white/30 hover:text-white"
+      >
+        <span className="text-deadly-accent">♥</span>
+        Donate to the Internet Archive
+      </a>
+    </section>
+  );
+}
+
 export default function HomeRightRail() {
   const origin =
     typeof window !== "undefined" ? window.location.origin : "https://thedeadly.app";
@@ -69,6 +114,8 @@ export default function HomeRightRail() {
           <QRCodeSVG value={origin} size={120} level="M" bgColor="#ffffff" fgColor="#121212" />
         </div>
       </div>
+
+      <Mission />
     </div>
   );
 }
