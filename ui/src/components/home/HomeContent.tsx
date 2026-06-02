@@ -3,9 +3,8 @@
 import { useMemo, useState } from "react";
 import type { ShowIndexEntry, CollectionSummary, YearBucket } from "@/types/homepage";
 import HeroSection from "./HeroSection";
-import DiscoveryRail from "./DiscoveryRail";
-import TopRatedShows from "./TopRatedShows";
-import CollectionsGrid from "./CollectionsGrid";
+import HomeDiscovery from "./HomeDiscovery";
+import HomeRightRail from "./HomeRightRail";
 import YearTimeline from "./YearTimeline";
 import SearchFilter, { type SortBy } from "./SearchFilter";
 import ShowList from "./ShowList";
@@ -93,22 +92,6 @@ export default function HomeContent({
     return [...filtered].sort((a, b) => b.r - a.r).slice(0, 20);
   }, [hasActiveFilter, topRatedAll, filtered]);
 
-  const topRatedFilterLabel = useMemo(() => {
-    const parts: string[] = [];
-    if (selectedYear !== null) parts.push(String(selectedYear));
-    else if (selectedDecade !== null) {
-      const labels: Record<string, string> = {
-        "1965-1969": "60s", "1970-1979": "70s",
-        "1980-1989": "80s", "1990-1995": "90s",
-      };
-      parts.push(labels[`${selectedDecade.from}-${selectedDecade.to}`] ?? "");
-    }
-    if (selectedSource !== null) parts.push(selectedSource);
-    if (searchQuery.trim()) parts.push(`"${searchQuery.trim()}"`);
-    if (parts.length === 0) return undefined;
-    return `Filtered: ${parts.join(" / ")}`;
-  }, [selectedYear, selectedDecade, selectedSource, searchQuery]);
-
   function resetPage() {
     setCurrentPage(0);
   }
@@ -144,49 +127,53 @@ export default function HomeContent({
 
   return (
     <>
-      {/* Dynamic discovery (TIGDH / Trending / Fan Favorites) lives in the
-          shell's right pane on desktop; on mobile it stacks above this content
-          so home reads like the native app. The static catalog below is the
-          SEO surface. */}
+      {/* Conversion + context: get-the-app (+ QR) and now-playing. Leads
+          above the content on mobile so the install CTA is up top. */}
       <RightRailSlot mobilePlacement="above">
-        <DiscoveryRail showIndex={showIndex} />
+        <HomeRightRail />
       </RightRailSlot>
 
-      {/* Single content column — the catalog browse, then the static
-          discovery blocks (Top Rated, Collections) that used to be a nested
-          sidebar. */}
+      {/* What this site is. */}
       <HeroSection totalShows={totalShows} />
-      <YearTimeline
-        yearData={yearData}
-        selectedYear={selectedYear}
-        onSelectYear={handleYearSelect}
+
+      {/* Discovery carousels — the mobile-app home, with room. */}
+      <HomeDiscovery
+        showIndex={showIndex}
+        topRated={topRated}
+        collections={collections}
       />
-      <SearchFilter
-        searchQuery={searchQuery}
-        onSearchChange={handleSearchChange}
-        sortBy={sortBy}
-        onSortChange={handleSortChange}
-        selectedDecade={selectedDecade}
-        onDecadeChange={handleDecadeChange}
-        selectedSource={selectedSource}
-        onSourceChange={handleSourceChange}
-        includeNoRecordings={includeNoRecordings}
-        onIncludeNoRecordingsChange={(v) => {
-          setIncludeNoRecordings(v);
-          setCurrentPage(0);
-        }}
-      />
-      <ShowList
-        shows={filtered}
-        currentPage={currentPage}
-        onPageChange={setCurrentPage}
-      />
-      <div className="mt-10">
-        <TopRatedShows shows={topRated} filterLabel={topRatedFilterLabel} />
-      </div>
-      <div className="mt-10">
-        <CollectionsGrid collections={collections} />
-      </div>
+
+      {/* Browse all — the full catalog (the SEO surface) with search/filter. */}
+      <section className="mt-10 border-t border-white/10 pt-8">
+        <h2 className="mb-4 text-lg font-bold text-white">
+          Browse all {totalShows.toLocaleString()} shows
+        </h2>
+        <YearTimeline
+          yearData={yearData}
+          selectedYear={selectedYear}
+          onSelectYear={handleYearSelect}
+        />
+        <SearchFilter
+          searchQuery={searchQuery}
+          onSearchChange={handleSearchChange}
+          sortBy={sortBy}
+          onSortChange={handleSortChange}
+          selectedDecade={selectedDecade}
+          onDecadeChange={handleDecadeChange}
+          selectedSource={selectedSource}
+          onSourceChange={handleSourceChange}
+          includeNoRecordings={includeNoRecordings}
+          onIncludeNoRecordingsChange={(v) => {
+            setIncludeNoRecordings(v);
+            setCurrentPage(0);
+          }}
+        />
+        <ShowList
+          shows={filtered}
+          currentPage={currentPage}
+          onPageChange={setCurrentPage}
+        />
+      </section>
     </>
   );
 }
