@@ -197,6 +197,38 @@ function VolumeControl({
   );
 }
 
+// Rotates through the show's key highlights in the fullscreen view, one at a
+// time with a slow crossfade — an ambient liner-note ticker.
+function LinerNotesTicker({ items }: { items: string[] }) {
+  const [idx, setIdx] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    setIdx(0);
+    setVisible(true);
+    if (items.length <= 1) return;
+    const id = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setIdx((p) => (p + 1) % items.length);
+        setVisible(true);
+      }, 600);
+    }, 7000);
+    return () => clearInterval(id);
+  }, [items]);
+
+  if (items.length === 0) return null;
+  return (
+    <p
+      className={`mx-auto max-w-xl text-balance text-sm italic leading-relaxed text-white/45 transition-opacity duration-500 ${
+        visible ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      &ldquo;{items[idx]}&rdquo;
+    </p>
+  );
+}
+
 export default function HeaderPlayer() {
   const {
     activeShow,
@@ -785,6 +817,11 @@ export default function HeaderPlayer() {
                 Track {displayTrackIndex + 1} of {displayTrackCount}
               </p>
             )}
+            {activeShow?.highlights && activeShow.highlights.length > 0 && (
+              <div className="mt-4">
+                <LinerNotesTicker items={activeShow.highlights} />
+              </div>
+            )}
           </div>
           <div className="mt-5">
             <SeekBar progress={progress} elapsed={displayElapsed} duration={displayDuration} onSeek={handleSeek} />
@@ -850,6 +887,9 @@ export default function HeaderPlayer() {
                   </p>
                 )}
               </div>
+              {activeShow?.highlights && activeShow.highlights.length > 0 && (
+                <LinerNotesTicker items={activeShow.highlights} />
+              )}
             </div>
 
             {/* side panel: recordings + track list (collapses when idle) */}

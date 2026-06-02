@@ -14,6 +14,9 @@ export interface ViewedShow {
   // Cover art URL (ticket stub / photo / logo fallback). Optional — remote/
   // parked shows claimed from connect state won't have it.
   image?: string | null;
+  // Key highlights from the AI review, for the fullscreen liner-note ticker.
+  // Only present when played from a show page; remote/parked won't have them.
+  highlights?: string[] | null;
 }
 
 export interface PlayerContextValue {
