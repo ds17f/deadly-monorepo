@@ -998,8 +998,8 @@ export default function HeaderPlayer() {
             src={artSrc}
             alt=""
             referrerPolicy="no-referrer"
-            className={`mx-auto mt-2 max-h-[42vh] w-full max-w-[20rem] rounded-lg object-contain shadow-2xl ${
-              artIsLogo ? "aspect-square max-w-[18rem]" : ""
+            className={`mx-auto mt-2 max-h-[42vh] w-full max-w-[20rem] rounded-lg object-contain ${
+              artIsLogo ? "aspect-square max-w-[18rem]" : "shadow-2xl"
             }`}
           />
           <div className="mt-5 w-full text-center">
@@ -1072,8 +1072,8 @@ export default function HeaderPlayer() {
               src={artSrc}
               alt=""
               referrerPolicy="no-referrer"
-              className={`max-h-[34vh] max-w-[min(90vw,30rem)] flex-shrink-0 rounded-xl object-contain shadow-2xl shadow-black/50 ${
-                artIsLogo ? "aspect-square w-full max-w-[min(30vh,18rem)]" : ""
+              className={`max-h-[34vh] max-w-[min(90vw,30rem)] flex-shrink-0 rounded-xl object-contain ${
+                artIsLogo ? "aspect-square w-full max-w-[min(30vh,18rem)]" : "shadow-2xl shadow-black/50"
               }`}
             />
             <div className="max-w-3xl flex-shrink-0 text-center">
