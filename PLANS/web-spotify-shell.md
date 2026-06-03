@@ -370,7 +370,30 @@ Commits: `7c6c6b7e..e2092eed` (~21 commits) on branch
 Playing (when active) · Get the app (badges + desktop QR) · **Our
 Mission** (real app copy) · **Donate to the Internet Archive**. The
 "discovery in the right rail" idea is DEAD — discovery is carousels now.
-`DiscoveryRail.tsx` was deleted.
+`DiscoveryRail.tsx` was deleted. **Mobile (2026-06-02):** the rail leads
+the homepage and is kept focused on conversion — **Our Mission + Donate
+are `hidden lg:block`** (desktop only), so phones see Get-the-app at the
+top, then the hero/carousels.
+
+**Store badges are platform-aware** (`components/home/StoreBadges.tsx` +
+`lib/usePlatform.ts`): a phone sees only its store (iOS → App Store,
+Android → Google Play); desktop/unknown sees both. `usePlatform` returns
+`null` until mounted (server + first client render show both → no hydration
+mismatch), then narrows by UA. `GetTheApp` (home rail + `ShowAppCta` show
+rail) and the show-page `ShowNav` all render through it.
+
+**Show page mobile nav** (`ShowNav.tsx`): the compact `‹ Listen Now ›`
+center button is gone — web playback is the hero Play button now, so the
+center slot is the **relevant store badge** (`‹ [App Store] ›`). Prev/next
+chevrons unchanged.
+
+**Shell nav scroll reset** (`AppShell.tsx`): the mobile panes container is
+the lone scroll region (document locked); client nav can't reset an inner
+scroller, so arriving at a show from a scrolled-down home could land
+mid-page. Now resets `scrollTo(top:0)` on every `pathname` change.
+⚠️ This is the defensive fix for a reported "lose the header, only see
+`‹ … ›`" while the player was active — **NOT reproducible headless**
+(headless treats `dvh==vh`); needs a real-device re-test to confirm.
 
 **Global search** (`SearchBox.tsx` + `lib/searchClient.ts` + prebuilt
 `public/search-index.<ver>.json` via `scripts/build-search-index.mjs`

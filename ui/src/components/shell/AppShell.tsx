@@ -22,7 +22,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import UserMenu from "@/components/auth/UserMenu";
 import HeaderPlayerWrapper from "@/components/player/HeaderPlayerWrapper";
@@ -49,6 +49,16 @@ function Logo() {
 function ShellChrome({ children }: { children: React.ReactNode }) {
   const rightNode = useRightRailNode();
   const placement = useRightRailPlacement();
+  const pathname = usePathname();
+
+  // Mobile = the panes container is the lone scroll region (the document is
+  // locked). Client navigation can't reset an inner scroller, so arriving at a
+  // show from a scrolled-down home could land mid-page (only "‹ ... ›" in view).
+  // Reset it to the top on every route change.
+  const panesRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    panesRef.current?.scrollTo({ top: 0 });
+  }, [pathname]);
 
   return (
     <div className="flex h-[100dvh] flex-col bg-black text-white">
@@ -67,7 +77,10 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
           ONE scroll region on mobile. Either way the document never scrolls,
           so the header + transport stay fixed and wheeling over them moves
           nothing. */}
-      <div className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-2 pb-2 lg:flex-row lg:overflow-hidden">
+      <div
+        ref={panesRef}
+        className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-2 pb-2 lg:flex-row lg:overflow-hidden"
+      >
         <LibraryRail />
         <main className="min-w-0 rounded-lg bg-gradient-to-b from-deadly-surface to-deadly-bg lg:min-h-0 lg:flex-1 lg:overflow-y-auto">
           <div className="px-4 py-6 sm:px-8">{children}</div>

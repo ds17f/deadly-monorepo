@@ -55,7 +55,9 @@ function NowPlaying() {
 // narrow column. Tells first-time visitors what this is and why it exists.
 function Mission() {
   return (
-    <section className="mt-6 border-t border-white/10 pt-5">
+    // Desktop only — on mobile this rail leads the homepage and should stay
+    // focused on "Get the app"; the mission/donate belong on the wide screen.
+    <section className="mt-6 hidden border-t border-white/10 pt-5 lg:block">
       <h4 className="mb-3 text-sm font-bold uppercase tracking-wider text-deadly-title/80">
         Our Mission
       </h4>
