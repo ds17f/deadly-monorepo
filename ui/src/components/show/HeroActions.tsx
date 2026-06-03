@@ -3,14 +3,15 @@
 import { useEffect, useState } from "react";
 import { useUserData } from "@/contexts/UserDataContext";
 import { usePlayer } from "@/contexts/PlayerContext";
+import ShareButton from "@/components/share/ShareButton";
 import type { Recording } from "@/types/recording";
 import type { AiShowReview } from "@/types/show";
 import type { ShowReview } from "@/types/userdata";
 
-// The show's primary actions on one line: Play · Favorite · Review — each an
-// icon pill. Play loads the bottom player; Favorite toggles; Review opens an
-// inline form below the row. Consolidated so the three stay on a single line
-// while the review form can expand beneath them.
+// The show's primary actions on one line: Play · Favorite · Review · Share —
+// each an icon pill. Play loads the bottom player; Favorite toggles; Review
+// opens an inline form below the row; Share opens the QR / copy / native-share
+// sheet. Consolidated so they stay on a line while the review form expands.
 export default function HeroActions({
   showId,
   recordings,
@@ -128,6 +129,19 @@ export default function HeroActions({
           <Icon name="star" filled={!!existing} />
           {existing ? "Your review" : "Review"}
         </PillButton>
+
+        <ShareButton
+          showId={showId}
+          recordingId={pendingRecordingId}
+          subtitle={venue ? `${date} · ${venue}` : date}
+        >
+          {(open) => (
+            <PillButton onClick={open}>
+              <Icon name="share" />
+              Share
+            </PillButton>
+          )}
+        </ShareButton>
       </div>
 
       {reviewOpen && (
@@ -209,10 +223,16 @@ function PillButton({
   );
 }
 
-function Icon({ name, filled }: { name: "play" | "pause" | "heart" | "star"; filled?: boolean }) {
+function Icon({ name, filled }: { name: "play" | "pause" | "heart" | "star" | "share"; filled?: boolean }) {
   const common = { width: 18, height: 18, viewBox: "0 0 24 24" };
   if (name === "play") return <svg {...common} fill="currentColor"><path d="M8 5v14l11-7z" /></svg>;
   if (name === "pause") return <svg {...common} fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z" /></svg>;
+  if (name === "share")
+    return (
+      <svg {...common} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3v12M8 7l4-4 4 4M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" />
+      </svg>
+    );
   if (name === "heart")
     return (
       <svg {...common} fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2">

@@ -1,6 +1,5 @@
 import type { AiShowReview, LineupMember } from "@/types/show";
 import type { Recording } from "@/types/recording";
-import ShowQRCode from "@/components/ShowQRCode";
 
 // The "liner notes" right rail on a show page — the editorial content that
 // makes The Deadly more than a Spotify clone. Surfaces the structured parts
@@ -40,7 +39,6 @@ function Panel({ title, children }: { title: string; children: React.ReactNode }
 }
 
 export default function ShowLinerNotes({
-  showId,
   review,
   lineup,
   recordings,
@@ -67,7 +65,6 @@ export default function ShowLinerNotes({
       : null;
   const otherCount = recordings.length > 0 ? recordings.length - 1 : 0;
   const reason = review?.best_recording?.reason;
-  const archiveId = bestRecordingId ?? recordings[0]?.identifier ?? null;
 
   const hasAnything =
     highlights.length || band.length || bestRec || members.length;
@@ -144,11 +141,6 @@ export default function ShowLinerNotes({
           </ul>
         </Panel>
       )}
-
-      {/* QR to open the show on another device — only useful on desktop. */}
-      <div className="hidden lg:block">
-        <ShowQRCode showId={showId} recordingId={archiveId ?? undefined} />
-      </div>
     </aside>
   );
 }
