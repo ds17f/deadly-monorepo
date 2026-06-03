@@ -15,11 +15,13 @@ export default function ShareButton({
   showId,
   recordingId,
   subtitle,
+  mode,
   children,
 }: {
   showId: string;
   recordingId?: string | null;
   subtitle?: string;
+  mode?: "share" | "qr";
   children: (open: () => void) => ReactNode;
 }) {
   const [open, setOpen] = useState(false);
@@ -31,6 +33,7 @@ export default function ShareButton({
         onClose={() => setOpen(false)}
         showId={showId}
         recordingId={recordingId}
+        mode={mode}
         subtitle={subtitle}
       />
     </>

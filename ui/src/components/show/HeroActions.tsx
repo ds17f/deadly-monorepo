@@ -4,14 +4,16 @@ import { useEffect, useState } from "react";
 import { useUserData } from "@/contexts/UserDataContext";
 import { usePlayer } from "@/contexts/PlayerContext";
 import ShareButton from "@/components/share/ShareButton";
+import { buildShareUrl, copyToClipboard } from "@/lib/share";
 import type { Recording } from "@/types/recording";
 import type { AiShowReview } from "@/types/show";
 import type { ShowReview } from "@/types/userdata";
 
 // The show's primary actions on one line: Play · Favorite · Review · Share —
 // each an icon pill. Play loads the bottom player; Favorite toggles; Review
-// opens an inline form below the row; Share opens the QR / copy / native-share
-// sheet. Consolidated so they stay on a line while the review form expands.
+// opens an inline form below the row; QR opens the scan-to-phone code; Share
+// copies the public link to the clipboard and flashes a toast. Consolidated so
+// they stay on a line while the review form expands.
 export default function HeroActions({
   showId,
   recordings,
@@ -51,6 +53,15 @@ export default function HeroActions({
   const [playingQuality, setPlayingQuality] = useState(
     existing?.playingQuality ?? 0,
   );
+
+  // Transient confirmation for the Share (copy-link) action.
+  const [toast, setToast] = useState<string | null>(null);
+
+  async function handleShare() {
+    const ok = await copyToClipboard(buildShareUrl(showId, pendingRecordingId));
+    setToast(ok ? "Link copied to clipboard" : "Couldn't copy — try again");
+    setTimeout(() => setToast(null), 2000);
+  }
 
   // Register this show as the viewed show so the player knows what to load.
   useEffect(() => {
@@ -131,17 +142,23 @@ export default function HeroActions({
         </PillButton>
 
         <ShareButton
+          mode="qr"
           showId={showId}
           recordingId={pendingRecordingId}
           subtitle={venue ? `${date} · ${venue}` : date}
         >
           {(open) => (
             <PillButton onClick={open}>
-              <Icon name="share" />
-              Share
+              <Icon name="qr" />
+              QR
             </PillButton>
           )}
         </ShareButton>
+
+        <PillButton onClick={handleShare}>
+          <Icon name="share" />
+          Share
+        </PillButton>
       </div>
 
       {reviewOpen && (
@@ -196,6 +213,14 @@ export default function HeroActions({
           </div>
         </div>
       )}
+
+      {toast && (
+        <div className="pointer-events-none fixed inset-x-0 bottom-24 z-[120] flex justify-center px-4">
+          <div className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-black shadow-lg">
+            {toast}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -223,7 +248,7 @@ function PillButton({
   );
 }
 
-function Icon({ name, filled }: { name: "play" | "pause" | "heart" | "star" | "share"; filled?: boolean }) {
+function Icon({ name, filled }: { name: "play" | "pause" | "heart" | "star" | "share" | "qr"; filled?: boolean }) {
   const common = { width: 18, height: 18, viewBox: "0 0 24 24" };
   if (name === "play") return <svg {...common} fill="currentColor"><path d="M8 5v14l11-7z" /></svg>;
   if (name === "pause") return <svg {...common} fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z" /></svg>;
@@ -231,6 +256,15 @@ function Icon({ name, filled }: { name: "play" | "pause" | "heart" | "star" | "s
     return (
       <svg {...common} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 3v12M8 7l4-4 4 4M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" />
+      </svg>
+    );
+  if (name === "qr")
+    return (
+      <svg {...common} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <path d="M14 14h3v3M21 21v.01M21 14v3M14 21h3" />
       </svg>
     );
   if (name === "heart")

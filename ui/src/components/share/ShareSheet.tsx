@@ -2,34 +2,39 @@
 
 import { useEffect, useState } from "react";
 import ShowQRCode from "@/components/ShowQRCode";
-import { getShareBaseUrl } from "@/lib/share";
+import { buildShareUrl, copyToClipboard } from "@/lib/share";
 
 /**
- * Share modal for a show: scan-to-phone QR, copy link, and the native share
- * sheet where the browser supports it (navigator.share — great on mobile, the
- * QR is the desktop→phone path). Reuses ShowQRCode and getShareBaseUrl.
+ * Share modal for a show. Two modes, driven by the `mode` prop so the hero can
+ * surface each as its own button:
+ *   - "share" (default): copy link + the native share sheet where supported
+ *     (navigator.share — great on mobile).
+ *   - "qr": the scan-to-phone QR code (the desktop→phone path) + copy link.
+ * Reuses ShowQRCode and getShareBaseUrl.
  */
 export default function ShareSheet({
   open,
   onClose,
   showId,
   recordingId,
-  title = "Share show",
+  mode = "share",
+  title,
   subtitle,
 }: {
   open: boolean;
   onClose: () => void;
   showId: string;
   recordingId?: string | null;
+  mode?: "share" | "qr";
   title?: string;
   subtitle?: string;
 }) {
+  const isQr = mode === "qr";
+  const heading = title ?? (isQr ? "Scan to open" : "Share show");
   const [copied, setCopied] = useState(false);
   const [canNativeShare, setCanNativeShare] = useState(false);
 
-  const url = recordingId
-    ? `${getShareBaseUrl()}/shows/${showId}/recording/${recordingId}`
-    : `${getShareBaseUrl()}/shows/${showId}`;
+  const url = buildShareUrl(showId, recordingId);
 
   useEffect(() => {
     setCanNativeShare(typeof navigator !== "undefined" && !!navigator.share);
@@ -41,20 +46,19 @@ export default function ShareSheet({
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    // Capture phase so the close fires before any other Escape handler can
+    // stop the event from reaching us.
+    document.addEventListener("keydown", onKey, true);
+    return () => document.removeEventListener("keydown", onKey, true);
   }, [open, onClose]);
 
   if (!open) return null;
 
   async function copy() {
-    try {
-      await navigator.clipboard.writeText(url);
+    // On failure (clipboard blocked) the QR + visible URL still give the link.
+    if (await copyToClipboard(url)) {
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
-    } catch {
-      // Clipboard blocked (insecure context / permissions) — the QR + visible
-      // URL under it still give the user the link.
     }
   }
 
@@ -79,7 +83,7 @@ export default function ShareSheet({
       >
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <h2 className="text-base font-bold text-white">{title}</h2>
+            <h2 className="text-base font-bold text-white">{heading}</h2>
             {subtitle && (
               <p className="truncate text-sm text-white/50">{subtitle}</p>
             )}
@@ -93,7 +97,9 @@ export default function ShareSheet({
           </button>
         </div>
 
-        <ShowQRCode showId={showId} recordingId={recordingId ?? undefined} />
+        {isQr && (
+          <ShowQRCode showId={showId} recordingId={recordingId ?? undefined} />
+        )}
 
         <div className="mt-4 flex gap-2">
           <button
@@ -102,7 +108,7 @@ export default function ShareSheet({
           >
             {copied ? "Copied!" : "Copy link"}
           </button>
-          {canNativeShare && (
+          {!isQr && canNativeShare && (
             <button
               onClick={nativeShare}
               className="flex-1 rounded-lg bg-deadly-accent px-4 py-2.5 text-sm font-bold text-white transition hover:opacity-90"
