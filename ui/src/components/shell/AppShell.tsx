@@ -51,11 +51,13 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex h-[100dvh] flex-col bg-black text-white">
-      {/* top bar */}
+      {/* top bar: equal-flex sides keep the search box viewport-centered */}
       <header className="flex flex-shrink-0 items-center gap-4 px-4 py-2.5">
-        <Logo />
+        <div className="flex flex-1 items-center">
+          <Logo />
+        </div>
         <SearchBox />
-        <div className="ml-auto flex-shrink-0">
+        <div className="flex flex-1 items-center justify-end">
           <UserMenu />
         </div>
       </header>

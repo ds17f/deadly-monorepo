@@ -173,19 +173,23 @@ function matchType(result: SearchResult): ShowSearchHit["matchType"] {
   return "general";
 }
 
-export async function searchShows(query: string, limit = 12): Promise<ShowSearchHit[]> {
+export interface SearchResults {
+  hits: ShowSearchHit[];
+  total: number; // total matches before the display limit
+}
+
+export async function searchShows(query: string, limit = 20): Promise<SearchResults> {
   const q = query.trim();
-  if (q.length < 2) return [];
+  if (q.length < 2) return { hits: [], total: 0 };
   const ms = await loadSearchIndex();
-  return ms
-    .search(q)
-    .slice(0, limit)
-    .map((r) => ({
-      showId: r.id as string,
-      date: r.date as string,
-      venue: r.venue as string,
-      city: r.city as string,
-      state: r.state as string,
-      matchType: matchType(r),
-    }));
+  const all = ms.search(q);
+  const hits = all.slice(0, limit).map((r) => ({
+    showId: r.id as string,
+    date: r.date as string,
+    venue: r.venue as string,
+    city: r.city as string,
+    state: r.state as string,
+    matchType: matchType(r),
+  }));
+  return { hits, total: all.length };
 }
