@@ -218,7 +218,7 @@ re-enable the home carousel and wire the cards to it.
   |---|-------|-------|
   | 1 | Shell skeleton (top bar · 3 panes · bottom transport, responsive) | ✅ done & live — `components/shell/AppShell.tsx` |
   | 2 | Middle = home | ✅ done — `HomeContent` in the middle pane |
-  | 3 | Left rail = library | ✅ done — live `/me` fetchers, filter pills, gated/loading/empty/error states (`LibraryRail.tsx`) |
+  | 3 | Left rail = library | ✅ done — live `/me` fetchers, hierarchical decade→year cascade filter, labelled sections (Recently Played / My Reviews / Favorites), gated/loading/empty/error states (`LibraryRail.tsx`); see "Library-rail rework" on the board |
   | 4 | Right rail on home (get-the-app + now-playing) | ❌ not done — `GetTheApp` is still inline in `HomeContent` (~line 175); home renders no right pane |
   | 5 | Show detail in-shell + liner-notes rail | ✅ mostly — `shows/[id]/page.tsx` uses `RightRailSlot` → `ShowLinerNotes`; ⚠️ verify full long-form `review` parity |
   | 6 | Logged-out conversion | 🟡 partial — gated rail done; signup-banner-replacing-transport not done |
@@ -484,6 +484,18 @@ serves the home shell (not 404) — confirm the slug renders real content.
     matter). Bumped a `SCHEMA` tag in the IndexedDB cache key to invalidate the
     old serialized index. Verified: 5/8/77 = 5-8-77 = may 8 1977 →
     1977-05-08 Barton Hall (Cornell); 8/27/72 → Veneta OR.
+- ~~**Library-rail rework**~~ — **done (2026-06-03, `1530a343`).** Replaced
+  the flat kind-toggle pills with the native Search screen's hierarchical
+  cascade (`HierarchicalFilterChips.swift`): `All` → `60s/70s/80s/90s` →
+  (70s/80s) `Early/Late` → individual year, drilling on tap and popping back
+  when the selected node is tapped; a leaf collapses to a `70s > Late 70s >
+  1977` breadcrumb chip. Chips **wrap across rows** (not horizontal-scroll) to
+  fit the 280px rail; active chip is `deadly-accent` red. The merged list is
+  now three labelled `<section>`s — **Recently Played / My Reviews /
+  Favorites** — and the filter narrows all three at once (year parsed from
+  `date ?? showId`). Privacy + GitHub links moved off the rail footer into the
+  `UserMenu` dropdown (`UserMenu.tsx`). Note: section is "Favorites", not
+  "Library", to avoid doubling the "Your Library" rail title.
 - **Cleanup** (phase 8) — delete `/mockup`; retire superseded `/me` tabs.
 - **Verify** — long-form review parity ✅ met (`ShowReview` "About this show"
   shows the blurb + the full `review.review` behind "Show more"). Mobile
