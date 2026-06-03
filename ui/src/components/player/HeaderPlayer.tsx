@@ -695,10 +695,10 @@ export default function HeaderPlayer() {
 
   // Cover art: prefer what playback handed us, else recover it by showId from
   // the art cache (so claim/handoff/refresh paths that lack an image still show
-  // the cover). Logo only when we've genuinely never seen art for this show.
-  const art = activeShow?.image ?? lookupArt(activeShow?.showId) ?? null;
-  const artIsLogo = !art || art.endsWith("/logo.png");
-  const artSrc = art ?? "/logo.png";
+  // the cover). Square stealie fallback when we've never seen art for this show.
+  const realArt = activeShow?.image ?? lookupArt(activeShow?.showId) ?? null;
+  const artIsLogo = !realArt || realArt.endsWith("/logo.png");
+  const artSrc = artIsLogo ? "/cover-fallback.png" : realArt;
   const showLoaded = isActive || isParked || isRemoteActive;
 
   // Shared transport flags for the now-playing sheet.
@@ -744,9 +744,7 @@ export default function HeaderPlayer() {
           <img
             src={artSrc}
             alt=""
-            className={`h-10 w-10 flex-shrink-0 rounded bg-white/5 ${
-              artIsLogo ? "object-contain p-1" : "object-cover"
-            }`}
+            className="h-10 w-10 flex-shrink-0 rounded bg-white/5 object-cover"
             referrerPolicy="no-referrer"
           />
         )}
@@ -801,9 +799,7 @@ export default function HeaderPlayer() {
             <img
               src={artSrc}
               alt=""
-              className={`h-14 w-14 flex-shrink-0 rounded bg-white/5 ${
-                artIsLogo ? "object-contain p-1" : "object-cover"
-              }`}
+              className="h-14 w-14 flex-shrink-0 rounded bg-white/5 object-cover"
               referrerPolicy="no-referrer"
             />
             <div className="min-w-0">
@@ -1003,7 +999,7 @@ export default function HeaderPlayer() {
             alt=""
             referrerPolicy="no-referrer"
             className={`mx-auto mt-2 max-h-[42vh] w-full max-w-[20rem] rounded-lg object-contain shadow-2xl ${
-              artIsLogo ? "aspect-square max-w-[18rem] bg-white/5 p-6" : ""
+              artIsLogo ? "aspect-square max-w-[18rem]" : ""
             }`}
           />
           <div className="mt-5 w-full text-center">
@@ -1077,7 +1073,7 @@ export default function HeaderPlayer() {
               alt=""
               referrerPolicy="no-referrer"
               className={`max-h-[34vh] max-w-[min(90vw,30rem)] flex-shrink-0 rounded-xl object-contain shadow-2xl shadow-black/50 ${
-                artIsLogo ? "aspect-square w-full max-w-[min(30vh,18rem)] bg-white/5 p-8" : ""
+                artIsLogo ? "aspect-square w-full max-w-[min(30vh,18rem)]" : ""
               }`}
             />
             <div className="max-w-3xl flex-shrink-0 text-center">
