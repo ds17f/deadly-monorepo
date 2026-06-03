@@ -177,7 +177,7 @@ export default async function ShowPage({
 
       <RightRailSlot>
         <div className="flex flex-col gap-3">
-          <ShowAppCta showId={show.show_id} recordingId={show.best_recording} />
+          <ShowAppCta />
           <ShowLinerNotes
             showId={show.show_id}
             review={show.ai_show_review}
