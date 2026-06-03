@@ -94,6 +94,24 @@ export default function UserMenu() {
           >
             Sign out
           </button>
+          <div className="mt-2 flex items-center gap-3 border-t border-white/10 px-2 pt-2 text-[11px] text-white/30">
+            <a
+              href="/privacy"
+              onClick={() => setOpen(false)}
+              className="transition hover:text-white/60"
+            >
+              Privacy
+            </a>
+            <span>·</span>
+            <a
+              href="https://github.com/ds17f/deadly-monorepo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-white/60"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       )}
     </div>
