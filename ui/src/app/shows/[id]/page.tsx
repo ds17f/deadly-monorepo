@@ -114,6 +114,9 @@ export default async function ShowPage({
 
   const coverUrl = resolveCoverImageUrl(show);
   const coverIsLogo = coverUrl.endsWith("/logo.png");
+  // Visible cover falls back to the square stealie (the OG/share image keeps
+  // the round logo — resolved separately in generateMetadata).
+  const heroCover = coverIsLogo ? "/cover-fallback.png" : coverUrl;
 
   return (
     <article>
@@ -124,11 +127,9 @@ export default async function ShowPage({
       <div className="mb-6 flex flex-col items-center gap-5 text-center sm:flex-row sm:items-end sm:text-left">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={coverUrl}
+          src={heroCover}
           alt=""
-          className={`h-44 w-44 flex-shrink-0 rounded-md bg-white/5 shadow-2xl sm:h-40 sm:w-40 ${
-            coverIsLogo ? "object-contain p-3" : "object-cover"
-          }`}
+          className="h-44 w-44 flex-shrink-0 rounded-md bg-white/5 object-cover shadow-2xl sm:h-40 sm:w-40"
           referrerPolicy="no-referrer"
         />
         <div className="flex w-full flex-1 flex-col items-center gap-4 sm:w-auto sm:flex-row sm:items-end sm:justify-between">
@@ -149,7 +150,7 @@ export default async function ShowPage({
         date={show.date}
         venue={show.venue}
         location={show.location_raw}
-        image={coverUrl}
+        image={heroCover}
         review={show.ai_show_review}
       />
 
