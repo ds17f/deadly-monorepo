@@ -387,13 +387,18 @@ center button is gone — web playback is the hero Play button now, so the
 center slot is the **relevant store badge** (`‹ [App Store] ›`). Prev/next
 chevrons unchanged.
 
-**Shell nav scroll reset** (`AppShell.tsx`): the mobile panes container is
-the lone scroll region (document locked); client nav can't reset an inner
-scroller, so arriving at a show from a scrolled-down home could land
-mid-page. Now resets `scrollTo(top:0)` on every `pathname` change.
-⚠️ This is the defensive fix for a reported "lose the header, only see
-`‹ … ›`" while the player was active — **NOT reproducible headless**
-(headless treats `dvh==vh`); needs a real-device re-test to confirm.
+**Mobile header-loss fix** (`AppShell.tsx`): tapping a show from the home
+on a phone dropped the whole top nav (logo/search/profile) every time. Root
+cause: the shell was an **in-flow** `h-[100dvh]` flex column, so a mobile
+browser could scroll the entire shell under the URL bar on navigation (the
+`html{overflow:hidden}` lock doesn't stop body/visual-viewport scroll on
+iOS). Fix: the shell is now **`fixed inset-x-0 top-0 h-[100dvh]`** — pinned
+to the viewport so the header/transport physically can't scroll away, while
+`h-[100dvh]` still tracks the dynamic (URL-bar) viewport. (Matches the
+`fixed inset-0` the mockups used.) NOT reproducible headless (treats
+`dvh==vh`) — verified the layout is intact desktop + mobile; the pin
+behavior needs a real-device confirm. Also kept a `scrollTo(top:0)` on
+`pathname` change so shows open at the top after a scrolled-down home.
 
 **Global search** (`SearchBox.tsx` + `lib/searchClient.ts` + prebuilt
 `public/search-index.<ver>.json` via `scripts/build-search-index.mjs`

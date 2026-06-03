@@ -61,7 +61,12 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
   }, [pathname]);
 
   return (
-    <div className="flex h-[100dvh] flex-col bg-black text-white">
+    // `fixed` (not just an in-flow h-[100dvh] div): pins the shell to the
+    // viewport so the header/transport can never scroll away. An in-flow
+    // column let mobile browsers scroll the whole shell under the URL bar
+    // on navigation, dropping the top nav. top-0 + h-[100dvh] keeps the bar
+    // pinned while the height still tracks the dynamic (URL-bar) viewport.
+    <div className="fixed inset-x-0 top-0 flex h-[100dvh] flex-col bg-black text-white">
       {/* top bar: equal-flex sides keep the search box viewport-centered */}
       <header className="flex flex-shrink-0 items-center gap-4 px-4 py-2.5">
         <div className="flex items-center sm:flex-1">
