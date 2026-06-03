@@ -346,17 +346,24 @@ Commits: `7c6c6b7e..e2092eed` (~21 commits) on branch
 2. `HomeDiscovery` — the discovery **carousels** (the big change: moved
    OUT of the right rail INTO the wide middle as cover-art horizontal
    scrollers): Recently Played (signed-in) · Today in GD History ·
-   Trending · Fan Favorites · **Collections (parked/hidden)** · Top Rated.
+   Trending · Fan Favorites · **Collections (parked/hidden)**.
    - `ShowCarousel.tsx` = reusable carousel: hidden scrollbar, native
      horizontal wheel, full-height fade-in ‹ › gutter arrows (on hover,
-     only when overflowing, gated by scroll position).
+     only when overflowing, gated by scroll position). Also exports
+     `showToCarouselItem`/`fmtCarouselDate` (shared item mapping).
    - Trending/Fan-Favorites/Recently-Played hydrate from
-     `/api/trending`,`/api/popular`,`/me`; TIGDH + Top Rated from the
+     `/api/trending`,`/api/popular`,`/me`; TIGDH from the
      in-memory `showIndex`; bare `show_id`s resolved against it.
-3. "Browse all 2,313 shows" = catalog `SearchFilter` + `ShowList` (the
-   static **SEO surface**). Its in-page text search is STILL plain
-   substring (venue/city/date) — song/member upgrade is a pending thread
-   (the GLOBAL top-bar search already does song/member).
+3. "Browse all 2,313 shows" = year graph (`YearTimeline`) → **Top Rated
+   carousel** → `SearchFilter` → `ShowList` (the static **SEO surface**).
+   - **Top Rated moved here** (was a `HomeDiscovery` carousel): it lives
+     under the graph because it tracks the active search + year/decade/
+     source filters (top 15 of `filtered`), so it belongs *with* the
+     controls that drive it. Verified it re-ranks on filter (search "1977"
+     → all-1977).
+   - In-page text search is now **song/member/venue/date aware** via the
+     shared `searchClient` MiniSearch index (>=2 chars; substring fallback
+     otherwise). Searching anchors the section to the top of the pane.
 
 **Home RIGHT rail** = `components/home/HomeRightRail.tsx` (via
 `RightRailSlot mobilePlacement="above"` so it leads on mobile): Now
@@ -407,16 +414,45 @@ ui-build && make docker-redeploy`. Gotcha: an invalid `/shows/<bad-slug>/`
 serves the home shell (not 404) — confirm the slug renders real content.
 
 **The board (next):**
-- **Logged-out signup bar** (phase 6) — bottom conversion bar replacing
-  the transport when signed out; one-line pitch + sign-up/get-app.
-  (Confirmed: Spotify's logged-out player is content-first with a bottom
-  "Sign up free" bar — NOT a marketing landing.)
+- ~~**Logged-out signup bar** (phase 6)~~ — **cut (2026-06-02).** Decided
+  against the bottom conversion bar; logged-out users keep the normal
+  transport. Phase 6 is dropped from scope.
 - **Collections** (parked) — see section above; needs a box-set-icon card
   + a `/collections/<id>` detail surface, then flip `COLLECTIONS_ENABLED`
   in `HomeDiscovery.tsx`.
 - **Mobile search entry** — surface `SearchBox` on phones.
-- **Browse-search song/member upgrade** — make the "Browse all" filter use
-  the MiniSearch index (`searchClient`) so it's song/member-aware.
+- ~~**Browse-search song/member upgrade**~~ — **done (2026-06-02).** The
+  "Browse all" filter now resolves queries (>=2 chars) through the shared
+  `searchClient` MiniSearch index (`HomeContent.tsx`: async `searchHits`
+  set; substring fallback for single-char / index-loading / load-failure so
+  the list never flashes empty). Placeholder updated to "Search shows,
+  songs, or band members...". Verified via Playwright: Scarlet Begonias→315,
+  Brent Mydland→812, Dark Star→216 (all 0 under the old substring filter);
+  Fillmore→81 venue match unregressed. **Scroll anchor:** searching now
+  smooth-scrolls the Browse-all `<section>` (ref + `scroll-mt-4`) to the top
+  of the pane so a shrinking result list no longer jumps the viewport. Done
+  as an **instant** `scrollIntoView({block:"start"})` from an effect keyed on
+  `[searchQuery, searchHits]` (NOT a smooth scroll in the change handler — that
+  animated against stale layout and drifted, re-anchoring after the async hits
+  resolve). The section also takes `min-h-[100dvh]` *while a query is active* —
+  without it a short/empty result set leaves the column too short to scroll the
+  heading to the top (it stranded mid-screen at y≈395 on 0 results). Verified:
+  heading pins to y≈73 (top, under the bar) at 0 / many / member queries, even
+  with char-by-char typing.
+  - **Numeric-token fix (shared `searchClient`):** `fuzzy` is now disabled for
+    all-digit tokens — edit-distance-1 fuzz had turned "1982" into
+    1980/1983/1992/1882, so "Brent 1982" matched ~717 shows (all Brent-era
+    years). The top-bar search hid this behind its 20-row cap; browse exposed
+    it. Now "Brent 1982" → 61 = "1982" → 61 (AND-correct). Both surfaces share
+    the options, so they're consistent.
+  - **Free-text date variants (shared `searchClient`):** the stored ISO date
+    only tokenized to 1977/05/08, so "5/8/77", "5-8-77", "may 8 1977" missed.
+    Added a `dates` field derived client-side in `toSearchDocs` (no artifact
+    change): emits leading-zero-less month/day, 2-digit year, and month name as
+    loose tokens (MiniSearch splits on the separators, so delimiter/order don't
+    matter). Bumped a `SCHEMA` tag in the IndexedDB cache key to invalidate the
+    old serialized index. Verified: 5/8/77 = 5-8-77 = may 8 1977 →
+    1977-05-08 Barton Hall (Cornell); 8/27/72 → Veneta OR.
 - **Cleanup** (phase 8) — delete `/mockup`; retire superseded `/me` tabs.
 - **Verify** — long-form review parity on liner-notes; mobile liner-notes
   collapse-to-sections.

@@ -3,11 +3,12 @@
 /**
  * The discovery section of the home middle column — the mobile-app home, in
  * carousels: Recently Played (signed in) · Today in Grateful Dead History ·
- * Trending · Fan Favorites · Collections · Top Rated.
+ * Trending · Fan Favorites · Collections.
  *
  * Dynamic units (Recently Played / Trending / Fan Favorites) hydrate from the
- * API; TIGDH and Top Rated come from the build-time show index already in
- * memory. Bare show_ids from the analytics endpoints resolve against that index.
+ * API; TIGDH comes from the build-time show index already in memory. Bare
+ * show_ids from the analytics endpoints resolve against that index. (Top Rated
+ * lives in the Browse section — it tracks the search/year filters there.)
  */
 
 import { useEffect, useMemo, useState } from "react";
@@ -18,28 +19,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { fetchRecentShows } from "@/lib/userDataApi";
 import { formatShowDate, formatLocation } from "@/components/show/showFormat";
 import { fetchTrending, fetchPopular, type PopularShow } from "@/lib/discoveryApi";
-import ShowCarousel, { type CarouselItem } from "./ShowCarousel";
-
-function fmtDate(d: string): string {
-  const [y, m, day] = d.split("-").map(Number);
-  if (!y) return d;
-  return new Date(y, (m ?? 1) - 1, day ?? 1).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-}
-
-function toItem(s: ShowIndexEntry, trailing?: string): CarouselItem {
-  return {
-    showId: s.id,
-    date: fmtDate(s.d),
-    venue: s.v,
-    location: [s.c, s.s].filter(Boolean).join(", "),
-    image: s.img || null,
-    trailing,
-  };
-}
+import ShowCarousel, { type CarouselItem, showToCarouselItem as toItem } from "./ShowCarousel";
 
 // Collections are temporarily hidden on the home (no card treatment / landing
 // page yet). Flip to re-enable. See PLANS/web-spotify-shell.md.
@@ -52,11 +32,9 @@ const todayKey = () => {
 
 export default function HomeDiscovery({
   showIndex,
-  topRated,
   collections,
 }: {
   showIndex: ShowIndexEntry[];
-  topRated: ShowIndexEntry[];
   collections: CollectionSummary[];
 }) {
   const { user } = useAuth();
@@ -139,11 +117,6 @@ export default function HomeDiscovery({
     };
   }, [byId, user?.id]);
 
-  const topRatedItems = useMemo(
-    () => topRated.slice(0, 15).map((s) => toItem(s, s.r > 0 ? `★ ${s.r.toFixed(1)}` : undefined)),
-    [topRated],
-  );
-
   return (
     <div className="mb-4">
       <ShowCarousel title="Recently Played" items={recent} />
@@ -173,8 +146,6 @@ export default function HomeDiscovery({
           </div>
         </section>
       )}
-
-      <ShowCarousel title="Top Rated" items={topRatedItems} />
     </div>
   );
 }

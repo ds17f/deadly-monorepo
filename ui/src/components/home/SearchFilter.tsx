@@ -82,7 +82,7 @@ export default function SearchFilter({
             type="text"
             value={local}
             onChange={(e) => handleChange(e.target.value)}
-            placeholder="Search by venue, city, or date..."
+            placeholder="Search shows, songs, or band members..."
             className="w-full rounded-lg bg-deadly-surface px-4 py-2 pr-8 text-sm text-white placeholder-white/30 outline-none ring-1 ring-white/10 focus:ring-deadly-heading"
           />
           {local && (

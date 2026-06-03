@@ -9,6 +9,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import type { ShowIndexEntry } from "@/types/homepage";
 
 export interface CarouselItem {
   showId: string;
@@ -17,6 +18,29 @@ export interface CarouselItem {
   location?: string | null;
   image?: string | null;
   trailing?: string | null; // e.g. "315 ♥" / play count
+}
+
+/** Format an ISO show date ("1977-05-08") as "May 8, 1977" for a card. */
+export function fmtCarouselDate(d: string): string {
+  const [y, m, day] = d.split("-").map(Number);
+  if (!y) return d;
+  return new Date(y, (m ?? 1) - 1, day ?? 1).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
+
+/** Map a build-time show-index entry to a carousel card. */
+export function showToCarouselItem(s: ShowIndexEntry, trailing?: string | null): CarouselItem {
+  return {
+    showId: s.id,
+    date: fmtCarouselDate(s.d),
+    venue: s.v,
+    location: [s.c, s.s].filter(Boolean).join(", "),
+    image: s.img || null,
+    trailing: trailing ?? undefined,
+  };
 }
 
 function Card({ item }: { item: CarouselItem }) {

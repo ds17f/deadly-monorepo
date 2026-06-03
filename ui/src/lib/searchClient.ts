@@ -8,6 +8,10 @@
 import MiniSearch, { type SearchResult } from "minisearch";
 
 const VERSION = process.env.NEXT_PUBLIC_DATA_VERSION ?? "dev";
+// Bump when the indexed field schema changes so stale IndexedDB caches (which
+// serialize the field config) are invalidated even on the same data version.
+const SCHEMA = "2";
+const CACHE_KEY = `${VERSION}::s${SCHEMA}`;
 
 // The compact, dictionary-encoded artifact emitted by scripts/build-search-index.mjs.
 interface RawDoc {
@@ -39,6 +43,7 @@ interface SearchDoc {
   songs: string;
   members: string;
   source: string;
+  dates: string; // free-text date variants (5/8/77, may 8, etc.)
 }
 
 export interface ShowSearchHit {
@@ -58,14 +63,36 @@ const SOURCE_SYNONYMS: Record<string, string> = {
   MATRIX: "matrix",
 };
 
-const FIELDS = ["date", "year", "venue", "city", "state", "songs", "members", "source"];
+const FIELDS = ["date", "year", "venue", "city", "state", "songs", "members", "source", "dates"];
+
+const MONTH_NAMES = [
+  "", "january", "february", "march", "april", "may", "june",
+  "july", "august", "september", "october", "november", "december",
+];
+
+// The stored ISO date ("1977-05-08") only tokenizes to 1977/05/08, so leading-
+// zero-less and 2-digit-year forms ("5/8/77", "may 8") never match. Emit those
+// variants as loose tokens; MiniSearch tokenizes on the separators, so order/
+// delimiter don't matter (AND across the numbers + year still narrows).
+function dateVariants(iso: string): string {
+  const [y, m, d] = iso.split("-");
+  if (!y || !m || !d) return "";
+  const mNum = String(parseInt(m, 10)); // "05" -> "5"
+  const dNum = String(parseInt(d, 10)); // "08" -> "8"
+  const y2 = y.slice(2); // "1977" -> "77"
+  const monthName = MONTH_NAMES[parseInt(m, 10)] ?? "";
+  return `${mNum} ${dNum} ${y2} ${monthName}`;
+}
 const MINISEARCH_OPTIONS = {
   idField: "id",
   fields: FIELDS,
   storeFields: ["date", "venue", "city", "state"],
   searchOptions: {
     prefix: true,
-    fuzzy: 0.2,
+    // Fuzzy helps misspelled names/venues, but on a numeric token (year or
+    // date part) edit-distance 1 turns "1982" into 1980/1983/1992/1882 — which
+    // silently widened "Brent 1982" to ~all Brent-era years. Match digits exactly.
+    fuzzy: (term: string) => (/^\d+$/.test(term) ? false : 0.2),
     combineWith: "AND" as const,
     boost: { venue: 2, songs: 2, members: 2, year: 1.5 },
   },
@@ -82,6 +109,7 @@ function toSearchDocs(raw: RawIndex): SearchDoc[] {
     songs: d.g.map((id) => raw.songs[id]).join(" "),
     members: d.m.map((id) => raw.members[id]).join(" "),
     source: d.t.map((tag) => SOURCE_SYNONYMS[tag] ?? tag).join(" "),
+    dates: dateVariants(d.d),
   }));
 }
 
@@ -133,7 +161,7 @@ let loadPromise: Promise<MiniSearch<SearchDoc>> | null = null;
 
 async function build(): Promise<MiniSearch<SearchDoc>> {
   // 1. Serialized index already in IndexedDB for this version? Load instantly.
-  const cached = await cacheGet(VERSION);
+  const cached = await cacheGet(CACHE_KEY);
   if (cached) {
     try {
       return MiniSearch.loadJSON<SearchDoc>(cached, MINISEARCH_OPTIONS);
@@ -148,7 +176,7 @@ async function build(): Promise<MiniSearch<SearchDoc>> {
   const raw = (await res.json()) as RawIndex;
   const ms = new MiniSearch<SearchDoc>(MINISEARCH_OPTIONS);
   ms.addAll(toSearchDocs(raw));
-  cachePut(VERSION, JSON.stringify(ms)); // fire-and-forget
+  cachePut(CACHE_KEY, JSON.stringify(ms)); // fire-and-forget
   return ms;
 }
 
@@ -169,7 +197,7 @@ function matchType(result: SearchResult): ShowSearchHit["matchType"] {
   if (fields.has("members")) return "member";
   if (fields.has("venue")) return "venue";
   if (fields.has("city") || fields.has("state")) return "location";
-  if (fields.has("date") || fields.has("year")) return "date";
+  if (fields.has("date") || fields.has("year") || fields.has("dates")) return "date";
   return "general";
 }
 
