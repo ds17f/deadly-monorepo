@@ -1,14 +1,14 @@
 "use client";
 
 /**
- * The persistent left "Your Library" rail of the app shell.
+ * The persistent left "Your Library" rail of the app shell — a compact *quick
+ * look* at the user's library; the full experience lives at /me/*.
  *
  * Wired to live data via the same enriched endpoints the /me tabs use
  * (fetchFavoriteShows / fetchRecentShows / fetchReviews). Renders them as
- * labelled sections (Recent / Reviews / Library), with a hierarchical
- * decade→season filter on top that NARROWS every section at once — mirroring
- * the native Favorites screen's filter chips (iosApp FavoritesScreen.swift).
- * Signed-out users get gated prompts.
+ * labelled sections (Recently Played / My Reviews / Favorites) that link to
+ * their /me page, with the shared decade→year cascade filter on top that
+ * NARROWS every section at once. Signed-out users get gated prompts.
  *
  * Static-export safe: client component, hydrates from the API after load.
  */
@@ -23,6 +23,11 @@ import {
 } from "@/lib/userDataApi";
 import type { FavoriteShow, RecentShow, ShowReview } from "@/types/userdata";
 import { formatShowDate, formatLocation } from "@/components/show/showFormat";
+import DecadeCascadeFilter, {
+  type FilterNode,
+  selectedYears,
+  parseYear,
+} from "@/components/library/DecadeCascadeFilter";
 
 type Kind = "favorite" | "recent" | "review";
 
@@ -35,66 +40,16 @@ type Item = {
   rating: number | null;
   sortKey: number;
   year: number | null;
-  month: number | null;
   image?: string | null;
 };
 
-// Sections, in display order. Each gets a header; empty ones are hidden.
-const SECTIONS: { kind: Kind; header: string }[] = [
-  { kind: "recent", header: "Recently Played" },
-  { kind: "review", header: "My Reviews" },
-  { kind: "favorite", header: "Favorites" },
+// Sections, in display order. Each gets a header linking to its /me page;
+// empty ones are hidden.
+const SECTIONS: { kind: Kind; header: string; href: string }[] = [
+  { kind: "recent", header: "Recently Played", href: "/me/recent" },
+  { kind: "review", header: "My Reviews", href: "/me/reviews" },
+  { kind: "favorite", header: "Favorites", href: "/me/favorites" },
 ];
-
-// Hierarchical decade→half→year filter, mirroring the native Search screen's
-// cascade (HierarchicalFilterChips.swift). Tap a node to drill in, tap the
-// selected node to step back; a leaf year collapses to a breadcrumb chip.
-type FilterNode = { id: string; label: string; year?: number; children?: FilterNode[] };
-
-const years = (a: number, b: number): FilterNode[] =>
-  Array.from({ length: b - a + 1 }, (_, i) => ({
-    id: String(a + i),
-    label: String(a + i),
-    year: a + i,
-  }));
-
-const FILTER_TREE: FilterNode[] = [
-  { id: "60s", label: "60s", children: years(1965, 1969) },
-  {
-    id: "70s",
-    label: "70s",
-    children: [
-      { id: "early_70s", label: "Early 70s", children: years(1970, 1974) },
-      { id: "late_70s", label: "Late 70s", children: years(1975, 1979) },
-    ],
-  },
-  {
-    id: "80s",
-    label: "80s",
-    children: [
-      { id: "early_80s", label: "Early 80s", children: years(1980, 1984) },
-      { id: "late_80s", label: "Late 80s", children: years(1985, 1989) },
-    ],
-  },
-  { id: "90s", label: "90s", children: years(1990, 1995) },
-];
-
-// Every leaf year reachable under a node — the set a selection filters to.
-function leafYears(node: FilterNode): number[] {
-  if (node.year != null) return [node.year];
-  return (node.children ?? []).flatMap(leafYears);
-}
-
-// Shows are date-prefixed (YYYY-MM-DD-…); the enriched `date` is preferred.
-function parseYearMonth(show: { showId: string; date?: string | null }): {
-  year: number | null;
-  month: number | null;
-} {
-  const iso = (show.date ?? show.showId).slice(0, 10);
-  const m = /^(\d{4})-(\d{2})-\d{2}$/.exec(iso);
-  if (!m) return { year: null, month: null };
-  return { year: Number(m[1]), month: Number(m[2]) };
-}
 
 function buildItems(
   favorites: FavoriteShow[],
@@ -112,7 +67,7 @@ function buildItems(
       pinned: f.isPinned,
       rating: null,
       sortKey: f.isPinned ? Number.MAX_SAFE_INTEGER : f.addedAt,
-      ...parseYearMonth(f),
+      year: parseYear(f),
       image: f.image,
     });
   }
@@ -125,7 +80,7 @@ function buildItems(
       pinned: false,
       rating: null,
       sortKey: r.lastPlayedAt,
-      ...parseYearMonth(r),
+      year: parseYear(r),
       image: r.image,
     });
   }
@@ -138,7 +93,7 @@ function buildItems(
       pinned: false,
       rating: typeof rv.overallRating === "number" ? rv.overallRating : null,
       sortKey: rv.updatedAt ?? 0,
-      ...parseYearMonth(rv),
+      year: parseYear(rv),
       image: rv.image,
     });
   }
@@ -190,29 +145,6 @@ function Row({ it }: { it: Item }) {
   );
 }
 
-function Chip({
-  label,
-  active = false,
-  onClick,
-}: {
-  label: string;
-  active?: boolean;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={`whitespace-nowrap rounded-full px-3 py-1 text-xs font-medium transition ${
-        active
-          ? "bg-deadly-accent text-white"
-          : "bg-white/10 text-white/80 hover:bg-white/20"
-      }`}
-    >
-      {label}
-    </button>
-  );
-}
-
 function GatedPrompts() {
   return (
     <div className="flex flex-col gap-4 p-4 pt-5">
@@ -245,7 +177,7 @@ function GatedPrompts() {
 
 export default function LibraryRail() {
   const { user, isLoading: authLoading } = useAuth();
-  // The drill-down path through FILTER_TREE; empty = "All".
+  // The drill-down path through the cascade; empty = "All".
   const [path, setPath] = useState<FilterNode[]>([]);
   const [items, setItems] = useState<Item[] | null>(null);
   const [error, setError] = useState(false);
@@ -273,34 +205,32 @@ export default function LibraryRail() {
     };
   }, [user?.id]);
 
-  // The years the current selection narrows to (null = no filter).
-  const selectedYears = useMemo<Set<number> | null>(
-    () => (path.length === 0 ? null : new Set(leafYears(path[path.length - 1]))),
-    [path],
-  );
+  const years = useMemo(() => selectedYears(path), [path]);
 
   // Group the filtered items into ordered, non-empty sections.
   const sections = useMemo(() => {
     if (!items) return [];
     const match = (i: Item) =>
-      selectedYears == null || (i.year != null && selectedYears.has(i.year));
+      years == null || (i.year != null && years.has(i.year));
     return SECTIONS.map((s) => ({
       ...s,
       rows: items.filter((i) => i.kind === s.kind && match(i)),
     })).filter((s) => s.rows.length > 0);
-  }, [items, selectedYears]);
+  }, [items, years]);
 
   const hasAny = (items?.length ?? 0) > 0;
-  const deepest = path[path.length - 1];
 
   return (
     <aside className="hidden w-[280px] flex-shrink-0 flex-col rounded-lg bg-deadly-surface lg:flex">
-      <div className="flex items-center gap-2 px-4 pt-4 text-sm font-bold text-white/70">
+      <Link
+        href="/me"
+        className="flex items-center gap-2 px-4 pt-4 text-sm font-bold text-white/70 transition hover:text-white"
+      >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
           <path d="M3 5h18v2H3zM3 11h18v2H3zM3 17h12v2H3z" />
         </svg>
         Your Library
-      </div>
+      </Link>
 
       {authLoading ? (
         <div className="p-4 text-sm text-white/40">Loading…</div>
@@ -308,43 +238,7 @@ export default function LibraryRail() {
         <GatedPrompts />
       ) : (
         <>
-          {/* Hierarchical decade→half→year cascade, mirroring the native
-              Search filter — but wrapped across rows (not scrolled) so the
-              year chips fit the rail. Narrows every section at once. */}
-          <div className="flex flex-wrap gap-1.5 px-4 pt-3">
-            <Chip label="All" active={path.length === 0} onClick={() => setPath([])} />
-
-            {path.length === 0 ? (
-              // Root: the decades.
-              FILTER_TREE.map((n) => (
-                <Chip key={n.id} label={n.label} onClick={() => setPath([n])} />
-              ))
-            ) : !deepest.children?.length ? (
-              // Leaf year: collapse the whole path into one breadcrumb chip;
-              // tapping it steps back up a level.
-              <Chip
-                active
-                label={path.map((n) => n.label).join(" > ")}
-                onClick={() => setPath(path.slice(0, -1))}
-              />
-            ) : (
-              // Intermediate: the selected node (tap to step back) + children.
-              <>
-                <Chip
-                  active
-                  label={deepest.label}
-                  onClick={() => setPath(path.slice(0, -1))}
-                />
-                {deepest.children.map((c) => (
-                  <Chip
-                    key={c.id}
-                    label={c.label}
-                    onClick={() => setPath([...path, c])}
-                  />
-                ))}
-              </>
-            )}
-          </div>
+          <DecadeCascadeFilter path={path} onChange={setPath} className="px-4 pt-3" />
 
           <div className="mt-2 flex-1 overflow-y-auto px-2 pb-2">
             {items === null ? (
@@ -364,9 +258,13 @@ export default function LibraryRail() {
             ) : (
               sections.map((s) => (
                 <section key={s.kind} className="mb-3 last:mb-0">
-                  <h3 className="px-3 pb-1 pt-2 text-[11px] font-semibold uppercase tracking-wide text-white/40">
+                  <Link
+                    href={s.href}
+                    className="flex items-center justify-between px-3 pb-1 pt-2 text-[11px] font-semibold uppercase tracking-wide text-white/40 transition hover:text-white/70"
+                  >
                     {s.header}
-                  </h3>
+                    <span aria-hidden>›</span>
+                  </Link>
                   {s.rows.map((it) => (
                     <Row key={it.kind + it.showId} it={it} />
                   ))}
