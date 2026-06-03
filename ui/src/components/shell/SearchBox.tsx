@@ -104,7 +104,12 @@ export default function SearchBox() {
   const showDropdown = open && query.trim().length >= 2;
 
   return (
-    <div ref={boxRef} className="relative hidden w-full max-w-md sm:block">
+    <div
+      ref={boxRef}
+      // Mobile: grow to fill the top bar (sides shrink to logo/avatar).
+      // Desktop: fixed max-w-md, centered by the flex-1 header spacers.
+      className="relative min-w-0 w-full max-w-md flex-1 sm:flex-none"
+    >
       <div className="flex items-center gap-2 rounded-full bg-deadly-surface px-4 py-2">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="flex-shrink-0 text-white/40">
           <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 10-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1114 9.5 4.5 4.5 0 019.5 14z" />

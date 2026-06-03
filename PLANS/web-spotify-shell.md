@@ -317,10 +317,10 @@ re-enable the home carousel and wire the cards to it.
     → the 8 shows with both (all within Brent's 1979–90 tenure).
   - **UI:** `components/shell/SearchBox.tsx` in the top bar — live dropdown,
     keyboard-nav, song/member match get a hint chip, links to the show.
-  - **Follow-ups:** mobile search entry (top-bar box is `sm:block`, hidden
-    on phones); richer date-format variants (mobile precomputes "5-8-77"
-    style — web relies on tokenization + year field for now); lineup is
-    core members only (12) — no guest sit-ins (same as mobile).
+  - **Follow-ups:** ~~mobile search entry~~ (done — fills the top bar on
+    phones); ~~richer date-format variants~~ (done — `dates` field emits
+    "5-8-77"/"may 8" tokens); lineup is core members only (12) — no guest
+    sit-ins (same as mobile).
 
   **Status: shipped on `feat/mobile-server-sync`** (v1). Verified desktop
   + mobile via Playwright screenshots (`~/.cache/ms-playwright` chromium).
@@ -376,8 +376,10 @@ Mission** (real app copy) · **Donate to the Internet Archive**. The
 `public/search-index.<ver>.json` via `scripts/build-search-index.mjs`
 `prebuild` hook): shipped, song/member/venue/date aware, IndexedDB-cached
 keyed by `NEXT_PUBLIC_DATA_VERSION`, viewport-centered, dropdown caps at
-20 with a "Showing N of TOTAL — keep typing to narrow" footer. Still
-desktop-only (`sm:block`) — **mobile search entry is a follow-up.**
+20 with a "Showing N of TOTAL — keep typing to narrow" footer. **Now on
+mobile too:** the box grows to fill the top bar on phones (`flex-1`,
+`sm:flex-none`); the "The Deadly" wordmark is hidden under `sm` and the
+header spacers are `sm:flex-1` (desktop-only centering) to make room.
 
 **Cover-art fallback** is consistent everywhere: square stealie
 `public/cover-fallback.png` (vendored from iOS `deadly_logo_square`),
@@ -420,7 +422,8 @@ serves the home shell (not 404) — confirm the slug renders real content.
 - **Collections** (parked) — see section above; needs a box-set-icon card
   + a `/collections/<id>` detail surface, then flip `COLLECTIONS_ENABLED`
   in `HomeDiscovery.tsx`.
-- **Mobile search entry** — surface `SearchBox` on phones.
+- ~~**Mobile search entry**~~ — **done (2026-06-02).** `SearchBox` now fills
+  the top bar on phones (wordmark hidden under `sm`); same live dropdown.
 - ~~**Browse-search song/member upgrade**~~ — **done (2026-06-02).** The
   "Browse all" filter now resolves queries (>=2 chars) through the shared
   `searchClient` MiniSearch index (`HomeContent.tsx`: async `searchHits`

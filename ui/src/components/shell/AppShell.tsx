@@ -40,7 +40,8 @@ function Logo() {
       className="flex flex-shrink-0 items-center gap-2 text-lg font-bold text-white"
     >
       <Image src="/logo.png" alt="The Deadly logo" width={26} height={26} />
-      The Deadly
+      {/* Wordmark hidden on phones so the search box has room in the top bar. */}
+      <span className="hidden sm:inline">The Deadly</span>
     </Link>
   );
 }
@@ -53,11 +54,11 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
     <div className="flex h-[100dvh] flex-col bg-black text-white">
       {/* top bar: equal-flex sides keep the search box viewport-centered */}
       <header className="flex flex-shrink-0 items-center gap-4 px-4 py-2.5">
-        <div className="flex flex-1 items-center">
+        <div className="flex items-center sm:flex-1">
           <Logo />
         </div>
         <SearchBox />
-        <div className="flex flex-1 items-center justify-end">
+        <div className="flex items-center justify-end sm:flex-1">
           <UserMenu />
         </div>
       </header>
