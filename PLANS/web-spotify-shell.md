@@ -329,3 +329,94 @@ re-enable the home carousel and wire the cards to it.
   trending/popular response (like the `/me` fetchers) rather than leaning
   on the home-page `showIndex` — the "show-metadata API source is the
   shared gap" called out in [web-profile.md](./web-profile.md).
+
+---
+
+### ==== CURRENT STATE — 2026-06-02 session end (authoritative) ====
+
+Supersedes the phase table and earlier dated entries where they conflict.
+The shell is live; the homepage was substantially rebuilt this session.
+Commits: `7c6c6b7e..e2092eed` (~21 commits) on branch
+`feat/mobile-server-sync`.
+
+**Homepage** (`components/home/HomeContent.tsx`), MIDDLE pane top→bottom:
+1. `HeroSection` — trimmed to headline + one paragraph ("what this site
+   is"). The 3 feature blocks were removed (that story is now the rail's
+   mission). Still a touch tall; trimming further is optional.
+2. `HomeDiscovery` — the discovery **carousels** (the big change: moved
+   OUT of the right rail INTO the wide middle as cover-art horizontal
+   scrollers): Recently Played (signed-in) · Today in GD History ·
+   Trending · Fan Favorites · **Collections (parked/hidden)** · Top Rated.
+   - `ShowCarousel.tsx` = reusable carousel: hidden scrollbar, native
+     horizontal wheel, full-height fade-in ‹ › gutter arrows (on hover,
+     only when overflowing, gated by scroll position).
+   - Trending/Fan-Favorites/Recently-Played hydrate from
+     `/api/trending`,`/api/popular`,`/me`; TIGDH + Top Rated from the
+     in-memory `showIndex`; bare `show_id`s resolved against it.
+3. "Browse all 2,313 shows" = catalog `SearchFilter` + `ShowList` (the
+   static **SEO surface**). Its in-page text search is STILL plain
+   substring (venue/city/date) — song/member upgrade is a pending thread
+   (the GLOBAL top-bar search already does song/member).
+
+**Home RIGHT rail** = `components/home/HomeRightRail.tsx` (via
+`RightRailSlot mobilePlacement="above"` so it leads on mobile): Now
+Playing (when active) · Get the app (badges + desktop QR) · **Our
+Mission** (real app copy) · **Donate to the Internet Archive**. The
+"discovery in the right rail" idea is DEAD — discovery is carousels now.
+`DiscoveryRail.tsx` was deleted.
+
+**Global search** (`SearchBox.tsx` + `lib/searchClient.ts` + prebuilt
+`public/search-index.<ver>.json` via `scripts/build-search-index.mjs`
+`prebuild` hook): shipped, song/member/venue/date aware, IndexedDB-cached
+keyed by `NEXT_PUBLIC_DATA_VERSION`, viewport-centered, dropdown caps at
+20 with a "Showing N of TOTAL — keep typing to narrow" footer. Still
+desktop-only (`sm:block`) — **mobile search entry is a follow-up.**
+
+**Cover-art fallback** is consistent everywhere: square stealie
+`public/cover-fallback.png` (vendored from iOS `deadly_logo_square`),
+`object-cover` + rounded — carousels, both rails, `ShowArtwork`, show
+hero, player (mini + fullscreen). Round `/logo.png` is reserved for the
+brand wordmark and the OG/Twitter **share image only** (`resolveCoverImageUrl`
+in `shows/[id]/page.tsx` still returns the logo for OG, by design).
+
+**Store badges:** `public/google-play-badge.png` was trimmed of its 41px
+transparent padding to size-match Apple; both render `h-10 w-auto`.
+`GetTheApp.tsx` renders both inline.
+
+**Show page** (`shows/[id]/page.tsx`): app CTA moved to the TOP of the
+right rail above Key highlights — `ShowAppCta.tsx` (badges only; the QR is
+lower, in `ShowLinerNotes`'s "Open in App"). Bottom `ShowActions` lost its
+badges (keeps in-app deep link + Archive.org).
+
+**Shell scroll model (app-wide, important):** `AppShell` is a fixed
+`h-[100dvh]` column; the document never scrolls. Desktop = 3 panes scroll
+internally; mobile = stacked panes are ONE scroll region. Header +
+transport sit outside it (pinned, no `sticky`). `AppShell` sets `html{
+overflow:hidden }` on shell routes via `useEffect` (restored on bare
+routes `/signin`,`/auth`,`/admin`) — that's what stops wheeling over the
+player from paging the document. VERIFY viewport/scroll in a real
+browser, not just headless — headless Chromium treats `dvh==vh`.
+
+**Volume:** defaults mid-range (`DEFAULT_VOLUME = 0.5` in
+`PlayerProvider.tsx`; stored `0`/missing treated as unset, recovering
+users the old `Number(null)===0` bug muted).
+
+**Verification:** Python Playwright + cached Chromium available
+(`~/.cache/ms-playwright`); stack on `localhost:8080` after `make
+ui-build && make docker-redeploy`. Gotcha: an invalid `/shows/<bad-slug>/`
+serves the home shell (not 404) — confirm the slug renders real content.
+
+**The board (next):**
+- **Logged-out signup bar** (phase 6) — bottom conversion bar replacing
+  the transport when signed out; one-line pitch + sign-up/get-app.
+  (Confirmed: Spotify's logged-out player is content-first with a bottom
+  "Sign up free" bar — NOT a marketing landing.)
+- **Collections** (parked) — see section above; needs a box-set-icon card
+  + a `/collections/<id>` detail surface, then flip `COLLECTIONS_ENABLED`
+  in `HomeDiscovery.tsx`.
+- **Mobile search entry** — surface `SearchBox` on phones.
+- **Browse-search song/member upgrade** — make the "Browse all" filter use
+  the MiniSearch index (`searchClient`) so it's song/member-aware.
+- **Cleanup** (phase 8) — delete `/mockup`; retire superseded `/me` tabs.
+- **Verify** — long-form review parity on liner-notes; mobile liner-notes
+  collapse-to-sections.
