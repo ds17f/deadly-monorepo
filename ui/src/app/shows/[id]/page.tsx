@@ -10,6 +10,7 @@ import ShowActions from "@/components/ShowActions";
 import Setlist from "@/components/Setlist";
 import ShowReview from "@/components/ShowReview";
 import ShowLinerNotes from "@/components/show/ShowLinerNotes";
+import ShowAppCta from "@/components/show/ShowAppCta";
 import HeroActions from "@/components/show/HeroActions";
 import { RightRailSlot } from "@/components/shell/RightRail";
 import ShowNav from "@/components/ShowNav";
@@ -175,13 +176,16 @@ export default async function ShowPage({
       </div>
 
       <RightRailSlot>
-        <ShowLinerNotes
-          showId={show.show_id}
-          review={show.ai_show_review}
-          lineup={show.lineup}
-          recordings={recordings}
-          bestRecordingId={show.best_recording}
-        />
+        <div className="flex flex-col gap-3">
+          <ShowAppCta showId={show.show_id} recordingId={show.best_recording} />
+          <ShowLinerNotes
+            showId={show.show_id}
+            review={show.ai_show_review}
+            lineup={show.lineup}
+            recordings={recordings}
+            bestRecordingId={show.best_recording}
+          />
+        </div>
       </RightRailSlot>
     </article>
   );
