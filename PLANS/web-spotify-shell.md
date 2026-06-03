@@ -222,7 +222,7 @@ re-enable the home carousel and wire the cards to it.
   | 4 | Right rail on home (get-the-app + now-playing) | ❌ not done — `GetTheApp` is still inline in `HomeContent` (~line 175); home renders no right pane |
   | 5 | Show detail in-shell + liner-notes rail | ✅ mostly — `shows/[id]/page.tsx` uses `RightRailSlot` → `ShowLinerNotes`; ⚠️ verify full long-form `review` parity |
   | 6 | Logged-out conversion | 🟡 partial — gated rail done; signup-banner-replacing-transport not done |
-  | 7 | Responsive / mobile | 🟡 mostly — pane stacking done; verify liner-notes collapse-to-sections |
+  | 7 | Responsive / mobile | ✅ done — pane stacking; liner-notes stay always-expanded on mobile (collapse explicitly not wanted) |
   | 8 | Cutover + cleanup | 🟡 cutover done & live, but `/mockup` still in tree and old `/me` tabs still present |
 
   Cross-cutting gap: **global search isn't wired** — the top-bar search
@@ -485,5 +485,7 @@ serves the home shell (not 404) — confirm the slug renders real content.
     old serialized index. Verified: 5/8/77 = 5-8-77 = may 8 1977 →
     1977-05-08 Barton Hall (Cornell); 8/27/72 → Veneta OR.
 - **Cleanup** (phase 8) — delete `/mockup`; retire superseded `/me` tabs.
-- **Verify** — long-form review parity on liner-notes; mobile liner-notes
-  collapse-to-sections.
+- **Verify** — long-form review parity ✅ met (`ShowReview` "About this show"
+  shows the blurb + the full `review.review` behind "Show more"). Mobile
+  liner-notes: **decision — keep the panels always-expanded** on mobile (it
+  reads fine; do NOT add tap-to-expand collapse — tried it, not wanted).
