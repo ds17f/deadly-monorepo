@@ -4,7 +4,8 @@ import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
 import { fetchArchiveTracks } from "@/lib/archive";
 import * as analytics from "@/lib/analytics";
-import { updatePlaybackPosition } from "@/lib/userDataApi";
+import { updatePlaybackPosition, addRecentShow } from "@/lib/userDataApi";
+import { useAuth } from "@/contexts/AuthContext";
 import { rememberArt, lookupArt, rememberReview, lookupReview } from "@/lib/artCache";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
@@ -22,6 +23,7 @@ export default function PlayerProvider({
   children: React.ReactNode;
 }) {
   const { announcePlayback, sendPositionUpdate, clearState, claimSession, userState, isActiveDevice } = useConnect();
+  const { user } = useAuth();
 
   const [activeShow, setActiveShow] = useState<ViewedShow | null>(null);
   const [viewedShow, setViewedShow] = useState<ViewedShow | null>(null);
@@ -70,6 +72,10 @@ export default function PlayerProvider({
   >(null);
   const lastElapsedMsRef = useRef(0);
   const dwellTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Record a recent play once per show-listening session (signed-in only).
+  // Read auth through a ref so the dwell-commit closure isn't stale.
+  const userIdRef = useRef<string | undefined>(undefined);
+  const lastRecentShowRef = useRef<string | null>(null);
   // Source attributed to the next playback_start; reset to "auto_advance"
   // after each emit so only an explicit user action overrides it.
   const nextPlaybackSourceRef = useRef<string>("auto_advance");
@@ -77,6 +83,10 @@ export default function PlayerProvider({
   useEffect(() => {
     lastElapsedMsRef.current = Math.floor(elapsed * 1000);
   }, [elapsed]);
+
+  useEffect(() => {
+    userIdRef.current = user?.id;
+  }, [user?.id]);
 
   const emitPlaybackEnd = useCallback((reason: string) => {
     const c = committedPlaybackRef.current;
@@ -430,6 +440,13 @@ export default function PlayerProvider({
           track_index: info.trackNumber,
           source,
         });
+        // Record a recent play once per show session (not per auto-advanced
+        // track), signed-in only. This is what populates /me/recent — the web
+        // player previously never wrote it.
+        if (userIdRef.current && lastRecentShowRef.current !== info.showId) {
+          lastRecentShowRef.current = info.showId;
+          addRecentShow(info.showId).catch(() => {});
+        }
       }, 1000);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -898,6 +915,8 @@ export default function PlayerProvider({
       dwellTimerRef.current = null;
     }
     emitPlaybackEnd("stopped");
+    // Allow re-recording a recent if the same show is played again later.
+    lastRecentShowRef.current = null;
 
     // Announce stop before clearing local audio so the server parks the state
     if (activeShow && selectedRecording) {
