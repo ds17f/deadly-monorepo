@@ -9,6 +9,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { loadSearchIndex, searchShows, type ShowSearchHit } from "@/lib/searchClient";
+import * as analytics from "@/lib/analytics";
 
 function formatDate(d: string): string {
   const [y, m, day] = d.split("-").map(Number);
@@ -79,6 +80,13 @@ export default function SearchBox() {
   }, []);
 
   function go(hit: ShowSearchHit) {
+    const q = query.trim();
+    analytics.track("search", {
+      query: q,
+      query_length: q.length,
+      result_count: total,
+      selected_index: results.indexOf(hit),
+    });
     setOpen(false);
     setQuery("");
     setResults([]);

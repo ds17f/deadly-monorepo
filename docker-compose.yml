@@ -10,6 +10,8 @@ services:
     environment:
       - SITE_ADDRESS=${SITE_ADDRESS}
       - SHARE_ADDRESS=${SHARE_ADDRESS}
+      # Injected into /api/analytics requests so the browser never holds it.
+      - ANALYTICS_API_KEY=${ANALYTICS_API_KEY}
     ports:
       - "80:80"
       - "443:443"

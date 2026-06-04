@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { UserDataContext } from "@/contexts/UserDataContext";
 import { fetchUserSync, updateFavoriteShow, deleteFavoriteShow, updateFavoriteSong, deleteFavoriteSong, updateReview, deleteReview } from "@/lib/userDataApi";
+import * as analytics from "@/lib/analytics";
 import type { UserDataBackupV3, FavoriteShow, FavoriteTrack, ShowReview } from "@/types/userdata";
 
 const STORAGE_KEY = "deadly_userdata";
@@ -125,6 +126,14 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
   const toggleFavorite = useCallback((showId: string) => {
     const isCurrentlyFav = data?.favorites.shows.some((s) => s.showId === showId) ?? false;
 
+    // Feeds trending + the dashboard (platform "web"), mirroring mobile.
+    analytics.track("feature_use", {
+      feature: isCurrentlyFav ? "remove_favorite" : "add_favorite",
+      category: "action",
+      target_type: "show",
+      target_id: showId,
+    });
+
     if (isCurrentlyFav) {
       updateData((prev) => ({
         ...prev,
@@ -175,6 +184,14 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
     const isCurrentlyFav = data?.favorites.tracks.some(
       (t) => t.showId === showId && t.trackTitle === trackTitle,
     ) ?? false;
+
+    // Mirror mobile's song-favorite event (target_type "recording_track").
+    analytics.track("feature_use", {
+      feature: isCurrentlyFav ? "remove_favorite" : "add_favorite",
+      category: "action",
+      target_type: "recording_track",
+      target_id: `${showId}/${track.recordingId ?? ""}/${track.trackNumber ?? 0}`,
+    });
 
     if (isCurrentlyFav) {
       updateData((prev) => ({

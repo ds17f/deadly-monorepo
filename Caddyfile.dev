@@ -1,4 +1,12 @@
 :80 {
+	# Inject the analytics key server-side so the browser never holds the
+	# secret. Must precede /api/* (Caddy matches handle blocks in order).
+	handle /api/analytics {
+		reverse_proxy api:3001 {
+			header_up X-Analytics-Key {$ANALYTICS_API_KEY}
+		}
+	}
+
 	handle /api/* {
 		reverse_proxy api:3001
 	}

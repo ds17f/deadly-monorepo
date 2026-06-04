@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
 import { fetchArchiveTracks } from "@/lib/archive";
+import * as analytics from "@/lib/analytics";
 import { updatePlaybackPosition } from "@/lib/userDataApi";
 import { rememberArt, lookupArt, rememberReview, lookupReview } from "@/lib/artCache";
 import { PlayerContext } from "@/contexts/PlayerContext";
@@ -58,6 +59,39 @@ export default function PlayerProvider({
   const suppressAutoplayRef = useRef(false);
   const suppressAnnounceRef = useRef(false);
   const prevUserStateRef = useRef<{ isPlaying: boolean; trackIndex: number; positionMs: number } | null>(null);
+
+  // ── Playback analytics (playback_start / playback_end) ──────────────
+  // Mirrors the mobile client: a 1s dwell gates playback_start so queue-load
+  // churn and rapid skips don't fire phantom starts (which would skew
+  // trending). playback_end fires for the previously-committed track when the
+  // track changes, on natural end, and on close.
+  const committedPlaybackRef = useRef<
+    { key: string; showId: string; recordingId: string; trackNumber: number; durationMs: number } | null
+  >(null);
+  const lastElapsedMsRef = useRef(0);
+  const dwellTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Source attributed to the next playback_start; reset to "auto_advance"
+  // after each emit so only an explicit user action overrides it.
+  const nextPlaybackSourceRef = useRef<string>("auto_advance");
+
+  useEffect(() => {
+    lastElapsedMsRef.current = Math.floor(elapsed * 1000);
+  }, [elapsed]);
+
+  const emitPlaybackEnd = useCallback((reason: string) => {
+    const c = committedPlaybackRef.current;
+    if (!c) return;
+    committedPlaybackRef.current = null;
+    const listenedMs = Math.min(lastElapsedMsRef.current, c.durationMs || lastElapsedMsRef.current);
+    analytics.track("playback_end", {
+      show_id: c.showId,
+      recording_id: c.recordingId,
+      track_index: c.trackNumber,
+      listened_ms: listenedMs,
+      duration_ms: c.durationMs,
+      reason,
+    });
+  }, []);
 
   // Keep refs in sync
   useEffect(() => {
@@ -183,6 +217,20 @@ export default function PlayerProvider({
           setCurrentTrackIndex(idx + 1);
         } else {
           setStatus("paused");
+          // Last track finished on its own — no track change will drive the
+          // playback_end, so emit the completed end here.
+          const c = committedPlaybackRef.current;
+          if (c) {
+            committedPlaybackRef.current = null;
+            analytics.track("playback_end", {
+              show_id: c.showId,
+              recording_id: c.recordingId,
+              track_index: c.trackNumber,
+              listened_ms: c.durationMs,
+              duration_ms: c.durationMs,
+              reason: "completed",
+            });
+          }
         }
       }
     });
@@ -327,6 +375,65 @@ export default function PlayerProvider({
     updateMediaSession(track);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTrackIndex, tracks]);
+
+  // Detect the settled current track → emit playback_start (after a 1s dwell)
+  // and playback_end for the outgoing track. The dwell is what keeps rapid
+  // skips / queue-load churn from firing phantom starts that would skew
+  // trending; see the refs near the top.
+  useEffect(() => {
+    const valid =
+      !!activeShow &&
+      !!selectedRecording &&
+      !!tracks &&
+      currentTrackIndex >= 0 &&
+      currentTrackIndex < tracks.length;
+    const track = valid ? tracks![currentTrackIndex] : null;
+    const newKey = valid
+      ? `${activeShow!.showId}|${selectedRecording}|${currentTrackIndex}`
+      : null;
+
+    const committed = committedPlaybackRef.current;
+
+    // Outgoing committed track ends the instant the tuple changes — read the
+    // elapsed now, before the incoming track's first timeupdate resets it.
+    if (committed && committed.key !== newKey) {
+      if (!newKey) {
+        emitPlaybackEnd("stopped");
+      } else {
+        const listenedMs = lastElapsedMsRef.current;
+        const completed = committed.durationMs > 0 && listenedMs >= committed.durationMs - 2000;
+        emitPlaybackEnd(completed ? "completed" : "skipped");
+      }
+    }
+
+    if (dwellTimerRef.current) {
+      clearTimeout(dwellTimerRef.current);
+      dwellTimerRef.current = null;
+    }
+
+    if (valid && track && newKey && (!committed || committed.key !== newKey)) {
+      const info = {
+        key: newKey,
+        showId: activeShow!.showId,
+        recordingId: selectedRecording!,
+        trackNumber: track.track,
+        durationMs: Math.floor((track.duration || 0) * 1000),
+      };
+      dwellTimerRef.current = setTimeout(() => {
+        dwellTimerRef.current = null;
+        const source = nextPlaybackSourceRef.current;
+        nextPlaybackSourceRef.current = "auto_advance";
+        committedPlaybackRef.current = info;
+        analytics.track("playback_start", {
+          show_id: info.showId,
+          recording_id: info.recordingId,
+          track_index: info.trackNumber,
+          source,
+        });
+      }, 1000);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeShow?.showId, selectedRecording, currentTrackIndex, tracks]);
 
   // Register MediaSession action handlers
   useEffect(() => {
@@ -567,6 +674,7 @@ export default function PlayerProvider({
 
   const playShow = useCallback(
     (show: ViewedShow) => {
+      nextPlaybackSourceRef.current = "browse";
       setActiveShow(show);
       // Remember the cover so a page refresh (which rehydrates from the
       // server's art-less userState) can restore it instead of the logo.
@@ -592,6 +700,7 @@ export default function PlayerProvider({
     (show: ViewedShow, trackTitle: string, trackNumber?: number | null) => {
       pendingTrackRef.current = { title: trackTitle, number: trackNumber };
       playShow(show);
+      nextPlaybackSourceRef.current = "favorites";
     },
     [playShow]
   );
@@ -609,6 +718,8 @@ export default function PlayerProvider({
   }, [tracks]);
 
   const playTrack = useCallback((index: number) => {
+    // Manual track selection — attribute the resulting playback_start.
+    nextPlaybackSourceRef.current = "track_list";
     // Reset gapless state since user is manually selecting
     preloadedNextRef.current = false;
     const inactive = getInactiveAudio();
@@ -781,6 +892,13 @@ export default function PlayerProvider({
     // Clear error first to prevent stale error flash
     setErrorMessage(null);
 
+    // End any tracked playback before we tear down local audio.
+    if (dwellTimerRef.current) {
+      clearTimeout(dwellTimerRef.current);
+      dwellTimerRef.current = null;
+    }
+    emitPlaybackEnd("stopped");
+
     // Announce stop before clearing local audio so the server parks the state
     if (activeShow && selectedRecording) {
       const audio = getActiveAudio();
@@ -822,7 +940,7 @@ export default function PlayerProvider({
       navigator.mediaSession.metadata = null;
     }
     // Note: activeShow and selectedRecording are NOT cleared — this is the parked state
-  }, [activeShow, selectedRecording, currentTrackIndex, announcePlayback]);
+  }, [activeShow, selectedRecording, currentTrackIndex, announcePlayback, emitPlaybackEnd]);
 
   const dismiss = useCallback(() => {
     close();
