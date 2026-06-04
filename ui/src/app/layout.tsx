@@ -6,6 +6,7 @@ import PlayerProvider from "@/components/player/PlayerProvider";
 import ToastProvider from "@/components/ui/ToastProvider";
 import AppShell from "@/components/shell/AppShell";
 import ServiceWorkerRegistrar from "@/components/pwa/ServiceWorkerRegistrar";
+import InstallPrompt from "@/components/pwa/InstallPrompt";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -54,6 +55,7 @@ export default function RootLayout({
         <ConnectProvider>
         <PlayerProvider>
           <AppShell>{children}</AppShell>
+          <InstallPrompt />
         </PlayerProvider>
         </ConnectProvider>
         </UserDataProvider>
