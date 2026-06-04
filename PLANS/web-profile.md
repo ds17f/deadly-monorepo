@@ -115,12 +115,38 @@ Realistic web v1 mirrors a subset of iOS's
 - Profile landing content: profile picture upload, editable screen name,
   and social — friends/contacts (add/remove) and listening-privacy
   controls (who can see / hear what you're playing).
-- **Editable display name now real** (the rest still placeholders). The
-  "screen name" piece shipped as the Profile **Display name** card (see issue
-  6 — `PATCH /api/user/account`). Profile picture upload + the social surfaces
-  (friends, listening privacy) remain "coming soon" — no backend yet. The
-  social domain (friend graph, presence, privacy model) is its own design +
-  API effort.
+- **Editable display name + profile picture now real** (social still
+  placeholders). The "screen name" piece shipped as the Profile **Display
+  name** card (see issue 6 — `PATCH /api/user/account`).
+- **Profile picture upload — LANDED.** The `AvatarCard` on `/me` (Profile)
+  replaces the old "coming soon" placeholder: pick an image, see it next to
+  your name, Change / Remove.
+  - **Small uploads end-to-end (the bandwidth requirement).** The client
+    downscales before upload (`ui/src/lib/avatar.ts`): canvas cover-crops to a
+    256×256 square and re-encodes WebP (q0.82, JPEG fallback), so the upload,
+    the stored bytes, and every later fetch stay ~10–25 KB regardless of the
+    source file size.
+  - **Storage**: an inline BLOB on `accounts` (`avatar`, `avatar_mime`,
+    `avatar_updated_at`) — tiny, no filesystem/volume coordination; same
+    "accounts row is the editable source of truth" model as `name`.
+  - **API** (`api/src/routes/user.ts`): `PUT /api/user/avatar` (auth, base64
+    JSON to reuse the JSON parser; rejects non-webp/jpeg/png → 400, caps decoded
+    size at 256 KB → 413), `DELETE /api/user/avatar` (auth, reverts to the OAuth
+    picture), `GET /api/user/avatar/:id` (public read, `Cache-Control: immutable`
+    since the URL is versioned by `?v=avatar_updated_at`).
+  - **Session**: the JWT callback sets `token.picture` →
+    `/api/user/avatar/<id>?v=<ts>` when a custom avatar exists, else **explicitly**
+    to the OAuth image (`getAuthUserImage`) so removing a custom avatar restores
+    it instead of stranding a stale URL on a long-lived token. Flows to
+    `session.user.image` everywhere (`UserMenu`, Profile) without re-login —
+    same pattern as the editable name. `AuthContext.updateImage` reflects an
+    upload/removal immediately.
+  - **Verified** against the dockerized stack: PUT→GET round-trips the exact
+    bytes with the immutable cache header; DELETE clears the row and GET 404s;
+    401/400/413 guard paths all hold.
+- The social surfaces (friends, listening privacy) remain "coming soon" — no
+  backend yet. The social domain (friend graph, presence, privacy model) is its
+  own design + API effort.
 - **"See" before "hear".** The privacy control splits in two: *seeing*
   what a friend is/was playing (friends + basic activity) can ship on
   plain request/response and comes first. *Hearing* — live, real-time

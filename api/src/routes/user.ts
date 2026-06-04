@@ -1,7 +1,10 @@
 import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
 import { getShowMeta } from "../showCatalog.js";
-import { deleteAppUser, updateAppUserName } from "../db/users.js";
+import {
+  deleteAppUser, updateAppUserName,
+  setAppUserAvatar, clearAppUserAvatar, getAppUserAvatar,
+} from "../db/users.js";
 import {
   getFavoriteShows, upsertFavoriteShow, deleteFavoriteShow,
   getFavoriteSongs, upsertFavoriteSong, deleteFavoriteSongByKey,
@@ -270,5 +273,84 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     }
     updateAppUserName(request.user!.id, raw);
     return reply.code(200).send({ name: raw });
+  });
+
+  // ── Avatar (profile picture) ────────────────────────────────────
+  // The client downscales to a small square before upload, so the stored and
+  // served bytes stay tiny (~10–25 KB). We accept the image as base64 JSON to
+  // reuse the existing JSON body parser; the server caps the decoded size as a
+  // safety net against an oversized upload. The public GET URL is versioned by
+  // avatar_updated_at, so it's immutably cacheable and the session's
+  // user.image (token.picture) points at it.
+
+  const ALLOWED_AVATAR_MIME = new Set(["image/webp", "image/jpeg", "image/png"]);
+  const MAX_AVATAR_BYTES = 256 * 1024; // safety net; client targets far smaller
+
+  app.put<{ Body: { mime?: unknown; data?: unknown } }>("/api/user/avatar", {
+    schema: {
+      tags: ["user"],
+      summary: "Set the current account's profile picture",
+      body: {
+        type: "object",
+        required: ["mime", "data"],
+        properties: {
+          mime: { type: "string" },
+          data: { type: "string", description: "base64-encoded image bytes" },
+        },
+      },
+    },
+    preHandler: requireAuth,
+  }, async (request, reply) => {
+    const mime = typeof request.body?.mime === "string" ? request.body.mime : "";
+    const data = typeof request.body?.data === "string" ? request.body.data : "";
+    if (!ALLOWED_AVATAR_MIME.has(mime)) {
+      return reply.code(400).send({ error: "Unsupported image type." });
+    }
+    let bytes: Buffer;
+    try {
+      bytes = Buffer.from(data, "base64");
+    } catch {
+      return reply.code(400).send({ error: "Invalid image data." });
+    }
+    if (bytes.length === 0) {
+      return reply.code(400).send({ error: "Empty image." });
+    }
+    if (bytes.length > MAX_AVATAR_BYTES) {
+      return reply.code(413).send({ error: "Image too large." });
+    }
+    setAppUserAvatar(request.user!.id, bytes, mime);
+    return reply.code(200).send({ image: `/api/user/avatar/${request.user!.id}` });
+  });
+
+  app.delete("/api/user/avatar", {
+    schema: { tags: ["user"], summary: "Remove the current account's profile picture" },
+    preHandler: requireAuth,
+  }, async (request, reply) => {
+    clearAppUserAvatar(request.user!.id);
+    return reply.code(200).send({ ok: true });
+  });
+
+  // Public read — profile pictures are shown next to a name (social), so this
+  // is unauthenticated by account id. Immutable cache: callers append
+  // ?v=<avatar_updated_at>, so a new upload yields a fresh URL.
+  app.get<{ Params: { id: string } }>("/api/user/avatar/:id", {
+    schema: {
+      tags: ["user"],
+      summary: "Fetch an account's profile picture",
+      params: {
+        type: "object",
+        required: ["id"],
+        properties: { id: { type: "string" } },
+      },
+    },
+  }, async (request, reply) => {
+    const avatar = getAppUserAvatar(request.params.id);
+    if (!avatar) {
+      return reply.code(404).send({ error: "No avatar." });
+    }
+    return reply
+      .header("Cache-Control", "public, max-age=31536000, immutable")
+      .type(avatar.mime)
+      .send(avatar.bytes);
   });
 }

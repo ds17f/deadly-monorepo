@@ -193,6 +193,18 @@ function initSchema(db: Database.Database): void {
   if (!accountColNames.has("is_admin")) {
     db.exec(`ALTER TABLE accounts ADD COLUMN is_admin INTEGER NOT NULL DEFAULT 0`);
   }
+  // Custom profile picture: a small (client-downscaled) image stored inline as
+  // a BLOB. avatar_updated_at versions the public GET URL so it's immutably
+  // cacheable. NULL avatar = fall back to the OAuth picture.
+  if (!accountColNames.has("avatar")) {
+    db.exec(`ALTER TABLE accounts ADD COLUMN avatar BLOB`);
+  }
+  if (!accountColNames.has("avatar_mime")) {
+    db.exec(`ALTER TABLE accounts ADD COLUMN avatar_mime TEXT`);
+  }
+  if (!accountColNames.has("avatar_updated_at")) {
+    db.exec(`ALTER TABLE accounts ADD COLUMN avatar_updated_at INTEGER`);
+  }
 
   const cols = db.prepare(
     `SELECT name FROM pragma_table_info('playback_position')`
@@ -250,11 +262,11 @@ export function createAppUser(authUserId: string, email: string, name: string | 
   return id;
 }
 
-export function getAppUserByAuthId(authUserId: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
+export function getAppUserByAuthId(authUserId: string): { id: string; email: string; name: string | null; is_admin: number; avatar_updated_at: number | null } | undefined {
   const db = getUsersDb();
   return db.prepare(
-    `SELECT id, email, name, is_admin FROM accounts WHERE auth_user_id = ? AND deleted_at IS NULL`
-  ).get(authUserId) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
+    `SELECT id, email, name, is_admin, avatar_updated_at FROM accounts WHERE auth_user_id = ? AND deleted_at IS NULL`
+  ).get(authUserId) as { id: string; email: string; name: string | null; is_admin: number; avatar_updated_at: number | null } | undefined;
 }
 
 export function getAppUserById(accountId: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
@@ -290,6 +302,46 @@ export function updateAppUserName(accountId: string, name: string): boolean {
     `UPDATE accounts SET name = ? WHERE id = ? AND deleted_at IS NULL`
   ).run(name, accountId);
   return res.changes > 0;
+}
+
+/**
+ * Store a custom profile picture (already downscaled by the client) inline on
+ * the account. `avatar_updated_at` versions the public GET URL for caching.
+ */
+export function setAppUserAvatar(accountId: string, bytes: Buffer, mime: string): boolean {
+  const db = getUsersDb();
+  const res = db.prepare(
+    `UPDATE accounts SET avatar = ?, avatar_mime = ?, avatar_updated_at = unixepoch() WHERE id = ? AND deleted_at IS NULL`
+  ).run(bytes, mime, accountId);
+  return res.changes > 0;
+}
+
+/** Remove a custom profile picture (reverts to the OAuth picture). */
+export function clearAppUserAvatar(accountId: string): boolean {
+  const db = getUsersDb();
+  const res = db.prepare(
+    `UPDATE accounts SET avatar = NULL, avatar_mime = NULL, avatar_updated_at = NULL WHERE id = ? AND deleted_at IS NULL`
+  ).run(accountId);
+  return res.changes > 0;
+}
+
+/** Read a custom profile picture's bytes + mime, or undefined if none set. */
+export function getAppUserAvatar(accountId: string): { bytes: Buffer; mime: string } | undefined {
+  const db = getUsersDb();
+  const row = db.prepare(
+    `SELECT avatar, avatar_mime FROM accounts WHERE id = ? AND deleted_at IS NULL`
+  ).get(accountId) as { avatar: Buffer | null; avatar_mime: string | null } | undefined;
+  if (!row?.avatar || !row.avatar_mime) return undefined;
+  return { bytes: row.avatar, mime: row.avatar_mime };
+}
+
+/** The OAuth-provided profile image for an auth user, if any. */
+export function getAuthUserImage(authUserId: string): string | null {
+  const db = getUsersDb();
+  const row = db.prepare(
+    `SELECT image FROM auth_users WHERE id = ?`
+  ).get(authUserId) as { image: string | null } | undefined;
+  return row?.image ?? null;
 }
 
 /** Clear an account's tombstone (reactivate on re-sign-in). */

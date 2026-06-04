@@ -93,6 +93,36 @@ export function updateDisplayName(name: string): Promise<{ name: string }> {
   });
 }
 
+// Uploads a profile picture. The blob is already downscaled client-side (see
+// downscaleToAvatar), so it's tiny — we base64 it into a JSON body to reuse the
+// JSON parser. Returns the (unversioned) avatar URL; the session's user.image
+// is the source of truth and carries the cache-busting ?v= once refreshed.
+export async function uploadAvatar(blob: Blob): Promise<{ image: string }> {
+  const data = await blobToBase64(blob);
+  return apiFetch<{ image: string }>("/avatar", {
+    method: "PUT",
+    body: JSON.stringify({ mime: blob.type, data }),
+  });
+}
+
+// Removes the custom profile picture (reverts to the OAuth picture).
+export function deleteAvatar(): Promise<void> {
+  return apiFetch("/avatar", { method: "DELETE" });
+}
+
+function blobToBase64(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(reader.error);
+    reader.onload = () => {
+      // reader.result is a data URL: "data:<mime>;base64,<data>"
+      const result = reader.result as string;
+      resolve(result.slice(result.indexOf(",") + 1));
+    };
+    reader.readAsDataURL(blob);
+  });
+}
+
 // Returns the user's reviews, enriched with display metadata
 // (venue/city/date) from the API show catalog.
 export function fetchReviews(): Promise<ShowReview[]> {

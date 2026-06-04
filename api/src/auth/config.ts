@@ -4,7 +4,7 @@ import Google from "@auth/core/providers/google";
 import Apple from "@auth/core/providers/apple";
 import Credentials from "@auth/core/providers/credentials";
 import { SqliteAdapter } from "./adapter.js";
-import { getAppUserByAuthId, getUsersDb } from "../db/users.js";
+import { getAppUserByAuthId, getAuthUserImage, getUsersDb } from "../db/users.js";
 import { generateAppleSecret } from "./apple-secret.js";
 import { isDev } from "../env.js";
 
@@ -85,6 +85,15 @@ export const authConfig: AuthConfig = {
           // name (PATCH /api/user/account). Re-read it each refresh so an edit
           // shows up without re-login; keep the OAuth name if it's unset.
           if (appUser.name) token.name = appUser.name;
+          // A custom uploaded avatar (PUT /api/user/avatar) overrides the OAuth
+          // picture. The URL is versioned by avatar_updated_at so a new upload
+          // busts the immutable cache. When unset, fall back to the OAuth
+          // picture — set explicitly (not left as-is) so removing a custom
+          // avatar restores it instead of stranding a stale custom URL on a
+          // long-lived token.
+          token.picture = appUser.avatar_updated_at
+            ? `/api/user/avatar/${appUser.id}?v=${appUser.avatar_updated_at}`
+            : getAuthUserImage(token.authUserId as string);
         }
       }
       return token;
