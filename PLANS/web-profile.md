@@ -233,14 +233,19 @@ Realistic web v1 mirrors a subset of iOS's
   marker was a one-shot read, so a review arriving via sync didn't flip it.
   Now observed live — Android `getShowReviewFlow`, iOS `observeShowReview`.
 
-### 9. Sorting / filtering controls on `/me` — NEXT (not started)
-- Add controls to the `/me` library sub-sections (Recent / Favorites /
-  Reviews) for sorting and the like — e.g. sort by date / recently
-  added / rating, possibly filter. Lists are currently fixed-order
-  (Favorites: pinned-then-recent; Recent: newest; Reviews: newest-edited).
-- Scope TBD next session: which sorts per tab, whether it's client-side
-  over the already-fetched list (simplest — the lists are small) or needs
-  server support, and a shared control component vs. per-tab.
+### 9. Sorting / filtering controls on `/me` — LANDED (811069fd)
+- Grew past plain sort/filter into a shared `<LibraryView>` backing all
+  three tabs (Recent / Favorites / Reviews): hierarchical decade→year
+  cascade filter, sort, and a list/grid toggle.
+- Per-row actions ride along: list rows show inline icon buttons (Share,
+  Pin/Unpin, Remove); the grid keeps the compact ⋯ overflow menu. Recent
+  rows are Share-only.
+- Resolved the TBD scope: **client-side** over the already-fetched lists
+  (they're small), one **shared control component** rather than per-tab,
+  no server support needed. `LibraryRail` was refactored onto the now-
+  shared `DecadeCascadeFilter` so the rail and the views filter alike.
+- Related share work shipped alongside: a QR / copy / native-share path
+  on both `/me` rows and the show hero (7c514e1f, f180f217).
 
 ### 7. Anonymous event tracking on `/me` surfaces
 - Cheap, no PII, no cookie banner. Events worth tracking:
