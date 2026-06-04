@@ -5,40 +5,27 @@ import ShowQRCode from "@/components/ShowQRCode";
 import { buildShareUrl, copyToClipboard } from "@/lib/share";
 
 /**
- * Share modal for a show. Two modes, driven by the `mode` prop so the hero can
- * surface each as its own button:
- *   - "share" (default): copy link + the native share sheet where supported
- *     (navigator.share — great on mobile).
- *   - "qr": the scan-to-phone QR code (the desktop→phone path) + copy link.
- * Reuses ShowQRCode and getShareBaseUrl.
+ * Scan-to-phone QR modal for a show: the QR code (the desktop→phone path) plus
+ * a copy-link fallback. Plain link sharing is handled inline by the Share
+ * buttons via useShareLink — this sheet is specifically the scannable code.
  */
-export default function ShareSheet({
+export default function QrSheet({
   open,
   onClose,
   showId,
   recordingId,
-  mode = "share",
-  title,
+  title = "Scan to open",
   subtitle,
 }: {
   open: boolean;
   onClose: () => void;
   showId: string;
   recordingId?: string | null;
-  mode?: "share" | "qr";
   title?: string;
   subtitle?: string;
 }) {
-  const isQr = mode === "qr";
-  const heading = title ?? (isQr ? "Scan to open" : "Share show");
   const [copied, setCopied] = useState(false);
-  const [canNativeShare, setCanNativeShare] = useState(false);
-
   const url = buildShareUrl(showId, recordingId);
-
-  useEffect(() => {
-    setCanNativeShare(typeof navigator !== "undefined" && !!navigator.share);
-  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -62,14 +49,6 @@ export default function ShareSheet({
     }
   }
 
-  async function nativeShare() {
-    try {
-      await navigator.share({ title: subtitle ?? "The Deadly", url });
-    } catch {
-      // User cancelled or share failed — no-op.
-    }
-  }
-
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4"
@@ -83,7 +62,7 @@ export default function ShareSheet({
       >
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <h2 className="text-base font-bold text-white">{heading}</h2>
+            <h2 className="text-base font-bold text-white">{title}</h2>
             {subtitle && (
               <p className="truncate text-sm text-white/50">{subtitle}</p>
             )}
@@ -97,26 +76,14 @@ export default function ShareSheet({
           </button>
         </div>
 
-        {isQr && (
-          <ShowQRCode showId={showId} recordingId={recordingId ?? undefined} />
-        )}
+        <ShowQRCode showId={showId} recordingId={recordingId ?? undefined} />
 
-        <div className="mt-4 flex gap-2">
-          <button
-            onClick={copy}
-            className="flex-1 rounded-lg bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/20"
-          >
-            {copied ? "Copied!" : "Copy link"}
-          </button>
-          {!isQr && canNativeShare && (
-            <button
-              onClick={nativeShare}
-              className="flex-1 rounded-lg bg-deadly-accent px-4 py-2.5 text-sm font-bold text-white transition hover:opacity-90"
-            >
-              Share…
-            </button>
-          )}
-        </div>
+        <button
+          onClick={copy}
+          className="mt-4 w-full rounded-lg bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/20"
+        >
+          {copied ? "Copied!" : "Copy link"}
+        </button>
       </div>
     </div>
   );

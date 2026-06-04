@@ -3,6 +3,7 @@ import AuthProvider from "@/components/auth/AuthProvider";
 import UserDataProvider from "@/components/userdata/UserDataProvider";
 import ConnectProvider from "@/components/connect/ConnectProvider";
 import PlayerProvider from "@/components/player/PlayerProvider";
+import ToastProvider from "@/components/ui/ToastProvider";
 import AppShell from "@/components/shell/AppShell";
 import "./globals.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-deadly-bg text-white antialiased">
+        <ToastProvider>
         <AuthProvider>
         <UserDataProvider>
         <ConnectProvider>
@@ -33,6 +35,7 @@ export default function RootLayout({
         </ConnectProvider>
         </UserDataProvider>
         </AuthProvider>
+        </ToastProvider>
       </body>
     </html>
   );

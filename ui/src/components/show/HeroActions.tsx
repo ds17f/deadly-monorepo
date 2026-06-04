@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { useUserData } from "@/contexts/UserDataContext";
 import { usePlayer } from "@/contexts/PlayerContext";
-import ShareButton from "@/components/share/ShareButton";
-import { buildShareUrl, copyToClipboard } from "@/lib/share";
+import QrButton from "@/components/share/QrButton";
+import { useShareLink } from "@/components/share/useShareLink";
 import type { Recording } from "@/types/recording";
 import type { AiShowReview } from "@/types/show";
 import type { ShowReview } from "@/types/userdata";
@@ -54,14 +54,8 @@ export default function HeroActions({
     existing?.playingQuality ?? 0,
   );
 
-  // Transient confirmation for the Share (copy-link) action.
-  const [toast, setToast] = useState<string | null>(null);
-
-  async function handleShare() {
-    const ok = await copyToClipboard(buildShareUrl(showId, pendingRecordingId));
-    setToast(ok ? "Link copied to clipboard" : "Couldn't copy — try again");
-    setTimeout(() => setToast(null), 2000);
-  }
+  // Share copies the public link and flashes an app-wide toast.
+  const shareLink = useShareLink();
 
   // Register this show as the viewed show so the player knows what to load.
   useEffect(() => {
@@ -141,8 +135,7 @@ export default function HeroActions({
           {existing ? "Your review" : "Review"}
         </PillButton>
 
-        <ShareButton
-          mode="qr"
+        <QrButton
           showId={showId}
           recordingId={pendingRecordingId}
           subtitle={venue ? `${date} · ${venue}` : date}
@@ -153,9 +146,9 @@ export default function HeroActions({
               QR
             </PillButton>
           )}
-        </ShareButton>
+        </QrButton>
 
-        <PillButton onClick={handleShare}>
+        <PillButton onClick={() => shareLink(showId, pendingRecordingId)}>
           <Icon name="share" />
           Share
         </PillButton>
@@ -210,14 +203,6 @@ export default function HeroActions({
                 Cancel
               </button>
             </div>
-          </div>
-        </div>
-      )}
-
-      {toast && (
-        <div className="pointer-events-none fixed inset-x-0 bottom-24 z-[120] flex justify-center px-4">
-          <div className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-black shadow-lg">
-            {toast}
           </div>
         </div>
       )}

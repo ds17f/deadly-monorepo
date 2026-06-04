@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import ShareButton from "@/components/share/ShareButton";
+import QrButton from "@/components/share/QrButton";
+import { useShareLink } from "@/components/share/useShareLink";
 import ConfirmDialog from "@/components/ui/ConfirmDialog";
 
 export interface RemoveConfig {
@@ -12,9 +13,10 @@ export interface RemoveConfig {
 }
 
 /**
- * A "⋯" overflow menu for one library row/card: Share, optional Pin/Unpin
- * (favorites), and an optional destructive Remove gated by a ConfirmDialog.
- * Self-contained — owns its dropdown, the ShareSheet, and the confirm modal.
+ * A "⋯" overflow menu for one library row/card: Show QR code, Copy link,
+ * optional Pin/Unpin (favorites), and an optional destructive Remove gated by
+ * a ConfirmDialog. Self-contained — owns its dropdown, the QrSheet, and the
+ * confirm modal; Copy link copies + toasts via useShareLink.
  */
 export default function RowActionsMenu({
   showId,
@@ -36,6 +38,7 @@ export default function RowActionsMenu({
   const [open, setOpen] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const shareLink = useShareLink();
 
   useEffect(() => {
     if (!open) return;
@@ -65,23 +68,33 @@ export default function RowActionsMenu({
 
       {open && (
         <div className="absolute right-0 top-full z-50 mt-1 w-48 rounded-lg border border-white/10 bg-deadly-surface p-1.5 shadow-xl">
-          <ShareButton
+          <QrButton
             showId={showId}
             recordingId={recordingId}
             subtitle={shareSubtitle}
           >
-            {(openShare) => (
+            {(openQr) => (
               <button
                 onClick={() => {
                   setOpen(false);
-                  openShare();
+                  openQr();
                 }}
                 className={itemClass}
               >
-                Share…
+                Show QR code
               </button>
             )}
-          </ShareButton>
+          </QrButton>
+
+          <button
+            onClick={() => {
+              setOpen(false);
+              shareLink(showId, recordingId);
+            }}
+            className={itemClass}
+          >
+            Copy link
+          </button>
 
           {canPin && (
             <button
