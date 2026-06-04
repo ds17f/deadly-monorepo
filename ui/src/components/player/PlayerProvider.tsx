@@ -5,6 +5,7 @@ import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
 import { fetchArchiveTracks } from "@/lib/archive";
 import * as analytics from "@/lib/analytics";
 import { updatePlaybackPosition, addRecentShow } from "@/lib/userDataApi";
+import { notifyUserDataChanged } from "@/lib/userDataEvents";
 import { useAuth } from "@/contexts/AuthContext";
 import { rememberArt, lookupArt, rememberReview, lookupReview } from "@/lib/artCache";
 import { PlayerContext } from "@/contexts/PlayerContext";
@@ -445,7 +446,10 @@ export default function PlayerProvider({
         // player previously never wrote it.
         if (userIdRef.current && lastRecentShowRef.current !== info.showId) {
           lastRecentShowRef.current = info.showId;
-          addRecentShow(info.showId).catch(() => {});
+          // Notify the /me recent surfaces so they refresh without a reload.
+          addRecentShow(info.showId)
+            .then(() => notifyUserDataChanged())
+            .catch(() => {});
         }
       }, 1000);
     }

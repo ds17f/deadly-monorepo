@@ -13,7 +13,7 @@
  * Static-export safe: client component, hydrates from the API after load.
  */
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 import {
@@ -21,6 +21,7 @@ import {
   fetchRecentShows,
   fetchReviews,
 } from "@/lib/userDataApi";
+import { useUserDataRefresh } from "@/lib/userDataEvents";
 import type { FavoriteShow, RecentShow, ShowReview } from "@/types/userdata";
 import { formatShowDate, formatLocation } from "@/components/show/showFormat";
 import DecadeCascadeFilter, {
@@ -182,28 +183,26 @@ export default function LibraryRail() {
   const [items, setItems] = useState<Item[] | null>(null);
   const [error, setError] = useState(false);
 
-  useEffect(() => {
+  const load = useCallback(() => {
     if (!user?.id) {
       setItems(null);
       return;
     }
-    let cancelled = false;
     setError(false);
     Promise.all([
       fetchFavoriteShows().catch(() => [] as FavoriteShow[]),
       fetchRecentShows().catch(() => [] as RecentShow[]),
       fetchReviews().catch(() => [] as ShowReview[]),
     ])
-      .then(([f, r, rv]) => {
-        if (!cancelled) setItems(buildItems(f, r, rv));
-      })
-      .catch(() => {
-        if (!cancelled) setError(true);
-      });
-    return () => {
-      cancelled = true;
-    };
+      .then(([f, r, rv]) => setItems(buildItems(f, r, rv)))
+      .catch(() => setError(true));
   }, [user?.id]);
+
+  useEffect(() => {
+    load();
+  }, [load]);
+
+  useUserDataRefresh(load);
 
   const years = useMemo(() => selectedYears(path), [path]);
 
