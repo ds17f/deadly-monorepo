@@ -136,8 +136,12 @@ Realistic web v1 mirrors a subset of iOS's
   see the show-metadata-enrichment decision above.
 - Empty state: "Play something on any device to fill this in."
 - First real API client wiring — establishes the pattern for Favorites.
-- **Remaining**: enriched display (venue/city) once the API has a
-  show-metadata source; optional inline play.
+- **Web now records recents** (`649392fd`): playing a show on the website
+  never called `addRecentShow` (it existed but had no caller — mobile records
+  via `recordRecentPlay`, web never did), so `/me/recent` only showed phone
+  plays. The player now records a recent on the playback dwell-commit (same
+  confirmed-play signal as `playback_start`), once per show session, signed-in
+  only. Enriched venue/city display already landed with the show-catalog work.
 
 ### 3. Favorites — shows — LANDED
 - **Toggle already existed**: `FavoriteButton` on `/shows/[id]` uses
@@ -211,6 +215,21 @@ leans on the player:
   a track while parked claims the session and starts there. The rail is chrome:
   when idle it fades **and** collapses its width so the ambient art re-centers.
 - **Escape** collapses the expanded player.
+
+### Live list refresh — LANDED (56996973, ed64a02a)
+The `/me` lists and the library rail fetched once on mount, so a play or a
+favorite/review change didn't move them until a manual reload — unlike
+mobile's reactive lists. Added a lightweight refresh layer
+(`ui/src/lib/userDataEvents.ts`): `notifyUserDataChanged()` +
+`useUserDataRefresh(load)`, which re-fetches on a userdata-changed event, on
+focus, and on bfcache restore (the WS-push stand-in from the
+`project-userdata-realtime-deferred` memory — not real-time push).
+- The player fires the event after recording a recent; `UserDataProvider`
+  fires it after each favorite/review write **resolves** (not synchronously —
+  a synchronous fire could refetch before the async DELETE/PUT landed and
+  visually revert an optimistic remove).
+- `RecentTab`, `FavoritesTab` (shows), `FavoriteSongsList`, `ReviewsTab`, and
+  `LibraryRail` subscribe via the hook.
 
 ### 5. Personalized signed-in home at `/` — REVERTED, NEEDS DESIGN
 - A first cut (`PersonalizedHome` strip above the catalog: recents +
