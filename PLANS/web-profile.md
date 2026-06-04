@@ -291,42 +291,57 @@ leans on the player:
 - Related share work shipped alongside: a QR / copy / native-share path
   on both `/me` rows and the show hero (7c514e1f, f180f217).
 
-### 7. Anonymous event tracking on `/me` surfaces — IN PROGRESS (design)
-- Cheap, no PII, no cookie banner. Answer the question that started this
-  whole effort: "is anyone using this?" Without it, we ship blind.
-- **The server pipeline already exists and already supports web.**
-  `POST /api/analytics` (`api/src/routes/analytics.ts`) ingests batched
-  `{event, ts, iid, sid, platform, app_version, props}`;
-  `VALID_PLATFORMS` is `{ios, android, web}`. So issue 7 is mostly a *web
-  client* + registering the `/me` events — not new server analytics.
-- **Web is its own source via `platform: "web"`.** This is the platform
-  dimension the admin dashboard already splits on (DAU/installs/growth by
-  platform). We do **not** reuse mobile's `iid`; the web mints its own
-  localStorage anonymous id, and `app_version` carries the web build id.
-  Do not try to reconcile web ids with mobile IIDs.
-- **Key handling (the one real design question).** Mobile sends a secret
-  `X-Analytics-Key`; a browser bundle can't keep a secret. Plan: a
-  dedicated `handle /api/analytics` block in the Caddyfile injects the key
-  server-side (`header_up X-Analytics-Key {$ANALYTICS_API_KEY}`), so the
-  browser never sees it and the API keeps requiring it. Rate-limiting +
-  same-origin remain the spam gate (unchanged).
-- **Events.** Lean on the existing generic `feature_use`
-  (`feature`/`category`/`target_*` props, already bucketed by the summary)
-  plus `app_open` for the visit, rather than inventing bespoke event types:
-  - `app_open` on first `/me` load (platform=web) — feeds DAU/installs.
-  - `feature_use { feature: "me_visited" | "favorites_viewed" |
-    "recent_viewed" | "reviews_viewed", category: "navigation" }`.
-  - `feature_use { feature: "favorite_added", category: "action",
-    target_type: "show"|"song", target_id }` on a web favorite toggle.
-  - (later) `signed_in_home_shown` once issue 5 lands.
-  Any genuinely new event names must also be registered in
-  `EVENT_SCHEMAS` (`api/src/db/analytics.ts`) and the watershed table with
-  a `web:` reliable-from version.
-- **Client shape.** Small `ui/src/lib/analytics.ts`: localStorage `iid`
-  (+ per-tab `sid`), a `track(event, props)` that buffers and flushes a
-  batch to `POST /api/analytics` on a timer / `visibilitychange`. Fire it
-  from the `/me` layout + tabs and the favorite toggles. No cookie banner
-  (anonymous, no PII).
+### 7. Web analytics — count web listening + feed trending — LANDED
+**Reframed (2026-06-04):** the point isn't `/me` page-view counting — it's
+that **people listening to shows on the website are real users and their
+listens/favorites should count**, including in trending. A web-only listener
+is real even if they're not an app "install".
+
+- **First-party, not a vendor.** Trending (`/api/popular`) and the dashboard
+  read our own `analytics_events`. GA/Plausible can't feed the trending
+  algorithm or (later) Connect — they'd be a parallel silo. So we reuse the
+  existing mobile pipeline. (Plausible-for-site-traffic stays a possible
+  *separate* later thing, not this.)
+- **The server pipeline already supported web.** `POST /api/analytics`
+  ingests batched `{event, ts, iid, sid, platform, app_version, props}` and
+  `VALID_PLATFORMS` already includes `web`. No server analytics changes were
+  needed — the events used (`playback_start/_end`, `feature_use`, `app_open`,
+  `search`) all already exist in `EVENT_SCHEMAS`.
+- **Web is its own source via `platform: "web"`.** The dashboard already
+  splits DAU/installs/growth by platform; web now shows up there. The web
+  mints its own localStorage `iid` (a web-only listener = a real, distinct
+  user, not an install); `app_version` = the data version. No reconciliation
+  with mobile IIDs.
+- **Key injection (the secret problem).** A browser bundle can't hold the
+  `X-Analytics-Key`, so Caddy injects it: a `handle /api/analytics` block
+  (before `/api/*`) adds `header_up X-Analytics-Key {$ANALYTICS_API_KEY}` in
+  both `Caddyfile` and `Caddyfile.dev`; `ANALYTICS_API_KEY` added to the caddy
+  service env. The client sends no key; rate-limit + same-origin stay the gate.
+- **Client** (`ui/src/lib/analytics.ts`): mirrors the mobile `AnalyticsService`
+  — localStorage `iid` + per-tab `sid`, buffer + flush on a 30s timer /
+  `visibilitychange` / `pagehide` (sendBeacon), fire-and-forget, opt-out via
+  a localStorage flag.
+- **Instrumentation:**
+  - `PlayerProvider` emits `playback_start` (the event trending reads) and
+    `playback_end` with a **1s dwell** mirroring mobile, so queue-load churn
+    and rapid skips don't fire phantom starts. `playback_end` carries
+    listened/duration + reason (completed/skipped/stopped), driving completion
+    rate. `source` is attributed (browse / favorites / track_list /
+    auto_advance).
+  - `UserDataProvider` emits `feature_use { add_favorite|remove_favorite }`
+    for shows (`target_type:"show"`) and songs (`target_type:"recording_track"`)
+    — the **other** trending input.
+  - `AppShell` fires one `app_open` per page-load session; `SearchBox` emits
+    `search` on result selection.
+- **Verified:** web events land in `analytics_events` as `platform:"web"`
+  (platform split now reads web alongside ios/android); the Caddy key
+  injection makes `/api/analytics` accept keyless from the browser while the
+  API still requires the key.
+- **Follow-ups:** (1) add a `web:` column to the analytics watershed
+  (`analytics-watershed.ts` is iOS/Android-only) so the admin "reliable-from"
+  view covers web. (2) optional `playback_error`/`playback_stall` + search
+  zero-result/abandon for fuller parity. (3) a visible opt-out toggle (the
+  flag exists; no UI yet).
 
 ## Out of scope (explicit non-goals)
 
