@@ -278,6 +278,41 @@ focus, and on bfcache restore (the WS-push stand-in from the
 - Kept from the reverted attempt: shared card components in `components/show/`
   (used by `/me` and the rail).
 
+### 5b. Installable PWA (mobile-web) — LANDED
+Came out of the issue-5 mobile-web discussion: rather than rebuild a home
+strip, make the site **installable** so a mobile user can add it to their home
+screen and run it full-screen — closer to an app than a strip would get us. The
+concrete driver is a real user on an **iPhone mini, iOS 13**, plus Android.
+- **Manifest** (`ui/src/app/manifest.ts`, Next metadata route → static
+  `/manifest.webmanifest`; needs `dynamic = "force-static"` under
+  `output: export`): name/short_name, `display: standalone`, `start_url: "/"`,
+  theme+background `#121212` (= `--color-deadly-bg`), 192 + 512 icons
+  (`public/icon-{192,512}.png`, distilled from the existing 512 `app/icon.png`).
+- **iOS standalone** via `metadata.appleWebApp` (emits
+  `apple-mobile-web-app-{title,status-bar-style}`) **plus an explicit
+  `apple-mobile-web-app-capable: yes`** in `metadata.other` — Next 16 only emits
+  the standardized `mobile-web-app-capable`, which **iOS 13 ignores**, so the
+  legacy apple-prefixed tag is what actually makes his phone launch full-screen.
+  `viewport.themeColor` tints the chrome.
+- **Android installability** needs a registered service worker with a fetch
+  handler: `public/sw.js` is a deliberate **pass-through (no caching)** —
+  installability without stale-asset risk; this is a streaming app so offline
+  has little value. Registered client-side by `ServiceWorkerRegistrar` (no-op
+  where SW is unsupported, e.g. iOS 13).
+- **Two known iOS-13 caveats (set expectations, not bugs to fix):** (1)
+  **MediaSession is iOS 15+**, so the lock-screen *metadata* (title/artwork) the
+  player already wires won't light up — he gets iOS's generic transport controls
+  at best; the code safely no-ops. (2) **Standalone PWAs have historically
+  unreliable *background audio* on iOS** — added-to-home-screen may actually
+  suspend audio on screen-lock where a plain Safari tab keeps playing. So the
+  test he should run is screen-lock playback **both ways**; the Safari tab may
+  be the better player. Android Chrome honors MediaSession + background audio
+  properly, so it's the stronger target.
+- **Verified**: build emits `/manifest.webmanifest` + both capable tags; all
+  assets (`manifest`, `sw.js`, both icons) serve 200 with correct content types
+  through the deployed Caddy stack. Real-device standalone/audio behavior is
+  his to test.
+
 ### 6. Settings page — LANDED
 - `/me/settings` (`SettingsTab`): Account section (display name + email,
   read-only from session) with **Sign out**, and a **Delete account**
