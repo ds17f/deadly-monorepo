@@ -82,7 +82,13 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     schema: { tags: ["user"], summary: "List favorite songs" },
     preHandler: requireAuth,
   }, async (request) => {
-    return getFavoriteSongs(request.user!.id);
+    // Enrich with show display metadata (date/venue/city) from the catalog so
+    // the web profile can render each song under its show without a second
+    // lookup. Additive — mobile consumers ignore the extra fields.
+    return getFavoriteSongs(request.user!.id).map((s) => {
+      const meta = getShowMeta(s.showId);
+      return meta ? { ...s, ...meta } : s;
+    });
   });
 
   app.put("/api/user/favorites/songs", {

@@ -107,6 +107,8 @@ export default function QueuePanel({ onClose }: QueuePanelProps) {
             currentTrackIndex={currentTrackIndex}
             status={status}
             onPlayTrack={playTrack}
+            showId={activeShow.showId}
+            recordingId={selectedRecording}
           />
         </div>
       </div>

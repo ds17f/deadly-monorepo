@@ -3,8 +3,8 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { UserDataContext } from "@/contexts/UserDataContext";
-import { fetchUserSync, updateFavoriteShow, deleteFavoriteShow, updateReview, deleteReview } from "@/lib/userDataApi";
-import type { UserDataBackupV3, FavoriteShow, ShowReview } from "@/types/userdata";
+import { fetchUserSync, updateFavoriteShow, deleteFavoriteShow, updateFavoriteSong, deleteFavoriteSong, updateReview, deleteReview } from "@/lib/userDataApi";
+import type { UserDataBackupV3, FavoriteShow, FavoriteTrack, ShowReview } from "@/types/userdata";
 
 const STORAGE_KEY = "deadly_userdata";
 
@@ -162,6 +162,44 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
     if (user?.id) updateFavoriteShow(show.showId, show).catch(() => {});
   }, [user?.id, updateData]);
 
+  const isFavoriteTrack = useCallback((showId: string, trackTitle: string): boolean => {
+    return data?.favorites.tracks.some(
+      (t) => t.showId === showId && t.trackTitle === trackTitle,
+    ) ?? false;
+  }, [data]);
+
+  // Toggle a favorite song by its (showId, trackTitle) identity — optimistic
+  // local update plus the matching PUT/DELETE, mirroring toggleFavorite.
+  const toggleFavoriteTrack = useCallback((track: FavoriteTrack) => {
+    const { showId, trackTitle } = track;
+    const isCurrentlyFav = data?.favorites.tracks.some(
+      (t) => t.showId === showId && t.trackTitle === trackTitle,
+    ) ?? false;
+
+    if (isCurrentlyFav) {
+      updateData((prev) => ({
+        ...prev,
+        favorites: {
+          ...prev.favorites,
+          tracks: prev.favorites.tracks.filter(
+            (t) => !(t.showId === showId && t.trackTitle === trackTitle),
+          ),
+        },
+      }));
+      if (user?.id) deleteFavoriteSong(showId, trackTitle).catch(() => {});
+    } else {
+      const fav: FavoriteTrack = { ...track, updatedAt: Math.floor(Date.now() / 1000) };
+      updateData((prev) => ({
+        ...prev,
+        favorites: {
+          ...prev.favorites,
+          tracks: [fav, ...prev.favorites.tracks],
+        },
+      }));
+      if (user?.id) updateFavoriteSong(fav).catch(() => {});
+    }
+  }, [data, user?.id, updateData]);
+
   const saveReview = useCallback((review: ShowReview) => {
     updateData((prev) => {
       const reviews = prev.reviews.filter((r) => r.showId !== review.showId);
@@ -190,7 +228,9 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
     upsertFavorite,
     saveReview,
     removeReview,
-  }), [data, isLoading, isFavorite, getReview, toggleFavorite, upsertFavorite, saveReview, removeReview]);
+    isFavoriteTrack,
+    toggleFavoriteTrack,
+  }), [data, isLoading, isFavorite, getReview, toggleFavorite, upsertFavorite, saveReview, removeReview, isFavoriteTrack, toggleFavoriteTrack]);
 
   return (
     <UserDataContext.Provider value={value}>

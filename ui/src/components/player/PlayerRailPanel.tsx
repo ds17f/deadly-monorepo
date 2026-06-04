@@ -163,6 +163,8 @@ export default function PlayerRailPanel({
           currentTrackIndex={currentTrackIndex}
           status={status}
           onPlayTrack={playTrack}
+          showId={activeShow.showId}
+          recordingId={selectedRecording}
         />
       </div>
     </section>

@@ -163,10 +163,27 @@ Realistic web v1 mirrors a subset of iOS's
 - Lives at `/me/favorites` (not `/me/favorites/shows`); favorite *songs*
   (issue 4) can become a sub-view there later.
 
-### 4. Favorites — songs
-- Same pattern as #3 applied to track rows in the player's track list
-  and/or ShowDetail.
-- `GET /api/user/favorites/songs`, `PUT`/`DELETE`.
+### 4. Favorites — songs — LANDED
+- **Toggle** lives on track rows in the player's `TrackList` (used by the
+  rail panel, the queue popover, and the fullscreen player — all three call
+  sites pass `showId` + `selectedRecording`). A per-row heart appears on
+  hover/focus and stays filled when favorited, so dense track lists don't
+  look busy — resolves the open question below, mirroring the iOS passive
+  indicator + player toggle. Identity is the `(showId, trackTitle)` tuple.
+- **Context plumbing**: `UserDataContext` gains `isFavoriteTrack(showId,
+  trackTitle)` + `toggleFavoriteTrack(track)`, implemented in
+  `UserDataProvider` against `data.favorites.tracks` (optimistic local
+  update + `PUT`/`DELETE`, same shape as `toggleFavorite`).
+- **List** added as a **Shows / Songs segmented toggle** inside
+  `/me/favorites` (`FavoritesTab` → `FavoriteSongsList`), per the issue-3
+  note ("favorite songs can become a sub-view there"). Songs render as a
+  flat list — track title (primary), show date · venue (secondary) — each
+  row linking to `/shows/[id]`, with an inline unfavorite. Read-only beyond
+  remove, like the shows list.
+- **API**: `GET /api/user/favorites/songs` now enriched with `getShowMeta`
+  (date/venue/city/image) like recent/favorites/reviews; `PUT` /
+  `DELETE ?showId=&trackTitle=` unchanged. Round-trip verified against real
+  synced data.
 
 ### 5. Personalized signed-in home at `/` — REVERTED, NEEDS DESIGN
 - A first cut (`PersonalizedHome` strip above the catalog: recents +
@@ -273,9 +290,10 @@ Realistic web v1 mirrors a subset of iOS's
   option (b) + a version floor — see issue 6b. Shipped with the
   `SyncVersionBanner` explaining favorites/recents/reviews sync from the
   app and the minimum version required.
-- **Favorites toggle UI on track rows.** Per-track heart icons can get
-  visually busy. Look at iOS for the right pattern before designing the
-  web one from scratch.
+- ~~**Favorites toggle UI on track rows.**~~ **RESOLVED** (issue 4). The
+  per-row heart is hidden until row hover/focus and only stays visible when
+  the track is favorited, so it doesn't clutter dense lists — the web take
+  on iOS's passive indicator + player-level toggle.
 
 ## How to track progress
 

@@ -1050,7 +1050,7 @@ export default function HeaderPlayer() {
           {isActive && (
             <div className="mt-4">
               <h4 className="mb-2 text-sm font-bold text-deadly-title">Tracks</h4>
-              <TrackList tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={playTrack} />
+              <TrackList tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={playTrack} showId={activeShow?.showId} recordingId={selectedRecording} />
             </div>
           )}
         </div>

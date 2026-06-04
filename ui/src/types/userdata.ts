@@ -25,6 +25,16 @@ export interface FavoriteTrack {
   trackTitle: string;
   trackNumber?: number | null;
   recordingId?: string | null;
+  updatedAt?: number;
+  // Display metadata merged in by the API show catalog (GET
+  // /api/user/favorites/songs). Absent for shows not in the index.
+  date?: string | null;
+  venue?: string | null;
+  city?: string | null;
+  state?: string | null;
+  country?: string | null;
+  image?: string | null;
+  bestRecordingId?: string | null;
 }
 
 export interface ShowReview {

@@ -1,6 +1,7 @@
 import type {
   UserDataBackupV3,
   FavoriteShow,
+  FavoriteTrack,
   ShowReview,
   PlaybackPosition,
   UserSettings,
@@ -54,6 +55,26 @@ export function deleteFavoriteShow(showId: string): Promise<void> {
 // (venue/city/date) from the API show catalog.
 export function fetchFavoriteShows(): Promise<FavoriteShow[]> {
   return apiFetch<FavoriteShow[]>("/favorites/shows");
+}
+
+// Returns the user's favorite songs, enriched with the show's display
+// metadata (venue/city/date) from the API show catalog.
+export function fetchFavoriteSongs(): Promise<FavoriteTrack[]> {
+  return apiFetch<FavoriteTrack[]>("/favorites/songs");
+}
+
+// Identity is the (showId, trackTitle) tuple — matching mobile and the
+// server's natural key. The PUT body carries the full record.
+export function updateFavoriteSong(track: FavoriteTrack): Promise<void> {
+  return apiFetch("/favorites/songs", {
+    method: "PUT",
+    body: JSON.stringify(track),
+  });
+}
+
+export function deleteFavoriteSong(showId: string, trackTitle: string): Promise<void> {
+  const qs = new URLSearchParams({ showId, trackTitle });
+  return apiFetch(`/favorites/songs?${qs}`, { method: "DELETE" });
 }
 
 // Soft-deletes (tombstones) the current account. Caller should sign out
