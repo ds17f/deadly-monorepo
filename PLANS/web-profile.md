@@ -115,9 +115,12 @@ Realistic web v1 mirrors a subset of iOS's
 - Profile landing content: profile picture upload, editable screen name,
   and social — friends/contacts (add/remove) and listening-privacy
   controls (who can see / hear what you're playing).
-- None of this has a backend yet. v1 = honest "coming soon" placeholders
-  showing the real session avatar + name. The social domain (friend
-  graph, presence, privacy model) is its own design + API effort.
+- **Editable display name now real** (the rest still placeholders). The
+  "screen name" piece shipped as the Profile **Display name** card (see issue
+  6 — `PATCH /api/user/account`). Profile picture upload + the social surfaces
+  (friends, listening privacy) remain "coming soon" — no backend yet. The
+  social domain (friend graph, presence, privacy model) is its own design +
+  API effort.
 - **"See" before "hear".** The privacy control splits in two: *seeing*
   what a friend is/was playing (friends + basic activity) can ship on
   plain request/response and comes first. *Hearing* — live, real-time
@@ -266,9 +269,11 @@ focus, and on bfcache restore (the WS-push stand-in from the
 - **Editable display name — LANDED.** `PATCH /api/user/account { name }`
   (1–60 chars) writes `accounts.name`; the JWT callback re-reads it into the
   session each refresh so the edit persists without re-login (falls back to the
-  OAuth name when unset). `SettingsTab` has an inline edit (Save/Cancel,
-  Enter/Escape, validation); `AuthContext.updateName` reflects it in the header
-  immediately. `accounts.name` is the source of truth for the displayed name.
+  OAuth name when unset). `accounts.name` is the source of truth for the shown
+  name; `AuthContext.updateName` reflects an edit in the header immediately.
+  The editor lives on the **Profile** tab (`/me`), not Settings — it's
+  identity (see issue 1b); Settings keeps Email + Sign out + Delete and links
+  to Profile for name edits.
 - **Follow-ups:** (1) a TTL/cron purge of long-tombstoned accounts and
   their orphaned user-data (hard delete). (2) the dev (credentials) sign-in
   path doesn't run the adapter's `linkAccount`, so dev reactivation isn't
