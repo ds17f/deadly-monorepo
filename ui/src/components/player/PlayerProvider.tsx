@@ -547,6 +547,24 @@ export default function PlayerProvider({
     setIsLoadingTracks(false);
   }, []);
 
+  // Load the loaded show's track list WITHOUT starting playback, so a parked
+  // player can show its playlist and let the user pick a track to begin. Leaves
+  // currentTrackIndex at -1, so the play effect (guarded on index >= 0) stays
+  // put. No-op if tracks are already loaded or a fetch is in flight.
+  const ensureTracks = useCallback(async () => {
+    if ((tracksRef.current && tracksRef.current.length > 0) || isLoadingTracks) return;
+    const recId = selectedRecordingRef.current ?? activeShowRef.current?.bestRecordingId ?? null;
+    if (!recId) return;
+    setIsLoadingTracks(true);
+    try {
+      const fetched = await fetchArchiveTracks(recId);
+      if (fetched.length > 0) setTracks(fetched);
+    } catch {
+      /* leave tracks null; the rail just won't render */
+    }
+    setIsLoadingTracks(false);
+  }, [isLoadingTracks]);
+
   const playShow = useCallback(
     (show: ViewedShow) => {
       setActiveShow(show);
@@ -873,6 +891,7 @@ export default function PlayerProvider({
       playShowTrack,
       playRecording,
       playTrack,
+      ensureTracks,
       togglePlayPause,
       nextTrack,
       prevTrack,
@@ -902,6 +921,7 @@ export default function PlayerProvider({
       playShowTrack,
       playRecording,
       playTrack,
+      ensureTracks,
       togglePlayPause,
       nextTrack,
       prevTrack,

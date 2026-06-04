@@ -46,6 +46,9 @@ export interface PlayerContextValue {
   playShowTrack: (show: ViewedShow, trackTitle: string, trackNumber?: number | null) => void;
   playRecording: (identifier: string) => void;
   playTrack: (index: number) => void;
+  // Load the loaded show's tracks without playing, so a parked player can
+  // display its playlist for track selection.
+  ensureTracks: () => void;
   togglePlayPause: () => void;
   nextTrack: () => void;
   prevTrack: () => void;

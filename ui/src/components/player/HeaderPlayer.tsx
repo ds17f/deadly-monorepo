@@ -407,6 +407,8 @@ export default function HeaderPlayer() {
     playTrack,
     seek,
     playShow,
+    playShowTrack,
+    ensureTracks,
     dismiss,
     volume,
     setVolume,
@@ -462,6 +464,18 @@ export default function HeaderPlayer() {
     document.addEventListener("fullscreenchange", onFsChange);
     return () => document.removeEventListener("fullscreenchange", onFsChange);
   }, []);
+
+  // Escape collapses the expanded player. (Browser-fullscreen Esc is already
+  // handled by the fullscreenchange listener above; this covers the plain
+  // slide-up case where we never entered document fullscreen.)
+  useEffect(() => {
+    if (!expanded) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") collapsePlayer();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [expanded, collapsePlayer]);
 
   // Idle detection while expanded: reveal chrome on input, hide after a pause.
   useEffect(() => {
@@ -723,6 +737,47 @@ export default function HeaderPlayer() {
     if (!showLoaded && railMode) setRailMode(null);
   }, [showLoaded, railMode]);
 
+  // Playlist availability: show it whenever a local show is loaded (playing OR
+  // parked) — not only while actively playing. For a parked show we have no
+  // tracks yet, so load them (without playing) so the rail can render and the
+  // user can pick a track to start.
+  const showPlaylist = (isActive || isParked) && !isRemoteActive;
+  useEffect(() => {
+    if (showPlaylist && !isActive && !tracks && !isLoadingTracks && selectedRecording) {
+      ensureTracks();
+    }
+  }, [showPlaylist, isActive, tracks, isLoadingTracks, selectedRecording, ensureTracks]);
+
+  // Rail track pick: active → jump locally; parked → claim the session and
+  // start at this track (build the ViewedShow from whatever loaded state we
+  // have — activeShow if hydrated, else the server's userState).
+  const handleRailPlay = useCallback(
+    (index: number) => {
+      if (isActive) {
+        playTrack(index);
+        return;
+      }
+      const t = tracks?.[index];
+      if (!t) return;
+      claimSession();
+      playShowTrack(
+        {
+          showId: activeShow?.showId ?? userState?.showId ?? "",
+          recordings: [],
+          bestRecordingId:
+            selectedRecording ?? activeShow?.bestRecordingId ?? userState?.recordingId ?? null,
+          date: activeShow?.date ?? userState?.date ?? "",
+          venue: activeShow?.venue ?? userState?.venue ?? "",
+          location: activeShow?.location ?? userState?.location ?? "",
+          image: activeShow?.image ?? null,
+        },
+        t.title,
+        t.track,
+      );
+    },
+    [isActive, tracks, claimSession, playShowTrack, playTrack, activeShow, userState, selectedRecording],
+  );
+
   // Fade the immersive chrome (desktop only) when idle → ambient art view.
   const chromeCls = chromeVisible
     ? "lg:opacity-100"
@@ -835,9 +890,11 @@ export default function HeaderPlayer() {
         )}
       </div>
 
-      {/* CENTER: transport stacked over the jog/seek bar */}
+      {/* CENTER: transport stacked over the jog/seek bar. Full-height control
+          zone (self-stretch) so it doesn't leave a thin bubbling strip above/
+          below that would steal clicks from the expand handler. */}
       <div
-        className="flex flex-1 flex-col items-center gap-1.5"
+        className="flex flex-1 flex-col items-center justify-center gap-1.5 self-stretch"
         onClick={(e) => e.stopPropagation()}
       >
         <Transport
@@ -870,9 +927,10 @@ export default function HeaderPlayer() {
         </div>
       </div>
 
-      {/* RIGHT: queue · devices · volume · fullscreen · clear */}
+      {/* RIGHT: queue · devices · volume · fullscreen · clear. Full-height
+          control zone for the same reason as the center. */}
       <div
-        className="flex w-1/4 items-center justify-end gap-1"
+        className="flex w-1/4 items-center justify-end gap-1 self-stretch"
         onClick={(e) => e.stopPropagation()}
       >
         {isActive && (
@@ -1068,10 +1126,10 @@ export default function HeaderPlayer() {
               onSelect={selectRecording}
             />
           )}
-          {isActive && (
+          {showPlaylist && (
             <div className="mt-4">
               <h4 className="mb-2 text-sm font-bold text-deadly-title">Tracks</h4>
-              <TrackList tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={playTrack} showId={activeShow?.showId} recordingId={selectedRecording} />
+              <TrackList tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={handleRailPlay} showId={activeShow?.showId} recordingId={selectedRecording} />
             </div>
           )}
         </div>
@@ -1168,13 +1226,16 @@ export default function HeaderPlayer() {
           </div>
           </div>{/* end main column */}
 
-          {/* Playlist rail — part of the chrome, so it fades into the ambient
-              art view along with the controls when idle. Only when this device
-              is the active player (it owns the live track list). */}
-          {isActive && (
+          {/* Playlist rail — shown whenever a local show is loaded (playing or
+              parked) so you can pick a track. It's chrome: when idle it both
+              fades AND collapses its width to 0, so the ambient art re-centers
+              into the freed space (Spotify-style). */}
+          {showPlaylist && (
             <aside
-              className={`flex w-80 flex-shrink-0 flex-col border-l border-white/10 px-4 pb-2 pt-4 transition-opacity duration-500 ${
-                chromeVisible ? "opacity-100" : "pointer-events-none opacity-0"
+              className={`flex flex-shrink-0 flex-col overflow-hidden transition-all duration-500 ${
+                chromeVisible
+                  ? "w-80 border-l border-white/10 px-4 pb-2 pt-4 opacity-100"
+                  : "pointer-events-none w-0 p-0 opacity-0"
               }`}
             >
               <TrackList
@@ -1182,7 +1243,7 @@ export default function HeaderPlayer() {
                 isLoading={isLoadingTracks}
                 currentTrackIndex={currentTrackIndex}
                 status={status}
-                onPlayTrack={playTrack}
+                onPlayTrack={handleRailPlay}
                 showId={activeShow?.showId}
                 recordingId={selectedRecording}
                 fill
