@@ -231,20 +231,23 @@ focus, and on bfcache restore (the WS-push stand-in from the
 - `RecentTab`, `FavoritesTab` (shows), `FavoriteSongsList`, `ReviewsTab`, and
   `LibraryRail` subscribe via the hook.
 
-### 5. Personalized signed-in home at `/` — REVERTED, NEEDS DESIGN
-- A first cut (`PersonalizedHome` strip above the catalog: recents +
-  favorites) was built and **reverted** — the layout didn't look good
-  bolted on top of the existing home. The plumbing is sound (reused the
-  enriched endpoints + shared cards), but the **home page wants real
-  design work** before we reintroduce personalization: how the
-  signed-in home is composed (replace vs. augment the catalog, hero
-  treatment, section layout/density) is a design question, not just a
-  data-wiring one.
-- Kept from that attempt: shared card components moved to
-  `components/show/` (used by `/me`); they'll be reusable when we redo this.
-- **TODO: design pass on the signed-in home** before rebuilding. Sections
-  still wanted (v1): "Pick up where you left off" (recents), "Your
-  favorites". Future: recommendations, "more like…".
+### 5. Personalized signed-in home — SATISFIED ON DESKTOP BY THE RAIL
+- **Re-scoped (2026-06-04).** The original "personalized strip above the
+  catalog on `/`" was reverted for looking bolted-on — and on reflection it's
+  *redundant on desktop*: `LibraryRail` (`hidden w-[280px] … lg:flex`) already
+  surfaces the signed-in user's Recents / Favorites / Reviews on **every**
+  page including `/`. A home strip would duplicate it. So desktop
+  personalization is considered **done** via the rail; we are **not**
+  rebuilding `PersonalizedHome`.
+- **The only real gap is mobile.** The rail is `lg:`-only, so a signed-in
+  *mobile-web* user gets no personalized content on `/` — they must visit
+  `/me`. Whether to close that depends on how much we care about signed-in
+  mobile-web users (who, unlike installs, lack the app home). Logged as an
+  **optional** follow-up, not the headline feature: a compact recents /
+  favorites strip on the mobile home only (desktop unchanged), reusing the
+  shared `components/show/` cards.
+- Kept from the reverted attempt: shared card components in `components/show/`
+  (used by `/me` and the rail).
 
 ### 6. Settings page — LANDED
 - `/me/settings` (`SettingsTab`): Account section (display name + email,
@@ -260,10 +263,16 @@ focus, and on bfcache restore (the WS-push stand-in from the
   **Signing back in reactivates** the account (adapter clears the
   tombstone) — avoids the UNIQUE-email collision and is a friendly
   soft-delete. Verified the create→delete→reject→reactivate lifecycle.
+- **Editable display name — LANDED.** `PATCH /api/user/account { name }`
+  (1–60 chars) writes `accounts.name`; the JWT callback re-reads it into the
+  session each refresh so the edit persists without re-login (falls back to the
+  OAuth name when unset). `SettingsTab` has an inline edit (Save/Cancel,
+  Enter/Escape, validation); `AuthContext.updateName` reflects it in the header
+  immediately. `accounts.name` is the source of truth for the displayed name.
 - **Follow-ups:** (1) a TTL/cron purge of long-tombstoned accounts and
-  their orphaned user-data (hard delete). (2) editable display name. (3)
-  the dev (credentials) sign-in path doesn't run the adapter's
-  `linkAccount`, so dev reactivation isn't wired — dev-only, fine for now.
+  their orphaned user-data (hard delete). (2) the dev (credentials) sign-in
+  path doesn't run the adapter's `linkAccount`, so dev reactivation isn't
+  wired — dev-only, fine for now.
 
 ### 6b. Sync-version banner on `/me` — LANDED (50b3db5a, 30c1ce41)
 - Resolves the empty-state open question (see below) via option (b) + a
