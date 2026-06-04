@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { fetchFavoriteShows } from "@/lib/userDataApi";
 import type { FavoriteShow } from "@/types/userdata";
 import { useUserData } from "@/contexts/UserDataContext";
@@ -14,8 +15,24 @@ type Section = "shows" | "songs";
 // Shows are the full library surface (search / sort / decade filter, list⇄grid,
 // per-row Share / Pin / Remove); Songs are a flat list. Toggles for both live
 // on the show page / player; these are the read-only collections.
+//
+// The active sub-view lives in the URL (`?tab=songs`) so it survives back/
+// forward and refresh — e.g. opening a song's show page and returning lands
+// you back on Songs, not Shows. Requires a Suspense boundary (the page wraps
+// it) because useSearchParams suspends during static export.
 export default function FavoritesTab() {
-  const [section, setSection] = useState<Section>("shows");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+  const section: Section = searchParams.get("tab") === "songs" ? "songs" : "shows";
+
+  function setSection(next: Section) {
+    const params = new URLSearchParams(searchParams.toString());
+    if (next === "songs") params.set("tab", "songs");
+    else params.delete("tab");
+    const qs = params.toString();
+    router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+  }
 
   return (
     <div>
