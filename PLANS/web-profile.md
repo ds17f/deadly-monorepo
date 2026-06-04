@@ -184,6 +184,33 @@ Realistic web v1 mirrors a subset of iOS's
   (date/venue/city/image) like recent/favorites/reviews; `PUT` /
   `DELETE ?showId=&trackTitle=` unchanged. Round-trip verified against real
   synced data.
+- **Song cards + play-and-jump** (`f7073f4b`): the songs list renders as
+  ticket-art cards matching the other tabs (`ShowArtwork` + date/venue), with
+  Play / Go-to-show / remove actions. A new player action
+  `playShowTrack(show, title, number)` loads the show and jumps to the track
+  once its tracks arrive (matches by title, then track number) — used by the
+  Play action.
+- **`?tab` persistence** (`f822a8e0`): the Shows/Songs sub-view is held in the
+  URL (`?tab=songs`) via `useSearchParams`, so leaving and returning (e.g.
+  opening a song's show page) keeps you on Songs. Page wraps the tab in
+  `Suspense` (static-export requirement).
+
+### Player — fullscreen playlist + interaction polish — LANDED
+Not a numbered issue, but shipped alongside the favorites work since `/me`
+leans on the player:
+- **Click-to-expand** (`3bbd3391`, `c7943b0e`): clicking anywhere on the
+  bottom bar that isn't an actual control (button / link / volume input / seek
+  bar, tagged `data-no-expand`) opens the full player. Done with a single
+  target-aware handler — an earlier per-cluster `stopPropagation` swallowed the
+  empty space around the controls, leaving only the gap between clusters
+  clickable.
+- **Playlist in fullscreen** (`3bbd3391`, `9391c936`): desktop fullscreen
+  gained a right-side playlist rail (mobile fullscreen already had the list).
+  Shown whenever a *loaded* show is present (playing or parked) — a parked show
+  loads its tracks without auto-playing via a new `ensureTracks()`, and picking
+  a track while parked claims the session and starts there. The rail is chrome:
+  when idle it fades **and** collapses its width so the ambient art re-centers.
+- **Escape** collapses the expanded player.
 
 ### 5. Personalized signed-in home at `/` — REVERTED, NEEDS DESIGN
 - A first cut (`PersonalizedHome` strip above the catalog: recents +
@@ -264,14 +291,42 @@ Realistic web v1 mirrors a subset of iOS's
 - Related share work shipped alongside: a QR / copy / native-share path
   on both `/me` rows and the show hero (7c514e1f, f180f217).
 
-### 7. Anonymous event tracking on `/me` surfaces
-- Cheap, no PII, no cookie banner. Events worth tracking:
-  - `me_visited`, `favorites_viewed`, `recent_viewed`,
-    `favorite_added` (web), `signed_in_home_shown`.
-- Answer the question that started this whole effort: "is anyone using
-  this?" Without it, we'll ship and not know.
-- localStorage-generated anonymous ID is fine; do not try to reconcile
-  with mobile IID.
+### 7. Anonymous event tracking on `/me` surfaces — IN PROGRESS (design)
+- Cheap, no PII, no cookie banner. Answer the question that started this
+  whole effort: "is anyone using this?" Without it, we ship blind.
+- **The server pipeline already exists and already supports web.**
+  `POST /api/analytics` (`api/src/routes/analytics.ts`) ingests batched
+  `{event, ts, iid, sid, platform, app_version, props}`;
+  `VALID_PLATFORMS` is `{ios, android, web}`. So issue 7 is mostly a *web
+  client* + registering the `/me` events — not new server analytics.
+- **Web is its own source via `platform: "web"`.** This is the platform
+  dimension the admin dashboard already splits on (DAU/installs/growth by
+  platform). We do **not** reuse mobile's `iid`; the web mints its own
+  localStorage anonymous id, and `app_version` carries the web build id.
+  Do not try to reconcile web ids with mobile IIDs.
+- **Key handling (the one real design question).** Mobile sends a secret
+  `X-Analytics-Key`; a browser bundle can't keep a secret. Plan: a
+  dedicated `handle /api/analytics` block in the Caddyfile injects the key
+  server-side (`header_up X-Analytics-Key {$ANALYTICS_API_KEY}`), so the
+  browser never sees it and the API keeps requiring it. Rate-limiting +
+  same-origin remain the spam gate (unchanged).
+- **Events.** Lean on the existing generic `feature_use`
+  (`feature`/`category`/`target_*` props, already bucketed by the summary)
+  plus `app_open` for the visit, rather than inventing bespoke event types:
+  - `app_open` on first `/me` load (platform=web) — feeds DAU/installs.
+  - `feature_use { feature: "me_visited" | "favorites_viewed" |
+    "recent_viewed" | "reviews_viewed", category: "navigation" }`.
+  - `feature_use { feature: "favorite_added", category: "action",
+    target_type: "show"|"song", target_id }` on a web favorite toggle.
+  - (later) `signed_in_home_shown` once issue 5 lands.
+  Any genuinely new event names must also be registered in
+  `EVENT_SCHEMAS` (`api/src/db/analytics.ts`) and the watershed table with
+  a `web:` reliable-from version.
+- **Client shape.** Small `ui/src/lib/analytics.ts`: localStorage `iid`
+  (+ per-tab `sid`), a `track(event, props)` that buffers and flushes a
+  batch to `POST /api/analytics` on a timer / `visibilitychange`. Fire it
+  from the `/me` layout + tabs and the favorite toggles. No cookie banner
+  (anonymous, no PII).
 
 ## Out of scope (explicit non-goals)
 
