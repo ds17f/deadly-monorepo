@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef, useEffect, useMemo } from "react";
+import { useState, useCallback, useRef, useEffect, useMemo, type MouseEvent } from "react";
 import { usePlayer } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
@@ -783,14 +783,26 @@ export default function HeaderPlayer() {
     ? "lg:opacity-100"
     : "lg:pointer-events-none lg:opacity-0";
 
+  // Clicking the bar opens the full player — but ignore clicks that land on an
+  // actual control (buttons, links, the volume range input, or the seek bar)
+  // so they still do their own thing. This replaces per-cluster
+  // stopPropagation, which was swallowing clicks on the empty space around the
+  // controls too — leaving only the bare gap between clusters clickable.
+  const handleBarClick = useCallback(
+    (e: MouseEvent<HTMLElement>) => {
+      if (!showLoaded) return;
+      if ((e.target as HTMLElement).closest("button, a, input, [data-no-expand]")) return;
+      setExpanded(true);
+    },
+    [showLoaded],
+  );
+
   return (
     <div className="relative flex flex-1 items-center pl-4">
     {/* ── Mobile bar: art + info (tap → full-screen sheet) + quick play ── */}
     <div
-      className="flex flex-1 items-center gap-2 overflow-hidden lg:hidden"
-      onClick={() => {
-        if (showLoaded) setExpanded(true);
-      }}
+      className={`flex flex-1 items-center gap-2 overflow-hidden lg:hidden ${showLoaded ? "cursor-pointer" : ""}`}
+      onClick={handleBarClick}
     >
       <button
         onClick={() => {
@@ -823,10 +835,7 @@ export default function HeaderPlayer() {
       </button>
       {showLoaded && (
         <button
-          onClick={(e) => {
-            e.stopPropagation();
-            handleTogglePlayPause();
-          }}
+          onClick={handleTogglePlayPause}
           disabled={isLoadingTracks || !!(isActive && isLoading)}
           className="flex-shrink-0 rounded-full bg-white p-2 text-deadly-bg transition-opacity hover:opacity-90 disabled:opacity-50"
           aria-label={displayIsPlaying ? "Pause" : "Play"}
@@ -850,12 +859,10 @@ export default function HeaderPlayer() {
 
     {/* ── Desktop bar: 3 zones — info · transport over jog bar · actions ──
         Clicking anywhere that isn't an interactive control opens the full
-        player; the transport and actions clusters stop propagation. ── */}
+        player (see handleBarClick). ── */}
     <div
       className={`hidden flex-1 items-center gap-4 lg:flex ${showLoaded ? "cursor-pointer" : ""}`}
-      onClick={() => {
-        if (showLoaded) setExpanded(true);
-      }}
+      onClick={handleBarClick}
     >
       {/* LEFT: art + info (click → full now-playing view) */}
       <div className="flex w-1/4 min-w-0 items-center gap-3">
@@ -890,13 +897,8 @@ export default function HeaderPlayer() {
         )}
       </div>
 
-      {/* CENTER: transport stacked over the jog/seek bar. Full-height control
-          zone (self-stretch) so it doesn't leave a thin bubbling strip above/
-          below that would steal clicks from the expand handler. */}
-      <div
-        className="flex flex-1 flex-col items-center justify-center gap-1.5 self-stretch"
-        onClick={(e) => e.stopPropagation()}
-      >
+      {/* CENTER: transport stacked over the jog/seek bar */}
+      <div className="flex flex-1 flex-col items-center gap-1.5">
         <Transport
           isPlaying={displayIsPlaying}
           isLoading={isLoadingTracks || !!(isActive && isLoading)}
@@ -913,6 +915,7 @@ export default function HeaderPlayer() {
             {formatTime(displayElapsed)}
           </span>
           <div
+            data-no-expand
             className="group h-1.5 flex-1 cursor-pointer rounded-full bg-white/10"
             onClick={handleSeek}
           >
@@ -927,12 +930,8 @@ export default function HeaderPlayer() {
         </div>
       </div>
 
-      {/* RIGHT: queue · devices · volume · fullscreen · clear. Full-height
-          control zone for the same reason as the center. */}
-      <div
-        className="flex w-1/4 items-center justify-end gap-1 self-stretch"
-        onClick={(e) => e.stopPropagation()}
-      >
+      {/* RIGHT: queue · devices · volume · fullscreen · clear */}
+      <div className="flex w-1/4 items-center justify-end gap-1">
         {isActive && (
           <button
             onClick={() => setRailMode((m) => (m === "queue" ? null : "queue"))}
