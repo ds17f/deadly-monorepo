@@ -247,14 +247,22 @@ Android `87981e0b`.
   marker observes the review now (Android `getShowReviewFlow`, iOS
   `observeShowReview`) so a synced review flips it live.
 
-### 5. LWW conflict policy doc + dev smoke test
-- Short doc in `docs/` (or appended here) describing:
-  - The merge rule per record kind (which timestamp is the comparator).
-  - Behavior when timestamps tie (prefer remote — arbitrary but consistent).
-  - What happens when a record is deleted on one side and updated on the
-    other (deletion needs a tombstone OR we treat any local record as
-    authoritative if it has a later timestamp — pick one and document).
-- "Favorite on phone → see on web" smoke test checklist for QA.
+### 5. LWW conflict policy doc + dev smoke test — LANDED
+- Doc at `docs/docs/developer/user-data-sync.md` (wired into the mkdocs
+  nav after API Integration). Describes the merge rule per record kind,
+  push/pull triggers, tombstone semantics, per-kind specifics
+  (device-local downloads, catalog-missing skips, announce-on-play
+  recents, player tags), backfill, and disaster recovery.
+- **Tie-break correction:** the comparator is `updatedAt`, but the shipped
+  code is `local.updatedAt >= remote` → **ties go to LOCAL**, not remote
+  as this issue originally sketched. Verified identical on both platforms
+  (`UserSyncApplyServiceImpl.kt`, `UserSyncApplyService.swift`). Documented
+  as the authoritative behavior.
+- Delete-vs-edit is resolved by the same LWW rule via tombstones
+  (`deletedAt`): UI reads filter it out, the merge reads include it and
+  treat it as a record carrying its own `updatedAt`.
+- QA "favorite on phone → see on web" smoke-test checklist included in the
+  doc (happy path, backfill, conflict/LWW edges, offline retry, negative).
 
 ## Follow-ups (not blocking this branch)
 
