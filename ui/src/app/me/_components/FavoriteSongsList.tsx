@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { fetchFavoriteSongs } from "@/lib/userDataApi";
+import { useUserDataRefresh } from "@/lib/userDataEvents";
 import type { FavoriteTrack } from "@/types/userdata";
 import { useUserData } from "@/contexts/UserDataContext";
 import { usePlayer } from "@/contexts/PlayerContext";
@@ -24,21 +25,20 @@ export default function FavoriteSongsList() {
   const [state, setState] = useState<"loading" | "error" | "ready">("loading");
   const [songs, setSongs] = useState<FavoriteTrack[]>([]);
 
-  useEffect(() => {
-    let cancelled = false;
+  const load = useCallback(() => {
     fetchFavoriteSongs()
       .then((s) => {
-        if (cancelled) return;
         setSongs(s);
         setState("ready");
       })
-      .catch(() => {
-        if (!cancelled) setState("error");
-      });
-    return () => {
-      cancelled = true;
-    };
+      .catch(() => setState((prev) => (prev === "ready" ? "ready" : "error")));
   }, []);
+
+  useEffect(() => {
+    load();
+  }, [load]);
+
+  useUserDataRefresh(load);
 
   function remove(track: FavoriteTrack) {
     setSongs((prev) =>

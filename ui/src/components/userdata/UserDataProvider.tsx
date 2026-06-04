@@ -5,6 +5,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { UserDataContext } from "@/contexts/UserDataContext";
 import { fetchUserSync, updateFavoriteShow, deleteFavoriteShow, updateFavoriteSong, deleteFavoriteSong, updateReview, deleteReview } from "@/lib/userDataApi";
 import * as analytics from "@/lib/analytics";
+import { notifyUserDataChanged } from "@/lib/userDataEvents";
 import type { UserDataBackupV3, FavoriteShow, FavoriteTrack, ShowReview } from "@/types/userdata";
 
 const STORAGE_KEY = "deadly_userdata";
@@ -142,7 +143,7 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
           shows: prev.favorites.shows.filter((s) => s.showId !== showId),
         },
       }));
-      if (user?.id) deleteFavoriteShow(showId).catch(() => {});
+      if (user?.id) deleteFavoriteShow(showId).then(notifyUserDataChanged).catch(() => {});
     } else {
       const fav: FavoriteShow = {
         showId,
@@ -156,7 +157,7 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
           shows: [fav, ...prev.favorites.shows],
         },
       }));
-      if (user?.id) updateFavoriteShow(showId, fav).catch(() => {});
+      if (user?.id) updateFavoriteShow(showId, fav).then(notifyUserDataChanged).catch(() => {});
     }
   }, [data, user?.id, updateData]);
 
@@ -168,7 +169,7 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
         favorites: { ...prev.favorites, shows: [show, ...shows] },
       };
     });
-    if (user?.id) updateFavoriteShow(show.showId, show).catch(() => {});
+    if (user?.id) updateFavoriteShow(show.showId, show).then(notifyUserDataChanged).catch(() => {});
   }, [user?.id, updateData]);
 
   const isFavoriteTrack = useCallback((showId: string, trackTitle: string): boolean => {
@@ -203,7 +204,7 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
           ),
         },
       }));
-      if (user?.id) deleteFavoriteSong(showId, trackTitle).catch(() => {});
+      if (user?.id) deleteFavoriteSong(showId, trackTitle).then(notifyUserDataChanged).catch(() => {});
     } else {
       const fav: FavoriteTrack = { ...track, updatedAt: Math.floor(Date.now() / 1000) };
       updateData((prev) => ({
@@ -213,7 +214,7 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
           tracks: [fav, ...prev.favorites.tracks],
         },
       }));
-      if (user?.id) updateFavoriteSong(fav).catch(() => {});
+      if (user?.id) updateFavoriteSong(fav).then(notifyUserDataChanged).catch(() => {});
     }
   }, [data, user?.id, updateData]);
 
@@ -224,7 +225,7 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
     });
     if (user?.id) {
       const { showId, ...rest } = review;
-      updateReview(showId, rest).catch(() => {});
+      updateReview(showId, rest).then(notifyUserDataChanged).catch(() => {});
     }
   }, [user?.id, updateData]);
 
@@ -233,7 +234,7 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
       ...prev,
       reviews: prev.reviews.filter((r) => r.showId !== showId),
     }));
-    if (user?.id) deleteReview(showId).catch(() => {});
+    if (user?.id) deleteReview(showId).then(notifyUserDataChanged).catch(() => {});
   }, [user?.id, updateData]);
 
   const value = useMemo(() => ({

@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { fetchFavoriteShows } from "@/lib/userDataApi";
 import type { FavoriteShow } from "@/types/userdata";
 import { useUserData } from "@/contexts/UserDataContext";
+import { useUserDataRefresh } from "@/lib/userDataEvents";
 import LibraryView from "@/components/library/LibraryView";
 import { favoriteToItem } from "@/components/library/libraryItem";
 import FavoriteSongsList from "./FavoriteSongsList";
@@ -69,22 +70,21 @@ function FavoriteShows() {
   // Keep the raw rows so pin can re-PUT the full V3 record.
   const rawRef = useRef<Map<string, FavoriteShow>>(new Map());
 
-  useEffect(() => {
-    let cancelled = false;
+  const load = useCallback(() => {
     fetchFavoriteShows()
       .then((s) => {
-        if (cancelled) return;
         rawRef.current = new Map(s.map((x) => [x.showId, x]));
         setShows(s);
         setState("ready");
       })
-      .catch(() => {
-        if (!cancelled) setState("error");
-      });
-    return () => {
-      cancelled = true;
-    };
+      .catch(() => setState((prev) => (prev === "ready" ? "ready" : "error")));
   }, []);
+
+  useEffect(() => {
+    load();
+  }, [load]);
+
+  useUserDataRefresh(load);
 
   const items = useMemo(() => shows.map(favoriteToItem), [shows]);
 

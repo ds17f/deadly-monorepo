@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { fetchReviews } from "@/lib/userDataApi";
+import { useUserDataRefresh } from "@/lib/userDataEvents";
 import type { ShowReview } from "@/types/userdata";
 import { useUserData } from "@/contexts/UserDataContext";
 import LibraryView from "@/components/library/LibraryView";
@@ -15,21 +16,20 @@ export default function ReviewsTab() {
   const [state, setState] = useState<"loading" | "error" | "ready">("loading");
   const [reviews, setReviews] = useState<ShowReview[]>([]);
 
-  useEffect(() => {
-    let cancelled = false;
+  const load = useCallback(() => {
     fetchReviews()
       .then((s) => {
-        if (cancelled) return;
         setReviews(s);
         setState("ready");
       })
-      .catch(() => {
-        if (!cancelled) setState("error");
-      });
-    return () => {
-      cancelled = true;
-    };
+      .catch(() => setState((prev) => (prev === "ready" ? "ready" : "error")));
   }, []);
+
+  useEffect(() => {
+    load();
+  }, [load]);
+
+  useUserDataRefresh(load);
 
   const items = useMemo(() => reviews.map(reviewToItem), [reviews]);
 
