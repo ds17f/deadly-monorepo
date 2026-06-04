@@ -41,6 +41,9 @@ export interface PlayerContextValue {
   setVolume: (volume: number) => void;
   selectRecording: (identifier: string) => void;
   playShow: (show: ViewedShow) => void;
+  // Play a show and, once its tracks load, jump to the track matching the
+  // given title (falls back to trackNumber). Used by the favorite-songs list.
+  playShowTrack: (show: ViewedShow, trackTitle: string, trackNumber?: number | null) => void;
   playRecording: (identifier: string) => void;
   playTrack: (index: number) => void;
   togglePlayPause: () => void;

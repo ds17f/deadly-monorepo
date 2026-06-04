@@ -566,6 +566,30 @@ export default function PlayerProvider({
     [playRecording]
   );
 
+  // Play a show then jump to a specific track once its tracks load. Matches by
+  // title first (the stable identity of a favorite song), then by track number.
+  const pendingTrackRef = useRef<{ title: string; number?: number | null } | null>(null);
+
+  const playShowTrack = useCallback(
+    (show: ViewedShow, trackTitle: string, trackNumber?: number | null) => {
+      pendingTrackRef.current = { title: trackTitle, number: trackNumber };
+      playShow(show);
+    },
+    [playShow]
+  );
+
+  // Resolve a pending favorite-song jump after the recording's tracks arrive.
+  useEffect(() => {
+    if (!pendingTrackRef.current || !tracks || tracks.length === 0) return;
+    const { title, number } = pendingTrackRef.current;
+    pendingTrackRef.current = null;
+    let idx = tracks.findIndex((t) => t.title === title);
+    if (idx < 0 && number != null) idx = tracks.findIndex((t) => t.track === number);
+    // idx 0 already auto-plays via playRecording; only re-point when it differs.
+    if (idx > 0) setCurrentTrackIndex(idx);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tracks]);
+
   const playTrack = useCallback((index: number) => {
     // Reset gapless state since user is manually selecting
     preloadedNextRef.current = false;
@@ -846,6 +870,7 @@ export default function PlayerProvider({
       setVolume,
       selectRecording,
       playShow,
+      playShowTrack,
       playRecording,
       playTrack,
       togglePlayPause,
@@ -874,6 +899,7 @@ export default function PlayerProvider({
       setVolume,
       selectRecording,
       playShow,
+      playShowTrack,
       playRecording,
       playTrack,
       togglePlayPause,
