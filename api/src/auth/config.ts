@@ -81,6 +81,10 @@ export const authConfig: AuthConfig = {
         if (appUser) {
           token.accountId = appUser.id;
           token.isAdmin = appUser.is_admin === 1;
+          // accounts.name is the editable source of truth for the display
+          // name (PATCH /api/user/account). Re-read it each refresh so an edit
+          // shows up without re-login; keep the OAuth name if it's unset.
+          if (appUser.name) token.name = appUser.name;
         }
       }
       return token;

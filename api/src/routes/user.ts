@@ -1,7 +1,7 @@
 import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
 import { getShowMeta } from "../showCatalog.js";
-import { deleteAppUser } from "../db/users.js";
+import { deleteAppUser, updateAppUserName } from "../db/users.js";
 import {
   getFavoriteShows, upsertFavoriteShow, deleteFavoriteShow,
   getFavoriteSongs, upsertFavoriteSong, deleteFavoriteSongByKey,
@@ -248,5 +248,27 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
   }, async (request, reply) => {
     const deleted = deleteAppUser(request.user!.id);
     return reply.code(200).send({ ok: deleted });
+  });
+
+  // Update the account's display name. Source of truth for the shown name —
+  // the JWT callback reads accounts.name into the session on each refresh.
+  app.patch<{ Body: { name?: unknown } }>("/api/user/account", {
+    schema: {
+      tags: ["user"],
+      summary: "Update the current account's display name",
+      body: {
+        type: "object",
+        required: ["name"],
+        properties: { name: { type: "string" } },
+      },
+    },
+    preHandler: requireAuth,
+  }, async (request, reply) => {
+    const raw = typeof request.body?.name === "string" ? request.body.name.trim() : "";
+    if (raw.length < 1 || raw.length > 60) {
+      return reply.code(400).send({ error: "Name must be 1–60 characters." });
+    }
+    updateAppUserName(request.user!.id, raw);
+    return reply.code(200).send({ name: raw });
   });
 }

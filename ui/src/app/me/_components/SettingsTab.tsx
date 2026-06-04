@@ -3,15 +3,50 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/contexts/AuthContext";
-import { deleteAccount } from "@/lib/userDataApi";
+import { deleteAccount, updateDisplayName } from "@/lib/userDataApi";
 
 export default function SettingsTab() {
-  const { user, signOut } = useAuth();
+  const { user, signOut, updateName } = useAuth();
   const router = useRouter();
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [confirmText, setConfirmText] = useState("");
   const [deleting, setDeleting] = useState(false);
   const [error, setError] = useState(false);
+
+  // Display-name editing.
+  const [editingName, setEditingName] = useState(false);
+  const [nameInput, setNameInput] = useState("");
+  const [savingName, setSavingName] = useState(false);
+  const [nameError, setNameError] = useState<string | null>(null);
+
+  function startEditName() {
+    setNameInput(user?.name ?? "");
+    setNameError(null);
+    setEditingName(true);
+  }
+
+  async function saveName() {
+    const trimmed = nameInput.trim();
+    if (trimmed.length < 1 || trimmed.length > 60) {
+      setNameError("Name must be 1–60 characters.");
+      return;
+    }
+    if (trimmed === user?.name) {
+      setEditingName(false);
+      return;
+    }
+    setSavingName(true);
+    setNameError(null);
+    try {
+      const { name } = await updateDisplayName(trimmed);
+      updateName(name); // reflect now; persists via accounts.name on reload
+      setEditingName(false);
+    } catch {
+      setNameError("Couldn’t save. Try again.");
+    } finally {
+      setSavingName(false);
+    }
+  }
 
   async function handleDelete() {
     setDeleting(true);
@@ -33,9 +68,50 @@ export default function SettingsTab() {
       <section className="rounded-lg border border-white/10 bg-deadly-surface p-5">
         <h3 className="mb-3 font-medium text-white">Account</h3>
         <dl className="space-y-2 text-sm">
-          <div className="flex justify-between gap-4">
-            <dt className="text-white/40">Name</dt>
-            <dd className="truncate text-white/80">{user?.name ?? "—"}</dd>
+          <div className="flex items-center justify-between gap-4">
+            <dt className="flex-shrink-0 text-white/40">Name</dt>
+            {editingName ? (
+              <dd className="flex flex-1 flex-col items-end gap-2">
+                <input
+                  autoFocus
+                  value={nameInput}
+                  onChange={(e) => setNameInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") saveName();
+                    if (e.key === "Escape") setEditingName(false);
+                  }}
+                  maxLength={60}
+                  className="w-full max-w-xs rounded-md border border-white/15 bg-black/30 px-3 py-1.5 text-right text-white focus:border-white/40 focus:outline-none"
+                />
+                <div className="flex items-center gap-2">
+                  {nameError && <span className="text-xs text-red-400">{nameError}</span>}
+                  <button
+                    disabled={savingName}
+                    onClick={saveName}
+                    className="rounded-md bg-white px-3 py-1 text-xs font-semibold text-black transition hover:opacity-90 disabled:opacity-40"
+                  >
+                    {savingName ? "Saving…" : "Save"}
+                  </button>
+                  <button
+                    disabled={savingName}
+                    onClick={() => setEditingName(false)}
+                    className="rounded-md border border-white/15 px-3 py-1 text-xs text-white/70 transition hover:border-white/30"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </dd>
+            ) : (
+              <dd className="flex min-w-0 items-center gap-2">
+                <span className="truncate text-white/80">{user?.name ?? "—"}</span>
+                <button
+                  onClick={startEditName}
+                  className="flex-shrink-0 text-xs text-deadly-highlight transition hover:underline"
+                >
+                  Edit
+                </button>
+              </dd>
+            )}
           </div>
           <div className="flex justify-between gap-4">
             <dt className="text-white/40">Email</dt>

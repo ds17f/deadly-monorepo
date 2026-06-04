@@ -280,6 +280,18 @@ export function deleteAppUser(accountId: string): boolean {
   return res.changes > 0;
 }
 
+/**
+ * Update the account's display name. `accounts.name` is what the JWT callback
+ * reads into the session, so this is the source of truth for the shown name.
+ */
+export function updateAppUserName(accountId: string, name: string): boolean {
+  const db = getUsersDb();
+  const res = db.prepare(
+    `UPDATE accounts SET name = ? WHERE id = ? AND deleted_at IS NULL`
+  ).run(name, accountId);
+  return res.changes > 0;
+}
+
 /** Clear an account's tombstone (reactivate on re-sign-in). */
 export function reactivateAppUserByAuthId(authUserId: string): void {
   const db = getUsersDb();

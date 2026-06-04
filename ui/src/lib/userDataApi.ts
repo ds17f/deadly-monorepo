@@ -83,6 +83,16 @@ export function deleteAccount(): Promise<void> {
   return apiFetch("/account", { method: "DELETE" });
 }
 
+// Updates the account's display name. The session follows accounts.name (JWT
+// callback), so it persists across reloads; callers also update the local
+// session optimistically for an instant reflection.
+export function updateDisplayName(name: string): Promise<{ name: string }> {
+  return apiFetch<{ name: string }>("/account", {
+    method: "PATCH",
+    body: JSON.stringify({ name }),
+  });
+}
+
 // Returns the user's reviews, enriched with display metadata
 // (venue/city/date) from the API show catalog.
 export function fetchReviews(): Promise<ShowReview[]> {
