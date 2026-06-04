@@ -731,7 +731,12 @@ export default function HeaderPlayer() {
   return (
     <div className="relative flex flex-1 items-center pl-4">
     {/* ── Mobile bar: art + info (tap → full-screen sheet) + quick play ── */}
-    <div className="flex flex-1 items-center gap-2 overflow-hidden lg:hidden">
+    <div
+      className="flex flex-1 items-center gap-2 overflow-hidden lg:hidden"
+      onClick={() => {
+        if (showLoaded) setExpanded(true);
+      }}
+    >
       <button
         onClick={() => {
           if (showLoaded) setExpanded(true);
@@ -763,7 +768,10 @@ export default function HeaderPlayer() {
       </button>
       {showLoaded && (
         <button
-          onClick={handleTogglePlayPause}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleTogglePlayPause();
+          }}
           disabled={isLoadingTracks || !!(isActive && isLoading)}
           className="flex-shrink-0 rounded-full bg-white p-2 text-deadly-bg transition-opacity hover:opacity-90 disabled:opacity-50"
           aria-label={displayIsPlaying ? "Pause" : "Play"}
@@ -785,8 +793,15 @@ export default function HeaderPlayer() {
       )}
     </div>
 
-    {/* ── Desktop bar: 3 zones — info · transport over jog bar · actions ── */}
-    <div className="hidden flex-1 items-center gap-4 lg:flex">
+    {/* ── Desktop bar: 3 zones — info · transport over jog bar · actions ──
+        Clicking anywhere that isn't an interactive control opens the full
+        player; the transport and actions clusters stop propagation. ── */}
+    <div
+      className={`hidden flex-1 items-center gap-4 lg:flex ${showLoaded ? "cursor-pointer" : ""}`}
+      onClick={() => {
+        if (showLoaded) setExpanded(true);
+      }}
+    >
       {/* LEFT: art + info (click → full now-playing view) */}
       <div className="flex w-1/4 min-w-0 items-center gap-3">
         {showLoaded ? (
@@ -821,7 +836,10 @@ export default function HeaderPlayer() {
       </div>
 
       {/* CENTER: transport stacked over the jog/seek bar */}
-      <div className="flex flex-1 flex-col items-center gap-1.5">
+      <div
+        className="flex flex-1 flex-col items-center gap-1.5"
+        onClick={(e) => e.stopPropagation()}
+      >
         <Transport
           isPlaying={displayIsPlaying}
           isLoading={isLoadingTracks || !!(isActive && isLoading)}
@@ -853,7 +871,10 @@ export default function HeaderPlayer() {
       </div>
 
       {/* RIGHT: queue · devices · volume · fullscreen · clear */}
-      <div className="flex w-1/4 items-center justify-end gap-1">
+      <div
+        className="flex w-1/4 items-center justify-end gap-1"
+        onClick={(e) => e.stopPropagation()}
+      >
         {isActive && (
           <button
             onClick={() => setRailMode((m) => (m === "queue" ? null : "queue"))}
@@ -1059,7 +1080,9 @@ export default function HeaderPlayer() {
             anchored at the top (never scroll away — the ticket is the star);
             the rotating review content flows wide below it and scrolls on its
             own if long. Ambient party/TV view. ── */}
-        <div className="hidden min-h-0 flex-1 flex-col overflow-hidden lg:flex">
+        <div className="hidden min-h-0 flex-1 overflow-hidden lg:flex">
+          {/* Main column: ticket + rotating review + docked controls. */}
+          <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
           {/* Anchored header: cover art + now-playing. Centers vertically when
               there's no review content to show below. */}
           <div
@@ -1143,6 +1166,29 @@ export default function HeaderPlayer() {
               </span>
             )}
           </div>
+          </div>{/* end main column */}
+
+          {/* Playlist rail — part of the chrome, so it fades into the ambient
+              art view along with the controls when idle. Only when this device
+              is the active player (it owns the live track list). */}
+          {isActive && (
+            <aside
+              className={`flex w-80 flex-shrink-0 flex-col border-l border-white/10 px-4 pb-2 pt-4 transition-opacity duration-500 ${
+                chromeVisible ? "opacity-100" : "pointer-events-none opacity-0"
+              }`}
+            >
+              <TrackList
+                tracks={tracks}
+                isLoading={isLoadingTracks}
+                currentTrackIndex={currentTrackIndex}
+                status={status}
+                onPlayTrack={playTrack}
+                showId={activeShow?.showId}
+                recordingId={selectedRecording}
+                fill
+              />
+            </aside>
+          )}
         </div>
       </div>
     </div>

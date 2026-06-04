@@ -18,6 +18,9 @@ interface TrackListProps {
   // (showId, trackTitle). Omit on surfaces with no show context.
   showId?: string | null;
   recordingId?: string | null;
+  // Fill the available height (flex child) instead of capping at max-h-80 —
+  // used by the fullscreen player's side rail.
+  fill?: boolean;
 }
 
 // Heart toggle for a single track. Always rendered for favorited tracks (so
@@ -74,10 +77,11 @@ export default function TrackList({
   onPlayTrack,
   showId,
   recordingId,
+  fill = false,
 }: TrackListProps) {
   if (isLoading) {
     return (
-      <div className="mt-4 space-y-2">
+      <div className={fill ? "space-y-2" : "mt-4 space-y-2"}>
         <h4 className="text-sm font-bold text-deadly-title">Tracks</h4>
         {Array.from({ length: 6 }).map((_, i) => (
           <div key={i} className="flex items-center gap-3 rounded px-2 py-1.5">
@@ -93,9 +97,9 @@ export default function TrackList({
   if (!tracks || tracks.length === 0) return null;
 
   return (
-    <div className="mt-4">
+    <div className={fill ? "flex min-h-0 flex-1 flex-col" : "mt-4"}>
       <h4 className="mb-2 text-sm font-bold text-deadly-title">Tracks</h4>
-      <div className="max-h-80 overflow-y-auto">
+      <div className={fill ? "min-h-0 flex-1 overflow-y-auto" : "max-h-80 overflow-y-auto"}>
         {tracks.map((track, index) => {
           const isCurrent = index === currentTrackIndex;
           const isPlaying = isCurrent && (status === "playing" || status === "buffering");
