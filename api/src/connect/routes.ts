@@ -1,301 +1,170 @@
-import type { FastifyInstance } from "fastify";
-import { requireAuth } from "../auth/middleware.js";
-import { registerDevice, unregisterDevice, relayPlayOn, broadcastPosition, setActiveSession, clearActiveSession, getActiveSession, getDevicesForUser, updateUserState, deleteUserState, getUserState, sendSessionStop } from "./registry.js";
-import { upsertPlaybackPosition } from "../db/userdata.js";
-import type { ConnectMessage, RegisterMessage, CommandMessage, PositionUpdateMessage, SessionUpdateMessage, SessionPlayOnMessage } from "./types.js";
+import type { FastifyInstance, FastifyRequest } from "fastify";
+import { resolveUser } from "../auth/middleware.js";
+import {
+  registerDevice,
+  unregisterDevice,
+  handleHeartbeat,
+  handleLoad,
+  handlePlay,
+  handlePause,
+  handleSeek,
+  handleNext,
+  handlePrev,
+  handleTransfer,
+  handlePosition,
+  handleStop,
+  handleVolume,
+  handleVolumeReport,
+  startHeartbeatSweep,
+} from "./state.js";
+import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
 
 export async function connectRoutes(app: FastifyInstance): Promise<void> {
-  app.get("/ws/connect", {
-    schema: { tags: ["connect"], summary: "WebSocket Connect endpoint" },
-    websocket: true,
-    preHandler: requireAuth,
-  }, (socket, request) => {
-    const userId = request.user!.id;
-    let deviceId: string | null = null;
-    let deviceName = "Unknown";
-    let deviceType: "ios" | "android" | "web" = "web";
+  startHeartbeatSweep();
 
-    socket.on("message", (raw: { toString(): string }) => {
-      let msg: ConnectMessage;
+  app.get("/ws/connect", { websocket: true }, (socket, request) => {
+    let userId: string | null = null;
+    let registeredDeviceId: string | null = null;
+
+    // Auth via session cookie (sent automatically by browser on same-origin WS).
+    // Resolves asynchronously; messages arriving before it resolves await the same promise.
+    const authPromise = resolveUser(request).then((user) => {
+      if (!user) {
+        socket.close(4003, "Unauthorized");
+        return null;
+      }
+      userId = user.id;
+      request.log.info({ userId }, "ws/connect: authenticated");
+      return user;
+    });
+
+    socket.on("message", async (raw: Buffer | string) => {
+      // Ensure auth is resolved before processing
+      if (!userId) {
+        const user = await authPromise;
+        if (!user) return;
+      }
+
+      let msg: ClientMessage;
       try {
-        msg = JSON.parse(raw.toString()) as ConnectMessage;
+        msg = JSON.parse(typeof raw === "string" ? raw : raw.toString("utf-8"));
       } catch {
-        socket.send(JSON.stringify({ type: "error", message: "Invalid JSON" }));
         return;
       }
 
       switch (msg.type) {
         case "register": {
-          const reg = msg as RegisterMessage;
-          if (!reg.device?.deviceId) {
-            socket.send(JSON.stringify({ type: "error", message: "Missing device info" }));
-            return;
+          if (!msg.deviceId || !msg.deviceType || !msg.deviceName) return;
+          registeredDeviceId = msg.deviceId;
+          registerDevice(userId!, msg.deviceId, msg.deviceType as DeviceType, msg.deviceName, socket);
+          break;
+        }
+
+        case "heartbeat": {
+          if (!registeredDeviceId) return;
+          handleHeartbeat(userId!, registeredDeviceId);
+          break;
+        }
+
+        case "time_sync": {
+          // Stateless clock-offset probe. Echo clientTs, stamp serverTs.
+          // Stamping at send time (not receive) so the server-side processing
+          // delay is included in the round-trip rather than skewing the offset.
+          if (typeof msg.clientTs !== "number") return;
+          if (socket.readyState === socket.OPEN) {
+            socket.send(JSON.stringify({
+              type: "time_sync",
+              clientTs: msg.clientTs,
+              serverTs: Date.now(),
+            }));
           }
-          deviceId = reg.device.deviceId;
-          deviceName = reg.device.name;
-          deviceType = reg.device.type;
-          registerDevice(
-            { ...reg.device, userId },
-            socket as unknown as import("ws").WebSocket,
-          );
           break;
         }
 
         case "command": {
-          const cmd = msg as CommandMessage;
-          if (!deviceId) {
-            socket.send(JSON.stringify({ type: "error", message: "Register first" }));
-            return;
-          }
-          const action = cmd.command.action;
-          const state = getUserState(userId);
-          if (!state) {
-            socket.send(JSON.stringify({ type: "error", message: "No active session" }));
-            return;
-          }
-
-          if (action === "play" || action === "pause") {
-            updateUserState(userId, { isPlaying: action === "play" });
-          } else if (action === "stop") {
-            updateUserState(userId, {
-              activeDeviceId: null,
-              activeDeviceName: null,
-              activeDeviceType: null,
-              isPlaying: false,
-            });
-          } else if (action === "seek" && cmd.command.seekMs != null) {
-            updateUserState(userId, { positionMs: cmd.command.seekMs });
-          } else if (action === "next") {
-            const tracks = state.tracks;
-            const newIndex = tracks
-              ? Math.min(state.trackIndex + 1, tracks.length - 1)
-              : state.trackIndex + 1;
-            if (newIndex === state.trackIndex) break; // Already at last track
-            const newTrack = tracks?.[newIndex];
-            updateUserState(userId, {
-              trackIndex: newIndex,
-              positionMs: 0,
-              ...(newTrack ? {
-                trackTitle: newTrack.title,
-                durationMs: Math.floor(newTrack.duration * 1000),
-              } : {}),
-            });
-          } else if (action === "prev") {
-            const tracks = state.tracks;
-            const newIndex = Math.max(state.trackIndex - 1, 0);
-            if (newIndex === state.trackIndex) break; // Already at first track — client handles restart via seek
-            const newTrack = tracks?.[newIndex];
-            updateUserState(userId, {
-              trackIndex: newIndex,
-              positionMs: 0,
-              ...(newTrack ? {
-                trackTitle: newTrack.title,
-                durationMs: Math.floor(newTrack.duration * 1000),
-              } : {}),
-            });
-          }
-          break;
-        }
-
-        case "position_update": {
-          const pos = msg as PositionUpdateMessage;
-          if (!deviceId) return;
-          broadcastPosition(userId, deviceId, pos.state);
-          // Persist to DB
-          upsertPlaybackPosition(userId, {
-            showId: pos.state.showId,
-            recordingId: pos.state.recordingId,
-            trackIndex: pos.state.trackIndex,
-            positionMs: pos.state.positionMs,
-            date: pos.state.date,
-            venue: pos.state.venue,
-            location: pos.state.location,
-            updatedAt: Math.floor(Date.now() / 1000),
-          });
-          break;
-        }
-
-        case "session_update": {
-          const su = msg as SessionUpdateMessage;
-          if (!deviceId) return;
-
-          // Store tracks if provided
-          const tracksPatch = su.state.tracks ? { tracks: su.state.tracks } : {};
-
-          if (su.state.status === "stopped") {
-            // Park the user state (don't delete)
-            updateUserState(userId, {
-              showId: su.state.showId,
-              recordingId: su.state.recordingId,
-              trackIndex: su.state.trackIndex,
-              positionMs: su.state.positionMs,
-              durationMs: su.state.durationMs,
-              trackTitle: su.state.trackTitle,
-              date: su.state.date,
-              venue: su.state.venue,
-              location: su.state.location,
-              activeDeviceId: null,
-              activeDeviceName: null,
-              activeDeviceType: null,
-              isPlaying: false,
-              ...tracksPatch,
-            });
-            // Persist to DB on stop
-            upsertPlaybackPosition(userId, {
-              showId: su.state.showId,
-              recordingId: su.state.recordingId,
-              trackIndex: su.state.trackIndex,
-              positionMs: su.state.positionMs,
-              date: su.state.date,
-              venue: su.state.venue,
-              location: su.state.location,
-              updatedAt: Math.floor(Date.now() / 1000),
-            });
-            // Legacy
-            clearActiveSession(userId, deviceId);
-          } else if (su.state.status === "paused") {
-            // Paused: keep device set but not playing
-            updateUserState(userId, {
-              showId: su.state.showId,
-              recordingId: su.state.recordingId,
-              trackIndex: su.state.trackIndex,
-              positionMs: su.state.positionMs,
-              durationMs: su.state.durationMs,
-              trackTitle: su.state.trackTitle,
-              date: su.state.date,
-              venue: su.state.venue,
-              location: su.state.location,
-              activeDeviceId: deviceId,
-              activeDeviceName: deviceName,
-              activeDeviceType: deviceType,
-              isPlaying: false,
-              ...tracksPatch,
-            });
-            // Legacy
-            setActiveSession(userId, {
-              deviceId,
-              deviceName,
-              deviceType,
-              state: su.state,
-              updatedAt: Date.now(),
-            });
-          } else {
-            // Playing
-            updateUserState(userId, {
-              showId: su.state.showId,
-              recordingId: su.state.recordingId,
-              trackIndex: su.state.trackIndex,
-              positionMs: su.state.positionMs,
-              durationMs: su.state.durationMs,
-              trackTitle: su.state.trackTitle,
-              date: su.state.date,
-              venue: su.state.venue,
-              location: su.state.location,
-              activeDeviceId: deviceId,
-              activeDeviceName: deviceName,
-              activeDeviceType: deviceType,
-              isPlaying: true,
-              ...tracksPatch,
-            });
-            // Legacy
-            setActiveSession(userId, {
-              deviceId,
-              deviceName,
-              deviceType,
-              state: su.state,
-              updatedAt: Date.now(),
-            });
+          if (!registeredDeviceId || !msg.action) return;
+          request.log.info({ userId, deviceId: registeredDeviceId, action: msg.action }, "ws/connect: command");
+          switch (msg.action) {
+            case "load": {
+              const { showId, recordingId, tracks, trackIndex, positionMs, durationMs } = msg as Record<string, unknown>;
+              if (typeof showId !== "string" || typeof recordingId !== "string" || !Array.isArray(tracks)) return;
+              handleLoad(userId!, registeredDeviceId, socket, {
+                showId,
+                recordingId,
+                tracks: tracks as SessionTrack[],
+                trackIndex: typeof trackIndex === "number" ? trackIndex : 0,
+                positionMs: typeof positionMs === "number" ? positionMs : 0,
+                durationMs: typeof durationMs === "number" ? durationMs : 0,
+                date: (msg as Record<string, unknown>).date as string | null,
+                venue: (msg as Record<string, unknown>).venue as string | null,
+                location: (msg as Record<string, unknown>).location as string | null,
+                autoplay: (msg as Record<string, unknown>).autoplay as boolean | undefined,
+              });
+              break;
+            }
+            case "play": {
+              handlePlay(userId!, registeredDeviceId, socket);
+              break;
+            }
+            case "pause": {
+              handlePause(userId!);
+              break;
+            }
+            case "stop": {
+              handleStop(userId!);
+              break;
+            }
+            case "seek": {
+              const { trackIndex, positionMs, durationMs } = msg as Record<string, unknown>;
+              if (typeof trackIndex !== "number") return;
+              handleSeek(userId!, {
+                trackIndex,
+                positionMs: typeof positionMs === "number" ? positionMs : 0,
+                durationMs: typeof durationMs === "number" ? durationMs : undefined,
+              });
+              break;
+            }
+            case "next": {
+              handleNext(userId!);
+              break;
+            }
+            case "prev": {
+              handlePrev(userId!);
+              break;
+            }
+            case "transfer": {
+              const { targetDeviceId } = msg as Record<string, unknown>;
+              if (typeof targetDeviceId !== "string") return;
+              handleTransfer(userId!, registeredDeviceId, socket, targetDeviceId);
+              break;
+            }
+            case "position": {
+              const { positionMs } = msg as Record<string, unknown>;
+              if (typeof positionMs !== "number") return;
+              handlePosition(userId!, registeredDeviceId, positionMs);
+              break;
+            }
+            case "volume": {
+              const { volume } = msg as Record<string, unknown>;
+              if (typeof volume !== "number") return;
+              handleVolume(userId!, registeredDeviceId, socket, volume);
+              break;
+            }
+            case "volume_report": {
+              const { volume } = msg as Record<string, unknown>;
+              if (typeof volume !== "number") return;
+              handleVolumeReport(userId!, registeredDeviceId, volume);
+              break;
+            }
           }
           break;
         }
-
-        case "session_claim": {
-          if (!deviceId) return;
-          // Stop the old active device if different from the claimer
-          const claimState = getUserState(userId);
-          if (claimState?.activeDeviceId && claimState.activeDeviceId !== deviceId) {
-            sendSessionStop(userId, claimState.activeDeviceId);
-          }
-          const current = getActiveSession(userId);
-          if (current) {
-            setActiveSession(userId, {
-              ...current,
-              deviceId,
-              deviceName,
-              deviceType,
-              updatedAt: Date.now(),
-            });
-          }
-          // Also update user state — preserve current play/pause state
-          updateUserState(userId, {
-            activeDeviceId: deviceId,
-            activeDeviceName: deviceName,
-            activeDeviceType: deviceType,
-            isPlaying: claimState?.isPlaying ?? false,
-          });
-          break;
-        }
-
-        case "session_play_on": {
-          const spo = msg as SessionPlayOnMessage;
-          if (!deviceId) return;
-          // Stop the old active device if different from the play-on target
-          const playOnState = getUserState(userId);
-          if (playOnState?.activeDeviceId && playOnState.activeDeviceId !== spo.targetDeviceId) {
-            sendSessionStop(userId, playOnState.activeDeviceId);
-          }
-          // Find the target device info
-          const targetDevice = getDevicesForUser(userId).find(d => d.deviceId === spo.targetDeviceId);
-          if (!targetDevice) {
-            socket.send(JSON.stringify({ type: "error", message: "Target device not found" }));
-            return;
-          }
-          // Forward play_on to the target device
-          const senderDevice = getDevicesForUser(userId).find(d => d.deviceId === deviceId);
-          relayPlayOn(userId, deviceId, spo.targetDeviceId, spo.state, senderDevice?.name ?? "another device");
-          setActiveSession(userId, {
-            deviceId: targetDevice.deviceId,
-            deviceName: targetDevice.name,
-            deviceType: targetDevice.type,
-            state: spo.state,
-            updatedAt: Date.now(),
-          });
-          // Store tracks if provided
-          const playOnTracksPatch = spo.state.tracks ? { tracks: spo.state.tracks } : {};
-          // Also update user state
-          updateUserState(userId, {
-            showId: spo.state.showId,
-            recordingId: spo.state.recordingId,
-            trackIndex: spo.state.trackIndex,
-            positionMs: spo.state.positionMs,
-            date: spo.state.date,
-            venue: spo.state.venue,
-            location: spo.state.location,
-            activeDeviceId: targetDevice.deviceId,
-            activeDeviceName: targetDevice.name,
-            activeDeviceType: targetDevice.type,
-            isPlaying: spo.state.status === "playing",
-            ...playOnTracksPatch,
-          });
-          break;
-        }
-
-        case "state_clear": {
-          if (!deviceId) return;
-          deleteUserState(userId);
-          // Also clear legacy
-          clearActiveSession(userId);
-          break;
-        }
-
-        default:
-          socket.send(JSON.stringify({ type: "error", message: `Unknown message type` }));
       }
     });
 
     socket.on("close", () => {
-      if (deviceId) {
-        unregisterDevice(userId, deviceId);
+      if (userId && registeredDeviceId) {
+        unregisterDevice(userId, registeredDeviceId);
       }
     });
   });
