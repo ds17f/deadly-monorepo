@@ -70,7 +70,7 @@ export default function MeLayout({
         </div>
       </header>
 
-      <nav className="mb-8 flex gap-6 border-b border-white/10">
+      <nav className="mb-8 flex flex-wrap gap-x-6 gap-y-1 border-b border-white/10">
         {TABS.map((tab) => {
           // /me is the index (Recent) — exact match only, otherwise it
           // would light up on every sub-route. Sub-tabs use prefix match.

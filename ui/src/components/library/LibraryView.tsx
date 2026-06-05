@@ -252,7 +252,20 @@ export default function LibraryView({
               </Link>
               {(() => {
                 const p = actionProps(it);
-                return p ? <RowActionsBar {...p} /> : null;
+                if (!p) return null;
+                return (
+                  <>
+                    {/* Mobile: a compact "⋯" menu so the row text gets the
+                        space instead of a strip of icons. */}
+                    <div className="flex-shrink-0 sm:hidden">
+                      <RowActionsMenu {...p} />
+                    </div>
+                    {/* Desktop: discrete inline action icons (room to spare). */}
+                    <div className="hidden sm:flex">
+                      <RowActionsBar {...p} />
+                    </div>
+                  </>
+                );
               })()}
             </li>
           ))}
