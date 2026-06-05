@@ -347,8 +347,8 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         </div>
       </div>
 
-      {/* Watched installs */}
-      <CollapsibleSection title="Watched installs" forceOpen={forceOpen}>
+      {/* Watched installs — collapsed by default; a power-user drill-down */}
+      <CollapsibleSection title="Watched installs" defaultOpen={false} forceOpen={forceOpen}>
         <WatchedInstallsPanel onOpenInstall={openInstall} />
       </CollapsibleSection>
 
@@ -361,8 +361,8 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         />
       </CollapsibleSection>
 
-      {/* Recent Listening (finished sessions, last 24h) */}
-      <CollapsibleSection title="Recent Listening (24h)" forceOpen={forceOpen}>
+      {/* Recent Listening (finished sessions, last 24h) — collapsed by default */}
+      <CollapsibleSection title="Recent Listening (24h)" defaultOpen={false} forceOpen={forceOpen}>
         <RecentListening
           showMap={showMap}
           onOpenInstall={openInstall}
@@ -370,34 +370,22 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         />
       </CollapsibleSection>
 
-      {/* Network error recovery */}
-      <CollapsibleSection
-        title="Network error recovery"
-        forceOpen={forceOpen}
-      >
-        <NetworkErrorOutcomes showMap={showMap} onOpenInstall={openInstall} />
-      </CollapsibleSection>
-
       {watchedOnly ? null : <>
-      {/* Most-listened shows */}
-      <CollapsibleSection
-        title="Most-listened shows"
-        forceOpen={forceOpen}
-        onDetail={() => openDetail("top_shows")}
-      >
-        <TopShowsList
-          showMap={showMap}
-          onShowClick={(id) => openDetail("top_shows", id)}
-        />
-      </CollapsibleSection>
-
-      {/* Growth */}
+      {/* Growth — lead the aggregates with the headline trend */}
       <CollapsibleSection
         title="Growth (60d)"
         forceOpen={forceOpen}
         onDetail={() => openDetail("new_installs")}
       >
         <GrowthChart onDayClick={(day) => openDetail("new_installs", day)} />
+      </CollapsibleSection>
+
+      {/* Installs by platform */}
+      <CollapsibleSection title="Active installs by platform (30d)" forceOpen={forceOpen} onDetail={() => openDetail("platform_split")}>
+        <PlatformChart
+          data={data.platform_split}
+          onPlatformClick={(p) => openDetail("platform_split", p)}
+        />
       </CollapsibleSection>
 
       {/* Active Users */}
@@ -466,11 +454,15 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         </div>
       </CollapsibleSection>
 
-      {/* Platform Split */}
-      <CollapsibleSection title="Active installs by platform (30d)" forceOpen={forceOpen} onDetail={() => openDetail("platform_split")}>
-        <PlatformChart
-          data={data.platform_split}
-          onPlatformClick={(p) => openDetail("platform_split", p)}
+      {/* Most-listened shows */}
+      <CollapsibleSection
+        title="Most-listened shows"
+        forceOpen={forceOpen}
+        onDetail={() => openDetail("top_shows")}
+      >
+        <TopShowsList
+          showMap={showMap}
+          onShowClick={(id) => openDetail("top_shows", id)}
         />
       </CollapsibleSection>
 
@@ -513,6 +505,14 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         />
       </CollapsibleSection>
       </>}
+
+      {/* Network error recovery — diagnostic, kept at the bottom */}
+      <CollapsibleSection
+        title="Network error recovery"
+        forceOpen={forceOpen}
+      >
+        <NetworkErrorOutcomes showMap={showMap} onOpenInstall={openInstall} />
+      </CollapsibleSection>
 
     </div>
   );
