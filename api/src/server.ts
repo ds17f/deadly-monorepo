@@ -6,6 +6,7 @@ import { startAnalyticsSchedules } from "./routes/analytics.js";
 import { startTrendingSchedules } from "./routes/trending.js";
 import { startBetaSyncSchedule } from "./routes/beta.js";
 import { loadShowCatalog } from "./showCatalog.js";
+import { stopHeartbeatSweep } from "./connect/state.js";
 
 const HOST = process.env.HOST ?? "0.0.0.0";
 const PORT = Number(process.env.PORT ?? 3001);
@@ -28,6 +29,7 @@ async function start() {
 
 async function shutdown() {
   app.log.info("Shutting down...");
+  stopHeartbeatSweep();
   closeUsersDb();
   closeAnalyticsDb();
   await closeRedis();

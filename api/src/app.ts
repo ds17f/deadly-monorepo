@@ -17,7 +17,6 @@ import { popularRoutes } from "./routes/popular.js";
 import { betaRoutes } from "./routes/beta.js";
 import { devTokenRoutes } from "./auth/dev-token.js";
 import { isDev } from "./env.js";
-import { initRedisSubscriber } from "./connect/registry.js";
 
 export function buildApp() {
   const app = Fastify({
@@ -72,8 +71,6 @@ export function buildApp() {
   if (isDev) {
     app.register(devTokenRoutes);
   }
-
-  initRedisSubscriber();
 
   return app;
 }
