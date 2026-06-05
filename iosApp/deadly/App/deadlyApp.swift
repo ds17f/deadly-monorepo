@@ -111,15 +111,22 @@ struct deadlyApp: App {
                         // Restore last playback position if the app was killed mid-playback.
                         await container.playbackRestorationService.restoreIfAvailable()
                     }
-                    // Cold-start sync pull: if the user is already signed in
-                    // when the app launches, reconcile with the server.
+                    // Cold-start sync: if the user is already signed in when the
+                    // app launches, flush any queued local changes, then pull.
                     if container.authService.isSignedIn {
+                        _ = await container.favoritesPushService.flushPending()
                         _ = await container.userSyncApplyService.pullAndApply(reason: "cold_start")
                     }
                 }
                 .onChange(of: container.authService.isSignedIn) { _, signedIn in
                     if signedIn {
                         Task {
+                            // Flush before pulling: a signed-out browsing session
+                            // queues favorites in the outbox, and the one-time
+                            // startup backfill consumes its flag while still
+                            // signed out — so sign-in is the only moment those
+                            // rows get pushed. Pull-only would strand them.
+                            _ = await container.favoritesPushService.flushPending()
                             _ = await container.userSyncApplyService.pullAndApply(reason: "sign_in")
                         }
                     }
@@ -132,6 +139,7 @@ struct deadlyApp: App {
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
                     if container.authService.isSignedIn {
                         Task {
+                            _ = await container.favoritesPushService.flushPending()
                             _ = await container.userSyncApplyService.pullAndApply(reason: "foreground")
                         }
                     }
