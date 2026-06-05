@@ -36,6 +36,10 @@ final class AppContainer {
     let userSyncApplyService: UserSyncApplyService
     let playbackRestorationService: PlaybackRestorationService
     let analyticsService: AnalyticsService
+    let connectService: ConnectService
+
+    /// True only during the first launch of the process. Cleared after Connect + restore complete.
+    var isColdLaunch = true
 
     init() {
         let initStart = CFAbsoluteTimeGetCurrent()
@@ -290,6 +294,30 @@ final class AppContainer {
 
             // Analytics — fire-and-forget anonymous usage tracking
             analyticsService = analytics
+
+            // ConnectService — WebSocket device presence + playback coordination
+            let connect = MainActor.assumeIsolated {
+                ConnectService(appPreferences: prefs, authService: auth, streamPlayer: player)
+            }
+            connectService = connect
+
+            // Wire ConnectService into playback services (setter injection to avoid circular deps)
+            MainActor.assumeIsolated {
+                playlistSvc.connectService = connect
+                miniPlayer.connectService = connect
+                restorationSvc.connectService = connect
+                connect.onLoadShow = { [weak playlistSvc] showId, trackIndex, _, autoPlay in
+                    guard let svc = playlistSvc else { return }
+                    svc.suppressConnectNotify = true
+                    defer { svc.suppressConnectNotify = false }
+                    await svc.loadShow(showId)
+                    guard !svc.tracks.isEmpty else { return }
+                    let idx = min(trackIndex, svc.tracks.count - 1)
+                    // main's playTrack honors autoPlay natively (loadQueue autoPlay),
+                    // so no poll-then-pause dance is needed.
+                    svc.playTrack(at: idx, source: "connect", autoPlay: autoPlay)
+                }
+            }
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)
             analytics.track("app_open")
             analytics.track("cold_start", props: ["duration_ms": coldStartMs])

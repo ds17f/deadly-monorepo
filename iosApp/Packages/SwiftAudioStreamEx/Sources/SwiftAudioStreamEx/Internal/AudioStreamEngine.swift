@@ -24,6 +24,11 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// Set before calling player.play(), consumed in didStartPlaying callback.
     nonisolated(unsafe) private var pendingQueueURLs: [URL] = []
 
+    /// When true, the engine immediately pauses after the next track starts
+    /// playing. Used by skipTo(index:autoplay:false) to load a track (for
+    /// Connect transfer-in sync) without actually playing it.
+    nonisolated(unsafe) private var pauseAfterSkip = false
+
     /// Monotonically-increasing token bumped on every `loadQueue` call. A stale
     /// `resolveAllRedirects` completion whose captured generation no longer matches
     /// is dropped — this prevents a previously-tapped recording from clobbering
@@ -387,7 +392,7 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         return true
     }
 
-    func skipTo(index: Int) -> Bool {
+    func skipTo(index: Int, autoplay: Bool = true) -> Bool {
         lock.lock()
         let before = queue.currentIndex
         guard index >= 0, index < queue.resolved.count else {
@@ -403,13 +408,16 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         // User-driven navigation clears the "we gave up" gate so any future
         // error during this play gets a fresh retry budget.
         hasSurfacedFinalError = false
+        pauseAfterSkip = !autoplay
         let snapshot = queueSnapshotLocked()
         lock.unlock()
 
-        logger.notice("[PB] skipTo \(before, privacy: .public) → \(index, privacy: .public) \(snapshot, privacy: .public) play=\(remaining[0].absoluteString, privacy: .public)")
+        logger.notice("[PB] skipTo \(before, privacy: .public) → \(index, privacy: .public) \(snapshot, privacy: .public) autoplay=\(autoplay, privacy: .public) play=\(remaining[0].absoluteString, privacy: .public)")
 
         player.play(url: remaining[0])
-        startProgressTimer()
+        if autoplay {
+            startProgressTimer()
+        }
         return true
     }
 
@@ -558,8 +566,21 @@ extension AudioStreamEngine: AudioPlayerDelegate {
     func audioPlayerDidStartPlaying(player: AudioPlayer, with entryId: AudioEntryId) {
         lock.lock()
         let entrySnapshot = queueSnapshotLocked()
+        let shouldPause = pauseAfterSkip
+        pauseAfterSkip = false
         lock.unlock()
         logger.notice("[PB] didStartPlaying entry=\(entryId.id, privacy: .public) \(entrySnapshot, privacy: .public)")
+
+        // skipTo(autoplay:false) loads a track for Connect transfer-in sync
+        // without playing it: pause immediately and report .paused. currentIndex
+        // was already set in skipTo, so there's nothing further to reconcile.
+        if shouldPause {
+            logger.notice("[PB] didStartPlaying: pauseAfterSkip — pausing immediately (no autoplay)")
+            player.pause()
+            stopProgressTimer()
+            onStateChange?(.paused)
+            return
+        }
         // NOTE: previously fired `onStateChange?(.playing)` here, but this
         // signal is synthetic — AudioStreaming may still be buffering for
         // seconds afterward. Letting the real `audioPlayerStateChanged` →

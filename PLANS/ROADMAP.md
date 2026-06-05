@@ -45,13 +45,14 @@ Spotify-Connect-style cross-device control: see what's playing elsewhere,
 transfer playback, live position/transport over WebSocket. This is the correct
 home for **playback-position sync** (deliberately cut from REST) and the
 **presence layer** the social "hear" feature depends on.
-- **In progress on `connect-v2-port`.** Layered re-integration (no rebase — PR
-  #48 rewrote the player surfaces the branch built on), using `connect-v2` as
-  reference. **API (Layer 1) + web client (Layer 2) are ported and build
-  green**; they ship as one atomic unit (web is the only live v1 consumer).
-  Remaining: beta smoke-test the pair, then iOS + Android. Full strategy +
-  status in [`PLANS/connect-v2-port.md`](connect-v2-port.md). Still TODO:
-  promote `docs/connect-v2-architecture.md` into a numbered ADR (`docs/adr/`).
+- **Layered re-integration** (no rebase — PR #48 rewrote the player surfaces the
+  branch built on), using `connect-v2` as reference. **API (Layer 1) + web
+  client (Layer 2) shipped in PR #50** (atomic unit; web was the only live v1
+  consumer). **iOS (Layer 3) ported and builds green on `connect-v2-ios`** —
+  runtime two-device smoke test + device install still TODO. Remaining:
+  **Android (Layer 4)**. Full strategy + status in
+  [`PLANS/connect-v2-port.md`](connect-v2-port.md). Still TODO: promote
+  `docs/connect-v2-architecture.md` into a numbered ADR (`docs/adr/`).
 - **Revisit the state model with web as a first-class participant** — a browser
   tab is now a controller/target, which changes device identity and presence.
 

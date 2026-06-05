@@ -24,6 +24,9 @@ final class PlaylistServiceImpl: PlaylistService {
     private let downloadService: DownloadService?
     private let analyticsService: AnalyticsService?
     let streamPlayer: StreamPlayer
+    var connectService: ConnectService?
+    /// When true, playTrack() skips notifying Connect to avoid Connect→load→sendLoad loops.
+    var suppressConnectNotify = false
 
     /// Tracks the currently playing item for playback_end analytics.
     private var playbackStartInfo: (showId: String, recordingId: String, trackNumber: Int)?
@@ -234,6 +237,10 @@ final class PlaylistServiceImpl: PlaylistService {
         // fresh queue. Restore never hits this branch because nothing is loaded at launch.
         if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
             streamPlayer.skipTo(index: index)
+            if !suppressConnectNotify {
+                let durationMs = Int((tracks[index].durationInterval ?? 0) * 1000)
+                connectService?.sendSeek(trackIndex: index, positionMs: 0, durationMs: durationMs)
+            }
             return
         }
         // Propagate the show's ticket art so mini player and full player can display it.
@@ -277,6 +284,25 @@ final class PlaylistServiceImpl: PlaylistService {
         startTrackObservation()
         // The observer will pick up the eventual settled track and fire
         // playback_start once it's been current for the dwell window.
+
+        // Notify Connect so all devices receive the new session state
+        // (suppressed when loading from a Connect state broadcast to avoid loops).
+        if !suppressConnectNotify {
+            let sessionTracks = tracks.map { SessionTrack(title: $0.title, durationMs: Int(($0.durationInterval ?? 0) * 1000)) }
+            let firstDurationMs = index < tracks.count ? Int((tracks[index].durationInterval ?? 0) * 1000) : 0
+            connectService?.sendLoad(
+                showId: showId,
+                recordingId: recordingId,
+                tracks: sessionTracks,
+                trackIndex: index,
+                positionMs: 0,
+                durationMs: firstDurationMs,
+                date: currentShow?.date,
+                venue: currentShow?.venue.name,
+                location: currentShow?.location.displayText,
+                autoplay: autoPlay
+            )
+        }
     }
 
     private func startTrackObservation() {
