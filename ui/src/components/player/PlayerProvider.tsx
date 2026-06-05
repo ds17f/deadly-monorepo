@@ -654,6 +654,14 @@ export default function PlayerProvider({
       artist: "Grateful Dead",
       album: showId.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
     });
+    // Re-assert the track handlers after each metadata swap. iOS can drop the
+    // previously-registered action handlers when the now-playing item changes,
+    // and once they're gone the lock screen falls back to its default ±skip
+    // buttons instead of previous/next track. Setting them here (and NOT
+    // setting seekforward/seekbackward) keeps it on real track controls.
+    navigator.mediaSession.setActionHandler("previoustrack", () => prevTrack());
+    navigator.mediaSession.setActionHandler("nexttrack", () => nextTrack());
+    navigator.mediaSession.playbackState = "playing";
   }
 
   const playRecording = useCallback(async (identifier: string) => {
