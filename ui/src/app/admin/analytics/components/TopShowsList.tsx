@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePlatformFilter } from "./PlatformFilterContext";
 
 interface ShowInfo {
   id: string;
@@ -39,13 +40,14 @@ function formatDate(d: string): string {
 }
 
 export default function TopShowsList({ showMap, onShowClick }: TopShowsListProps) {
+  const { withParam, param } = usePlatformFilter();
   const [days, setDays] = useState(30);
   const [shows, setShows] = useState<TopShow[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setShows(null);
-    fetch(`/api/analytics/top-shows?days=${days}`, { credentials: "include" })
+    fetch(withParam(`/api/analytics/top-shows?days=${days}`), { credentials: "include" })
       .then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const body = (await res.json()) as { shows: TopShow[] };
@@ -55,7 +57,7 @@ export default function TopShowsList({ showMap, onShowClick }: TopShowsListProps
       .catch((e: unknown) =>
         setError(e instanceof Error ? e.message : "Failed to load"),
       );
-  }, [days]);
+  }, [days, withParam, param]);
 
   return (
     <div className="space-y-2">

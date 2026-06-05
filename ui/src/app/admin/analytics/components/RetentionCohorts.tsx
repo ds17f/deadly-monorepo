@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePlatformFilter } from "./PlatformFilterContext";
 
 interface Cohort {
   cohort_week: string;
@@ -45,11 +46,12 @@ function CellRate({
 }
 
 export default function RetentionCohorts() {
+  const { withParam, param } = usePlatformFilter();
   const [cohorts, setCohorts] = useState<Cohort[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/api/analytics/retention?weeks=12", { credentials: "include" })
+    fetch(withParam("/api/analytics/retention?weeks=12"), { credentials: "include" })
       .then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = (await res.json()) as { cohorts: Cohort[] };
@@ -59,7 +61,7 @@ export default function RetentionCohorts() {
       .catch((e: unknown) =>
         setError(e instanceof Error ? e.message : "Failed to load"),
       );
-  }, []);
+  }, [withParam, param]);
 
   if (error) {
     return <p className="text-sm text-red-400">Retention error: {error}</p>;

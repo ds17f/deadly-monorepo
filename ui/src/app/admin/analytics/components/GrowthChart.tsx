@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePlatformFilter } from "./PlatformFilterContext";
 
 interface GrowthDay {
   day: string;
@@ -30,6 +31,7 @@ export default function GrowthChart({
 }: {
   onDayClick?: (day: string) => void;
 }) {
+  const { withParam, param } = usePlatformFilter();
   const [days, setDays] = useState<number>(7);
   const [data, setData] = useState<GrowthDay[] | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -37,7 +39,7 @@ export default function GrowthChart({
 
   useEffect(() => {
     setData(null);
-    fetch(`/api/analytics/growth?days=${days}`, { credentials: "include" })
+    fetch(withParam(`/api/analytics/growth?days=${days}`), { credentials: "include" })
       .then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const body = (await res.json()) as { days: GrowthDay[] };
@@ -48,7 +50,7 @@ export default function GrowthChart({
       .catch((e: unknown) =>
         setError(e instanceof Error ? e.message : "Failed to load"),
       );
-  }, [days]);
+  }, [days, withParam, param]);
 
   const windowPicker = (
     <div className="flex items-center gap-1 ml-auto">

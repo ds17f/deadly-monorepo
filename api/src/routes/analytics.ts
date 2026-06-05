@@ -28,6 +28,22 @@ import { requireAdmin } from "../auth/middleware.js";
 import { ANALYTICS_WATERSHED } from "../analytics-watershed.js";
 
 const VALID_PLATFORMS = new Set(["ios", "android", "web"]);
+
+/**
+ * Parse the admin dashboard's `?platforms=ios,android` filter into a
+ * validated allowlist. Returns undefined when the param is absent or
+ * resolves to no known platforms — the db layer treats that as "all
+ * platforms" (no filter). Unknown tokens are dropped silently.
+ */
+function parsePlatforms(raw: unknown): string[] | undefined {
+  if (typeof raw !== "string" || raw.trim() === "") return undefined;
+  const list = raw
+    .split(",")
+    .map((p) => p.trim())
+    .filter((p) => VALID_PLATFORMS.has(p));
+  return list.length > 0 ? list : undefined;
+}
+
 const MAX_EVENTS_PER_BATCH = 100;
 const MAX_PROP_STRING_LENGTH = 500;
 
@@ -223,7 +239,13 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
         tags: ["analytics"],
         summary: "Analytics summary (admin)",
         description:
-          "Returns key metrics: DAU/WAU/MAU, top shows, platform split, feature adoption.",
+          "Returns key metrics: DAU/WAU/MAU, top shows, platform split, feature adoption. Optional `platforms` (comma-separated) restricts every metric to the selected platforms.",
+        querystring: {
+          type: "object",
+          properties: {
+            platforms: { type: "string" },
+          },
+        },
         response: {
           200: {
             type: "object",
@@ -359,8 +381,9 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       },
       preHandler: requireAdmin,
     },
-    async () => {
-      return getSummary();
+    async (request) => {
+      const { platforms } = request.query as { platforms?: string };
+      return getSummary(parsePlatforms(platforms));
     },
   );
 
@@ -383,6 +406,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
           properties: {
             metric: { type: "string" },
             filter: { type: "string" },
+            platforms: { type: "string" },
           },
         },
         response: {
@@ -409,11 +433,15 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request, reply) => {
-      const { metric, filter } = request.query as { metric: string; filter?: string };
+      const { metric, filter, platforms } = request.query as {
+        metric: string;
+        filter?: string;
+        platforms?: string;
+      };
       if (!VALID_METRICS.has(metric)) {
         return reply.code(400).send({ error: `Invalid metric: ${metric}` });
       }
-      return getDetail(metric as DetailMetric, filter);
+      return getDetail(metric as DetailMetric, filter, parsePlatforms(platforms));
     },
   );
 
@@ -487,15 +515,19 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
           type: "object",
           properties: {
             days: { type: "number", default: 30 },
+            platforms: { type: "string" },
           },
         },
       },
       preHandler: requireAdmin,
     },
     async (request) => {
-      const { days } = request.query as { days?: number };
+      const { days, platforms } = request.query as {
+        days?: number;
+        platforms?: string;
+      };
       const clampedDays = Math.min(Math.max(days ?? 30, 1), 90);
-      return getShowPlaybackSummary(clampedDays);
+      return getShowPlaybackSummary(clampedDays, parsePlatforms(platforms));
     },
   );
 
@@ -516,6 +548,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
           properties: {
             metric: { type: "string" },
             days: { type: "number", default: 14 },
+            platforms: { type: "string" },
           },
         },
         response: {
@@ -538,12 +571,16 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request, reply) => {
-      const { metric, days } = request.query as { metric: string; days?: number };
+      const { metric, days, platforms } = request.query as {
+        metric: string;
+        days?: number;
+        platforms?: string;
+      };
       if (!VALID_TS_METRICS.has(metric)) {
         return reply.code(400).send({ error: `Invalid metric: ${metric}` });
       }
       const clampedDays = Math.min(Math.max(days ?? 14, 1), 90);
-      return getTimeseries(metric as TimeseriesMetric, clampedDays);
+      return getTimeseries(metric as TimeseriesMetric, clampedDays, parsePlatforms(platforms));
     },
   );
 
@@ -559,6 +596,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
           properties: {
             days: { type: "number", default: 30 },
             limit: { type: "number", default: 20 },
+            platforms: { type: "string" },
           },
         },
         response: {
@@ -584,10 +622,16 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request) => {
-      const { days, limit } = request.query as { days?: number; limit?: number };
+      const { days, limit, platforms } = request.query as {
+        days?: number;
+        limit?: number;
+        platforms?: string;
+      };
       const clampedDays = Math.min(Math.max(days ?? 30, 1), 365);
       const clampedLimit = Math.min(Math.max(limit ?? 20, 1), 100);
-      return { shows: getTopShows(clampedDays, clampedLimit) };
+      return {
+        shows: getTopShows(clampedDays, clampedLimit, parsePlatforms(platforms)),
+      };
     },
   );
 
@@ -600,7 +644,10 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
         summary: "New installs per day by platform (admin)",
         querystring: {
           type: "object",
-          properties: { days: { type: "number", default: 60 } },
+          properties: {
+            days: { type: "number", default: 60 },
+            platforms: { type: "string" },
+          },
         },
         response: {
           200: {
@@ -626,9 +673,12 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request) => {
-      const { days } = request.query as { days?: number };
+      const { days, platforms } = request.query as {
+        days?: number;
+        platforms?: string;
+      };
       const clamped = Math.min(Math.max(days ?? 60, 1), 365);
-      return { days: getGrowthByPlatform(clamped) };
+      return { days: getGrowthByPlatform(clamped, parsePlatforms(platforms)) };
     },
   );
 
@@ -639,6 +689,12 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       schema: {
         tags: ["analytics"],
         summary: "Currently listening (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            platforms: { type: "string" },
+          },
+        },
         response: {
           200: {
             type: "object",
@@ -675,7 +731,10 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       },
       preHandler: requireAdmin,
     },
-    async () => ({ listeners: getLiveListeners() }),
+    async (request) => {
+      const { platforms } = request.query as { platforms?: string };
+      return { listeners: getLiveListeners(parsePlatforms(platforms)) };
+    },
   );
 
   // GET /api/analytics/recent-listening — finished sessions in the last N hours.
@@ -690,6 +749,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
           properties: {
             hours: { type: "number", default: 24 },
             limit: { type: "number", default: 100 },
+            platforms: { type: "string" },
           },
         },
         response: {
@@ -732,14 +792,19 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request) => {
-      const { hours, limit } = request.query as {
+      const { hours, limit, platforms } = request.query as {
         hours?: number;
         limit?: number;
+        platforms?: string;
       };
       const clampedHours = Math.min(Math.max(hours ?? 24, 1), 168);
       const clampedLimit = Math.min(Math.max(limit ?? 100, 1), 500);
       return {
-        sessions: getRecentListening(clampedHours, clampedLimit),
+        sessions: getRecentListening(
+          clampedHours,
+          clampedLimit,
+          parsePlatforms(platforms),
+        ),
       };
     },
   );
@@ -787,7 +852,10 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
         summary: "Search quality metrics (admin)",
         querystring: {
           type: "object",
-          properties: { days: { type: "number", default: 30 } },
+          properties: {
+            days: { type: "number", default: 30 },
+            platforms: { type: "string" },
+          },
         },
         response: {
           200: {
@@ -824,9 +892,12 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request) => {
-      const { days } = request.query as { days?: number };
+      const { days, platforms } = request.query as {
+        days?: number;
+        platforms?: string;
+      };
       const clamped = Math.min(Math.max(days ?? 30, 1), 90);
-      return getSearchQuality(clamped);
+      return getSearchQuality(clamped, parsePlatforms(platforms));
     },
   );
 
@@ -841,6 +912,7 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
           type: "object",
           properties: {
             weeks: { type: "number", default: 12 },
+            platforms: { type: "string" },
           },
         },
         response: {
@@ -867,9 +939,12 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request) => {
-      const { weeks } = request.query as { weeks?: number };
+      const { weeks, platforms } = request.query as {
+        weeks?: number;
+        platforms?: string;
+      };
       const clamped = Math.min(Math.max(weeks ?? 12, 1), 52);
-      return { cohorts: getRetentionCohorts(clamped) };
+      return { cohorts: getRetentionCohorts(clamped, parsePlatforms(platforms)) };
     },
   );
 

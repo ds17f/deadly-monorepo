@@ -7,6 +7,36 @@ const DB_PATH =
 
 let db: Database.Database | null = null;
 
+/** Platforms the analytics pipeline recognizes. `web` is browser usage —
+ *  not an installed app — so the admin dashboard defaults to filtering it
+ *  out of install/active-user counts (see platformClause + the dashboard
+ *  platform toggles). */
+export const KNOWN_PLATFORMS = ["ios", "android", "web"] as const;
+
+/**
+ * Build a safe ` AND <col> IN ('ios','android')` SQL fragment from an
+ * admin-supplied platform allowlist. Each value is validated against
+ * {@link KNOWN_PLATFORMS}, so inlining them carries no injection risk and
+ * callers can splice the fragment into any WHERE without binding extra
+ * params.
+ *
+ * Returns "" (a no-op) when the filter is absent, empty/all-invalid, or
+ * selects every known platform — so an unfiltered call behaves exactly as
+ * it did before platform filtering existed. `col` lets aliased queries
+ * target e.g. `s.platform`.
+ */
+export function platformClause(
+  platforms: string[] | undefined,
+  col = "platform",
+): string {
+  if (!platforms || platforms.length === 0) return "";
+  const valid = [...new Set(platforms)].filter((p) =>
+    (KNOWN_PLATFORMS as readonly string[]).includes(p),
+  );
+  if (valid.length === 0 || valid.length === KNOWN_PLATFORMS.length) return "";
+  return ` AND ${col} IN (${valid.map((p) => `'${p}'`).join(", ")})`;
+}
+
 export function getAnalyticsDb(): Database.Database {
   if (db) return db;
 
@@ -354,19 +384,24 @@ export interface AnalyticsSummary {
   events_today: number;
 }
 
-export function getSummary(): AnalyticsSummary {
+export function getSummary(platforms?: string[]): AnalyticsSummary {
   const db = getAnalyticsDb();
   const now = Date.now();
   const dayAgo = now - 24 * 3600 * 1000;
   const weekAgo = now - 7 * 24 * 3600 * 1000;
   const monthAgo = now - 30 * 24 * 3600 * 1000;
+  // Platform filter spliced into each WHERE. `pc` targets the bare
+  // `platform` column; `pcS` targets the `s.`-aliased playback_start rows
+  // in the top_shows CTE.
+  const pc = platformClause(platforms);
+  const pcS = platformClause(platforms, "s.platform");
 
   // DAU/WAU/MAU from app_open events
   const dau =
     (
       db
         .prepare(
-          `SELECT COUNT(DISTINCT iid) AS c FROM analytics_events WHERE event = 'app_open' AND ts > ?`,
+          `SELECT COUNT(DISTINCT iid) AS c FROM analytics_events WHERE event = 'app_open' AND ts > ?${pc}`,
         )
         .get(dayAgo) as { c: number }
     )?.c ?? 0;
@@ -375,7 +410,7 @@ export function getSummary(): AnalyticsSummary {
     (
       db
         .prepare(
-          `SELECT COUNT(DISTINCT iid) AS c FROM analytics_events WHERE event = 'app_open' AND ts > ?`,
+          `SELECT COUNT(DISTINCT iid) AS c FROM analytics_events WHERE event = 'app_open' AND ts > ?${pc}`,
         )
         .get(weekAgo) as { c: number }
     )?.c ?? 0;
@@ -384,7 +419,7 @@ export function getSummary(): AnalyticsSummary {
     (
       db
         .prepare(
-          `SELECT COUNT(DISTINCT iid) AS c FROM analytics_events WHERE event = 'app_open' AND ts > ?`,
+          `SELECT COUNT(DISTINCT iid) AS c FROM analytics_events WHERE event = 'app_open' AND ts > ?${pc}`,
         )
         .get(monthAgo) as { c: number }
     )?.c ?? 0;
@@ -393,17 +428,18 @@ export function getSummary(): AnalyticsSummary {
   const total_installs =
     (
       db
-        .prepare(`SELECT COUNT(DISTINCT iid) AS c FROM analytics_events`)
+        .prepare(`SELECT COUNT(DISTINCT iid) AS c FROM analytics_events WHERE 1=1${pc}`)
         .get() as { c: number }
     )?.c ?? 0;
 
-  // Stale installs: seen ever but not in last 30 days
+  // Stale installs: seen ever but not in last 30 days (both bounds honor
+  // the platform filter, so "stale" means stale on the selected platforms).
   const stale_installs_30d =
     (
       db
         .prepare(
           `SELECT COUNT(DISTINCT iid) AS c FROM analytics_events
-       WHERE iid NOT IN (SELECT DISTINCT iid FROM analytics_events WHERE ts > ?)`,
+       WHERE iid NOT IN (SELECT DISTINCT iid FROM analytics_events WHERE ts > ?${pc})${pc}`,
         )
         .get(monthAgo) as { c: number }
     )?.c ?? 0;
@@ -412,7 +448,7 @@ export function getSummary(): AnalyticsSummary {
   const platformRows = db
     .prepare(
       `SELECT platform, COUNT(DISTINCT iid) AS c FROM analytics_events
-     WHERE event = 'app_open' AND ts > ? GROUP BY platform`,
+     WHERE event = 'app_open' AND ts > ?${pc} GROUP BY platform`,
     )
     .all(monthAgo) as Array<{ platform: string; c: number }>;
   const platform_split: Record<string, number> = {};
@@ -443,14 +479,14 @@ export function getSummary(): AnalyticsSummary {
            AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
            AND e.ts BETWEEN s.ts AND s.ts + ?
            AND CAST(json_extract(e.props, '$.listened_ms') AS REAL) >= ?
-         WHERE s.event = 'playback_start' AND s.ts > ?
+         WHERE s.event = 'playback_start' AND s.ts > ?${pcS}
        ),
        track_plays AS (
          SELECT
            json_extract(props, '$.show_id') AS show_id,
            COUNT(*) AS track_plays
          FROM analytics_events
-         WHERE event = 'playback_start' AND ts > ?
+         WHERE event = 'playback_start' AND ts > ?${pc}
          GROUP BY show_id
        ),
        completions AS (
@@ -465,7 +501,7 @@ export function getSummary(): AnalyticsSummary {
            SUM(CAST(json_extract(props, '$.duration_ms') AS REAL)) AS sum_duration,
            COUNT(*) AS end_count
          FROM analytics_events
-         WHERE event = 'playback_end' AND ts > ?
+         WHERE event = 'playback_end' AND ts > ?${pc}
            AND CAST(json_extract(props, '$.duration_ms') AS REAL) > 0
          GROUP BY show_id
        )
@@ -507,7 +543,7 @@ export function getSummary(): AnalyticsSummary {
        json_extract(props, '$.category') AS category,
        COUNT(*) AS uses
      FROM analytics_events
-     WHERE event = 'feature_use' AND ts > ?
+     WHERE event = 'feature_use' AND ts > ?${pc}
      GROUP BY feature, category ORDER BY uses DESC`,
     )
     .all(monthAgo) as Array<{
@@ -545,7 +581,7 @@ export function getSummary(): AnalyticsSummary {
            COUNT(DISTINCT iid) AS users
          FROM analytics_events
          WHERE event = 'feature_use'
-           AND ts > ?
+           AND ts > ?${pc}
            AND json_extract(props, '$.feature') IN (${placeholders})
            AND COALESCE(json_extract(props, '$.target_id'), json_extract(props, '$.show_id')) IS NOT NULL
          GROUP BY show_id
@@ -584,7 +620,7 @@ export function getSummary(): AnalyticsSummary {
          COUNT(*) AS sample_count
        FROM analytics_events
        WHERE event = 'playback_end'
-         AND ts > ?
+         AND ts > ?${pc}
          AND CAST(json_extract(props, '$.listened_ms') AS REAL) >= ?
          AND CAST(json_extract(props, '$.duration_ms') AS REAL) >= ?`,
     )
@@ -607,7 +643,7 @@ export function getSummary(): AnalyticsSummary {
          COUNT(*) AS plays,
          COUNT(DISTINCT iid) AS distinct_listeners
        FROM analytics_events
-       WHERE event = 'playback_start' AND ts > ?
+       WHERE event = 'playback_start' AND ts > ?${pc}
        GROUP BY source
        ORDER BY plays DESC`,
     )
@@ -624,7 +660,7 @@ export function getSummary(): AnalyticsSummary {
     (
       db
         .prepare(
-          `SELECT COUNT(*) AS c FROM analytics_events WHERE ts >= ?`,
+          `SELECT COUNT(*) AS c FROM analytics_events WHERE ts >= ?${pc}`,
         )
         .get(todayStart) as { c: number }
     )?.c ?? 0;
@@ -669,10 +705,14 @@ export interface RetentionCohort {
  * report null for that bucket so the UI can render a hatched / "—" cell
  * instead of misleading 0%. Defaults to the last 12 weeks of cohorts.
  */
-export function getRetentionCohorts(weeks = 12): RetentionCohort[] {
+export function getRetentionCohorts(
+  weeks = 12,
+  platforms?: string[],
+): RetentionCohort[] {
   const db = getAnalyticsDb();
   const oldestWeekStart = Date.now() - weeks * 7 * 24 * 3600 * 1000;
   const todayDay = new Date().toISOString().slice(0, 10);
+  const pc = platformClause(platforms);
 
   return db
     .prepare(
@@ -681,14 +721,14 @@ export function getRetentionCohorts(weeks = 12): RetentionCohort[] {
                 MIN(ts) AS install_ts,
                 date(MIN(ts) / 1000, 'unixepoch') AS install_day
          FROM analytics_events
-         WHERE event = 'app_open'
+         WHERE event = 'app_open'${pc}
          GROUP BY iid
          HAVING install_ts >= ?
        ),
        active AS (
          SELECT DISTINCT iid, date(ts / 1000, 'unixepoch') AS active_day
          FROM analytics_events
-         WHERE event = 'app_open'
+         WHERE event = 'app_open'${pc}
        )
        SELECT
          strftime('%Y-W%W', f.install_day) AS cohort_week,
@@ -733,9 +773,15 @@ const TOP_SHOWS_COMPLETION_MIN_ENDS_PARAM = 5;
  * Limits to top 20 (UI may render fewer) and filters tiny-sample shows
  * out of the completion column the same way the summary does.
  */
-export function getTopShows(days: number, limit = 20): TopShowRow[] {
+export function getTopShows(
+  days: number,
+  limit = 20,
+  platforms?: string[],
+): TopShowRow[] {
   const db = getAnalyticsDb();
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
+  const pc = platformClause(platforms);
+  const pcS = platformClause(platforms, "s.platform");
   return db
     .prepare(
       `WITH listens AS (
@@ -750,14 +796,14 @@ export function getTopShows(days: number, limit = 20): TopShowRow[] {
            AND json_extract(e.props, '$.show_id') = json_extract(s.props, '$.show_id')
            AND e.ts BETWEEN s.ts AND s.ts + ?
            AND CAST(json_extract(e.props, '$.listened_ms') AS REAL) >= ?
-         WHERE s.event = 'playback_start' AND s.ts > ?
+         WHERE s.event = 'playback_start' AND s.ts > ?${pcS}
        ),
        track_plays AS (
          SELECT
            json_extract(props, '$.show_id') AS show_id,
            COUNT(*) AS track_plays
          FROM analytics_events
-         WHERE event = 'playback_start' AND ts > ?
+         WHERE event = 'playback_start' AND ts > ?${pc}
          GROUP BY show_id
        ),
        completions AS (
@@ -772,7 +818,7 @@ export function getTopShows(days: number, limit = 20): TopShowRow[] {
            SUM(CAST(json_extract(props, '$.duration_ms') AS REAL)) AS sum_duration,
            COUNT(*) AS end_count
          FROM analytics_events
-         WHERE event = 'playback_end' AND ts > ?
+         WHERE event = 'playback_end' AND ts > ?${pc}
            AND CAST(json_extract(props, '$.duration_ms') AS REAL) > 0
          GROUP BY show_id
        )
@@ -851,12 +897,13 @@ const LIVE_END_WINDOW_MS = 2 * 60 * 1000;
  *  window. */
 const NON_TERMINAL_END_REASONS_SQL = `('app_backgrounded')`;
 
-export function getLiveListeners(): LiveListener[] {
+export function getLiveListeners(platforms?: string[]): LiveListener[] {
   const db = getAnalyticsDb();
   const now = Date.now();
   const startWindowStart = now - LIVE_START_WINDOW_MS;
   const endWindowStart = now - LIVE_END_WINDOW_MS;
   const lookbackStart = now - 6 * 3600 * 1000;
+  const pc = platformClause(platforms);
 
   // Pick the latest playback event per iid (start or end), then keep
   // only those whose latest event qualifies under the dual-window rule.
@@ -880,7 +927,7 @@ export function getLiveListeners(): LiveListener[] {
            ROW_NUMBER() OVER (PARTITION BY iid ORDER BY ts DESC) AS rn
          FROM analytics_events
          WHERE event IN ('playback_start', 'playback_end')
-           AND ts >= ?
+           AND ts >= ?${pc}
            AND json_extract(props, '$.show_id') IS NOT NULL
            AND NOT (
              event = 'playback_end'
@@ -961,9 +1008,13 @@ export interface SearchQuality {
   top_successful: Array<{ query: string; count: number }>;
 }
 
-export function getSearchQuality(days = 30): SearchQuality {
+export function getSearchQuality(
+  days = 30,
+  platforms?: string[],
+): SearchQuality {
   const db = getAnalyticsDb();
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
+  const pc = platformClause(platforms);
 
   const overview = db
     .prepare(
@@ -972,7 +1023,7 @@ export function getSearchQuality(days = 30): SearchQuality {
          COUNT(CASE WHEN json_extract(props, '$.result_count') = 0 THEN 1 END) AS zero_result_count,
          COUNT(CASE WHEN json_extract(props, '$.selected_index') IS NULL THEN 1 END) AS abandon_count
        FROM analytics_events
-       WHERE event = 'search' AND ts > ?`,
+       WHERE event = 'search' AND ts > ?${pc}`,
     )
     .get(cutoff) as {
     total_searches: number;
@@ -987,7 +1038,7 @@ export function getSearchQuality(days = 30): SearchQuality {
     .prepare(
       `SELECT CAST(json_extract(props, '$.selected_index') AS INTEGER) AS si
        FROM analytics_events
-       WHERE event = 'search' AND ts > ?
+       WHERE event = 'search' AND ts > ?${pc}
          AND json_extract(props, '$.selected_index') IS NOT NULL`,
     )
     .all(cutoff) as Array<{ si: number }>;
@@ -1010,7 +1061,7 @@ export function getSearchQuality(days = 30): SearchQuality {
     .prepare(
       `SELECT json_extract(props, '$.query') AS query, COUNT(*) AS count
        FROM analytics_events
-       WHERE event = 'search' AND ts > ?
+       WHERE event = 'search' AND ts > ?${pc}
          AND json_extract(props, '$.result_count') = 0
          AND length(TRIM(json_extract(props, '$.query'))) >= 3
        GROUP BY query
@@ -1023,7 +1074,7 @@ export function getSearchQuality(days = 30): SearchQuality {
     .prepare(
       `SELECT json_extract(props, '$.query') AS query, COUNT(*) AS count
        FROM analytics_events
-       WHERE event = 'search' AND ts > ?
+       WHERE event = 'search' AND ts > ?${pc}
          AND CAST(json_extract(props, '$.result_count') AS INTEGER) > 0
          AND length(TRIM(json_extract(props, '$.query'))) >= 3
        GROUP BY query
@@ -1057,9 +1108,23 @@ export interface GrowthDay {
  * the platform of its first event. Window is the last `days` days
  * inclusive.
  */
-export function getGrowthByPlatform(days = 60): GrowthDay[] {
+export function getGrowthByPlatform(
+  days = 60,
+  platforms?: string[],
+): GrowthDay[] {
   const db = getAnalyticsDb();
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
+  // Each iid is attributed to its first event's platform, so the platform
+  // filter is applied after that attribution: a deselected platform is
+  // dropped from both its own series and the daily total. null = show all.
+  const selected =
+    platforms && platforms.length
+      ? new Set(
+          platforms.filter((p) =>
+            (KNOWN_PLATFORMS as readonly string[]).includes(p),
+          ),
+        )
+      : null;
 
   const rows = db
     .prepare(
@@ -1079,6 +1144,7 @@ export function getGrowthByPlatform(days = 60): GrowthDay[] {
 
   const byDay = new Map<string, GrowthDay>();
   for (const r of rows) {
+    if (selected && !selected.has(r.platform)) continue;
     const slot =
       byDay.get(r.day) ??
       ({ day: r.day, ios: 0, android: 0, web: 0, total: 0 } as GrowthDay);
@@ -1102,29 +1168,34 @@ export interface TimeseriesPoint {
   value: number;
 }
 
-export function getTimeseries(metric: TimeseriesMetric, days: number): TimeseriesPoint[] {
+export function getTimeseries(
+  metric: TimeseriesMetric,
+  days: number,
+  platforms?: string[],
+): TimeseriesPoint[] {
   const db = getAnalyticsDb();
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
+  const pc = platformClause(platforms);
 
   switch (metric) {
     case "dau":
       return db.prepare(`
         SELECT date(ts / 1000, 'unixepoch') AS day, COUNT(DISTINCT iid) AS value
-        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?${pc}
         GROUP BY day ORDER BY day ASC
       `).all(cutoff) as TimeseriesPoint[];
 
     case "events":
       return db.prepare(`
         SELECT date(ts / 1000, 'unixepoch') AS day, COUNT(*) AS value
-        FROM analytics_events WHERE ts > ?
+        FROM analytics_events WHERE ts > ?${pc}
         GROUP BY day ORDER BY day ASC
       `).all(cutoff) as TimeseriesPoint[];
 
     case "playback_starts":
       return db.prepare(`
         SELECT date(ts / 1000, 'unixepoch') AS day, COUNT(*) AS value
-        FROM analytics_events WHERE event = 'playback_start' AND ts > ?
+        FROM analytics_events WHERE event = 'playback_start' AND ts > ?${pc}
         GROUP BY day ORDER BY day ASC
       `).all(cutoff) as TimeseriesPoint[];
 
@@ -1137,6 +1208,7 @@ export function getTimeseries(metric: TimeseriesMetric, days: number): Timeserie
         WITH first_seen AS (
           SELECT iid, MIN(ts) AS first_ts
           FROM analytics_events
+          WHERE 1=1${pc}
           GROUP BY iid
         )
         SELECT date(first_ts / 1000, 'unixepoch') AS day,
@@ -1286,12 +1358,14 @@ export interface RecentListeningSession {
 export function getRecentListening(
   hours = 24,
   limit = 100,
+  platforms?: string[],
 ): RecentListeningSession[] {
   const db = getAnalyticsDb();
   const now = Date.now();
   const windowStart = now - hours * 3600 * 1000;
   const liveStartWindow = now - LIVE_START_WINDOW_MS;
   const liveEndWindow = now - LIVE_END_WINDOW_MS;
+  const pc = platformClause(platforms);
   // Inner lookback for "what's this iid's most recent event overall" —
   // must be at least as wide as the longer of the two live windows.
   const liveLookbackStart = liveStartWindow;
@@ -1312,7 +1386,7 @@ export function getRecentListening(
            json_extract(props, '$.source') AS source
          FROM analytics_events
          WHERE event IN ('playback_start', 'playback_end')
-           AND ts >= ?
+           AND ts >= ?${pc}
            AND json_extract(props, '$.show_id') IS NOT NULL
        ),
        agg AS (
@@ -1574,9 +1648,13 @@ export function getNetworkErrorOutcomes(
   };
 }
 
-export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
+export function getShowPlaybackSummary(
+  days: number,
+  platforms?: string[],
+): ShowPlaybackSummary {
   const db = getAnalyticsDb();
   const cutoff = Date.now() - days * 24 * 3600 * 1000;
+  const pc = platformClause(platforms);
 
   // Pull every playback_start / playback_end in the window. Track outcomes
   // require both sides — playback_end carries the reason, playback_start is
@@ -1592,7 +1670,7 @@ export function getShowPlaybackSummary(days: number): ShowPlaybackSummary {
       json_extract(props, '$.reason') AS reason
     FROM analytics_events
     WHERE event IN ('playback_start', 'playback_end')
-      AND ts > ?
+      AND ts > ?${pc}
       AND json_extract(props, '$.show_id') IS NOT NULL
     ORDER BY ts ASC
   `).all(cutoff) as Array<{
@@ -1693,13 +1771,18 @@ export interface DetailRow {
   detail?: string;
 }
 
-export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
+export function getDetail(
+  metric: DetailMetric,
+  filter?: string,
+  platforms?: string[],
+): DetailRow[] {
   const db = getAnalyticsDb();
   const now = Date.now();
   const dayAgo = now - 24 * 3600 * 1000;
   const weekAgo = now - 7 * 24 * 3600 * 1000;
   const monthAgo = now - 30 * 24 * 3600 * 1000;
   const todayStart = new Date(new Date().toISOString().slice(0, 10)).getTime();
+  const pc = platformClause(platforms);
 
   switch (metric) {
     case "dau":
@@ -1707,7 +1790,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
         SELECT iid, platform, app_version,
           datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
           COUNT(*) AS event_count
-        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?${pc}
         GROUP BY iid ORDER BY MAX(ts) DESC
       `).all(dayAgo) as DetailRow[];
 
@@ -1716,7 +1799,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
         SELECT iid, platform, app_version,
           datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
           COUNT(*) AS event_count
-        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?${pc}
         GROUP BY iid ORDER BY MAX(ts) DESC
       `).all(weekAgo) as DetailRow[];
 
@@ -1725,7 +1808,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
         SELECT iid, platform, app_version,
           datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
           COUNT(*) AS event_count
-        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?${pc}
         GROUP BY iid ORDER BY MAX(ts) DESC
       `).all(monthAgo) as DetailRow[];
 
@@ -1735,6 +1818,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
           datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
           COUNT(*) AS event_count
         FROM analytics_events
+        WHERE 1=1${pc}
         GROUP BY iid ORDER BY MAX(ts) DESC
       `).all() as DetailRow[];
 
@@ -1744,7 +1828,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
           datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
           COUNT(*) AS event_count
         FROM analytics_events
-        WHERE iid NOT IN (SELECT DISTINCT iid FROM analytics_events WHERE ts > ?)
+        WHERE iid NOT IN (SELECT DISTINCT iid FROM analytics_events WHERE ts > ?${pc})${pc}
         GROUP BY iid ORDER BY MAX(ts) DESC
       `).all(monthAgo) as DetailRow[];
 
@@ -1754,7 +1838,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
           iid,
           datetime(ts/1000, 'unixepoch') AS last_seen,
           1 AS event_count
-        FROM analytics_events WHERE ts >= ?
+        FROM analytics_events WHERE ts >= ?${pc}
         ORDER BY ts DESC LIMIT 500
       `).all(todayStart) as DetailRow[];
 
@@ -1765,7 +1849,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
       if (filter) {
         return db.prepare(`
           WITH first_seen AS (
-            SELECT iid, MIN(ts) AS first_ts FROM analytics_events GROUP BY iid
+            SELECT iid, MIN(ts) AS first_ts FROM analytics_events WHERE 1=1${pc} GROUP BY iid
           )
           SELECT
             f.iid,
@@ -1781,7 +1865,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
       }
       return db.prepare(`
         WITH first_seen AS (
-          SELECT iid, MIN(ts) AS first_ts FROM analytics_events GROUP BY iid
+          SELECT iid, MIN(ts) AS first_ts FROM analytics_events WHERE 1=1${pc} GROUP BY iid
         )
         SELECT
           f.iid,
@@ -1810,7 +1894,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
             datetime(ts/1000, 'unixepoch') AS last_seen,
             1 AS event_count
           FROM analytics_events
-          WHERE event = 'playback_start' AND ts > ? AND ${filterClause}
+          WHERE event = 'playback_start' AND ts > ?${pc} AND ${filterClause}
           ORDER BY ts DESC LIMIT 500
         `).all(...params) as DetailRow[];
       }
@@ -1821,7 +1905,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
           datetime(ts/1000, 'unixepoch') AS last_seen,
           1 AS event_count
         FROM analytics_events
-        WHERE event = 'playback_start' AND ts > ?
+        WHERE event = 'playback_start' AND ts > ?${pc}
         ORDER BY ts DESC LIMIT 500
       `).all(monthAgo) as DetailRow[];
 
@@ -1833,7 +1917,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
             datetime(ts/1000, 'unixepoch') AS last_seen,
             1 AS event_count
           FROM analytics_events
-          WHERE event = 'playback_start' AND ts > ? AND json_extract(props, '$.show_id') = ?
+          WHERE event = 'playback_start' AND ts > ?${pc} AND json_extract(props, '$.show_id') = ?
           ORDER BY ts DESC LIMIT 500
         `).all(monthAgo, filter) as DetailRow[];
       }
@@ -1843,7 +1927,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
           datetime(ts/1000, 'unixepoch') AS last_seen,
           1 AS event_count
         FROM analytics_events
-        WHERE event = 'playback_start' AND ts > ?
+        WHERE event = 'playback_start' AND ts > ?${pc}
         ORDER BY ts DESC LIMIT 500
       `).all(monthAgo) as DetailRow[];
 
@@ -1862,7 +1946,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
             datetime(ts/1000, 'unixepoch') AS last_seen,
             1 AS event_count
           FROM analytics_events
-          WHERE event = 'feature_use' AND ts > ? AND json_extract(props, '$.feature') = ?
+          WHERE event = 'feature_use' AND ts > ?${pc} AND json_extract(props, '$.feature') = ?
           ORDER BY ts DESC LIMIT 500
         `).all(monthAgo, filter) as DetailRow[];
       }
@@ -1872,7 +1956,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
           datetime(ts/1000, 'unixepoch') AS last_seen,
           1 AS event_count
         FROM analytics_events
-        WHERE event = 'feature_use' AND ts > ?
+        WHERE event = 'feature_use' AND ts > ?${pc}
         ORDER BY ts DESC LIMIT 500
       `).all(monthAgo) as DetailRow[];
 
@@ -1882,7 +1966,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
           SELECT platform, iid, app_version,
             datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
             COUNT(*) AS event_count
-          FROM analytics_events WHERE event = 'app_open' AND ts > ? AND platform = ?
+          FROM analytics_events WHERE event = 'app_open' AND ts > ?${pc} AND platform = ?
           GROUP BY iid ORDER BY MAX(ts) DESC
         `).all(monthAgo, filter) as DetailRow[];
       }
@@ -1890,7 +1974,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
         SELECT platform, iid, app_version,
           datetime(MAX(ts)/1000, 'unixepoch') AS last_seen,
           COUNT(*) AS event_count
-        FROM analytics_events WHERE event = 'app_open' AND ts > ?
+        FROM analytics_events WHERE event = 'app_open' AND ts > ?${pc}
         GROUP BY iid ORDER BY platform, MAX(ts) DESC
       `).all(monthAgo) as DetailRow[];
 
@@ -1901,7 +1985,7 @@ export function getDetail(metric: DetailMetric, filter?: string): DetailRow[] {
           datetime(ts/1000, 'unixepoch') AS last_seen,
           CAST(json_extract(props, '$.listened_ms') AS INTEGER) AS event_count
         FROM analytics_events
-        WHERE event = 'playback_end' AND ts > ?
+        WHERE event = 'playback_end' AND ts > ?${pc}
         ORDER BY ts DESC LIMIT 500
       `).all(monthAgo) as DetailRow[];
 
