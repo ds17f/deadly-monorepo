@@ -643,16 +643,24 @@ export default function HeaderPlayer() {
     if (!showLoaded && railMode) setRailMode(null);
   }, [showLoaded, railMode]);
 
-  // Playlist availability: show it whenever a local show is loaded (playing OR
-  // parked) — not only while actively playing. For a parked show we have no
-  // tracks yet, so load them (without playing) so the rail can render and the
-  // user can pick a track to start.
-  const showPlaylist = (isActive || isParked) && !isRemoteActive;
+  // Playlist availability: show it whenever a session is loaded — playing
+  // locally, parked, OR remote-controlling another device. The queue must
+  // always reflect the current recording at the proper track. When we're not
+  // the active device we may not have tracks yet (or they were never fetched),
+  // so load them without playing so the rail can render.
+  const showPlaylist = showLoaded;
   useEffect(() => {
-    if (showPlaylist && !isActive && !tracks && !isLoadingTracks && selectedRecording) {
+    if (showPlaylist && !tracks && !isLoadingTracks && selectedRecording) {
       ensureTracks();
     }
-  }, [showPlaylist, isActive, tracks, isLoadingTracks, selectedRecording, ensureTracks]);
+  }, [showPlaylist, tracks, isLoadingTracks, selectedRecording, ensureTracks]);
+
+  // Track index to highlight in the queue: our local audio index when we're the
+  // active player, else the authoritative server index (the local audio index
+  // does not follow remote skips — only the active device's does).
+  const queueTrackIndex = isActiveDevice ? currentTrackIndex : (connectState?.trackIndex ?? currentTrackIndex);
+  // Likewise the playing indicator: server truth when remote.
+  const queueStatus = isActiveDevice ? status : (connectState?.playing ? "playing" : "paused");
 
   // Rail track pick. playTrack routes through Connect: active → jump locally and
   // broadcast; remote/parked → ask the server to move and our audio follows.
@@ -815,7 +823,7 @@ export default function HeaderPlayer() {
 
       {/* RIGHT: queue · devices · volume · fullscreen · clear */}
       <div className="flex w-1/4 items-center justify-end gap-1">
-        {isActive && (
+        {showLoaded && (
           <button
             onClick={() => setRailMode((m) => (m === "queue" ? null : "queue"))}
             className={`rounded-full p-2 transition-colors ${
@@ -1001,7 +1009,7 @@ export default function HeaderPlayer() {
               height and scroll; it already renders its own "Tracks" heading. */}
           {showPlaylist && (
             <div className="mt-4 flex min-h-0 flex-1 flex-col">
-              <TrackList fill tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={handleRailPlay} showId={activeShow?.showId} recordingId={selectedRecording} />
+              <TrackList fill tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={queueTrackIndex} status={queueStatus} onPlayTrack={handleRailPlay} showId={activeShow?.showId} recordingId={selectedRecording} />
             </div>
           )}
         </div>
@@ -1113,8 +1121,8 @@ export default function HeaderPlayer() {
               <TrackList
                 tracks={tracks}
                 isLoading={isLoadingTracks}
-                currentTrackIndex={currentTrackIndex}
-                status={status}
+                currentTrackIndex={queueTrackIndex}
+                status={queueStatus}
                 onPlayTrack={handleRailPlay}
                 showId={activeShow?.showId}
                 recordingId={selectedRecording}

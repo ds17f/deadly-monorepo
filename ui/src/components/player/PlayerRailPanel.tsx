@@ -1,6 +1,7 @@
 "use client";
 
 import { usePlayer } from "@/contexts/PlayerContext";
+import { useConnect } from "@/contexts/ConnectContext";
 import TrackList from "./TrackList";
 import RecordingSelector from "./RecordingSelector";
 import DeviceList from "@/components/connect/DeviceList";
@@ -61,7 +62,14 @@ export default function PlayerRailPanel({
     selectedRecording,
     playTrack,
     selectRecording,
+    isActiveDevice,
   } = usePlayer();
+  const { state: connectState } = useConnect();
+
+  // When remote-controlling, the local audio index doesn't follow remote skips —
+  // highlight the server's track + playing state so the queue tracks the session.
+  const queueTrackIndex = isActiveDevice ? currentTrackIndex : (connectState?.trackIndex ?? currentTrackIndex);
+  const queueStatus = isActiveDevice ? status : (connectState?.playing ? "playing" : "paused");
 
   if (mode === "devices") {
     return (
@@ -125,8 +133,8 @@ export default function PlayerRailPanel({
         <TrackList
           tracks={tracks}
           isLoading={false}
-          currentTrackIndex={currentTrackIndex}
-          status={status}
+          currentTrackIndex={queueTrackIndex}
+          status={queueStatus}
           onPlayTrack={playTrack}
           showId={activeShow.showId}
           recordingId={selectedRecording}
