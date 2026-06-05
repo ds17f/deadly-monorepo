@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect, useMemo, type MouseEvent } from "react";
+import { useRouter } from "next/navigation";
 import { usePlayer } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
@@ -449,12 +450,23 @@ export default function HeaderPlayer() {
     }
   }, []);
 
+  const router = useRouter();
+
   const collapsePlayer = useCallback(() => {
     setExpanded(false);
     if (typeof document !== "undefined" && document.fullscreenElement) {
       document.exitFullscreen().catch(() => {});
     }
   }, []);
+
+  // Tapping the "Now Playing" label jumps to the playing show's page (and
+  // collapses the sheet) — the expected way back to the show from the player.
+  const playingShowId = activeShow?.showId ?? userState?.showId ?? null;
+  const openPlayingShow = useCallback(() => {
+    if (!playingShowId) return;
+    collapsePlayer();
+    router.push(`/shows/${playingShowId}`);
+  }, [playingShowId, collapsePlayer, router]);
 
   // Sync our state when the user leaves browser full-screen (e.g. via Esc).
   useEffect(() => {
@@ -1014,9 +1026,14 @@ export default function HeaderPlayer() {
               <path d="M7 10l5 5 5-5z" />
             </svg>
           </button>
-          <span className="text-xs font-semibold uppercase tracking-wider text-white/50">
+          <button
+            onClick={openPlayingShow}
+            disabled={!playingShowId}
+            aria-label="Go to show"
+            className="text-xs font-semibold uppercase tracking-wider text-white/50 transition-colors enabled:hover:text-white disabled:cursor-default"
+          >
             Now Playing
-          </span>
+          </button>
           <div className="relative">
             {isConnected ? (
               <button
@@ -1068,44 +1085,52 @@ export default function HeaderPlayer() {
           </div>
         </div>
 
-        {/* ── Mobile layout: vertical, full screen ── */}
-        <div className="flex flex-1 flex-col overflow-y-auto px-5 pb-8 lg:hidden">
-          {/* Full ticket in fullscreen — whole stub (contain), not cropped. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={artSrc}
-            alt=""
-            referrerPolicy="no-referrer"
-            className={`mx-auto mt-2 rounded-lg ${
-              artIsLogo
-                ? "aspect-square w-[min(42vh,18rem)] object-cover"
-                : "max-h-[42vh] w-full max-w-[20rem] object-contain shadow-2xl"
-            }`}
-          />
-          <div className="mt-5 w-full text-center">
-            <p className="text-xl font-bold text-white">
-              {displayTrackTitle ?? showInfo?.date ?? "--"}
-            </p>
-            {subtitleLine && (
-              <p className={`mt-1 text-sm ${isRemoteActive ? "text-deadly-highlight" : "text-white/50"}`}>
-                {subtitleLine}
+        {/* ── Mobile layout: native player parity — a compact ticket + show
+            info header, the transport docked beneath it, then the TRACK LIST
+            as the scrolling body. No liner notes here (that ambient/review
+            content stays a desktop-only "TV mode" affair). The whole point is
+            that the tracklist leads, reachable the instant the sheet opens. ── */}
+        <div className="flex min-h-0 flex-1 flex-col overflow-hidden px-5 pb-8 lg:hidden">
+          {/* Compact header: small ticket beside the show info. */}
+          <div className="flex flex-shrink-0 items-center gap-4 pt-1">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={artSrc}
+              alt=""
+              referrerPolicy="no-referrer"
+              className={`h-20 w-20 flex-shrink-0 rounded-lg shadow-lg ${
+                artIsLogo ? "object-cover" : "object-contain"
+              }`}
+            />
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-lg font-bold text-white">
+                {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
-            )}
-            {displayTrackCount > 1 && (
-              <p className="mt-1 text-xs tabular-nums text-white/30">
-                Track {displayTrackIndex + 1} of {displayTrackCount}
-              </p>
-            )}
-          </div>
-          {factoids.length > 0 && (
-            <div className="mt-5 flex justify-center">
-              <AmbientFactoids cards={factoids} />
+              {isRemoteActive ? (
+                subtitleLine && (
+                  <p className="mt-0.5 truncate text-sm text-deadly-highlight">{subtitleLine}</p>
+                )
+              ) : showInfo ? (
+                <>
+                  <p className="mt-0.5 truncate text-sm text-white/70">{showInfo.date}</p>
+                  {showInfo.venue && (
+                    <p className="truncate text-xs text-white/50">{showInfo.venue}</p>
+                  )}
+                </>
+              ) : null}
+              {displayTrackCount > 1 && (
+                <p className="mt-0.5 text-xs tabular-nums text-white/30">
+                  Track {displayTrackIndex + 1} of {displayTrackCount}
+                </p>
+              )}
             </div>
-          )}
-          <div className="mt-5">
+          </div>
+
+          {/* Transport + seek, docked compactly under the header. */}
+          <div className="mt-4 flex-shrink-0">
             <SeekBar progress={progress} elapsed={displayElapsed} duration={displayDuration} onSeek={handleSeek} />
           </div>
-          <div className="mt-4">
+          <div className="mt-3 flex-shrink-0">
             <Transport
               isPlaying={displayIsPlaying}
               isLoading={sheetIsLoadingIcon}
@@ -1119,16 +1144,20 @@ export default function HeaderPlayer() {
             />
           </div>
           {activeShow && activeShow.recordings.length > 1 && (
-            <RecordingSelector
-              recordings={activeShow.recordings}
-              selectedId={selectedRecording}
-              onSelect={selectRecording}
-            />
+            <div className="flex-shrink-0">
+              <RecordingSelector
+                recordings={activeShow.recordings}
+                selectedId={selectedRecording}
+                onSelect={selectRecording}
+              />
+            </div>
           )}
+
+          {/* Tracks — the main event. `fill` lets TrackList own the remaining
+              height and scroll; it already renders its own "Tracks" heading. */}
           {showPlaylist && (
-            <div className="mt-4">
-              <h4 className="mb-2 text-sm font-bold text-deadly-title">Tracks</h4>
-              <TrackList tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={handleRailPlay} showId={activeShow?.showId} recordingId={selectedRecording} />
+            <div className="mt-4 flex min-h-0 flex-1 flex-col">
+              <TrackList fill tracks={tracks} isLoading={isLoadingTracks} currentTrackIndex={currentTrackIndex} status={status} onPlayTrack={handleRailPlay} showId={activeShow?.showId} recordingId={selectedRecording} />
             </div>
           )}
         </div>
