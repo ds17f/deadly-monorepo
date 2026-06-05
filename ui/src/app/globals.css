@@ -14,11 +14,14 @@
 
 html,
 body {
-  /* App-like, not web-page-like: kill the rubber-band bounce and the
-     pull-to-refresh / horizontal pan that make an installed PWA feel "floaty"
-     and draggable. No axis of the document overscrolls or scrolls sideways. */
+  /* App-like, not web-page-like: kill the rubber-band bounce and pull-to-refresh
+     that make an installed PWA feel "floaty". Note: do NOT set `overflow-x:
+     hidden` on the root here — in Firefox that disables APZ wheel/touchpad
+     scrolling of the document (scrollbar + keys still work, wheel doesn't),
+     which breaks the bare admin/auth pages. Horizontal pan is already contained
+     by the shell itself (its fixed container is overflow-hidden, and the shell
+     locks `html { overflow: hidden }` on non-bare routes via JS). */
   overscroll-behavior: none;
-  overflow-x: hidden;
 }
 
 body {
