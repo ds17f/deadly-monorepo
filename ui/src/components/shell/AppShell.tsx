@@ -28,6 +28,8 @@ import * as analytics from "@/lib/analytics";
 import UserMenu from "@/components/auth/UserMenu";
 import HeaderPlayerWrapper from "@/components/player/HeaderPlayerWrapper";
 import LibraryRail from "./LibraryRail";
+import MobileTabBar from "./MobileTabBar";
+import MobileBackButton from "./MobileBackButton";
 import SearchBox from "./SearchBox";
 import { RightRailProvider, useRightRailNode, useRightRailPlacement } from "./RightRail";
 
@@ -67,10 +69,11 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
     // column let mobile browsers scroll the whole shell under the URL bar
     // on navigation, dropping the top nav. top-0 + h-[100dvh] keeps the bar
     // pinned while the height still tracks the dynamic (URL-bar) viewport.
-    <div className="fixed inset-x-0 top-0 flex h-[100dvh] flex-col bg-black text-white">
+    <div className="fixed inset-x-0 top-0 flex h-[100dvh] flex-col overflow-hidden bg-black text-white">
       {/* top bar: equal-flex sides keep the search box viewport-centered */}
       <header className="flex flex-shrink-0 items-center gap-4 px-4 py-2.5">
         <div className="flex items-center sm:flex-1">
+          <MobileBackButton />
           <Logo />
         </div>
         <SearchBox />
@@ -85,7 +88,7 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
           nothing. */}
       <div
         ref={panesRef}
-        className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-2 pb-2 lg:flex-row lg:overflow-hidden"
+        className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto overflow-x-hidden overscroll-contain px-2 pb-2 lg:flex-row lg:overflow-hidden"
       >
         <LibraryRail />
         <main className="min-w-0 rounded-lg bg-gradient-to-b from-deadly-surface to-deadly-bg lg:min-h-0 lg:flex-1 lg:overflow-y-auto">
@@ -107,6 +110,10 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
       <div className="flex-shrink-0 border-t border-white/10 bg-deadly-bg px-4 py-2">
         <HeaderPlayerWrapper />
       </div>
+
+      {/* mobile primary nav — sits below the transport, hidden on desktop
+          (the LibraryRail covers nav there). */}
+      <MobileTabBar />
     </div>
   );
 }
