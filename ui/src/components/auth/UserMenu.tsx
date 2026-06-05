@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 
 export default function UserMenu() {
@@ -27,12 +28,12 @@ export default function UserMenu() {
     const path = typeof window !== "undefined" ? window.location.pathname : "/";
     const callbackUrl = path.startsWith("/api/") ? "/" : path;
     return (
-      <a
+      <Link
         href={`/signin?callbackUrl=${encodeURIComponent(callbackUrl)}`}
         className="rounded-md border border-white/20 px-3 py-1.5 text-sm text-white/70 transition hover:border-white/40 hover:text-white"
       >
         Sign in
-      </a>
+      </Link>
     );
   }
 
@@ -69,21 +70,21 @@ export default function UserMenu() {
               <p className="text-xs text-white/50">{user.email}</p>
             )}
           </div>
-          <a
+          <Link
             href="/me"
             onClick={() => setOpen(false)}
             className="block w-full rounded-md px-2 py-1.5 text-left text-sm text-white/70 transition hover:bg-white/10 hover:text-white"
           >
             Your library
-          </a>
+          </Link>
           {user.isAdmin && (
-            <a
+            <Link
               href="/admin"
               onClick={() => setOpen(false)}
               className="block w-full rounded-md px-2 py-1.5 text-left text-sm text-white/70 transition hover:bg-white/10 hover:text-white"
             >
               Admin
-            </a>
+            </Link>
           )}
           <button
             onClick={() => {
@@ -95,13 +96,13 @@ export default function UserMenu() {
             Sign out
           </button>
           <div className="mt-2 flex items-center gap-3 border-t border-white/10 px-2 pt-2 text-[11px] text-white/30">
-            <a
+            <Link
               href="/privacy"
               onClick={() => setOpen(false)}
               className="transition hover:text-white/60"
             >
               Privacy
-            </a>
+            </Link>
             <span>·</span>
             <a
               href="https://github.com/ds17f/deadly-monorepo"

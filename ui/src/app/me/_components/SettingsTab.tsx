@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/contexts/AuthContext";
 import { deleteAccount } from "@/lib/userDataApi";
@@ -40,9 +41,9 @@ export default function SettingsTab() {
         </dl>
         <p className="mt-2 text-xs text-white/40">
           Edit your display name on the{" "}
-          <a href="/me" className="text-deadly-highlight hover:underline">
+          <Link href="/me" className="text-deadly-highlight hover:underline">
             Profile
-          </a>{" "}
+          </Link>{" "}
           tab.
         </p>
         <button
