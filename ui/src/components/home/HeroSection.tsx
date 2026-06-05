@@ -22,15 +22,16 @@ export default function HeroSection({ totalShows }: { totalShows: number }) {
           {totalShows.toLocaleString()} known concerts
         </span>{" "}
         from 1965 to 1995 are sourced from the{" "}
-        <span className="text-deadly-heading">Internet Archive</span>, but
-        instead of digging through tapes you get a clean, show-first
-        experience. Our heuristic and AI-powered engine{" "}
+        <span className="text-deadly-heading">Internet Archive</span>, which
+        lists every tape and leaves you to sort through them. The Deadly{" "}
         <span className="text-deadly-heading">
-          automatically selects the best recording
+          automatically picks the best-sounding recording
         </span>{" "}
-        for each show, biasing towards{" "}
-        <span className="text-deadly-heading">soundboards</span> and highly
-        rated sources.
+        for each show, favoring{" "}
+        <span className="text-deadly-heading">soundboards</span>{" "}
+        and highly rated sources — and you&rsquo;re always free to{" "}
+        <span className="text-deadly-heading">switch to a different one</span>{" "}
+        you prefer.
       </p>
     </header>
   );
