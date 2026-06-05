@@ -93,6 +93,46 @@ Next concrete step: ship/smoke-test iOS (Layer 3), then Android.
 - Provider nesting left as main's (`ConnectProvider` already wraps
   `PlayerProvider`); v2's cosmetic reorder + `UserMenu` `mt-2` not applied.
 
+### Known follow-ups / not-yet-done (iOS)
+
+All client-side and **reversible in a later App Store update** (no protocol /
+server / data change; old app versions degrade gracefully — they keep working,
+just don't broadcast in the background). Deferred deliberately; revisit after the
+two-device happy-path smoke test.
+
+- **WS dropped whenever backgrounded** (inherited from the reference:
+  `deadlyApp` calls `connectService.stop()` on `scenePhase .background`). The
+  sharp edge: even when iOS is the *active* device playing with the screen
+  locked — the normal listening mode — the phone goes invisible to the session
+  and stops broadcasting position/transport until the app is foregrounded.
+  Tractable fix: keep the socket alive while iOS is the one playing (just don't
+  `stop()` during background *playback*). Note the platform wall: a *pure
+  controller* iOS app that isn't playing audio can't hold a socket in the
+  background anyway (iOS suspends it ~30s; would need push/VoIP) — not our
+  decision to make.
+- **Lock-screen / Now Playing controls don't drive a remote device.**
+  `MPRemoteCommandCenter` callbacks are wired straight to the local
+  `StreamPlayer` (`StreamPlayer.swift` ~527), bypassing the Connect-aware
+  `MiniPlayerService`; and Now Playing is only populated when this device is the
+  audio source. So while remote-controlling the web, the lock screen can't
+  pause/skip it. Full Spotify parity = route those callbacks through
+  `MiniPlayerService` + populate Now Playing from `ConnectState`. Server already
+  accepts the commands (web sends them today), so this is client-only.
+- Carry-over from the web list that also applies to iOS: no explicit
+  "Reconnecting…" affordance beyond `isPendingCommand` spinners.
+
+### Pre-ship gate (the only one-way door) — verify before any App Store build
+
+A shipped iOS build can't be force-updated, so the **wire protocol is the only
+irreversible commitment**. Before cutting an App Store / public TestFlight iOS
+build, confirm the v2 state machine can carry **presence / device-identity
+additively** (new optional fields + message types that old clients ignore) — the
+ROADMAP §3 social "hear what they're playing" feature and the background-presence
+follow-up above both lean on it. Adding protocol surface now, with zero deployed
+iOS clients, is free; adding it post-ship is a migration with version skew. The
+background-WS and lock-screen items above are *not* part of this gate — they're
+two-way doors and can land later.
+
 ## TL;DR
 
 - **Do not `git rebase`.** A vanilla replay of 51 commits onto a moved `main`
