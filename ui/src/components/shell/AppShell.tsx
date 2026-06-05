@@ -130,14 +130,19 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   // The shell owns a fixed h-[100dvh] viewport — the document must NOT scroll,
   // or wheeling over the pinned header/transport pages it (the body is
-  // min-h-screen). Bare routes keep normal document scroll.
+  // min-h-screen). Bare routes (admin/auth) are full document-scroll pages, so
+  // we must actively *clear* the lock when entering one — early-returning would
+  // leave a stale `overflow: hidden` from the prior shell render stuck on the
+  // document, which silently kills scrolling on e.g. the analytics dashboard.
   useEffect(() => {
-    if (bare) return;
     const html = document.documentElement;
-    const prev = html.style.overflow;
+    if (bare) {
+      html.style.overflow = "";
+      return;
+    }
     html.style.overflow = "hidden";
     return () => {
-      html.style.overflow = prev;
+      html.style.overflow = "";
     };
   }, [bare]);
 

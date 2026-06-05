@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ListeningRow, type TrackPlay } from "./listeningRow";
 import { useWatchedInstalls } from "./WatchedInstallsContext";
+import { usePlatformFilter } from "./PlatformFilterContext";
 
 const INITIAL_VISIBLE = 10;
 
@@ -42,6 +43,7 @@ export default function RecentListening({
   watchedOnly?: boolean;
 } = {}) {
   const { isWatched } = useWatchedInstalls();
+  const { withParam, param } = usePlatformFilter();
   const [sessions, setSessions] = useState<RecentSession[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [expanded, setExpanded] = useState(false);
@@ -49,7 +51,7 @@ export default function RecentListening({
   const fetchData = async () => {
     try {
       const res = await fetch(
-        "/api/analytics/recent-listening?hours=24",
+        withParam("/api/analytics/recent-listening?hours=24"),
         { credentials: "include" },
       );
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -65,7 +67,8 @@ export default function RecentListening({
     fetchData();
     const id = setInterval(fetchData, POLL_INTERVAL_MS);
     return () => clearInterval(id);
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [param]);
 
   if (error)
     return (

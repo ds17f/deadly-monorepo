@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ListeningRow, type TrackPlay } from "./listeningRow";
 import { useWatchedInstalls } from "./WatchedInstallsContext";
+import { usePlatformFilter } from "./PlatformFilterContext";
 
 interface LiveListener {
   iid: string;
@@ -37,12 +38,13 @@ export default function ListeningNow({
   watchedOnly?: boolean;
 } = {}) {
   const { isWatched } = useWatchedInstalls();
+  const { withParam, param } = usePlatformFilter();
   const [listeners, setListeners] = useState<LiveListener[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const fetchData = async () => {
     try {
-      const res = await fetch("/api/analytics/live", { credentials: "include" });
+      const res = await fetch(withParam("/api/analytics/live"), { credentials: "include" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const body = (await res.json()) as { listeners: LiveListener[] };
       setListeners(body.listeners);
@@ -56,7 +58,8 @@ export default function ListeningNow({
     fetchData();
     const id = setInterval(fetchData, POLL_INTERVAL_MS);
     return () => clearInterval(id);
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [param]);
 
   if (error)
     return <p className="text-sm text-red-400">Listening Now error: {error}</p>;

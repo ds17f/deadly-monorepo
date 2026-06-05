@@ -20,6 +20,11 @@ import CollapsibleSection from "./components/CollapsibleSection";
 import ShowEngagement, { TopShowsByAction } from "./components/ShowEngagement";
 import { WatchedInstallsProvider } from "./components/WatchedInstallsContext";
 import WatchedInstallsPanel from "./components/WatchedInstallsPanel";
+import {
+  PlatformFilterProvider,
+  usePlatformFilter,
+} from "./components/PlatformFilterContext";
+import PlatformToggles from "./components/PlatformToggles";
 
 interface FeatureAdoptionEntry {
   feature: string;
@@ -113,9 +118,11 @@ const DASH_SCROLL_KEY = "__analytics_dashboard_scroll";
 
 export default function AnalyticsDashboard(props: { showNames: ShowName[] }) {
   return (
-    <WatchedInstallsProvider>
-      <AnalyticsDashboardInner {...props} />
-    </WatchedInstallsProvider>
+    <PlatformFilterProvider>
+      <WatchedInstallsProvider>
+        <AnalyticsDashboardInner {...props} />
+      </WatchedInstallsProvider>
+    </PlatformFilterProvider>
   );
 }
 
@@ -123,6 +130,7 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
   const { user, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { withParam } = usePlatformFilter();
   const [data, setData] = useState<AnalyticsSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -171,7 +179,7 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
 
   const fetchSummary = useCallback(async () => {
     try {
-      const res = await fetch("/api/analytics/summary", { credentials: "include" });
+      const res = await fetch(withParam("/api/analytics/summary"), { credentials: "include" });
       if (res.status === 403) {
         setError("Forbidden");
         return;
@@ -185,20 +193,20 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [withParam]);
 
   const fetchTimeseries = useCallback(async () => {
     try {
       const [dau, events] = await Promise.all([
-        fetch("/api/analytics/timeseries?metric=dau&days=14", { credentials: "include" }).then((r) => r.json()),
-        fetch("/api/analytics/timeseries?metric=events&days=14", { credentials: "include" }).then((r) => r.json()),
+        fetch(withParam("/api/analytics/timeseries?metric=dau&days=14"), { credentials: "include" }).then((r) => r.json()),
+        fetch(withParam("/api/analytics/timeseries?metric=events&days=14"), { credentials: "include" }).then((r) => r.json()),
       ]);
       setDauTs(dau);
       setEventsTs(events);
     } catch {
       // non-critical
     }
-  }, []);
+  }, [withParam]);
 
   // Auth + initial load
   useEffect(() => {
@@ -306,6 +314,7 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
           <a href="/admin/beta" className="text-sm text-zinc-500 hover:text-zinc-300">Beta &rarr;</a>
         </div>
         <div className="flex items-center gap-3 flex-wrap">
+          <PlatformToggles />
           <button
             onClick={() => setWatchedOnly((v) => !v)}
             className={`text-xs px-2 py-1 rounded border transition-colors ${
@@ -338,8 +347,8 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         </div>
       </div>
 
-      {/* Watched installs */}
-      <CollapsibleSection title="Watched installs" forceOpen={forceOpen}>
+      {/* Watched installs — collapsed by default; a power-user drill-down */}
+      <CollapsibleSection title="Watched installs" defaultOpen={false} forceOpen={forceOpen}>
         <WatchedInstallsPanel onOpenInstall={openInstall} />
       </CollapsibleSection>
 
@@ -352,8 +361,8 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         />
       </CollapsibleSection>
 
-      {/* Recent Listening (finished sessions, last 24h) */}
-      <CollapsibleSection title="Recent Listening (24h)" forceOpen={forceOpen}>
+      {/* Recent Listening (finished sessions, last 24h) — collapsed by default */}
+      <CollapsibleSection title="Recent Listening (24h)" defaultOpen={false} forceOpen={forceOpen}>
         <RecentListening
           showMap={showMap}
           onOpenInstall={openInstall}
@@ -361,34 +370,22 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         />
       </CollapsibleSection>
 
-      {/* Network error recovery */}
-      <CollapsibleSection
-        title="Network error recovery"
-        forceOpen={forceOpen}
-      >
-        <NetworkErrorOutcomes showMap={showMap} onOpenInstall={openInstall} />
-      </CollapsibleSection>
-
       {watchedOnly ? null : <>
-      {/* Most-listened shows */}
-      <CollapsibleSection
-        title="Most-listened shows"
-        forceOpen={forceOpen}
-        onDetail={() => openDetail("top_shows")}
-      >
-        <TopShowsList
-          showMap={showMap}
-          onShowClick={(id) => openDetail("top_shows", id)}
-        />
-      </CollapsibleSection>
-
-      {/* Growth */}
+      {/* Growth — lead the aggregates with the headline trend */}
       <CollapsibleSection
         title="Growth (60d)"
         forceOpen={forceOpen}
         onDetail={() => openDetail("new_installs")}
       >
         <GrowthChart onDayClick={(day) => openDetail("new_installs", day)} />
+      </CollapsibleSection>
+
+      {/* Installs by platform */}
+      <CollapsibleSection title="Active installs by platform (30d)" forceOpen={forceOpen} onDetail={() => openDetail("platform_split")}>
+        <PlatformChart
+          data={data.platform_split}
+          onPlatformClick={(p) => openDetail("platform_split", p)}
+        />
       </CollapsibleSection>
 
       {/* Active Users */}
@@ -428,14 +425,14 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
             label="Total Installs"
             value={data.total_installs}
             unit="install"
-            hint="Distinct iids ever seen"
+            hint="Distinct installs ever seen on the selected platforms (web is off by default — it's browser usage, not an installed app)"
             onClick={() => openDetail("total_installs")}
           />
           <MetricCard
             label="Stale (30d)"
             value={data.stale_installs_30d}
             unit="install"
-            hint="Seen ever, not seen in last 30 days"
+            hint="Seen ever on the selected platforms, not seen in last 30 days"
             onClick={() => openDetail("stale_installs")}
           />
           <MetricCard
@@ -457,11 +454,15 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         </div>
       </CollapsibleSection>
 
-      {/* Platform Split */}
-      <CollapsibleSection title="Active installs by platform (30d)" forceOpen={forceOpen} onDetail={() => openDetail("platform_split")}>
-        <PlatformChart
-          data={data.platform_split}
-          onPlatformClick={(p) => openDetail("platform_split", p)}
+      {/* Most-listened shows */}
+      <CollapsibleSection
+        title="Most-listened shows"
+        forceOpen={forceOpen}
+        onDetail={() => openDetail("top_shows")}
+      >
+        <TopShowsList
+          showMap={showMap}
+          onShowClick={(id) => openDetail("top_shows", id)}
         />
       </CollapsibleSection>
 
@@ -504,6 +505,14 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         />
       </CollapsibleSection>
       </>}
+
+      {/* Network error recovery — diagnostic, kept at the bottom */}
+      <CollapsibleSection
+        title="Network error recovery"
+        forceOpen={forceOpen}
+      >
+        <NetworkErrorOutcomes showMap={showMap} onOpenInstall={openInstall} />
+      </CollapsibleSection>
 
     </div>
   );

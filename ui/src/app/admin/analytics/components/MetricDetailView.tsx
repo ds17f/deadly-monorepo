@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { emojiForId } from "./emojiId";
 import { useWatchedInstalls } from "./WatchedInstallsContext";
+import { usePlatformFilter } from "./PlatformFilterContext";
 
 const SHOW_ID_RE = /^\d{4}-\d{2}-\d{2}(-[\w-]+)?$/;
 function isShowId(value: string): boolean {
@@ -68,6 +69,7 @@ interface Props {
 export default function MetricDetailView({ metric, filter, backHref }: Props) {
   const router = useRouter();
   const { isWatched, nameFor, setWatched, unwatch } = useWatchedInstalls();
+  const { withParam, param } = usePlatformFilter();
   const [rows, setRows] = useState<DetailRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [sortKey, setSortKey] = useState<SortKey>("last_seen");
@@ -82,7 +84,7 @@ export default function MetricDetailView({ metric, filter, backHref }: Props) {
     setLoading(true);
     const params = new URLSearchParams({ metric });
     if (filter) params.set("filter", filter);
-    fetch(`/api/analytics/detail?${params}`, { credentials: "include" })
+    fetch(withParam(`/api/analytics/detail?${params}`), { credentials: "include" })
       .then((r) => (r.ok ? r.json() : []))
       .then((data: DetailRow[]) => {
         if (!cancelled) setRows(data);
@@ -96,7 +98,7 @@ export default function MetricDetailView({ metric, filter, backHref }: Props) {
     return () => {
       cancelled = true;
     };
-  }, [metric, filter]);
+  }, [metric, filter, withParam, param]);
 
   const sortedRows = useMemo(() => {
     const sorted = [...rows];

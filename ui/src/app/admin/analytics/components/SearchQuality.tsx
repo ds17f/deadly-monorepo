@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePlatformFilter } from "./PlatformFilterContext";
 
 interface SearchQuality {
   total_searches: number;
@@ -65,11 +66,12 @@ function QueryList({
 }
 
 export default function SearchQuality() {
+  const { withParam, param } = usePlatformFilter();
   const [data, setData] = useState<SearchQuality | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/api/analytics/search-quality?days=30", { credentials: "include" })
+    fetch(withParam("/api/analytics/search-quality?days=30"), { credentials: "include" })
       .then(async (res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const body = (await res.json()) as SearchQuality;
@@ -79,7 +81,7 @@ export default function SearchQuality() {
       .catch((e: unknown) =>
         setError(e instanceof Error ? e.message : "Failed to load"),
       );
-  }, []);
+  }, [withParam, param]);
 
   if (error)
     return <p className="text-sm text-red-400">Search quality error: {error}</p>;
