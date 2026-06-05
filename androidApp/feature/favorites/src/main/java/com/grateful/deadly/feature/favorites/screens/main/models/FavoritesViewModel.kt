@@ -152,29 +152,6 @@ class FavoritesViewModel @Inject constructor(
     }
 
     /**
-     * Load favorite songs (tracks with thumbs == 1)
-     */
-    private fun loadFavoriteSongs() {
-        viewModelScope.launch {
-            _songsLoading.value = true
-            try {
-                _favoriteSongs.value = reviewService.getFavoriteTracks()
-            } catch (e: Exception) {
-                Log.e(TAG, "Failed to load favorite songs", e)
-            } finally {
-                _songsLoading.value = false
-            }
-        }
-    }
-
-    /**
-     * Reload favorite songs (e.g. after tab switch)
-     */
-    fun refreshFavoriteSongs() {
-        loadFavoriteSongs()
-    }
-
-    /**
      * Add show to favorites
      */
     fun addToFavorites(showId: String) {
