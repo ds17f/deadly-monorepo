@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.31.0] - 2026-06-04
+
+### New Features
+* cross-platform user-data sync + full web client (#48) (fca679ba)
+
+
 ## [2.30.0] - 2026-05-28
 
 ### New Features
@@ -9,8 +15,6 @@
 ### Bug Fixes
 * dual-window live boundary covers long tracks (743daba6)
 * logical-listen ranking (#43) (acde63ef)
-
-
 ## [2.29.0] - 2026-05-25
 
 ### New Features
