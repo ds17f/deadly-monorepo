@@ -16,12 +16,31 @@ Working branch: **`connect-v2-port`** (off `main`; distinct from the stale
   (`ConnectProvider`/`ConnectContext`/`types/connect.ts`/`DeviceList`),
   `PlayerProvider` merged onto main's engine, `HeaderPlayer`/`PlayerRailPanel`
   rewired, v1 files deleted. `make ui-build` green (TS + ESLint + 4646 pages).
-  **Runtime not yet verified** — needs a beta deploy + two-browser smoke test.
+- ✅ **Deployed to beta** (2026-06-05) — `beta.thedeadly.app`, Hetzner
+  `deadly-beta` @ `178.156.230.179`, image `82c25758` (branch head). Verified
+  live: a real browser completed WS upgrade → cookie auth → device register →
+  state snapshot (`ws/connect: authenticated` + `registerDevice` in api logs).
+  Full two-browser transport/transfer smoke test still worth doing.
 - ⏳ **Layer 3 — iOS** — not started.
 - ⏳ **Layer 4 — Android** — not started.
 
 **First shippable unit = Layer 1 + Layer 2 together** (atomic — see below). Next
-concrete step: deploy API+web to **beta** and smoke-test, then iOS/Android.
+concrete step: iOS (Layer 3), then Android.
+
+### How beta was stood up (repeatable)
+1. `gh workflow run infra-manage.yml --ref connect-v2-port -f action=launch -f provider=hetzner -f environment=beta` (approve the `beta` env gate — beta approvals are fine to self-approve; prod is not).
+2. `gh workflow run build-images.yml --ref connect-v2-port -f ref=connect-v2-port`.
+3. `gh workflow run web-deploy.yml --ref connect-v2-port -f environment=beta -f provider=hetzner -f ref=connect-v2-port -f update_dns=true`.
+4. **Cold-standup gotcha:** `web-deploy`'s Health check probes
+   `https://beta.thedeadly.app/api/health` and runs *before* the GoDaddy DNS
+   step — so on a fresh beta (DNS still on the parking/forwarding A records) it
+   fails and the DNS update is skipped. Workaround used: set the GoDaddy A
+   records manually (same API the workflow uses; key in `.secrets/godaddy-key.txt`):
+   `PUT …/v1/domains/thedeadly.app/records/A/{beta,share.beta}` → box IP, then
+   `docker compose restart caddy` to force a fresh ACME run. There is **no
+   separate GoDaddy forward *rule*** (`/forwards` → NOT_FOUND); the "forwarding"
+   was just those A records. Fix worth filing: move the DNS step before the
+   health check (or make health check hit the IP) for cold standups.
 
 ### Key decisions made during the port
 - **Web = full Connect participant** (user-chosen): plays locally, controls
