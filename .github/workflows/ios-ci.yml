@@ -23,7 +23,7 @@ jobs:
         bundler-cache: false
 
     - name: Install fastlane
-      run: gem install fastlane
+      run: cd iosApp && bundle install
 
     - name: Create Secrets.swift
       run: |
@@ -37,4 +37,4 @@ jobs:
     - name: Run tests
       run: |
         cd iosApp
-        fastlane test
+        bundle exec fastlane test
