@@ -139,9 +139,10 @@ final class ConnectService: NSObject {
 
     func sendPlay() {
         logger.info("sendPlay (pending=\(self.pendingCommand ?? "nil", privacy: .public) serverPlaying=\(self.connectState?.playing ?? false, privacy: .public))")
-        // Only show spinner if the server isn't already playing — a redundant play
-        // won't trigger a state broadcast so pendingCommand would never clear.
-        if connectState?.playing != true {
+        // Only enter a pending state if there's a live socket to confirm it, and
+        // only if the server isn't already playing — a redundant play won't
+        // trigger a state broadcast, so pendingCommand would never clear.
+        if isConnected, connectState?.playing != true {
             pendingCommand = "play"
         }
         sendCommand("play")
@@ -149,7 +150,7 @@ final class ConnectService: NSObject {
 
     func sendPause() {
         logger.info("sendPause (pending=\(self.pendingCommand ?? "nil", privacy: .public) serverPlaying=\(self.connectState?.playing ?? false, privacy: .public))")
-        if connectState?.playing == true {
+        if isConnected, connectState?.playing == true {
             pendingCommand = "pause"
         }
         sendCommand("pause")
@@ -166,20 +167,20 @@ final class ConnectService: NSObject {
 
     func sendNext() {
         logger.info("sendNext (pending=\(self.pendingCommand ?? "nil", privacy: .public) -> next)")
-        pendingCommand = "next"
+        if isConnected { pendingCommand = "next" }
         sendCommand("next")
     }
 
     func sendPrev() {
         logger.info("sendPrev (pending=\(self.pendingCommand ?? "nil", privacy: .public) -> prev)")
-        pendingCommand = "prev"
+        if isConnected { pendingCommand = "prev" }
         sendCommand("prev")
     }
 
     func sendTransfer(targetDeviceId: String) {
         guard connectState?.showId != nil else { return }
         logger.info("sendTransfer: target=\(targetDeviceId, privacy: .public)")
-        pendingTransfer = targetDeviceId
+        if isConnected { pendingTransfer = targetDeviceId }
         sendCommand("transfer", extra: ["targetDeviceId": targetDeviceId])
     }
 

@@ -271,7 +271,12 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     var isPendingCommand: Bool {
-        connectService?.pendingCommand != nil
+        // Only surface a spinner while remote-controlling another device, where a
+        // command genuinely awaits a server round-trip. When we're the active/sole
+        // device, local playback is authoritative and responds instantly — never
+        // gate the UI on a confirmation that may never arrive (e.g. WS offline).
+        guard let connect = connectService, connect.isRemoteControlling else { return false }
+        return connect.pendingCommand != nil
     }
 
     // MARK: - Actions
