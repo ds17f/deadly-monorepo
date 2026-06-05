@@ -23,9 +23,7 @@ jobs:
         bundler-cache: false
 
     - name: Install fastlane
-      run: |
-        gem install fastlane
-        gem install xcodeproj
+      run: cd iosApp && bundle install
 
     - name: Decode certificate
       run: |
@@ -80,7 +78,7 @@ jobs:
     - name: Build and deploy to TestFlight with fastlane
       run: |
         cd iosApp
-        fastlane deploy_testflight
+        bundle exec fastlane deploy_testflight
 
     - name: Upload IPA (backup)
       uses: actions/upload-artifact@84480863f228bb9747b473957fcc9e309aa96097 # v4.4.2

@@ -36,7 +36,7 @@ jobs:
         bundler-cache: false
 
     - name: Install fastlane
-      run: gem install fastlane
+      run: cd iosApp && bundle install
 
     - name: Decode App Store Connect API key
       run: |
@@ -64,7 +64,7 @@ jobs:
       id: promote
       run: |
         cd iosApp
-        fastlane promote_to_production version:"${{ inputs.version }}"
+        bundle exec fastlane promote_to_production version:"${{ inputs.version }}"
 
     - name: Update release status (success)
       if: success()
