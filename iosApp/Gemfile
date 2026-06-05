@@ -4,3 +4,11 @@ source "https://rubygems.org"
 
 gem "fastlane"
 gem "xcodeproj"
+
+# fastlane eagerly loads every default action at startup, including the Google
+# Play action create_app_on_managed_play_store, whose google-apis-core →
+# representable/json chain requires multi_json at runtime. multi_json isn't a
+# hard dependency in fastlane's gemspec, so bundler won't install it unless it's
+# declared here — without it `bundle exec fastlane` dies with a Gem::LoadError
+# ("multi_json is not part of the bundle") before any lane runs.
+gem "multi_json"
