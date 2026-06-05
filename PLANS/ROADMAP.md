@@ -20,15 +20,22 @@ shipped or folded into "What remains" below.
   platform-aware store badges.
 - **Web analytics + discovery.** Web listens feed Trending; Fan Favorites and
   Today-in-GD-History rails.
+- **Reactive favorites UI (both platforms).** The favorites screen observes the
+  local DB — shows *and* songs via Room `Flow` on Android (now at parity with
+  iOS GRDB `ValueObservation`, `b5decdb7`) — so a change pulled from another
+  device repaints live instead of going stale. Vestigial imperative
+  song-refresh removed from `FavoritesViewModel`.
 
 ## What remains
 
 ### 1. Sync hardening (mobile)
-- **Android reactive-observation parity.** iOS favorites are
-  observation-driven (`b5decdb7`); Android's broader cache still uses
-  imperative refresh and goes stale when sync-apply writes SQLite. Bring
-  `FavoritesViewModel` to parity (Room `Flow` ↔ GRDB `ValueObservation`).
-- **Extend observation to recents / reviews / position** on both platforms.
+Favorites are now observation-driven on both platforms (see Shipped). Remaining:
+- **Extend observation to recents / reviews / position** on both platforms — the
+  favorites path is the proven pattern; recents/reviews surfaces aren't wired
+  the same way yet. (Position is slated for Connect-v2 §2, not REST observation.)
+- **Android Auto browse tree** (`BrowseTreeProvider`) still reads favorite songs
+  one-shot; invalidate via `notifyChildrenChanged` when sync-apply writes, if the
+  staleness there proves noticeable.
 - **Extract favorite-songs off `ReviewService`** onto `FavoritesService` (both
   platforms) — legacy mis-placement with call-site churn. File a Linear
   tech-debt ticket.
