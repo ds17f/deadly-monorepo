@@ -33,8 +33,9 @@ export KEYCHAIN_PASSWORD
 docker-pull:
 	docker pull node:22-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine
 
-# Start full stack locally (Docker Compose dev mode)
-docker-up:
+# Start full stack locally (Docker Compose dev mode). Regenerate the show
+# index first so it bakes into the freshly-built API image.
+docker-up: api-show-index
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d
 
 # Stop the local stack
@@ -78,6 +79,14 @@ api-build:
 # Type-check API
 api-typecheck:
 	cd api && npm run typecheck
+
+# Build the compact show-metadata index the API loads at boot to enrich
+# user-data responses (recents/favorites) with venue/city/date. Written
+# into the api build context so it bakes into the API image (loaded via
+# SHOW_INDEX_PATH=/app/show-index.json). Reads ui/data/shows; non-fatal if
+# absent (writes an empty index). CI regenerates this in build-images.yml.
+api-show-index:
+	node api/scripts/build-show-index.mjs ui/data/shows api/show-index.json
 
 api-test:
 	cd api && npm test

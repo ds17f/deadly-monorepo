@@ -13,20 +13,35 @@ interface ShowReviewDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(review: ShowReviewEntity)
 
-    @Query("SELECT * FROM show_reviews WHERE showId = :showId")
+    // UI reads exclude tombstones (deletedAt set). Sync deletes soft-delete
+    // so the deletion can propagate; the push path uses the *IncludingTombstones
+    // reader to still find those rows.
+    @Query("SELECT * FROM show_reviews WHERE showId = :showId AND deletedAt IS NULL")
     suspend fun getByShowId(showId: String): ShowReviewEntity?
 
+    /** Includes tombstoned rows — used by the sync push to honor deletes. */
     @Query("SELECT * FROM show_reviews WHERE showId = :showId")
+    suspend fun getByShowIdIncludingTombstones(showId: String): ShowReviewEntity?
+
+    @Query("SELECT * FROM show_reviews WHERE showId = :showId AND deletedAt IS NULL")
     fun getByShowIdFlow(showId: String): Flow<ShowReviewEntity?>
 
-    @Query("SELECT * FROM show_reviews")
+    @Query("SELECT * FROM show_reviews WHERE deletedAt IS NULL")
     fun getAllFlow(): Flow<List<ShowReviewEntity>>
 
-    @Query("SELECT * FROM show_reviews")
+    @Query("SELECT * FROM show_reviews WHERE deletedAt IS NULL")
     suspend fun getAll(): List<ShowReviewEntity>
 
-    @Query("SELECT * FROM show_reviews WHERE showId IN (:showIds)")
+    @Query("SELECT * FROM show_reviews WHERE showId IN (:showIds) AND deletedAt IS NULL")
     suspend fun getByShowIds(showIds: List<String>): List<ShowReviewEntity>
+
+    /** Tombstone a review so its deletion syncs (LWW by updatedAt). */
+    @Query("UPDATE show_reviews SET deletedAt = :deletedAt, updatedAt = :updatedAt WHERE showId = :showId")
+    suspend fun softDelete(showId: String, deletedAt: Long = System.currentTimeMillis(), updatedAt: Long = System.currentTimeMillis())
+
+    /** Bump updatedAt so a player-tag change (tags travel with the review) carries an LWW timestamp. */
+    @Query("UPDATE show_reviews SET updatedAt = :updatedAt WHERE showId = :showId")
+    suspend fun touchUpdatedAt(showId: String, updatedAt: Long = System.currentTimeMillis())
 
     @Query("UPDATE show_reviews SET notes = :notes, updatedAt = :updatedAt WHERE showId = :showId")
     suspend fun updateNotes(showId: String, notes: String?, updatedAt: Long = System.currentTimeMillis())

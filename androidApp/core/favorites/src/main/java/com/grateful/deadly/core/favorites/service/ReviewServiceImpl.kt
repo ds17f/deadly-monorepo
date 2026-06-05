@@ -1,6 +1,7 @@
 package com.grateful.deadly.core.favorites.service
 
 import com.grateful.deadly.core.api.favorites.ReviewService
+import com.grateful.deadly.core.api.usersync.FavoritesPushService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.ShowDao
@@ -26,6 +27,7 @@ class ReviewServiceImpl @Inject constructor(
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
     @AppDatabase private val showDao: ShowDao,
     private val analyticsService: AnalyticsService,
+    private val favoritesPushService: FavoritesPushService,
 ) : ReviewService {
 
     override suspend fun getShowReview(showId: String): ShowReview? {
@@ -65,21 +67,25 @@ class ReviewServiceImpl @Inject constructor(
     override suspend fun updateShowNotes(showId: String, notes: String?) {
         ensureShowReviewExists(showId)
         showReviewDao.updateNotes(showId, notes)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun updateShowRating(showId: String, rating: Float?) {
         ensureShowReviewExists(showId)
         showReviewDao.updateCustomRating(showId, rating)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun updateRecordingQuality(showId: String, quality: Int?, recordingId: String?) {
         ensureShowReviewExists(showId)
         showReviewDao.updateRecordingQuality(showId, quality, recordingId)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun updatePlayingQuality(showId: String, quality: Int?) {
         ensureShowReviewExists(showId)
         showReviewDao.updatePlayingQuality(showId, quality)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun toggleFavoriteSong(
@@ -88,20 +94,36 @@ class ReviewServiceImpl @Inject constructor(
         trackNumber: Int?,
         recordingId: String?
     ) {
-        val isFav = favoriteSongDao.isFavorite(showId, trackTitle, recordingId)
-        if (isFav) {
-            favoriteSongDao.delete(showId, trackTitle, recordingId)
+        val now = System.currentTimeMillis()
+        // Identity is (showId, trackTitle) — recordingId is metadata.
+        val isFav = favoriteSongDao.isFavorite(showId, trackTitle)
+        val localId: Long? = if (isFav) {
+            favoriteSongDao.softDelete(showId, trackTitle, now)
+            favoriteSongDao.findByKeyIncludingTombstones(showId, trackTitle)?.id
         } else {
-            favoriteSongDao.insert(
-                FavoriteSongEntity(
-                    showId = showId,
-                    trackTitle = trackTitle,
-                    trackNumber = trackNumber,
-                    recordingId = recordingId,
-                    createdAt = System.currentTimeMillis()
-                )
-            )
+            // Resurrect a tombstoned row if present; otherwise insert fresh.
+            val resurrected = favoriteSongDao.resurrect(showId, trackTitle, trackNumber, recordingId, now)
+            if (resurrected > 0) {
+                favoriteSongDao.findByKeyIncludingTombstones(showId, trackTitle)?.id
+            } else {
+                favoriteSongDao.insert(
+                    FavoriteSongEntity(
+                        showId = showId,
+                        trackTitle = trackTitle,
+                        trackNumber = trackNumber,
+                        recordingId = recordingId,
+                        createdAt = now,
+                        updatedAt = now,
+                        deletedAt = null,
+                    )
+                ).takeIf { it > 0 }
+            }
         }
+
+        if (localId != null) {
+            favoritesPushService.enqueueAndPushFavoriteSong(localId)
+        }
+
         val targetId = "$showId/${recordingId.orEmpty()}/${trackNumber ?: 0}"
         analyticsService.track("feature_use", mapOf(
             "feature" to if (isFav) "remove_favorite" else "add_favorite",
@@ -111,8 +133,8 @@ class ReviewServiceImpl @Inject constructor(
         ))
     }
 
-    override fun isSongFavoriteFlow(showId: String, trackTitle: String, recordingId: String?): Flow<Boolean> {
-        return favoriteSongDao.isFavoriteFlow(showId, trackTitle, recordingId)
+    override fun isSongFavoriteFlow(showId: String, trackTitle: String): Flow<Boolean> {
+        return favoriteSongDao.isFavoriteFlow(showId, trackTitle)
     }
 
     override fun getFavoriteSongTitlesFlow(showId: String): Flow<Set<String>> {
@@ -141,17 +163,35 @@ class ReviewServiceImpl @Inject constructor(
             createdAt = existing?.createdAt ?: System.currentTimeMillis()
         )
         showPlayerTagDao.upsert(entity)
+        // Tags travel with the review on sync — make sure a review row exists
+        // and bump its timestamp so the change carries an LWW stamp, then push.
+        ensureShowReviewExists(showId)
+        showReviewDao.touchUpdatedAt(showId)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun removePlayerTag(showId: String, playerName: String) {
         showPlayerTagDao.removeTag(showId, playerName)
+        ensureShowReviewExists(showId)
+        showReviewDao.touchUpdatedAt(showId)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     override suspend fun getFavoriteTracks(): List<FavoriteTrack> {
         val favoriteEntities = favoriteSongDao.getAllFavorites()
-        val showIds = favoriteEntities.map { it.showId }.distinct()
+        return enrichFavoriteSongs(favoriteEntities)
+    }
+
+    override fun getFavoriteTracksFlow(): Flow<List<FavoriteTrack>> {
+        return favoriteSongDao.getAllFavoritesFlow().map { entities ->
+            enrichFavoriteSongs(entities)
+        }
+    }
+
+    private suspend fun enrichFavoriteSongs(entities: List<FavoriteSongEntity>): List<FavoriteTrack> {
+        val showIds = entities.map { it.showId }.distinct()
         val shows = showDao.getShowsByIds(showIds).associateBy { it.showId }
-        return favoriteEntities.mapNotNull { entity ->
+        return entities.mapNotNull { entity ->
             val show = shows[entity.showId] ?: return@mapNotNull null
             FavoriteTrack(
                 showId = entity.showId,
@@ -168,7 +208,10 @@ class ReviewServiceImpl @Inject constructor(
     override suspend fun deleteShowReview(showId: String) {
         showPlayerTagDao.removeTagsForShow(showId)
         favoriteSongDao.deleteForShow(showId)
-        showReviewDao.deleteByShowId(showId)
+        // Tombstone (not hard-delete) so the deletion syncs. The server DELETE
+        // clears the review and its player tags together.
+        showReviewDao.softDelete(showId)
+        favoritesPushService.enqueueAndPushReview(showId)
     }
 
     private suspend fun ensureShowReviewExists(showId: String) {

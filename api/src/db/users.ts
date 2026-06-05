@@ -67,6 +67,8 @@ function initSchema(db: Database.Database): void {
       custom_rating REAL,
       last_accessed_at INTEGER,
       tags TEXT,
+      updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      deleted_at INTEGER,
       PRIMARY KEY (user_id, show_id)
     );
 
@@ -77,7 +79,9 @@ function initSchema(db: Database.Database): void {
       track_title TEXT NOT NULL,
       track_number INTEGER,
       recording_id TEXT,
-      created_at INTEGER NOT NULL DEFAULT (unixepoch())
+      created_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      deleted_at INTEGER
     );
 
     CREATE TABLE IF NOT EXISTS show_reviews (
@@ -90,6 +94,7 @@ function initSchema(db: Database.Database): void {
       reviewed_recording_id TEXT,
       created_at INTEGER NOT NULL DEFAULT (unixepoch()),
       updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      deleted_at INTEGER,
       PRIMARY KEY (user_id, show_id)
     );
 
@@ -109,6 +114,7 @@ function initSchema(db: Database.Database): void {
       show_id TEXT NOT NULL,
       recording_id TEXT NOT NULL,
       updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
+      deleted_at INTEGER,
       PRIMARY KEY (user_id, show_id)
     );
 
@@ -118,6 +124,7 @@ function initSchema(db: Database.Database): void {
       last_played_at INTEGER NOT NULL,
       first_played_at INTEGER NOT NULL,
       total_play_count INTEGER NOT NULL DEFAULT 1,
+      deleted_at INTEGER,
       PRIMARY KEY (user_id, show_id)
     );
 
@@ -186,6 +193,18 @@ function initSchema(db: Database.Database): void {
   if (!accountColNames.has("is_admin")) {
     db.exec(`ALTER TABLE accounts ADD COLUMN is_admin INTEGER NOT NULL DEFAULT 0`);
   }
+  // Custom profile picture: a small (client-downscaled) image stored inline as
+  // a BLOB. avatar_updated_at versions the public GET URL so it's immutably
+  // cacheable. NULL avatar = fall back to the OAuth picture.
+  if (!accountColNames.has("avatar")) {
+    db.exec(`ALTER TABLE accounts ADD COLUMN avatar BLOB`);
+  }
+  if (!accountColNames.has("avatar_mime")) {
+    db.exec(`ALTER TABLE accounts ADD COLUMN avatar_mime TEXT`);
+  }
+  if (!accountColNames.has("avatar_updated_at")) {
+    db.exec(`ALTER TABLE accounts ADD COLUMN avatar_updated_at INTEGER`);
+  }
 
   const cols = db.prepare(
     `SELECT name FROM pragma_table_info('playback_position')`
@@ -200,6 +219,38 @@ function initSchema(db: Database.Database): void {
   if (!colNames.has("location")) {
     db.exec(`ALTER TABLE playback_position ADD COLUMN location TEXT`);
   }
+
+  // ── Sync support: per-row updated_at and deleted_at (tombstones) ────
+  // Each user-data table needs an LWW comparator and a way to communicate
+  // deletions across devices. Singleton tables (playback_position,
+  // user_settings) don't need tombstones because the row is replaced
+  // wholesale. show_player_tags doesn't need them — tags travel with
+  // their parent review.
+  //
+  // SQLite forbids non-constant defaults on ALTER TABLE ADD COLUMN, so
+  // updated_at columns are added with DEFAULT 0 then backfilled.
+  const addColumnIfMissing = (table: string, column: string, ddl: string) => {
+    const c = db!.prepare(`SELECT name FROM pragma_table_info('${table}')`).all() as { name: string }[];
+    if (!c.some((r) => r.name === column)) {
+      db!.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${ddl}`);
+    }
+  };
+
+  addColumnIfMissing("favorite_shows", "updated_at", "INTEGER NOT NULL DEFAULT 0");
+  addColumnIfMissing("favorite_shows", "deleted_at", "INTEGER");
+  addColumnIfMissing("favorite_songs", "updated_at", "INTEGER NOT NULL DEFAULT 0");
+  addColumnIfMissing("favorite_songs", "deleted_at", "INTEGER");
+  addColumnIfMissing("show_reviews", "deleted_at", "INTEGER");
+  addColumnIfMissing("recording_preferences", "deleted_at", "INTEGER");
+  addColumnIfMissing("recent_shows", "deleted_at", "INTEGER");
+
+  // Account tombstone: a deleted account keeps its row (and orphaned data)
+  // but is treated as gone — the getters below filter deleted_at IS NULL, so
+  // every auth path rejects it. Re-signing in reactivates (see adapter).
+  addColumnIfMissing("accounts", "deleted_at", "INTEGER");
+
+  db.exec(`UPDATE favorite_shows SET updated_at = unixepoch() WHERE updated_at = 0`);
+  db.exec(`UPDATE favorite_songs SET updated_at = unixepoch() WHERE updated_at = 0`);
 }
 
 export function createAppUser(authUserId: string, email: string, name: string | null, provider: string): string {
@@ -211,18 +262,94 @@ export function createAppUser(authUserId: string, email: string, name: string | 
   return id;
 }
 
-export function getAppUserByAuthId(authUserId: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
+export function getAppUserByAuthId(authUserId: string): { id: string; email: string; name: string | null; is_admin: number; avatar_updated_at: number | null } | undefined {
   const db = getUsersDb();
   return db.prepare(
-    `SELECT id, email, name, is_admin FROM accounts WHERE auth_user_id = ?`
-  ).get(authUserId) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
+    `SELECT id, email, name, is_admin, avatar_updated_at FROM accounts WHERE auth_user_id = ? AND deleted_at IS NULL`
+  ).get(authUserId) as { id: string; email: string; name: string | null; is_admin: number; avatar_updated_at: number | null } | undefined;
 }
 
 export function getAppUserById(accountId: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
   const db = getUsersDb();
   return db.prepare(
-    `SELECT id, email, name, is_admin FROM accounts WHERE id = ?`
+    `SELECT id, email, name, is_admin FROM accounts WHERE id = ? AND deleted_at IS NULL`
   ).get(accountId) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
+}
+
+export function getAppUserByEmail(email: string): { id: string; email: string; name: string | null; is_admin: number } | undefined {
+  const db = getUsersDb();
+  return db.prepare(
+    `SELECT id, email, name, is_admin FROM accounts WHERE email = ? AND deleted_at IS NULL`
+  ).get(email) as { id: string; email: string; name: string | null; is_admin: number } | undefined;
+}
+
+/** Tombstone an account. Idempotent; returns true if a live account was deleted. */
+export function deleteAppUser(accountId: string): boolean {
+  const db = getUsersDb();
+  const res = db.prepare(
+    `UPDATE accounts SET deleted_at = unixepoch() WHERE id = ? AND deleted_at IS NULL`
+  ).run(accountId);
+  return res.changes > 0;
+}
+
+/**
+ * Update the account's display name. `accounts.name` is what the JWT callback
+ * reads into the session, so this is the source of truth for the shown name.
+ */
+export function updateAppUserName(accountId: string, name: string): boolean {
+  const db = getUsersDb();
+  const res = db.prepare(
+    `UPDATE accounts SET name = ? WHERE id = ? AND deleted_at IS NULL`
+  ).run(name, accountId);
+  return res.changes > 0;
+}
+
+/**
+ * Store a custom profile picture (already downscaled by the client) inline on
+ * the account. `avatar_updated_at` versions the public GET URL for caching.
+ */
+export function setAppUserAvatar(accountId: string, bytes: Buffer, mime: string): boolean {
+  const db = getUsersDb();
+  const res = db.prepare(
+    `UPDATE accounts SET avatar = ?, avatar_mime = ?, avatar_updated_at = unixepoch() WHERE id = ? AND deleted_at IS NULL`
+  ).run(bytes, mime, accountId);
+  return res.changes > 0;
+}
+
+/** Remove a custom profile picture (reverts to the OAuth picture). */
+export function clearAppUserAvatar(accountId: string): boolean {
+  const db = getUsersDb();
+  const res = db.prepare(
+    `UPDATE accounts SET avatar = NULL, avatar_mime = NULL, avatar_updated_at = NULL WHERE id = ? AND deleted_at IS NULL`
+  ).run(accountId);
+  return res.changes > 0;
+}
+
+/** Read a custom profile picture's bytes + mime, or undefined if none set. */
+export function getAppUserAvatar(accountId: string): { bytes: Buffer; mime: string } | undefined {
+  const db = getUsersDb();
+  const row = db.prepare(
+    `SELECT avatar, avatar_mime FROM accounts WHERE id = ? AND deleted_at IS NULL`
+  ).get(accountId) as { avatar: Buffer | null; avatar_mime: string | null } | undefined;
+  if (!row?.avatar || !row.avatar_mime) return undefined;
+  return { bytes: row.avatar, mime: row.avatar_mime };
+}
+
+/** The OAuth-provided profile image for an auth user, if any. */
+export function getAuthUserImage(authUserId: string): string | null {
+  const db = getUsersDb();
+  const row = db.prepare(
+    `SELECT image FROM auth_users WHERE id = ?`
+  ).get(authUserId) as { image: string | null } | undefined;
+  return row?.image ?? null;
+}
+
+/** Clear an account's tombstone (reactivate on re-sign-in). */
+export function reactivateAppUserByAuthId(authUserId: string): void {
+  const db = getUsersDb();
+  db.prepare(
+    `UPDATE accounts SET deleted_at = NULL WHERE auth_user_id = ? AND deleted_at IS NOT NULL`
+  ).run(authUserId);
 }
 
 export function closeUsersDb(): void {

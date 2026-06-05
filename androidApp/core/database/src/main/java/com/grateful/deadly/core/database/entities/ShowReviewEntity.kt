@@ -24,5 +24,6 @@ data class ShowReviewEntity(
     val playingQuality: Int? = null,
     val reviewedRecordingId: String? = null,
     val createdAt: Long,
-    val updatedAt: Long
+    val updatedAt: Long,
+    val deletedAt: Long? = null
 )

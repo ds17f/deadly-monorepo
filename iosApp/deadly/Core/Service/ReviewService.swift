@@ -7,13 +7,24 @@ struct ReviewService: Sendable {
     private let showPlayerTagDAO: ShowPlayerTagDAO
     private let showDAO: ShowDAO
     private let analyticsService: AnalyticsService?
+    /// Optional so tests / preview builds without auth still work. Wired by
+    /// AppContainer after both services exist. See PLANS/mobile-server-sync.md.
+    private let favoritesPushService: FavoritesPushService?
 
-    init(showReviewDAO: ShowReviewDAO, favoriteSongDAO: FavoriteSongDAO, showPlayerTagDAO: ShowPlayerTagDAO, showDAO: ShowDAO, analyticsService: AnalyticsService? = nil) {
+    init(
+        showReviewDAO: ShowReviewDAO,
+        favoriteSongDAO: FavoriteSongDAO,
+        showPlayerTagDAO: ShowPlayerTagDAO,
+        showDAO: ShowDAO,
+        analyticsService: AnalyticsService? = nil,
+        favoritesPushService: FavoritesPushService? = nil
+    ) {
         self.showReviewDAO = showReviewDAO
         self.favoriteSongDAO = favoriteSongDAO
         self.showPlayerTagDAO = showPlayerTagDAO
         self.showDAO = showDAO
         self.analyticsService = analyticsService
+        self.favoritesPushService = favoritesPushService
     }
 
     // MARK: - Show-level review
@@ -36,21 +47,25 @@ struct ReviewService: Sendable {
     func updateShowNotes(_ showId: String, notes: String?) throws {
         try ensureShowReviewExists(showId)
         try showReviewDAO.updateNotes(showId, notes: notes)
+        enqueueReviewPush(showId)
     }
 
     func updateShowRating(_ showId: String, rating: Double?) throws {
         try ensureShowReviewExists(showId)
         try showReviewDAO.updateCustomRating(showId, rating: rating)
+        enqueueReviewPush(showId)
     }
 
     func updateRecordingQuality(_ showId: String, quality: Int?, recordingId: String? = nil) throws {
         try ensureShowReviewExists(showId)
         try showReviewDAO.updateRecordingQuality(showId, quality: quality, recordingId: recordingId)
+        enqueueReviewPush(showId)
     }
 
     func updatePlayingQuality(_ showId: String, quality: Int?) throws {
         try ensureShowReviewExists(showId)
         try showReviewDAO.updatePlayingQuality(showId, quality: quality)
+        enqueueReviewPush(showId)
     }
 
     // MARK: - Favorite songs
@@ -58,19 +73,23 @@ struct ReviewService: Sendable {
     func toggleFavoriteSong(
         showId: String, trackTitle: String, trackNumber: Int? = nil, recordingId: String? = nil
     ) throws {
-        let isFav = try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
+        // Identity is (showId, trackTitle) — recordingId is recorded as
+        // metadata on add (so the favorites screen knows which recording to
+        // navigate to) but doesn't participate in matching.
+        let isFav = try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle)
+        let localId: Int64?
         if isFav {
-            try favoriteSongDAO.delete(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
+            localId = try favoriteSongDAO.softDelete(showId: showId, trackTitle: trackTitle)
         } else {
-            let record = FavoriteSongRecord(
-                id: nil,
-                showId: showId,
-                trackTitle: trackTitle,
-                trackNumber: trackNumber,
-                recordingId: recordingId,
-                createdAt: Int64(Date().timeIntervalSince1970 * 1000)
+            localId = try favoriteSongDAO.upsertOrResurrect(
+                showId: showId, trackTitle: trackTitle,
+                trackNumber: trackNumber, recordingId: recordingId
             )
-            try favoriteSongDAO.insert(record)
+        }
+        if let localId, let push = favoritesPushService {
+            Task { @MainActor in
+                push.enqueueAndPushFavoriteSong(localId: localId)
+            }
         }
         let targetId = "\(showId)/\(recordingId ?? "")/\(trackNumber ?? 0)"
         analyticsService?.track("feature_use", props: [
@@ -81,16 +100,42 @@ struct ReviewService: Sendable {
         ])
     }
 
-    func isSongFavorite(showId: String, trackTitle: String, recordingId: String?) throws -> Bool {
-        try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle, recordingId: recordingId)
+    func isSongFavorite(showId: String, trackTitle: String) throws -> Bool {
+        try favoriteSongDAO.isFavorite(showId: showId, trackTitle: trackTitle)
     }
 
     func observeFavoriteTitles(showId: String) -> AsyncValueObservation<Set<String>> {
         favoriteSongDAO.database.observe(favoriteSongDAO.observeFavoriteTitles(showId: showId))
     }
 
-    func observeIsSongFavorite(showId: String, trackTitle: String, recordingId: String?) -> AsyncValueObservation<Bool> {
-        favoriteSongDAO.database.observe(favoriteSongDAO.observeIsFavorite(showId: showId, trackTitle: trackTitle, recordingId: recordingId))
+    /// Live view of a show's review (record + player tags). Re-emits when sync
+    /// applies a remote review, so the "has review" indicator updates without
+    /// reopening the show. Excludes tombstoned reviews.
+    func observeShowReview(showId: String) -> AsyncValueObservation<ShowReview> {
+        showReviewDAO.database.observe(
+            ValueObservation.tracking { db in
+                let reviewRecord = try ShowReviewRecord
+                    .filter(Column("showId") == showId && Column("deletedAt") == nil)
+                    .fetchOne(db)
+                let tagRecords = try ShowPlayerTagRecord
+                    .filter(Column("showId") == showId)
+                    .order(Column("playerName").asc)
+                    .fetchAll(db)
+                return ShowReview(
+                    showId: showId,
+                    notes: reviewRecord?.notes,
+                    overallRating: reviewRecord?.customRating,
+                    recordingQuality: reviewRecord?.recordingQuality,
+                    playingQuality: reviewRecord?.playingQuality,
+                    reviewedRecordingId: reviewRecord?.reviewedRecordingId,
+                    playerTags: tagRecords.map { $0.toDomain() }
+                )
+            }
+        )
+    }
+
+    func observeIsSongFavorite(showId: String, trackTitle: String) -> AsyncValueObservation<Bool> {
+        favoriteSongDAO.database.observe(favoriteSongDAO.observeIsFavorite(showId: showId, trackTitle: trackTitle))
     }
 
     // MARK: - Player tags
@@ -114,10 +159,18 @@ struct ReviewService: Sendable {
             createdAt: existing?.createdAt ?? Int64(Date().timeIntervalSince1970 * 1000)
         )
         try showPlayerTagDAO.upsert(record)
+        // Tags travel with the review on sync — ensure a review row exists and
+        // bump its timestamp so the change carries an LWW stamp, then push.
+        try ensureShowReviewExists(showId)
+        try showReviewDAO.touchUpdatedAt(showId)
+        enqueueReviewPush(showId)
     }
 
     func removePlayerTag(showId: String, playerName: String) throws {
         try showPlayerTagDAO.remove(showId: showId, playerName: playerName)
+        try ensureShowReviewExists(showId)
+        try showReviewDAO.touchUpdatedAt(showId)
+        enqueueReviewPush(showId)
     }
 
     // MARK: - Favorites
@@ -146,10 +199,20 @@ struct ReviewService: Sendable {
     func deleteShowReview(_ showId: String) throws {
         try showPlayerTagDAO.removeForShow(showId)
         try favoriteSongDAO.deleteForShow(showId)
-        try showReviewDAO.deleteByShowId(showId)
+        // Tombstone (not hard-delete) so the deletion syncs. The server DELETE
+        // clears the review and its player tags together.
+        try showReviewDAO.softDelete(showId)
+        enqueueReviewPush(showId)
     }
 
     // MARK: - Private
+
+    /// Fire-and-forget review push, hopping to the @MainActor push service
+    /// (mirrors the favorite-song path). No-op when push isn't wired (tests).
+    private func enqueueReviewPush(_ showId: String) {
+        guard let push = favoritesPushService else { return }
+        Task { @MainActor in push.enqueueAndPushReview(showId: showId) }
+    }
 
     private func ensureShowReviewExists(_ showId: String) throws {
         if try showReviewDAO.fetchByShowId(showId) == nil {

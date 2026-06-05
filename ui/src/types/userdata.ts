@@ -9,6 +9,15 @@ export interface FavoriteShow {
   recordingQuality?: number | null;
   playingQuality?: number | null;
   customRating?: number | null;
+  // Display metadata merged in by the API show catalog (GET
+  // /api/user/favorites/shows). Absent for shows not in the index.
+  date?: string | null;
+  venue?: string | null;
+  city?: string | null;
+  state?: string | null;
+  country?: string | null;
+  image?: string | null;
+  bestRecordingId?: string | null;
 }
 
 export interface FavoriteTrack {
@@ -16,6 +25,16 @@ export interface FavoriteTrack {
   trackTitle: string;
   trackNumber?: number | null;
   recordingId?: string | null;
+  updatedAt?: number;
+  // Display metadata merged in by the API show catalog (GET
+  // /api/user/favorites/songs). Absent for shows not in the index.
+  date?: string | null;
+  venue?: string | null;
+  city?: string | null;
+  state?: string | null;
+  country?: string | null;
+  image?: string | null;
+  bestRecordingId?: string | null;
 }
 
 export interface ShowReview {
@@ -26,6 +45,16 @@ export interface ShowReview {
   playingQuality?: number | null;
   reviewedRecordingId?: string | null;
   playerTags?: PlayerTag[] | null;
+  updatedAt?: number;
+  // Display metadata merged in by the API show catalog (GET
+  // /api/user/reviews). Absent for shows not in the index.
+  date?: string | null;
+  venue?: string | null;
+  city?: string | null;
+  state?: string | null;
+  country?: string | null;
+  image?: string | null;
+  bestRecordingId?: string | null;
 }
 
 export interface PlayerTag {
@@ -63,6 +92,17 @@ export interface RecentShow {
   lastPlayedAt: number;
   firstPlayedAt: number;
   totalPlayCount: number;
+  // Display metadata merged in by the API show catalog. Absent for shows
+  // not in the index; clients fall back to the date-prefixed showId.
+  date?: string | null;
+  venue?: string | null;
+  city?: string | null;
+  state?: string | null;
+  country?: string | null;
+  rating?: number;
+  recordingCount?: number;
+  image?: string | null;
+  bestRecordingId?: string | null;
 }
 
 export interface UserDataBackupV3 {

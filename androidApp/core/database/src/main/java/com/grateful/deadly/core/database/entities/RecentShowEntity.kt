@@ -48,7 +48,10 @@ data class RecentShowEntity(
      * Incremented each time any track from this show is played
      * (after passing the meaningful play threshold).
      */
-    val totalPlayCount: Int
+    val totalPlayCount: Int,
+
+    // Sync support (see PLANS/mobile-server-sync.md)
+    val deletedAt: Long? = null
 ) {
     companion object {
         /**

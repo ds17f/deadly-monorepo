@@ -31,6 +31,9 @@ final class AppContainer {
     let downloadService: DownloadServiceImpl
     let equalizerService: EqualizerService
     let authService: AuthService
+    let userSyncAPIClient: UserSyncAPIClient
+    let favoritesPushService: FavoritesPushService
+    let userSyncApplyService: UserSyncApplyService
     let playbackRestorationService: PlaybackRestorationService
     let analyticsService: AnalyticsService
 
@@ -53,7 +56,12 @@ final class AppContainer {
             let prefs = AppPreferences()
             appPreferences = prefs
             let analytics = AnalyticsService(appPreferences: prefs, apiKey: Secrets.analyticsApiKey)
-            authService = MainActor.assumeIsolated { AuthService(appPreferences: prefs, analyticsService: analytics) }
+            let auth = MainActor.assumeIsolated { AuthService(appPreferences: prefs, analyticsService: analytics) }
+            authService = auth
+            let userSync = MainActor.assumeIsolated {
+                UserSyncAPIClient(appPreferences: prefs, authService: auth)
+            }
+            userSyncAPIClient = userSync
             dataImportService = DataImportService(
                 gitHubClient: URLSessionGitHubReleasesClient(),
                 zipExtractor: ZipExtractor(),
@@ -78,22 +86,58 @@ final class AppContainer {
                 appPreferences: prefs,
                 analyticsService: analytics
             )
+            // Build push service first — ReviewService needs it injected at
+            // init for the song-favorite outbox enqueue.
+            let pushSvc = MainActor.assumeIsolated {
+                FavoritesPushService(
+                    outbox: SyncOutboxDAO(database: db),
+                    favoritesDAO: FavoritesDAO(database: db),
+                    favoriteSongDAO: FavoriteSongDAO(database: db),
+                    recentShowDAO: RecentShowDAO(database: db),
+                    showReviewDAO: ShowReviewDAO(database: db),
+                    showPlayerTagDAO: ShowPlayerTagDAO(database: db),
+                    apiClient: userSync,
+                    authService: auth
+                )
+            }
+            favoritesPushService = pushSvc
             let revService = ReviewService(
                 showReviewDAO: ShowReviewDAO(database: db),
                 favoriteSongDAO: FavoriteSongDAO(database: db),
                 showPlayerTagDAO: ShowPlayerTagDAO(database: db),
                 showDAO: ShowDAO(database: db),
-                analyticsService: analytics
+                analyticsService: analytics,
+                favoritesPushService: pushSvc
             )
             reviewService = revService
-            favoritesService = FavoritesServiceImpl(
+            let favSvc = FavoritesServiceImpl(
                 database: db,
                 favoritesDAO: FavoritesDAO(database: db),
+                favoriteSongDAO: FavoriteSongDAO(database: db),
                 showReviewDAO: ShowReviewDAO(database: db),
                 showRepository: showRepo,
-                reviewService: revService,
                 analyticsService: analytics
             )
+            favoritesService = favSvc
+            MainActor.assumeIsolated {
+                favSvc.favoritesPushService = pushSvc
+                // Start observation after construction so the @MainActor task
+                // is launched in a defined place rather than inside init.
+                favSvc.startObserving()
+            }
+            let applySvc = MainActor.assumeIsolated {
+                UserSyncApplyService(
+                    apiClient: userSync,
+                    favoritesDAO: FavoritesDAO(database: db),
+                    favoriteSongDAO: FavoriteSongDAO(database: db),
+                    showReviewDAO: ShowReviewDAO(database: db),
+                    showPlayerTagDAO: ShowPlayerTagDAO(database: db),
+                    showDAO: ShowDAO(database: db),
+                    authService: auth
+                )
+            }
+            userSyncApplyService = applySvc
+            MainActor.assumeIsolated { pushSvc.userSyncApplyService = applySvc }
             favoritesImportExportService = FavoritesImportExportService(
                 favoritesDAO: FavoritesDAO(database: db),
                 showDAO: ShowDAO(database: db),
@@ -147,10 +191,22 @@ final class AppContainer {
                 RecentShowsServiceImpl(
                     recentShowDAO: RecentShowDAO(database: db),
                     showRepository: showRepo,
-                    streamPlayer: player
+                    streamPlayer: player,
+                    favoritesPushService: pushSvc
                 )
             }
             recentShowsService = recentService
+
+            // One-time startup backfill: push all local data (favorites +
+            // top recents) so a freshly-synced web profile isn't empty.
+            // Best-effort — enqueued rows flush once signed in; the flag stops
+            // it re-running. The same routine backs a manual "Sync now".
+            MainActor.assumeIsolated {
+                if !prefs.localBackfilledV1 {
+                    prefs.localBackfilledV1 = true
+                    Task { await pushSvc.enqueueAllLocalAndFlush() }
+                }
+            }
 
             // HomeService depends on RecentShowsService
             homeService = HomeServiceImpl(

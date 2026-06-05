@@ -60,6 +60,9 @@ dist/
 # API
 api/data/
 api-data/
+# Generated show-metadata index, baked into the API image at build time
+# (make api-show-index / CI). Never committed.
+api/show-index.json
 ui-out/
 .env
 

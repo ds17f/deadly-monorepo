@@ -51,6 +51,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_UNIQUE_SHOWS_PLAYED = "unique_shows_played"
         private const val KEY_LAST_REVIEW_PROMPT_TIME = "last_review_prompt_time"
         private const val KEY_HAS_ADDED_FAVORITE = "has_added_favorite"
+        private const val KEY_LOCAL_BACKFILLED_V1 = "local_backfilled_v1"
         private const val KEY_DEVELOPER_MODE_UNLOCKED = "developer_mode_unlocked"
         private const val KEY_PLAYER_CONTROLS_STYLE = "player_controls_style"
         private const val KEY_HOME_TRENDING_WINDOW = "home_trending_window"
@@ -372,6 +373,13 @@ class AppPreferences @Inject constructor(
 
     fun setHasAddedFavorite(value: Boolean) {
         prefs.edit().putBoolean(KEY_HAS_ADDED_FAVORITE, value).apply()
+    }
+
+    /** One-time flag: have we pushed all pre-existing local data to the server? */
+    fun getLocalBackfilledV1(): Boolean = prefs.getBoolean(KEY_LOCAL_BACKFILLED_V1, false)
+
+    fun setLocalBackfilledV1(value: Boolean) {
+        prefs.edit().putBoolean(KEY_LOCAL_BACKFILLED_V1, value).apply()
     }
 
     private val _developerModeUnlocked = MutableStateFlow(

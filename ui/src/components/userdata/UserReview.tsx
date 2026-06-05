@@ -42,54 +42,28 @@ export default function UserReview({ showId }: { showId: string }) {
     setPlayingQuality(0);
   }
 
-  // Show existing review in read mode
-  if (existing && !isEditing) {
+  // Collapsed: just a button (no section/card taking up space). The full
+  // display of an existing review is TBD; for now editing reveals the form.
+  if (!isEditing) {
     return (
-      <div className="mt-6 rounded-lg border border-white/10 p-4">
-        <div className="mb-2 flex items-center justify-between">
-          <h3 className="text-sm font-semibold text-white/70">Your Review</h3>
-          <button
-            onClick={() => setIsEditing(true)}
-            className="text-xs text-deadly-highlight hover:underline"
-          >
-            Edit
-          </button>
-        </div>
-        {existing.overallRating ? (
-          <div className="mb-2">
-            <StarDisplay rating={existing.overallRating} />
-          </div>
-        ) : null}
-        {existing.notes && (
-          <p className="text-sm text-white/60">{existing.notes}</p>
-        )}
-        {(existing.recordingQuality || existing.playingQuality) && (
-          <div className="mt-2 flex gap-4 text-xs text-white/40">
-            {existing.recordingQuality ? <span>Recording: {existing.recordingQuality}/5</span> : null}
-            {existing.playingQuality ? <span>Playing: {existing.playingQuality}/5</span> : null}
-          </div>
-        )}
-      </div>
+      <button
+        onClick={() => setIsEditing(true)}
+        className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-white/70 transition hover:border-white/30 hover:text-white"
+      >
+        {existing ? "Edit your review" : "＋ Add your review"}
+      </button>
     );
   }
 
   return (
-    <div className="mt-6 rounded-lg border border-white/10 p-4">
+    <div className="mt-2 rounded-lg border border-white/10 p-4">
       <div className="mb-3 flex items-center justify-between">
         <h3 className="text-sm font-semibold text-white/70">
           {existing ? "Edit Review" : "Add Your Review"}
         </h3>
-        {!isEditing && !existing && (
-          <button
-            onClick={() => setIsEditing(true)}
-            className="text-xs text-deadly-highlight hover:underline"
-          >
-            Write a review
-          </button>
-        )}
       </div>
 
-      {!isEditing && !existing ? null : (
+      {(
         <div className="space-y-3">
           <div>
             <label className="mb-1 block text-xs text-white/40">Overall Rating</label>
@@ -172,23 +146,3 @@ function StarInput({ value, onChange }: { value: number; onChange: (v: number) =
   );
 }
 
-function StarDisplay({ rating }: { rating: number }) {
-  return (
-    <div className="flex gap-0.5">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <svg
-          key={star}
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill={star <= rating ? "currentColor" : "none"}
-          stroke="currentColor"
-          strokeWidth="1.5"
-          className={star <= rating ? "text-yellow-400" : "text-white/20"}
-        >
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-        </svg>
-      ))}
-    </div>
-  );
-}

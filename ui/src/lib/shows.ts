@@ -78,8 +78,23 @@ export function buildShowIndex(): ShowIndexEntry[] {
       sum: s.ai_show_review?.summary ?? "",
       ar: s.avg_rating,
       st: Object.keys(s.source_types ?? {}),
+      img: resolveShowCover(s),
     };
   });
+}
+
+/**
+ * The show's cover image URL — ticket art (front, else unknown side), then a
+ * photo, else "" so the client falls back to the logo. Shared so the index and
+ * the show page resolve covers the same way.
+ */
+export function resolveShowCover(s: Show): string {
+  const front = s.ticket_images?.find((t) => t.side === "front");
+  if (front) return front.url;
+  const unknown = s.ticket_images?.find((t) => t.side === "unknown");
+  if (unknown) return unknown.url;
+  if (s.photos?.length > 0) return s.photos[0].url;
+  return "";
 }
 
 export function getTopRatedShows(

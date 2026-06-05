@@ -26,6 +26,14 @@ export default function AuthProvider({
       });
   }, []);
 
+  const updateName = useCallback((name: string) => {
+    setUser((u) => (u ? { ...u, name } : u));
+  }, []);
+
+  const updateImage = useCallback((image: string | null) => {
+    setUser((u) => (u ? { ...u, image } : u));
+  }, []);
+
   const signOut = useCallback(() => {
     fetch("/api/auth/csrf", { credentials: "include" })
       .then((res) => res.json())
@@ -48,7 +56,7 @@ export default function AuthProvider({
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, isLoading, signOut }}>
+    <AuthContext.Provider value={{ user, isLoading, signOut, updateName, updateImage }}>
       {children}
     </AuthContext.Provider>
   );

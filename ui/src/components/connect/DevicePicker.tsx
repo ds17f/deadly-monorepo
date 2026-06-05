@@ -13,9 +13,13 @@ const DEVICE_ICONS: Record<string, string> = {
 export default function DevicePicker({
   currentState,
   onClose,
+  variant = "popover",
 }: {
   currentState: PlaybackState | null;
   onClose: () => void;
+  // "popover" floats below the trigger; "inline" lays out statically so it can
+  // live inside the right column (no absolute positioning / shadow chrome).
+  variant?: "popover" | "inline";
 }) {
   const { devices, userState, playOnDevice, claimSession, setUserState } = useConnect();
 
@@ -24,23 +28,36 @@ export default function DevicePicker({
     return localStorage.getItem("deadly_device_id") ?? "";
   }, []);
 
+  const inline = variant === "inline";
+  const wrapperClass = inline
+    ? ""
+    : "absolute right-0 top-full z-50 mt-2 w-64 rounded-lg border border-white/10 bg-deadly-bg p-3 shadow-xl";
+
   if (devices.length === 0) {
     return (
-      <div className="absolute right-0 top-full z-50 mt-2 w-64 rounded-lg border border-white/10 bg-deadly-bg p-4 shadow-xl">
+      <div
+        className={
+          inline
+            ? ""
+            : "absolute right-0 top-full z-50 mt-2 w-64 rounded-lg border border-white/10 bg-deadly-bg p-4 shadow-xl"
+        }
+      >
         <p className="text-sm text-white/40">No devices connected</p>
-        <button
-          onClick={onClose}
-          className="mt-3 text-xs text-white/30 hover:text-white/50"
-        >
-          Close
-        </button>
+        {!inline && (
+          <button
+            onClick={onClose}
+            className="mt-3 text-xs text-white/30 hover:text-white/50"
+          >
+            Close
+          </button>
+        )}
       </div>
     );
   }
 
   return (
-    <div className="absolute right-0 top-full z-50 mt-2 w-64 rounded-lg border border-white/10 bg-deadly-bg p-3 shadow-xl">
-      <p className="mb-2 text-xs font-medium text-white/50">Devices</p>
+    <div className={wrapperClass}>
+      {!inline && <p className="mb-2 text-xs font-medium text-white/50">Devices</p>}
       <div className="space-y-1">
         {devices.map((device) => {
           const isLocal = device.deviceId === localDeviceId;

@@ -29,7 +29,7 @@ interface ReviewService {
         recordingId: String? = null
     )
 
-    fun isSongFavoriteFlow(showId: String, trackTitle: String, recordingId: String?): Flow<Boolean>
+    fun isSongFavoriteFlow(showId: String, trackTitle: String): Flow<Boolean>
 
     fun getFavoriteSongTitlesFlow(showId: String): Flow<Set<String>>
 
@@ -46,6 +46,11 @@ interface ReviewService {
     suspend fun removePlayerTag(showId: String, playerName: String)
 
     suspend fun getFavoriteTracks(): List<FavoriteTrack>
+
+    /** Room-backed live view of [getFavoriteTracks]. The favorites songs screen
+     *  collects this so server-side changes (sync apply) propagate without an
+     *  explicit refresh hook. */
+    fun getFavoriteTracksFlow(): Flow<List<FavoriteTrack>>
 
     suspend fun deleteShowReview(showId: String)
 }

@@ -1,19 +1,13 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import AppStoreBadge from "@/components/AppStoreBadge";
+import type { Metadata, Viewport } from "next";
 import AuthProvider from "@/components/auth/AuthProvider";
-import UserMenu from "@/components/auth/UserMenu";
 import UserDataProvider from "@/components/userdata/UserDataProvider";
 import ConnectProvider from "@/components/connect/ConnectProvider";
 import PlayerProvider from "@/components/player/PlayerProvider";
-import HeaderPlayerWrapper from "@/components/player/HeaderPlayerWrapper";
+import ToastProvider from "@/components/ui/ToastProvider";
+import AppShell from "@/components/shell/AppShell";
+import ServiceWorkerRegistrar from "@/components/pwa/ServiceWorkerRegistrar";
+import InstallPrompt from "@/components/pwa/InstallPrompt";
 import "./globals.css";
-
-const PLAY_STORE_URL =
-  "https://play.google.com/store/apps/details?id=com.grateful.deadly";
-const GOOGLE_PLAY_BADGE_URL =
-  "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png";
 
 export const metadata: Metadata = {
   title: "The Deadly — Every Grateful Dead Concert",
@@ -23,6 +17,27 @@ export const metadata: Metadata = {
     siteName: "The Deadly",
     type: "website",
   },
+  // iOS standalone ("Add to Home Screen"). iOS 13 reads these legacy tags
+  // rather than the web manifest, so this is what makes it launch full-screen
+  // with a dark status bar. Next emits apple-mobile-web-app-{capable,title,
+  // status-bar-style}; the apple-touch-icon comes from app/apple-icon.png.
+  appleWebApp: {
+    capable: true,
+    title: "The Deadly",
+    statusBarStyle: "black-translucent",
+  },
+  // Next 16 emits the standardized `mobile-web-app-capable` for appleWebApp.
+  // capable, but iOS 13 (our actual target device) only honors the legacy
+  // apple-prefixed tag for full-screen standalone launch — so emit it too.
+  other: {
+    "apple-mobile-web-app-capable": "yes",
+  },
+};
+
+// Tints the browser/status chrome to match the app background (#121212 =
+// --color-deadly-bg). Honored by Android Chrome and the iOS standalone shell.
+export const viewport: Viewport = {
+  themeColor: "#121212",
 };
 
 export default function RootLayout({
@@ -33,89 +48,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-deadly-bg text-white antialiased">
+        <ServiceWorkerRegistrar />
+        <ToastProvider>
         <AuthProvider>
         <UserDataProvider>
         <ConnectProvider>
         <PlayerProvider>
-          <nav className="border-b border-white/10 px-6 py-4">
-            {/* Two-row on narrow, single-row on sm+. On narrow the player
-                wraps to its own row below the logo+UserMenu so a wide
-                player no longer collides with the logo. */}
-            <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-4 gap-y-3">
-              <Link
-                href="/"
-                className="order-1 flex flex-shrink-0 items-center gap-2 text-xl font-bold text-white"
-              >
-                <Image
-                  src="/logo.png"
-                  alt="The Deadly logo"
-                  width={28}
-                  height={28}
-                />
-                The Deadly
-              </Link>
-              <div className="order-2 ml-auto flex-shrink-0 sm:order-3 sm:ml-0">
-                <UserMenu />
-              </div>
-              <div className="order-3 w-full min-w-0 sm:order-2 sm:w-auto sm:flex-1">
-                <HeaderPlayerWrapper />
-              </div>
-            </div>
-          </nav>
-          <main className="mx-auto max-w-5xl px-6 py-8">{children}</main>
-          <footer className="border-t border-white/10 px-6 py-6">
-            <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 text-sm text-white/30">
-              <div className="flex items-center gap-3">
-                <a
-                  href={PLAY_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={GOOGLE_PLAY_BADGE_URL}
-                    alt="Get it on Google Play"
-                    width={140}
-                    height={42}
-                    unoptimized
-                  />
-                </a>
-                <AppStoreBadge />
-              </div>
-              <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
-                <Link
-                  href="/privacy"
-                  className="text-white/40 hover:text-white/70"
-                >
-                  Privacy Policy
-                </Link>
-                <span>&middot;</span>
-                <a
-                  href="https://github.com/ds17f/deadly-monorepo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/40 hover:text-white/70"
-                >
-                  Open source on GitHub
-                </a>
-                <span>&middot;</span>
-                <span>
-                  Recordings courtesy of the{" "}
-                  <a
-                    href="https://archive.org/details/GratefulDead"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/40 hover:text-white/70"
-                  >
-                    Internet Archive
-                  </a>
-                </span>
-              </div>
-            </div>
-          </footer>
+          <AppShell>{children}</AppShell>
+          <InstallPrompt />
         </PlayerProvider>
         </ConnectProvider>
         </UserDataProvider>
         </AuthProvider>
+        </ToastProvider>
       </body>
     </html>
   );

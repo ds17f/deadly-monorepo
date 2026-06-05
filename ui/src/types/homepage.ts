@@ -20,6 +20,8 @@ export interface ShowIndexEntry {
   ar: number;
   /** source type keys (e.g. ["SBD","AUD"]) */
   st: string[];
+  /** cover image URL (ticket/photo), "" when only the logo fallback exists */
+  img: string;
 }
 
 export interface CollectionSummary {

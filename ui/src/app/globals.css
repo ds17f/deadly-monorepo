@@ -12,6 +12,15 @@
   --color-deadly-title: #DC143C;
 }
 
+html,
+body {
+  /* App-like, not web-page-like: kill the rubber-band bounce and the
+     pull-to-refresh / horizontal pan that make an installed PWA feel "floaty"
+     and draggable. No axis of the document overscrolls or scrolls sideways. */
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
 body {
   background: #121212;
   color: #ffffff;

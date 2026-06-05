@@ -3,7 +3,11 @@
 import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
 import { fetchArchiveTracks } from "@/lib/archive";
-import { updatePlaybackPosition } from "@/lib/userDataApi";
+import * as analytics from "@/lib/analytics";
+import { updatePlaybackPosition, addRecentShow } from "@/lib/userDataApi";
+import { notifyUserDataChanged } from "@/lib/userDataEvents";
+import { useAuth } from "@/contexts/AuthContext";
+import { rememberArt, lookupArt, rememberReview, lookupReview } from "@/lib/artCache";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
@@ -12,6 +16,7 @@ import type { PlaybackState } from "@/contexts/ConnectContext";
 const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
 const GAPLESS_PRELOAD_THRESHOLD = 2; // seconds before end to start preloading
+const DEFAULT_VOLUME = 0.5; // mid-range until the user sets it themselves
 
 export default function PlayerProvider({
   children,
@@ -19,6 +24,7 @@ export default function PlayerProvider({
   children: React.ReactNode;
 }) {
   const { announcePlayback, sendPositionUpdate, clearState, claimSession, userState, isActiveDevice } = useConnect();
+  const { user } = useAuth();
 
   const [activeShow, setActiveShow] = useState<ViewedShow | null>(null);
   const [viewedShow, setViewedShow] = useState<ViewedShow | null>(null);
@@ -32,6 +38,7 @@ export default function PlayerProvider({
   );
   const [isLoadingTracks, setIsLoadingTracks] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [volume, setVolumeState] = useState(DEFAULT_VOLUME);
   const [autoplayBlocked, setAutoplayBlocked] = useState(false);
   const [autoplayInfo, setAutoplayInfo] = useState<{ showDate: string; venue: string; fromDevice: string } | null>(null);
   const autoplayBlockedAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -51,9 +58,51 @@ export default function PlayerProvider({
   const selectedRecordingRef = useRef<string | null>(null);
   const sendPositionUpdateRef = useRef(sendPositionUpdate);
   const statusRef = useRef<PlaybackStatus>("idle");
+  const volumeRef = useRef(DEFAULT_VOLUME);
   const suppressAutoplayRef = useRef(false);
   const suppressAnnounceRef = useRef(false);
   const prevUserStateRef = useRef<{ isPlaying: boolean; trackIndex: number; positionMs: number } | null>(null);
+
+  // ── Playback analytics (playback_start / playback_end) ──────────────
+  // Mirrors the mobile client: a 1s dwell gates playback_start so queue-load
+  // churn and rapid skips don't fire phantom starts (which would skew
+  // trending). playback_end fires for the previously-committed track when the
+  // track changes, on natural end, and on close.
+  const committedPlaybackRef = useRef<
+    { key: string; showId: string; recordingId: string; trackNumber: number; durationMs: number } | null
+  >(null);
+  const lastElapsedMsRef = useRef(0);
+  const dwellTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Record a recent play once per show-listening session (signed-in only).
+  // Read auth through a ref so the dwell-commit closure isn't stale.
+  const userIdRef = useRef<string | undefined>(undefined);
+  const lastRecentShowRef = useRef<string | null>(null);
+  // Source attributed to the next playback_start; reset to "auto_advance"
+  // after each emit so only an explicit user action overrides it.
+  const nextPlaybackSourceRef = useRef<string>("auto_advance");
+
+  useEffect(() => {
+    lastElapsedMsRef.current = Math.floor(elapsed * 1000);
+  }, [elapsed]);
+
+  useEffect(() => {
+    userIdRef.current = user?.id;
+  }, [user?.id]);
+
+  const emitPlaybackEnd = useCallback((reason: string) => {
+    const c = committedPlaybackRef.current;
+    if (!c) return;
+    committedPlaybackRef.current = null;
+    const listenedMs = Math.min(lastElapsedMsRef.current, c.durationMs || lastElapsedMsRef.current);
+    analytics.track("playback_end", {
+      show_id: c.showId,
+      recording_id: c.recordingId,
+      track_index: c.trackNumber,
+      listened_ms: listenedMs,
+      duration_ms: c.durationMs,
+      reason,
+    });
+  }, []);
 
   // Keep refs in sync
   useEffect(() => {
@@ -179,6 +228,20 @@ export default function PlayerProvider({
           setCurrentTrackIndex(idx + 1);
         } else {
           setStatus("paused");
+          // Last track finished on its own — no track change will drive the
+          // playback_end, so emit the completed end here.
+          const c = committedPlaybackRef.current;
+          if (c) {
+            committedPlaybackRef.current = null;
+            analytics.track("playback_end", {
+              show_id: c.showId,
+              recording_id: c.recordingId,
+              track_index: c.trackNumber,
+              listened_ms: c.durationMs,
+              duration_ms: c.durationMs,
+              reason: "completed",
+            });
+          }
         }
       }
     });
@@ -231,14 +294,40 @@ export default function PlayerProvider({
     });
   }
 
+  // Restore persisted volume on mount, before the audio elements are created.
+  // Use the stored value only if it's a real, audible setting (> 0). A missing
+  // key coerces to 0 (Number(null) === 0), and an earlier bug persisted that 0
+  // back — so treat 0/invalid as "unset" and keep the mid-range default.
+  useEffect(() => {
+    const stored = Number(localStorage.getItem("deadly_volume"));
+    if (isFinite(stored) && stored > 0 && stored <= 1) {
+      volumeRef.current = stored;
+      setVolumeState(stored);
+    }
+  }, []);
+
+  // Apply volume to both audio elements and persist it.
+  useEffect(() => {
+    volumeRef.current = volume;
+    if (audioARef.current) audioARef.current.volume = volume;
+    if (audioBRef.current) audioBRef.current.volume = volume;
+    localStorage.setItem("deadly_volume", String(volume));
+  }, [volume]);
+
+  const setVolume = useCallback((v: number) => {
+    setVolumeState(Math.max(0, Math.min(1, v)));
+  }, []);
+
   // Create audio elements once
   useEffect(() => {
     const audioA = new Audio();
     audioA.preload = "auto";
+    audioA.volume = volumeRef.current;
     audioARef.current = audioA;
 
     const audioB = new Audio();
     audioB.preload = "none";
+    audioB.volume = volumeRef.current;
     audioBRef.current = audioB;
 
     wireAudioEvents(audioA);
@@ -297,6 +386,75 @@ export default function PlayerProvider({
     updateMediaSession(track);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTrackIndex, tracks]);
+
+  // Detect the settled current track → emit playback_start (after a 1s dwell)
+  // and playback_end for the outgoing track. The dwell is what keeps rapid
+  // skips / queue-load churn from firing phantom starts that would skew
+  // trending; see the refs near the top.
+  useEffect(() => {
+    const valid =
+      !!activeShow &&
+      !!selectedRecording &&
+      !!tracks &&
+      currentTrackIndex >= 0 &&
+      currentTrackIndex < tracks.length;
+    const track = valid ? tracks![currentTrackIndex] : null;
+    const newKey = valid
+      ? `${activeShow!.showId}|${selectedRecording}|${currentTrackIndex}`
+      : null;
+
+    const committed = committedPlaybackRef.current;
+
+    // Outgoing committed track ends the instant the tuple changes — read the
+    // elapsed now, before the incoming track's first timeupdate resets it.
+    if (committed && committed.key !== newKey) {
+      if (!newKey) {
+        emitPlaybackEnd("stopped");
+      } else {
+        const listenedMs = lastElapsedMsRef.current;
+        const completed = committed.durationMs > 0 && listenedMs >= committed.durationMs - 2000;
+        emitPlaybackEnd(completed ? "completed" : "skipped");
+      }
+    }
+
+    if (dwellTimerRef.current) {
+      clearTimeout(dwellTimerRef.current);
+      dwellTimerRef.current = null;
+    }
+
+    if (valid && track && newKey && (!committed || committed.key !== newKey)) {
+      const info = {
+        key: newKey,
+        showId: activeShow!.showId,
+        recordingId: selectedRecording!,
+        trackNumber: track.track,
+        durationMs: Math.floor((track.duration || 0) * 1000),
+      };
+      dwellTimerRef.current = setTimeout(() => {
+        dwellTimerRef.current = null;
+        const source = nextPlaybackSourceRef.current;
+        nextPlaybackSourceRef.current = "auto_advance";
+        committedPlaybackRef.current = info;
+        analytics.track("playback_start", {
+          show_id: info.showId,
+          recording_id: info.recordingId,
+          track_index: info.trackNumber,
+          source,
+        });
+        // Record a recent play once per show session (not per auto-advanced
+        // track), signed-in only. This is what populates /me/recent — the web
+        // player previously never wrote it.
+        if (userIdRef.current && lastRecentShowRef.current !== info.showId) {
+          lastRecentShowRef.current = info.showId;
+          // Notify the /me recent surfaces so they refresh without a reload.
+          addRecentShow(info.showId)
+            .then(() => notifyUserDataChanged())
+            .catch(() => {});
+        }
+      }, 1000);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeShow?.showId, selectedRecording, currentTrackIndex, tracks]);
 
   // Register MediaSession action handlers
   useEffect(() => {
@@ -429,6 +587,8 @@ export default function PlayerProvider({
     if (!userState || activeShow) return;
 
     hydratedRef.current = true;
+    // The server's userState has no cover art — recover it by showId from the
+    // art cache (populated whenever this device viewed/played the show).
     setActiveShow({
       showId: userState.showId,
       recordings: [],
@@ -436,6 +596,7 @@ export default function PlayerProvider({
       date: userState.date ?? "",
       venue: userState.venue ?? "",
       location: userState.location ?? "",
+      image: lookupArt(userState.showId),
     });
     setSelectedRecording(userState.recordingId);
   }, [userState, activeShow]);
@@ -493,6 +654,14 @@ export default function PlayerProvider({
       artist: "Grateful Dead",
       album: showId.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
     });
+    // Re-assert the track handlers after each metadata swap. iOS can drop the
+    // previously-registered action handlers when the now-playing item changes,
+    // and once they're gone the lock screen falls back to its default ±skip
+    // buttons instead of previous/next track. Setting them here (and NOT
+    // setting seekforward/seekbackward) keeps it on real track controls.
+    navigator.mediaSession.setActionHandler("previoustrack", () => prevTrack());
+    navigator.mediaSession.setActionHandler("nexttrack", () => nextTrack());
+    navigator.mediaSession.playbackState = "playing";
   }
 
   const playRecording = useCallback(async (identifier: string) => {
@@ -514,9 +683,34 @@ export default function PlayerProvider({
     setIsLoadingTracks(false);
   }, []);
 
+  // Load the loaded show's track list WITHOUT starting playback, so a parked
+  // player can show its playlist and let the user pick a track to begin. Leaves
+  // currentTrackIndex at -1, so the play effect (guarded on index >= 0) stays
+  // put. No-op if tracks are already loaded or a fetch is in flight.
+  const ensureTracks = useCallback(async () => {
+    if ((tracksRef.current && tracksRef.current.length > 0) || isLoadingTracks) return;
+    const recId = selectedRecordingRef.current ?? activeShowRef.current?.bestRecordingId ?? null;
+    if (!recId) return;
+    setIsLoadingTracks(true);
+    try {
+      const fetched = await fetchArchiveTracks(recId);
+      if (fetched.length > 0) setTracks(fetched);
+    } catch {
+      /* leave tracks null; the rail just won't render */
+    }
+    setIsLoadingTracks(false);
+  }, [isLoadingTracks]);
+
   const playShow = useCallback(
     (show: ViewedShow) => {
+      nextPlaybackSourceRef.current = "browse";
       setActiveShow(show);
+      // Remember the cover so a page refresh (which rehydrates from the
+      // server's art-less userState) can restore it instead of the logo.
+      // Only when we actually have art — claim/handoff paths call playShow
+      // with no image and must NOT clobber a previously-stored cover.
+      rememberArt(show.showId, show.image);
+      rememberReview(show.showId, show.review);
       const recId =
         show.bestRecordingId ?? show.recordings[0]?.identifier ?? null;
       setSelectedRecording(recId);
@@ -527,7 +721,34 @@ export default function PlayerProvider({
     [playRecording]
   );
 
+  // Play a show then jump to a specific track once its tracks load. Matches by
+  // title first (the stable identity of a favorite song), then by track number.
+  const pendingTrackRef = useRef<{ title: string; number?: number | null } | null>(null);
+
+  const playShowTrack = useCallback(
+    (show: ViewedShow, trackTitle: string, trackNumber?: number | null) => {
+      pendingTrackRef.current = { title: trackTitle, number: trackNumber };
+      playShow(show);
+      nextPlaybackSourceRef.current = "favorites";
+    },
+    [playShow]
+  );
+
+  // Resolve a pending favorite-song jump after the recording's tracks arrive.
+  useEffect(() => {
+    if (!pendingTrackRef.current || !tracks || tracks.length === 0) return;
+    const { title, number } = pendingTrackRef.current;
+    pendingTrackRef.current = null;
+    let idx = tracks.findIndex((t) => t.title === title);
+    if (idx < 0 && number != null) idx = tracks.findIndex((t) => t.track === number);
+    // idx 0 already auto-plays via playRecording; only re-point when it differs.
+    if (idx > 0) setCurrentTrackIndex(idx);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tracks]);
+
   const playTrack = useCallback((index: number) => {
+    // Manual track selection — attribute the resulting playback_start.
+    nextPlaybackSourceRef.current = "track_list";
     // Reset gapless state since user is manually selecting
     preloadedNextRef.current = false;
     const inactive = getInactiveAudio();
@@ -700,6 +921,15 @@ export default function PlayerProvider({
     // Clear error first to prevent stale error flash
     setErrorMessage(null);
 
+    // End any tracked playback before we tear down local audio.
+    if (dwellTimerRef.current) {
+      clearTimeout(dwellTimerRef.current);
+      dwellTimerRef.current = null;
+    }
+    emitPlaybackEnd("stopped");
+    // Allow re-recording a recent if the same show is played again later.
+    lastRecentShowRef.current = null;
+
     // Announce stop before clearing local audio so the server parks the state
     if (activeShow && selectedRecording) {
       const audio = getActiveAudio();
@@ -741,7 +971,7 @@ export default function PlayerProvider({
       navigator.mediaSession.metadata = null;
     }
     // Note: activeShow and selectedRecording are NOT cleared — this is the parked state
-  }, [activeShow, selectedRecording, currentTrackIndex, announcePlayback]);
+  }, [activeShow, selectedRecording, currentTrackIndex, announcePlayback, emitPlaybackEnd]);
 
   const dismiss = useCallback(() => {
     close();
@@ -781,6 +1011,15 @@ export default function PlayerProvider({
     pendingPlayOnInfoRef.current = null;
   }, []);
 
+  // Wrap setViewedShow so simply viewing a show page also remembers its art,
+  // giving hydration a cover to restore after a refresh even if the last
+  // playback came through an art-less Connect path.
+  const updateViewedShow = useCallback((show: ViewedShow | null) => {
+    setViewedShow(show);
+    if (show?.image) rememberArt(show.showId, show.image);
+    if (show?.review) rememberReview(show.showId, show.review);
+  }, []);
+
   const value = useMemo(
     () => ({
       activeShow,
@@ -793,11 +1032,15 @@ export default function PlayerProvider({
       selectedRecording,
       isLoadingTracks,
       errorMessage,
-      setViewedShow,
+      volume,
+      setViewedShow: updateViewedShow,
+      setVolume,
       selectRecording,
       playShow,
+      playShowTrack,
       playRecording,
       playTrack,
+      ensureTracks,
       togglePlayPause,
       nextTrack,
       prevTrack,
@@ -820,10 +1063,14 @@ export default function PlayerProvider({
       selectedRecording,
       isLoadingTracks,
       errorMessage,
+      volume,
+      setVolume,
       selectRecording,
       playShow,
+      playShowTrack,
       playRecording,
       playTrack,
+      ensureTracks,
       togglePlayPause,
       nextTrack,
       prevTrack,

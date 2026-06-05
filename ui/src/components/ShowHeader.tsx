@@ -39,7 +39,7 @@ export default function ShowHeader({ show }: { show: Show }) {
         {show.city}, {show.state}
       </p>
       {show.recording_count > 0 && (
-        <div className="mt-3 flex items-center gap-4 text-sm text-white/70">
+        <div className="mt-3 flex items-center justify-center gap-4 text-sm text-white/70 sm:justify-start">
           <span>
             {show.recording_count} recording
             {show.recording_count !== 1 ? "s" : ""}

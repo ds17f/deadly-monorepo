@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext } from "react";
-import type { FavoriteShow, ShowReview, UserDataBackupV3 } from "@/types/userdata";
+import type { FavoriteShow, FavoriteTrack, ShowReview, UserDataBackupV3 } from "@/types/userdata";
 
 export interface UserDataContextValue {
   data: UserDataBackupV3 | null;
@@ -12,6 +12,9 @@ export interface UserDataContextValue {
   upsertFavorite: (show: FavoriteShow) => void;
   saveReview: (review: ShowReview) => void;
   removeReview: (showId: string) => void;
+  // Favorite songs — identity is the (showId, trackTitle) tuple.
+  isFavoriteTrack: (showId: string, trackTitle: string) => boolean;
+  toggleFavoriteTrack: (track: FavoriteTrack) => void;
 }
 
 export const UserDataContext = createContext<UserDataContextValue | null>(null);
@@ -25,6 +28,8 @@ const DEFAULT_VALUE: UserDataContextValue = {
   upsertFavorite: () => {},
   saveReview: () => {},
   removeReview: () => {},
+  isFavoriteTrack: () => false,
+  toggleFavoriteTrack: () => {},
 };
 
 export function useUserData(): UserDataContextValue {

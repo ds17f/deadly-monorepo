@@ -5,6 +5,15 @@ www.{$SITE_ADDRESS} {
 
 # Main site — SITE_ADDRESS set per environment in .env
 {$SITE_ADDRESS} {
+	# Inject the analytics key server-side so the browser never holds the
+	# secret — the web app posts to /api/analytics without it. Must precede
+	# the general /api/* handler (Caddy matches handle blocks in order).
+	handle /api/analytics {
+		reverse_proxy api:3001 {
+			header_up X-Analytics-Key {$ANALYTICS_API_KEY}
+		}
+	}
+
 	handle /api/* {
 		reverse_proxy api:3001
 	}

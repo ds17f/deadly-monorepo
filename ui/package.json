@@ -4,14 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build-search-index.mjs",
     "build": "next build",
-    "start": "next start"
+    "search-index": "node scripts/build-search-index.mjs"
   },
   "dependencies": {
+    "minisearch": "^7.2.0",
     "next": "^16.2.6",
+    "qrcode.react": "^4.2.0",
     "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "qrcode.react": "^4.2.0"
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

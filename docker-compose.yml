@@ -10,6 +10,8 @@ services:
     environment:
       - SITE_ADDRESS=${SITE_ADDRESS}
       - SHARE_ADDRESS=${SHARE_ADDRESS}
+      # Injected into /api/analytics requests so the browser never holds it.
+      - ANALYTICS_API_KEY=${ANALYTICS_API_KEY}
     ports:
       - "80:80"
       - "443:443"
@@ -30,6 +32,7 @@ services:
       - HOST=0.0.0.0
       - LOG_LEVEL=${LOG_LEVEL:-info}
       - USERS_DB_PATH=/app/data/users.db
+      - SHOW_INDEX_PATH=/app/show-index.json
       - CORS_ORIGIN=${CORS_ORIGIN:-*}
       - AUTH_SECRET=${AUTH_SECRET}
       - AUTH_URL=${AUTH_URL}

@@ -8,12 +8,12 @@ import {
 import ShowHeader from "@/components/ShowHeader";
 import ShowActions from "@/components/ShowActions";
 import Setlist from "@/components/Setlist";
-import Lineup from "@/components/Lineup";
 import ShowReview from "@/components/ShowReview";
+import ShowLinerNotes from "@/components/show/ShowLinerNotes";
+import ShowAppCta from "@/components/show/ShowAppCta";
+import HeroActions from "@/components/show/HeroActions";
+import { RightRailSlot } from "@/components/shell/RightRail";
 import ShowNav from "@/components/ShowNav";
-import ShowPlayerPanel from "@/components/player/ShowPlayerPanel";
-import FavoriteButton from "@/components/userdata/FavoriteButton";
-import UserReview from "@/components/userdata/UserReview";
 import type { Recording } from "@/types/recording";
 import type { Show } from "@/types/show";
 
@@ -113,42 +113,80 @@ export default async function ShowPage({
 
   const songHighlights = show.ai_show_review?.song_highlights ?? [];
 
+  const coverUrl = resolveCoverImageUrl(show);
+  const coverIsLogo = coverUrl.endsWith("/logo.png");
+  // Visible cover falls back to the square stealie (the OG/share image keeps
+  // the round logo — resolved separately in generateMetadata).
+  const heroCover = coverIsLogo ? "/cover-fallback.png" : coverUrl;
+
   return (
     <article>
       <ShowNav prevId={prev} nextId={next} />
-      <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-3">
-        <div className="lg:col-span-2">
-          <div className="flex items-start justify-between gap-4">
-            <ShowHeader show={show} />
-            <FavoriteButton showId={show.show_id} />
-          </div>
-          {show.setlist && show.setlist.length > 0 && (
-            <Setlist sets={show.setlist} songHighlights={songHighlights} />
-          )}
-          {show.ai_show_review && <ShowReview review={show.ai_show_review} />}
-          <UserReview showId={show.show_id} />
-        </div>
-        <div className="mt-6 lg:mt-0">
-          <ShowActions
-            showId={show.show_id}
-            bestRecordingId={show.best_recording}
-            firstRecordingId={show.recordings[0] ?? null}
-            recordings={recordings}
-            aiReview={show.ai_show_review}
-          />
-          <ShowPlayerPanel
-            recordings={recordings}
-            bestRecordingId={show.best_recording}
-            showId={show.show_id}
-            date={show.date}
-            venue={show.venue}
-            location={show.location_raw}
-          />
-          {show.lineup && show.lineup.length > 0 && (
-            <Lineup members={show.lineup} />
-          )}
+
+      {/* Album-style hero: cover + identity, with the favorite + play actions
+          stacked on the right of the info (centered on mobile). */}
+      <div className="mb-6 flex flex-col items-center gap-5 text-center sm:flex-row sm:items-end sm:text-left">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={heroCover}
+          alt=""
+          className="h-44 w-44 flex-shrink-0 rounded-md bg-white/5 object-cover shadow-2xl sm:h-40 sm:w-40"
+          referrerPolicy="no-referrer"
+        />
+        <div className="flex w-full flex-1 flex-col items-center gap-4 sm:w-auto sm:flex-row sm:items-end sm:justify-between">
+          <ShowHeader show={show} />
         </div>
       </div>
+
+      {/* Primary actions on one line: Play · Favorite · Review. Play loads the
+          bottom player, which owns the tracklist + recording switching. Order
+          below: actions → setlist → about → secondary (get-the-app / archive).
+          The liner notes are pushed into the shell's right pane via
+          RightRailSlot, so library · content · liner notes are three real
+          sibling panes (and the liner notes flow below content on mobile). */}
+      <HeroActions
+        showId={show.show_id}
+        recordings={recordings}
+        bestRecordingId={show.best_recording}
+        date={show.date}
+        venue={show.venue}
+        location={show.location_raw}
+        image={heroCover}
+        review={show.ai_show_review}
+      />
+
+      {show.setlist && show.setlist.length > 0 && (
+        <div className="mt-6">
+          <Setlist sets={show.setlist} songHighlights={songHighlights} />
+        </div>
+      )}
+
+      {show.ai_show_review && (
+        <div className="mt-8">
+          <ShowReview review={show.ai_show_review} />
+        </div>
+      )}
+
+      <div className="mt-8">
+        <ShowActions
+          showId={show.show_id}
+          bestRecordingId={show.best_recording}
+          firstRecordingId={show.recordings[0] ?? null}
+        />
+      </div>
+
+      <RightRailSlot>
+        <div className="flex flex-col gap-3">
+          <ShowAppCta />
+          <ShowLinerNotes
+            showId={show.show_id}
+            review={show.ai_show_review}
+            lineup={show.lineup}
+            recordings={recordings}
+            bestRecordingId={show.best_recording}
+          />
+        </div>
+      </RightRailSlot>
     </article>
   );
 }

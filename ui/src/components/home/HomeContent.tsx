@@ -1,14 +1,16 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { ShowIndexEntry, CollectionSummary, YearBucket } from "@/types/homepage";
+import { searchShows } from "@/lib/searchClient";
 import HeroSection from "./HeroSection";
-import GetTheApp from "./GetTheApp";
-import TopRatedShows from "./TopRatedShows";
-import CollectionsGrid from "./CollectionsGrid";
+import HomeDiscovery from "./HomeDiscovery";
+import HomeRightRail from "./HomeRightRail";
 import YearTimeline from "./YearTimeline";
 import SearchFilter, { type SortBy } from "./SearchFilter";
 import ShowList from "./ShowList";
+import ShowCarousel, { showToCarouselItem } from "./ShowCarousel";
+import { RightRailSlot } from "@/components/shell/RightRail";
 
 export default function HomeContent({
   showIndex,
@@ -33,6 +35,41 @@ export default function HomeContent({
   } | null>(null);
   const [selectedSource, setSelectedSource] = useState<string | null>(null);
   const [includeNoRecordings, setIncludeNoRecordings] = useState(false);
+  const browseRef = useRef<HTMLElement>(null);
+
+  // Song/member-aware browse: for queries >=2 chars, resolve the matching
+  // show_ids through the shared MiniSearch index (same engine as the global
+  // top-bar search). null = not ready/applicable -> the substring fallback in
+  // `filtered` runs instead, so the list never flashes empty while it loads.
+  const [searchHits, setSearchHits] = useState<Set<string> | null>(null);
+  useEffect(() => {
+    const q = searchQuery.trim();
+    if (q.length < 2) {
+      setSearchHits(null);
+      return;
+    }
+    let cancelled = false;
+    searchShows(q, Number.MAX_SAFE_INTEGER)
+      .then((res) => {
+        if (!cancelled) setSearchHits(new Set(res.hits.map((h) => h.showId)));
+      })
+      .catch(() => {
+        if (!cancelled) setSearchHits(null); // degrade to substring on failure
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [searchQuery]);
+
+  // Anchor the Browse-all section at the top of the pane whenever a search is
+  // active — a literal, instant jump (not a smooth scroll), run from an effect
+  // so it lands after the results render. `min-h-[100dvh]` on the section keeps
+  // the column tall enough for the heading to reach the very top even at 0 hits.
+  useEffect(() => {
+    if (searchQuery.trim()) {
+      browseRef.current?.scrollIntoView({ block: "start" });
+    }
+  }, [searchQuery, searchHits]);
 
   const filtered = useMemo(() => {
     let list = showIndex;
@@ -62,16 +99,22 @@ export default function HomeContent({
       list = list.filter((s) => s.st.includes(selectedSource));
     }
 
-    // Text search
+    // Text search. >=2 chars with a ready index -> song/member/venue/date
+    // aware hit set; otherwise a cheap substring fallback (single char, index
+    // still loading, or load failed) over venue/city/state/date.
     if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
-      list = list.filter(
-        (s) =>
-          s.v?.toLowerCase().includes(q) ||
-          s.c?.toLowerCase().includes(q) ||
-          s.s?.toLowerCase().includes(q) ||
-          s.d.includes(q)
-      );
+      const q = searchQuery.trim().toLowerCase();
+      if (q.length >= 2 && searchHits) {
+        list = list.filter((s) => searchHits.has(s.id));
+      } else {
+        list = list.filter(
+          (s) =>
+            s.v?.toLowerCase().includes(q) ||
+            s.c?.toLowerCase().includes(q) ||
+            s.s?.toLowerCase().includes(q) ||
+            s.d.includes(q)
+        );
+      }
     }
 
     if (sortBy === "rating") {
@@ -79,7 +122,7 @@ export default function HomeContent({
     }
 
     return list;
-  }, [showIndex, searchQuery, selectedYear, selectedDecade, selectedSource, sortBy, includeNoRecordings]);
+  }, [showIndex, searchQuery, searchHits, selectedYear, selectedDecade, selectedSource, sortBy, includeNoRecordings]);
 
   const hasActiveFilter =
     selectedYear !== null ||
@@ -92,21 +135,13 @@ export default function HomeContent({
     return [...filtered].sort((a, b) => b.r - a.r).slice(0, 20);
   }, [hasActiveFilter, topRatedAll, filtered]);
 
-  const topRatedFilterLabel = useMemo(() => {
-    const parts: string[] = [];
-    if (selectedYear !== null) parts.push(String(selectedYear));
-    else if (selectedDecade !== null) {
-      const labels: Record<string, string> = {
-        "1965-1969": "60s", "1970-1979": "70s",
-        "1980-1989": "80s", "1990-1995": "90s",
-      };
-      parts.push(labels[`${selectedDecade.from}-${selectedDecade.to}`] ?? "");
-    }
-    if (selectedSource !== null) parts.push(selectedSource);
-    if (searchQuery.trim()) parts.push(`"${searchQuery.trim()}"`);
-    if (parts.length === 0) return undefined;
-    return `Filtered: ${parts.join(" / ")}`;
-  }, [selectedYear, selectedDecade, selectedSource, searchQuery]);
+  const topRatedItems = useMemo(
+    () =>
+      topRated
+        .slice(0, 15)
+        .map((s) => showToCarouselItem(s, s.r > 0 ? `★ ${s.r.toFixed(1)}` : undefined)),
+    [topRated],
+  );
 
   function resetPage() {
     setCurrentPage(0);
@@ -142,40 +177,60 @@ export default function HomeContent({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-x-12 lg:grid-cols-3">
-      <div className="lg:col-span-2">
-        <HeroSection totalShows={totalShows} />
+    <>
+      {/* Conversion + context: get-the-app (+ QR) and now-playing. Leads
+          above the content on mobile so the install CTA is up top. */}
+      <RightRailSlot mobilePlacement="above">
+        <HomeRightRail />
+      </RightRailSlot>
+
+      {/* What this site is. */}
+      <HeroSection totalShows={totalShows} />
+
+      {/* Discovery carousels — the mobile-app home, with room. */}
+      <HomeDiscovery showIndex={showIndex} collections={collections} />
+
+      {/* Browse all — the full catalog (the SEO surface) with search/filter. */}
+      <section
+        ref={browseRef}
+        className={`mt-10 scroll-mt-4 border-t border-white/10 pt-8${
+          // While searching, guarantee the section is tall enough to scroll its
+          // heading to the top of the pane even on a short (or empty) result set.
+          searchQuery.trim() ? " min-h-[100dvh]" : ""
+        }`}
+      >
+        <h2 className="mb-4 text-lg font-bold text-white">
+          Browse all {totalShows.toLocaleString()} shows
+        </h2>
         <YearTimeline
-            yearData={yearData}
-            selectedYear={selectedYear}
-            onSelectYear={handleYearSelect}
-          />
-          <SearchFilter
-            searchQuery={searchQuery}
-            onSearchChange={handleSearchChange}
-            sortBy={sortBy}
-            onSortChange={handleSortChange}
-            selectedDecade={selectedDecade}
-            onDecadeChange={handleDecadeChange}
-            selectedSource={selectedSource}
-            onSourceChange={handleSourceChange}
-            includeNoRecordings={includeNoRecordings}
-            onIncludeNoRecordingsChange={(v) => {
-              setIncludeNoRecordings(v);
-              setCurrentPage(0);
-            }}
-          />
-          <ShowList
-            shows={filtered}
-            currentPage={currentPage}
-            onPageChange={setCurrentPage}
-          />
-        </div>
-      <div className="mt-6 lg:mt-0">
-        <GetTheApp />
-        <TopRatedShows shows={topRated} filterLabel={topRatedFilterLabel} />
-        <CollectionsGrid collections={collections} />
-      </div>
-    </div>
+          yearData={yearData}
+          selectedYear={selectedYear}
+          onSelectYear={handleYearSelect}
+        />
+        {/* Top Rated lives here, under the graph: it reflects the active
+            search + year/decade/source filters (top of `filtered`). */}
+        <ShowCarousel title="Top Rated" items={topRatedItems} />
+        <SearchFilter
+          searchQuery={searchQuery}
+          onSearchChange={handleSearchChange}
+          sortBy={sortBy}
+          onSortChange={handleSortChange}
+          selectedDecade={selectedDecade}
+          onDecadeChange={handleDecadeChange}
+          selectedSource={selectedSource}
+          onSourceChange={handleSourceChange}
+          includeNoRecordings={includeNoRecordings}
+          onIncludeNoRecordingsChange={(v) => {
+            setIncludeNoRecordings(v);
+            setCurrentPage(0);
+          }}
+        />
+        <ShowList
+          shows={filtered}
+          currentPage={currentPage}
+          onPageChange={setCurrentPage}
+        />
+      </section>
+    </>
   );
 }

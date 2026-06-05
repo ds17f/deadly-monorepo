@@ -15,7 +15,18 @@ struct ShowReviewDAO: Sendable {
 
     // MARK: - Fetch
 
+    // UI reads exclude tombstones (deletedAt set). The sync push uses
+    // fetchByShowIdIncludingTombstones to still find deleted rows.
     func fetchByShowId(_ showId: String) throws -> ShowReviewRecord? {
+        try database.read { db in
+            try ShowReviewRecord
+                .filter(Column("showId") == showId && Column("deletedAt") == nil)
+                .fetchOne(db)
+        }
+    }
+
+    /// Includes tombstoned rows — used by the sync push to honor deletes.
+    func fetchByShowIdIncludingTombstones(_ showId: String) throws -> ShowReviewRecord? {
         try database.read { db in
             try ShowReviewRecord.fetchOne(db, key: showId)
         }
@@ -25,14 +36,16 @@ struct ShowReviewDAO: Sendable {
         guard !showIds.isEmpty else { return [] }
         return try database.read { db in
             try ShowReviewRecord
-                .filter(showIds.contains(Column("showId")))
+                .filter(showIds.contains(Column("showId")) && Column("deletedAt") == nil)
                 .fetchAll(db)
         }
     }
 
     func fetchAll() throws -> [ShowReviewRecord] {
         try database.read { db in
-            try ShowReviewRecord.fetchAll(db)
+            try ShowReviewRecord
+                .filter(Column("deletedAt") == nil)
+                .fetchAll(db)
         }
     }
 
@@ -83,7 +96,32 @@ struct ShowReviewDAO: Sendable {
         }
     }
 
+    /// Bump updatedAt so a player-tag change (tags travel with the review on
+    /// sync) carries an LWW timestamp.
+    func touchUpdatedAt(_ showId: String) throws {
+        try database.write { db in
+            try ShowReviewRecord
+                .filter(Column("showId") == showId)
+                .updateAll(db,
+                    Column("updatedAt").set(to: Int64(Date().timeIntervalSince1970 * 1000))
+                )
+        }
+    }
+
     // MARK: - Delete
+
+    /// Tombstone a review so its deletion syncs (LWW by updatedAt).
+    func softDelete(_ showId: String) throws {
+        try database.write { db in
+            let now = Int64(Date().timeIntervalSince1970 * 1000)
+            try ShowReviewRecord
+                .filter(Column("showId") == showId)
+                .updateAll(db,
+                    Column("deletedAt").set(to: now),
+                    Column("updatedAt").set(to: now)
+                )
+        }
+    }
 
     func deleteByShowId(_ showId: String) throws {
         try database.write { db in

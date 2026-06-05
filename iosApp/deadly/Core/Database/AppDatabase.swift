@@ -125,7 +125,85 @@ struct AppDatabase: @unchecked Sendable {
                 WHERE bestSourceType IS NULL
             """)
         }
+        migrator.registerMigration("v11-sync-columns") { db in
+            try AppDatabase.addSyncColumns(db)
+        }
+        migrator.registerMigration("v12-sync-outbox") { db in
+            try AppDatabase.createSyncOutboxTable(db)
+        }
+        migrator.registerMigration("v13-sync-columns-camelcase") { db in
+            try AppDatabase.renameSyncColumnsToCamelCase(db)
+        }
+        migrator.registerMigration("v14-favorite-songs-natural-key") { db in
+            try AppDatabase.relaxFavoriteSongsNaturalKey(db)
+        }
         try migrator.migrate(dbWriter)
+    }
+
+    /// Outbox of pending server pushes. One row per (kind, refId) — re-enqueue
+    /// is a no-op via the UNIQUE constraint. Flusher reads current local row
+    /// state at push time and decides PUT vs DELETE based on deleted_at.
+    private static func createSyncOutboxTable(_ db: Database) throws {
+        try db.create(table: "sync_outbox", ifNotExists: true) { t in
+            t.autoIncrementedPrimaryKey("id")
+            t.column("kind", .text).notNull()
+            t.column("refId", .text).notNull()
+            t.column("createdAt", .integer).notNull()
+            t.column("lastAttemptAt", .integer)
+            t.column("attemptCount", .integer).notNull().defaults(to: 0)
+            t.column("lastError", .text)
+            t.uniqueKey(["kind", "refId"])
+        }
+        try db.create(index: "idx_sync_outbox_kind", on: "sync_outbox", columns: ["kind"], ifNotExists: true)
+    }
+
+    /// Additive sync support: per-row updated_at (LWW comparator) and
+    /// deleted_at (tombstone). Matches the server contract in
+    /// api/src/db/userdata.ts. Singletons don't need tombstones.
+    ///
+    /// SQLite ALTER TABLE requires a *constant* default, so we add the
+    /// updated_at columns with DEFAULT 0 then backfill existing rows
+    /// to the current timestamp in a follow-up UPDATE.
+    private static func addSyncColumns(_ db: Database) throws {
+        func addColumn(_ table: String, _ name: String, _ sql: String) throws {
+            let cols = try Row.fetchAll(db, sql: "PRAGMA table_info(\(table))")
+            let has = cols.contains { ($0["name"] as? String) == name }
+            if !has {
+                try db.execute(sql: "ALTER TABLE \(table) ADD COLUMN \(name) \(sql)")
+            }
+        }
+
+        try addColumn("favorite_shows", "updatedAt", "INTEGER NOT NULL DEFAULT 0")
+        try addColumn("favorite_shows", "deletedAt", "INTEGER")
+        try addColumn("favorite_songs", "updatedAt", "INTEGER NOT NULL DEFAULT 0")
+        try addColumn("favorite_songs", "deletedAt", "INTEGER")
+        try addColumn("show_reviews", "deletedAt", "INTEGER")
+        try addColumn("recording_preferences", "deletedAt", "INTEGER")
+        try addColumn("recent_shows", "deletedAt", "INTEGER")
+
+        let now = "CAST(strftime('%s','now') AS INTEGER)"
+        try db.execute(sql: "UPDATE favorite_shows SET updatedAt = \(now) WHERE updatedAt = 0")
+        try db.execute(sql: "UPDATE favorite_songs SET updatedAt = \(now) WHERE updatedAt = 0")
+    }
+
+    /// Fix for an earlier v11 that created snake_case columns
+    /// (`updated_at`, `deleted_at`) while the Swift records and DAOs
+    /// use camelCase. Rename in place when the bad columns are present.
+    private static func renameSyncColumnsToCamelCase(_ db: Database) throws {
+        func renameIfPresent(_ table: String, _ from: String, _ to: String) throws {
+            let cols = try Row.fetchAll(db, sql: "PRAGMA table_info(\(table))")
+            let names = cols.compactMap { $0["name"] as? String }
+            if names.contains(from) && !names.contains(to) {
+                try db.execute(sql: "ALTER TABLE \(table) RENAME COLUMN \(from) TO \(to)")
+            }
+        }
+        try renameIfPresent("favorite_shows", "updated_at", "updatedAt")
+        try renameIfPresent("favorite_shows", "deleted_at", "deletedAt")
+        try renameIfPresent("favorite_songs", "updated_at", "updatedAt")
+        try renameIfPresent("favorite_songs", "deleted_at", "deletedAt")
+        try renameIfPresent("show_reviews", "deleted_at", "deletedAt")
+        try renameIfPresent("recording_preferences", "deleted_at", "deletedAt")
+        try renameIfPresent("recent_shows", "deleted_at", "deletedAt")
     }
 
     // MARK: - Schema
@@ -358,6 +436,80 @@ struct AppDatabase: @unchecked Sendable {
         try db.execute(sql: "ALTER TABLE shows RENAME COLUMN libraryAddedAt TO favoritedAt")
         try db.execute(sql: "ALTER TABLE favorite_shows RENAME COLUMN addedToLibraryAt TO addedToFavoritesAt")
         try db.execute(sql: "ALTER TABLE favorite_shows RENAME COLUMN libraryNotes TO notes")
+    }
+
+    /// Drops `recordingId` from the favorite_songs natural-key uniqueness.
+    /// Server identifies song favorites by (user, showId, trackTitle); mobile
+    /// was using (showId, trackTitle, recordingId), which created phantom
+    /// duplicates whenever sync round-tripped a row whose stored recordingId
+    /// differed from what the local UI was viewing with. recordingId stays on
+    /// the row as a property (used by the favorites screen for navigation).
+    ///
+    /// Dedupe rule: per (showId, trackTitle), keep the row with the highest
+    /// (deletedAt IS NULL, updatedAt) — live rows preferred, then most recent.
+    private static func relaxFavoriteSongsNaturalKey(_ db: Database) throws {
+        // Step 1: dedupe. SQLite doesn't allow a self-join in DELETE the easy
+        // way, so we materialize the winners first.
+        try db.execute(sql: """
+            CREATE TEMP TABLE favorite_songs_keep AS
+            SELECT id FROM favorite_songs s1
+             WHERE id = (
+                 SELECT id FROM favorite_songs s2
+                  WHERE s2.showId = s1.showId AND s2.trackTitle = s1.trackTitle
+                  ORDER BY (s2.deletedAt IS NULL) DESC, s2.updatedAt DESC, s2.id DESC
+                  LIMIT 1
+             )
+        """)
+        try db.execute(sql: """
+            DELETE FROM favorite_songs
+             WHERE id NOT IN (SELECT id FROM favorite_songs_keep)
+        """)
+        try db.execute(sql: "DROP TABLE favorite_songs_keep")
+
+        // Step 2: swap the unique index. SQLite has no DROP CONSTRAINT — the
+        // original unique key was declared inline on CREATE TABLE, so it
+        // lives as an autogenerated index. List indexes and drop any whose
+        // SQL mentions all three columns; then create the new (showId,trackTitle) one.
+        let oldIndexes = try Row.fetchAll(db, sql: """
+            SELECT name, sql FROM sqlite_master
+             WHERE type = 'index' AND tbl_name = 'favorite_songs'
+        """)
+        for row in oldIndexes {
+            guard let name = row["name"] as? String,
+                  let sql = row["sql"] as? String? ?? nil else { continue }
+            // skip autoindex on primary key (sql is null), keep idx_favorite_songs_showId
+            if name == "idx_favorite_songs_showId" { continue }
+            if sql.contains("recordingId") && sql.contains("trackTitle") {
+                try db.execute(sql: "DROP INDEX IF EXISTS \(name)")
+            }
+        }
+        // Some SQLite versions store the auto-generated index under
+        // sqlite_autoindex_favorite_songs_N with NULL sql. Drop those too if
+        // the table has more than one autoindex (the primary key gets one).
+        // The safest path: rebuild the table without the inline unique key.
+        // GRDB's table builder makes this simple via a "create alongside, copy, swap" dance.
+        try db.execute(sql: "PRAGMA foreign_keys = OFF")
+        try db.execute(sql: """
+            CREATE TABLE favorite_songs_new (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                showId TEXT NOT NULL REFERENCES shows(showId) ON DELETE CASCADE,
+                trackTitle TEXT NOT NULL,
+                trackNumber INTEGER,
+                recordingId TEXT,
+                createdAt INTEGER NOT NULL,
+                updatedAt INTEGER NOT NULL DEFAULT 0,
+                deletedAt INTEGER
+            )
+        """)
+        try db.execute(sql: """
+            INSERT INTO favorite_songs_new (id, showId, trackTitle, trackNumber, recordingId, createdAt, updatedAt, deletedAt)
+            SELECT id, showId, trackTitle, trackNumber, recordingId, createdAt, updatedAt, deletedAt FROM favorite_songs
+        """)
+        try db.execute(sql: "DROP TABLE favorite_songs")
+        try db.execute(sql: "ALTER TABLE favorite_songs_new RENAME TO favorite_songs")
+        try db.execute(sql: "CREATE UNIQUE INDEX idx_favorite_songs_showId_trackTitle ON favorite_songs(showId, trackTitle)")
+        try db.execute(sql: "CREATE INDEX idx_favorite_songs_showId ON favorite_songs(showId)")
+        try db.execute(sql: "PRAGMA foreign_keys = ON")
     }
 
     // MARK: - Replace track_reviews with favorite_songs

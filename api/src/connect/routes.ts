@@ -110,6 +110,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             date: pos.state.date,
             venue: pos.state.venue,
             location: pos.state.location,
+            updatedAt: Math.floor(Date.now() / 1000),
           });
           break;
         }
@@ -148,6 +149,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
               date: su.state.date,
               venue: su.state.venue,
               location: su.state.location,
+              updatedAt: Math.floor(Date.now() / 1000),
             });
             // Legacy
             clearActiveSession(userId, deviceId);

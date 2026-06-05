@@ -19,49 +19,55 @@ import kotlinx.coroutines.flow.Flow
 interface FavoritesDao {
 
     // Core CRUD operations
+    //
+    // UI reads filter `deletedAt IS NULL`. Sync paths that need to see
+    // tombstones use the *IncludingTombstones variants.
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addToFavorites(favoriteShow: FavoriteShowEntity)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addMultipleToFavorites(favoriteShows: List<FavoriteShowEntity>)
 
-    @Delete
-    suspend fun removeFromFavorites(favoriteShow: FavoriteShowEntity)
-
-    @Query("DELETE FROM favorite_shows WHERE showId = :showId")
-    suspend fun removeFromFavoritesById(showId: String)
+    /** Soft-delete: row stays as a tombstone so sync can propagate the removal. */
+    @Query("UPDATE favorite_shows SET deletedAt = :now, updatedAt = :now WHERE showId = :showId")
+    suspend fun softDelete(showId: String, now: Long)
 
     @Update
     suspend fun updateFavoriteShow(favoriteShow: FavoriteShowEntity)
 
     // Reactive queries for UI
-    @Query("SELECT * FROM favorite_shows ORDER BY isPinned DESC, addedToFavoritesAt DESC")
+    @Query("SELECT * FROM favorite_shows WHERE deletedAt IS NULL ORDER BY isPinned DESC, addedToFavoritesAt DESC")
     fun getAllFavoriteShowsFlow(): Flow<List<FavoriteShowEntity>>
 
-    @Query("SELECT * FROM favorite_shows WHERE isPinned = 1 ORDER BY addedToFavoritesAt DESC")
+    @Query("SELECT * FROM favorite_shows WHERE isPinned = 1 AND deletedAt IS NULL ORDER BY addedToFavoritesAt DESC")
     fun getPinnedFavoriteShowsFlow(): Flow<List<FavoriteShowEntity>>
 
-    @Query("SELECT * FROM favorite_shows ORDER BY isPinned DESC, addedToFavoritesAt DESC")
+    @Query("SELECT * FROM favorite_shows WHERE deletedAt IS NULL ORDER BY isPinned DESC, addedToFavoritesAt DESC")
     suspend fun getAllFavoriteShows(): List<FavoriteShowEntity>
 
     // Individual show queries
-    @Query("SELECT * FROM favorite_shows WHERE showId = :showId")
+    @Query("SELECT * FROM favorite_shows WHERE showId = :showId AND deletedAt IS NULL")
     suspend fun getFavoriteShowById(showId: String): FavoriteShowEntity?
 
+    /** Sync helper: returns even tombstoned rows. */
     @Query("SELECT * FROM favorite_shows WHERE showId = :showId")
+    suspend fun getFavoriteShowByIdIncludingTombstones(showId: String): FavoriteShowEntity?
+
+    @Query("SELECT * FROM favorite_shows WHERE showId = :showId AND deletedAt IS NULL")
     fun getFavoriteShowByIdFlow(showId: String): Flow<FavoriteShowEntity?>
 
     // Status checks
-    @Query("SELECT EXISTS(SELECT 1 FROM favorite_shows WHERE showId = :showId)")
+    @Query("SELECT EXISTS(SELECT 1 FROM favorite_shows WHERE showId = :showId AND deletedAt IS NULL)")
     suspend fun isShowFavorite(showId: String): Boolean
 
-    @Query("SELECT EXISTS(SELECT 1 FROM favorite_shows WHERE showId = :showId)")
+    @Query("SELECT EXISTS(SELECT 1 FROM favorite_shows WHERE showId = :showId AND deletedAt IS NULL)")
     fun isShowFavoriteFlow(showId: String): Flow<Boolean>
 
-    @Query("SELECT EXISTS(SELECT 1 FROM favorite_shows WHERE showId = :showId AND isPinned = 1)")
+    @Query("SELECT EXISTS(SELECT 1 FROM favorite_shows WHERE showId = :showId AND isPinned = 1 AND deletedAt IS NULL)")
     suspend fun isShowPinned(showId: String): Boolean
 
-    @Query("SELECT EXISTS(SELECT 1 FROM favorite_shows WHERE showId = :showId AND isPinned = 1)")
+    @Query("SELECT EXISTS(SELECT 1 FROM favorite_shows WHERE showId = :showId AND isPinned = 1 AND deletedAt IS NULL)")
     fun isShowPinnedFlow(showId: String): Flow<Boolean>
 
     // Pin management
@@ -81,13 +87,13 @@ interface FavoritesDao {
     suspend fun updatePlayingQuality(showId: String, quality: Int?)
 
     // Statistics
-    @Query("SELECT COUNT(*) FROM favorite_shows")
+    @Query("SELECT COUNT(*) FROM favorite_shows WHERE deletedAt IS NULL")
     suspend fun getFavoriteShowCount(): Int
 
-    @Query("SELECT COUNT(*) FROM favorite_shows WHERE isPinned = 1")
+    @Query("SELECT COUNT(*) FROM favorite_shows WHERE isPinned = 1 AND deletedAt IS NULL")
     fun getPinnedShowCountFlow(): Flow<Int>
 
-    @Query("SELECT COUNT(*) FROM favorite_shows")
+    @Query("SELECT COUNT(*) FROM favorite_shows WHERE deletedAt IS NULL")
     fun getFavoriteShowCountFlow(): Flow<Int>
 
     // Download tracking

@@ -54,8 +54,6 @@ struct ShowDetailScreen: View {
                 "target_id": showId,
             ])
             isFavorite = (try? container.favoritesService.isFavorite(showId: showId)) ?? false
-            let review = try? container.reviewService.getShowReview(showId)
-            userReview = review?.hasContent == true ? review : nil
         }
         .task(id: playlistService.currentShow?.id ?? showId) {
             let activeShowId = playlistService.currentShow?.id ?? showId
@@ -65,11 +63,19 @@ struct ShowDetailScreen: View {
                 }
             } catch {}
         }
+        .task(id: playlistService.currentShow?.id ?? showId) {
+            // Observe the review so a synced/applied review flips the indicator
+            // live, without reopening the show.
+            let activeShowId = playlistService.currentShow?.id ?? showId
+            do {
+                for try await review in container.reviewService.observeShowReview(showId: activeShowId) {
+                    userReview = review.hasContent ? review : nil
+                }
+            } catch {}
+        }
         .onChange(of: playlistService.currentShow?.id) { _, newId in
             if let newId {
                 isFavorite = (try? container.favoritesService.isFavorite(showId: newId)) ?? false
-                let review = try? container.reviewService.getShowReview(newId)
-                userReview = review?.hasContent == true ? review : nil
             }
         }
     }

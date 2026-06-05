@@ -39,6 +39,7 @@ android {
 dependencies {
     // V2 Core dependencies
     implementation(project(":core:api:favorites"))
+    implementation(project(":core:api:usersync"))
     implementation(project(":core:model"))
     implementation(project(":core:domain"))
     implementation(project(":core:media"))

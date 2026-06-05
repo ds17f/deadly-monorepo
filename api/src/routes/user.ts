@@ -1,8 +1,13 @@
 import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { requireAuth } from "../auth/middleware.js";
+import { getShowMeta } from "../showCatalog.js";
+import {
+  deleteAppUser, updateAppUserName,
+  setAppUserAvatar, clearAppUserAvatar, getAppUserAvatar,
+} from "../db/users.js";
 import {
   getFavoriteShows, upsertFavoriteShow, deleteFavoriteShow,
-  getFavoriteSongs, upsertFavoriteSong, deleteFavoriteSong,
+  getFavoriteSongs, upsertFavoriteSong, deleteFavoriteSongByKey,
   getReviews, upsertReview, deleteReview,
   getRecordingPreferences, upsertRecordingPreference,
   getRecentShows, upsertRecentShow,
@@ -39,7 +44,12 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     schema: { tags: ["user"], summary: "List favorite shows" },
     preHandler: requireAuth,
   }, async (request) => {
-    return getFavoriteShows(request.user!.id);
+    // Enrich with show display metadata (venue/city/date) from the catalog,
+    // same as recents. Additive — mobile consumers ignore the extra fields.
+    return getFavoriteShows(request.user!.id).map((f) => {
+      const meta = getShowMeta(f.showId);
+      return meta ? { ...f, ...meta } : f;
+    });
   });
 
   app.put<{ Params: { showId: string }; Body: Partial<FavoriteShowV3> }>(
@@ -47,13 +57,15 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
       schema: { tags: ["user"], summary: "Upsert favorite show" },
       preHandler: requireAuth,
     }, async (request, reply) => {
+      const now = Math.floor(Date.now() / 1000);
+      const body = request.body as Partial<FavoriteShowV3>;
       const show: FavoriteShowV3 = {
+        ...body,
         showId: request.params.showId,
-        addedAt: (request.body as FavoriteShowV3).addedAt ?? Math.floor(Date.now() / 1000),
-        isPinned: (request.body as FavoriteShowV3).isPinned ?? false,
-        ...(request.body as Partial<FavoriteShowV3>),
+        addedAt: body.addedAt ?? now,
+        isPinned: body.isPinned ?? false,
+        updatedAt: body.updatedAt ?? now,
       };
-      show.showId = request.params.showId;
       upsertFavoriteShow(request.user!.id, show);
       return reply.code(200).send({ ok: true });
     });
@@ -73,7 +85,13 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     schema: { tags: ["user"], summary: "List favorite songs" },
     preHandler: requireAuth,
   }, async (request) => {
-    return getFavoriteSongs(request.user!.id);
+    // Enrich with show display metadata (date/venue/city) from the catalog so
+    // the web profile can render each song under its show without a second
+    // lookup. Additive — mobile consumers ignore the extra fields.
+    return getFavoriteSongs(request.user!.id).map((s) => {
+      const meta = getShowMeta(s.showId);
+      return meta ? { ...s, ...meta } : s;
+    });
   });
 
   app.put("/api/user/favorites/songs", {
@@ -84,12 +102,26 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     return reply.code(200).send({ id });
   });
 
-  app.delete<{ Params: { id: string } }>(
-    "/api/user/favorites/songs/:id", {
-      schema: { tags: ["user"], summary: "Remove favorite song" },
+  // Delete by natural key (showId + trackTitle). Mobile clients don't have the
+  // server's autoincrement id, but they do have the stable identity tuple.
+  app.delete<{ Querystring: { showId?: string; trackTitle?: string } }>(
+    "/api/user/favorites/songs", {
+      schema: {
+        tags: ["user"],
+        summary: "Remove favorite song by (showId, trackTitle)",
+        querystring: {
+          type: "object",
+          required: ["showId", "trackTitle"],
+          properties: {
+            showId: { type: "string" },
+            trackTitle: { type: "string" },
+          },
+        },
+      },
       preHandler: requireAuth,
     }, async (request, reply) => {
-      const deleted = deleteFavoriteSong(request.user!.id, Number(request.params.id));
+      const { showId, trackTitle } = request.query;
+      const deleted = deleteFavoriteSongByKey(request.user!.id, showId!, trackTitle!);
       return reply.code(deleted ? 200 : 404).send({ ok: deleted });
     });
 
@@ -99,7 +131,13 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     schema: { tags: ["user"], summary: "List reviews" },
     preHandler: requireAuth,
   }, async (request) => {
-    return getReviews(request.user!.id);
+    // Enrich each review with show display metadata (venue/city/date) from
+    // the in-memory catalog, same as recent/favorites, so the web profile
+    // can render a proper show card without a second lookup.
+    return getReviews(request.user!.id).map((r) => {
+      const meta = getShowMeta(r.showId);
+      return meta ? { ...r, ...meta } : r;
+    });
   });
 
   app.put<{ Params: { showId: string } }>(
@@ -149,7 +187,13 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     schema: { tags: ["user"], summary: "List recent shows" },
     preHandler: requireAuth,
   }, async (request) => {
-    return getRecentShows(request.user!.id);
+    // Enrich each recent with show display metadata (venue/city/date) from
+    // the in-memory catalog. Bare record fields are preserved; meta is
+    // merged in when known (null/omitted for shows not in the index).
+    return getRecentShows(request.user!.id).map((r) => {
+      const meta = getShowMeta(r.showId);
+      return meta ? { ...r, ...meta } : r;
+    });
   });
 
   app.put<{ Params: { showId: string } }>(
@@ -193,5 +237,120 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
   }, async (request, reply) => {
     upsertSettings(request.user!.id, request.body as SettingsV3);
     return reply.code(200).send({ ok: true });
+  });
+
+  // ── Account ─────────────────────────────────────────────────────
+
+  // Soft-delete (tombstone) the account. The row and its user-data stay,
+  // but every auth path rejects a tombstoned account, so the user is
+  // effectively gone until they sign in again (which reactivates it). The
+  // client signs out after calling this.
+  app.delete("/api/user/account", {
+    schema: { tags: ["user"], summary: "Delete (tombstone) the current account" },
+    preHandler: requireAuth,
+  }, async (request, reply) => {
+    const deleted = deleteAppUser(request.user!.id);
+    return reply.code(200).send({ ok: deleted });
+  });
+
+  // Update the account's display name. Source of truth for the shown name —
+  // the JWT callback reads accounts.name into the session on each refresh.
+  app.patch<{ Body: { name?: unknown } }>("/api/user/account", {
+    schema: {
+      tags: ["user"],
+      summary: "Update the current account's display name",
+      body: {
+        type: "object",
+        required: ["name"],
+        properties: { name: { type: "string" } },
+      },
+    },
+    preHandler: requireAuth,
+  }, async (request, reply) => {
+    const raw = typeof request.body?.name === "string" ? request.body.name.trim() : "";
+    if (raw.length < 1 || raw.length > 60) {
+      return reply.code(400).send({ error: "Name must be 1–60 characters." });
+    }
+    updateAppUserName(request.user!.id, raw);
+    return reply.code(200).send({ name: raw });
+  });
+
+  // ── Avatar (profile picture) ────────────────────────────────────
+  // The client downscales to a small square before upload, so the stored and
+  // served bytes stay tiny (~10–25 KB). We accept the image as base64 JSON to
+  // reuse the existing JSON body parser; the server caps the decoded size as a
+  // safety net against an oversized upload. The public GET URL is versioned by
+  // avatar_updated_at, so it's immutably cacheable and the session's
+  // user.image (token.picture) points at it.
+
+  const ALLOWED_AVATAR_MIME = new Set(["image/webp", "image/jpeg", "image/png"]);
+  const MAX_AVATAR_BYTES = 256 * 1024; // safety net; client targets far smaller
+
+  app.put<{ Body: { mime?: unknown; data?: unknown } }>("/api/user/avatar", {
+    schema: {
+      tags: ["user"],
+      summary: "Set the current account's profile picture",
+      body: {
+        type: "object",
+        required: ["mime", "data"],
+        properties: {
+          mime: { type: "string" },
+          data: { type: "string", description: "base64-encoded image bytes" },
+        },
+      },
+    },
+    preHandler: requireAuth,
+  }, async (request, reply) => {
+    const mime = typeof request.body?.mime === "string" ? request.body.mime : "";
+    const data = typeof request.body?.data === "string" ? request.body.data : "";
+    if (!ALLOWED_AVATAR_MIME.has(mime)) {
+      return reply.code(400).send({ error: "Unsupported image type." });
+    }
+    let bytes: Buffer;
+    try {
+      bytes = Buffer.from(data, "base64");
+    } catch {
+      return reply.code(400).send({ error: "Invalid image data." });
+    }
+    if (bytes.length === 0) {
+      return reply.code(400).send({ error: "Empty image." });
+    }
+    if (bytes.length > MAX_AVATAR_BYTES) {
+      return reply.code(413).send({ error: "Image too large." });
+    }
+    setAppUserAvatar(request.user!.id, bytes, mime);
+    return reply.code(200).send({ image: `/api/user/avatar/${request.user!.id}` });
+  });
+
+  app.delete("/api/user/avatar", {
+    schema: { tags: ["user"], summary: "Remove the current account's profile picture" },
+    preHandler: requireAuth,
+  }, async (request, reply) => {
+    clearAppUserAvatar(request.user!.id);
+    return reply.code(200).send({ ok: true });
+  });
+
+  // Public read — profile pictures are shown next to a name (social), so this
+  // is unauthenticated by account id. Immutable cache: callers append
+  // ?v=<avatar_updated_at>, so a new upload yields a fresh URL.
+  app.get<{ Params: { id: string } }>("/api/user/avatar/:id", {
+    schema: {
+      tags: ["user"],
+      summary: "Fetch an account's profile picture",
+      params: {
+        type: "object",
+        required: ["id"],
+        properties: { id: { type: "string" } },
+      },
+    },
+  }, async (request, reply) => {
+    const avatar = getAppUserAvatar(request.params.id);
+    if (!avatar) {
+      return reply.code(404).send({ error: "No avatar." });
+    }
+    return reply
+      .header("Cache-Control", "public, max-age=31536000, immutable")
+      .type(avatar.mime)
+      .send(avatar.bytes);
   });
 }

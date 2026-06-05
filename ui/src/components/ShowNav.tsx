@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getShowById } from "@/lib/shows";
+import StoreBadges from "@/components/home/StoreBadges";
 
 function formatShortDate(dateStr: string): string {
   const [y, m, d] = dateStr.split("-").map(Number);
@@ -35,12 +36,9 @@ export default function ShowNav({
         ) : (
           <div className="px-4 py-2 text-xl text-transparent">&lsaquo;</div>
         )}
-        <a
-          href="#listen"
-          className="rounded-lg border border-white/20 px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-        >
-          Listen Now
-        </a>
+        {/* Web playback lives in the hero Play button now; this slot nudges to
+            the native app with the visitor's relevant store badge. */}
+        <StoreBadges />
         {next ? (
           <Link
             href={`/shows/${next.show_id}`}

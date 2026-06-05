@@ -87,7 +87,15 @@ class FavoritesViewModel @Inject constructor(
     init {
         Log.d(TAG, "FavoritesViewModel initialized")
         loadFavorites()
-        loadFavoriteSongs()
+        // Collect the Room-backed flow so favorites songs auto-refresh when
+        // sync-apply or local mutations write to the DB. Avoids stale UI when
+        // another device pushes a change and we pull it in.
+        viewModelScope.launch {
+            reviewService.getFavoriteTracksFlow().collect { tracks ->
+                _favoriteSongs.value = tracks
+                _songsLoading.value = false
+            }
+        }
     }
 
     /**

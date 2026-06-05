@@ -161,6 +161,8 @@ dependencies {
     implementation(project(":core:collections"))
     implementation(project(":core:api:recent"))
     implementation(project(":core:recent"))
+    implementation(project(":core:api:usersync"))
+    implementation(project(":core:usersync"))
     implementation(project(":core:model"))
     implementation(project(":core:domain"))
     implementation(project(":core:api:auth"))

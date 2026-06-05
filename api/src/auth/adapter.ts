@@ -1,5 +1,5 @@
 import type { Adapter, AdapterUser, AdapterAccount } from "@auth/core/adapters";
-import { getUsersDb, createAppUser } from "../db/users.js";
+import { getUsersDb, createAppUser, reactivateAppUserByAuthId } from "../db/users.js";
 
 export function SqliteAdapter(): Adapter {
   return {
@@ -89,6 +89,10 @@ export function SqliteAdapter(): Adapter {
             authUser.name as string | null,
             account.provider,
           );
+        } else {
+          // Signing back in reactivates a previously-deleted (tombstoned)
+          // account. No-op for live accounts.
+          reactivateAppUserByAuthId(account.userId);
         }
       }
 

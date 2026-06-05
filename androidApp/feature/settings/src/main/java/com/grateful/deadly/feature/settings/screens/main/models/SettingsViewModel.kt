@@ -7,6 +7,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.auth.AuthState
+import com.grateful.deadly.core.api.usersync.FavoritesPushService
+import com.grateful.deadly.core.api.usersync.UserSyncService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.AppReviewManager
@@ -35,6 +37,8 @@ class SettingsViewModel @Inject constructor(
     private val backupImportExportService: BackupImportExportService,
     private val appPreferences: AppPreferences,
     private val authService: AuthService,
+    private val userSyncService: UserSyncService,
+    private val favoritesPushService: FavoritesPushService,
     private val analyticsService: AnalyticsService,
     private val appReviewManager: AppReviewManager,
     @ApplicationContext private val context: Context
@@ -280,6 +284,98 @@ class SettingsViewModel @Inject constructor(
 
     fun lockDeveloperMode() {
         appPreferences.setDeveloperModeUnlocked(false)
+    }
+
+    private val _syncLog = MutableStateFlow<List<String>>(emptyList())
+    val syncLog: StateFlow<List<String>> = _syncLog
+
+    private val _syncInFlight = MutableStateFlow(false)
+    val syncInFlight: StateFlow<Boolean> = _syncInFlight
+
+    fun pullUserSync() {
+        if (_syncInFlight.value) return
+        _syncInFlight.value = true
+        viewModelScope.launch {
+            val started = System.currentTimeMillis()
+            val ts = SimpleDateFormat("HH:mm:ss", Locale.US).format(Date())
+            val result = userSyncService.pullFullBackup()
+            val lines = result.fold(
+                onSuccess = { backup ->
+                    val elapsed = System.currentTimeMillis() - started
+                    listOf(
+                        "[$ts] GET /api/user/sync OK in ${elapsed}ms",
+                        "  version=${backup.version} app=${backup.app}",
+                        "  favorites.shows=${backup.favorites.shows.size}",
+                        "  favorites.tracks=${backup.favorites.tracks.size}",
+                        "  reviews=${backup.reviews.size}",
+                        "  recordingPreferences=${backup.recordingPreferences.size}",
+                        "  recentShows=${backup.recentShows?.size ?: 0}",
+                        "  playbackPosition=${if (backup.playbackPosition == null) "none" else "present"}",
+                        "  settings=${if (backup.settings == null) "none" else "present"}",
+                    )
+                },
+                onFailure = { e ->
+                    listOf("[$ts] FAILED: ${e.message ?: e.javaClass.simpleName}")
+                },
+            )
+            _syncLog.value = lines + _syncLog.value
+            _syncInFlight.value = false
+        }
+    }
+
+    fun clearSyncLog() {
+        _syncLog.value = emptyList()
+    }
+
+    private val _favoritesPushPending = MutableStateFlow(0)
+    val favoritesPushPending: StateFlow<Int> = _favoritesPushPending
+
+    init {
+        viewModelScope.launch {
+            _favoritesPushPending.value = favoritesPushService.pendingCount()
+        }
+    }
+
+    fun pushPendingFavorites() {
+        if (_syncInFlight.value) return
+        _syncInFlight.value = true
+        viewModelScope.launch {
+            val ts = SimpleDateFormat("HH:mm:ss", Locale.US).format(Date())
+            val results = favoritesPushService.flushPending()
+            val lines = buildList {
+                add("[$ts] Push: ${results.size} entries")
+                if (results.isEmpty()) add("  (outbox empty)")
+                for (r in results) {
+                    val status = if (r.success) "OK" else "FAIL"
+                    val tail = r.error?.let { " ($it)" } ?: ""
+                    add("  ${r.operation} ${r.refId} → $status$tail")
+                }
+            }
+            _syncLog.value = lines + _syncLog.value
+            _favoritesPushPending.value = favoritesPushService.pendingCount()
+            _syncInFlight.value = false
+        }
+    }
+
+    fun pushAllLocalData() {
+        if (_syncInFlight.value) return
+        _syncInFlight.value = true
+        viewModelScope.launch {
+            val ts = SimpleDateFormat("HH:mm:ss", Locale.US).format(Date())
+            val results = favoritesPushService.enqueueAllLocalAndFlush()
+            val lines = buildList {
+                add("[$ts] Push all: ${results.size} entries")
+                if (results.isEmpty()) add("  (nothing local)")
+                for (r in results) {
+                    val status = if (r.success) "OK" else "FAIL"
+                    val tail = r.error?.let { " ($it)" } ?: ""
+                    add("  [${r.kind}] ${r.operation} ${r.refId} → $status$tail")
+                }
+            }
+            _syncLog.value = lines + _syncLog.value
+            _favoritesPushPending.value = favoritesPushService.pendingCount()
+            _syncInFlight.value = false
+        }
     }
 
     fun signInWithGoogle(activity: android.app.Activity, onError: (String) -> Unit) {

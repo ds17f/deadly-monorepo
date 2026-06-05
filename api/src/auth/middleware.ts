@@ -2,7 +2,7 @@ import type { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { Auth } from "@auth/core";
 import { authConfig } from "./config.js";
 import { decodeJwt } from "./crypto.js";
-import { getAppUserById } from "../db/users.js";
+import { getAppUserById, getAppUserByAuthId, getAppUserByEmail } from "../db/users.js";
 
 declare module "fastify" {
   interface FastifyRequest {
@@ -47,15 +47,33 @@ async function resolveUser(request: FastifyRequest): Promise<{ id: string; email
   if (sessionResponse.ok) {
     const session = await sessionResponse.json() as { user?: { id?: string; email?: string; name?: string; isAdmin?: boolean } };
     if (session?.user?.id) {
+      // Old cookies (minted before the session callback stamped accountId, or
+      // surviving a DB rotation) may carry an id that's not in accounts and not
+      // in auth_users. Try by id, then by auth_user_id, then by email.
+      const id = canonicalizeAccountId(session.user.id, session.user.email);
+      if (!id) return null;
+      const appUser = getAppUserById(id);
       return {
-        id: session.user.id,
+        id,
         email: session.user.email,
         name: session.user.name,
-        isAdmin: session.user.isAdmin,
+        isAdmin: session.user.isAdmin ?? appUser?.is_admin === 1,
       };
     }
   }
 
+  return null;
+}
+
+/** Returns the accounts.id given any of: accounts.id, auth_users.id, or email. */
+function canonicalizeAccountId(id: string, email?: string): string | null {
+  if (getAppUserById(id)) return id;
+  const byAuth = getAppUserByAuthId(id);
+  if (byAuth) return byAuth.id;
+  if (email) {
+    const byEmail = getAppUserByEmail(email);
+    if (byEmail) return byEmail.id;
+  }
   return null;
 }
 

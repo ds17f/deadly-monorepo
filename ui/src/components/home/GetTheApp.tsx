@@ -1,13 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import AppStoreBadge from "@/components/AppStoreBadge";
+import StoreBadges from "./StoreBadges";
 
-const PLAY_STORE_URL =
-  "https://play.google.com/store/apps/details?id=com.grateful.deadly";
-const GOOGLE_PLAY_BADGE_URL =
-  "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png";
-
+// Store badges, platform-aware (only the relevant store on a phone). See
+// StoreBadges for the badge URLs / sizing.
 export default function GetTheApp() {
   return (
     <section className="mb-6">
@@ -15,18 +11,7 @@ export default function GetTheApp() {
         Get the App
         <span className="ml-2 inline-block h-px w-16 align-middle bg-white/20" />
       </h4>
-      <div className="flex items-center gap-3">
-        <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
-          <Image
-            src={GOOGLE_PLAY_BADGE_URL}
-            alt="Get it on Google Play"
-            width={140}
-            height={42}
-            unoptimized
-          />
-        </a>
-        <AppStoreBadge />
-      </div>
+      <StoreBadges />
     </section>
   );
 }

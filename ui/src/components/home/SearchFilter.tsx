@@ -77,12 +77,14 @@ export default function SearchFilter({
   return (
     <div className="mb-4 space-y-3">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <div className="relative flex-1">
+        {/* Hidden on mobile — the top-bar search covers phones; this inline
+            browse box only fights the small viewport. Desktop keeps it. */}
+        <div className="relative hidden flex-1 sm:block">
           <input
             type="text"
             value={local}
             onChange={(e) => handleChange(e.target.value)}
-            placeholder="Search by venue, city, or date..."
+            placeholder="Search shows, songs, or band members..."
             className="w-full rounded-lg bg-deadly-surface px-4 py-2 pr-8 text-sm text-white placeholder-white/30 outline-none ring-1 ring-white/10 focus:ring-deadly-heading"
           />
           {local && (
