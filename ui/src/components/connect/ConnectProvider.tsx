@@ -1,203 +1,300 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { ConnectContext } from "@/contexts/ConnectContext";
-import type { ConnectDevice, PlaybackState, ActiveSession, UserPlaybackState } from "@/contexts/ConnectContext";
-import { ConnectWebSocket } from "@/lib/connectWs";
+import type { ConnectDevice, ConnectState } from "@/types/connect";
 
-function generateDeviceId(): string {
-  const stored = typeof window !== "undefined" ? localStorage.getItem("deadly_device_id") : null;
-  if (stored) return stored;
-  const id = typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
-    ? crypto.randomUUID()
-    : `xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx`.replace(/[xy]/g, (c) => {
-        const r = (Math.random() * 16) | 0;
-        const v = c === "x" ? r : (r & 0x3) | 0x8;
-        return v.toString(16);
-      });
-  if (typeof window !== "undefined") localStorage.setItem("deadly_device_id", id);
+const HEARTBEAT_INTERVAL_MS = 15_000;
+const RECONNECT_DELAYS_MS = [1_000, 2_000, 4_000, 8_000, 30_000];
+const DEVICE_ID_KEY = "deadly-device-id";
+const TIME_SYNC_REFRESH_MS = 5 * 60 * 1000;
+const TIME_SYNC_SAMPLES = 3;
+const TIME_SYNC_SAMPLE_SPACING_MS = 200;
+
+const log = (...args: unknown[]) => console.log("[Connect]", ...args);
+const warn = (...args: unknown[]) => console.warn("[Connect]", ...args);
+
+function getOrCreateDeviceId(): string {
+  let id = localStorage.getItem(DEVICE_ID_KEY);
+  if (!id) {
+    id = crypto.randomUUID();
+    localStorage.setItem(DEVICE_ID_KEY, id);
+  }
   return id;
 }
 
 function getDeviceName(): string {
-  if (typeof navigator === "undefined") return "Web Browser";
   const ua = navigator.userAgent;
   let browser = "Browser";
-  if (ua.includes("Firefox/")) browser = "Firefox";
-  else if (ua.includes("Edg/")) browser = "Edge";
+  let os = "";
+
+  if (ua.includes("Edg/")) browser = "Edge";
   else if (ua.includes("Chrome/")) browser = "Chrome";
-  else if (ua.includes("Safari/") && !ua.includes("Chrome")) browser = "Safari";
+  else if (ua.includes("Firefox/")) browser = "Firefox";
+  else if (ua.includes("Safari/")) browser = "Safari";
 
-  // Short session suffix from deviceId to distinguish multiple tabs/windows
-  const deviceId = generateDeviceId();
-  const suffix = deviceId.slice(0, 4);
-  return `${browser} · ${suffix}`;
+  if (ua.includes("Mac OS X")) os = " on Mac";
+  else if (ua.includes("Windows")) os = " on Windows";
+  else if (ua.includes("Linux")) os = " on Linux";
+
+  return `${browser}${os}`;
 }
 
-function getWsUrl(): string {
-  if (typeof window === "undefined") return "";
-  const proto = window.location.protocol === "https:" ? "wss:" : "ws:";
-  return `${proto}//${window.location.host}/ws/connect`;
-}
-
-export default function ConnectProvider({ children }: { children: React.ReactNode }) {
-  const { user } = useAuth();
-  const [isConnected, setIsConnected] = useState(false);
+export default function ConnectProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const { user, isLoading } = useAuth();
   const [devices, setDevices] = useState<ConnectDevice[]>([]);
-  const [activeSession, setActiveSession] = useState<ActiveSession | null>(null);
-  const [userState, setUserState] = useState<UserPlaybackState | null>(null);
-  const wsRef = useRef<ConnectWebSocket | null>(null);
+  const [connectState, setConnectState] = useState<ConnectState | null>(null);
+  const [myDeviceId, setMyDeviceId] = useState<string | null>(null);
+  const [connected, setConnected] = useState(false);
 
-  const localDeviceId = useMemo(() => {
-    if (typeof window === "undefined") return "";
-    return generateDeviceId();
+  const [activeDeviceVolume, setActiveDeviceVolume] = useState<number | null>(null);
+  const [serverTimeOffsetMs, setServerTimeOffsetMs] = useState(0);
+
+  const wsRef = useRef<WebSocket | null>(null);
+  const heartbeatRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const timeSyncRefreshRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const reconnectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const reconnectAttemptRef = useRef(0);
+  const shouldConnectRef = useRef(false);
+  const currentVersionRef = useRef(0);
+  const volumeListenersRef = useRef<Array<(volume: number) => void>>([]);
+  // Tracks the best (lowest-RTT) sample within the current sync batch so we
+  // can keep updating as better samples arrive but ignore worse ones.
+  const timeSyncBestRttRef = useRef<number>(Number.POSITIVE_INFINITY);
+
+  const clearHeartbeat = useCallback(() => {
+    if (heartbeatRef.current) {
+      clearInterval(heartbeatRef.current);
+      heartbeatRef.current = null;
+    }
   }, []);
 
-  const isActiveDevice = userState?.activeDeviceId === localDeviceId && localDeviceId !== "";
-
-  useEffect(() => {
-    if (!user?.id) {
-      wsRef.current?.close();
-      wsRef.current = null;
-      setIsConnected(false);
-      setDevices([]);
-      setActiveSession(null);
-      setUserState(null);
-      return;
+  const clearTimeSyncRefresh = useCallback(() => {
+    if (timeSyncRefreshRef.current) {
+      clearInterval(timeSyncRefreshRef.current);
+      timeSyncRefreshRef.current = null;
     }
+  }, []);
 
-    const deviceId = generateDeviceId();
-    const ws = new ConnectWebSocket({
-      url: getWsUrl(),
-      onMessage: (data: unknown) => {
-        const msg = data as {
-          type: string;
-          devices?: ConnectDevice[];
-          state?: PlaybackState | UserPlaybackState;
-          session?: ActiveSession | null;
-          fromDeviceName?: string;
-        };
-        switch (msg.type) {
-          case "devices":
-            setDevices(msg.devices ?? []);
-            break;
-          case "active_session":
-            setActiveSession(msg.session ?? null);
-            break;
-          case "user_state": {
-            const incoming = (msg.state as UserPlaybackState) ?? null;
-            setUserState(prev => {
-              if (!incoming) return null;
-              return {
-                ...incoming,
-                // Client-side timestamp so interpolation baseline is accurate
-                updatedAt: Date.now(),
-                // Don't let durationMs regress to 0 when we already know the duration
-                durationMs: incoming.durationMs || prev?.durationMs || 0,
-                // Don't let trackTitle regress to undefined when we already have it
-                trackTitle: incoming.trackTitle ?? prev?.trackTitle,
-              };
-            });
-            break;
-          }
-          case "session_play_on":
-            if (msg.state) {
-              window.dispatchEvent(new CustomEvent("connect:play_on", {
-                detail: { ...msg.state as PlaybackState, fromDeviceName: msg.fromDeviceName },
-              }));
-            }
-            break;
-          case "session_stop":
-            window.dispatchEvent(new CustomEvent("connect:session_stop"));
-            break;
-          case "position_update": {
-            const state = msg.state as PlaybackState;
-            setUserState(prev => prev ? {
-              ...prev,
-              positionMs: state.positionMs,
-              trackIndex: state.trackIndex,
-              durationMs: state.durationMs ?? prev.durationMs,
-              trackTitle: state.trackTitle ?? prev.trackTitle,
-              updatedAt: Date.now(),
-            } : prev);
-            break;
-          }
-        }
-      },
-      onOpen: () => {
-        setIsConnected(true);
-        ws.send({
-          type: "register",
-          device: {
-            deviceId,
-            type: "web",
-            name: getDeviceName(),
-            capabilities: ["playback", "control"],
-          },
-        });
-      },
-      onClose: () => {
-        setIsConnected(false);
-      },
-    });
+  const runTimeSync = useCallback(() => {
+    const ws = wsRef.current;
+    if (!ws || ws.readyState !== WebSocket.OPEN) return;
+    // New batch: reset best-sample tracking so a fresh best can win over
+    // any sample from the previous batch.
+    timeSyncBestRttRef.current = Number.POSITIVE_INFINITY;
+    for (let i = 0; i < TIME_SYNC_SAMPLES; i++) {
+      setTimeout(() => {
+        const sock = wsRef.current;
+        if (!sock || sock.readyState !== WebSocket.OPEN) return;
+        sock.send(JSON.stringify({ type: "time_sync", clientTs: Date.now() }));
+      }, i * TIME_SYNC_SAMPLE_SPACING_MS);
+    }
+  }, []);
 
-    ws.connect();
+  const clearReconnectTimer = useCallback(() => {
+    if (reconnectTimerRef.current) {
+      clearTimeout(reconnectTimerRef.current);
+      reconnectTimerRef.current = null;
+    }
+  }, []);
+
+  const connect = useCallback(() => {
+    if (!shouldConnectRef.current) return;
+
+    const deviceId = getOrCreateDeviceId();
+    const deviceName = getDeviceName();
+    setMyDeviceId(deviceId);
+
+    const wsProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+    const wsUrl = `${wsProtocol}//${window.location.host}/ws/connect`;
+
+    log(`Connecting to ${wsUrl} as ${deviceName} (${deviceId})`);
+    const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
 
-    return () => {
-      ws.close();
-      wsRef.current = null;
+    ws.onopen = () => {
+      if (!shouldConnectRef.current) {
+        ws.close();
+        return;
+      }
+      log("Connected, sending register");
+      setConnected(true);
+      reconnectAttemptRef.current = 0;
+
+      ws.send(JSON.stringify({
+        type: "register",
+        deviceId,
+        deviceType: "web",
+        deviceName,
+      }));
+
+      clearHeartbeat();
+      heartbeatRef.current = setInterval(() => {
+        if (ws.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify({ type: "heartbeat" }));
+        }
+      }, HEARTBEAT_INTERVAL_MS);
+
+      clearTimeSyncRefresh();
+      runTimeSync();
+      timeSyncRefreshRef.current = setInterval(runTimeSync, TIME_SYNC_REFRESH_MS);
     };
-  }, [user?.id]);
 
-  const announcePlayback = useCallback((state: PlaybackState) => {
-    wsRef.current?.send({ type: "session_update", state });
+    ws.onmessage = (event: MessageEvent<string>) => {
+      let msg: { type: string; [key: string]: unknown };
+      try {
+        msg = JSON.parse(event.data);
+      } catch {
+        return;
+      }
+
+      if (msg.type === "state") {
+        const newState = msg.state as ConnectState;
+        if (newState.version <= currentVersionRef.current) {
+          log(`Ignoring stale state v${newState.version} (current=${currentVersionRef.current})`);
+          return;
+        }
+        currentVersionRef.current = newState.version;
+        const isActive = newState.activeDeviceId === deviceId;
+        log(
+          `State v${newState.version}: show=${newState.showId ?? "none"} rec=${newState.recordingId ?? "none"} ` +
+          `track=${newState.trackIndex} playing=${newState.playing} ` +
+          `activeDevice=${newState.activeDeviceId ?? "none"} isMe=${isActive}`
+        );
+        setConnectState(newState);
+      } else if (msg.type === "devices") {
+        const devs = msg.devices as ConnectDevice[];
+        log(`Devices (${devs.length}): ${devs.map(d => `${d.deviceName}[${d.deviceType}]`).join(", ")}`);
+        setDevices(devs);
+      } else if (msg.type === "volume") {
+        const volume = msg.volume as number;
+        log(`Volume command: ${volume}`);
+        volumeListenersRef.current.forEach(fn => fn(volume));
+        setActiveDeviceVolume(volume);
+      } else if (msg.type === "volume_report") {
+        const volume = msg.volume as number;
+        log(`Volume report from ${msg.deviceId}: ${volume}`);
+        setActiveDeviceVolume(volume);
+      } else if (msg.type === "time_sync") {
+        const clientTs = msg.clientTs as number;
+        const serverTs = msg.serverTs as number;
+        const now = Date.now();
+        const rtt = now - clientTs;
+        // NTP-style: assume symmetric one-way delay = rtt/2.
+        // serverTimeOffset = serverNow_at_send - clientNow_at_send.
+        // serverNow_at_send ≈ serverTs (server stamps at send time).
+        // clientNow_at_send ≈ clientTs + rtt/2 (midway through round-trip).
+        const offset = serverTs - (clientTs + rtt / 2);
+        if (rtt < timeSyncBestRttRef.current) {
+          timeSyncBestRttRef.current = rtt;
+          setServerTimeOffsetMs(offset);
+          log(`time_sync: rtt=${rtt}ms offset=${offset}ms (kept)`);
+        } else {
+          log(`time_sync: rtt=${rtt}ms offset=${offset}ms (dropped, best=${timeSyncBestRttRef.current}ms)`);
+        }
+      }
+    };
+
+    ws.onclose = (event) => {
+      log(`Disconnected: code=${event.code} reason=${event.reason || "(none)"}`);
+      clearHeartbeat();
+      clearTimeSyncRefresh();
+      setServerTimeOffsetMs(0);
+      timeSyncBestRttRef.current = Number.POSITIVE_INFINITY;
+      setConnected(false);
+      wsRef.current = null;
+
+      // 4003 = Unauthorized (terminal), 4001 = heartbeat timeout (reconnect)
+      if (!shouldConnectRef.current || event.code === 4003) {
+        log(`Not reconnecting: shouldConnect=${shouldConnectRef.current} code=${event.code}`);
+        return;
+      }
+
+      const delay = RECONNECT_DELAYS_MS[
+        Math.min(reconnectAttemptRef.current, RECONNECT_DELAYS_MS.length - 1)
+      ];
+      reconnectAttemptRef.current += 1;
+      log(`Reconnecting in ${delay}ms (attempt ${reconnectAttemptRef.current})`);
+      reconnectTimerRef.current = setTimeout(() => connect(), delay);
+    };
+
+    ws.onerror = () => {
+      warn("WebSocket error (onclose will handle reconnect)");
+    };
+  }, [clearHeartbeat, clearTimeSyncRefresh, runTimeSync]);
+
+  const onVolumeMessage = useCallback((handler: (volume: number) => void) => {
+    volumeListenersRef.current.push(handler);
+    return () => {
+      volumeListenersRef.current = volumeListenersRef.current.filter(fn => fn !== handler);
+    };
   }, []);
 
-  const claimSession = useCallback(() => {
-    wsRef.current?.send({ type: "session_claim" });
+  const reportVolume = useCallback((volume: number) => {
+    setActiveDeviceVolume(volume);
+    const ws = wsRef.current;
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      log(`reportVolume: ${volume}`);
+      ws.send(JSON.stringify({ type: "command", action: "volume_report", volume }));
+    }
   }, []);
 
-  const playOnDevice = useCallback((deviceId: string, state: PlaybackState) => {
-    wsRef.current?.send({ type: "session_play_on", targetDeviceId: deviceId, state });
+  const sendCommand = useCallback((action: string, extra?: Record<string, unknown>) => {
+    const ws = wsRef.current;
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      log(`sendCommand: ${action}`, extra ? JSON.stringify(extra).slice(0, 200) : "");
+      ws.send(JSON.stringify({ type: "command", action, ...extra }));
+    } else {
+      warn(`sendCommand: ${action} DROPPED — ws not open (readyState=${ws?.readyState})`);
+    }
   }, []);
 
-  const sendPositionUpdate = useCallback((state: PlaybackState) => {
-    wsRef.current?.send({ type: "position_update", state });
-  }, []);
+  const disconnect = useCallback(() => {
+    log("disconnect() called");
+    shouldConnectRef.current = false;
+    clearReconnectTimer();
+    clearHeartbeat();
+    clearTimeSyncRefresh();
+    const ws = wsRef.current;
+    if (ws) {
+      wsRef.current = null;
+      ws.close();
+    }
+    setConnected(false);
+    setDevices([]);
+    setConnectState(null);
+    setActiveDeviceVolume(null);
+    setServerTimeOffsetMs(0);
+    timeSyncBestRttRef.current = Number.POSITIVE_INFINITY;
+    currentVersionRef.current = 0;
+  }, [clearHeartbeat, clearReconnectTimer, clearTimeSyncRefresh]);
 
-  const sendCommand = useCallback((action: string, seekMs?: number) => {
-    wsRef.current?.send({
-      type: "command",
-      command: { action, ...(seekMs !== undefined ? { seekMs } : {}) },
-    });
-  }, []);
+  useEffect(() => {
+    if (isLoading) return;
 
-  const clearState = useCallback(() => {
-    wsRef.current?.send({ type: "state_clear" });
-  }, []);
+    if (user) {
+      log(`User authenticated, starting connect`);
+      shouldConnectRef.current = true;
+      reconnectAttemptRef.current = 0;
+      connect();
+    } else {
+      log(`No user, disconnecting`);
+      disconnect();
+    }
 
-  const value = useMemo(() => ({
-    isConnected,
-    devices,
-    activeSession,
-    userState,
-    isActiveDevice,
-    setUserState,
-    announcePlayback,
-    claimSession,
-    playOnDevice,
-    sendPositionUpdate,
-    sendCommand,
-    clearState,
-  }), [
-    isConnected, devices, activeSession, userState, isActiveDevice, setUserState,
-    announcePlayback, claimSession, playOnDevice, sendPositionUpdate, sendCommand, clearState,
-  ]);
+    return () => {
+      disconnect();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user, isLoading]);
 
   return (
-    <ConnectContext.Provider value={value}>
+    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, serverTimeOffsetMs }}>
       {children}
     </ConnectContext.Provider>
   );

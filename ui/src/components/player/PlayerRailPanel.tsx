@@ -1,10 +1,9 @@
 "use client";
 
 import { usePlayer } from "@/contexts/PlayerContext";
-import { useConnect } from "@/contexts/ConnectContext";
 import TrackList from "./TrackList";
 import RecordingSelector from "./RecordingSelector";
-import DevicePicker from "@/components/connect/DevicePicker";
+import DeviceList from "@/components/connect/DeviceList";
 
 const SOURCE_COLORS: Record<string, string> = {
   SBD: "bg-deadly-highlight text-white",
@@ -60,49 +59,15 @@ export default function PlayerRailPanel({
     currentTrackIndex,
     status,
     selectedRecording,
-    elapsed,
     playTrack,
     selectRecording,
   } = usePlayer();
-  const { userState, isActiveDevice } = useConnect();
 
   if (mode === "devices") {
-    // Build the playback state to hand off, mirroring the docked player.
-    const currentState =
-      activeShow && selectedRecording && isActiveDevice
-        ? {
-            showId: activeShow.showId,
-            recordingId: selectedRecording,
-            trackIndex: currentTrackIndex,
-            positionMs: Math.floor(elapsed * 1000),
-            status: (status === "playing" ? "playing" : "paused") as
-              | "playing"
-              | "paused",
-            date: activeShow.date,
-            venue: activeShow.venue,
-            location: activeShow.location,
-          }
-        : userState
-          ? {
-              showId: userState.showId,
-              recordingId: userState.recordingId,
-              trackIndex: userState.trackIndex,
-              positionMs: userState.positionMs,
-              durationMs: userState.durationMs,
-              trackTitle: userState.trackTitle,
-              status: (userState.isPlaying ? "playing" : "paused") as
-                | "playing"
-                | "paused",
-              date: userState.date,
-              venue: userState.venue,
-              location: userState.location,
-            }
-          : null;
-
     return (
       <section className="rounded-lg bg-deadly-surface p-4">
         <Header title="Devices" onClose={onClose} />
-        <DevicePicker currentState={currentState} onClose={onClose} variant="inline" />
+        <DeviceList />
       </section>
     );
   }

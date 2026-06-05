@@ -14,7 +14,7 @@ import AutoplayPrompt from "./AutoplayPrompt";
 import RecordingSelector from "./RecordingSelector";
 import TrackList from "./TrackList";
 import PlayerRailPanel from "./PlayerRailPanel";
-import DevicePicker from "@/components/connect/DevicePicker";
+import DeviceList from "@/components/connect/DeviceList";
 import { useRightRailOverride } from "@/components/shell/RightRail";
 import { lookupArt, lookupReview } from "@/lib/artCache";
 
@@ -402,20 +402,20 @@ export default function HeaderPlayer() {
     selectedRecording,
     selectRecording,
     isLoadingTracks,
+    isActiveDevice,
+    isRemoteControlling,
     togglePlayPause,
     nextTrack,
     prevTrack,
     playTrack,
     seek,
-    playShow,
-    playShowTrack,
     ensureTracks,
     dismiss,
     volume,
     setVolume,
   } = usePlayer();
 
-  const { isConnected, userState, isActiveDevice, claimSession, sendCommand } = useConnect();
+  const { connected: isConnected, state: connectState, serverTimeOffsetMs } = useConnect();
   const { getReview } = useUserData();
 
   // Factoid cards for the fullscreen ambient view: the AI review + the user's
@@ -438,7 +438,6 @@ export default function HeaderPlayer() {
   // seconds of inactivity into an ambient art-only view; input reveals it.
   const [chromeVisible, setChromeVisible] = useState(true);
   const sheetRef = useRef<HTMLDivElement | null>(null);
-  const closeDevicePicker = useCallback(() => setDevicePickerOpen(false), []);
   const setRailOverride = useRightRailOverride();
 
   // Open the immersive view and ask the browser to go truly full-screen.
@@ -461,7 +460,7 @@ export default function HeaderPlayer() {
 
   // Tapping the "Now Playing" label jumps to the playing show's page (and
   // collapses the sheet) — the expected way back to the show from the player.
-  const playingShowId = activeShow?.showId ?? userState?.showId ?? null;
+  const playingShowId = activeShow?.showId ?? connectState?.showId ?? null;
   const openPlayingShow = useCallback(() => {
     if (!playingShowId) return;
     collapsePlayer();
@@ -513,135 +512,36 @@ export default function HeaderPlayer() {
     };
   }, [expanded]);
 
-  const pendingSeekRef = useRef<{ trackIndex: number; positionMs: number } | null>(null);
-
-  const isLocalPlayback = status === "playing" || status === "paused" || status === "buffering" || status === "loading";
-  const interpolatedMs = useInterpolatedPosition(userState, isLocalPlayback, elapsed);
-
-  // Once tracks load after claiming a session, jump to correct track + seek
-  useEffect(() => {
-    if (!pendingSeekRef.current || !tracks || tracks.length === 0) return;
-
-    const { trackIndex, positionMs } = pendingSeekRef.current;
-    pendingSeekRef.current = null;
-
-    if (trackIndex > 0 && trackIndex < tracks.length) {
-      playTrack(trackIndex);
-    }
-
-    if (positionMs > 0) {
-      const timer = setTimeout(() => {
-        window.dispatchEvent(
-          new CustomEvent("connect:seek", { detail: { seconds: positionMs / 1000 } })
-        );
-      }, 500);
-      return () => clearTimeout(timer);
-    }
-  }, [tracks, playTrack]);
-
-  const handleClaimSession = useCallback(() => {
-    if (!userState) return;
-
-    // Store seek info for after tracks load
-    pendingSeekRef.current = {
-      trackIndex: userState.trackIndex,
-      positionMs: userState.positionMs,
-    };
-
-    // Claim session on server (will broadcast back with our deviceId)
-    claimSession();
-
-    // Load the show from user state
-    playShow({
-      showId: userState.showId,
-      recordings: [],
-      bestRecordingId: userState.recordingId,
-      date: userState.date ?? "",
-      venue: userState.venue ?? "",
-      location: userState.location ?? "",
-    });
-  }, [userState, playShow, claimSession]);
-
-  const handleClaimAndNext = useCallback(() => {
-    if (!userState) return;
-    pendingSeekRef.current = { trackIndex: userState.trackIndex + 1, positionMs: 0 };
-    claimSession();
-    playShow({
-      showId: userState.showId,
-      recordings: [],
-      bestRecordingId: userState.recordingId,
-      date: userState.date ?? "",
-      venue: userState.venue ?? "",
-      location: userState.location ?? "",
-    });
-  }, [userState, playShow, claimSession]);
-
-  const handleClaimAndPrev = useCallback(() => {
-    if (!userState) return;
-    pendingSeekRef.current = { trackIndex: Math.max(0, userState.trackIndex - 1), positionMs: 0 };
-    claimSession();
-    playShow({
-      showId: userState.showId,
-      recordings: [],
-      bestRecordingId: userState.recordingId,
-      date: userState.date ?? "",
-      venue: userState.venue ?? "",
-      location: userState.location ?? "",
-    });
-  }, [userState, playShow, claimSession]);
+  // Smooth, ticking position for a remotely-controlled device's progress bar.
+  // The active device reads its own audio clock (elapsed); see the hook.
+  const interpolatedMs = useInterpolatedPosition(connectState, serverTimeOffsetMs, isActiveDevice, elapsed * 1000);
 
   const currentTrack =
     tracks && currentTrackIndex >= 0 ? tracks[currentTrackIndex] : null;
   const hasNext = tracks ? currentTrackIndex < tracks.length - 1 : false;
   const hasPrevious = currentTrackIndex > 0;
-  const isActive = status !== "idle" && currentTrack;
+  // Local audio engaged (we own the Connect session and play here).
+  const isActive = isActiveDevice && status !== "idle";
 
-  // Determine if another device is the active player
-  const isRemoteActive = !!(userState && userState.activeDeviceId && !isActiveDevice);
-  // Parked: userState exists, no active device, not locally playing
-  const isParked = !!(userState && !userState.activeDeviceId && !isActive);
+  // Another device is the active player.
+  const isRemoteActive = isRemoteControlling && !!connectState?.activeDeviceId;
+  // Parked: a session is loaded but no device is actively playing.
+  const isParked = !!connectState?.showId && !connectState?.activeDeviceId && !isActiveDevice;
 
-  // Remote track boundary checks (from server-managed track list)
-  const remoteTrackCount = userState?.tracks?.length ?? 0;
-  const remoteHasNext = remoteTrackCount > 0 && (userState?.trackIndex ?? 0) < remoteTrackCount - 1;
-  const remoteHasPrevious = (userState?.trackIndex ?? 0) > 0;
+  // Remote track boundary checks (from the server-managed track list).
+  const remoteTrackCount = connectState?.tracks?.length ?? 0;
+  const remoteHasNext = remoteTrackCount > 0 && (connectState?.trackIndex ?? 0) < remoteTrackCount - 1;
+  const remoteHasPrevious = (connectState?.trackIndex ?? 0) > 0;
 
-  // Remote control helpers — send commands through the server (state-mediated)
-  const remoteTogglePlayPause = useCallback(() => {
-    sendCommand(userState?.isPlaying ? "pause" : "play");
-  }, [userState, sendCommand]);
+  // Anything loaded to show (local audio or a shared Connect session).
+  const showLoaded = !!activeShow || !!connectState?.showId;
 
-  const remoteNext = useCallback(() => {
-    sendCommand("next");
-  }, [sendCommand]);
-
-  const remotePrev = useCallback(() => {
-    if (interpolatedMs > 3000 || !remoteHasPrevious) {
-      // Restart current track (matches local player behavior)
-      sendCommand("seek", 0);
-    } else {
-      sendCommand("prev");
-    }
-  }, [sendCommand, interpolatedMs, remoteHasPrevious]);
-
-  const remoteSeek = useCallback((fraction: number) => {
-    if (!userState?.durationMs) return;
-    const seekMs = Math.floor(fraction * userState.durationMs);
-    sendCommand("seek", seekMs);
-  }, [userState, sendCommand]);
-
-  // Unified transport actions — local vs remote vs parked. Local playback wins
-  // whenever this device has audio engaged (isActive); the Connect-session
-  // ownership (isActiveDevice) must NOT gate local pause/seek, or the controls
-  // misroute (e.g. pause → claimSession) whenever we're not in a session yet.
-  const handleTogglePlayPause = isActive
-    ? togglePlayPause
-    : isRemoteActive
-      ? remoteTogglePlayPause
-      : handleClaimSession; // parked — claim and play
-
-  const handleNext = isActive ? nextTrack : isRemoteActive ? remoteNext : isParked ? handleClaimAndNext : undefined;
-  const handlePrev = isActive ? prevTrack : isRemoteActive ? remotePrev : isParked ? handleClaimAndPrev : undefined;
+  // Transport routes through the player context, which sends the right Connect
+  // command for us — a local action when active, a server command when
+  // remote-controlling or parked. Gate on showLoaded so a bare bar is inert.
+  const handleTogglePlayPause = togglePlayPause;
+  const handleNext = showLoaded ? nextTrack : undefined;
+  const handlePrev = showLoaded ? prevTrack : undefined;
 
   // Space toggles play/pause whenever a show is loaded (main screen or
   // fullscreen) and stops the page from scrolling/paging. Read the handler
@@ -675,46 +575,41 @@ export default function HeaderPlayer() {
   function handleSeek(e: React.MouseEvent<HTMLDivElement>) {
     const rect = e.currentTarget.getBoundingClientRect();
     const fraction = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-    if (isActive) {
-      seek(fraction);
-    } else if (isRemoteActive || isParked) {
-      remoteSeek(fraction);
-    }
+    seek(fraction);
   }
 
-  // Show info for display
-  const displayElapsed = isActive ? elapsed : interpolatedMs / 1000;
-  const displayDuration = isActive
-    ? duration
-    : (userState?.durationMs ?? 0) / 1000;
+  // Display values: the active device reads its local audio; everyone else
+  // reads the authoritative ConnectState (interpolated position, server track).
+  const remoteTrack = connectState && connectState.tracks.length > 0
+    ? connectState.tracks[connectState.trackIndex] ?? null
+    : null;
+
+  const displayElapsed = isActiveDevice ? elapsed : interpolatedMs / 1000;
+  const displayDuration = isActiveDevice ? duration : (connectState?.durationMs ?? 0) / 1000;
   const progress = displayDuration > 0 ? (displayElapsed / displayDuration) * 100 : 0;
 
-  // Determine what show info to display
-  const showInfo = isActive && activeShow
+  const showInfo = isActiveDevice && activeShow
     ? showLabel(activeShow)
-    : userState?.date
-      ? { date: formatShowDate(userState.date), venue: (userState.venue ?? "") + (userState.location ? `, ${userState.location}` : "") }
+    : connectState?.date
+      ? { date: formatShowDate(connectState.date), venue: (connectState.venue ?? "") + (connectState.location ? `, ${connectState.location}` : "") }
       : null;
 
-  // Track title for display
-  const displayTrackTitle = isActive && currentTrack
-    ? currentTrack.title
-    : userState?.trackTitle ?? null;
+  const displayTrackTitle = isActiveDevice
+    ? currentTrack?.title ?? null
+    : remoteTrack?.title ?? null;
 
-  const displayTrackCount = isActive ? (tracks?.length ?? 0) : 0;
-  const displayTrackIndex = isActive ? currentTrackIndex : (userState?.trackIndex ?? 0);
+  const displayTrackCount = isActiveDevice ? (tracks?.length ?? 0) : (connectState?.tracks.length ?? 0);
+  const displayTrackIndex = isActiveDevice ? currentTrackIndex : (connectState?.trackIndex ?? 0);
 
-  // Determine playing state for button icon
-  const displayIsPlaying = isActive
+  const displayIsPlaying = isActiveDevice
     ? (status === "playing" || status === "buffering")
-    : (userState?.isPlaying ?? false);
+    : (connectState?.playing ?? false);
 
   const isLoading = status === "loading" || status === "buffering";
 
-  // ── Active / Remote active / Parked / Idle: unified full transport UI ──
-  // Subtitle line: show device info when remote, show info when local
+  // Subtitle: which device is playing when remote, else the show line.
   const subtitleLine = isRemoteActive
-    ? `${userState?.isPlaying ? "Playing" : "Paused"} on ${userState?.activeDeviceName}`
+    ? `${connectState?.playing ? "Playing" : "Paused"} on ${connectState?.activeDeviceName}`
     : showInfo
       ? `${showInfo.date} — ${showInfo.venue}`
       : null;
@@ -725,7 +620,6 @@ export default function HeaderPlayer() {
   const realArt = activeShow?.image ?? lookupArt(activeShow?.showId) ?? null;
   const artIsLogo = !realArt || realArt.endsWith("/logo.png");
   const artSrc = artIsLogo ? "/cover-fallback.png" : realArt;
-  const showLoaded = isActive || isParked || isRemoteActive;
 
   // Shared transport flags for the now-playing sheet.
   const sheetToggleDisabled = isLoadingTracks || !!(isActive && isLoading);
@@ -760,34 +654,11 @@ export default function HeaderPlayer() {
     }
   }, [showPlaylist, isActive, tracks, isLoadingTracks, selectedRecording, ensureTracks]);
 
-  // Rail track pick: active → jump locally; parked → claim the session and
-  // start at this track (build the ViewedShow from whatever loaded state we
-  // have — activeShow if hydrated, else the server's userState).
+  // Rail track pick. playTrack routes through Connect: active → jump locally and
+  // broadcast; remote/parked → ask the server to move and our audio follows.
   const handleRailPlay = useCallback(
-    (index: number) => {
-      if (isActive) {
-        playTrack(index);
-        return;
-      }
-      const t = tracks?.[index];
-      if (!t) return;
-      claimSession();
-      playShowTrack(
-        {
-          showId: activeShow?.showId ?? userState?.showId ?? "",
-          recordings: [],
-          bestRecordingId:
-            selectedRecording ?? activeShow?.bestRecordingId ?? userState?.recordingId ?? null,
-          date: activeShow?.date ?? userState?.date ?? "",
-          venue: activeShow?.venue ?? userState?.venue ?? "",
-          location: activeShow?.location ?? userState?.location ?? "",
-          image: activeShow?.image ?? null,
-        },
-        t.title,
-        t.track,
-      );
-    },
-    [isActive, tracks, claimSession, playShowTrack, playTrack, activeShow, userState, selectedRecording],
+    (index: number) => playTrack(index),
+    [playTrack],
   );
 
   // Fade the immersive chrome (desktop only) when idle → ambient art view.
@@ -1051,36 +922,9 @@ export default function HeaderPlayer() {
               <span className="block w-9" />
             )}
             {devicePickerOpen && expanded && (
-              <DevicePicker
-                currentState={
-                  isActive && isActiveDevice && activeShow && selectedRecording
-                    ? {
-                        showId: activeShow.showId,
-                        recordingId: selectedRecording,
-                        trackIndex: currentTrackIndex,
-                        positionMs: Math.floor(elapsed * 1000),
-                        status: status === "playing" ? "playing" : "paused",
-                        date: activeShow.date,
-                        venue: activeShow.venue,
-                        location: activeShow.location,
-                      }
-                    : userState
-                      ? {
-                          showId: userState.showId,
-                          recordingId: userState.recordingId,
-                          trackIndex: userState.trackIndex,
-                          positionMs: Math.floor(interpolatedMs),
-                          durationMs: userState.durationMs,
-                          trackTitle: userState.trackTitle,
-                          status: userState.isPlaying ? "playing" : "paused",
-                          date: userState.date,
-                          venue: userState.venue,
-                          location: userState.location,
-                        }
-                      : null
-                }
-                onClose={closeDevicePicker}
-              />
+              <div className="absolute right-0 top-12 z-10 w-72 rounded-lg border border-white/10 bg-deadly-surface p-3 shadow-xl">
+                <DeviceList />
+              </div>
             )}
           </div>
         </div>

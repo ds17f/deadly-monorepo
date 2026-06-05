@@ -36,6 +36,18 @@ export interface PlayerContextValue {
   // Output volume, 0..1. Applies to local playback only.
   volume: number;
 
+  // Connect integration (Connect v2). Derived from the authoritative server
+  // ConnectState: this device is "active" when it owns the session and plays
+  // audio locally; "remote-controlling" when a session is loaded but another
+  // device (or none) is active, so transport routes through the server.
+  isActiveDevice: boolean;
+  isRemoteControlling: boolean;
+  // The action awaiting server confirmation (drives a spinner on remote
+  // controls), or null. pendingTransfer is the target deviceId mid-handoff.
+  pendingCommand: string | null;
+  pendingTransfer: string | null;
+  transferTo: (targetDeviceId: string) => void;
+
   // Actions
   setViewedShow: (show: ViewedShow | null) => void;
   setVolume: (volume: number) => void;
@@ -44,7 +56,9 @@ export interface PlayerContextValue {
   // Play a show and, once its tracks load, jump to the track matching the
   // given title (falls back to trackNumber). Used by the favorite-songs list.
   playShowTrack: (show: ViewedShow, trackTitle: string, trackNumber?: number | null) => void;
-  playRecording: (identifier: string) => void;
+  // Resolves to the loaded tracks so callers (and the Connect hydration path)
+  // can jump to a specific track index once the recording is fetched.
+  playRecording: (identifier: string) => Promise<ArchiveTrack[]>;
   playTrack: (index: number) => void;
   // Load the loaded show's tracks without playing, so a parked player can
   // display its playlist for track selection.
