@@ -5,6 +5,9 @@
 ### New Features
 * cross-platform user-data sync + full web client (#48) (fca679ba)
 
+### Bug Fixes
+* flush outbox on sign-in so signed-out favorites reach the server (b58d9ac4)
+
 
 ## [2.31.0] - 2026-05-28
 
