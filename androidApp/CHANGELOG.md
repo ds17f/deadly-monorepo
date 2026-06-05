@@ -1,11 +1,15 @@
 # Changelog
 
+## [2.31.1] - 2026-06-04
+
+### Bug Fixes
+* flush outbox on sign-in so signed-out favorites reach the server (b58d9ac4)
+
+
 ## [2.31.0] - 2026-06-04
 
 ### New Features
 * cross-platform user-data sync + full web client (#48) (fca679ba)
-
-
 ## [2.30.0] - 2026-05-28
 
 ### New Features
