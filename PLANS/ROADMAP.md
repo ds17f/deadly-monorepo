@@ -61,8 +61,15 @@ API effort.
 ### 4. Web shell — tail-end cleanup
 - **Collections** (parked): box-set-icon card + `/collections/<id>` detail
   surface, then flip `COLLECTIONS_ENABLED` in `HomeDiscovery.tsx`.
-- **Cleanup:** delete the `/mockup` prototypes (`ui/src/app/mockup`) and retire
-  the superseded old `/me` tabs.
+- **Retire the `/me` tab strip — blocked, deferred.** It looks superseded by the
+  shell, but the audit found it's still the *only* nav path to two things:
+  **Settings on desktop** (`UserMenu` links `/me` but not `/me/settings`, and
+  `LibraryRail` only covers Recent/Reviews/Favorites) and **Recent + Reviews on
+  mobile** (`MobileTabBar` is Home/Favorites/Settings only; the rail is
+  `lg:hidden`). To retire it: add a Settings entry to `UserMenu` for the desktop
+  gap, surface Recent/Reviews in mobile nav (a "Library" view or extra tabs),
+  *then* drop the strip. Until that nav exists, leave it in place.
+- **Done:** `/mockup` prototype route group removed (`3bfdc8f2`).
 
 ## Deferred / explicit non-goals (sync v0)
 Cross-device deletion **tombstones**, **settings sync**, and **background sync**
