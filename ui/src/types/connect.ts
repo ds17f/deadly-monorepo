@@ -13,6 +13,8 @@ export interface SessionTrack {
 
 export interface ConnectState {
   version: number;
+  // Server boot id — a change means the server restarted (see api ConnectState.epoch).
+  epoch: number;
   showId: string | null;
   recordingId: string | null;
   tracks: SessionTrack[];

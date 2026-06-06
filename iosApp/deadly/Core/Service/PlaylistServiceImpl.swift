@@ -230,6 +230,35 @@ final class PlaylistServiceImpl: PlaylistService {
 
         nextPlaybackSource = source
 
+        // Remote-controlling another device: push intent to the active device and
+        // never start local audio (otherwise the show plays on BOTH devices). Every
+        // play entry point (track tap, play button, favorites, deeplink) routes
+        // through here, so this one guard covers them all.
+        if let connect = connectService, connect.isRemoteControlling, !suppressConnectNotify {
+            let recordingId = recording.identifier
+            let durationMs = Int((tracks[index].durationInterval ?? 0) * 1000)
+            if connect.connectState?.recordingId == recordingId {
+                // Same session recording — just move the active device to this track.
+                connect.sendSeek(trackIndex: index, positionMs: 0, durationMs: durationMs)
+            } else {
+                // Different show — load it on the active device.
+                let sessionTracks = tracks.map { SessionTrack(title: $0.title, durationMs: Int(($0.durationInterval ?? 0) * 1000)) }
+                connect.sendLoad(
+                    showId: currentShow?.id ?? "",
+                    recordingId: recordingId,
+                    tracks: sessionTracks,
+                    trackIndex: index,
+                    positionMs: 0,
+                    durationMs: durationMs,
+                    date: currentShow?.date,
+                    venue: currentShow?.venue.name,
+                    location: currentShow?.location.displayText,
+                    autoplay: true
+                )
+            }
+            return
+        }
+
         // If the player already has this recording's queue loaded, skip directly to the index
         // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
         // The observer will emit playback_start/_end via the debounced commit path.

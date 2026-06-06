@@ -94,7 +94,7 @@ deps:
 # Build Commands
 build:
 	@echo "🔨 Building debug APK..."
-	@if gradle assembleDebug --console=plain > build-output.log 2>&1; then \
+	@if ./gradlew assembleDebug --console=plain > build-output.log 2>&1; then \
 		echo "✅ Debug APK built successfully!"; \
 	else \
 		echo "❌ Debug build failed! Check build-output.log for details"; \
@@ -103,7 +103,7 @@ build:
 
 release:
 	@echo "🔨 Building release APK..."
-	@if gradle assembleRelease --console=plain > release-output.log 2>&1; then \
+	@if ./gradlew assembleRelease --console=plain > release-output.log 2>&1; then \
 		echo "✅ Release APK built successfully!"; \
 	else \
 		echo "❌ Release build failed! Check release-output.log for details"; \

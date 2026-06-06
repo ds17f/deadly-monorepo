@@ -22,7 +22,6 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerEnhanced
 import com.grateful.deadly.feature.player.screens.main.components.PlayerSecondaryControls
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMaterialPanels
 import com.grateful.deadly.feature.player.screens.main.components.PlayerTrackActionsSheet
-import com.grateful.deadly.feature.player.screens.main.components.PlayerConnectSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerQueueSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerEqualizerSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlayer
@@ -30,6 +29,7 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlay
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.core.design.component.ShareChooserSheet
 import com.grateful.deadly.feature.player.screens.main.models.PlayerViewModel
+import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
 
 /**
  * PlayerScreen - Clean player interface
@@ -53,6 +53,7 @@ fun PlayerScreen(
     val panelState by viewModel.panelState.collectAsState()
     val isCurrentTrackFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
+    val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
 
     val recordingId = uiState.navigationInfo.recordingId
 
@@ -64,9 +65,9 @@ fun PlayerScreen(
     var showTrackActionsBottomSheet by remember { mutableStateOf(false) }
     var showQrCode by remember { mutableStateOf(false) }
     var showShareChooser by remember { mutableStateOf(false) }
-    var showConnectBottomSheet by remember { mutableStateOf(false) }
     var showEqualizerBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
+    var showConnectSheet by remember { mutableStateOf(false) }
     // Mini player visibility based on scroll position
     // Show mini player only when player controls are completely off screen
     val showMiniPlayer by remember {
@@ -154,8 +155,9 @@ fun PlayerScreen(
             item {
                 PlayerSecondaryControls(
                     isFavorite = isCurrentTrackFavorite,
-                    onConnectClick = { showConnectBottomSheet = true },
+                    connectDeviceName = connectRemoteDeviceName,
                     onEqualizerClick = { showEqualizerBottomSheet = true },
+                    onConnectClick = { showConnectSheet = true },
                     onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
                     onShareClick = { showShareChooser = true },
                     onQueueClick = { showQueueBottomSheet = true },
@@ -191,7 +193,6 @@ fun PlayerScreen(
                 onDownload = { viewModel.downloadCurrentShow() },
                 onFavorite = { viewModel.toggleCurrentTrackFavorite() },
                 onEqualizer = { showEqualizerBottomSheet = true },
-                onConnect = { showConnectBottomSheet = true },
                 onQueue = { showQueueBottomSheet = true },
             )
         }
@@ -236,12 +237,6 @@ fun PlayerScreen(
             }
         }
 
-        if (showConnectBottomSheet) {
-            PlayerConnectSheet(
-                onDismiss = { showConnectBottomSheet = false }
-            )
-        }
-
         if (showEqualizerBottomSheet) {
             PlayerEqualizerSheet(
                 state = equalizerState,
@@ -259,11 +254,19 @@ fun PlayerScreen(
             )
         }
 
+        if (showConnectSheet) {
+            ConnectSheet(
+                onDismiss = { showConnectSheet = false }
+            )
+        }
+
         // Mini Player overlay when scrolled
         if (showMiniPlayer) {
             PlayerMiniPlayer(
                 uiState = uiState,
+                connectDeviceName = connectRemoteDeviceName,
                 onPlayPause = viewModel::onPlayPauseClicked,
+                onConnectClick = { showConnectSheet = true },
                 onTapToExpand = {
                     // Use a coroutine scope to handle the scroll
                     coroutineScope.launch {

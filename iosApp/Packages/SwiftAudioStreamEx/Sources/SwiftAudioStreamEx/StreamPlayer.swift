@@ -204,11 +204,19 @@ public final class StreamPlayer {
                 try? await Task.sleep(for: .milliseconds(50))
             }
             guard self.playbackState == .playing else {
+                // Never reached the initial `.playing` (engine errored or stalled).
+                // Don't abandon the intended start — re-arm it so the eventual
+                // recovery play() (Connect re-broadcast, user tap, interruption
+                // end) lands on the right spot instead of restarting from 0. This
+                // is the network-error-on-transfer / -restore case: the position
+                // lived only here, and the engine's retry snapshot is 0 because
+                // the track never played, so without this it's lost.
                 if case .error = self.playbackState {
-                    self.logger.warning("[PB] play+seek: aborted (engine errored before .playing)")
+                    self.logger.warning("[PB] play+seek: engine errored before .playing — re-arming pendingSeekOnFirstPlay=\(target, format: .fixed(precision: 1), privacy: .public)s")
                 } else {
-                    self.logger.warning("[PB] play+seek: timed out reaching initial .playing")
+                    self.logger.warning("[PB] play+seek: timed out before .playing — re-arming pendingSeekOnFirstPlay=\(target, format: .fixed(precision: 1), privacy: .public)s")
                 }
+                self.pendingSeekOnFirstPlay = target
                 self.volume = savedVolume
                 self.isPreparing = false
                 return

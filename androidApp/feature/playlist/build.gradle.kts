@@ -56,6 +56,7 @@ dependencies {
     implementation(project(":core:media"))
     implementation(project(":core:network"))
     implementation(project(":core:database"))
+    implementation(project(":core:connect"))
 
     // Compose BOM
     implementation(platform("androidx.compose:compose-bom:2025.08.00"))

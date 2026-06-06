@@ -21,21 +21,122 @@ Working branch: **`connect-v2-port`** (off `main`; distinct from the stale
   live: a real browser completed WS upgrade → cookie auth → device register →
   state snapshot (`ws/connect: authenticated` + `registerDevice` in api logs).
   Full two-browser transport/transfer smoke test still worth doing.
-- ✅ **Layer 3 — iOS** — built green on `connect-v2-ios` (off `main` post-#50).
-  Additive `ConnectService`/`ConnectModels`/`ConnectScreen`/`ConnectSheet` ported
-  near-verbatim; engine (`StreamPlayer`/`AudioStreamEngine`) gained
-  `skipTo(autoplay:)` + public `onTrackComplete` reconciled into main's
-  DEAD-335-rewritten engine; `MiniPlayerServiceImpl` rewritten to merge main's
-  skeleton/`restoredTrack` system with Connect remote-state precedence;
-  DI + lifecycle wired (`AppContainer`, `deadlyApp`); player surfaces
-  (`PlayerScreen`, `MiniPlayerOverlay`, `ShowDetailScreen`, `SettingsScreen`)
-  routed through `MiniPlayerService`. `xcodebuild ... -destination 'generic/platform=iOS Simulator'`
-  → **BUILD SUCCEEDED** on the remote Mac. Runtime two-device smoke test + device
-  install (`make ios-remote-install`, needs `KEYCHAIN_PASSWORD`) still TODO.
-- ⏳ **Layer 4 — Android** — not started.
+- ✅ **Layer 3 — iOS** — **merged in PR #51** (`14dc2df3` on `main`).
+  Additive `ConnectService`/`ConnectModels`/`ConnectScreen`/
+  `ConnectSheet`; engine (`StreamPlayer`/`AudioStreamEngine`) gained
+  `skipTo(autoplay:)` + public `onTrackComplete` + `loadedTracks` accessor,
+  reconciled into main's DEAD-335-rewritten engine; `MiniPlayerServiceImpl`
+  merges main's skeleton/`restoredTrack` shell with Connect remote-state;
+  DI + lifecycle wired; player surfaces routed through `MiniPlayerService`.
+  Builds green on the remote Mac; bug-fixed against local docker + a real
+  device ↔ web. Remote-control fixes in the same PR: offline play/pause
+  spinner; **client-resolve display metadata** (see decision below); web
+  venue/date from Archive.org + "Invalid Date" killed; transfer-in lands at
+  the server position even when the receiver was paused; show-page now-playing
+  indicator when remote; desktop queue rail fills the column.
+  Still TODO: device install (`make ios-remote-install`, needs
+  `KEYCHAIN_PASSWORD`) + a real two-device beta smoke pass.
+- ✅ **Layer 4 — Android** — **in PR #52** (`connect-v2-android`). Full port
+  (new `core/connect/` module, lifecycle, player/miniplayer/settings surfaces),
+  reconciled against main's rewritten media stack (kept Android Auto / DEAD-360,
+  took only additive `MediaControllerRepository` APIs). PR #52 also hardens the
+  shared protocol so a session survives a **server restart** and a **device
+  transfer** on all clients (see the restart/transfer resilience note below).
+  Built locally + tested on a Pixel 6. See Layer 4 section below.
 
 **First shippable unit = Layer 1 + Layer 2 together** (atomic — shipped in #50).
-Next concrete step: ship/smoke-test iOS (Layer 3), then Android.
+iOS (Layer 3) merged in #51; Android (Layer 4) in **PR #52**. Next: merge #52,
+two-device beta smoke pass, then the carried two-way-door follow-ups
+(lock-screen→remote control, background WS) and the pre-ship presence gate.
+
+### Restart / transfer resilience (PR #52 — applies to all clients)
+Two bugs (post-restart desync, transfer-park double-play) shared one root: state
+was *inferred* from overloaded fields. `activeDeviceId == null` meant three
+things needing opposite reactions — restart (reclaim), transfer phase-1 park
+(pause), stop (pause) — and a restart wiped the in-memory session (version→0,
+active/playing/tracks lost). Fix: the server stamps every state with an explicit
+**`epoch`** (boot id); a change is the authoritative "server restarted" signal,
+so reclaim fires only on `epoch changed && activeDeviceId == null && locally
+playing`, and the null-active/empty-tracks heuristics are gone. Plus: restored
+the park/handoff pause, monotonic `version` + watermark-reset-on-reconnect, and
+`version`/`epoch` as 64-bit (`Long` on Android — the ms values overflow `Int`).
+Details: [`connect-v2-android-debugging.md`](connect-v2-android-debugging.md).
+
+## Ship checklist — blockers only
+
+What stands between **what we have now** (the cross-device control backbone on
+all four surfaces) and putting it in users' hands. Everything *not* on this list
+— lock-screen→remote control, background WS, multi-tab presence, the
+remote-command spinner, the ADR promotion, and the presence/social feature
+itself — is a **two-way door**: it can land in a later update and is explicitly
+NOT a ship blocker.
+
+- [ ] **Merge PR #52** — Android (Layer 4) + the restart/transfer resilience.
+      No Android Connect ships without it.
+- [ ] **Deploy Connect to production**, not just beta — mobile store builds point
+      at the prod API, so the `/ws/connect` endpoint + v2 session machine (from
+      #50) must actually be deployed there.
+- [ ] **Two-device beta smoke pass** on `beta.thedeadly.app` — real
+      iOS ↔ Android ↔ web: transfer each hop, and kill/restart the server
+      mid-play. The last validation before cutting store builds.
+
+**Decided (2026-06-06): the social protocol is NOT a pre-ship gate.** We won't
+pre-design presence/device-identity. The social "see/hear what a friend is
+playing" feature will be **gated behind app version** and built **additively**
+later — and most of it is server-side anyway: the live per-user playback already
+lives in `userStates: Map<userId, ConnectState>`, so "what is friend X playing"
+is answerable via a future REST endpoint + friends graph with **no wire change**;
+`deviceId`/`deviceType` are already on the protocol. The only **standing rule**
+that survives (the real lesson, not a gate): **once shipped, never change /
+retype / remove an existing wire field — only add.** Version-gating protects the
+*new* feature on old clients; it does nothing if you retype a field the *current*
+feature depends on (cf. the `version: Int → Long` near-miss). Presence is "live
+while a device is connected," not "always known" — that's the accepted boundary.
+
+### Key architectural decision: client-resolve display metadata (supersedes the server track-cache idea)
+The shared `ConnectState` is the authority **only for live transport** the
+server alone knows: `showId`, `recordingId`, `trackIndex`, `positionMs`/
+`positionTs`, `playing`, active device, volume. **Everything displayable**
+(track title, duration, count, show date/venue) is **resolved on each client**
+from the show it already loads locally, indexed by the session's `trackIndex` —
+*not* carried as load-bearing server state.
+
+Why: the position-only hydrate (cold open / restart) leaves `tracks` empty and
+date/venue null in server state, which surfaced as blank subtitles, a frozen
+jogger (`position ÷ 0`), missing "next", and web "Invalid Date". A server-side
+per-recording track cache was built **and then reverted** (commits `f1e82351` →
+`f56f5e87`) once we realized every client already fetches the show to play it —
+so the data is on the client; routing it through the server only added a way to
+get it wrong. Resolution per platform:
+- **iOS** reads title/duration/show-info from `StreamPlayer.loadedTracks[trackIndex]`
+  + `TrackItem.metadata`.
+- **Web** reads its fetched tracks for the title and pulls date/venue from the
+  `archive.org/metadata` it already loads (`fetchArchiveShowMeta`); the showId
+  slug (`YYYY-MM-DD-…`) is the date fallback.
+
+Android (Layer 4) should follow the same rule: resolve display metadata locally;
+treat `ConnectState` as transport only.
+
+### Key decisions made during the iOS (Layer 3) port
+- **Connect starts on `willEnterForeground`, not `scenePhase .active`** — main
+  uses a `UIApplicationDelegateAdaptor`, under which scene-phase `.active`
+  doesn't fire reliably (main's own sync code notes this). Stop stays on
+  `scenePhase .background` (reliable); network-restore reconnect rides
+  `networkMonitor.isConnected`.
+- **Transfer-in seek when paused**: the audio engine drops `seek(to:)` while
+  not playing, so on becoming active the position is stashed as
+  `pendingSeekOnFirstPlay` (consumed by `play()`'s first-play dance) instead —
+  otherwise a freshly-hydrated receiver starts the track from 0:00.
+- **`onLoadShow` uses main's native `playTrack(at:source:autoPlay:)`** instead of
+  the reference's poll-until-playing-then-pause hack — main's `loadQueue`/engine
+  already honor `autoPlay:` (the new `skipTo(autoplay:)` adds the paused-load path).
+- **`MiniPlayerServiceImpl` merged**, not replaced: main's skeleton/`restoredTrack`
+  launch shell is preserved; Connect's `remote` (non-active shared session) state
+  takes precedence in every computed property, and the `!isSkeleton` action
+  guards now sit *after* the remote-control branch so remote commands still send.
+- **Player UI keeps main's buffering/preparing spinner states** and folds
+  `isPendingCommand` into the same spinner condition; transport routes through
+  `MiniPlayerService` so the screen is remote-aware.
 
 ### Key decisions made during the iOS (Layer 3) port
 - **Connect starts on `willEnterForeground`, not `scenePhase .active`** — main
@@ -123,15 +224,20 @@ two-device happy-path smoke test.
 
 ### Pre-ship gate (the only one-way door) — verify before any App Store build
 
-A shipped iOS build can't be force-updated, so the **wire protocol is the only
-irreversible commitment**. Before cutting an App Store / public TestFlight iOS
-build, confirm the v2 state machine can carry **presence / device-identity
-additively** (new optional fields + message types that old clients ignore) — the
-ROADMAP §3 social "hear what they're playing" feature and the background-presence
-follow-up above both lean on it. Adding protocol surface now, with zero deployed
-iOS clients, is free; adding it post-ship is a migration with version skew. The
-background-WS and lock-screen items above are *not* part of this gate — they're
-two-way doors and can land later.
+A shipped build can't be force-updated, so the **wire protocol is the only
+irreversible commitment**. **Decided (2026-06-06):** we are **not** pre-designing
+the social protocol as a gate (superseded — see "Ship checklist" above). Presence
+is largely server-side already (`userStates: Map<userId, ConnectState>`;
+`deviceId`/`deviceType` already on the wire), so the ROADMAP §3 social feature
+will be built **additively + version-gated** later rather than designed up front.
+
+What remains as the actual standing rule (not a one-time gate): **once shipped,
+never change / retype / remove an existing wire field — only add.** Adding optional
+fields / new message types is always safe (old clients ignore them); breaking an
+existing field breaks the *current* feature on un-updatable installs (cf. the
+`version: Int → Long` near-miss, and the 64-bit-field rule in
+`connect-v2-android-debugging.md`). The background-WS and lock-screen items above
+are two-way doors and can land later.
 
 ## TL;DR
 
@@ -184,8 +290,9 @@ is exactly why we port API-first and re-implement the clients.
 1. Cut `feat/connect-v2` off current `main`.
 2. Bring in the reference docs (connect-v2's copies are newest — `640283e1`,
    May 10, newer than the `docs/connect-v2-architecture` branch's Apr-6 copy):
-   - `docs/connect-v2-architecture.md` — the contract. **Promote to a numbered
-     ADR** `docs/adr/0006-connect-v2.md` (next free number; 0001–0005 exist).
+   - `docs/connect-v2-architecture.md` — the contract. ✅ **Done:** decisions
+     recorded in `docs/adr/0006-connect-v2.md`; the spec is amended to match the
+     shipped system (client-resolve, epoch, ms-seeded version, additive-only wire).
    - `docs/connect-volume.md`, `docs/dead-276-connect-ui-breakdown.md`.
 3. Keep `connect-v2` checked out alongside as the reference implementation.
 
@@ -234,20 +341,146 @@ also moved (`MiniPlayerServiceImpl`, `PlayerScreen`, `MiniPlayerOverlay`,
 - **Exit check:** builds on the remote Mac (`make ios-remote-install`); can
   control web/Android from device and vice versa.
 
-### Layer 4 — Android (MEDIUM risk — reconcile)
+### Layer 4 — Android (MEDIUM risk — reconcile) — ✅ IN PR #52 (`connect-v2-android`)
 
-connect-v2 adds a clean `core/connect/` module (`ConnectService`,
-`ConnectServiceImpl`, DI) — additive. Reconcile the media/player edits against
-main's heavily-rewritten `DeadlyMediaSessionService.kt` (+199 on main) and
-`MediaControllerRepository.kt`, plus the new Android Auto work on main
-(DEAD-336/337/342/360).
+Working branch **`connect-v2-android`** off `main` (post-#51). Reference:
+`origin/connect-v2`. **~2,125 lines / 36 files** on the reference.
 
-- Port `core/connect/`, `ConnectModels`, settings `ConnectScreen`/`Sheet`/VM,
-  player `PlayerConnectSheet`, `PlaybackCommandInterceptor`.
-- Reconcile session/notification command interception + hardware volume keys
-  with main's session service rewrite.
+**Scope (from `git diff 5dfbcc20 origin/connect-v2 -- androidApp/**`):**
+
+*Additive — port cleanly (new `core/connect/` module):*
+- `core/connect/ConnectServiceImpl.kt` (**704 lines** — WS register/heartbeat,
+  clock-sync, state reconciliation, transport/transfer/volume, reconnect),
+  `ConnectService.kt`, `di/ConnectModule.kt`, `core/model/ConnectModels.kt`,
+  `core/model/AppLaunchState.kt`; module Gradle + `settings.gradle.kts` wiring.
+- Settings `screens/connect/ConnectScreen.kt` / `ConnectSheet.kt` (295) /
+  `ConnectViewModel.kt` + `SettingsNavigation` entry.
+- `MainActivity.kt` (+34, lifecycle start/stop), `MainNavigation.kt`.
+
+**Starting notes (de-risked 2026-06-06 — don't re-discover):**
+- Module layout did **not** shift — all reference paths above match `main`
+  (full paths are `androidApp/<mod>/src/main/java/com/grateful/deadly/...`; the
+  `git diff --stat` display abbreviates them).
+- `androidApp/core/connect/` on `main` is **only stale `build/` artifacts**
+  (not git-tracked, leftover from an old connect branch) — the module genuinely
+  needs creating; ignore/`git clean` the junk.
+- All connect-module deps exist on `main`: `:core:model`, `:core:database`,
+  `:core:api:auth`, `:core:media`, `:core:network`. Auth token for the WS Bearer
+  comes from `core/api/auth` `AuthService` (impl `core/auth/AuthServiceImpl`).
+  Server `resolveUser` checks `Authorization: Bearer` first, so Bearer is fine.
+- **Concrete first chunk:** create `core/connect` (build.gradle.kts +
+  ConnectService/ConnectServiceImpl/di/ConnectModule near-verbatim) +
+  `core/model/ConnectModels.kt` + `settings.gradle.kts` `include(":core:connect")`,
+  then `make android-install` to confirm the additive layer compiles before
+  touching player surfaces. Then do the reconcile targets below.
+
+**✅ Additive first chunk DONE (2026-06-06):** `core/connect/` module created
+(`build.gradle.kts`, `consumer-rules.pro`, `ConnectService`/`ConnectServiceImpl`/
+`di/ConnectModule` byte-identical to reference) + `core/model/ConnectModels.kt`
++ `AppLaunchState.kt`; `include(":core:connect")` wired. `:core:connect:assembleDebug`
+and full `:app:assembleDebug` both green. Findings worth keeping:
+- **`ConnectServiceImpl` needs 4 media APIs that `main` lacks** — these are the
+  *minimal additive slice* of the media reconcile and had to land now for the
+  module to compile (added to `MediaControllerRepository.kt`, all purely additive):
+  `trackAutoAdvanced: SharedFlow<Int>` (emitted in `onMediaItemTransition` on
+  `MEDIA_ITEM_TRANSITION_REASON_AUTO`), `seekToMediaItemIndex(index, posMs)`,
+  `setVolume(Int)`/`getVolume()` + a `_volume` StateFlow. The wire `ConnectState`
+  (API `types.ts` + iOS `ConnectModels`) **does** still carry
+  `tracks`/`date`/`venue`/`location`, so the reference `ConnectModels.kt` matches
+  the shipped protocol verbatim — client-resolve is a *behavior* rule, not a
+  trimmed wire shape.
+- **Do NOT apply the reference `MediaControllerRepository` diff wholesale** — it
+  *removes* main's DEAD-360 "seed state flows on attach" block + `hasActiveQueue()`
+  (the reference predates DEAD-360) and adds `controller.pause()` calls that may
+  collide with main's paused-load path. Only the 4 additive APIs above were taken.
+- **Fixed `androidApp/Makefile` `build:`/`release:` to use `./gradlew`** — they
+  called bare `gradle`, which fails in any shell without a system gradle install
+  (e.g. the non-interactive tool shell); `install` already used the wrapper. Now
+  all three are environment-independent.
+- App doesn't depend on `:core:connect` yet, so `ConnectModule` isn't in the Hilt
+  graph — that arrives with the MainActivity lifecycle + UI wiring (next).
+
+**✅ Lifecycle wired (2026-06-06):** `:app` now depends on `:core:connect`;
+`MainActivity` injects `ConnectService` and calls `startIfAuthenticated()` in
+`onStart`, `stop()` in `onStop`, plus `dispatchKeyEvent` routes hardware
+volume keys through `handleHardwareVolumeKey` (remote-device volume, Spotify
+behavior). Reference base matched main verbatim — applied cleanly. Full
+`make android-build` green (Hilt resolves `ConnectService`). **This is the first
+installable milestone:** once signed in, the phone opens the WS on foreground,
+registers as an `android` device, appears in web/iOS device lists, and works as
+a **transfer target** (responds to remote play/pause/seek/next/load via
+`reactToState`). Known inherited edge: `onStop → stop()` drops the socket on any
+background (matches iOS; reversible follow-up).
+
+**✅ FULL PORT DONE (2026-06-06) — builds clean, awaiting device smoke test.**
+36 files / +2087. Key realization that unblocked it: most of the "reconcile"
+scope was mis-sized. The number that matters is *how much main changed each file
+since the branch point* (`git diff $BASE:f main:f`), **not** how many lines the
+reference added. By that measure the entire player/miniplayer surface
+(`PlayerServiceImpl`, `MiniPlayerServiceImpl`, `MiniPlayerScreen/ViewModel`,
+`PlayerScreen` + components, `MainNavigation`, `SettingsNavigation`) is
+**main-untouched** → a clean `git checkout origin/connect-v2 -- <file>` port.
+
+Only these needed hand-merging (main moved them too):
+- **`DeadlyMediaSessionService.kt` — left as main's, untouched.** The reference's
+  `commandInterceptor` hook is **dead scaffolding** (nothing in the reference ever
+  *sets* it → always null → pass-through; lock-screen→remote routing was never
+  actually wired on Android, same gap as iOS). Porting the reference file would
+  have deleted main's Android Auto work (`onPlaybackResumption`/DEAD-360, ±10s
+  notification buttons, `ControlStyleFilteringPlayer`/PlayerControlsStyle, the AA
+  scroll workaround). So we dropped the orphan `PlaybackCommandInterceptor.kt` and
+  kept main's session service whole. **Follow-up (two-way door):** wire a real
+  interceptor later for lock-screen control of a remote device.
+- **`MediaControllerRepository.kt`** — took only the 4 additive APIs
+  (`trackAutoAdvanced`, `seekToMediaItemIndex`, `setVolume`/`getVolume`); kept
+  main's DEAD-360 seed block + `hasActiveQueue()` (reference would've deleted them).
+- **`LastPlayedTrackService.kt`** — kept *both* restore guards: skip if Connect has
+  a recording **and** main's skip-if-AA-has-a-queue (DEAD-229).
+- **`PlaylistViewModel.kt`** — ported reference (sends load/seek/play to Connect),
+  re-applied main's reactive `getShowReviewFlow` review observation.
+- **`PlayerViewModel.kt`** — took reference's `connectRemoteDeviceName` +
+  service-`isPlaying` wiring, kept main's 3-arg `isSongFavoriteFlow`.
+- **`SettingsScreen.kt`** — added the "Connected Devices" `PreferenceRow` +
+  `onNavigateToConnect` to main's redesigned screen.
+- **`feature/settings/build.gradle.kts`** — added `:core:connect`, kept
+  `:core:api:usersync` (reference had *replaced* it).
+
+**Known gaps carried (all two-way doors, post-smoke-test):** lock-screen/notif
+controls don't drive a remote device (interceptor unwired, == iOS); WS drops on
+background (`onStop → stop()`, == iOS). **Next:** real two-device smoke test
+(`make android-install` on a dev's device ↔ web/iOS), then address the gaps.
+
+*Reconcile against main's rewrites (the real work — confirm main's current
+line-counts/paths when starting):*
+- `core/media/service/DeadlyMediaSessionService.kt`,
+  `core/media/repository/MediaControllerRepository.kt`,
+  `core/media/service/PlaybackCommandInterceptor.kt` — session/notification
+  command interception + hardware volume keys vs main's rewritten media session
+  and the Android Auto work (DEAD-336/337/342/360).
+- `core/player/service/PlayerServiceImpl.kt` (+175),
+  `core/miniplayer/service/MiniPlayerServiceImpl.kt` (+95),
+  `core/miniplayer/LastPlayedTrackService.kt` (restore-skip when Connect has a
+  session — mirror iOS `PlaybackRestorationService`),
+  `feature/miniplayer/MiniPlayerScreen.kt`/`MiniPlayerViewModel.kt`,
+  `feature/player/PlayerScreen.kt` + secondary controls,
+  `feature/playlist/PlaylistViewModel.kt` (+229 — sends load/seek to Connect).
+
+**Hard rules carried from iOS (do NOT relitigate):**
+1. **Client-resolve display metadata** (see decision above) — Android reads
+   title/duration/date/venue from the show it loads locally, indexed by
+   `connectState.trackIndex`. `ConnectState` is transport-only. Do **not** add a
+   server track cache (we built and reverted one).
+2. **Transfer-in position**: make sure becoming-active lands at the server
+   position even if the receiver was paused/just-hydrated (iOS needed
+   `pendingSeekOnFirstPlay`; find the Media3/ExoPlayer equivalent — seeking a
+   prepared-but-not-playing player, or seek-on-ready).
+3. **Now-playing-when-remote**: the show/track list "playing" indicator must
+   reflect `connectState` (index + playing), not just the local player.
+4. **Pending-command spinner** only while genuinely remote-controlling — never
+   strand the UI when the socket is down.
+
 - **Exit check:** builds locally (`make android-install` — Android builds run on
-  this machine, never remote); parity with iOS/web.
+  this machine, never remote); two-device parity with iOS/web.
 
 ## Optional: a rebase spike (cheap reality check, throwaway)
 

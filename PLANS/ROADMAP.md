@@ -47,14 +47,30 @@ home for **playback-position sync** (deliberately cut from REST) and the
 **presence layer** the social "hear" feature depends on.
 - **Layered re-integration** (no rebase — PR #48 rewrote the player surfaces the
   branch built on), using `connect-v2` as reference. **API (Layer 1) + web
-  client (Layer 2) shipped in PR #50** (atomic unit; web was the only live v1
-  consumer). **iOS (Layer 3) ported and builds green on `connect-v2-ios`** —
-  runtime two-device smoke test + device install still TODO. Remaining:
-  **Android (Layer 4)**. Full strategy + status in
-  [`PLANS/connect-v2-port.md`](connect-v2-port.md). Still TODO: promote
-  `docs/connect-v2-architecture.md` into a numbered ADR (`docs/adr/`).
+  client (Layer 2) shipped in PR #50; iOS (Layer 3) merged in PR #51; Android
+  (Layer 4) in PR #52** (`connect-v2-android`). #52 also hardens the shared
+  protocol so a session survives a **server restart** and a **device transfer**
+  on all clients, via an explicit `epoch` (boot id) that replaces the implicit
+  null-active / empty-tracks heuristics — verified on a Pixel 6 + device iOS.
+  Full strategy + status in [`PLANS/connect-v2-port.md`](connect-v2-port.md);
+  the epoch decision is in
+  [`PLANS/connect-v2-android-debugging.md`](connect-v2-android-debugging.md).
+  Decisions recorded in **ADR-0006** (`docs/adr/0006-connect-v2.md`); the
+  detailed spec (`docs/connect-v2-architecture.md`) is amended to match the
+  shipped system.
+- **Display metadata is client-resolved**, not server state: `ConnectState`
+  carries live transport only (ids/index/position/playing/active); each client
+  derives title/duration/date/venue from the show it already loads. A
+  server-side track cache was tried and reverted. Android must follow this.
 - **Revisit the state model with web as a first-class participant** — a browser
   tab is now a controller/target, which changes device identity and presence.
+- **Pre-ship rule (mobile):** the social protocol is **not** pre-designed as a
+  gate (decided 2026-06-06) — presence is mostly server-side already and will be
+  added *additively + version-gated* later. The standing rule that does survive:
+  once shipped, **never change/retype/remove an existing wire field — only add**;
+  and numeric wire fields must be **64-bit safe** (`version`/`epoch` are ms — a
+  32-bit `Int` silently drops the whole state on Kotlin). See
+  [`PLANS/connect-v2-port.md`](connect-v2-port.md) "Ship checklist".
 
 ### 3. Web profile — social (`/me` 1b)
 Friends graph + listening-privacy controls. No backend yet — its own design +

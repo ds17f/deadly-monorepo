@@ -621,11 +621,12 @@ export default function HeaderPlayer() {
 
   const isLoading = status === "loading" || status === "buffering";
 
-  // Subtitle: which device is playing when remote, else the show line.
-  const subtitleLine = isRemoteActive
-    ? `${connectState?.playing ? "Playing" : "Paused"} on ${connectState?.activeDeviceName}`
-    : showInfo
-      ? `${showInfo.date} — ${showInfo.venue}`
+  // Subtitle is always the show line. Where it's playing gets its own label
+  // (`deviceLabel`) so the show never gets hidden behind "Playing on <device>".
+  const subtitleLine = showInfo ? `${showInfo.date} — ${showInfo.venue}` : null;
+  const deviceLabel =
+    isRemoteActive && connectState?.activeDeviceName
+      ? `On ${connectState.activeDeviceName}`
       : null;
 
   // Cover art: prefer what playback handed us, else recover it by showId from
@@ -729,9 +730,7 @@ export default function HeaderPlayer() {
           <p className="truncate text-sm font-medium text-white">
             {displayTrackTitle ?? showInfo?.date ?? "--"}
           </p>
-          {isRemoteActive ? (
-            <p className="truncate text-xs text-deadly-highlight">{subtitleLine}</p>
-          ) : showInfo ? (
+          {showInfo ? (
             <p className="truncate text-xs text-white/40">
               {showInfo.date} — {showInfo.venue}
             </p>
@@ -739,6 +738,12 @@ export default function HeaderPlayer() {
         </div>
       </button>
       {showLoaded && (
+       <div className="flex flex-shrink-0 flex-col items-end gap-1">
+        {deviceLabel && (
+          <span className="max-w-[110px] truncate text-[10px] font-medium leading-none text-deadly-highlight">
+            {deviceLabel}
+          </span>
+        )}
         <button
           onClick={handleTogglePlayPause}
           disabled={isLoadingTracks || !!(isActive && isLoading)}
@@ -759,6 +764,7 @@ export default function HeaderPlayer() {
             </svg>
           )}
         </button>
+       </div>
       )}
     </div>
 
@@ -769,13 +775,14 @@ export default function HeaderPlayer() {
       className={`hidden flex-1 items-center gap-4 lg:flex ${showLoaded ? "cursor-pointer" : ""}`}
       onClick={handleBarClick}
     >
-      {/* LEFT: art + info (click → full now-playing view) */}
+      {/* LEFT: art + info (click → the playing show's page). Expanding the full
+          player stays on the empty bar area + the fullscreen button. */}
       <div className="flex w-1/4 min-w-0 items-center gap-3">
         {showLoaded ? (
           <button
-            onClick={() => setExpanded(true)}
-            className="flex min-w-0 items-center gap-3 text-left"
-            title="Open full player"
+            onClick={openPlayingShow}
+            className="group flex min-w-0 items-center gap-3 text-left"
+            title="Go to show"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -785,13 +792,11 @@ export default function HeaderPlayer() {
               referrerPolicy="no-referrer"
             />
             <div className="min-w-0">
-              <p className="truncate text-sm font-medium text-white">
+              <p className="truncate text-sm font-medium text-white transition group-hover:[text-shadow:0_0_8px_rgba(255,255,255,0.6)]">
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
-              {isRemoteActive ? (
-                <p className="truncate text-xs text-deadly-highlight">{subtitleLine}</p>
-              ) : showInfo ? (
-                <p className="truncate text-xs text-white/40">
+              {showInfo ? (
+                <p className="truncate text-xs text-white/40 group-hover:text-white/60">
                   {showInfo.date} — {showInfo.venue}
                 </p>
               ) : null}
@@ -835,8 +840,14 @@ export default function HeaderPlayer() {
         </div>
       </div>
 
-      {/* RIGHT: queue · devices · volume · fullscreen · clear */}
-      <div className="flex w-1/4 items-center justify-end gap-1">
+      {/* RIGHT: device label over → queue · devices · volume · fullscreen · clear */}
+      <div className="flex w-1/4 flex-col items-end justify-center gap-0.5">
+        {deviceLabel && (
+          <span className="max-w-full truncate text-[11px] font-medium text-deadly-highlight">
+            {deviceLabel}
+          </span>
+        )}
+        <div className="flex items-center justify-end gap-1">
         {showLoaded && (
           <button
             onClick={() => setRailMode((m) => (m === "queue" ? null : "queue"))}
@@ -894,6 +905,7 @@ export default function HeaderPlayer() {
             </svg>
           </button>
         )}
+        </div>
       </div>
     </div>
 
@@ -919,14 +931,21 @@ export default function HeaderPlayer() {
               <path d="M7 10l5 5 5-5z" />
             </svg>
           </button>
-          <button
-            onClick={openPlayingShow}
-            disabled={!playingShowId}
-            aria-label="Go to show"
-            className="text-xs font-semibold uppercase tracking-wider text-white/50 transition-colors enabled:hover:text-white disabled:cursor-default"
-          >
-            Now Playing
-          </button>
+          <div className="flex flex-col items-center">
+            <button
+              onClick={openPlayingShow}
+              disabled={!playingShowId}
+              aria-label="Go to show"
+              className="text-xs font-semibold uppercase tracking-wider text-white/50 transition-colors enabled:hover:text-white disabled:cursor-default"
+            >
+              Now Playing
+            </button>
+            {deviceLabel && (
+              <span className="mt-0.5 max-w-[60vw] truncate text-[11px] font-medium normal-case tracking-normal text-deadly-highlight">
+                {deviceLabel}
+              </span>
+            )}
+          </div>
           <div className="relative">
             {isConnected ? (
               <button
@@ -972,11 +991,7 @@ export default function HeaderPlayer() {
               <p className="truncate text-lg font-bold text-white">
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
-              {isRemoteActive ? (
-                subtitleLine && (
-                  <p className="mt-0.5 truncate text-sm text-deadly-highlight">{subtitleLine}</p>
-                )
-              ) : showInfo ? (
+              {showInfo ? (
                 <>
                   <p className="mt-0.5 truncate text-sm text-white/70">{showInfo.date}</p>
                   {showInfo.venue && (
@@ -1043,27 +1058,31 @@ export default function HeaderPlayer() {
             }`}
           >
             {/* Full ticket in fullscreen — show the whole stub (contain),
-                not the square crop the mini bar uses. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={artSrc}
-              alt=""
-              referrerPolicy="no-referrer"
-              className={`flex-shrink-0 rounded-xl ${
-                artIsLogo
-                  ? "aspect-square w-[min(34vh,18rem)] object-cover"
-                  : "max-h-[34vh] max-w-[min(90vw,30rem)] object-contain shadow-2xl shadow-black/50"
-              }`}
-            />
+                not the square crop the mini bar uses. Clicking it goes to the show. */}
+            <button onClick={openPlayingShow} className="flex-shrink-0 transition hover:brightness-105" title="Go to show">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={artSrc}
+                alt=""
+                referrerPolicy="no-referrer"
+                className={`rounded-xl ${
+                  artIsLogo
+                    ? "aspect-square w-[min(34vh,18rem)] object-cover"
+                    : "max-h-[34vh] max-w-[min(90vw,30rem)] object-contain shadow-2xl shadow-black/50"
+                }`}
+              />
+            </button>
             <div className="max-w-3xl flex-shrink-0 text-center">
-              <p className="text-3xl font-bold text-white">
-                {displayTrackTitle ?? showInfo?.date ?? "--"}
-              </p>
-              {subtitleLine && (
-                <p className={`mt-2 text-lg ${isRemoteActive ? "text-deadly-highlight" : "text-white/70"}`}>
-                  {subtitleLine}
+              {/* Title + show line link to the show's page (the obvious target;
+                  the "Now Playing" header up top does the same but is easy to miss). */}
+              <button onClick={openPlayingShow} className="group" title="Go to show">
+                <p className="text-3xl font-bold text-white transition group-hover:[text-shadow:0_0_18px_rgba(255,255,255,0.65)]">
+                  {displayTrackTitle ?? showInfo?.date ?? "--"}
                 </p>
-              )}
+                {subtitleLine && (
+                  <p className="mt-2 text-lg text-white/70 group-hover:text-white/90">{subtitleLine}</p>
+                )}
+              </button>
               {displayTrackCount > 1 && (
                 <p className="mt-1 text-sm tabular-nums text-white/30">
                   Track {displayTrackIndex + 1} of {displayTrackCount}
@@ -1093,9 +1112,7 @@ export default function HeaderPlayer() {
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
               {subtitleLine && (
-                <p className={`truncate text-sm ${isRemoteActive ? "text-deadly-highlight" : "text-white/50"}`}>
-                  {subtitleLine}
-                </p>
+                <p className="truncate text-sm text-white/50">{subtitleLine}</p>
               )}
             </div>
             <Transport

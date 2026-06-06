@@ -1,6 +1,12 @@
 package com.grateful.deadly.feature.miniplayer.screens.main
 
 import android.util.Log
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,12 +18,16 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.design.component.ShowArtwork
+import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.feature.miniplayer.screens.main.models.MiniPlayerViewModel
+import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
 import androidx.compose.ui.graphics.Color
 import kotlinx.coroutines.delay
 
@@ -36,7 +46,27 @@ fun MiniPlayerScreen(
     viewModel: MiniPlayerViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    
+    val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
+    val showConnectTooltip by viewModel.shouldShowConnectTooltip.collectAsState()
+    val showVolumeUI by viewModel.showVolumeUI.collectAsState()
+    var showConnectSheet by remember { mutableStateOf(false) }
+
+    // Hardware volume button pressed during a Connect session — surface the sheet.
+    LaunchedEffect(showVolumeUI) {
+        if (showVolumeUI) {
+            showConnectSheet = true
+            viewModel.consumeShowVolumeUI()
+        }
+    }
+
+    // Auto-dismiss tooltip after 4 seconds
+    LaunchedEffect(showConnectTooltip) {
+        if (showConnectTooltip) {
+            delay(4000)
+            viewModel.dismissConnectTooltip()
+        }
+    }
+
     // Handle errors with auto-clear
     uiState.error?.let { error ->
         LaunchedEffect(error) {
@@ -48,7 +78,68 @@ fun MiniPlayerScreen(
     
     // Only show MiniPlayer when there's a current track
     if (!uiState.shouldShow || uiState.currentTrack == null) return
-    
+
+    Box(modifier = Modifier.fillMaxWidth()) {
+        // "Playing on {device}" speech bubble — floats above card, doesn't affect layout
+        AnimatedVisibility(
+            visible = showConnectTooltip && connectRemoteDeviceName != null,
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+                .offset(y = (-48).dp)
+                .padding(end = 46.dp),
+            enter = fadeIn() + scaleIn(transformOrigin = TransformOrigin(0.85f, 1f)),
+            exit = fadeOut() + scaleOut(transformOrigin = TransformOrigin(0.85f, 1f))
+        ) {
+            val bubbleColor = MaterialTheme.colorScheme.primary
+            Column(
+                modifier = Modifier
+                    .clickable {
+                        viewModel.dismissConnectTooltip()
+                        showConnectSheet = true
+                    },
+                horizontalAlignment = Alignment.End
+            ) {
+                Surface(
+                    shape = RoundedCornerShape(12.dp),
+                    color = bubbleColor,
+                    shadowElevation = 6.dp
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            painter = IconResources.Content.Cast(),
+                            contentDescription = null,
+                            modifier = Modifier.size(14.dp),
+                            tint = MaterialTheme.colorScheme.onPrimary
+                        )
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text(
+                            text = "Playing on ${connectRemoteDeviceName ?: ""}",
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Medium,
+                            color = MaterialTheme.colorScheme.onPrimary
+                        )
+                    }
+                }
+                // Downward-pointing arrow
+                Canvas(
+                    modifier = Modifier
+                        .padding(end = 12.dp)
+                        .size(width = 14.dp, height = 8.dp)
+                ) {
+                    val path = Path().apply {
+                        moveTo(0f, 0f)
+                        lineTo(size.width, 0f)
+                        lineTo(size.width / 2, size.height)
+                        close()
+                    }
+                    drawPath(path, bubbleColor)
+                }
+            }
+        }
+
     Card(
         modifier = modifier
             .fillMaxWidth()
@@ -104,6 +195,20 @@ fun MiniPlayerScreen(
                     }
                 }
                 
+                // Connect button
+                IconButton(
+                    onClick = { showConnectSheet = true },
+                    modifier = Modifier.size(40.dp)
+                ) {
+                    Icon(
+                        painter = IconResources.Content.Cast(),
+                        contentDescription = "Connect",
+                        tint = if (connectRemoteDeviceName != null) MaterialTheme.colorScheme.primary
+                               else MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(20.dp)
+                    )
+                }
+
                 // Play/pause button with loading state
                 IconButton(
                     onClick = { viewModel.togglePlayPause() },
@@ -139,5 +244,13 @@ fun MiniPlayerScreen(
                 trackColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)
             )
         }
+    }
+
+    } // Box
+
+    if (showConnectSheet) {
+        ConnectSheet(
+            onDismiss = { showConnectSheet = false }
+        )
     }
 }

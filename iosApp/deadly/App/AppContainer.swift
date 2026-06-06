@@ -306,16 +306,32 @@ final class AppContainer {
                 playlistSvc.connectService = connect
                 miniPlayer.connectService = connect
                 restorationSvc.connectService = connect
-                connect.onLoadShow = { [weak playlistSvc] showId, trackIndex, _, autoPlay in
+                connect.onLoadShow = { [weak playlistSvc, weak player] showId, trackIndex, positionMs, autoPlay in
                     guard let svc = playlistSvc else { return }
                     svc.suppressConnectNotify = true
                     defer { svc.suppressConnectNotify = false }
                     await svc.loadShow(showId)
                     guard !svc.tracks.isEmpty else { return }
                     let idx = min(trackIndex, svc.tracks.count - 1)
-                    // main's playTrack honors autoPlay natively (loadQueue autoPlay),
-                    // so no poll-then-pause dance is needed.
-                    svc.playTrack(at: idx, source: "connect", autoPlay: autoPlay)
+                    let seekPosition = TimeInterval(positionMs) / 1000.0
+                    if seekPosition > 0 {
+                        // Transfer with a position: load paused, arm the seek, then
+                        // play() so playWithPendingSeek waits for .playing and lands on
+                        // the right spot. loadQueue(autoPlay:true) would auto-start at 0
+                        // and clear pendingSeekOnFirstPlay; the engine also drops seeks
+                        // issued before it reaches .playing (the cold-network case).
+                        svc.playTrack(at: idx, source: "connect", autoPlay: false)
+                        player?.pendingSeekOnFirstPlay = seekPosition
+                        // Reflect the position in the slider before any engine ticks arrive.
+                        player?.applyOptimisticProgress(currentTime: seekPosition)
+                        if autoPlay { player?.play() }
+                    } else {
+                        // New show / position 0: let the engine autoplay natively. Loading
+                        // paused then calling play() races the async queue load and can
+                        // stall ("changed tracks but never started"); native autoPlay
+                        // starts playback once the stream is actually ready.
+                        svc.playTrack(at: idx, source: "connect", autoPlay: autoPlay)
+                    }
                 }
             }
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)

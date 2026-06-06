@@ -365,9 +365,16 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
             connect.sendPrev()
         } else {
             guard !isSkeleton else { return }
-            logger.info("skipPrev: local -> streamPlayer.previous() + sendPrev")
+            // previous() applies the threshold rule (restart current track when
+            // past 3s, else step back a track). Propagate the ACTUAL result as an
+            // index-carrying seek — a blind sendPrev() would make the server
+            // decrement the index unconditionally and echo back, overriding the
+            // restart-current behavior. previous() updates queueState synchronously.
             streamPlayer.previous()
-            connect.sendPrev()
+            let idx = streamPlayer.queueState.currentIndex
+            let durationMs = Int(streamPlayer.progress.duration * 1000)
+            logger.info("skipPrev: local -> previous() + sendSeek(track=\(idx))")
+            connect.sendSeek(trackIndex: idx, positionMs: 0, durationMs: durationMs)
         }
     }
 

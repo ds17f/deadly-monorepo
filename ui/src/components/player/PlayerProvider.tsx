@@ -81,6 +81,12 @@ export default function PlayerProvider({
   const reportVolumeRef = useRef(reportVolume);
   const isActiveDeviceRef = useRef(false);
   const isRemoteControllingRef = useRef(false);
+  // Guards the one-shot track re-assert (below) so position broadcasts arriving
+  // before our load echoes back don't make us re-send it repeatedly.
+  const reassertingTracksRef = useRef(false);
+  // Last server epoch seen. A change means the server restarted (and rehydrated
+  // the session), which is the only situation a still-playing device reclaims.
+  const lastEpochRef = useRef<number | null>(null);
   // Name of the most recent OTHER active device, used to attribute the
   // "Play on this device?" autoplay prompt after a transfer to us.
   const prevActiveDeviceNameRef = useRef<string | null>(null);
@@ -651,10 +657,30 @@ export default function PlayerProvider({
       return; // defer play/pause sync until tracks load
     }
 
-    // Another device is active now — stop our local audio and report where we
-    // left off so the handoff resumes at the right position.
-    if (isRemoteControlling) {
-      const audio = getActiveAudio();
+    // Did the server restart? An epoch change is the explicit, authoritative
+    // signal (vs. inferring it from null-active + empty-tracks coincidences).
+    const prevEpoch = lastEpochRef.current;
+    const serverRestarted = prevEpoch !== null && connectState.epoch !== prevEpoch;
+    lastEpochRef.current = connectState.epoch;
+
+    // Reclaim only when the server restarted and rehydrated the session (so it
+    // has no active device) while we're still playing this recording — take
+    // ownership back without a gap. reassertingTracksRef keeps us in this mode
+    // while our reclaim load is in flight (epoch is unchanged on later states).
+    // A deliberate transition (transfer park, stop) keeps the same epoch, so it
+    // is never mistaken for a restart.
+    const audio = getActiveAudio();
+    const reclaim =
+      connectState.activeDeviceId === null &&
+      !!audio && !audio.paused &&
+      connectState.recordingId === selectedRecordingRef.current &&
+      (serverRestarted || reassertingTracksRef.current);
+
+    // Not the active device and not reclaiming → another device owns the session
+    // (a real takeover) OR we were parked/stopped during a transfer. Either way,
+    // stop local audio and report where we left off so a handoff resumes right.
+    if (!isActiveDevice && !reclaim) {
+      reassertingTracksRef.current = false;
       if (audio && !audio.paused) {
         const positionMs = Math.round(audio.currentTime * 1000);
         audio.pause();
@@ -663,10 +689,46 @@ export default function PlayerProvider({
       return;
     }
 
-    // We ARE the active device — sync local audio to server state.
-    if (isActiveDevice) {
-      const audio = getActiveAudio();
+    // We ARE the active device, or we're reclaiming a restarted session.
+    if (isActiveDevice || reclaim) {
       if (!audio) return;
+
+      // handleLoad (re)claims us active, honors the index/position we pass, and
+      // — because we pass autoplay — restores playing, so this refills tracks
+      // (and re-establishes the active device on a reclaim) without a gap.
+      const localTracks = tracksRef.current;
+      if (connectState.tracks.length > 0 && !reclaim) {
+        reassertingTracksRef.current = false;
+      }
+      if (
+        (connectState.tracks.length === 0 || reclaim) &&
+        localTracks && localTracks.length > 0 &&
+        connectState.recordingId === selectedRecordingRef.current &&
+        !reassertingTracksRef.current
+      ) {
+        reassertingTracksRef.current = true;
+        const idx = currentTrackIndexRef.current;
+        sendCommand("load", {
+          showId: connectState.showId ?? activeShowRef.current?.showId ?? "",
+          recordingId: connectState.recordingId,
+          tracks: localTracks.map((t) => ({
+            title: t.title,
+            durationMs: Math.round((t.duration || 0) * 1000),
+          })),
+          trackIndex: idx >= 0 ? idx : 0,
+          positionMs: Math.round(audio.currentTime * 1000),
+          durationMs: Math.round((localTracks[idx]?.duration ?? 0) * 1000),
+          date: connectState.date ?? activeShowRef.current?.date,
+          venue: connectState.venue ?? activeShowRef.current?.venue,
+          location: connectState.location ?? activeShowRef.current?.location,
+          autoplay: !audio.paused,
+        });
+      }
+
+      // On a reclaim, don't sync transport DOWN to the stale playing:false /
+      // saved position — we're the source of truth until the server echoes our
+      // load back (next version, by which point activeDeviceId === us).
+      if (reclaim) return;
 
       // Track changed by a remote next/prev.
       if (connectState.trackIndex !== currentTrackIndexRef.current) {
@@ -893,6 +955,14 @@ export default function PlayerProvider({
     if (!audio || !tracksRef.current) return;
     if (audio.currentTime > PREV_TRACK_THRESHOLD || currentTrackIndexRef.current === 0) {
       audio.currentTime = 0;
+      // Propagate the restart as a same-index seek so remote viewers' scrubbers
+      // snap back immediately instead of waiting for the next position report —
+      // matches iOS/Android, where restart-current sends seek(index, 0).
+      sendCommandRef.current("seek", {
+        trackIndex: currentTrackIndexRef.current,
+        positionMs: 0,
+        durationMs: isFinite(audio.duration) ? Math.round(audio.duration * 1000) : 0,
+      });
     } else {
       setCurrentTrackIndex((prev) => Math.max(0, prev - 1));
       sendCommandRef.current("prev");

@@ -57,6 +57,18 @@ final class ConnectService: NSObject {
     private var timeSyncRefreshTask: Task<Void, Never>?
     private var reconnectAttempt = 0
     private var shouldConnect = false
+    // Guards the one-shot track re-assert so position broadcasts arriving before
+    // our load echoes back don't make us re-send it repeatedly.
+    private var reassertingTracks = false
+    // Last server epoch seen. A change means the server restarted (and rehydrated
+    // the session), which is the only situation a still-playing device reclaims.
+    private var lastEpoch: Int? = nil
+    // Set on every (re)connect. The monotonic version guard only dedupes
+    // out-of-order messages within one connection; across a reconnect the
+    // server may have restarted and reset its counter, so the first snapshot
+    // after connecting is authoritative regardless of version. (Belt-and-braces
+    // with the server seeding versions from wall-clock time.)
+    private var resyncOnReconnect = false
     private var volumeObservation: NSKeyValueObservation?
     // Lowest RTT seen in the current time_sync batch. Replies with higher RTT
     // are dropped; only the best (fastest round-trip) sample of each batch
@@ -266,8 +278,12 @@ final class ConnectService: NSObject {
         case "state":
             if let stateData = try? JSONSerialization.data(withJSONObject: json["state"] as Any),
                let newState = try? decoder.decode(ConnectState.self, from: stateData) {
-                // Version check: ignore stale broadcasts
-                if let current = connectState, newState.version <= current.version {
+                // Version check: ignore stale broadcasts — but always accept the
+                // first snapshot after a (re)connect, since the server may have
+                // restarted and reset its version counter.
+                if resyncOnReconnect {
+                    resyncOnReconnect = false
+                } else if let current = connectState, newState.version <= current.version {
                     logger.debug("Ignoring stale state v\(newState.version, privacy: .public) (current=\(current.version, privacy: .public))")
                     return
                 }
@@ -345,12 +361,31 @@ final class ConnectService: NSObject {
             pendingTransfer = nil
         }
 
-        // If this device was active but no longer is, pause audio and report final position
+        // Did the server restart? An epoch change is the explicit, authoritative
+        // signal (vs. inferring it from null-active + empty-tracks coincidences).
+        let prevEpoch = lastEpoch
+        let serverRestarted = prevEpoch != nil && new.epoch != prevEpoch
+        lastEpoch = new.epoch
+
+        // Reclaim only when the server restarted and rehydrated the session (so it
+        // has no active device) while we're still playing this recording — take
+        // ownership back without a gap. reassertingTracks keeps us in this mode
+        // while our reclaim load is in flight (epoch is unchanged on later states).
+        // A deliberate transition (transfer park, stop) keeps the same epoch, so
+        // it is never mistaken for a restart.
+        let reclaimAfterRestart = new.activeDeviceId == nil
+            && streamPlayer.playbackState.isPlaying
+            && streamPlayer.currentTrack?.metadata["recordingId"] == new.recordingId
+            && (serverRestarted || reassertingTracks)
+
+        // If this device was active but is no longer — a different device took
+        // over, or we were parked during a transfer — pause and report final
+        // position. Skipped on a reclaim, where we keep playing and re-assert.
         let wasActive = old?.activeDeviceId == appPreferences.installId
         let nowActive = new.activeDeviceId == appPreferences.installId
-        if wasActive && !nowActive {
+        if wasActive && !nowActive && !reclaimAfterRestart {
             let positionMs = Int(streamPlayer.progress.currentTime * 1000)
-            logger.info("reactToState: transferred away — pausing and reporting position \(positionMs, privacy: .public)ms")
+            logger.info("reactToState: parked/transferred away — pausing and reporting position \(positionMs, privacy: .public)ms")
             streamPlayer.pause()
             sendPosition(positionMs: positionMs)
         }
@@ -369,12 +404,54 @@ final class ConnectService: NSObject {
             return
         }
 
-        // Only drive local playback when this device is the active device
-        guard isActiveDevice else {
+        // Only drive local playback when this device is active (or reclaiming a
+        // restarted session — reclaimAfterRestart computed above).
+        guard isActiveDevice || reclaimAfterRestart else {
             logger.info("reactToState: not active device, skipping playback control")
+            reassertingTracks = false
             stopPositionReporting()
             return
         }
+
+        // Server forgot our tracklist (it restarted and rehydrated the session
+        // from the saved position only). We still hold the queue — re-assert the
+        // load so viewers' display and the server's next/prev get the tracks
+        // back. handleLoad keeps us active and honors the index/position we pass.
+        if new.tracks.isEmpty {
+            let queue = streamPlayer.loadedTracks
+            let localRecId = streamPlayer.currentTrack?.metadata["recordingId"]
+            if !queue.isEmpty, localRecId == new.recordingId, !reassertingTracks {
+                reassertingTracks = true
+                let sessionTracks = queue.map {
+                    SessionTrack(title: $0.title, durationMs: Int(($0.duration ?? 0) * 1000))
+                }
+                let meta = streamPlayer.currentTrack?.metadata ?? [:]
+                let idx = streamPlayer.queueState.currentIndex
+                let posMs = Int(streamPlayer.progress.currentTime * 1000)
+                let curDuration = (idx >= 0 && idx < queue.count) ? (queue[idx].duration ?? 0) : 0
+                logger.info("reactToState: server tracks empty — re-asserting load (\(sessionTracks.count, privacy: .public) tracks, idx=\(idx, privacy: .public))")
+                sendLoad(
+                    showId: new.showId ?? meta["showId"] ?? "",
+                    recordingId: new.recordingId ?? localRecId ?? "",
+                    tracks: sessionTracks,
+                    trackIndex: idx,
+                    positionMs: posMs,
+                    durationMs: Int(curDuration * 1000),
+                    date: new.date ?? meta["showDate"],
+                    venue: new.venue ?? meta["venue"],
+                    location: new.location ?? meta["location"],
+                    autoplay: streamPlayer.playbackState.isPlaying
+                )
+            }
+        } else {
+            reassertingTracks = false
+        }
+
+        // On a reclaim we are the source of truth: don't sync transport down to
+        // the stale playing:false / saved position. The server will echo our
+        // re-asserted load back on the next version (activeDeviceId == us), and
+        // normal active-device sync resumes from there.
+        if reclaimAfterRestart { return }
 
         // When this device just became active (e.g. transfer in), sync local player
         // to server state — the local player may be at a completely different track/position.
@@ -655,6 +732,7 @@ extension ConnectService: URLSessionWebSocketDelegate {
             logger.info("Connected (WebSocket open)")
             self.isConnected = true
             self.reconnectAttempt = 0
+            self.resyncOnReconnect = true
             self.sendRegister()
             self.startHeartbeat()
             self.startTimeSyncRefresh()

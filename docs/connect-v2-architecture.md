@@ -5,15 +5,50 @@
 > an authoritative server. This replaces v1 entirely — a clean break, not a
 > migration.
 
+> **Status:** the binding decisions live in
+> [`docs/adr/0006-connect-v2.md`](adr/0006-connect-v2.md). This file is the
+> living detailed spec. It was authored as the pre-implementation design; the
+> **Amendments** section directly below records where the shipped system
+> deliberately diverged. Where the body text and an amendment disagree, the
+> amendment wins.
+
+## Amendments (post-implementation — authoritative; see ADR-0006)
+
+1. **`ConnectState` is transport-only; display metadata is client-resolved.**
+   `tracks`/`date`/`venue`/`location` are still carried on the wire, but they are
+   **not load-bearing** — a position-only rehydrate leaves `tracks` empty, and
+   each client resolves title/duration/count/date/venue from the show it loads
+   locally, indexed by `trackIndex`. A server-side track cache was built and
+   reverted.
+2. **Version is seeded from wall-clock ms, not 0, and is 64-bit.** It must stay
+   monotonic across a server restart (the old "resets to 0, which is fine" was
+   *not* fine — clients holding a higher watermark dropped every fresh snapshot).
+   Clients also **reset their version watermark on every (re)connect**. Numeric
+   wire fields must be 64-bit (`Int` overflows and silently drops state on Kotlin).
+3. **Explicit `epoch` (server boot id) on every state.** A change in `epoch` is
+   the authoritative "server restarted" signal; a still-playing device reclaims
+   ownership only then. Deliberate transitions (transfer park, stop) keep the same
+   epoch. This replaces inferring restart from `activeDeviceId == null` /
+   `tracks.isEmpty()`.
+4. **`next`/`prev` are client-resolved.** Because count isn't load-bearing server
+   state, a client computes the target index locally and sends an index-carrying
+   `seek` rather than relying on the server's `next`/`prev` over its track list.
+5. **WS auth:** web authenticates the upgrade via the session cookie; mobile uses
+   `Authorization: Bearer`. **Remote volume shipped** (no longer an open question).
+6. **Wire protocol is additive-only once shipped** — never change/retype/remove an
+   existing field; only add. The social/presence protocol is not pre-designed.
+
 ## Design Principles
 
 1. **Server is the single source of truth.** Clients never own state. They send
    commands (intent); the server validates, mutates, and broadcasts.
 2. **Full state snapshots, not deltas.** The state payload is ~200 bytes. Send
    the entire thing on every change. No missed-delta bugs, no reconciliation.
-3. **Monotonic version counter.** Every mutation increments an integer version.
-   Clients ignore any state with version <= their current version. Total ordering
-   with zero ambiguity.
+3. **Monotonic version counter.** Every mutation increments the version; clients
+   ignore any state with version <= their current. **Seeded from wall-clock ms
+   (64-bit), not 0**, so it survives a server restart, and clients reset their
+   watermark on (re)connect. Server restart itself is signalled explicitly by a
+   change in `epoch` (see Amendments #2–#3).
 4. **One code path for mutations.** Every state change — play, pause, seek,
    transfer, load, disconnect — goes through a single `mutateState()` function
    on the server. No special relay paths, no dual state systems.
@@ -44,7 +79,8 @@ if nothing is playing). Server is the sole owner and mutator.
 ```typescript
 interface ConnectState {
   // ── Versioning ──
-  version: number;              // Monotonic, incremented on every mutation
+  version: number;              // Monotonic; seeded from ms (64-bit), not 0 (Amendment #2)
+  epoch: number;                // Server boot id; a change == server restarted (Amendment #3)
 
   // ── What's loaded (null = nothing) ──
   showId: string | null;
@@ -89,7 +125,8 @@ When a user's first device connects and there is no persisted state:
 
 ```typescript
 {
-  version: 0,
+  version: Date.now(),   // ms-seeded, not 0 (Amendment #2)
+  epoch: SERVER_EPOCH,   // server boot id (Amendment #3)
   showId: null,
   recordingId: null,
   tracks: [],
@@ -108,8 +145,10 @@ When a user's first device connects and there is no persisted state:
 ```
 
 When there IS persisted state from a previous session (loaded from SQLite), the
-state is hydrated with the saved fields, `version: 0`, `playing: false`,
-`activeDeviceId: null` (parked).
+state is hydrated with the saved fields (note: `tracks` is **not** persisted, so
+it rehydrates empty — see Amendment #1), an ms-seeded `version`, the current
+`epoch`, `playing: false`, `activeDeviceId: null` (parked). A device still
+playing that recording reclaims it on the epoch change (Amendment #3).
 
 ### Position Interpolation
 
@@ -577,8 +616,10 @@ date, venue, location, updated_at
 
 ### What NOT to persist
 - Every 5s position tick (too chatty, marginal value)
-- Version number (resets to 0 on server restart, which is fine — clients
-  reconnect and get fresh state)
+- Version number — NOT persisted, but (corrected, Amendment #2) it is **seeded
+  from wall-clock ms**, not reset to 0, so a restarted server's version still
+  exceeds any value a still-connected client holds. `epoch` (also not persisted;
+  set per process) tells clients the restart happened.
 
 ---
 

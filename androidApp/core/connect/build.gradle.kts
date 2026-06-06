@@ -1,13 +1,13 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.plugin.compose")
     id("com.google.dagger.hilt.android")
     id("com.google.devtools.ksp")
+    id("kotlinx-serialization")
 }
 
 android {
-    namespace = "com.grateful.deadly.feature.miniplayer"
+    namespace = "com.grateful.deadly.core.connect"
     compileSdk = 36
 
     defaultConfig {
@@ -34,33 +34,28 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-
-    buildFeatures {
-        compose = true
-    }
-
 }
 
 dependencies {
-    implementation(project(":core:api:miniplayer"))
     implementation(project(":core:model"))
-    implementation(project(":core:design"))
-    implementation(project(":core:connect"))
-    implementation(project(":feature:settings"))
-    
+    implementation(project(":core:database"))
+    implementation(project(":core:api:auth"))
+    implementation(project(":core:media"))
+    implementation(project(":core:network"))
+
     // Hilt
     implementation("com.google.dagger:hilt-android:2.56.1")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     ksp("com.google.dagger:hilt-compiler:2.56.1")
-    
-    // Compose BOM
-    implementation(platform("androidx.compose:compose-bom:2025.08.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material:material-icons-core")
-    implementation("androidx.compose.material:material-icons-extended")
-    
+
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+
+    // OkHttp for WebSocket
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    // Testing
+    testImplementation("junit:junit:4.13.2")
 }

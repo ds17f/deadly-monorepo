@@ -64,6 +64,7 @@ dependencies {
     implementation(project(":core:api:auth"))
     implementation(project(":core:auth"))
     implementation(project(":core:api:usersync"))
+    implementation(project(":core:connect"))
     implementation(project(":core:design"))
     implementation(project(":core:database"))
     implementation(project(":core:media"))

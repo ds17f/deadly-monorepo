@@ -22,7 +22,9 @@ import com.grateful.deadly.feature.player.screens.main.models.PlayerUiState
 @Composable
 fun PlayerMiniPlayer(
     uiState: PlayerUiState,
+    connectDeviceName: String?,
     onPlayPause: () -> Unit,
+    onConnectClick: () -> Unit,
     onTapToExpand: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -85,6 +87,20 @@ fun PlayerMiniPlayer(
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
+                    )
+                }
+
+                // Connect button
+                IconButton(
+                    onClick = onConnectClick,
+                    modifier = Modifier.size(40.dp)
+                ) {
+                    Icon(
+                        painter = IconResources.Content.Cast(),
+                        contentDescription = "Connect",
+                        tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
+                               else MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(20.dp)
                     )
                 }
 
