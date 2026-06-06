@@ -18,16 +18,20 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonPrimitive
+import kotlinx.serialization.json.buildJsonArray
+import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import kotlinx.serialization.json.put
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 import okhttp3.WebSocket
 import okhttp3.WebSocketListener
-import org.json.JSONArray
-import org.json.JSONObject
 import java.util.concurrent.TimeUnit
 import kotlin.math.abs
 import javax.inject.Inject
@@ -58,6 +62,18 @@ class ConnectServiceImpl @Inject constructor(
         private const val TIME_SYNC_REFRESH_MS = 5L * 60L * 1000L
         private const val TIME_SYNC_SAMPLES = 3
         private const val TIME_SYNC_SAMPLE_SPACING_MS = 200L
+
+        // How often the active device reports its position to the server.
+        private const val POSITION_REPORT_INTERVAL_MS = 5_000L
+        // On becoming active, only re-seek if the local position differs from the
+        // interpolated server position by more than this (avoids a pointless seek).
+        private const val ACTIVATE_POSITION_SYNC_THRESHOLD_MS = 1_000L
+        // While active, only honor a remote seek if it moves the position by more
+        // than this (filters our own ~5s position reports echoing back).
+        private const val REMOTE_SEEK_THRESHOLD_MS = 2_000L
+        // A pending transport command auto-clears after this long if the server
+        // never confirms it, so the UI spinner can never get permanently stuck.
+        private const val PENDING_COMMAND_TIMEOUT_MS = 6_000L
     }
 
     private val json = Json { ignoreUnknownKeys = true }
@@ -106,6 +122,7 @@ class ConnectServiceImpl @Inject constructor(
     private var heartbeatJob: Job? = null
     private var positionReportJob: Job? = null
     private var reconnectJob: Job? = null
+    @Volatile private var pendingCommandTimeoutJob: Job? = null
 
     // Tracks last local sendVolume to suppress our own echoes from volume_report,
     // which race with rapid hardware-key presses and cause the slider to jump.
@@ -180,7 +197,7 @@ class ConnectServiceImpl @Inject constructor(
         _isConnected.value = false
         _devices.value = emptyList()
         _connectState.value = null
-        _pendingCommand.value = null
+        setPendingCommand(null)
         _isActiveDevice.value = false
         _pendingTransfer.value = null
         _activeDeviceVolume.value = 100
@@ -246,10 +263,13 @@ class ConnectServiceImpl @Inject constructor(
     }
 
     private fun sendRegister(ws: WebSocket) {
-        val deviceId = appPreferences.installId
-        val deviceName = Build.MODEL
-        val msg = """{"type":"register","deviceId":"$deviceId","deviceType":"android","deviceName":"${deviceName.replace("\"", "\\\"")}"}"""
-        ws.send(msg)
+        val msg = buildJsonObject {
+            put("type", "register")
+            put("deviceId", appPreferences.installId)
+            put("deviceType", "android")
+            put("deviceName", Build.MODEL)
+        }
+        ws.send(msg.toString())
     }
 
     private fun startHeartbeat(ws: WebSocket) {
@@ -291,7 +311,10 @@ class ConnectServiceImpl @Inject constructor(
                 if (!isActive) return@launch
                 val sock = webSocket
                 if (sock !== ws) return@launch  // socket replaced; bail
-                sock.send("""{"type":"time_sync","clientTs":${System.currentTimeMillis()}}""")
+                sock.send(buildJsonObject {
+                    put("type", "time_sync")
+                    put("clientTs", System.currentTimeMillis())
+                }.toString())
                 if (i < TIME_SYNC_SAMPLES - 1) delay(TIME_SYNC_SAMPLE_SPACING_MS)
             }
         }
@@ -301,7 +324,7 @@ class ConnectServiceImpl @Inject constructor(
         stopPositionReporting()
         positionReportJob = scope.launch {
             while (isActive) {
-                delay(5000L)
+                delay(POSITION_REPORT_INTERVAL_MS)
                 if (isActive) {
                     val positionMs = mediaControllerRepository.currentPosition.value.toInt()
                     sendPosition(positionMs)
@@ -403,16 +426,16 @@ class ConnectServiceImpl @Inject constructor(
         if (cmd != null) {
             if (cmd == "play" && new.playing) {
                 Log.d(TAG, "reactToState: pending 'play' confirmed, clearing")
-                _pendingCommand.value = null
+                setPendingCommand(null)
             } else if (cmd == "pause" && !new.playing) {
                 Log.d(TAG, "reactToState: pending 'pause' confirmed, clearing")
-                _pendingCommand.value = null
+                setPendingCommand(null)
             } else if ((cmd == "next" || cmd == "prev") && new.trackIndex != (old?.trackIndex ?: -1)) {
                 Log.d(TAG, "reactToState: pending '$cmd' confirmed (track ${old?.trackIndex ?: -1} -> ${new.trackIndex}), clearing")
-                _pendingCommand.value = null
+                setPendingCommand(null)
             } else if (cmd == "seek" && new.positionMs != (old?.positionMs ?: -1)) {
                 Log.d(TAG, "reactToState: pending 'seek' confirmed, clearing")
-                _pendingCommand.value = null
+                setPendingCommand(null)
             }
         }
 
@@ -493,7 +516,7 @@ class ConnectServiceImpl @Inject constructor(
                 mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, targetPositionMs.toLong())
             } else {
                 val localPositionMs = mediaControllerRepository.currentPosition.value
-                if (abs(localPositionMs - targetPositionMs.toLong()) > 1000) {
+                if (abs(localPositionMs - targetPositionMs.toLong()) > ACTIVATE_POSITION_SYNC_THRESHOLD_MS) {
                     Log.d(TAG, "reactToState: became active, syncing position to ${targetPositionMs}ms (interpolated from ${new.positionMs}ms)")
                     mediaControllerRepository.seekToPosition(targetPositionMs.toLong())
                 }
@@ -512,7 +535,7 @@ class ConnectServiceImpl @Inject constructor(
         if (!justBecameActive && old != null && new.trackIndex == old.trackIndex && new.positionMs != old.positionMs) {
             val localPositionMs = mediaControllerRepository.currentPosition.value
             val delta = abs(new.positionMs.toLong() - localPositionMs)
-            if (delta > 2000) {
+            if (delta > REMOTE_SEEK_THRESHOLD_MS) {
                 Log.d(TAG, "reactToState: seek from remote, jumping to ${new.positionMs}ms (delta=$delta)")
                 mediaControllerRepository.seekToPosition(new.positionMs.toLong())
             }
@@ -540,6 +563,27 @@ class ConnectServiceImpl @Inject constructor(
     }
 
     // -- Commands --
+
+    /**
+     * Set (or clear) the in-flight transport command. When set, arms a timeout
+     * that clears it if the server never confirms the expected transition, so
+     * the UI spinner can't get stuck on a command that produces no observable
+     * state change (e.g. a seek to the current position) or a dropped socket.
+     */
+    private fun setPendingCommand(cmd: String?) {
+        _pendingCommand.value = cmd
+        pendingCommandTimeoutJob?.cancel()
+        pendingCommandTimeoutJob = null
+        if (cmd != null) {
+            pendingCommandTimeoutJob = scope.launch {
+                delay(PENDING_COMMAND_TIMEOUT_MS)
+                if (_pendingCommand.value == cmd) {
+                    Log.d(TAG, "pendingCommand '$cmd' not confirmed in ${PENDING_COMMAND_TIMEOUT_MS}ms, clearing")
+                    _pendingCommand.value = null
+                }
+            }
+        }
+    }
 
     override fun sendStop() {
         Log.d(TAG, "sendStop")
@@ -577,13 +621,13 @@ class ConnectServiceImpl @Inject constructor(
 
     override fun sendPlay() {
         Log.d(TAG, "sendPlay (pending=${_pendingCommand.value} -> play)")
-        _pendingCommand.value = "play"
+        setPendingCommand("play")
         sendCommand("play")
     }
 
     override fun sendPause() {
         Log.d(TAG, "sendPause (pending=${_pendingCommand.value} -> pause)")
-        _pendingCommand.value = "pause"
+        setPendingCommand("pause")
         sendCommand("pause")
     }
 
@@ -601,7 +645,7 @@ class ConnectServiceImpl @Inject constructor(
 
     override fun sendSeek(trackIndex: Int, positionMs: Int, durationMs: Int) {
         Log.d(TAG, "sendSeek: track=$trackIndex pos=$positionMs dur=$durationMs (pending=${_pendingCommand.value} -> seek)")
-        _pendingCommand.value = "seek"
+        setPendingCommand("seek")
         sendCommand("seek", mapOf(
             "trackIndex" to trackIndex,
             "positionMs" to positionMs,
@@ -611,13 +655,13 @@ class ConnectServiceImpl @Inject constructor(
 
     override fun sendNext() {
         Log.d(TAG, "sendNext (pending=${_pendingCommand.value} -> next)")
-        _pendingCommand.value = "next"
+        setPendingCommand("next")
         sendCommand("next")
     }
 
     override fun sendPrev() {
         Log.d(TAG, "sendPrev (pending=${_pendingCommand.value} -> prev)")
-        _pendingCommand.value = "prev"
+        setPendingCommand("prev")
         sendCommand("prev")
     }
 
@@ -677,20 +721,28 @@ class ConnectServiceImpl @Inject constructor(
             Log.w(TAG, "sendCommand: $action DROPPED — webSocket is null")
             return
         }
-        val obj = JSONObject()
-        obj.put("type", "command")
-        obj.put("action", action)
-        for ((key, value) in extra) {
-            when (value) {
-                is List<*> -> obj.put(key, JSONArray().apply {
-                    (value as? List<Map<*, *>>)?.forEach { map ->
-                        put(JSONObject(map as Map<*, *>))
-                    }
-                })
-                else -> obj.put(key, value)
-            }
+        val obj = buildJsonObject {
+            put("type", "command")
+            put("action", action)
+            for ((key, value) in extra) put(key, value.toJsonElement())
         }
         ws.send(obj.toString())
+    }
+
+    /** Convert the dynamically-typed command payload values into JSON. */
+    private fun Any?.toJsonElement(): JsonElement = when (this) {
+        null -> JsonNull
+        is JsonElement -> this
+        is String -> JsonPrimitive(this)
+        is Boolean -> JsonPrimitive(this)
+        is Number -> JsonPrimitive(this)
+        is Map<*, *> -> buildJsonObject {
+            forEach { (k, v) -> put(k.toString(), v.toJsonElement()) }
+        }
+        is List<*> -> buildJsonArray {
+            forEach { add(it.toJsonElement()) }
+        }
+        else -> JsonPrimitive(toString())
     }
 
     private fun interpolatedPositionMs(state: ConnectState): Int {
@@ -711,6 +763,11 @@ class ConnectServiceImpl @Inject constructor(
         _serverTimeOffsetMs.value = 0L
         timeSyncBestRttMs = Long.MAX_VALUE
         webSocket = null
+        // Don't strand a spinner while the socket is down — any in-flight
+        // command/transfer can't be confirmed now and will be re-derived from
+        // the fresh state snapshot after reconnect.
+        setPendingCommand(null)
+        _pendingTransfer.value = null
 
         if (!shouldConnect || closeCode == CLOSE_CODE_UNAUTHORIZED) return
 
