@@ -55,8 +55,9 @@ home for **playback-position sync** (deliberately cut from REST) and the
   Full strategy + status in [`PLANS/connect-v2-port.md`](connect-v2-port.md);
   the epoch decision is in
   [`PLANS/connect-v2-android-debugging.md`](connect-v2-android-debugging.md).
-  Still TODO: promote `docs/connect-v2-architecture.md` into a numbered ADR
-  (`docs/adr/`).
+  Decisions recorded in **ADR-0006** (`docs/adr/0006-connect-v2.md`); the
+  detailed spec (`docs/connect-v2-architecture.md`) is amended to match the
+  shipped system.
 - **Display metadata is client-resolved**, not server state: `ConnectState`
   carries live transport only (ids/index/position/playing/active); each client
   derives title/duration/date/venue from the show it already loads. A

@@ -290,8 +290,9 @@ is exactly why we port API-first and re-implement the clients.
 1. Cut `feat/connect-v2` off current `main`.
 2. Bring in the reference docs (connect-v2's copies are newest — `640283e1`,
    May 10, newer than the `docs/connect-v2-architecture` branch's Apr-6 copy):
-   - `docs/connect-v2-architecture.md` — the contract. **Promote to a numbered
-     ADR** `docs/adr/0006-connect-v2.md` (next free number; 0001–0005 exist).
+   - `docs/connect-v2-architecture.md` — the contract. ✅ **Done:** decisions
+     recorded in `docs/adr/0006-connect-v2.md`; the spec is amended to match the
+     shipped system (client-resolve, epoch, ms-seeded version, additive-only wire).
    - `docs/connect-volume.md`, `docs/dead-276-connect-ui-breakdown.md`.
 3. Keep `connect-v2` checked out alongside as the reference implementation.
 
