@@ -4,6 +4,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.grateful.deadly.feature.settings.SettingsScreen
+import com.grateful.deadly.feature.settings.screens.connect.ConnectScreen
 import com.grateful.deadly.feature.settings.screens.developer.DeveloperScreen
 import com.grateful.deadly.feature.settings.screens.equalizer.EqualizerScreen
 import com.grateful.deadly.feature.settings.screens.legal.LegalScreen
@@ -19,6 +20,7 @@ const val LEGAL_ROUTE = "legal"
 const val MISSION_ROUTE = "mission"
 const val DEVELOPER_ROUTE = "developer"
 const val PRIVACY_DATA_ROUTE = "privacy_data"
+const val CONNECT_ROUTE = "connect"
 
 /**
  * Extension function for NavController to navigate to Settings
@@ -37,7 +39,8 @@ fun NavGraphBuilder.settingsScreen(
     onNavigateToLegal: () -> Unit,
     onNavigateToMission: () -> Unit,
     onNavigateToDeveloper: () -> Unit,
-    onNavigateToPrivacyData: () -> Unit
+    onNavigateToPrivacyData: () -> Unit,
+    onNavigateToConnect: () -> Unit,
 ) {
     composable(route = SETTINGS_ROUTE) {
         SettingsScreen(
@@ -46,7 +49,8 @@ fun NavGraphBuilder.settingsScreen(
             onNavigateToLegal = onNavigateToLegal,
             onNavigateToMission = onNavigateToMission,
             onNavigateToDeveloper = onNavigateToDeveloper,
-            onNavigateToPrivacyData = onNavigateToPrivacyData
+            onNavigateToPrivacyData = onNavigateToPrivacyData,
+            onNavigateToConnect = onNavigateToConnect,
         )
     }
 }
@@ -108,7 +112,8 @@ fun NavGraphBuilder.settingsGraph(navController: NavController) {
         onNavigateToLegal = { navController.navigate(LEGAL_ROUTE) },
         onNavigateToMission = { navController.navigate(MISSION_ROUTE) },
         onNavigateToDeveloper = { navController.navigate(DEVELOPER_ROUTE) },
-        onNavigateToPrivacyData = { navController.navigate(PRIVACY_DATA_ROUTE) }
+        onNavigateToPrivacyData = { navController.navigate(PRIVACY_DATA_ROUTE) },
+        onNavigateToConnect = { navController.navigate(CONNECT_ROUTE) }
     )
 
     equalizerScreen(
@@ -130,4 +135,8 @@ fun NavGraphBuilder.settingsGraph(navController: NavController) {
     privacyDataScreen(
         onNavigateBack = { navController.popBackStack() }
     )
+
+    composable(route = CONNECT_ROUTE) {
+        ConnectScreen()
+    }
 }

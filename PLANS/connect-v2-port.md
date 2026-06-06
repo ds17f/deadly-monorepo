@@ -319,6 +319,51 @@ Working branch **`connect-v2-android`** off `main` (post-#51). Reference:
   then `make android-install` to confirm the additive layer compiles before
   touching player surfaces. Then do the reconcile targets below.
 
+**✅ Additive first chunk DONE (2026-06-06):** `core/connect/` module created
+(`build.gradle.kts`, `consumer-rules.pro`, `ConnectService`/`ConnectServiceImpl`/
+`di/ConnectModule` byte-identical to reference) + `core/model/ConnectModels.kt`
++ `AppLaunchState.kt`; `include(":core:connect")` wired. `:core:connect:assembleDebug`
+and full `:app:assembleDebug` both green. Findings worth keeping:
+- **`ConnectServiceImpl` needs 4 media APIs that `main` lacks** — these are the
+  *minimal additive slice* of the media reconcile and had to land now for the
+  module to compile (added to `MediaControllerRepository.kt`, all purely additive):
+  `trackAutoAdvanced: SharedFlow<Int>` (emitted in `onMediaItemTransition` on
+  `MEDIA_ITEM_TRANSITION_REASON_AUTO`), `seekToMediaItemIndex(index, posMs)`,
+  `setVolume(Int)`/`getVolume()` + a `_volume` StateFlow. The wire `ConnectState`
+  (API `types.ts` + iOS `ConnectModels`) **does** still carry
+  `tracks`/`date`/`venue`/`location`, so the reference `ConnectModels.kt` matches
+  the shipped protocol verbatim — client-resolve is a *behavior* rule, not a
+  trimmed wire shape.
+- **Do NOT apply the reference `MediaControllerRepository` diff wholesale** — it
+  *removes* main's DEAD-360 "seed state flows on attach" block + `hasActiveQueue()`
+  (the reference predates DEAD-360) and adds `controller.pause()` calls that may
+  collide with main's paused-load path. Only the 4 additive APIs above were taken.
+- **Fixed `androidApp/Makefile` `build:`/`release:` to use `./gradlew`** — they
+  called bare `gradle`, which fails in any shell without a system gradle install
+  (e.g. the non-interactive tool shell); `install` already used the wrapper. Now
+  all three are environment-independent.
+- App doesn't depend on `:core:connect` yet, so `ConnectModule` isn't in the Hilt
+  graph — that arrives with the MainActivity lifecycle + UI wiring (next).
+
+**✅ Lifecycle wired (2026-06-06):** `:app` now depends on `:core:connect`;
+`MainActivity` injects `ConnectService` and calls `startIfAuthenticated()` in
+`onStart`, `stop()` in `onStop`, plus `dispatchKeyEvent` routes hardware
+volume keys through `handleHardwareVolumeKey` (remote-device volume, Spotify
+behavior). Reference base matched main verbatim — applied cleanly. Full
+`make android-build` green (Hilt resolves `ConnectService`). **This is the first
+installable milestone:** once signed in, the phone opens the WS on foreground,
+registers as an `android` device, appears in web/iOS device lists, and works as
+a **transfer target** (responds to remote play/pause/seek/next/load via
+`reactToState`). Known inherited edge: `onStop → stop()` drops the socket on any
+background (matches iOS; reversible follow-up).
+
+**Next (player-surface reconcile):** the real work — see the reconcile targets
+below. Suggested order: (1) ConnectScreen/Sheet/ViewModel + Settings nav
+(additive UI, lets the phone *see* and pick devices / control others); (2) the
+PlayerServiceImpl/MiniPlayer/Playlist reconcile that routes transport through
+Connect, broadcasts local playback to the session, and resolves display
+metadata locally (now-playing-when-remote, restore-skip).
+
 *Reconcile against main's rewrites (the real work — confirm main's current
 line-counts/paths when starting):*
 - `core/media/service/DeadlyMediaSessionService.kt`,

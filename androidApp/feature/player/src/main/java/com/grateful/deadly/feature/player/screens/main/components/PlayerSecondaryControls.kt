@@ -5,6 +5,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
 
@@ -14,8 +15,9 @@ import com.grateful.deadly.core.design.resources.IconResources
 @Composable
 fun PlayerSecondaryControls(
     isFavorite: Boolean,
-    onConnectClick: () -> Unit,
+    connectDeviceName: String?,
     onEqualizerClick: () -> Unit,
+    onConnectClick: () -> Unit,
     onFavoriteClick: () -> Unit,
     onShareClick: () -> Unit,
     onQueueClick: () -> Unit,
@@ -26,9 +28,11 @@ fun PlayerSecondaryControls(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Left section
-        Row {
-            // Connections
+        // Left section - Connect
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.height(40.dp)
+        ) {
             IconButton(
                 onClick = onConnectClick,
                 modifier = Modifier.size(40.dp)
@@ -36,10 +40,24 @@ fun PlayerSecondaryControls(
                 Icon(
                     painter = IconResources.Content.Cast(),
                     contentDescription = "Connect",
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
+                           else MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
+            if (connectDeviceName != null) {
+                Text(
+                    text = connectDeviceName,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.primary,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.widthIn(max = 100.dp)
+                )
+            }
+        }
 
+        // Right section
+        Row {
             // Equalizer
             IconButton(
                 onClick = onEqualizerClick,
@@ -51,10 +69,7 @@ fun PlayerSecondaryControls(
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
-        }
 
-        // Right section
-        Row {
             // Thumbs Up
             IconButton(
                 onClick = onFavoriteClick,

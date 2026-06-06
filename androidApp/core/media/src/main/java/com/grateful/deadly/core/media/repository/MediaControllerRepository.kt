@@ -21,8 +21,11 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
@@ -105,6 +108,12 @@ class MediaControllerRepository @Inject constructor(
     
     private val _mediaItemCount = MutableStateFlow(0)
     val mediaItemCount: StateFlow<Int> = _mediaItemCount.asStateFlow()
+
+    // Emits the new track index when playback auto-advances (track ended naturally).
+    // Not emitted for explicit seeks or skips via seekToMediaItemIndex. Connect
+    // listens to this to keep other devices in sync on natural track end.
+    private val _trackAutoAdvanced = MutableSharedFlow<Int>(extraBufferCapacity = 1)
+    val trackAutoAdvanced: SharedFlow<Int> = _trackAutoAdvanced.asSharedFlow()
 
     // Analytics: tracks the currently playing item for playback_end
     private var analyticsPlaybackInfo: Triple<String, String, Int>? = null // showId, recordingId, trackNumber
@@ -581,8 +590,13 @@ class MediaControllerRepository @Inject constructor(
                                     }
                                 }
                             }
+
+                            // Notify Connect on natural track end so all devices stay in sync.
+                            if (reason == Player.MEDIA_ITEM_TRANSITION_REASON_AUTO) {
+                                _trackAutoAdvanced.tryEmit(controller.currentMediaItemIndex)
+                            }
                         }
-                        
+
                         override fun onPlaybackStateChanged(playbackState: Int) {
                             val prevState = currentExoPlayerState
                             Log.d(TAG, "🕒🎵 [EXOPLAYER] ExoPlayer state changed: ${getExoPlayerStateString(prevState)} → ${getExoPlayerStateString(playbackState)}")
@@ -993,7 +1007,32 @@ class MediaControllerRepository @Inject constructor(
             mediaController?.seekTo(positionMs)
         }
     }
-    
+
+    suspend fun seekToMediaItemIndex(index: Int, positionMs: Long = 0L) {
+        Log.d(TAG, "seekToMediaItemIndex: index=$index pos=${positionMs}ms")
+        executeWhenConnected {
+            mediaController?.seekTo(index, positionMs)
+        }
+    }
+
+    // Volume (0-100). Tracks the MediaController volume set via setVolume().
+    // Stored as a StateFlow so it can be read safely from any thread — actual
+    // mediaController.volume writes happen on the Main thread.
+    private val _volume = MutableStateFlow(100)
+    val volume: StateFlow<Int> = _volume.asStateFlow()
+
+    fun setVolume(volume: Int) {
+        Log.d(TAG, "setVolume: $volume")
+        _volume.value = volume
+        repositoryScope.launch {
+            withContext(Dispatchers.Main) {
+                mediaController?.volume = volume / 100f
+            }
+        }
+    }
+
+    fun getVolume(): Int = _volume.value
+
     /**
      * Wait briefly for connection, then report whether the session already has
      * a queue loaded (e.g. the service survived from a prior Android Auto

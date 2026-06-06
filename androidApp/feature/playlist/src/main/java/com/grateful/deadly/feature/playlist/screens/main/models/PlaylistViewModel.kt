@@ -13,6 +13,7 @@ import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.ShowReview
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import com.grateful.deadly.core.media.equalizer.EqualizerState
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
@@ -57,6 +58,7 @@ class PlaylistViewModel @Inject constructor(
     private val reviewService: ReviewService,
     private val equalizerRepository: EqualizerRepository,
     private val analyticsService: AnalyticsService,
+    private val connectService: ConnectService,
     networkMonitor: NetworkMonitor,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
@@ -233,8 +235,10 @@ class PlaylistViewModel @Inject constructor(
             CorePlaylistState(baseState, rawTracks, isPlaying, currentTrackInfo, favoriteAndDownload)
         },
         _favoriteTitles,
-        _hasUserReview
-    ) { core, favorites, hasUserReview ->
+        _hasUserReview,
+        connectService.connectState,
+        connectService.isActiveDevice
+    ) { core, favorites, hasUserReview, connectStateSnapshot, isActiveSnapshot ->
         val (baseState, rawTracks, isPlaying, currentTrackInfo, favoriteAndDownload) = core
 
         // Update track data with current playing state
@@ -253,14 +257,33 @@ class PlaylistViewModel @Inject constructor(
         val mediaShowId = currentTrackInfo?.showId
         val mediaRecordingId = currentTrackInfo?.recordingId
 
-        val isCurrentShowAndRecording = playlistShowId != null &&
-                                       playlistRecordingId != null &&
-                                       (playlistShowId == mediaShowId || playlistShowId == mediaShowId?.replace("-", "")) &&
-                                       playlistRecordingId == mediaRecordingId
+        // Check remote connect state for play button accuracy
+        val connectStateVal = connectStateSnapshot
+        val isRemote = connectStateVal?.let { it.activeDeviceId != null && !isActiveSnapshot } ?: false
+
+        val isCurrentShowAndRecording = if (isRemote && connectStateVal != null) {
+            // Remote-controlling: match against server state
+            playlistShowId != null &&
+                playlistRecordingId != null &&
+                connectStateVal.recordingId == playlistRecordingId
+        } else {
+            // Local/active: match against media controller state
+            playlistShowId != null &&
+                playlistRecordingId != null &&
+                (playlistShowId == mediaShowId || playlistShowId == mediaShowId?.replace("-", "")) &&
+                playlistRecordingId == mediaRecordingId
+        }
+
+        // isPlaying should reflect server state when remote-controlling
+        val effectiveIsPlaying = if (isRemote && isCurrentShowAndRecording && connectStateVal != null) {
+            connectStateVal.playing
+        } else {
+            isPlaying
+        }
 
         Log.v(TAG, "Play button logic: playlistShow='$playlistShowId' vs mediaShow='$mediaShowId'")
         Log.v(TAG, "Play button logic: playlistRecording='$playlistRecordingId' vs mediaRecording='$mediaRecordingId'")
-        Log.v(TAG, "Play button logic: isCurrentShowAndRecording=$isCurrentShowAndRecording, isPlaying=$isPlaying")
+        Log.v(TAG, "Play button logic: isCurrentShowAndRecording=$isCurrentShowAndRecording, isPlaying=$effectiveIsPlaying, isRemote=$isRemote")
         Log.v(TAG, "Favorites status: showId='$playlistShowId', isFavorite=${favoriteAndDownload.isFavorite}")
 
         // Update showData with current library and download status
@@ -272,7 +295,7 @@ class PlaylistViewModel @Inject constructor(
 
         baseState.copy(
             trackData = updatedTracks,
-            isPlaying = isPlaying,
+            isPlaying = effectiveIsPlaying,
             isCurrentShowAndRecording = isCurrentShowAndRecording,
             mediaLoading = currentTrackInfo?.playbackState?.isLoading ?: false,
             showData = updatedShowData,
@@ -1156,73 +1179,129 @@ class PlaylistViewModel @Inject constructor(
         val currentState = uiState.value // Use reactive state with isCurrentShowAndRecording
         Log.d(TAG, "Toggle playback - playing: ${currentState.isPlaying}, isCurrentShowAndRecording: ${currentState.isCurrentShowAndRecording}")
 
+        // Check if we're remote-controlling another device
+        val connectState = connectService.connectState.value
+        val isActive = connectService.isActiveDevice.value
+        val isRemoteControlling = connectState?.let {
+            it.activeDeviceId != null && !isActive
+        } ?: false
+
+        Log.d(TAG, "Toggle playback - isRemoteControlling: $isRemoteControlling, isActive: $isActive")
+
         viewModelScope.launch {
             try {
-                if (currentState.isCurrentShowAndRecording && currentState.isPlaying) {
-                    // Currently playing this show/recording → pause
+                if (isRemoteControlling) {
+                    // Remote control: send commands only, no local audio
+                    if (currentState.isCurrentShowAndRecording && currentState.isPlaying) {
+                        Log.d(TAG, "Remote: sending pause")
+                        connectService.sendPause()
+                    } else if (currentState.isCurrentShowAndRecording) {
+                        Log.d(TAG, "Remote: sending play (resume)")
+                        connectService.sendPlay()
+                    } else {
+                        // Different show — send load with autoplay
+                        Log.d(TAG, "Remote: sending load for new show")
+                        val showData = currentState.showData ?: run {
+                            Log.w(TAG, "No show data - cannot start remote playback")
+                            return@launch
+                        }
+                        val recordingId = showData.currentRecordingId ?: run {
+                            Log.w(TAG, "No currentRecording - cannot start remote playback")
+                            return@launch
+                        }
+                        val showId = showData.showId
+                        if (showId.isBlank()) {
+                            Log.e(TAG, "Cannot start remote playback: showId is blank")
+                            return@launch
+                        }
+
+                        // Record show play
+                        try {
+                            recentShowsService.recordShowPlay(showId)
+                        } catch (e: Exception) {
+                            Log.w(TAG, "Failed to record show play: $showId", e)
+                        }
+
+                        val sessionTracks = _rawTrackData.value.map { t ->
+                            ConnectSessionTrack(
+                                title = t.title,
+                                durationMs = parseDurationToMs(t.duration)
+                            )
+                        }
+                        val firstDurationMs = sessionTracks.firstOrNull()?.durationMs ?: 0
+                        Log.d(TAG, "Connect: sendLoad from togglePlayback (remote) — show=$showId rec=$recordingId tracks=${sessionTracks.size}")
+                        connectService.sendLoad(
+                            showId = showId,
+                            recordingId = recordingId,
+                            tracks = sessionTracks,
+                            trackIndex = 0,
+                            positionMs = 0,
+                            durationMs = firstDurationMs,
+                            date = showData.date,
+                            venue = showData.venue,
+                            location = showData.location,
+                        )
+                    }
+                } else if (currentState.isCurrentShowAndRecording && currentState.isPlaying) {
+                    // Local/active device: currently playing → pause
                     Log.d(TAG, "Media: Pausing current playback")
                     playlistService.pause()
+                    Log.d(TAG, "Connect: sending pause from togglePlayback")
+                    connectService.sendPause()
                 } else {
-                    // Either not playing, or different show/recording → start playback
+                    // Local/active device: start or resume playback
                     Log.d(TAG, "Media: Starting playback (new or resume)")
-                    
-                    // Get show data to determine recording ID
+
                     val showData = currentState.showData
                     if (showData == null) {
                         Log.w(TAG, "No show data - cannot start playback")
                         return@launch
                     }
 
-                    // also need the current recording
                     val currentRecording = showData.currentRecordingId
                     if (currentRecording == null) {
                         Log.w(TAG, "No currentRecording - cannot start playback")
                         return@launch
                     }
 
-                    // Get the format that was selected during playlist building
                     val selectedFormat = playlistService.getCurrentSelectedFormat()
-                    
+
                     if (selectedFormat == null) {
                         Log.w(TAG, "No format selected - cannot start playback")
                         return@launch
                     }
-                    
+
                     val recordingId = currentRecording
-                    
+
+                    val showContext = currentState.showData
+                    if (showContext == null) {
+                        Log.e(TAG, "Cannot start playback: No show data available in UI state")
+                        return@launch
+                    }
+
+                    val showId = showContext.showId
+                    if (showId.isBlank()) {
+                        Log.e(TAG, "Cannot start playback: showId is blank from service")
+                        return@launch
+                    }
+
+                    val showDate = showContext.date
+                    val venue = showContext.venue
+                    val location = showContext.location
+
                     if (currentState.isCurrentShowAndRecording) {
                         Log.d(TAG, "Media: Resuming current recording $recordingId")
                         playlistService.resume()
                     } else {
                         Log.d(TAG, "Media: Play All for new recording $recordingId ($selectedFormat)")
-                        
-                        // Get show context from UI state
-                        val showContext = currentState.showData
-                        if (showContext == null) {
-                            Log.e(TAG, "Cannot start playback: No show data available in UI state")
-                            return@launch
-                        }
-                        
-                        val showId = showContext.showId
-                        if (showId.isBlank()) {
-                            Log.e(TAG, "Cannot start playback: showId is blank from service")
-                            return@launch
-                        }
-                        
-                        val showDate = showContext.date
-                        val venue = showContext?.venue
-                        val location = showContext?.location
-                        
-                        // Record show play immediately when user intentionally starts playback
+
                         try {
                             recentShowsService.recordShowPlay(showId)
                             Log.d(TAG, "Recorded show play in RecentShowsService: $showId (Play All)")
                         } catch (e: Exception) {
                             Log.w(TAG, "Failed to record show play in RecentShowsService: $showId", e)
-                            // Don't fail playback if recent shows tracking fails
                         }
-                        
-                        // Use MediaControllerRepository for Play All logic (new show/recording)
+
                         mediaControllerRepository.playAll(
                             recordingId = recordingId,
                             format = selectedFormat,
@@ -1234,19 +1313,43 @@ class PlaylistViewModel @Inject constructor(
                             source = "browse"
                         )
                     }
+
+                    // Send load to Connect so the server knows which show
+                    val sessionTracks = _rawTrackData.value.map { t ->
+                        ConnectSessionTrack(
+                            title = t.title,
+                            durationMs = parseDurationToMs(t.duration)
+                        )
+                    }
+                    val firstDurationMs = sessionTracks.firstOrNull()?.durationMs ?: 0
+                    Log.d(TAG, "Connect: sendLoad from togglePlayback — show=$showId rec=$recordingId tracks=${sessionTracks.size}")
+                    connectService.sendLoad(
+                        showId = showId,
+                        recordingId = recordingId,
+                        tracks = sessionTracks,
+                        trackIndex = 0,
+                        positionMs = 0,
+                        durationMs = firstDurationMs,
+                        date = showDate,
+                        venue = venue,
+                        location = location,
+                    )
+                    // Also send play optimistically for active device
+                    if (currentState.isCurrentShowAndRecording) {
+                        connectService.sendPlay()
+                    }
                 }
-                
+
                 // UI state will be updated via MediaController state observation
-                
+
             } catch (e: FormatNotAvailableException) {
                 Log.e(TAG, "Format playback failed: ${e.message}")
                 Log.e(TAG, "Available formats: ${e.availableFormats}")
-                
-                // Show user error
+
                 _baseUiState.value = _baseUiState.value.copy(
                     error = "Playback format '${e.requestedFormat}' not available"
                 )
-                
+
             } catch (e: Exception) {
                 Log.e(TAG, "Error in togglePlayback", e)
             }
@@ -1329,7 +1432,29 @@ class PlaylistViewModel @Inject constructor(
                     autoPlay = autoPlay,
                     source = "browse"
                 )
-                
+
+                // Notify Connect server
+                val sessionTracks = _rawTrackData.value.map { t ->
+                    ConnectSessionTrack(
+                        title = t.title,
+                        durationMs = parseDurationToMs(t.duration)
+                    )
+                }
+                val trackDurationMs = sessionTracks.getOrNull(trackIndex)?.durationMs ?: 0
+                Log.d(TAG, "Connect: sendLoad from playTrack — show=$showId rec=$recordingId track=$trackIndex tracks=${sessionTracks.size}")
+                connectService.sendLoad(
+                    showId = showId,
+                    recordingId = recordingId,
+                    tracks = sessionTracks,
+                    trackIndex = trackIndex,
+                    positionMs = 0,
+                    durationMs = trackDurationMs,
+                    date = showDate,
+                    venue = venue,
+                    location = location,
+                    autoplay = autoPlay,
+                )
+
                 // UI state will be updated via MediaController state observation
                 
             } catch (e: FormatNotAvailableException) {
@@ -1534,5 +1659,17 @@ class PlaylistViewModel @Inject constructor(
 
     fun resetEqualizer() {
         equalizerRepository.resetToFlat()
+    }
+
+    /** Parse "mm:ss" or "hh:mm:ss" to milliseconds for Connect session tracks. */
+    private fun parseDurationToMs(duration: String): Int {
+        val parts = duration.split(":")
+        return try {
+            when (parts.size) {
+                2 -> (parts[0].toInt() * 60 + parts[1].toInt()) * 1000
+                3 -> (parts[0].toInt() * 3600 + parts[1].toInt() * 60 + parts[2].toInt()) * 1000
+                else -> 0
+            }
+        } catch (_: NumberFormatException) { 0 }
     }
 }

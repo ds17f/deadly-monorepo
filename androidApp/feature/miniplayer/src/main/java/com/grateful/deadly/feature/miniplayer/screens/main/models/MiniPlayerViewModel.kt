@@ -4,12 +4,16 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.miniplayer.MiniPlayerService
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.model.MiniPlayerUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
+import com.grateful.deadly.core.model.AppLaunchState
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -23,7 +27,8 @@ import javax.inject.Inject
  */
 @HiltViewModel
 class MiniPlayerViewModel @Inject constructor(
-    private val miniPlayerService: MiniPlayerService
+    private val miniPlayerService: MiniPlayerService,
+    private val connectService: ConnectService
 ) : ViewModel() {
     
     companion object {
@@ -32,7 +37,34 @@ class MiniPlayerViewModel @Inject constructor(
     
     private val _uiState = MutableStateFlow(MiniPlayerUiState())
     val uiState: StateFlow<MiniPlayerUiState> = _uiState.asStateFlow()
-    
+
+    val connectRemoteDeviceName: StateFlow<String?> = combine(
+        connectService.connectState,
+        connectService.isActiveDevice
+    ) { state, isActive ->
+        if (state?.activeDeviceId != null && !isActive) state.activeDeviceName else null
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
+
+    private val _tooltipDismissed = MutableStateFlow(false)
+
+    val shouldShowConnectTooltip: StateFlow<Boolean> = combine(
+        connectRemoteDeviceName,
+        _tooltipDismissed
+    ) { deviceName, dismissed ->
+        deviceName != null && !dismissed && AppLaunchState.isColdLaunch
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
+
+    fun dismissConnectTooltip() {
+        _tooltipDismissed.value = true
+        AppLaunchState.isColdLaunch = false
+    }
+
+    val showVolumeUI: StateFlow<Boolean> = connectService.showVolumeUI
+
+    fun consumeShowVolumeUI() {
+        connectService.consumeShowVolumeUI()
+    }
+
     init {
         Log.d(TAG, "MiniPlayerViewModel initialized")
         initializeService()
@@ -55,11 +87,12 @@ class MiniPlayerViewModel @Inject constructor(
         viewModelScope.launch {
             combine(
                 miniPlayerService.currentTrackInfo,
-                miniPlayerService.playbackStatus
-            ) { trackInfo, playbackStatus ->
-                
+                miniPlayerService.playbackStatus,
+                miniPlayerService.isPlaying,
+            ) { trackInfo, playbackStatus, isPlaying ->
+
                 _uiState.value = MiniPlayerUiState(
-                    isPlaying = trackInfo?.playbackState?.isPlaying ?: false,
+                    isPlaying = isPlaying,
                     currentTrack = trackInfo,
                     progress = playbackStatus.progress,
                     showId = trackInfo?.showId, // Extract from trackInfo

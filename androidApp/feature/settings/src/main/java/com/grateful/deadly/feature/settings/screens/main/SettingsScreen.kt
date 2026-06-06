@@ -30,7 +30,8 @@ fun SettingsScreen(
     onNavigateToLegal: () -> Unit = {},
     onNavigateToMission: () -> Unit = {},
     onNavigateToDeveloper: () -> Unit = {},
-    onNavigateToPrivacyData: () -> Unit = {}
+    onNavigateToPrivacyData: () -> Unit = {},
+    onNavigateToConnect: () -> Unit = {}
 ) {
     val context = LocalContext.current
     val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
@@ -254,6 +255,21 @@ fun SettingsScreen(
                 title = "Equalizer",
                 subtitle = "Adjust audio profile and presets",
                 onClick = onNavigateToEqualizer,
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+
+        item {
+            PreferenceRow(
+                title = "Connected Devices",
+                subtitle = "View devices connected to your account",
+                onClick = onNavigateToConnect,
                 trailing = {
                     Icon(
                         painter = IconResources.Navigation.ChevronRight(),

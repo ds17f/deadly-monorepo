@@ -16,6 +16,7 @@ import com.grateful.deadly.core.model.CurrentTrackInfo
 import com.grateful.deadly.core.model.LineupMember
 import com.grateful.deadly.core.model.PlaybackStatus
 import com.grateful.deadly.core.model.QueueInfo
+import com.grateful.deadly.core.connect.ConnectService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.async
@@ -30,6 +31,7 @@ class PlayerViewModel @Inject constructor(
     private val favoritesService: FavoritesService,
     private val reviewService: ReviewService,
     private val equalizerRepository: EqualizerRepository,
+    private val connectService: ConnectService,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
 ) : ViewModel() {
@@ -38,12 +40,20 @@ class PlayerViewModel @Inject constructor(
         private const val TAG = "PlayerViewModel"
     }
 
+    val connectRemoteDeviceName: StateFlow<String?> = combine(
+        connectService.connectState,
+        connectService.isActiveDevice
+    ) { state, isActive ->
+        if (state?.activeDeviceId != null && !isActive) state.activeDeviceName else null
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
+
     // Reactive UI state from PlayerService flows - using unified CurrentTrackInfo, PlaybackStatus, and QueueInfo
     val uiState: StateFlow<PlayerUiState> = combine(
         playerService.currentTrackInfo,
         playerService.playbackStatus,
-        playerService.queueInfo
-    ) { trackInfo, playbackStatus, queueInfo ->
+        playerService.queueInfo,
+        playerService.isPlaying,
+    ) { trackInfo, playbackStatus, queueInfo, isServicePlaying ->
         // Early return for null case - no track playing
         if (trackInfo == null) return@combine PlayerUiState(
             trackDisplayInfo = TrackDisplayInfo(
@@ -93,7 +103,7 @@ class PlayerViewModel @Inject constructor(
                 totalDuration = playerService.formatDuration(playbackStatus.duration),
                 progressPercentage = playbackStatus.progress
             ),
-            isPlaying = trackInfo.playbackState.isPlaying,
+            isPlaying = isServicePlaying,
             isLoading = trackInfo.playbackState.isLoading,
             hasNext = queueInfo.hasNext,
             hasPrevious = queueInfo.hasPrevious,

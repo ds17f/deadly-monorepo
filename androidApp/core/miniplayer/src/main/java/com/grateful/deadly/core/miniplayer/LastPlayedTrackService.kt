@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
 import androidx.media3.common.MediaMetadata
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
@@ -25,7 +26,8 @@ import javax.inject.Singleton
 @Singleton
 class LastPlayedTrackService @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val mediaControllerRepository: MediaControllerRepository
+    private val mediaControllerRepository: MediaControllerRepository,
+    private val connectService: ConnectService,
 ) {
     
     companion object {
@@ -138,6 +140,14 @@ class LastPlayedTrackService @Inject constructor(
      */
     suspend fun restoreLastPlayedTrack() {
         try {
+            // If Connect already has a recording loaded, skip local restore —
+            // Connect's reactToState will load the correct shared show.
+            val connectRec = connectService.connectState.value?.recordingId
+            if (connectRec != null) {
+                Log.d(TAG, "Skipping local restore — Connect has recording: $connectRec")
+                return
+            }
+
             // If the MediaSession service survived from a prior session (e.g.
             // user was on Android Auto, exited the car without pausing, then
             // tapped the phone notification), a queue is already loaded. Calling
