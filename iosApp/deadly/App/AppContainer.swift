@@ -306,16 +306,29 @@ final class AppContainer {
                 playlistSvc.connectService = connect
                 miniPlayer.connectService = connect
                 restorationSvc.connectService = connect
-                connect.onLoadShow = { [weak playlistSvc] showId, trackIndex, _, autoPlay in
+                connect.onLoadShow = { [weak playlistSvc, weak player] showId, trackIndex, positionMs, autoPlay in
                     guard let svc = playlistSvc else { return }
                     svc.suppressConnectNotify = true
                     defer { svc.suppressConnectNotify = false }
                     await svc.loadShow(showId)
                     guard !svc.tracks.isEmpty else { return }
                     let idx = min(trackIndex, svc.tracks.count - 1)
-                    // main's playTrack honors autoPlay natively (loadQueue autoPlay),
-                    // so no poll-then-pause dance is needed.
-                    svc.playTrack(at: idx, source: "connect", autoPlay: autoPlay)
+                    // Load paused so the transferred position survives as a first-play
+                    // seek: loadQueue(autoPlay:true) would auto-start the engine at 0 and
+                    // clear pendingSeekOnFirstPlay, and the engine drops seeks issued
+                    // before it reaches .playing (the exact case when the stream is still
+                    // loading over the network). Stash the position, then play() — its
+                    // playWithPendingSeek waits for .playing and lands on the right spot.
+                    svc.playTrack(at: idx, source: "connect", autoPlay: false)
+                    let seekPosition = TimeInterval(positionMs) / 1000.0
+                    if seekPosition > 0 {
+                        player?.pendingSeekOnFirstPlay = seekPosition
+                        // Reflect the position in the slider before any engine ticks arrive.
+                        player?.applyOptimisticProgress(currentTime: seekPosition)
+                    }
+                    if autoPlay {
+                        player?.play()
+                    }
                 }
             }
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)
