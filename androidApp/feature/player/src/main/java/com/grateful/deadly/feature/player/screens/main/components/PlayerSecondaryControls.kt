@@ -1,10 +1,13 @@
 package com.grateful.deadly.feature.player.screens.main.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
@@ -28,23 +31,23 @@ fun PlayerSecondaryControls(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Left section - Connect
+        // Left section - Connect (icon + device label share one tap target)
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.height(40.dp)
+            modifier = Modifier
+                .height(40.dp)
+                .clip(RoundedCornerShape(20.dp))
+                .clickable(onClick = onConnectClick)
+                .padding(horizontal = 8.dp)
         ) {
-            IconButton(
-                onClick = onConnectClick,
-                modifier = Modifier.size(40.dp)
-            ) {
-                Icon(
-                    painter = IconResources.Content.Cast(),
-                    contentDescription = "Connect",
-                    tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
-                           else MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
+            Icon(
+                painter = IconResources.Content.Cast(),
+                contentDescription = "Connect",
+                tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
+                       else MaterialTheme.colorScheme.onSurfaceVariant
+            )
             if (connectDeviceName != null) {
+                Spacer(Modifier.width(8.dp))
                 Text(
                     text = connectDeviceName,
                     style = MaterialTheme.typography.labelSmall,
