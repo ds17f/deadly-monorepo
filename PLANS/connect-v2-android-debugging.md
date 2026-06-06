@@ -109,3 +109,39 @@ protocol change across api/web/iOS/Android — bigger, do it deliberately, not n
 - Install: `make android-install` (device: Pixel 6 over adb-tls).
 - Logs: `adb logcat -s ConnectService:D PlayerServiceImpl:D MiniPlayerService:D`
 - Server next/prev: `api/src/connect/state.ts` `handleNext`/`handlePrev`/`handleSeek`.
+
+## Follow-up work (2026-06-06 session)
+
+Two bugs found while testing transfers; doing **B first, then A**.
+
+### B — non-active device must not start LOCAL audio (double-play)
+Symptom: changing shows / tapping a track on a NON-active device (while it is
+remote-controlling the active one) plays on BOTH devices.
+Root: native play sites start local audio AND send a Connect load, with no
+`isRemoteControlling` guard. Web is safe by design (local `audio.play()` is
+gated centrally on `isActiveDevice`; play funcs only express intent).
+- Android: `PlaylistViewModel.togglePlayback` is guarded; `playTrack(track)`
+  (~:1362) is NOT. Fix: when remote-controlling, push intent only — `sendSeek`
+  if `connectState.recordingId == recordingId`, else `sendLoad`; no local audio.
+- iOS: `PlaylistServiceImpl.playTrack(at:)` ALWAYS does loadQueue + sendLoad
+  (no guard). Push the guard DOWN into that one method (all call sites — track
+  tap, play button, favorites, deeplink route through it): remote-controlling →
+  sendSeek (same recording) or sendLoad (different), return before loadQueue.
+
+### A — durable first-play seek across network error→retry (player-level)
+Symptom: transfer to a device that must fresh-load → network error + spinner →
+recovers at position 0 (intended/transferred position lost).
+Root (NOT Connect-specific — Connect just exposes it): the intended start lives
+only in `pendingSeekOnFirstPlay`, consumed by `play()`/`playWithPendingSeek`,
+which ABORTS on `.error` (StreamPlayer.swift:203). The engine's retry-capture
+(`AudioStreamEngine.swift:864`) and `onError` (`StreamPlayer.swift:491`) only
+restore a position when `currentPosition/resume > 0` — i.e. a position already
+PLAYED — so a not-yet-reached start (transfer, or app-restart restore mid-song)
+is dropped. Restore shares this latent gap; it just rarely triggers.
+Fix (cover BOTH recovery paths, no logs needed):
+  1. `playWithPendingSeek`: on `.error`, re-stash the target into
+     `pendingSeekOnFirstPlay` instead of abandoning it.
+  2. engine/`onError`: prefer an outstanding intended-start over the
+     `resume > 0` live snapshot, so the post-retry `.playing` re-applies it.
+Validate empirically by re-testing a transfer (+ `simulateNetworkFailure` on a
+fresh playTrack/restore). Only chase device logs if it still repros.
