@@ -316,6 +316,12 @@ final class AppContainer {
                     // main's playTrack honors autoPlay natively (loadQueue autoPlay),
                     // so no poll-then-pause dance is needed.
                     svc.playTrack(at: idx, source: "connect", autoPlay: autoPlay)
+                    // Heal a position-only hydrated session: if the shared state
+                    // carries no track list yet, publish ours. The server applies
+                    // it as a non-destructive same-recording refresh.
+                    if svc.connectService?.connectState?.tracks.isEmpty == true {
+                        svc.publishCurrentTracksToConnect()
+                    }
                 }
             }
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)

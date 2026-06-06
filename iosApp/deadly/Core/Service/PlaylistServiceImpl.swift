@@ -305,6 +305,32 @@ final class PlaylistServiceImpl: PlaylistService {
         }
     }
 
+    /// Publish the full local track list to the Connect session without changing
+    /// playback. Heals a session the server hydrated position-only (empty tracks):
+    /// the server applies a same-recording load as a non-destructive refresh, so
+    /// this only fills in the track list for every device.
+    func publishCurrentTracksToConnect() {
+        guard let connect = connectService,
+              let recording = currentRecording,
+              !tracks.isEmpty else { return }
+        let showId = currentShow?.id ?? ""
+        let idx = streamPlayer.queueState.currentIndex
+        let sessionTracks = tracks.map { SessionTrack(title: $0.title, durationMs: Int(($0.durationInterval ?? 0) * 1000)) }
+        let durMs = idx >= 0 && idx < tracks.count ? Int((tracks[idx].durationInterval ?? 0) * 1000) : 0
+        connect.sendLoad(
+            showId: showId,
+            recordingId: recording.identifier,
+            tracks: sessionTracks,
+            trackIndex: idx,
+            positionMs: 0,
+            durationMs: durMs,
+            date: currentShow?.date,
+            venue: currentShow?.venue.name,
+            location: currentShow?.location.displayText,
+            autoplay: false
+        )
+    }
+
     private func startTrackObservation() {
         trackObservationTask?.cancel()
         trackObservationTask = Task { [weak self] in
