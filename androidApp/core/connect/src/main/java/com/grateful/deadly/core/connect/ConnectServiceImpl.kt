@@ -439,11 +439,14 @@ class ConnectServiceImpl @Inject constructor(
             return
         }
 
-        // Not active device — sync track index and stop local playback
+        // Not active device — sync track index and stop local playback.
+        // Compare against the LOCAL track index (not old server state) so the
+        // very first snapshot (old == null) still aligns — e.g. when the app
+        // just restored the same recording at a different track on startup.
         if (!isActive) {
-            // Keep local player in sync with remote track so UI shows correct track info
-            if (old != null && new.trackIndex != old.trackIndex) {
-                Log.d(TAG, "reactToState: NOT ACTIVE — syncing track ${old.trackIndex} -> ${new.trackIndex}")
+            val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
+            if (new.trackIndex != localTrackIndex) {
+                Log.d(TAG, "reactToState: NOT ACTIVE — syncing track $localTrackIndex -> ${new.trackIndex}")
                 scope.launch {
                     mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, new.positionMs.toLong())
                     mediaControllerRepository.pause()

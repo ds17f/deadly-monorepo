@@ -357,12 +357,43 @@ a **transfer target** (responds to remote play/pause/seek/next/load via
 `reactToState`). Known inherited edge: `onStop → stop()` drops the socket on any
 background (matches iOS; reversible follow-up).
 
-**Next (player-surface reconcile):** the real work — see the reconcile targets
-below. Suggested order: (1) ConnectScreen/Sheet/ViewModel + Settings nav
-(additive UI, lets the phone *see* and pick devices / control others); (2) the
-PlayerServiceImpl/MiniPlayer/Playlist reconcile that routes transport through
-Connect, broadcasts local playback to the session, and resolves display
-metadata locally (now-playing-when-remote, restore-skip).
+**✅ FULL PORT DONE (2026-06-06) — builds clean, awaiting device smoke test.**
+36 files / +2087. Key realization that unblocked it: most of the "reconcile"
+scope was mis-sized. The number that matters is *how much main changed each file
+since the branch point* (`git diff $BASE:f main:f`), **not** how many lines the
+reference added. By that measure the entire player/miniplayer surface
+(`PlayerServiceImpl`, `MiniPlayerServiceImpl`, `MiniPlayerScreen/ViewModel`,
+`PlayerScreen` + components, `MainNavigation`, `SettingsNavigation`) is
+**main-untouched** → a clean `git checkout origin/connect-v2 -- <file>` port.
+
+Only these needed hand-merging (main moved them too):
+- **`DeadlyMediaSessionService.kt` — left as main's, untouched.** The reference's
+  `commandInterceptor` hook is **dead scaffolding** (nothing in the reference ever
+  *sets* it → always null → pass-through; lock-screen→remote routing was never
+  actually wired on Android, same gap as iOS). Porting the reference file would
+  have deleted main's Android Auto work (`onPlaybackResumption`/DEAD-360, ±10s
+  notification buttons, `ControlStyleFilteringPlayer`/PlayerControlsStyle, the AA
+  scroll workaround). So we dropped the orphan `PlaybackCommandInterceptor.kt` and
+  kept main's session service whole. **Follow-up (two-way door):** wire a real
+  interceptor later for lock-screen control of a remote device.
+- **`MediaControllerRepository.kt`** — took only the 4 additive APIs
+  (`trackAutoAdvanced`, `seekToMediaItemIndex`, `setVolume`/`getVolume`); kept
+  main's DEAD-360 seed block + `hasActiveQueue()` (reference would've deleted them).
+- **`LastPlayedTrackService.kt`** — kept *both* restore guards: skip if Connect has
+  a recording **and** main's skip-if-AA-has-a-queue (DEAD-229).
+- **`PlaylistViewModel.kt`** — ported reference (sends load/seek/play to Connect),
+  re-applied main's reactive `getShowReviewFlow` review observation.
+- **`PlayerViewModel.kt`** — took reference's `connectRemoteDeviceName` +
+  service-`isPlaying` wiring, kept main's 3-arg `isSongFavoriteFlow`.
+- **`SettingsScreen.kt`** — added the "Connected Devices" `PreferenceRow` +
+  `onNavigateToConnect` to main's redesigned screen.
+- **`feature/settings/build.gradle.kts`** — added `:core:connect`, kept
+  `:core:api:usersync` (reference had *replaced* it).
+
+**Known gaps carried (all two-way doors, post-smoke-test):** lock-screen/notif
+controls don't drive a remote device (interceptor unwired, == iOS); WS drops on
+background (`onStop → stop()`, == iOS). **Next:** real two-device smoke test
+(`make android-install` on a dev's device ↔ web/iOS), then address the gaps.
 
 *Reconcile against main's rewrites (the real work — confirm main's current
 line-counts/paths when starting):*
