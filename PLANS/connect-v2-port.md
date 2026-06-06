@@ -62,6 +62,29 @@ the park/handoff pause, monotonic `version` + watermark-reset-on-reconnect, and
 `version`/`epoch` as 64-bit (`Long` on Android — the ms values overflow `Int`).
 Details: [`connect-v2-android-debugging.md`](connect-v2-android-debugging.md).
 
+## Ship checklist — blockers only
+
+What stands between **what we have now** (the cross-device control backbone on
+all four surfaces) and putting it in users' hands. Everything *not* on this list
+— lock-screen→remote control, background WS, multi-tab presence, the
+remote-command spinner, the ADR promotion, and the presence/social feature
+itself — is a **two-way door**: it can land in a later update and is explicitly
+NOT a ship blocker.
+
+- [ ] **Merge PR #52** — Android (Layer 4) + the restart/transfer resilience.
+      No Android Connect ships without it.
+- [ ] **Confirm Connect is live in production**, not just beta — mobile store
+      builds point at the prod API, so the `/ws/connect` endpoint + v2 session
+      machine (from #50) must actually be deployed there.
+- [ ] **Two-device beta smoke pass** on `beta.thedeadly.app` — real
+      iOS ↔ Android ↔ web: transfer each hop, and kill/restart the server
+      mid-play. The last validation before cutting store builds.
+- [ ] **Lock the wire protocol (the one-way door)** — confirm the v2 state
+      machine can carry presence/device-identity *additively* (optional fields +
+      message types old clients ignore) BEFORE any App Store / Play build;
+      shipped apps can't be force-updated. This is a *confirmation*, not building
+      presence. (#52's `epoch` + the 64-bit-field rule already moved this along.)
+
 ### Key architectural decision: client-resolve display metadata (supersedes the server track-cache idea)
 The shared `ConnectState` is the authority **only for live transport** the
 server alone knows: `showId`, `recordingId`, `trackIndex`, `positionMs`/
