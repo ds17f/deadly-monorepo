@@ -1,7 +1,6 @@
 import type { WebSocket } from "ws";
 import type { ConnectState, ConnectDevice, DeviceType, SessionTrack } from "./types.js";
 import { upsertPlaybackPosition, getPlaybackPosition } from "../db/userdata.js";
-import { getRecordingTracks, upsertRecordingTracks, purgeStaleRecordingTracks } from "../db/connectTracks.js";
 
 const log = (msg: string) => console.log(`[Connect] ${msg}`);
 const warn = (msg: string) => console.warn(`[Connect] ${msg}`);
@@ -28,13 +27,6 @@ interface PendingTransfer {
 const pendingTransfers = new Map<string, PendingTransfer>();
 
 let sweepInterval: ReturnType<typeof setInterval> | null = null;
-
-// Track-cache purge: drop per-recording track lists untouched for longer than
-// the TTL. Safe to purge — entries self-heal from the next client that loads
-// the recording. Runs on a slow cadence (the data is tiny).
-let cachePurgeInterval: ReturnType<typeof setInterval> | null = null;
-const TRACK_CACHE_TTL_SECONDS = 30 * 24 * 60 * 60; // 30 days
-const TRACK_CACHE_PURGE_INTERVAL_MS = 6 * 60 * 60 * 1000; // 6 hours
 
 function deviceKey(userId: string, deviceId: string): string {
   return `${userId}:${deviceId}`;
@@ -91,15 +83,7 @@ export function getOrCreateState(userId: string): ConnectState {
       state.date = persisted.date ?? null;
       state.venue = persisted.venue ?? null;
       state.location = persisted.location ?? null;
-      // Restore the full track list from the global per-recording cache so the
-      // hydrated session broadcasts complete state (title/duration/count), not
-      // just a position. Empty until a client tops it up if the cache is cold.
-      const cachedTracks = getRecordingTracks(persisted.recordingId);
-      if (cachedTracks && cachedTracks.length > 0) {
-        state.tracks = cachedTracks;
-        state.durationMs = cachedTracks[state.trackIndex]?.durationMs ?? 0;
-      }
-      log(`hydrate: ${userId} show=${persisted.showId} track=${persisted.trackIndex} pos=${persisted.positionMs} tracks=${state.tracks.length}`);
+      log(`hydrate: ${userId} show=${persisted.showId} track=${persisted.trackIndex} pos=${persisted.positionMs}`);
     }
     userStates.set(userId, state);
   }
@@ -240,14 +224,6 @@ export function handleHeartbeat(userId: string, deviceId: string): void {
 }
 
 export function startHeartbeatSweep(): void {
-  if (!cachePurgeInterval) {
-    const purge = () => {
-      const removed = purgeStaleRecordingTracks(TRACK_CACHE_TTL_SECONDS);
-      if (removed > 0) log(`trackCachePurge: removed ${removed} stale recording(s)`);
-    };
-    purge();
-    cachePurgeInterval = setInterval(purge, TRACK_CACHE_PURGE_INTERVAL_MS);
-  }
   if (sweepInterval) return;
   sweepInterval = setInterval(() => {
     const now = Date.now();
@@ -308,24 +284,6 @@ export interface LoadParams {
 export function handleLoad(userId: string, deviceId: string, socket: WebSocket, params: LoadParams): void {
   const state = userStates.get(userId);
   if (!state) return;
-
-  // Cache the track list globally (per recording) so a future position-only
-  // hydrate can restore it. This is what keeps the cache warm and self-healing.
-  upsertRecordingTracks(params.recordingId, params.tracks);
-
-  // Same-recording load into a session that has no tracks = a non-destructive
-  // track-list refresh (a client healing an empty hydrated session). Same-show
-  // track changes go through `seek`, never `load`, so a same-recording load
-  // never carries a real position/active intent — preserve position / playing /
-  // active device and just fill in the track list.
-  if (state.recordingId === params.recordingId && state.tracks.length === 0 && params.tracks.length > 0) {
-    log(`handleLoad: same-recording refresh rec=${params.recordingId} tracks=${params.tracks.length} (non-destructive)`);
-    mutate(userId, {
-      tracks: params.tracks,
-      durationMs: params.tracks[state.trackIndex]?.durationMs ?? state.durationMs,
-    });
-    return;
-  }
 
   const patch: Partial<ConnectState> = {
     showId: params.showId,
@@ -662,9 +620,5 @@ export function stopHeartbeatSweep(): void {
   if (sweepInterval) {
     clearInterval(sweepInterval);
     sweepInterval = null;
-  }
-  if (cachePurgeInterval) {
-    clearInterval(cachePurgeInterval);
-    cachePurgeInterval = null;
   }
 }

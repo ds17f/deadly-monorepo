@@ -141,12 +141,6 @@ function initSchema(db: Database.Database): void {
       PRIMARY KEY (user_id)
     );
 
-    CREATE TABLE IF NOT EXISTS connect_recording_tracks (
-      recording_id TEXT PRIMARY KEY,
-      tracks TEXT NOT NULL,
-      updated_at INTEGER NOT NULL DEFAULT (unixepoch())
-    );
-
     CREATE TABLE IF NOT EXISTS user_settings (
       user_id TEXT PRIMARY KEY REFERENCES accounts(id) ON DELETE CASCADE,
       include_shows_without_recordings INTEGER NOT NULL DEFAULT 0,
