@@ -51,6 +51,11 @@ public final class StreamPlayer {
     /// If playback position is past this threshold (seconds), "previous" restarts instead of going back.
     public var previousTrackThreshold: TimeInterval = 3.0
 
+    /// Called when playback auto-advances to the next track (track ended naturally).
+    /// Not called for explicit `next()`, `previous()`, or `skipTo(index:)`. Connect
+    /// uses this so the active device broadcasts the new track index to the session.
+    public var onTrackComplete: (() -> Void)?
+
     /// Player output volume (0.0–1.0). Does not affect system volume.
     public var volume: Float {
         get { engine.volume }
@@ -82,6 +87,12 @@ public final class StreamPlayer {
 
     /// The full track list.
     private var tracks: [TrackItem] = []
+
+    /// The full loaded queue, read-only. Lets Connect resolve display metadata
+    /// (title/duration/show info, via `TrackItem.metadata`) for any index — e.g.
+    /// a remote-controlled session's current track — from the queue the player
+    /// actually loaded, rather than trusting server-supplied state.
+    public var loadedTracks: [TrackItem] { tracks }
 
     // MARK: - Init
 
@@ -281,13 +292,13 @@ public final class StreamPlayer {
         }
     }
 
-    public func skipTo(index: Int) {
+    public func skipTo(index: Int, autoplay: Bool = true) {
         guard index >= 0, index < tracks.count else {
             logger.warning("[PB] StreamPlayer.skipTo invalid index=\(index, privacy: .public) total=\(self.tracks.count, privacy: .public)")
             return
         }
-        logger.notice("[PB] StreamPlayer.skipTo target=\(index, privacy: .public) from=\(self.queueState.currentIndex, privacy: .public)")
-        let skipped = engine.skipTo(index: index)
+        logger.notice("[PB] StreamPlayer.skipTo target=\(index, privacy: .public) from=\(self.queueState.currentIndex, privacy: .public) autoplay=\(autoplay, privacy: .public)")
+        let skipped = engine.skipTo(index: index, autoplay: autoplay)
         if skipped {
             syncTrackFromEngine()
         } else {
@@ -430,6 +441,7 @@ public final class StreamPlayer {
                 self.syncTrackFromEngine()
                 let newTitle = self.currentTrack?.title ?? "(none)"
                 self.logger.notice("[PB] onTrackComplete prev=\(previousTitle, privacy: .public) → newIdx=\(self.engine.currentIndex, privacy: .public) new=\(newTitle, privacy: .public)")
+                self.onTrackComplete?()
             }
         }
 

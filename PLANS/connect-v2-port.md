@@ -21,11 +21,38 @@ Working branch: **`connect-v2-port`** (off `main`; distinct from the stale
   live: a real browser completed WS upgrade → cookie auth → device register →
   state snapshot (`ws/connect: authenticated` + `registerDevice` in api logs).
   Full two-browser transport/transfer smoke test still worth doing.
-- ⏳ **Layer 3 — iOS** — not started.
+- ✅ **Layer 3 — iOS** — built green on `connect-v2-ios` (off `main` post-#50).
+  Additive `ConnectService`/`ConnectModels`/`ConnectScreen`/`ConnectSheet` ported
+  near-verbatim; engine (`StreamPlayer`/`AudioStreamEngine`) gained
+  `skipTo(autoplay:)` + public `onTrackComplete` reconciled into main's
+  DEAD-335-rewritten engine; `MiniPlayerServiceImpl` rewritten to merge main's
+  skeleton/`restoredTrack` system with Connect remote-state precedence;
+  DI + lifecycle wired (`AppContainer`, `deadlyApp`); player surfaces
+  (`PlayerScreen`, `MiniPlayerOverlay`, `ShowDetailScreen`, `SettingsScreen`)
+  routed through `MiniPlayerService`. `xcodebuild ... -destination 'generic/platform=iOS Simulator'`
+  → **BUILD SUCCEEDED** on the remote Mac. Runtime two-device smoke test + device
+  install (`make ios-remote-install`, needs `KEYCHAIN_PASSWORD`) still TODO.
 - ⏳ **Layer 4 — Android** — not started.
 
-**First shippable unit = Layer 1 + Layer 2 together** (atomic — see below). Next
-concrete step: iOS (Layer 3), then Android.
+**First shippable unit = Layer 1 + Layer 2 together** (atomic — shipped in #50).
+Next concrete step: ship/smoke-test iOS (Layer 3), then Android.
+
+### Key decisions made during the iOS (Layer 3) port
+- **Connect starts on `willEnterForeground`, not `scenePhase .active`** — main
+  uses a `UIApplicationDelegateAdaptor`, under which scene-phase `.active`
+  doesn't fire reliably (main's own sync code notes this). Stop stays on
+  `scenePhase .background` (reliable); network-restore reconnect rides
+  `networkMonitor.isConnected`.
+- **`onLoadShow` uses main's native `playTrack(at:source:autoPlay:)`** instead of
+  the reference's poll-until-playing-then-pause hack — main's `loadQueue`/engine
+  already honor `autoPlay:` (the new `skipTo(autoplay:)` adds the paused-load path).
+- **`MiniPlayerServiceImpl` merged**, not replaced: main's skeleton/`restoredTrack`
+  launch shell is preserved; Connect's `remote` (non-active shared session) state
+  takes precedence in every computed property, and the `!isSkeleton` action
+  guards now sit *after* the remote-control branch so remote commands still send.
+- **Player UI keeps main's buffering/preparing spinner states** and folds
+  `isPendingCommand` into the same spinner condition; transport routes through
+  `MiniPlayerService` so the screen is remote-aware.
 
 ### How beta was stood up (repeatable)
 1. `gh workflow run infra-manage.yml --ref connect-v2-port -f action=launch -f provider=hetzner -f environment=beta` (approve the `beta` env gate — beta approvals are fine to self-approve; prod is not).
@@ -65,6 +92,46 @@ concrete step: iOS (Layer 3), then Android.
   for v1; revisit if it feels wrong.
 - Provider nesting left as main's (`ConnectProvider` already wraps
   `PlayerProvider`); v2's cosmetic reorder + `UserMenu` `mt-2` not applied.
+
+### Known follow-ups / not-yet-done (iOS)
+
+All client-side and **reversible in a later App Store update** (no protocol /
+server / data change; old app versions degrade gracefully — they keep working,
+just don't broadcast in the background). Deferred deliberately; revisit after the
+two-device happy-path smoke test.
+
+- **WS dropped whenever backgrounded** (inherited from the reference:
+  `deadlyApp` calls `connectService.stop()` on `scenePhase .background`). The
+  sharp edge: even when iOS is the *active* device playing with the screen
+  locked — the normal listening mode — the phone goes invisible to the session
+  and stops broadcasting position/transport until the app is foregrounded.
+  Tractable fix: keep the socket alive while iOS is the one playing (just don't
+  `stop()` during background *playback*). Note the platform wall: a *pure
+  controller* iOS app that isn't playing audio can't hold a socket in the
+  background anyway (iOS suspends it ~30s; would need push/VoIP) — not our
+  decision to make.
+- **Lock-screen / Now Playing controls don't drive a remote device.**
+  `MPRemoteCommandCenter` callbacks are wired straight to the local
+  `StreamPlayer` (`StreamPlayer.swift` ~527), bypassing the Connect-aware
+  `MiniPlayerService`; and Now Playing is only populated when this device is the
+  audio source. So while remote-controlling the web, the lock screen can't
+  pause/skip it. Full Spotify parity = route those callbacks through
+  `MiniPlayerService` + populate Now Playing from `ConnectState`. Server already
+  accepts the commands (web sends them today), so this is client-only.
+- Carry-over from the web list that also applies to iOS: no explicit
+  "Reconnecting…" affordance beyond `isPendingCommand` spinners.
+
+### Pre-ship gate (the only one-way door) — verify before any App Store build
+
+A shipped iOS build can't be force-updated, so the **wire protocol is the only
+irreversible commitment**. Before cutting an App Store / public TestFlight iOS
+build, confirm the v2 state machine can carry **presence / device-identity
+additively** (new optional fields + message types that old clients ignore) — the
+ROADMAP §3 social "hear what they're playing" feature and the background-presence
+follow-up above both lean on it. Adding protocol surface now, with zero deployed
+iOS clients, is free; adding it post-ship is a migration with version skew. The
+background-WS and lock-screen items above are *not* part of this gate — they're
+two-way doors and can land later.
 
 ## TL;DR
 
@@ -152,7 +219,7 @@ connect-v2's web files as reference for *behavior*, not lines to apply.
 - **Exit check:** `make ui-build` + `make docker-redeploy`; two browsers can see
   each other, transfer playback, and stay position-synced.
 
-### Layer 3 — iOS (MEDIUM risk — reconcile)
+### Layer 3 — iOS (MEDIUM risk — reconcile) — ✅ BUILT (`connect-v2-ios`), runtime unverified
 
 connect-v2 adds `ConnectService.swift`, `ConnectModels.swift`, `ConnectSheet`,
 `ConnectScreen` (mostly additive), then edits the player surfaces that `main`

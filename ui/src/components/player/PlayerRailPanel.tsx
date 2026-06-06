@@ -105,7 +105,7 @@ export default function PlayerRailPanel({
     activeShow.venue + (activeShow.location ? `, ${activeShow.location}` : "");
 
   return (
-    <section className="rounded-lg bg-deadly-surface p-4">
+    <section className="flex h-full min-h-0 flex-col rounded-lg bg-deadly-surface p-4">
       <Header title="Queue" onClose={onClose} />
       <div className="flex items-center gap-2">
         <p className="text-sm font-medium text-white">
@@ -129,7 +129,7 @@ export default function PlayerRailPanel({
         />
       )}
 
-      <div className="mt-3">
+      <div className="mt-3 flex min-h-0 flex-1 flex-col">
         <TrackList
           tracks={tracks}
           isLoading={false}
@@ -138,6 +138,7 @@ export default function PlayerRailPanel({
           onPlayTrack={playTrack}
           showId={activeShow.showId}
           recordingId={selectedRecording}
+          fill
         />
       </div>
     </section>

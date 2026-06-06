@@ -26,8 +26,13 @@ function formatTime(seconds: number): string {
 }
 
 function formatShowDate(dateStr: string): string {
-  const [y, m, d] = dateStr.split("-").map(Number);
-  const date = new Date(y, m - 1, d);
+  // Accept a bare "YYYY-MM-DD" or anything starting with one (the showId slug
+  // is "YYYY-MM-DD-venue-..."), and degrade to "" instead of "Invalid Date"
+  // for empty/garbage input.
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(dateStr ?? "");
+  if (!m) return "";
+  const date = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+  if (Number.isNaN(date.getTime())) return "";
   return date.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
@@ -37,7 +42,8 @@ function formatShowDate(dateStr: string): string {
 
 function showLabel(show: ViewedShow): { date: string; venue: string } {
   return {
-    date: formatShowDate(show.date),
+    // Fall back to the showId slug ("YYYY-MM-DD-…") if the date hasn't resolved.
+    date: formatShowDate(show.date || show.showId),
     venue: show.venue + (show.location ? `, ${show.location}` : ""),
   };
 }
@@ -588,11 +594,19 @@ export default function HeaderPlayer() {
   const displayDuration = isActiveDevice ? duration : (connectState?.durationMs ?? 0) / 1000;
   const progress = displayDuration > 0 ? (displayElapsed / displayDuration) * 100 : 0;
 
-  const showInfo = isActiveDevice && activeShow
-    ? showLabel(activeShow)
-    : connectState?.date
-      ? { date: formatShowDate(connectState.date), venue: (connectState.venue ?? "") + (connectState.location ? `, ${connectState.location}` : "") }
-      : null;
+  // Use the locally-resolved show (date/venue/location from Archive.org, set on
+  // hydration) when it's the session's show — covers the remote-viewer case too.
+  // Fall back to the showId slug for the date until that resolves.
+  const sessionShowId = connectState?.showId ?? null;
+  const showInfo =
+    activeShow && (isActiveDevice || activeShow.showId === sessionShowId)
+      ? showLabel(activeShow)
+      : sessionShowId
+        ? {
+            date: formatShowDate(connectState?.date || sessionShowId),
+            venue: (connectState?.venue ?? "") + (connectState?.location ? `, ${connectState.location}` : ""),
+          }
+        : null;
 
   const displayTrackTitle = isActiveDevice
     ? currentTrack?.title ?? null

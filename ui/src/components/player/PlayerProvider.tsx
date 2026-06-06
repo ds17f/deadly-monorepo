@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
-import { fetchArchiveTracks } from "@/lib/archive";
+import { fetchArchiveTracks, fetchArchiveShowMeta } from "@/lib/archive";
 import * as analytics from "@/lib/analytics";
 import { updatePlaybackPosition, addRecentShow } from "@/lib/userDataApi";
 import { notifyUserDataChanged } from "@/lib/userDataEvents";
@@ -632,6 +632,21 @@ export default function PlayerProvider({
         if (fetchedTracks.length > 0) {
           setCurrentTrackIndex(targetTrack < fetchedTracks.length ? targetTrack : 0);
         }
+      });
+      // Resolve real show metadata (date/venue/location) from Archive.org — the
+      // session state may carry none (position-only hydrate). Client-resolve.
+      fetchArchiveShowMeta(connectState.recordingId).then((meta) => {
+        if (!meta) return;
+        setActiveShow((prev) =>
+          prev && prev.showId === showId
+            ? {
+                ...prev,
+                date: meta.date || prev.date,
+                venue: meta.venue || prev.venue,
+                location: meta.location || prev.location,
+              }
+            : prev
+        );
       });
       return; // defer play/pause sync until tracks load
     }

@@ -13,6 +13,7 @@ struct PlayerScreen: View {
     @State private var showMessageShare = false
     @State private var showEqualizerSheet = false
     @State private var showPlayerMenuSheet = false
+    @State private var showConnectSheet = false
     @State private var isCurrentTrackFavorite = false
     @Environment(\.appContainer) private var container
 
@@ -33,6 +34,8 @@ struct PlayerScreen: View {
     /// Extract the archive.org recording ID from a stream URL.
     /// URL format: https://archive.org/download/{recordingId}/{filename}
     private var artworkRecordingId: String? {
+        // Mirror Connect state (recording art) when remote-controlling.
+        if let rid = container.miniPlayerService.artworkRecordingId { return rid }
         guard let url = streamPlayer.currentTrack?.url else { return nil }
         let parts = url.pathComponents
         guard parts.count >= 3, parts[1] == "download" else { return nil }
@@ -84,14 +87,14 @@ struct PlayerScreen: View {
 
                         // Track info
                         VStack(spacing: 6) {
-                            Text(streamPlayer.currentTrack?.title ?? "")
+                            Text(container.miniPlayerService.trackTitle ?? streamPlayer.currentTrack?.title ?? "")
                                 .font(.title3)
                                 .fontWeight(.semibold)
                                 .foregroundStyle(.primary)
                                 .lineLimit(2)
                                 .multilineTextAlignment(.center)
 
-                            Text(streamPlayer.currentTrack?.albumTitle ?? "")
+                            Text(container.miniPlayerService.displaySubtitle ?? streamPlayer.currentTrack?.albumTitle ?? "")
                                 .font(.subheadline)
                                 .foregroundStyle(.secondary)
                                 .lineLimit(1)
@@ -104,14 +107,13 @@ struct PlayerScreen: View {
                         VStack(spacing: 6) {
                             Slider(
                                 value: Binding(
-                                    get: { sliderValue ?? streamPlayer.progress.progress },
+                                    get: { sliderValue ?? container.miniPlayerService.playbackProgress },
                                     set: { sliderValue = $0 }
                                 ),
                                 in: 0...1
                             ) { editing in
                                 if !editing, let value = sliderValue {
-                                    let target = value * streamPlayer.progress.duration
-                                    streamPlayer.seek(to: target)
+                                    container.miniPlayerService.seek(fraction: value)
                                     sliderValue = nil
                                 }
                             }
@@ -119,10 +121,13 @@ struct PlayerScreen: View {
                             .padding(.horizontal, 24)
 
                             HStack {
-                                Text(formatTime(sliderValue.map { $0 * streamPlayer.progress.duration }
-                                                ?? streamPlayer.progress.currentTime))
+                                let service = container.miniPlayerService
+                                let durSec = Double(service.durationMs) / 1000.0
+                                let posSec = sliderValue.map { $0 * durSec }
+                                    ?? Double(service.positionMs) / 1000.0
+                                Text(formatTime(posSec))
                                 Spacer()
-                                Text("-\(formatTime(streamPlayer.progress.remaining))")
+                                Text("-\(formatTime(max(0, durSec - posSec)))")
                             }
                             .font(.caption)
                             .foregroundStyle(.tertiary)
@@ -132,8 +137,8 @@ struct PlayerScreen: View {
                         Spacer().frame(height: 12)
 
                         // Queue position
-                        if streamPlayer.queueState.totalTracks > 0 {
-                            Text("Track \(streamPlayer.queueState.currentIndex + 1) of \(streamPlayer.queueState.totalTracks)")
+                        if container.miniPlayerService.trackCount > 0 {
+                            Text("Track \(container.miniPlayerService.trackIndex + 1) of \(container.miniPlayerService.trackCount)")
                                 .font(.caption2)
                                 .foregroundStyle(.tertiary)
                         }
@@ -144,7 +149,7 @@ struct PlayerScreen: View {
                         HStack(spacing: 52) {
                             Button {
                                 container.playlistService.noteUserSkip(forward: false)
-                                streamPlayer.previous()
+                                container.miniPlayerService.skipPrev()
                             } label: {
                                 Image(systemName: "backward.fill")
                                     .font(.title)
@@ -157,7 +162,8 @@ struct PlayerScreen: View {
                                 default: return false
                                 }
                             }()
-                            if streamPlayer.isPreparing
+                            if container.miniPlayerService.isPendingCommand
+                                || streamPlayer.isPreparing
                                 || streamPlayer.isRetrying
                                 || (buffering && !streamPlayer.playbackState.isPlaying) {
                                 ProgressView()
@@ -165,9 +171,9 @@ struct PlayerScreen: View {
                                     .frame(width: 70, height: 70)
                             } else {
                                 Button {
-                                    streamPlayer.togglePlayPause()
+                                    container.miniPlayerService.togglePlayPause()
                                 } label: {
-                                    Image(systemName: streamPlayer.playbackState.isPlaying
+                                    Image(systemName: container.miniPlayerService.isPlaying
                                           ? "pause.circle.fill" : "play.circle.fill")
                                         .font(.system(size: 70))
                                         .foregroundStyle(DeadlyColors.primary)
@@ -176,14 +182,14 @@ struct PlayerScreen: View {
 
                             Button {
                                 container.playlistService.noteUserSkip(forward: true)
-                                streamPlayer.next()
+                                container.miniPlayerService.skipNext()
                             } label: {
                                 Image(systemName: "forward.fill")
                                     .font(.title)
-                                    .foregroundStyle(streamPlayer.queueState.hasNext
+                                    .foregroundStyle(container.miniPlayerService.hasNext
                                                      ? .primary : .tertiary)
                             }
-                            .disabled(!streamPlayer.queueState.hasNext)
+                            .disabled(!container.miniPlayerService.hasNext)
                         }
 
                         Spacer().frame(height: 24)
@@ -206,6 +212,10 @@ struct PlayerScreen: View {
             let title = streamPlayer.currentTrack?.title
             await container.panelContentService.loadContent(show: show, songTitle: title)
             loadFavoriteState()
+        }
+        .sheet(isPresented: $showConnectSheet) {
+            ConnectSheet()
+                .environment(\.appContainer, container)
         }
         .sheet(isPresented: $showEqualizerSheet) {
             EqualizerSheet()
@@ -322,45 +332,67 @@ struct PlayerScreen: View {
 
     @ViewBuilder
     private var actionButtons: some View {
-        HStack(spacing: 32) {
+        HStack {
+            // Left section — Connect / AirPlay device picker
+            Button {
+                showConnectSheet = true
+            } label: {
+                HStack(spacing: 4) {
+                    Image(systemName: "airplayaudio")
+                        .font(.title2)
+                        .foregroundStyle(container.connectService.isRemoteControlling ? DeadlyColors.primary : .secondary)
+                        .frame(width: 44, height: 44)
+                    if container.connectService.isRemoteControlling,
+                       let name = container.connectService.connectState?.activeDeviceName {
+                        Text(name)
+                            .font(.caption2)
+                            .foregroundStyle(DeadlyColors.primary)
+                            .lineLimit(1)
+                            .frame(maxWidth: 100, alignment: .leading)
+                    }
+                }
+            }
+            .buttonStyle(.plain)
+
             Spacer()
 
-            // Favorite
-            Button {
-                toggleFavoriteSong()
-            } label: {
-                Image(systemName: isCurrentTrackFavorite ? "heart.fill" : "heart")
-                    .font(.title2)
-                    .foregroundStyle(isCurrentTrackFavorite ? DeadlyColors.primary : .secondary)
-                    .frame(width: 44, height: 44)
-            }
-            .buttonStyle(.plain)
-            .disabled(currentShowId == nil)
+            // Right section
+            HStack(spacing: 8) {
+                // Equalizer
+                Button {
+                    showEqualizerSheet = true
+                } label: {
+                    Image(systemName: "slider.vertical.3")
+                        .font(.title2)
+                        .foregroundStyle(.secondary)
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain)
 
-            // Equalizer
-            Button {
-                showEqualizerSheet = true
-            } label: {
-                Image(systemName: "slider.vertical.3")
-                    .font(.title2)
-                    .foregroundStyle(.secondary)
-                    .frame(width: 44, height: 44)
-            }
-            .buttonStyle(.plain)
+                // Favorite
+                Button {
+                    toggleFavoriteSong()
+                } label: {
+                    Image(systemName: isCurrentTrackFavorite ? "heart.fill" : "heart")
+                        .font(.title2)
+                        .foregroundStyle(isCurrentTrackFavorite ? DeadlyColors.primary : .secondary)
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain)
+                .disabled(currentShowId == nil)
 
-            // Share
-            Button {
-                showShareChooser = true
-            } label: {
-                Image(systemName: "square.and.arrow.up")
-                    .font(.title2)
-                    .foregroundStyle(.secondary)
-                    .frame(width: 44, height: 44)
+                // Share
+                Button {
+                    showShareChooser = true
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.title2)
+                        .foregroundStyle(.secondary)
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain)
+                .disabled(currentShowId == nil)
             }
-            .buttonStyle(.plain)
-            .disabled(currentShowId == nil)
-
-            Spacer()
         }
         .padding(.horizontal, 24)
     }

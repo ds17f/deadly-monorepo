@@ -108,8 +108,13 @@ struct deadlyApp: App {
                             ShowArtworkService.shared.populate(sourceTypes)
                         }
                         ShowArtworkService.shared.badgeStyle = SourceBadgeStyle.fromString(container.appPreferences.sourceBadgeStyle)
-                        // Restore last playback position if the app was killed mid-playback.
+                        // Start Connect first so it can receive shared state before local restore.
+                        container.connectService.startIfAuthenticated()
+                        // Brief wait for the WebSocket to connect and receive state.
+                        try? await Task.sleep(for: .seconds(1.5))
+                        // Restore last playback position only if Connect has no shared session.
                         await container.playbackRestorationService.restoreIfAvailable()
+                        container.isColdLaunch = false
                     }
                     // Cold-start sync: if the user is already signed in when the
                     // app launches, flush any queued local changes, then pull.
@@ -137,6 +142,9 @@ struct deadlyApp: App {
                 // when a UIApplicationDelegateAdaptor is in use, so we listen
                 // to the UIKit notification directly.
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+                    // Reconnect Connect on foreground (scenePhase .active is
+                    // unreliable with the delegate adaptor in use, see above).
+                    container.connectService.startIfAuthenticated()
                     if container.authService.isSignedIn {
                         Task {
                             _ = await container.favoritesPushService.flushPending()
@@ -144,10 +152,16 @@ struct deadlyApp: App {
                         }
                     }
                 }
+                .onChange(of: container.networkMonitor.isConnected) { _, isConnected in
+                    if isConnected {
+                        container.connectService.handleNetworkRestored()
+                    }
+                }
         }
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .background {
                 container.playbackRestorationService.saveNow()
+                container.connectService.stop()
             }
         }
     }

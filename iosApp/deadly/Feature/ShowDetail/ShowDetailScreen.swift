@@ -10,6 +10,7 @@ struct ShowDetailScreen: View {
     private var streamPlayer: StreamPlayer { container.streamPlayer }
     private var downloadService: DownloadServiceImpl { container.downloadService }
     private var networkMonitor: NetworkMonitor { container.networkMonitor }
+    private var connectService: ConnectService { container.connectService }
 
     /// Current show ID - uses the navigated show if available, falls back to initial showId
     private var currentShowId: String {
@@ -237,8 +238,8 @@ struct ShowDetailScreen: View {
                         TrackListRow(
                             track: track,
                             index: index,
-                            isPlaying: isCurrentTrack(track) && streamPlayer.playbackState.isPlaying,
-                            isLoading: isCurrentTrack(track) && (streamPlayer.playbackState == .loading || streamPlayer.playbackState == .buffering),
+                            isPlaying: isCurrentTrack(track, at: index) && isSessionPlaying,
+                            isLoading: isCurrentTrack(track, at: index) && !connectService.isRemoteControlling && (streamPlayer.playbackState == .loading || streamPlayer.playbackState == .buffering),
                             downloadState: trackStates[track.name],
                             isFavorite: favoriteTracks.contains(track.title)
                         )
@@ -526,6 +527,14 @@ struct ShowDetailScreen: View {
     }
 
     private var isCurrentShowPlaying: Bool {
+        // Remote-controlling: use server state.
+        if connectService.isRemoteControlling,
+           let state = connectService.connectState,
+           let recording = playlistService.currentRecording,
+           state.recordingId == recording.identifier {
+            return state.playing
+        }
+        // Local/active device: use local player state.
         guard let currentTrack = streamPlayer.currentTrack,
               let recording = playlistService.currentRecording else { return false }
         let isThisShow = currentTrack.metadata["recordingId"] == recording.identifier
@@ -541,6 +550,14 @@ struct ShowDetailScreen: View {
     }
 
     private var isCurrentShowActive: Bool {
+        // Remote-controlling: check server state.
+        if connectService.isRemoteControlling,
+           let state = connectService.connectState,
+           let recording = playlistService.currentRecording,
+           state.recordingId == recording.identifier {
+            return true
+        }
+        // Local/active device: check local player.
         guard let currentTrack = streamPlayer.currentTrack,
               let recording = playlistService.currentRecording else { return false }
         return currentTrack.metadata["recordingId"] == recording.identifier
@@ -549,9 +566,30 @@ struct ShowDetailScreen: View {
     private func handlePlayToggle() {
         if isCurrentShowLoading {
             // Do nothing while loading
+        } else if connectService.isRemoteControlling {
+            // Remote control: send commands only, no local audio.
+            if isCurrentShowActive {
+                if connectService.connectState?.playing == true {
+                    connectService.sendPause()
+                } else {
+                    connectService.sendPlay()
+                }
+            } else {
+                // Different show — playTrack already sends sendLoad with autoplay.
+                playlistService.playTrack(at: 0, source: "browse")
+                playlistService.recordRecentPlay()
+            }
         } else if isCurrentShowActive {
+            // Local/active device: toggle local + send connect command optimistically.
+            let wasPlaying = streamPlayer.playbackState.isPlaying
             streamPlayer.togglePlayPause()
+            if wasPlaying {
+                connectService.sendPause()
+            } else {
+                connectService.sendPlay()
+            }
         } else {
+            // New show — playTrack handles local audio + sendLoad.
             playlistService.playTrack(at: 0, source: "browse")
             playlistService.recordRecentPlay()
         }
@@ -559,11 +597,27 @@ struct ShowDetailScreen: View {
 
     // MARK: - Helpers
 
-    private func isCurrentTrack(_ track: ArchiveTrack) -> Bool {
-        guard let recording = playlistService.currentRecording,
-              let currentTrack = streamPlayer.currentTrack else { return false }
+    private func isCurrentTrack(_ track: ArchiveTrack, at index: Int) -> Bool {
+        guard let recording = playlistService.currentRecording else { return false }
+        // Remote-controlling: the session's current track is identified by the
+        // server's trackIndex, not the local player (which isn't authoritative).
+        if connectService.isRemoteControlling,
+           let state = connectService.connectState,
+           state.recordingId == recording.identifier {
+            return index == state.trackIndex
+        }
+        guard let currentTrack = streamPlayer.currentTrack else { return false }
         return currentTrack.metadata["recordingId"] == recording.identifier
             && currentTrack.title == track.title
+    }
+
+    /// Whether the session is currently playing — server state when
+    /// remote-controlling, the local engine otherwise.
+    private var isSessionPlaying: Bool {
+        if connectService.isRemoteControlling {
+            return connectService.connectState?.playing ?? false
+        }
+        return streamPlayer.playbackState.isPlaying
     }
 
     // MARK: - Download button
