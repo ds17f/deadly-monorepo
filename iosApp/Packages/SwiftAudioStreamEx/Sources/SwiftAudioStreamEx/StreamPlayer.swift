@@ -88,6 +88,12 @@ public final class StreamPlayer {
     /// The full track list.
     private var tracks: [TrackItem] = []
 
+    /// The full loaded queue, read-only. Lets Connect resolve display metadata
+    /// (title/duration/show info, via `TrackItem.metadata`) for any index — e.g.
+    /// a remote-controlled session's current track — from the queue the player
+    /// actually loaded, rather than trusting server-supplied state.
+    public var loadedTracks: [TrackItem] { tracks }
+
     // MARK: - Init
 
     public init() {

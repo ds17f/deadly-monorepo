@@ -26,8 +26,13 @@ function formatTime(seconds: number): string {
 }
 
 function formatShowDate(dateStr: string): string {
-  const [y, m, d] = dateStr.split("-").map(Number);
-  const date = new Date(y, m - 1, d);
+  // Accept a bare "YYYY-MM-DD" or anything starting with one (the showId slug
+  // is "YYYY-MM-DD-venue-..."), and degrade to "" instead of "Invalid Date"
+  // for empty/garbage input.
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(dateStr ?? "");
+  if (!m) return "";
+  const date = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+  if (Number.isNaN(date.getTime())) return "";
   return date.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
@@ -590,8 +595,10 @@ export default function HeaderPlayer() {
 
   const showInfo = isActiveDevice && activeShow
     ? showLabel(activeShow)
-    : connectState?.date
-      ? { date: formatShowDate(connectState.date), venue: (connectState.venue ?? "") + (connectState.location ? `, ${connectState.location}` : "") }
+    : connectState?.showId
+      // Resolve the date from the showId slug (always "YYYY-MM-DD-…") when the
+      // session state carries no date — e.g. a position-only hydrate.
+      ? { date: formatShowDate(connectState.date || connectState.showId), venue: (connectState.venue ?? "") + (connectState.location ? `, ${connectState.location}` : "") }
       : null;
 
   const displayTrackTitle = isActiveDevice

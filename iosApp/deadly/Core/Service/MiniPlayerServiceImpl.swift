@@ -93,6 +93,24 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
         }
     }
 
+    /// The locally-loaded track at the shared session's index. Every client
+    /// loads the full show, so display metadata (title / duration / show info via
+    /// `TrackItem.metadata`) is resolved from the player's own queue indexed by
+    /// the server's `trackIndex` — not from server-supplied state, which only
+    /// carries the live transport (index / position / playing / active device).
+    private func remoteTrack(_ r: ConnectState) -> TrackItem? {
+        let q = streamPlayer.loadedTracks
+        guard r.trackIndex >= 0, r.trackIndex < q.count else { return nil }
+        return q[r.trackIndex]
+    }
+
+    /// Track count for a remote session — from the locally-loaded queue, falling
+    /// back to whatever the server state happens to carry until the show loads.
+    private func remoteTrackCount(_ r: ConnectState) -> Int {
+        let n = streamPlayer.loadedTracks.count
+        return n > 0 ? n : r.tracks.count
+    }
+
     // MARK: - Computed state
 
     /// True when the streamPlayer has no real track loaded yet but a saved
@@ -126,8 +144,9 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
 
     var trackTitle: String? {
         if let r = remote {
-            let idx = r.trackIndex
-            return idx >= 0 && idx < r.tracks.count ? r.tracks[idx].title : nil
+            if let t = remoteTrack(r)?.title { return t }
+            // Transient fallback before the local show finishes loading.
+            return r.trackIndex >= 0 && r.trackIndex < r.tracks.count ? r.tracks[r.trackIndex].title : nil
         }
         return streamPlayer.currentTrack?.title ?? restoredTrack?.trackTitle
     }
@@ -169,7 +188,7 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     var hasNext: Bool {
-        if let r = remote { return r.trackIndex < r.tracks.count - 1 }
+        if let r = remote { return r.trackIndex < remoteTrackCount(r) - 1 }
         return streamPlayer.queueState.hasNext
     }
 
@@ -196,15 +215,22 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
 
     var playbackProgress: Double {
         if let r = remote {
-            guard r.durationMs > 0 else { return 0 }
+            let dur = durationMs
+            guard dur > 0 else { return 0 }
             let pos = Double(interpolatedRemotePositionMs(r))
-            return min(1.0, max(0.0, pos / Double(r.durationMs)))
+            return min(1.0, max(0.0, pos / Double(dur)))
         }
         return streamPlayer.progress.progress
     }
 
     var showDate: String? {
-        if let r = remote { return r.date }
+        if let r = remote {
+            // Show date is identical across a show's tracks — read it from the
+            // locally-loaded queue (canonical YYYY-MM-DD), not server state.
+            if let d = remoteTrack(r)?.metadata["showDate"], !d.isEmpty { return d }
+            if let d = streamPlayer.currentTrack?.metadata["showDate"], !d.isEmpty { return d }
+            return r.date  // transient fallback before the local show loads
+        }
         if let d = streamPlayer.currentTrack?.metadata["showDate"], !d.isEmpty {
             return d
         }
@@ -213,8 +239,10 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
 
     var venue: String? {
         if let r = remote {
-            if let v = r.venue, !v.isEmpty { return v }
-            return r.location
+            let track = remoteTrack(r) ?? streamPlayer.currentTrack
+            if let v = track?.metadata["venue"], !v.isEmpty { return v }
+            if let loc = track?.metadata["location"], !loc.isEmpty { return loc }
+            return (r.venue?.isEmpty == false) ? r.venue : r.location  // transient fallback
         }
         if let v = streamPlayer.currentTrack?.metadata["venue"], !v.isEmpty {
             return v
@@ -228,8 +256,8 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     var displaySubtitle: String? {
         if let r = remote {
             var result = ""
-            if let d = r.date { result += d }
-            if let v = r.venue, !v.isEmpty {
+            if let d = showDate { result += d }
+            if let v = venue, !v.isEmpty {
                 if !result.isEmpty { result += " - " }
                 result += v
             }
@@ -256,7 +284,10 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     var durationMs: Int {
-        if let r = remote { return r.durationMs }
+        if let r = remote {
+            if let d = remoteTrack(r)?.duration { return Int(d * 1000) }
+            return r.durationMs  // transient fallback before the local show loads
+        }
         return Int(streamPlayer.progress.duration * 1000)
     }
 
@@ -266,7 +297,7 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     }
 
     var trackCount: Int {
-        if let r = remote { return r.tracks.count }
+        if let r = remote { return remoteTrackCount(r) }
         return streamPlayer.queueState.totalTracks
     }
 
