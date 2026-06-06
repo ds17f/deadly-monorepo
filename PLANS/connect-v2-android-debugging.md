@@ -110,6 +110,38 @@ protocol change across api/web/iOS/Android — bigger, do it deliberately, not n
 - Logs: `adb logcat -s ConnectService:D PlayerServiceImpl:D MiniPlayerService:D`
 - Server next/prev: `api/src/connect/state.ts` `handleNext`/`handlePrev`/`handleSeek`.
 
+## Protocol: explicit `epoch` replaces the implicit restart/park heuristics (2026-06-06)
+
+Two bugs (post-restart desync, transfer-park double-play) came from the same root:
+`activeDeviceId == null` is **overloaded** — it means *server restart (rehydrated)*,
+*transfer phase-1 park*, AND *stop/idle*, which need opposite client reactions
+(reclaim vs. pause). We were disambiguating with stacked inferences (`null active`
+→ then also `tracks.isEmpty()`), which is fragile coincidence, not fact.
+
+**Fix:** the server stamps every state with `epoch` = boot id (`Date.now()` at
+process start, constant per run; `api/src/connect/state.ts` `SERVER_EPOCH`). A
+*change* in epoch is the explicit, authoritative "server restarted" signal.
+
+- **Reclaim** (still-playing device takes ownership back) now fires only on
+  `serverRestarted (epoch changed) && activeDeviceId == null && locally playing
+  this recording`. The in-flight reclaim load is held by the existing
+  `reassertingTracks` flag (epoch is unchanged on the follow-up states).
+- **Deliberate transitions** (transfer park, stop) keep the same epoch → never
+  mistaken for a restart → the old device just pauses. No `transferInFlight`
+  field needed.
+- **Stripped** the `tracks.isEmpty()` / null-active special-casing on all three
+  clients. One source of truth.
+
+Wire/type notes: `epoch` is a big ms value → **must be 64-bit** (`Long` on
+Android, `number`/`Int64` elsewhere), same lesson as `version` (Android `Int`
+overflow silently dropped every state). Clients track `lastEpoch` and reset
+`reassertingTracks` when they fall through to the not-active/pause path.
+Files: `types.ts`/`state.ts` (api), `types/connect.ts`+`PlayerProvider.tsx` (web),
+`ConnectModels.swift`+`ConnectService.swift` (iOS), `ConnectModels.kt`+
+`ConnectServiceImpl.kt` (Android). api 133 tests green; web tsc + Android build green.
+Belongs in the pre-ship protocol gate (see `connect-v2-port.md`): numeric wire
+fields must be 64-bit safe.
+
 ## Follow-up work (2026-06-06 session)
 
 Two bugs found while testing transfers; doing **B first, then A**.
