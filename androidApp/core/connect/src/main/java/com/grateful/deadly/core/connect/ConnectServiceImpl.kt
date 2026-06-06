@@ -13,6 +13,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -115,7 +116,25 @@ class ConnectServiceImpl @Inject constructor(
     @Volatile private var pendingHardwareVolume: Int? = null
     private var hardwareVolumeSendJob: Job? = null
 
+    // Strictly-ordered queue of state reactions. Each reaction runs to
+    // completion (all player commands awaited) before the next is dequeued, so
+    // commands issued across rapid-fire state snapshots can never reorder and a
+    // reaction always observes the player state left by the previous one. This
+    // is what a limitedParallelism(1) dispatcher cannot guarantee — coroutines
+    // there interleave at suspension points; a single consumer does not.
+    private val reactionQueue = Channel<suspend () -> Unit>(Channel.UNLIMITED)
+
     init {
+        scope.launch {
+            for (reaction in reactionQueue) {
+                try {
+                    reaction()
+                } catch (e: Exception) {
+                    Log.w(TAG, "reaction failed: ${e.message}")
+                }
+            }
+        }
+
         // When the local player auto-advances to the next track, notify the Connect
         // server so all other devices stay in sync. Only fires when we are the active
         // device (seekToMediaItemIndex from reactToState uses REASON_SEEK, not REASON_AUTO).
@@ -323,7 +342,10 @@ class ConnectServiceImpl @Inject constructor(
                     _connectState.value = newState
                     _isActiveDevice.value = isActive
 
-                    reactToState(old, newState)
+                    // Enqueue the reaction so it runs serially behind any prior
+                    // snapshot's reaction. UI state above is updated immediately;
+                    // player commands are ordered by the single consumer.
+                    reactionQueue.trySend { reactToState(old, newState) }
                 }
                 "devices" -> {
                     val devicesEl = obj["devices"]?.jsonArray ?: return
@@ -375,7 +397,7 @@ class ConnectServiceImpl @Inject constructor(
         }
     }
 
-    private fun reactToState(old: ConnectState?, new: ConnectState) {
+    private suspend fun reactToState(old: ConnectState?, new: ConnectState) {
         // Clear pending command if the server confirmed the expected transition
         val cmd = _pendingCommand.value
         if (cmd != null) {
@@ -407,7 +429,7 @@ class ConnectServiceImpl @Inject constructor(
         if (wasActive && !nowActive) {
             val positionMs = mediaControllerRepository.currentPosition.value.toInt()
             Log.d(TAG, "reactToState: transferred away — pausing and reporting position ${positionMs}ms")
-            scope.launch { mediaControllerRepository.pause() }
+            mediaControllerRepository.pause()
             sendPosition(positionMs)
         }
 
@@ -422,19 +444,17 @@ class ConnectServiceImpl @Inject constructor(
             val autoPlay = isActive && new.playing
             Log.d(TAG, "reactToState: NEW RECORDING — server=${new.recordingId} local=$localRecordingId " +
                 "isActive=$isActive autoPlay=$autoPlay trackIndex=${new.trackIndex} positionMs=${new.positionMs}")
-            scope.launch {
-                mediaControllerRepository.playTrack(
-                    trackIndex = new.trackIndex,
-                    recordingId = new.recordingId!!,
-                    format = DEFAULT_FORMAT,
-                    showId = new.showId ?: "",
-                    showDate = new.date ?: "",
-                    venue = new.venue,
-                    location = new.location,
-                    position = new.positionMs.toLong(),
-                    autoPlay = autoPlay,
-                )
-            }
+            mediaControllerRepository.playTrack(
+                trackIndex = new.trackIndex,
+                recordingId = new.recordingId!!,
+                format = DEFAULT_FORMAT,
+                showId = new.showId ?: "",
+                showDate = new.date ?: "",
+                venue = new.venue,
+                location = new.location,
+                position = new.positionMs.toLong(),
+                autoPlay = autoPlay,
+            )
             stopPositionReporting()
             return
         }
@@ -447,13 +467,11 @@ class ConnectServiceImpl @Inject constructor(
             val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
             if (new.trackIndex != localTrackIndex) {
                 Log.d(TAG, "reactToState: NOT ACTIVE — syncing track $localTrackIndex -> ${new.trackIndex}")
-                scope.launch {
-                    mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, new.positionMs.toLong())
-                    mediaControllerRepository.pause()
-                }
+                mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, new.positionMs.toLong())
+                mediaControllerRepository.pause()
             } else if (locallyPlaying) {
                 Log.d(TAG, "reactToState: NOT ACTIVE — pausing local playback")
-                scope.launch { mediaControllerRepository.pause() }
+                mediaControllerRepository.pause()
             } else {
                 Log.d(TAG, "reactToState: NOT ACTIVE — no action needed")
             }
@@ -472,12 +490,12 @@ class ConnectServiceImpl @Inject constructor(
             val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
             if (localTrackIndex != new.trackIndex) {
                 Log.d(TAG, "reactToState: became active, syncing track $localTrackIndex -> ${new.trackIndex} pos=${targetPositionMs}ms (interpolated from ${new.positionMs}ms)")
-                scope.launch { mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, targetPositionMs.toLong()) }
+                mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, targetPositionMs.toLong())
             } else {
                 val localPositionMs = mediaControllerRepository.currentPosition.value
                 if (abs(localPositionMs - targetPositionMs.toLong()) > 1000) {
                     Log.d(TAG, "reactToState: became active, syncing position to ${targetPositionMs}ms (interpolated from ${new.positionMs}ms)")
-                    scope.launch { mediaControllerRepository.seekToPosition(targetPositionMs.toLong()) }
+                    mediaControllerRepository.seekToPosition(targetPositionMs.toLong())
                 }
             }
         }
@@ -485,7 +503,7 @@ class ConnectServiceImpl @Inject constructor(
         // React to track changes from remote controllers (while already active)
         if (!justBecameActive && old != null && new.trackIndex != old.trackIndex) {
             Log.d(TAG, "reactToState: track changed ${old.trackIndex} -> ${new.trackIndex}, skipping to index")
-            scope.launch { mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, 0L) }
+            mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, 0L)
         }
 
         // React to seek from remote controllers (while already active).
@@ -496,17 +514,17 @@ class ConnectServiceImpl @Inject constructor(
             val delta = abs(new.positionMs.toLong() - localPositionMs)
             if (delta > 2000) {
                 Log.d(TAG, "reactToState: seek from remote, jumping to ${new.positionMs}ms (delta=$delta)")
-                scope.launch { mediaControllerRepository.seekToPosition(new.positionMs.toLong()) }
+                mediaControllerRepository.seekToPosition(new.positionMs.toLong())
             }
         }
 
         // Active device, same recording — handle play/pause
         if (new.playing && !locallyPlaying) {
             Log.d(TAG, "reactToState: ACTIVE + SAME REC — server=play local=paused -> play()")
-            scope.launch { mediaControllerRepository.play() }
+            mediaControllerRepository.play()
         } else if (!new.playing && locallyPlaying) {
             Log.d(TAG, "reactToState: ACTIVE + SAME REC — server=pause local=playing -> pause()")
-            scope.launch { mediaControllerRepository.pause() }
+            mediaControllerRepository.pause()
         } else {
             Log.d(TAG, "reactToState: ACTIVE + SAME REC — no change (server.playing=${new.playing} local=$locallyPlaying)")
         }
