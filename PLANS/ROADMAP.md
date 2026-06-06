@@ -47,11 +47,16 @@ home for **playback-position sync** (deliberately cut from REST) and the
 **presence layer** the social "hear" feature depends on.
 - **Layered re-integration** (no rebase — PR #48 rewrote the player surfaces the
   branch built on), using `connect-v2` as reference. **API (Layer 1) + web
-  client (Layer 2) shipped in PR #50.** **iOS (Layer 3) in PR #51**
-  (`connect-v2-ios`) with a round of remote-control fixes — awaiting merge +
-  beta smoke test. Remaining: **Android (Layer 4)**. Full strategy + status in
-  [`PLANS/connect-v2-port.md`](connect-v2-port.md). Still TODO: promote
-  `docs/connect-v2-architecture.md` into a numbered ADR (`docs/adr/`).
+  client (Layer 2) shipped in PR #50; iOS (Layer 3) merged in PR #51; Android
+  (Layer 4) in PR #52** (`connect-v2-android`). #52 also hardens the shared
+  protocol so a session survives a **server restart** and a **device transfer**
+  on all clients, via an explicit `epoch` (boot id) that replaces the implicit
+  null-active / empty-tracks heuristics — verified on a Pixel 6 + device iOS.
+  Full strategy + status in [`PLANS/connect-v2-port.md`](connect-v2-port.md);
+  the epoch decision is in
+  [`PLANS/connect-v2-android-debugging.md`](connect-v2-android-debugging.md).
+  Still TODO: promote `docs/connect-v2-architecture.md` into a numbered ADR
+  (`docs/adr/`).
 - **Display metadata is client-resolved**, not server state: `ConnectState`
   carries live transport only (ids/index/position/playing/active); each client
   derives title/duration/date/venue from the show it already loads. A
@@ -60,7 +65,11 @@ home for **playback-position sync** (deliberately cut from REST) and the
   tab is now a controller/target, which changes device identity and presence.
 - **Pre-ship gate (mobile):** before any App Store iOS/Android build, confirm
   the protocol carries presence/device-identity *additively* — shipped apps
-  can't be force-updated, so the wire protocol is the one-way door.
+  can't be force-updated, so the wire protocol is the one-way door. Also bake in
+  the lessons from #52: numeric wire fields must be **64-bit safe** (`version`/
+  `epoch` are ms — a 32-bit `Int` silently drops the whole state on Kotlin), and
+  a server restart must stay recoverable for un-updatable clients (epoch +
+  monotonic version).
 
 ### 3. Web profile — social (`/me` 1b)
 Friends graph + listening-privacy controls. No backend yet — its own design +

@@ -36,13 +36,31 @@ Working branch: **`connect-v2-port`** (off `main`; distinct from the stale
   indicator when remote; desktop queue rail fills the column.
   Still TODO: device install (`make ios-remote-install`, needs
   `KEYCHAIN_PASSWORD`) + a real two-device beta smoke pass.
-- ⏳ **Layer 4 — Android** — **next.** Clean `core/connect/` module on the
-  reference branch; reconcile media/session edits against main's rewritten
-  `DeadlyMediaSessionService.kt` + Android Auto work. Builds locally (Android
-  never builds remote). See Layer 4 section below.
+- ✅ **Layer 4 — Android** — **in PR #52** (`connect-v2-android`). Full port
+  (new `core/connect/` module, lifecycle, player/miniplayer/settings surfaces),
+  reconciled against main's rewritten media stack (kept Android Auto / DEAD-360,
+  took only additive `MediaControllerRepository` APIs). PR #52 also hardens the
+  shared protocol so a session survives a **server restart** and a **device
+  transfer** on all clients (see the restart/transfer resilience note below).
+  Built locally + tested on a Pixel 6. See Layer 4 section below.
 
 **First shippable unit = Layer 1 + Layer 2 together** (atomic — shipped in #50).
-iOS (Layer 3) is in PR #51. Next concrete step: **Android (Layer 4)**.
+iOS (Layer 3) merged in #51; Android (Layer 4) in **PR #52**. Next: merge #52,
+two-device beta smoke pass, then the carried two-way-door follow-ups
+(lock-screen→remote control, background WS) and the pre-ship presence gate.
+
+### Restart / transfer resilience (PR #52 — applies to all clients)
+Two bugs (post-restart desync, transfer-park double-play) shared one root: state
+was *inferred* from overloaded fields. `activeDeviceId == null` meant three
+things needing opposite reactions — restart (reclaim), transfer phase-1 park
+(pause), stop (pause) — and a restart wiped the in-memory session (version→0,
+active/playing/tracks lost). Fix: the server stamps every state with an explicit
+**`epoch`** (boot id); a change is the authoritative "server restarted" signal,
+so reclaim fires only on `epoch changed && activeDeviceId == null && locally
+playing`, and the null-active/empty-tracks heuristics are gone. Plus: restored
+the park/handoff pause, monotonic `version` + watermark-reset-on-reconnect, and
+`version`/`epoch` as 64-bit (`Long` on Android — the ms values overflow `Int`).
+Details: [`connect-v2-android-debugging.md`](connect-v2-android-debugging.md).
 
 ### Key architectural decision: client-resolve display metadata (supersedes the server track-cache idea)
 The shared `ConnectState` is the authority **only for live transport** the
@@ -286,7 +304,7 @@ also moved (`MiniPlayerServiceImpl`, `PlayerScreen`, `MiniPlayerOverlay`,
 - **Exit check:** builds on the remote Mac (`make ios-remote-install`); can
   control web/Android from device and vice versa.
 
-### Layer 4 — Android (MEDIUM risk — reconcile) — IN PROGRESS (`connect-v2-android`)
+### Layer 4 — Android (MEDIUM risk — reconcile) — ✅ IN PR #52 (`connect-v2-android`)
 
 Working branch **`connect-v2-android`** off `main` (post-#51). Reference:
 `origin/connect-v2`. **~2,125 lines / 36 files** on the reference.
