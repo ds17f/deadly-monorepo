@@ -63,13 +63,13 @@ home for **playback-position sync** (deliberately cut from REST) and the
   server-side track cache was tried and reverted. Android must follow this.
 - **Revisit the state model with web as a first-class participant** — a browser
   tab is now a controller/target, which changes device identity and presence.
-- **Pre-ship gate (mobile):** before any App Store iOS/Android build, confirm
-  the protocol carries presence/device-identity *additively* — shipped apps
-  can't be force-updated, so the wire protocol is the one-way door. Also bake in
-  the lessons from #52: numeric wire fields must be **64-bit safe** (`version`/
-  `epoch` are ms — a 32-bit `Int` silently drops the whole state on Kotlin), and
-  a server restart must stay recoverable for un-updatable clients (epoch +
-  monotonic version).
+- **Pre-ship rule (mobile):** the social protocol is **not** pre-designed as a
+  gate (decided 2026-06-06) — presence is mostly server-side already and will be
+  added *additively + version-gated* later. The standing rule that does survive:
+  once shipped, **never change/retype/remove an existing wire field — only add**;
+  and numeric wire fields must be **64-bit safe** (`version`/`epoch` are ms — a
+  32-bit `Int` silently drops the whole state on Kotlin). See
+  [`PLANS/connect-v2-port.md`](connect-v2-port.md) "Ship checklist".
 
 ### 3. Web profile — social (`/me` 1b)
 Friends graph + listening-privacy controls. No backend yet — its own design +

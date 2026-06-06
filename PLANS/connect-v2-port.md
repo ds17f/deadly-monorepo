@@ -73,17 +73,25 @@ NOT a ship blocker.
 
 - [ ] **Merge PR #52** — Android (Layer 4) + the restart/transfer resilience.
       No Android Connect ships without it.
-- [ ] **Confirm Connect is live in production**, not just beta — mobile store
-      builds point at the prod API, so the `/ws/connect` endpoint + v2 session
-      machine (from #50) must actually be deployed there.
+- [ ] **Deploy Connect to production**, not just beta — mobile store builds point
+      at the prod API, so the `/ws/connect` endpoint + v2 session machine (from
+      #50) must actually be deployed there.
 - [ ] **Two-device beta smoke pass** on `beta.thedeadly.app` — real
       iOS ↔ Android ↔ web: transfer each hop, and kill/restart the server
       mid-play. The last validation before cutting store builds.
-- [ ] **Lock the wire protocol (the one-way door)** — confirm the v2 state
-      machine can carry presence/device-identity *additively* (optional fields +
-      message types old clients ignore) BEFORE any App Store / Play build;
-      shipped apps can't be force-updated. This is a *confirmation*, not building
-      presence. (#52's `epoch` + the 64-bit-field rule already moved this along.)
+
+**Decided (2026-06-06): the social protocol is NOT a pre-ship gate.** We won't
+pre-design presence/device-identity. The social "see/hear what a friend is
+playing" feature will be **gated behind app version** and built **additively**
+later — and most of it is server-side anyway: the live per-user playback already
+lives in `userStates: Map<userId, ConnectState>`, so "what is friend X playing"
+is answerable via a future REST endpoint + friends graph with **no wire change**;
+`deviceId`/`deviceType` are already on the protocol. The only **standing rule**
+that survives (the real lesson, not a gate): **once shipped, never change /
+retype / remove an existing wire field — only add.** Version-gating protects the
+*new* feature on old clients; it does nothing if you retype a field the *current*
+feature depends on (cf. the `version: Int → Long` near-miss). Presence is "live
+while a device is connected," not "always known" — that's the accepted boundary.
 
 ### Key architectural decision: client-resolve display metadata (supersedes the server track-cache idea)
 The shared `ConnectState` is the authority **only for live transport** the
@@ -216,15 +224,20 @@ two-device happy-path smoke test.
 
 ### Pre-ship gate (the only one-way door) — verify before any App Store build
 
-A shipped iOS build can't be force-updated, so the **wire protocol is the only
-irreversible commitment**. Before cutting an App Store / public TestFlight iOS
-build, confirm the v2 state machine can carry **presence / device-identity
-additively** (new optional fields + message types that old clients ignore) — the
-ROADMAP §3 social "hear what they're playing" feature and the background-presence
-follow-up above both lean on it. Adding protocol surface now, with zero deployed
-iOS clients, is free; adding it post-ship is a migration with version skew. The
-background-WS and lock-screen items above are *not* part of this gate — they're
-two-way doors and can land later.
+A shipped build can't be force-updated, so the **wire protocol is the only
+irreversible commitment**. **Decided (2026-06-06):** we are **not** pre-designing
+the social protocol as a gate (superseded — see "Ship checklist" above). Presence
+is largely server-side already (`userStates: Map<userId, ConnectState>`;
+`deviceId`/`deviceType` already on the wire), so the ROADMAP §3 social feature
+will be built **additively + version-gated** later rather than designed up front.
+
+What remains as the actual standing rule (not a one-time gate): **once shipped,
+never change / retype / remove an existing wire field — only add.** Adding optional
+fields / new message types is always safe (old clients ignore them); breaking an
+existing field breaks the *current* feature on un-updatable installs (cf. the
+`version: Int → Long` near-miss, and the 64-bit-field rule in
+`connect-v2-android-debugging.md`). The background-WS and lock-screen items above
+are two-way doors and can land later.
 
 ## TL;DR
 
