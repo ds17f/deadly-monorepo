@@ -99,6 +99,48 @@ export async function fetchArchiveTracks(
   return tracks;
 }
 
+export interface ArchiveShowMeta {
+  date: string;
+  venue: string;
+  location: string;
+}
+
+const META_CACHE_PREFIX = "archive_meta_";
+
+/**
+ * Fetch show display metadata (date / venue / location) for an Archive.org
+ * recording. Used to resolve a Connect session's show info client-side when the
+ * shared state carries none (e.g. a position-only hydrate). Cached in
+ * sessionStorage; the same metadata endpoint backs `fetchArchiveTracks`.
+ */
+export async function fetchArchiveShowMeta(
+  identifier: string
+): Promise<ArchiveShowMeta | null> {
+  try {
+    const raw = sessionStorage.getItem(META_CACHE_PREFIX + identifier);
+    if (raw) return JSON.parse(raw) as ArchiveShowMeta;
+  } catch {
+    /* ignore */
+  }
+  try {
+    const data = await fetchWithRetry(`https://archive.org/metadata/${identifier}`);
+    const m = data?.metadata ?? {};
+    const meta: ArchiveShowMeta = {
+      date: flexString(m.date),
+      venue: flexString(m.venue),
+      location: flexString(m.coverage),
+    };
+    try {
+      sessionStorage.setItem(META_CACHE_PREFIX + identifier, JSON.stringify(meta));
+    } catch {
+      /* ignore */
+    }
+    return meta;
+  } catch {
+    return null;
+  }
+}
+
 function extractTracks(
   identifier: string,
   files: ArchiveFile[]
@@ -150,7 +192,7 @@ function extractTracks(
 async function fetchWithRetry(
   url: string,
   attempt = 0
-): Promise<{ files?: ArchiveFile[] }> {
+): Promise<{ files?: ArchiveFile[]; metadata?: Record<string, unknown> }> {
   try {
     const res = await fetch(url);
     if (!res.ok) {

@@ -42,7 +42,8 @@ function formatShowDate(dateStr: string): string {
 
 function showLabel(show: ViewedShow): { date: string; venue: string } {
   return {
-    date: formatShowDate(show.date),
+    // Fall back to the showId slug ("YYYY-MM-DD-…") if the date hasn't resolved.
+    date: formatShowDate(show.date || show.showId),
     venue: show.venue + (show.location ? `, ${show.location}` : ""),
   };
 }
@@ -593,13 +594,19 @@ export default function HeaderPlayer() {
   const displayDuration = isActiveDevice ? duration : (connectState?.durationMs ?? 0) / 1000;
   const progress = displayDuration > 0 ? (displayElapsed / displayDuration) * 100 : 0;
 
-  const showInfo = isActiveDevice && activeShow
-    ? showLabel(activeShow)
-    : connectState?.showId
-      // Resolve the date from the showId slug (always "YYYY-MM-DD-…") when the
-      // session state carries no date — e.g. a position-only hydrate.
-      ? { date: formatShowDate(connectState.date || connectState.showId), venue: (connectState.venue ?? "") + (connectState.location ? `, ${connectState.location}` : "") }
-      : null;
+  // Use the locally-resolved show (date/venue/location from Archive.org, set on
+  // hydration) when it's the session's show — covers the remote-viewer case too.
+  // Fall back to the showId slug for the date until that resolves.
+  const sessionShowId = connectState?.showId ?? null;
+  const showInfo =
+    activeShow && (isActiveDevice || activeShow.showId === sessionShowId)
+      ? showLabel(activeShow)
+      : sessionShowId
+        ? {
+            date: formatShowDate(connectState?.date || sessionShowId),
+            venue: (connectState?.venue ?? "") + (connectState?.location ? `, ${connectState.location}` : ""),
+          }
+        : null;
 
   const displayTrackTitle = isActiveDevice
     ? currentTrack?.title ?? null
