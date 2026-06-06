@@ -313,21 +313,24 @@ final class AppContainer {
                     await svc.loadShow(showId)
                     guard !svc.tracks.isEmpty else { return }
                     let idx = min(trackIndex, svc.tracks.count - 1)
-                    // Load paused so the transferred position survives as a first-play
-                    // seek: loadQueue(autoPlay:true) would auto-start the engine at 0 and
-                    // clear pendingSeekOnFirstPlay, and the engine drops seeks issued
-                    // before it reaches .playing (the exact case when the stream is still
-                    // loading over the network). Stash the position, then play() — its
-                    // playWithPendingSeek waits for .playing and lands on the right spot.
-                    svc.playTrack(at: idx, source: "connect", autoPlay: false)
                     let seekPosition = TimeInterval(positionMs) / 1000.0
                     if seekPosition > 0 {
+                        // Transfer with a position: load paused, arm the seek, then
+                        // play() so playWithPendingSeek waits for .playing and lands on
+                        // the right spot. loadQueue(autoPlay:true) would auto-start at 0
+                        // and clear pendingSeekOnFirstPlay; the engine also drops seeks
+                        // issued before it reaches .playing (the cold-network case).
+                        svc.playTrack(at: idx, source: "connect", autoPlay: false)
                         player?.pendingSeekOnFirstPlay = seekPosition
                         // Reflect the position in the slider before any engine ticks arrive.
                         player?.applyOptimisticProgress(currentTime: seekPosition)
-                    }
-                    if autoPlay {
-                        player?.play()
+                        if autoPlay { player?.play() }
+                    } else {
+                        // New show / position 0: let the engine autoplay natively. Loading
+                        // paused then calling play() races the async queue load and can
+                        // stall ("changed tracks but never started"); native autoPlay
+                        // starts playback once the stream is actually ready.
+                        svc.playTrack(at: idx, source: "connect", autoPlay: autoPlay)
                     }
                 }
             }
