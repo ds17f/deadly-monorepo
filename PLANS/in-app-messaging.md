@@ -246,9 +246,10 @@ no extra fetch needed.
   list; per-item read-on-open, dismiss action; an "all notifications" archive
   route. Web is the fastest loop, so it leads (Phase 1).
 - **iOS / Android**: an inbox surface (likely under Settings or a header bell to
-  match web), fed by the same `GET /api/user/notifications`. Foreground fetch
-  hooks into the same lifecycle the user-data sync already uses
-  (`willEnterForeground` / `onStart`). Phase 2.
+  match web), fed by the same `GET /api/notifications`. Foreground fetch hooks
+  into the same lifecycle the user-data sync already uses
+  (`willEnterForeground` / `ProcessLifecycle ON_START`). Phase 2 — see the
+  detailed integration points below.
 - **Admin web** (`ui/src/app/admin/`): a `notifications/` page with a compose
   form (title, body, level, optional expiry) + a sent-list with counts. This is
   the only authoring surface for v1 — **compose-in-app on mobile is deferred**
@@ -271,6 +272,75 @@ no extra fetch needed.
   - **Opt-in push** (APNs/FCM) behind a `user_settings` toggle. Optionally
     **live delivery over the Connect-v2 WebSocket** once §2's presence backbone
     is in place.
+
+## Phase 2 — mobile consume (design, not yet built)
+
+Both apps are pure **consumers** of the Phase-1 endpoint — no server or protocol
+change. Each re-implements what `ui/src/lib/notifications.ts` + `NotificationBell`
+do on web: fetch on foreground, keep a local cache + cursor, own seen/dismiss
+locally, show an inbox. The endpoint needs **no auth** (global content), so the
+fetch fires regardless of sign-in state.
+
+### Shared shape (both platforms)
+- **Model** mirroring the wire shape: `id, title, body, level, created_at,
+  expires_at` + local `seen_at` / `dismissed_at`.
+- **Cursor** = high-water `id` pulled so far. `GET {apiBaseUrl}/api/notifications?since=<cursor>`;
+  omit `since` on a fresh client → capped cold-start batch, **mark that batch
+  seen-not-dismissed** (decision #8) so a new install isn't flooded with badges.
+- **Merge/prune** identical to web: preserve local state across re-fetches; drop
+  expired (`expires_at`) and long-dismissed messages.
+- **Active queue** = not dismissed; **archive** = the rest. Unread badge = active
+  & unseen.
+
+### Local store decision (recommended): a JSON blob in platform prefs, NOT the DB
+Web uses `localStorage`. The mobile-faithful equivalent is a serialized JSON blob
+in **`AppPreferences`** (Android DataStore / iOS `UserDefaults`) plus an in-memory
+reactive holder (`StateFlow` / `@Published`) for the UI. Volume is tiny and the
+access pattern is "load all, filter in memory", so this avoids the heavier path:
+- **Android Room** would need a new entity + DAO + a **DB version bump 25 → 26 +
+  an explicit `MIGRATION_25_26`** (`DeadlyDatabase` is at v25 and pointedly does
+  **not** use `fallbackToDestructiveMigration` — `core/database/DeadlyDatabase.kt`).
+- **iOS GRDB** would need a new `vNN-notifications` `registerMigration` in
+  `Core/Database/AppDatabase.swift`.
+
+Use the DB-table path only if we later want reactive observation à la favorites;
+for v1, prefs-blob is lighter and matches web. (Pick one rule for both platforms.)
+
+### Android integration points (builds locally on this machine — never remote)
+- **HTTP:** new `NotificationApiService` + impl modeled on
+  `core/usersync/UserSyncServiceImpl.kt` (OkHttp + `kotlinx.serialization`, base
+  URL from `AppPreferences.apiBaseUrl`). **Omit** the `Authorization` header —
+  the endpoint is public.
+- **Foreground trigger:** mirror `core/usersync/UserSyncCoordinator.kt`, which
+  already observes `ProcessLifecycleOwner` `ON_START` (+ cold start). Either add a
+  parallel `NotificationCoordinator` (preferred — fires **unconditionally**, not
+  gated on `AuthState.SignedIn`) or branch inside the existing one. Wire its
+  `start()` from `DeadlyApplication.onCreate` like `userSyncCoordinator.start()`.
+- **Store:** `NotificationStore` over DataStore (`AppPreferences`), exposing a
+  `StateFlow<List<CachedNotification>>` for the UI.
+- **UI:** an inbox under `feature/settings` (a "Notifications" `PreferenceRow` →
+  a list screen with dismiss + a dismissed archive), and/or a top-bar bell.
+  Settings is the lower-friction first surface.
+
+### iOS integration points (builds on the remote Mac — `make ios-remote-install`)
+- **HTTP:** reuse `Core/Network/APIClient.swift` (`get(path:)`, base URL from
+  `AppPreferences.apiBaseUrl`); no token needed. A thin `NotificationsAPIClient`
+  like `UserSyncAPIClient.swift`.
+- **Foreground trigger:** in `App/deadlyApp.swift`, ride the existing
+  **`UIApplication.willEnterForegroundNotification`** `onReceive` (already used
+  there because scene-phase `.active` doesn't fire reliably under the
+  `UIApplicationDelegateAdaptor` — same finding as Connect-v2) + a cold-start
+  fetch like the existing sign-in/cold-start sync path.
+- **Store:** a `NotificationStore` (`@Observable` / `ObservableObject`) persisting
+  the JSON blob to `UserDefaults`.
+- **UI:** an inbox in `Feature/Settings` (SwiftUI list, swipe-to-dismiss, a
+  dismissed section) and/or a toolbar bell.
+
+### Exit check (per platform)
+Foreground a signed-out **and** signed-in build → publish from `/admin/notifications`
+→ message appears on next foreground; dismiss removes it from the active list but
+it stays in the archive; relaunch preserves seen/dismissed; cold install gets only
+the capped active batch (not the whole history), pre-marked seen.
 
 ## Open questions
 
