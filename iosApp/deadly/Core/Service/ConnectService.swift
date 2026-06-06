@@ -389,9 +389,19 @@ final class ConnectService: NSObject {
                 streamPlayer.skipTo(index: new.trackIndex, autoplay: new.playing)
             }
             let serverPosition = Double(targetPositionMs) / 1000.0
-            if abs(streamPlayer.progress.currentTime - serverPosition) > 1 {
-                logger.info("reactToState: became active, syncing position to \(targetPositionMs, privacy: .public)ms (interpolated from \(new.positionMs, privacy: .public)ms)")
-                streamPlayer.seek(to: serverPosition)
+            if streamPlayer.playbackState.isPlaying {
+                // Already playing the track — a direct seek is honored.
+                if abs(streamPlayer.progress.currentTime - serverPosition) > 1 {
+                    logger.info("reactToState: became active (playing), seeking to \(targetPositionMs, privacy: .public)ms (interpolated from \(new.positionMs, privacy: .public)ms)")
+                    streamPlayer.seek(to: serverPosition)
+                }
+            } else {
+                // Paused (e.g. this show was freshly hydrated): the engine drops
+                // seeks while not playing, then play() would start from 0. Stash
+                // the position as the first-play seek so the play() in the
+                // playback-reconciliation step below lands at the right spot.
+                logger.info("reactToState: became active (paused), pendingSeekOnFirstPlay=\(targetPositionMs, privacy: .public)ms (interpolated from \(new.positionMs, privacy: .public)ms)")
+                streamPlayer.pendingSeekOnFirstPlay = serverPosition
             }
         }
 
