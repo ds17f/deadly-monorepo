@@ -125,6 +125,13 @@ export default function ConnectProvider({
       log("Connected, sending register");
       setConnected(true);
       reconnectAttemptRef.current = 0;
+      // Reset the version watermark on every (re)connect. The monotonic guard
+      // only dedupes out-of-order messages WITHIN one connection; across a
+      // reconnect the server may have restarted and reset its counter to 0, so
+      // the first snapshot it sends here is authoritative regardless of version.
+      // Without this, a tab that held a high version pre-restart silently
+      // discards every fresh state (and never re-asserts its tracklist).
+      currentVersionRef.current = -1;
 
       ws.send(JSON.stringify({
         type: "register",

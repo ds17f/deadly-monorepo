@@ -39,6 +39,8 @@ struct SessionTrack: Codable {
 
 struct ConnectState: Codable {
     let version: Int
+    // Server boot id — a change means the server restarted (see api ConnectState.epoch).
+    let epoch: Int
     let showId: String?
     let recordingId: String?
     let tracks: [SessionTrack]

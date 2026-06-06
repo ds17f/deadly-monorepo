@@ -5,6 +5,10 @@ import { upsertPlaybackPosition, getPlaybackPosition } from "../db/userdata.js";
 const log = (msg: string) => console.log(`[Connect] ${msg}`);
 const warn = (msg: string) => console.warn(`[Connect] ${msg}`);
 
+// Server boot id, fixed for the life of this process. Stamped into every
+// session's state; a change tells clients the server restarted (see ConnectState.epoch).
+const SERVER_EPOCH = Date.now();
+
 interface LiveDevice {
   device: ConnectDevice;
   socket: WebSocket;
@@ -52,7 +56,14 @@ function persistCurrent(userId: string, state: ConnectState): void {
 
 function initialState(): ConnectState {
   return {
-    version: 0,
+    // Seed the version from wall-clock ms, not 0. The version map is in-memory
+    // and wiped on restart; seeding from a monotonic clock guarantees a fresh
+    // session's version exceeds any value a still-connected client held before
+    // the restart, so their `version <= current` guard accepts the new state
+    // even if the client predates the reset-on-reconnect fix. (Increments can't
+    // catch up to wall-clock ms at any realistic mutation rate.)
+    version: Date.now(),
+    epoch: SERVER_EPOCH,
     showId: null,
     recordingId: null,
     tracks: [],

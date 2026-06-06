@@ -7,6 +7,12 @@ export interface SessionTrack {
 
 export interface ConnectState {
   version: number;
+  // Server boot id (ms at process start), constant for the life of the process.
+  // Clients use a change in epoch as the explicit, unambiguous signal that the
+  // server restarted and rehydrated this session from saved position — which is
+  // when a still-playing device should reclaim. A deliberate transition
+  // (transfer park, stop) keeps the same epoch, so it's never mistaken for one.
+  epoch: number;
   showId: string | null;
   recordingId: string | null;
   tracks: SessionTrack[];

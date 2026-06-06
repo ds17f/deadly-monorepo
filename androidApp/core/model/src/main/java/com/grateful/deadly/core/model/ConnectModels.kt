@@ -17,7 +17,13 @@ data class ConnectSessionTrack(
 
 @Serializable
 data class ConnectState(
-    val version: Int,
+    // Long, not Int: the server seeds version from wall-clock ms (Date.now())
+    // so it stays monotonic across restarts — that exceeds Int32's range and
+    // overflows the JSON parser if typed Int (drops every state silently).
+    val version: Long,
+    // Server boot id (wall-clock ms) — a change means the server restarted (see
+    // api ConnectState.epoch). Long, not Int, for the same overflow reason as version.
+    val epoch: Long = 0L,
     val showId: String? = null,
     val recordingId: String? = null,
     val tracks: List<ConnectSessionTrack> = emptyList(),

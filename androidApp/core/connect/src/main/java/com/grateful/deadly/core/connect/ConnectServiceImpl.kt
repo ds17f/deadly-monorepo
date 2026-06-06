@@ -104,6 +104,9 @@ class ConnectServiceImpl @Inject constructor(
     // Guards the one-shot re-assert so position broadcasts arriving before our
     // load echoes back don't make us re-send it repeatedly.
     private var reassertingTracks = false
+    // Last server epoch seen. A change means the server restarted (and rehydrated
+    // the session), which is the only situation a still-playing device reclaims.
+    @Volatile private var lastEpoch: Long? = null
 
     private val _pendingTransfer = MutableStateFlow<String?>(null)
     override val pendingTransfer: StateFlow<String?> = _pendingTransfer.asStateFlow()
@@ -117,7 +120,7 @@ class ConnectServiceImpl @Inject constructor(
     private val _serverTimeOffsetMs = MutableStateFlow(0L)
     override val serverTimeOffsetMs: StateFlow<Long> = _serverTimeOffsetMs.asStateFlow()
 
-    @Volatile private var currentVersion = 0
+    @Volatile private var currentVersion = 0L
     // Best (lowest) RTT seen in the current time_sync batch. Replies with
     // higher RTT are dropped; we only update the offset when a sample beats
     // every prior sample of this batch.
@@ -211,7 +214,7 @@ class ConnectServiceImpl @Inject constructor(
         _activeDeviceVolume.value = 100
         _serverTimeOffsetMs.value = 0L
         timeSyncBestRttMs = Long.MAX_VALUE
-        currentVersion = 0
+        currentVersion = 0L
     }
 
     override fun handleNetworkRestored() {
@@ -249,6 +252,12 @@ class ConnectServiceImpl @Inject constructor(
             Log.d(TAG, "Connected")
             _isConnected.value = true
             reconnectAttempt = 0
+            // Reset the version watermark on every (re)connect. The monotonic
+            // guard only dedupes within one connection; across a reconnect the
+            // server may have restarted and reset its counter, so the first
+            // snapshot after connecting is authoritative regardless of version.
+            // (-1 so the server's lowest possible version, 0, is still accepted.)
+            currentVersion = -1L
             sendRegister(webSocket)
             startHeartbeat(webSocket)
             startTimeSyncRefresh(webSocket)
@@ -461,20 +470,37 @@ class ConnectServiceImpl @Inject constructor(
             _pendingTransfer.value = null
         }
 
-        // If this device was active but no longer is, pause audio and report final position
         val myId = appPreferences.installId
         val wasActive = old?.activeDeviceId == myId
         val nowActive = new.activeDeviceId == myId
-        if (wasActive && !nowActive) {
-            val positionMs = mediaControllerRepository.currentPosition.value.toInt()
-            Log.d(TAG, "reactToState: transferred away — pausing and reporting position ${positionMs}ms")
-            mediaControllerRepository.pause()
-            sendPosition(positionMs)
-        }
-
         val isActive = nowActive
         val localRecordingId = mediaControllerRepository.currentRecordingId.value
         val locallyPlaying = mediaControllerRepository.isPlaying.value
+
+        // Did the server restart? An epoch change is the explicit, authoritative
+        // signal (vs. inferring it from null-active + empty-tracks coincidences).
+        val serverRestarted = lastEpoch != null && new.epoch != lastEpoch
+        lastEpoch = new.epoch
+
+        // Reclaim only when the server restarted and rehydrated the session (so it
+        // has no active device) while we're still playing this recording — take
+        // ownership back without a gap. reassertingTracks keeps us in this mode
+        // while our reclaim load is in flight (epoch is unchanged on later states).
+        // A deliberate transition (transfer park, stop) keeps the same epoch, so
+        // it is never mistaken for a restart.
+        val reclaimAfterRestart = new.activeDeviceId == null &&
+            locallyPlaying && localRecordingId == new.recordingId &&
+            (serverRestarted || reassertingTracks)
+
+        // If this device was active but is no longer — a different device took
+        // over, or we were parked during a transfer — pause and report final
+        // position. Skipped on a reclaim, where we keep playing and re-assert.
+        if (wasActive && !nowActive && !reclaimAfterRestart) {
+            val positionMs = mediaControllerRepository.currentPosition.value.toInt()
+            Log.d(TAG, "reactToState: parked/transferred away — pausing and reporting position ${positionMs}ms")
+            mediaControllerRepository.pause()
+            sendPosition(positionMs)
+        }
 
         // If the recording changed (or first load), load it locally.
         // Active device: autoPlay based on server state.
@@ -502,7 +528,9 @@ class ConnectServiceImpl @Inject constructor(
         // Compare against the LOCAL track index (not old server state) so the
         // very first snapshot (old == null) still aligns — e.g. when the app
         // just restored the same recording at a different track on startup.
-        if (!isActive) {
+        // Skipped while reclaiming: we keep playing and re-assert below instead.
+        if (!isActive && !reclaimAfterRestart) {
+            reassertingTracks = false
             val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
             if (new.trackIndex != localTrackIndex) {
                 Log.d(TAG, "reactToState: NOT ACTIVE — syncing track $localTrackIndex -> ${new.trackIndex}")
@@ -540,6 +568,12 @@ class ConnectServiceImpl @Inject constructor(
                 autoplay = mediaControllerRepository.isPlaying.value,
             )
         }
+
+        // On a reclaim we are the source of truth: don't sync transport down to
+        // the stale playing:false / saved position. The server echoes our
+        // re-asserted load back on the next version (activeDeviceId == us), and
+        // normal active-device sync resumes from there.
+        if (reclaimAfterRestart) return
 
         // When this device just became active (e.g. transfer in), sync local player
         // to server state — the local player may be at a completely different track/position.
