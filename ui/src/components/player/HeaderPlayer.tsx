@@ -621,11 +621,12 @@ export default function HeaderPlayer() {
 
   const isLoading = status === "loading" || status === "buffering";
 
-  // Subtitle: which device is playing when remote, else the show line.
-  const subtitleLine = isRemoteActive
-    ? `${connectState?.playing ? "Playing" : "Paused"} on ${connectState?.activeDeviceName}`
-    : showInfo
-      ? `${showInfo.date} — ${showInfo.venue}`
+  // Subtitle is always the show line. Where it's playing gets its own label
+  // (`deviceLabel`) so the show never gets hidden behind "Playing on <device>".
+  const subtitleLine = showInfo ? `${showInfo.date} — ${showInfo.venue}` : null;
+  const deviceLabel =
+    isRemoteActive && connectState?.activeDeviceName
+      ? `On ${connectState.activeDeviceName}`
       : null;
 
   // Cover art: prefer what playback handed us, else recover it by showId from
@@ -729,9 +730,7 @@ export default function HeaderPlayer() {
           <p className="truncate text-sm font-medium text-white">
             {displayTrackTitle ?? showInfo?.date ?? "--"}
           </p>
-          {isRemoteActive ? (
-            <p className="truncate text-xs text-deadly-highlight">{subtitleLine}</p>
-          ) : showInfo ? (
+          {showInfo ? (
             <p className="truncate text-xs text-white/40">
               {showInfo.date} — {showInfo.venue}
             </p>
@@ -739,6 +738,12 @@ export default function HeaderPlayer() {
         </div>
       </button>
       {showLoaded && (
+       <div className="flex flex-shrink-0 flex-col items-end gap-1">
+        {deviceLabel && (
+          <span className="max-w-[110px] truncate text-[10px] font-medium leading-none text-deadly-highlight">
+            {deviceLabel}
+          </span>
+        )}
         <button
           onClick={handleTogglePlayPause}
           disabled={isLoadingTracks || !!(isActive && isLoading)}
@@ -759,6 +764,7 @@ export default function HeaderPlayer() {
             </svg>
           )}
         </button>
+       </div>
       )}
     </div>
 
@@ -788,9 +794,7 @@ export default function HeaderPlayer() {
               <p className="truncate text-sm font-medium text-white">
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
-              {isRemoteActive ? (
-                <p className="truncate text-xs text-deadly-highlight">{subtitleLine}</p>
-              ) : showInfo ? (
+              {showInfo ? (
                 <p className="truncate text-xs text-white/40">
                   {showInfo.date} — {showInfo.venue}
                 </p>
@@ -835,8 +839,14 @@ export default function HeaderPlayer() {
         </div>
       </div>
 
-      {/* RIGHT: queue · devices · volume · fullscreen · clear */}
-      <div className="flex w-1/4 items-center justify-end gap-1">
+      {/* RIGHT: device label over → queue · devices · volume · fullscreen · clear */}
+      <div className="flex w-1/4 flex-col items-end justify-center gap-0.5">
+        {deviceLabel && (
+          <span className="max-w-full truncate text-[11px] font-medium text-deadly-highlight">
+            {deviceLabel}
+          </span>
+        )}
+        <div className="flex items-center justify-end gap-1">
         {showLoaded && (
           <button
             onClick={() => setRailMode((m) => (m === "queue" ? null : "queue"))}
@@ -894,6 +904,7 @@ export default function HeaderPlayer() {
             </svg>
           </button>
         )}
+        </div>
       </div>
     </div>
 
@@ -919,14 +930,21 @@ export default function HeaderPlayer() {
               <path d="M7 10l5 5 5-5z" />
             </svg>
           </button>
-          <button
-            onClick={openPlayingShow}
-            disabled={!playingShowId}
-            aria-label="Go to show"
-            className="text-xs font-semibold uppercase tracking-wider text-white/50 transition-colors enabled:hover:text-white disabled:cursor-default"
-          >
-            Now Playing
-          </button>
+          <div className="flex flex-col items-center">
+            <button
+              onClick={openPlayingShow}
+              disabled={!playingShowId}
+              aria-label="Go to show"
+              className="text-xs font-semibold uppercase tracking-wider text-white/50 transition-colors enabled:hover:text-white disabled:cursor-default"
+            >
+              Now Playing
+            </button>
+            {deviceLabel && (
+              <span className="mt-0.5 max-w-[60vw] truncate text-[11px] font-medium normal-case tracking-normal text-deadly-highlight">
+                {deviceLabel}
+              </span>
+            )}
+          </div>
           <div className="relative">
             {isConnected ? (
               <button
@@ -972,11 +990,7 @@ export default function HeaderPlayer() {
               <p className="truncate text-lg font-bold text-white">
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
-              {isRemoteActive ? (
-                subtitleLine && (
-                  <p className="mt-0.5 truncate text-sm text-deadly-highlight">{subtitleLine}</p>
-                )
-              ) : showInfo ? (
+              {showInfo ? (
                 <>
                   <p className="mt-0.5 truncate text-sm text-white/70">{showInfo.date}</p>
                   {showInfo.venue && (
@@ -1060,9 +1074,7 @@ export default function HeaderPlayer() {
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
               {subtitleLine && (
-                <p className={`mt-2 text-lg ${isRemoteActive ? "text-deadly-highlight" : "text-white/70"}`}>
-                  {subtitleLine}
-                </p>
+                <p className="mt-2 text-lg text-white/70">{subtitleLine}</p>
               )}
               {displayTrackCount > 1 && (
                 <p className="mt-1 text-sm tabular-nums text-white/30">
@@ -1093,9 +1105,7 @@ export default function HeaderPlayer() {
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
               {subtitleLine && (
-                <p className={`truncate text-sm ${isRemoteActive ? "text-deadly-highlight" : "text-white/50"}`}>
-                  {subtitleLine}
-                </p>
+                <p className="truncate text-sm text-white/50">{subtitleLine}</p>
               )}
             </div>
             <Transport
