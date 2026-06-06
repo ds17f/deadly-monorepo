@@ -1418,7 +1418,44 @@ class PlaylistViewModel @Inject constructor(
                     Log.w(TAG, "Failed to record show play in RecentShowsService: $showId", e)
                     // Don't fail playback if recent shows tracking fails
                 }
-                
+
+                // Build the session track list once — used by both the remote-push
+                // path below and the local sendLoad notify.
+                val sessionTracks = _rawTrackData.value.map { t ->
+                    ConnectSessionTrack(
+                        title = t.title,
+                        durationMs = parseDurationToMs(t.duration)
+                    )
+                }
+                val trackDurationMs = sessionTracks.getOrNull(trackIndex)?.durationMs ?: 0
+
+                // Remote-controlling another device: push intent only, never start
+                // local audio (otherwise the show plays on BOTH devices).
+                val connectState = connectService.connectState.value
+                val isActive = connectService.isActiveDevice.value
+                val isRemoteControlling = connectState?.let { it.activeDeviceId != null && !isActive } ?: false
+                if (isRemoteControlling) {
+                    if (connectState?.recordingId == recordingId) {
+                        Log.d(TAG, "playTrack: remote -> sendSeek(track=$trackIndex)")
+                        connectService.sendSeek(trackIndex, 0, trackDurationMs)
+                    } else {
+                        Log.d(TAG, "playTrack: remote -> sendLoad(new show, track=$trackIndex)")
+                        connectService.sendLoad(
+                            showId = showId,
+                            recordingId = recordingId,
+                            tracks = sessionTracks,
+                            trackIndex = trackIndex,
+                            positionMs = 0,
+                            durationMs = trackDurationMs,
+                            date = showDate,
+                            venue = venue,
+                            location = location,
+                            autoplay = autoPlay,
+                        )
+                    }
+                    return@launch
+                }
+
                 // Use MediaControllerRepository for track playback
                 mediaControllerRepository.playTrack(
                     trackIndex = trackIndex,
@@ -1433,14 +1470,7 @@ class PlaylistViewModel @Inject constructor(
                     source = "browse"
                 )
 
-                // Notify Connect server
-                val sessionTracks = _rawTrackData.value.map { t ->
-                    ConnectSessionTrack(
-                        title = t.title,
-                        durationMs = parseDurationToMs(t.duration)
-                    )
-                }
-                val trackDurationMs = sessionTracks.getOrNull(trackIndex)?.durationMs ?: 0
+                // Notify Connect server (local active device: local audio + load)
                 Log.d(TAG, "Connect: sendLoad from playTrack — show=$showId rec=$recordingId track=$trackIndex tracks=${sessionTracks.size}")
                 connectService.sendLoad(
                     showId = showId,
