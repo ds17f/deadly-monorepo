@@ -786,6 +786,12 @@ extension AudioStreamEngine: AudioPlayerDelegate {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
                     self?.player.volume = unmuteVolume
                 }
+            } else if let restore = savedVolume {
+                // We muted for the retry but there was no resume position to seek to
+                // (the error hit during the cold initial load, before any progress).
+                // Without this the mute is never undone and ALL playback stays silent.
+                logger.notice("[PB] post-retry restore volume \(restore, format: .fixed(precision: 1), privacy: .public) (no resume position)")
+                player.volume = restore
             }
             if wasRetrying {
                 onRetryStateChange?(false)
