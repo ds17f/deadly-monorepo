@@ -302,8 +302,25 @@ Working branch **`connect-v2-android`** off `main` (post-#51). Reference:
   `ConnectViewModel.kt` + `SettingsNavigation` entry.
 - `MainActivity.kt` (+34, lifecycle start/stop), `MainNavigation.kt`.
 
+**Starting notes (de-risked 2026-06-06 — don't re-discover):**
+- Module layout did **not** shift — all reference paths above match `main`
+  (full paths are `androidApp/<mod>/src/main/java/com/grateful/deadly/...`; the
+  `git diff --stat` display abbreviates them).
+- `androidApp/core/connect/` on `main` is **only stale `build/` artifacts**
+  (not git-tracked, leftover from an old connect branch) — the module genuinely
+  needs creating; ignore/`git clean` the junk.
+- All connect-module deps exist on `main`: `:core:model`, `:core:database`,
+  `:core:api:auth`, `:core:media`, `:core:network`. Auth token for the WS Bearer
+  comes from `core/api/auth` `AuthService` (impl `core/auth/AuthServiceImpl`).
+  Server `resolveUser` checks `Authorization: Bearer` first, so Bearer is fine.
+- **Concrete first chunk:** create `core/connect` (build.gradle.kts +
+  ConnectService/ConnectServiceImpl/di/ConnectModule near-verbatim) +
+  `core/model/ConnectModels.kt` + `settings.gradle.kts` `include(":core:connect")`,
+  then `make android-install` to confirm the additive layer compiles before
+  touching player surfaces. Then do the reconcile targets below.
+
 *Reconcile against main's rewrites (the real work — confirm main's current
-line-counts/paths when starting; module layout may have shifted):*
+line-counts/paths when starting):*
 - `core/media/service/DeadlyMediaSessionService.kt`,
   `core/media/repository/MediaControllerRepository.kt`,
   `core/media/service/PlaybackCommandInterceptor.kt` — session/notification
