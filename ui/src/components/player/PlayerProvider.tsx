@@ -81,6 +81,9 @@ export default function PlayerProvider({
   const reportVolumeRef = useRef(reportVolume);
   const isActiveDeviceRef = useRef(false);
   const isRemoteControllingRef = useRef(false);
+  // Guards the one-shot track re-assert (below) so position broadcasts arriving
+  // before our load echoes back don't make us re-send it repeatedly.
+  const reassertingTracksRef = useRef(false);
   // Name of the most recent OTHER active device, used to attribute the
   // "Play on this device?" autoplay prompt after a transfer to us.
   const prevActiveDeviceNameRef = useRef<string | null>(null);
@@ -667,6 +670,38 @@ export default function PlayerProvider({
     if (isActiveDevice) {
       const audio = getActiveAudio();
       if (!audio) return;
+
+      // Server forgot our tracklist (it restarted and rehydrated the session
+      // from the saved position only). We still hold it — re-assert the load so
+      // every viewer's display and the server's next/prev get the tracks back.
+      // handleLoad keeps us active and honors the index/position we pass, so
+      // this only refills tracks; it doesn't disturb playback.
+      const localTracks = tracksRef.current;
+      if (connectState.tracks.length > 0) reassertingTracksRef.current = false;
+      if (
+        connectState.tracks.length === 0 &&
+        localTracks && localTracks.length > 0 &&
+        connectState.recordingId === selectedRecordingRef.current &&
+        !reassertingTracksRef.current
+      ) {
+        reassertingTracksRef.current = true;
+        const idx = currentTrackIndexRef.current;
+        sendCommand("load", {
+          showId: connectState.showId ?? activeShowRef.current?.showId ?? "",
+          recordingId: connectState.recordingId,
+          tracks: localTracks.map((t) => ({
+            title: t.title,
+            durationMs: Math.round((t.duration || 0) * 1000),
+          })),
+          trackIndex: idx >= 0 ? idx : 0,
+          positionMs: Math.round(audio.currentTime * 1000),
+          durationMs: Math.round((localTracks[idx]?.duration ?? 0) * 1000),
+          date: connectState.date ?? activeShowRef.current?.date,
+          venue: connectState.venue ?? activeShowRef.current?.venue,
+          location: connectState.location ?? activeShowRef.current?.location,
+          autoplay: !audio.paused,
+        });
+      }
 
       // Track changed by a remote next/prev.
       if (connectState.trackIndex !== currentTrackIndexRef.current) {

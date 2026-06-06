@@ -57,6 +57,9 @@ final class ConnectService: NSObject {
     private var timeSyncRefreshTask: Task<Void, Never>?
     private var reconnectAttempt = 0
     private var shouldConnect = false
+    // Guards the one-shot track re-assert so position broadcasts arriving before
+    // our load echoes back don't make us re-send it repeatedly.
+    private var reassertingTracks = false
     private var volumeObservation: NSKeyValueObservation?
     // Lowest RTT seen in the current time_sync batch. Replies with higher RTT
     // are dropped; only the best (fastest round-trip) sample of each batch
@@ -374,6 +377,40 @@ final class ConnectService: NSObject {
             logger.info("reactToState: not active device, skipping playback control")
             stopPositionReporting()
             return
+        }
+
+        // Server forgot our tracklist (it restarted and rehydrated the session
+        // from the saved position only). We still hold the queue — re-assert the
+        // load so viewers' display and the server's next/prev get the tracks
+        // back. handleLoad keeps us active and honors the index/position we pass.
+        if new.tracks.isEmpty {
+            let queue = streamPlayer.loadedTracks
+            let localRecId = streamPlayer.currentTrack?.metadata["recordingId"]
+            if !queue.isEmpty, localRecId == new.recordingId, !reassertingTracks {
+                reassertingTracks = true
+                let sessionTracks = queue.map {
+                    SessionTrack(title: $0.title, durationMs: Int(($0.duration ?? 0) * 1000))
+                }
+                let meta = streamPlayer.currentTrack?.metadata ?? [:]
+                let idx = streamPlayer.queueState.currentIndex
+                let posMs = Int(streamPlayer.progress.currentTime * 1000)
+                let curDuration = (idx >= 0 && idx < queue.count) ? (queue[idx].duration ?? 0) : 0
+                logger.info("reactToState: server tracks empty — re-asserting load (\(sessionTracks.count, privacy: .public) tracks, idx=\(idx, privacy: .public))")
+                sendLoad(
+                    showId: new.showId ?? meta["showId"] ?? "",
+                    recordingId: new.recordingId ?? localRecId ?? "",
+                    tracks: sessionTracks,
+                    trackIndex: idx,
+                    positionMs: posMs,
+                    durationMs: Int(curDuration * 1000),
+                    date: new.date ?? meta["showDate"],
+                    venue: new.venue ?? meta["venue"],
+                    location: new.location ?? meta["location"],
+                    autoplay: streamPlayer.playbackState.isPlaying
+                )
+            }
+        } else {
+            reassertingTracks = false
         }
 
         // When this device just became active (e.g. transfer in), sync local player

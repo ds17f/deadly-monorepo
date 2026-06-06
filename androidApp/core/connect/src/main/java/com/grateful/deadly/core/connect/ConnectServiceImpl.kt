@@ -97,6 +97,14 @@ class ConnectServiceImpl @Inject constructor(
     private val _isActiveDevice = MutableStateFlow(false)
     override val isActiveDevice: StateFlow<Boolean> = _isActiveDevice.asStateFlow()
 
+    // Last non-empty tracklist we observed, re-asserted to the server if it
+    // forgets it (e.g. a server restart rehydrates the session position-only).
+    private var cachedTracks: List<ConnectSessionTrack> = emptyList()
+    private var cachedTracksRecordingId: String? = null
+    // Guards the one-shot re-assert so position broadcasts arriving before our
+    // load echoes back don't make us re-send it repeatedly.
+    private var reassertingTracks = false
+
     private val _pendingTransfer = MutableStateFlow<String?>(null)
     override val pendingTransfer: StateFlow<String?> = _pendingTransfer.asStateFlow()
 
@@ -421,6 +429,14 @@ class ConnectServiceImpl @Inject constructor(
     }
 
     private suspend fun reactToState(old: ConnectState?, new: ConnectState) {
+        // Remember the tracklist whenever the server has one, so we can re-assert
+        // it if the server later forgets it (see the active-device block below).
+        if (new.tracks.isNotEmpty()) {
+            cachedTracks = new.tracks
+            cachedTracksRecordingId = new.recordingId
+            reassertingTracks = false
+        }
+
         // Clear pending command if the server confirmed the expected transition
         val cmd = _pendingCommand.value
         if (cmd != null) {
@@ -500,6 +516,29 @@ class ConnectServiceImpl @Inject constructor(
             }
             stopPositionReporting()
             return
+        }
+
+        // Server forgot our tracklist (it restarted and rehydrated the session
+        // from the saved position only). We still hold it — re-assert the load so
+        // viewers' display and the server's next/prev get the tracks back.
+        // handleLoad keeps us active and honors the index/position we pass.
+        if (new.tracks.isEmpty() && cachedTracks.isNotEmpty() &&
+            cachedTracksRecordingId == new.recordingId && !reassertingTracks) {
+            reassertingTracks = true
+            val idx = mediaControllerRepository.currentTrackIndex.value
+            Log.d(TAG, "reactToState: server tracks empty — re-asserting load (${cachedTracks.size} tracks, idx=$idx)")
+            sendLoad(
+                showId = new.showId ?: mediaControllerRepository.currentShowId.value ?: "",
+                recordingId = new.recordingId ?: cachedTracksRecordingId ?: "",
+                tracks = cachedTracks,
+                trackIndex = idx,
+                positionMs = mediaControllerRepository.currentPosition.value.toInt(),
+                durationMs = mediaControllerRepository.duration.value.toInt(),
+                date = new.date,
+                venue = new.venue,
+                location = new.location,
+                autoplay = mediaControllerRepository.isPlaying.value,
+            )
         }
 
         // When this device just became active (e.g. transfer in), sync local player
