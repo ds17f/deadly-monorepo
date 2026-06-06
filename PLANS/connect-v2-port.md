@@ -21,21 +21,73 @@ Working branch: **`connect-v2-port`** (off `main`; distinct from the stale
   live: a real browser completed WS upgrade → cookie auth → device register →
   state snapshot (`ws/connect: authenticated` + `registerDevice` in api logs).
   Full two-browser transport/transfer smoke test still worth doing.
-- ✅ **Layer 3 — iOS** — built green on `connect-v2-ios` (off `main` post-#50).
-  Additive `ConnectService`/`ConnectModels`/`ConnectScreen`/`ConnectSheet` ported
-  near-verbatim; engine (`StreamPlayer`/`AudioStreamEngine`) gained
-  `skipTo(autoplay:)` + public `onTrackComplete` reconciled into main's
-  DEAD-335-rewritten engine; `MiniPlayerServiceImpl` rewritten to merge main's
-  skeleton/`restoredTrack` system with Connect remote-state precedence;
-  DI + lifecycle wired (`AppContainer`, `deadlyApp`); player surfaces
-  (`PlayerScreen`, `MiniPlayerOverlay`, `ShowDetailScreen`, `SettingsScreen`)
-  routed through `MiniPlayerService`. `xcodebuild ... -destination 'generic/platform=iOS Simulator'`
-  → **BUILD SUCCEEDED** on the remote Mac. Runtime two-device smoke test + device
-  install (`make ios-remote-install`, needs `KEYCHAIN_PASSWORD`) still TODO.
-- ⏳ **Layer 4 — Android** — not started.
+- ✅ **Layer 3 — iOS** — **PR #51** (`connect-v2-ios`, off `main` post-#50),
+  awaiting merge. Additive `ConnectService`/`ConnectModels`/`ConnectScreen`/
+  `ConnectSheet`; engine (`StreamPlayer`/`AudioStreamEngine`) gained
+  `skipTo(autoplay:)` + public `onTrackComplete` + `loadedTracks` accessor,
+  reconciled into main's DEAD-335-rewritten engine; `MiniPlayerServiceImpl`
+  merges main's skeleton/`restoredTrack` shell with Connect remote-state;
+  DI + lifecycle wired; player surfaces routed through `MiniPlayerService`.
+  Builds green on the remote Mac; bug-fixed against local docker + a real
+  device ↔ web. Remote-control fixes in the same PR: offline play/pause
+  spinner; **client-resolve display metadata** (see decision below); web
+  venue/date from Archive.org + "Invalid Date" killed; transfer-in lands at
+  the server position even when the receiver was paused; show-page now-playing
+  indicator when remote; desktop queue rail fills the column.
+  Still TODO: device install (`make ios-remote-install`, needs
+  `KEYCHAIN_PASSWORD`) + a real two-device beta smoke pass.
+- ⏳ **Layer 4 — Android** — **next.** Clean `core/connect/` module on the
+  reference branch; reconcile media/session edits against main's rewritten
+  `DeadlyMediaSessionService.kt` + Android Auto work. Builds locally (Android
+  never builds remote). See Layer 4 section below.
 
 **First shippable unit = Layer 1 + Layer 2 together** (atomic — shipped in #50).
-Next concrete step: ship/smoke-test iOS (Layer 3), then Android.
+iOS (Layer 3) is in PR #51. Next concrete step: **Android (Layer 4)**.
+
+### Key architectural decision: client-resolve display metadata (supersedes the server track-cache idea)
+The shared `ConnectState` is the authority **only for live transport** the
+server alone knows: `showId`, `recordingId`, `trackIndex`, `positionMs`/
+`positionTs`, `playing`, active device, volume. **Everything displayable**
+(track title, duration, count, show date/venue) is **resolved on each client**
+from the show it already loads locally, indexed by the session's `trackIndex` —
+*not* carried as load-bearing server state.
+
+Why: the position-only hydrate (cold open / restart) leaves `tracks` empty and
+date/venue null in server state, which surfaced as blank subtitles, a frozen
+jogger (`position ÷ 0`), missing "next", and web "Invalid Date". A server-side
+per-recording track cache was built **and then reverted** (commits `f1e82351` →
+`f56f5e87`) once we realized every client already fetches the show to play it —
+so the data is on the client; routing it through the server only added a way to
+get it wrong. Resolution per platform:
+- **iOS** reads title/duration/show-info from `StreamPlayer.loadedTracks[trackIndex]`
+  + `TrackItem.metadata`.
+- **Web** reads its fetched tracks for the title and pulls date/venue from the
+  `archive.org/metadata` it already loads (`fetchArchiveShowMeta`); the showId
+  slug (`YYYY-MM-DD-…`) is the date fallback.
+
+Android (Layer 4) should follow the same rule: resolve display metadata locally;
+treat `ConnectState` as transport only.
+
+### Key decisions made during the iOS (Layer 3) port
+- **Connect starts on `willEnterForeground`, not `scenePhase .active`** — main
+  uses a `UIApplicationDelegateAdaptor`, under which scene-phase `.active`
+  doesn't fire reliably (main's own sync code notes this). Stop stays on
+  `scenePhase .background` (reliable); network-restore reconnect rides
+  `networkMonitor.isConnected`.
+- **Transfer-in seek when paused**: the audio engine drops `seek(to:)` while
+  not playing, so on becoming active the position is stashed as
+  `pendingSeekOnFirstPlay` (consumed by `play()`'s first-play dance) instead —
+  otherwise a freshly-hydrated receiver starts the track from 0:00.
+- **`onLoadShow` uses main's native `playTrack(at:source:autoPlay:)`** instead of
+  the reference's poll-until-playing-then-pause hack — main's `loadQueue`/engine
+  already honor `autoPlay:` (the new `skipTo(autoplay:)` adds the paused-load path).
+- **`MiniPlayerServiceImpl` merged**, not replaced: main's skeleton/`restoredTrack`
+  launch shell is preserved; Connect's `remote` (non-active shared session) state
+  takes precedence in every computed property, and the `!isSkeleton` action
+  guards now sit *after* the remote-control branch so remote commands still send.
+- **Player UI keeps main's buffering/preparing spinner states** and folds
+  `isPendingCommand` into the same spinner condition; transport routes through
+  `MiniPlayerService` so the screen is remote-aware.
 
 ### Key decisions made during the iOS (Layer 3) port
 - **Connect starts on `willEnterForeground`, not `scenePhase .active`** — main

@@ -47,14 +47,20 @@ home for **playback-position sync** (deliberately cut from REST) and the
 **presence layer** the social "hear" feature depends on.
 - **Layered re-integration** (no rebase — PR #48 rewrote the player surfaces the
   branch built on), using `connect-v2` as reference. **API (Layer 1) + web
-  client (Layer 2) shipped in PR #50** (atomic unit; web was the only live v1
-  consumer). **iOS (Layer 3) ported and builds green on `connect-v2-ios`** —
-  runtime two-device smoke test + device install still TODO. Remaining:
-  **Android (Layer 4)**. Full strategy + status in
+  client (Layer 2) shipped in PR #50.** **iOS (Layer 3) in PR #51**
+  (`connect-v2-ios`) with a round of remote-control fixes — awaiting merge +
+  beta smoke test. Remaining: **Android (Layer 4)**. Full strategy + status in
   [`PLANS/connect-v2-port.md`](connect-v2-port.md). Still TODO: promote
   `docs/connect-v2-architecture.md` into a numbered ADR (`docs/adr/`).
+- **Display metadata is client-resolved**, not server state: `ConnectState`
+  carries live transport only (ids/index/position/playing/active); each client
+  derives title/duration/date/venue from the show it already loads. A
+  server-side track cache was tried and reverted. Android must follow this.
 - **Revisit the state model with web as a first-class participant** — a browser
   tab is now a controller/target, which changes device identity and presence.
+- **Pre-ship gate (mobile):** before any App Store iOS/Android build, confirm
+  the protocol carries presence/device-identity *additively* — shipped apps
+  can't be force-updated, so the wire protocol is the one-way door.
 
 ### 3. Web profile — social (`/me` 1b)
 Friends graph + listening-privacy controls. No backend yet — its own design +
