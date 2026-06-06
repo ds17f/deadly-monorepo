@@ -893,6 +893,14 @@ export default function PlayerProvider({
     if (!audio || !tracksRef.current) return;
     if (audio.currentTime > PREV_TRACK_THRESHOLD || currentTrackIndexRef.current === 0) {
       audio.currentTime = 0;
+      // Propagate the restart as a same-index seek so remote viewers' scrubbers
+      // snap back immediately instead of waiting for the next position report —
+      // matches iOS/Android, where restart-current sends seek(index, 0).
+      sendCommandRef.current("seek", {
+        trackIndex: currentTrackIndexRef.current,
+        positionMs: 0,
+        durationMs: isFinite(audio.duration) ? Math.round(audio.duration * 1000) : 0,
+      });
     } else {
       setCurrentTrackIndex((prev) => Math.max(0, prev - 1));
       sendCommandRef.current("prev");
