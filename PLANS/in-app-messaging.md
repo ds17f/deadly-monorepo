@@ -292,6 +292,27 @@ fetch fires regardless of sign-in state.
 - **Active queue** = not dismissed; **archive** = the rest. Unread badge = active
   & unseen.
 
+### Encoding & rendering (verified — applies to web too)
+Storing messages as JSON is safe for newlines, emoji, and arbitrary Unicode —
+this was tested end-to-end, not assumed. A deliberately nasty payload (multiple
+newlines + a blank line, `😀🎶`, a **ZWJ** emoji `👨‍👩‍👧‍👦`, `café`/`naïve`,
+`日本語`, a tab, both quote types) round-tripped **byte-identical** through the
+real path: `createNotification` → SQLite `TEXT` → `getActiveNotifications`, and
+again through a client `JSON.stringify`/`parse` blob. JSON escapes `\n`, encodes
+emoji as UTF-8, and `JSONEncoder` / `kotlinx.serialization` / `UserDefaults` /
+DataStore all preserve them losslessly. **Storage is not the risk.** What the
+implementer must get right:
+- **Render newlines.** Web does (`whitespace-pre-wrap`); SwiftUI `Text` and
+  Compose `Text` honor `\n` by default — just don't strip/normalize it.
+- **Decode as UTF-8** (the default on both platforms).
+- **Length-limit counting differs by platform (nuance, not a bug).** The server
+  caps with JS `String.length` = **UTF-16 code units**, so an emoji/ZWJ sequence
+  consumes more of the 120/2000 budget than its visible glyph count (the test
+  body was 129 UTF-16 units / 123 code points / 160 bytes). Swift's
+  `String.count` (grapheme clusters) would disagree — so a client-side counter,
+  if shown, won't match the server's. The **server is the authority**; clients
+  display only. Heavy-emoji titles just fit slightly fewer characters.
+
 ### Local store decision (recommended): a JSON blob in platform prefs, NOT the DB
 Web uses `localStorage`. The mobile-faithful equivalent is a serialized JSON blob
 in **`AppPreferences`** (Android DataStore / iOS `UserDefaults`) plus an in-memory
