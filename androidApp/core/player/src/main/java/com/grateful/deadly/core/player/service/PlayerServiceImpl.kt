@@ -224,10 +224,15 @@ class PlayerServiceImpl @Inject constructor(
             } else {
                 val currentPositionMs = mediaControllerRepository.currentPosition.value
                 val wasPlaying = mediaControllerRepository.isPlaying.value
+                val currentIndex = mediaControllerRepository.currentTrackIndex.value
 
+                // Apply the threshold rule locally and remember the ACTUAL target
+                // index so we can propagate it as an index-carrying seek below.
+                val targetIndex: Int
                 if (currentPositionMs > PREVIOUS_TRACK_THRESHOLD_MS) {
                     Log.d(TAG, "Position ${currentPositionMs}ms > ${PREVIOUS_TRACK_THRESHOLD_MS}ms, restarting track")
                     mediaControllerRepository.seekToPosition(0L)
+                    targetIndex = currentIndex
                 } else {
                     val queueInfo = queueInfo.value
                     if (queueInfo.hasPrevious) {
@@ -236,12 +241,19 @@ class PlayerServiceImpl @Inject constructor(
                         if (!wasPlaying) {
                             mediaControllerRepository.play()
                         }
+                        targetIndex = currentIndex - 1
                     } else {
                         Log.d(TAG, "No previous track - restarting current track")
                         mediaControllerRepository.seekToPosition(0L)
+                        targetIndex = currentIndex
                     }
                 }
-                connectService.sendPrev()
+                // Propagate the ACTUAL result as an index-carrying seek. A blind
+                // sendPrev() would make the server decrement the index
+                // unconditionally and echo back, overriding restart-current.
+                val durationMs = mediaControllerRepository.duration.value.toInt()
+                Log.d(TAG, "seekToPrevious: local -> sendSeek(track=$targetIndex)")
+                connectService.sendSeek(targetIndex, 0, durationMs)
             }
         } catch (e: Exception) {
             Log.e(TAG, "🕒🎵 [ERROR] PlayerService seekToPrevious failed at ${System.currentTimeMillis()}", e)
