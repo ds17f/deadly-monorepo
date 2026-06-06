@@ -775,13 +775,14 @@ export default function HeaderPlayer() {
       className={`hidden flex-1 items-center gap-4 lg:flex ${showLoaded ? "cursor-pointer" : ""}`}
       onClick={handleBarClick}
     >
-      {/* LEFT: art + info (click → full now-playing view) */}
+      {/* LEFT: art + info (click → the playing show's page). Expanding the full
+          player stays on the empty bar area + the fullscreen button. */}
       <div className="flex w-1/4 min-w-0 items-center gap-3">
         {showLoaded ? (
           <button
-            onClick={() => setExpanded(true)}
-            className="flex min-w-0 items-center gap-3 text-left"
-            title="Open full player"
+            onClick={openPlayingShow}
+            className="group flex min-w-0 items-center gap-3 text-left"
+            title="Go to show"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -791,11 +792,11 @@ export default function HeaderPlayer() {
               referrerPolicy="no-referrer"
             />
             <div className="min-w-0">
-              <p className="truncate text-sm font-medium text-white">
+              <p className="truncate text-sm font-medium text-white transition group-hover:[text-shadow:0_0_8px_rgba(255,255,255,0.6)]">
                 {displayTrackTitle ?? showInfo?.date ?? "--"}
               </p>
               {showInfo ? (
-                <p className="truncate text-xs text-white/40">
+                <p className="truncate text-xs text-white/40 group-hover:text-white/60">
                   {showInfo.date} — {showInfo.venue}
                 </p>
               ) : null}
@@ -1057,25 +1058,31 @@ export default function HeaderPlayer() {
             }`}
           >
             {/* Full ticket in fullscreen — show the whole stub (contain),
-                not the square crop the mini bar uses. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={artSrc}
-              alt=""
-              referrerPolicy="no-referrer"
-              className={`flex-shrink-0 rounded-xl ${
-                artIsLogo
-                  ? "aspect-square w-[min(34vh,18rem)] object-cover"
-                  : "max-h-[34vh] max-w-[min(90vw,30rem)] object-contain shadow-2xl shadow-black/50"
-              }`}
-            />
+                not the square crop the mini bar uses. Clicking it goes to the show. */}
+            <button onClick={openPlayingShow} className="flex-shrink-0 transition hover:brightness-105" title="Go to show">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={artSrc}
+                alt=""
+                referrerPolicy="no-referrer"
+                className={`rounded-xl ${
+                  artIsLogo
+                    ? "aspect-square w-[min(34vh,18rem)] object-cover"
+                    : "max-h-[34vh] max-w-[min(90vw,30rem)] object-contain shadow-2xl shadow-black/50"
+                }`}
+              />
+            </button>
             <div className="max-w-3xl flex-shrink-0 text-center">
-              <p className="text-3xl font-bold text-white">
-                {displayTrackTitle ?? showInfo?.date ?? "--"}
-              </p>
-              {subtitleLine && (
-                <p className="mt-2 text-lg text-white/70">{subtitleLine}</p>
-              )}
+              {/* Title + show line link to the show's page (the obvious target;
+                  the "Now Playing" header up top does the same but is easy to miss). */}
+              <button onClick={openPlayingShow} className="group" title="Go to show">
+                <p className="text-3xl font-bold text-white transition group-hover:[text-shadow:0_0_18px_rgba(255,255,255,0.65)]">
+                  {displayTrackTitle ?? showInfo?.date ?? "--"}
+                </p>
+                {subtitleLine && (
+                  <p className="mt-2 text-lg text-white/70 group-hover:text-white/90">{subtitleLine}</p>
+                )}
+              </button>
               {displayTrackCount > 1 && (
                 <p className="mt-1 text-sm tabular-nums text-white/30">
                   Track {displayTrackIndex + 1} of {displayTrackCount}
