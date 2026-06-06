@@ -21,8 +21,8 @@ Working branch: **`connect-v2-port`** (off `main`; distinct from the stale
   live: a real browser completed WS upgrade → cookie auth → device register →
   state snapshot (`ws/connect: authenticated` + `registerDevice` in api logs).
   Full two-browser transport/transfer smoke test still worth doing.
-- ✅ **Layer 3 — iOS** — **PR #51** (`connect-v2-ios`, off `main` post-#50),
-  awaiting merge. Additive `ConnectService`/`ConnectModels`/`ConnectScreen`/
+- ✅ **Layer 3 — iOS** — **merged in PR #51** (`14dc2df3` on `main`).
+  Additive `ConnectService`/`ConnectModels`/`ConnectScreen`/
   `ConnectSheet`; engine (`StreamPlayer`/`AudioStreamEngine`) gained
   `skipTo(autoplay:)` + public `onTrackComplete` + `loadedTracks` accessor,
   reconciled into main's DEAD-335-rewritten engine; `MiniPlayerServiceImpl`
@@ -286,20 +286,53 @@ also moved (`MiniPlayerServiceImpl`, `PlayerScreen`, `MiniPlayerOverlay`,
 - **Exit check:** builds on the remote Mac (`make ios-remote-install`); can
   control web/Android from device and vice versa.
 
-### Layer 4 — Android (MEDIUM risk — reconcile)
+### Layer 4 — Android (MEDIUM risk — reconcile) — IN PROGRESS (`connect-v2-android`)
 
-connect-v2 adds a clean `core/connect/` module (`ConnectService`,
-`ConnectServiceImpl`, DI) — additive. Reconcile the media/player edits against
-main's heavily-rewritten `DeadlyMediaSessionService.kt` (+199 on main) and
-`MediaControllerRepository.kt`, plus the new Android Auto work on main
-(DEAD-336/337/342/360).
+Working branch **`connect-v2-android`** off `main` (post-#51). Reference:
+`origin/connect-v2`. **~2,125 lines / 36 files** on the reference.
 
-- Port `core/connect/`, `ConnectModels`, settings `ConnectScreen`/`Sheet`/VM,
-  player `PlayerConnectSheet`, `PlaybackCommandInterceptor`.
-- Reconcile session/notification command interception + hardware volume keys
-  with main's session service rewrite.
+**Scope (from `git diff 5dfbcc20 origin/connect-v2 -- androidApp/**`):**
+
+*Additive — port cleanly (new `core/connect/` module):*
+- `core/connect/ConnectServiceImpl.kt` (**704 lines** — WS register/heartbeat,
+  clock-sync, state reconciliation, transport/transfer/volume, reconnect),
+  `ConnectService.kt`, `di/ConnectModule.kt`, `core/model/ConnectModels.kt`,
+  `core/model/AppLaunchState.kt`; module Gradle + `settings.gradle.kts` wiring.
+- Settings `screens/connect/ConnectScreen.kt` / `ConnectSheet.kt` (295) /
+  `ConnectViewModel.kt` + `SettingsNavigation` entry.
+- `MainActivity.kt` (+34, lifecycle start/stop), `MainNavigation.kt`.
+
+*Reconcile against main's rewrites (the real work — confirm main's current
+line-counts/paths when starting; module layout may have shifted):*
+- `core/media/service/DeadlyMediaSessionService.kt`,
+  `core/media/repository/MediaControllerRepository.kt`,
+  `core/media/service/PlaybackCommandInterceptor.kt` — session/notification
+  command interception + hardware volume keys vs main's rewritten media session
+  and the Android Auto work (DEAD-336/337/342/360).
+- `core/player/service/PlayerServiceImpl.kt` (+175),
+  `core/miniplayer/service/MiniPlayerServiceImpl.kt` (+95),
+  `core/miniplayer/LastPlayedTrackService.kt` (restore-skip when Connect has a
+  session — mirror iOS `PlaybackRestorationService`),
+  `feature/miniplayer/MiniPlayerScreen.kt`/`MiniPlayerViewModel.kt`,
+  `feature/player/PlayerScreen.kt` + secondary controls,
+  `feature/playlist/PlaylistViewModel.kt` (+229 — sends load/seek to Connect).
+
+**Hard rules carried from iOS (do NOT relitigate):**
+1. **Client-resolve display metadata** (see decision above) — Android reads
+   title/duration/date/venue from the show it loads locally, indexed by
+   `connectState.trackIndex`. `ConnectState` is transport-only. Do **not** add a
+   server track cache (we built and reverted one).
+2. **Transfer-in position**: make sure becoming-active lands at the server
+   position even if the receiver was paused/just-hydrated (iOS needed
+   `pendingSeekOnFirstPlay`; find the Media3/ExoPlayer equivalent — seeking a
+   prepared-but-not-playing player, or seek-on-ready).
+3. **Now-playing-when-remote**: the show/track list "playing" indicator must
+   reflect `connectState` (index + playing), not just the local player.
+4. **Pending-command spinner** only while genuinely remote-controlling — never
+   strand the UI when the socket is down.
+
 - **Exit check:** builds locally (`make android-install` — Android builds run on
-  this machine, never remote); parity with iOS/web.
+  this machine, never remote); two-device parity with iOS/web.
 
 ## Optional: a rebase spike (cheap reality check, throwaway)
 
