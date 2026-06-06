@@ -15,6 +15,7 @@ import { analyticsRoutes } from "./routes/analytics.js";
 import { trendingRoutes } from "./routes/trending.js";
 import { popularRoutes } from "./routes/popular.js";
 import { betaRoutes } from "./routes/beta.js";
+import { notificationRoutes } from "./routes/notifications.js";
 import { devTokenRoutes } from "./auth/dev-token.js";
 import { isDev } from "./env.js";
 
@@ -46,6 +47,7 @@ export function buildApp() {
         { name: "connect", description: "Spotify Connect-style playback" },
         { name: "analytics", description: "Anonymous usage analytics" },
         { name: "beta", description: "Beta applicant management" },
+        { name: "notifications", description: "In-app messaging / admin notifications" },
       ],
     },
   });
@@ -67,6 +69,7 @@ export function buildApp() {
   app.register(trendingRoutes);
   app.register(popularRoutes);
   app.register(betaRoutes);
+  app.register(notificationRoutes);
 
   if (isDev) {
     app.register(devTokenRoutes);

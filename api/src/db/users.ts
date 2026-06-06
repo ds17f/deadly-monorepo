@@ -176,6 +176,27 @@ function initSchema(db: Database.Database): void {
       key TEXT PRIMARY KEY,
       value TEXT NOT NULL
     );
+
+    -- In-app messaging: the server is a dumb publisher of a flat message list.
+    -- There is deliberately NO per-user state table — seen/dismissed lives on
+    -- each client (localStorage / Room / GRDB). A global broadcast is one row,
+    -- never one-per-account. The monotonic integer id doubles as the cursor
+    -- clients track (?since=<id>). See PLANS/in-app-messaging.md.
+    CREATE TABLE IF NOT EXISTS notifications (
+      id             INTEGER PRIMARY KEY AUTOINCREMENT,
+      author_id      TEXT NOT NULL REFERENCES accounts(id),
+      scope          TEXT NOT NULL DEFAULT 'global',  -- 'global' | 'direct' (future)
+      target_user_id TEXT REFERENCES accounts(id) ON DELETE CASCADE, -- null for global
+      title          TEXT NOT NULL,
+      body           TEXT NOT NULL,
+      level          TEXT NOT NULL DEFAULT 'info',     -- info | warn
+      created_at     INTEGER NOT NULL DEFAULT (unixepoch()),
+      expires_at     INTEGER,                          -- optional auto-retire; drives cold-start filter
+      deleted_at     INTEGER                           -- admin tombstone / unsend
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_notifications_scope_id
+      ON notifications(scope, id);
   `);
 
   db.exec(`
