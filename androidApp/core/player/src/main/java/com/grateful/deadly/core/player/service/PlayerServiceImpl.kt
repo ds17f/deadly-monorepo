@@ -174,9 +174,20 @@ class PlayerServiceImpl @Inject constructor(
             val isActive = connectService.isActiveDevice.value
             val isRemoteControlling = state != null && state.activeDeviceId != null && !isActive
 
-            if (isRemoteControlling) {
-                Log.d(TAG, "seekToNext: remote -> sendNext")
-                connectService.sendNext()
+            if (isRemoteControlling && state != null) {
+                // Client-resolve navigation: the server's handleNext no-ops on an
+                // empty server-side tracks list (position-only hydrate / transfer).
+                // Compute the next index from our locally-loaded queue and send it
+                // as a seek — handleSeek sets trackIndex directly, no server tracks
+                // needed. See PLANS/connect-v2-android-debugging.md.
+                val count = mediaControllerRepository.mediaItemCount.value
+                val nextIndex = state.trackIndex + 1
+                if (count > 0 && nextIndex >= count) {
+                    Log.d(TAG, "seekToNext: remote, already at last track ($count) — ignoring")
+                } else {
+                    Log.d(TAG, "seekToNext: remote -> sendSeek(track=$nextIndex)")
+                    connectService.sendSeek(nextIndex, 0, state.durationMs)
+                }
             } else {
                 Log.d(TAG, "seekToNext: local -> seekToNext + sendNext")
                 val wasPlaying = mediaControllerRepository.isPlaying.value
@@ -198,9 +209,18 @@ class PlayerServiceImpl @Inject constructor(
             val isActive = connectService.isActiveDevice.value
             val isRemoteControlling = state != null && state.activeDeviceId != null && !isActive
 
-            if (isRemoteControlling) {
-                Log.d(TAG, "seekToPrevious: remote -> sendPrev")
-                connectService.sendPrev()
+            if (isRemoteControlling && state != null) {
+                // Client-resolve navigation (see seekToNext). Go to the previous
+                // track via an index-carrying seek; if already at the first track,
+                // restart it. No dependency on the server's tracks list.
+                val prevIndex = state.trackIndex - 1
+                if (prevIndex < 0) {
+                    Log.d(TAG, "seekToPrevious: remote, at first track -> restart")
+                    connectService.sendSeek(state.trackIndex, 0, state.durationMs)
+                } else {
+                    Log.d(TAG, "seekToPrevious: remote -> sendSeek(track=$prevIndex)")
+                    connectService.sendSeek(prevIndex, 0, state.durationMs)
+                }
             } else {
                 val currentPositionMs = mediaControllerRepository.currentPosition.value
                 val wasPlaying = mediaControllerRepository.isPlaying.value
