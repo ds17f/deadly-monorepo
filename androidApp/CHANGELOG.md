@@ -1,11 +1,16 @@
 # Changelog
 
+## [2.32.1] - 2026-06-07
+
+### Bug Fixes
+* background keepalive + external track-skip sync (#54) (06c11059)
+* forward external media-control pause/play to Connect (#53) (d8ae46aa)
+
+
 ## [2.32.0] - 2026-06-06
 
 ### New Features
 * add Connect‑v2 release notes (7b11af22)
-
-
 ## [2.32.0] - 2026-06-06
 
 ### New Features
