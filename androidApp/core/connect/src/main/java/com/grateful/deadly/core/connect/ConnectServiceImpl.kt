@@ -175,6 +175,40 @@ class ConnectServiceImpl @Inject constructor(
             }
         }
 
+        // Forward LOCAL transport changes that bypass the in-app buttons —
+        // Bluetooth/headset media keys, the lock-screen/notification controls,
+        // Android Auto, and audio-focus pauses all drive ExoPlayer directly
+        // through the MediaSession and never call sendPause()/sendPlay(). Without
+        // this, the server keeps thinking the active device is playing, its next
+        // position broadcast arrives as playing=true, and reactToState resumes the
+        // audio a few seconds after the user paused from their headphones.
+        //
+        // We watch playWhenReady (play INTENT), not isPlaying: isPlaying drops to
+        // false on every buffering stall, which would otherwise fire a spurious
+        // pause mid-playback (and reactToState would turn that into a real pause).
+        // playWhenReady stays true through buffering and flips only on an actual
+        // pause/resume — exactly the server's `playing` semantics. We push only a
+        // DIVERGENCE from the server's view, so server-driven changes don't echo:
+        // reactToState updates _connectState before it touches the player, so by the
+        // time it flips playWhenReady the local value already equals
+        // connectState.playing and nothing is sent. A duplicate send from the in-app
+        // toggle is harmless — handlePlay/handlePause are no-ops when already in the
+        // target state.
+        scope.launch {
+            mediaControllerRepository.playWhenReady.collect { localIntendsPlay ->
+                if (!_isActiveDevice.value) return@collect
+                val serverPlaying = _connectState.value?.playing ?: return@collect
+                if (localIntendsPlay == serverPlaying) return@collect
+                if (localIntendsPlay) {
+                    Log.d(TAG, "playWhenReady reconcile: local play diverged from server (paused) — sendPlay")
+                    sendPlay()
+                } else {
+                    Log.d(TAG, "playWhenReady reconcile: local pause diverged from server (playing) — sendPause")
+                    sendPause()
+                }
+            }
+        }
+
         // When network is restored while we have a pending reconnect, cancel the
         // backoff and reconnect immediately (mirrors iOS handleNetworkRestored).
         scope.launch {

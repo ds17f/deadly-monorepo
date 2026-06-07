@@ -86,6 +86,35 @@ final class ConnectService: NSObject {
         self.authService = authService
         self.streamPlayer = streamPlayer
         super.init()
+
+        // Forward LOCAL play/pause that bypassed the in-app buttons — the lock
+        // screen, Bluetooth/headset keys, CarPlay, and audio-session interruptions
+        // all drive StreamPlayer directly and never call sendPlay()/sendPause().
+        // Without this the server keeps thinking the active device is playing, its
+        // next position broadcast arrives as playing=true, and reactToState resumes
+        // the audio seconds after the user paused from their headphones.
+        streamPlayer.onPlayIntentChange = { [weak self] intent in
+            self?.reconcileLocalPlayIntent(intent)
+        }
+    }
+
+    /// Push a divergence between local play intent and the server's `playing` to
+    /// the session, but only while we're the active device. We send only on a
+    /// MISMATCH so server-driven changes don't echo: reactToState sets
+    /// `connectState` before it touches the player, so by the time the engine
+    /// reports the resulting intent the local value already equals the server's
+    /// and nothing is sent. A duplicate from the in-app toggle is harmless —
+    /// handlePlay/handlePause are no-ops when already in the target state.
+    private func reconcileLocalPlayIntent(_ localIntendsPlay: Bool) {
+        guard isActiveDevice, let serverPlaying = connectState?.playing else { return }
+        guard localIntendsPlay != serverPlaying else { return }
+        if localIntendsPlay {
+            logger.info("playIntent reconcile: local play diverged from server (paused) — sendPlay")
+            sendPlay()
+        } else {
+            logger.info("playIntent reconcile: local pause diverged from server (playing) — sendPause")
+            sendPause()
+        }
     }
 
     // MARK: - Public Interface
