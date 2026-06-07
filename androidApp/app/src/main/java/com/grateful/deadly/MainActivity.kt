@@ -64,7 +64,13 @@ class MainActivity : ComponentActivity() {
         super.onStop()
         mediaControllerRepository.notifyAppBackgrounded()
         analyticsService.flush()
-        connectService.stop()
+        // Intentionally do NOT stop Connect here. The active, still-playing device
+        // must stay in the session while backgrounded/locked (the foreground media
+        // service keeps the process — and thus the WS + heartbeat — alive). Tearing
+        // it down made the server clear the session ~4s after lock, flipping every
+        // viewer to "paused" and rewinding the player on return. The socket closes
+        // on logout or process death; the server's 45s heartbeat sweep is the
+        // backstop. See docs/adr/0007-connect-background-socket-lifecycle.md.
     }
 
     override fun onNewIntent(intent: Intent) {

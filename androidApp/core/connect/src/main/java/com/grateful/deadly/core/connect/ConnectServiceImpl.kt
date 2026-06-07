@@ -223,7 +223,15 @@ class ConnectServiceImpl @Inject constructor(
         val token = authService.getAuthToken()
         Log.d(TAG, "startIfAuthenticated: token=${if (token != null) "present" else "null"}, shouldConnect=$shouldConnect")
         if (token == null) return
-        if (shouldConnect) return
+        if (shouldConnect) {
+            // Already meant to be connected. Since we no longer stop() on
+            // background, a socket that died while backgrounded (network drop)
+            // leaves shouldConnect=true; reconnect now that we're foreground
+            // instead of no-opping. handleNetworkRestored is a no-op if still
+            // connected.
+            if (!_isConnected.value) handleNetworkRestored()
+            return
+        }
         shouldConnect = true
         reconnectAttempt = 0
         connect()

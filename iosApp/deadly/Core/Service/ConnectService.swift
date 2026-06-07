@@ -123,7 +123,14 @@ final class ConnectService: NSObject {
         let hasToken = authService.token != nil
         logger.info("startIfAuthenticated: token=\(hasToken ? "present" : "null", privacy: .public) shouldConnect=\(self.shouldConnect, privacy: .public)")
         guard hasToken else { return }
-        guard !shouldConnect else { return }
+        if shouldConnect {
+            // Already meant to be connected. Since we no longer stop() on
+            // background, a socket iOS killed during suspension leaves
+            // shouldConnect=true; reconnect on foreground instead of no-opping.
+            // handleNetworkRestored is a no-op if still connected.
+            if !isConnected { handleNetworkRestored() }
+            return
+        }
         shouldConnect = true
         reconnectAttempt = 0
         Task { await connect() }
