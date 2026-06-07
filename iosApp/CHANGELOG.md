@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.33.0] - 2026-06-06
+
+### New Features
+- feat(ios/connect): Add Connect‑v2 client and remote‑control polish
+- feat(all/connect): Shared protocol improvements (epoch, version monotonicity, crash‑safe state)
+
 ## [2.32.0] - 2026-06-04
 
 ### New Features
