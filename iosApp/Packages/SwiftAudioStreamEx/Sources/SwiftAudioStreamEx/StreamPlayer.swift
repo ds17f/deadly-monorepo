@@ -56,6 +56,19 @@ public final class StreamPlayer {
     /// uses this so the active device broadcasts the new track index to the session.
     public var onTrackComplete: (() -> Void)?
 
+    /// Called when play INTENT changes — true when the player wants to be playing
+    /// (`.playing`/`.buffering`), false when it has stopped (`.paused`/`.ended`/
+    /// `.idle`). Distinct from `playbackState.isPlaying`, which is false during
+    /// buffering stalls; intent stays true through a rebuffer and flips only on a
+    /// real pause/resume. Fires for EVERY pause source — including the lock screen,
+    /// Bluetooth/headset keys, and audio-session interruptions that drive the
+    /// engine directly — so Connect can forward those to the session. Transitional
+    /// states (`.loading`/`.error`) leave intent unchanged.
+    public var onPlayIntentChange: ((Bool) -> Void)?
+
+    /// Backing value for `onPlayIntentChange`; nil until the first definite state.
+    private var playIntent: Bool?
+
     /// Player output volume (0.0–1.0). Does not affect system volume.
     public var volume: Float {
         get { engine.volume }
@@ -438,6 +451,7 @@ public final class StreamPlayer {
             Task { @MainActor in
                 guard let self else { return }
                 self.playbackState = state
+                self.updatePlayIntent(for: state)
                 self.updateNowPlaying()
             }
         }
@@ -549,6 +563,22 @@ public final class StreamPlayer {
     }
 
     // MARK: - Private: state sync
+
+    /// Map an engine state to play intent and fire `onPlayIntentChange` on change.
+    /// `.buffering` counts as intending-to-play (a stall, not a pause), so a
+    /// rebuffer never reads as a pause. `.loading`/`.error` are transitional and
+    /// leave the last intent untouched.
+    private func updatePlayIntent(for state: PlaybackState) {
+        let intent: Bool
+        switch state {
+        case .playing, .buffering: intent = true
+        case .paused, .ended, .idle: intent = false
+        case .loading, .error: return
+        }
+        guard intent != playIntent else { return }
+        playIntent = intent
+        onPlayIntentChange?(intent)
+    }
 
     private func syncTrackFromEngine() {
         let index = engine.currentIndex

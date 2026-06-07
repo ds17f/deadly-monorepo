@@ -76,6 +76,15 @@ class MediaControllerRepository @Inject constructor(
     // Playback state flows
     private val _isPlaying = MutableStateFlow(false)
     val isPlaying: StateFlow<Boolean> = _isPlaying.asStateFlow()
+
+    // Play INTENT (playWhenReady), distinct from isPlaying: this stays true through
+    // buffering stalls and flips only on an actual pause/resume — including ones
+    // driven by external surfaces (Bluetooth/headset keys, lock screen, Android
+    // Auto, audio focus) that go straight to the session. Connect reconciles
+    // against this so a headphone pause propagates without a rebuffer being
+    // mistaken for a pause.
+    private val _playWhenReady = MutableStateFlow(false)
+    val playWhenReady: StateFlow<Boolean> = _playWhenReady.asStateFlow()
     
     private val _playbackState = MutableStateFlow(PlaybackState.DEFAULT)
     val playbackState: StateFlow<PlaybackState> = _playbackState.asStateFlow()
@@ -542,7 +551,15 @@ class MediaControllerRepository @Inject constructor(
                             currentIsPlaying = isPlaying
                             updatePlaybackState()
                         }
-                        
+
+                        override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
+                            // Tracks pause/resume intent across all surfaces (UI,
+                            // headset/Bluetooth, lock screen, Android Auto, audio
+                            // focus). Connect watches this to forward external pauses.
+                            Log.d(TAG, "🕒🎵 [AUDIO] playWhenReady=$playWhenReady (reason=$reason)")
+                            _playWhenReady.value = playWhenReady
+                        }
+
                         override fun onMediaMetadataChanged(mediaMetadata: MediaMetadata) {
                             _currentTrack.value = mediaMetadata
                         }
@@ -668,6 +685,7 @@ class MediaControllerRepository @Inject constructor(
                         _mediaItemCount.value = controller.mediaItemCount
                         _isPlaying.value = controller.isPlaying
                         currentIsPlaying = controller.isPlaying
+                        _playWhenReady.value = controller.playWhenReady
                         currentExoPlayerState = controller.playbackState
                         _duration.value = controller.duration.coerceAtLeast(0L)
                         _currentPosition.value = controller.currentPosition.coerceAtLeast(0L)
