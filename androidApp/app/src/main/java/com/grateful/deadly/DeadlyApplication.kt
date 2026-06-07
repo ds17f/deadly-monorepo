@@ -7,6 +7,7 @@ import androidx.media3.exoplayer.offline.DownloadNotificationHelper
 import com.grateful.deadly.core.api.usersync.FavoritesPushService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.media.download.DeadlyMediaDownloadServiceHost
+import com.grateful.deadly.core.notifications.NotificationCoordinator
 import com.grateful.deadly.core.usersync.UserSyncCoordinator
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
@@ -29,6 +30,9 @@ class DeadlyApplication : Application(), DeadlyMediaDownloadServiceHost {
     lateinit var userSyncCoordinator: UserSyncCoordinator
 
     @Inject
+    lateinit var notificationCoordinator: NotificationCoordinator
+
+    @Inject
     lateinit var favoritesPushService: FavoritesPushService
 
     @Inject
@@ -43,6 +47,7 @@ class DeadlyApplication : Application(), DeadlyMediaDownloadServiceHost {
     override fun onCreate() {
         super.onCreate()
         userSyncCoordinator.start()
+        notificationCoordinator.start()
 
         // One-time: push all pre-existing local data (favorites + top recents)
         // to the server so devices that predate granular push aren't stranded.

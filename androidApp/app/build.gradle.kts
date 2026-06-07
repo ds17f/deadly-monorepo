@@ -164,6 +164,7 @@ dependencies {
     implementation(project(":core:api:usersync"))
     implementation(project(":core:usersync"))
     implementation(project(":core:connect"))
+    implementation(project(":core:notifications"))
     implementation(project(":core:model"))
     implementation(project(":core:domain"))
     implementation(project(":core:api:auth"))

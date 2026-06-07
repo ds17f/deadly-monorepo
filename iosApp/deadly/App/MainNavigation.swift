@@ -35,6 +35,11 @@ struct MainNavigation: View {
                 NavigationStack(path: $homeStack) {
                     HomeScreen()
                         .settingsLogoButton($showingSettings, title: "Home")
+                        .toolbar {
+                            ToolbarItem(placement: .topBarTrailing) {
+                                NotificationBell()
+                            }
+                        }
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
                         }

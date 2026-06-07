@@ -122,6 +122,8 @@ struct deadlyApp: App {
                         _ = await container.favoritesPushService.flushPending()
                         _ = await container.userSyncApplyService.pullAndApply(reason: "cold_start")
                     }
+                    // In-app messages: public feed, pulled unconditionally.
+                    await container.notificationService.refresh(reason: "cold_start")
                 }
                 .onChange(of: container.authService.isSignedIn) { _, signedIn in
                     if signedIn {
@@ -151,6 +153,8 @@ struct deadlyApp: App {
                             _ = await container.userSyncApplyService.pullAndApply(reason: "foreground")
                         }
                     }
+                    // In-app messages: public feed, pulled unconditionally.
+                    Task { await container.notificationService.refresh(reason: "foreground") }
                 }
                 .onChange(of: container.networkMonitor.isConnected) { _, isConnected in
                     if isConnected {

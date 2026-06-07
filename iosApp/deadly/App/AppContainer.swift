@@ -37,6 +37,8 @@ final class AppContainer {
     let playbackRestorationService: PlaybackRestorationService
     let analyticsService: AnalyticsService
     let connectService: ConnectService
+    let notificationStore: NotificationStore
+    let notificationService: NotificationService
 
     /// True only during the first launch of the process. Cleared after Connect + restore complete.
     var isColdLaunch = true
@@ -334,6 +336,15 @@ final class AppContainer {
                     }
                 }
             }
+            // In-app messaging — public/global feed; store + fetch service.
+            // No auth, so it isn't wired into the sign-in flow; deadlyApp pulls
+            // it on cold start + foreground.
+            let notifStore = MainActor.assumeIsolated { NotificationStore() }
+            notificationStore = notifStore
+            notificationService = MainActor.assumeIsolated {
+                NotificationService(appPreferences: prefs, store: notifStore)
+            }
+
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)
             analytics.track("app_open")
             analytics.track("cold_start", props: ["duration_ms": coldStartMs])

@@ -36,6 +36,7 @@ import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.design.scaffold.AppScaffold
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.feature.home.navigation.homeGraph
+import com.grateful.deadly.notifications.NotificationBell
 import com.grateful.deadly.feature.settings.SettingsScreen
 import com.grateful.deadly.feature.settings.navigation.CONNECT_ROUTE
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
@@ -163,10 +164,17 @@ fun MainNavigation(
         isOffline = isOffline,
     )
 
-    // Augment top bar with logo click to open drawer
-    val augmentedTopBar = barConfig.topBar?.copy(
+    // Augment top bar with logo click to open drawer, and add the notifications
+    // bell to the home screen's actions (the app's primary landing surface).
+    val baseTopBar = barConfig.topBar
+    val augmentedTopBar = baseTopBar?.copy(
         onLogoClick = {
             scope.launch { drawerState.open() }
+        },
+        actions = if (currentRoute == "home") {
+            { NotificationBell() }
+        } else {
+            baseTopBar.actions
         }
     )
 

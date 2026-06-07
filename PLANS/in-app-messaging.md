@@ -21,7 +21,27 @@ nothing implemented. Commit the doc, decide later whether/when to build.
   - **Web:** `ui/src/lib/notifications.ts` (localStorage cache/cursor/merge/prune),
     `NotificationBell` in the shell header, admin compose page
     `ui/src/app/admin/notifications/`. `make ui-build` green.
-- ⏳ **Phase 2 (mobile consume)** and **Phase 3 (social 1:1 + push)** not started.
+- ✅ **Phase 2 built — mobile consume, both platforms** (branch `worktree-in-app-messaging`).
+  - **Android:** new `core/notifications` module — `Notification.kt` (wire/cached
+    models + `active`/`dismissed`/`unreadCount` helpers), `NotificationStore`
+    (SharedPreferences JSON blob + `StateFlow`, merge/prune/markSeen/dismiss),
+    `NotificationApiServiceImpl` (OkHttp GET, **no** auth header),
+    `NotificationCoordinator` (ProcessLifecycle `ON_START` + cold start, fires
+    **unconditionally**), Hilt `NotificationModule`. UI: `NotificationBell`
+    (badge + `ModalBottomSheet` inbox with dismissed archive) wired into the
+    **home** top-bar actions in `MainNavigation`; coordinator started in
+    `DeadlyApplication.onCreate`. `./gradlew assembleDebug` green.
+  - **iOS:** `Core/Notifications/` — `NotificationModels.swift`,
+    `NotificationStore` (`@Observable`, `UserDefaults` JSON blob, same
+    merge/prune/mark logic), `NotificationService` (reuses `APIClient`, no
+    token). UI: `Feature/Notifications/NotificationBell.swift` (badge + sheet
+    inbox, swipe-to-dismiss + dismissed `DisclosureGroup`) in the **Home** tab
+    `topBarTrailing`. Cold-start + `willEnterForegroundNotification` refresh
+    wired in `deadlyApp.swift`; store/service owned by `AppContainer`.
+    `make ios-remote-build` green.
+  - Both clients store local-only seen/dismiss, cold-start marks the capped
+    batch seen-not-dismissed (decision #8), and render `\n`/Unicode as-is.
+- ⏳ **Phase 3 (social 1:1 + push)** not started.
 
 ### Known limitation surfaced in Phase 1: retraction doesn't reach delivered copies
 The consume endpoint is a **forward-only** delta (`id > since`). So retiring
