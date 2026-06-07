@@ -161,7 +161,15 @@ struct deadlyApp: App {
         .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .background {
                 container.playbackRestorationService.saveNow()
-                container.connectService.stop()
+                // Intentionally do NOT stop Connect here. While audio plays, iOS
+                // keeps the app alive (background-audio), so the WS + heartbeat
+                // keep running and the active device stays in the session under
+                // lock. Tearing it down made the server clear the session ~4s
+                // after lock — every viewer flipped to "paused" and the player
+                // rewound on return. When iOS suspends (audio stops) the socket
+                // dies on its own; the server's 45s heartbeat sweep is the
+                // backstop, and startIfAuthenticated reconnects on foreground.
+                // See docs/adr/0007-connect-background-socket-lifecycle.md.
             }
         }
     }

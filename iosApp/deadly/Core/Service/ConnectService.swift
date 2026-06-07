@@ -123,7 +123,14 @@ final class ConnectService: NSObject {
         let hasToken = authService.token != nil
         logger.info("startIfAuthenticated: token=\(hasToken ? "present" : "null", privacy: .public) shouldConnect=\(self.shouldConnect, privacy: .public)")
         guard hasToken else { return }
-        guard !shouldConnect else { return }
+        if shouldConnect {
+            // Already meant to be connected. Since we no longer stop() on
+            // background, a socket iOS killed during suspension leaves
+            // shouldConnect=true; reconnect on foreground instead of no-opping.
+            // handleNetworkRestored is a no-op if still connected.
+            if !isConnected { handleNetworkRestored() }
+            return
+        }
         shouldConnect = true
         reconnectAttempt = 0
         Task { await connect() }
@@ -662,7 +669,19 @@ final class ConnectService: NSObject {
                 try? await Task.sleep(nanoseconds: Self.positionReportInterval)
                 guard !Task.isCancelled else { break }
                 let positionMs = Int(streamPlayer.progress.currentTime * 1000)
-                sendPosition(positionMs: positionMs)
+                let localIndex = streamPlayer.queueState.currentIndex
+                if let serverIndex = connectState?.trackIndex, localIndex != serverIndex {
+                    // The active device's track changed outside Connect — a lock-
+                    // screen / headset / CarPlay skip drives StreamPlayer directly,
+                    // so no sendNext fires. Forward as an absolute seek so the index
+                    // resyncs; a bare position report would land the new position on
+                    // the stale server index. sendSeek arms no pending spinner.
+                    let durationMs = Int(streamPlayer.progress.duration * 1000)
+                    logger.info("positionReport: local track \(localIndex, privacy: .public) != server \(serverIndex, privacy: .public) — seek sync (pos=\(positionMs, privacy: .public))")
+                    sendSeek(trackIndex: localIndex, positionMs: positionMs, durationMs: durationMs)
+                } else {
+                    sendPosition(positionMs: positionMs)
+                }
             }
         }
     }

@@ -223,7 +223,15 @@ class ConnectServiceImpl @Inject constructor(
         val token = authService.getAuthToken()
         Log.d(TAG, "startIfAuthenticated: token=${if (token != null) "present" else "null"}, shouldConnect=$shouldConnect")
         if (token == null) return
-        if (shouldConnect) return
+        if (shouldConnect) {
+            // Already meant to be connected. Since we no longer stop() on
+            // background, a socket that died while backgrounded (network drop)
+            // leaves shouldConnect=true; reconnect now that we're foreground
+            // instead of no-opping. handleNetworkRestored is a no-op if still
+            // connected.
+            if (!_isConnected.value) handleNetworkRestored()
+            return
+        }
         shouldConnect = true
         reconnectAttempt = 0
         connect()
@@ -378,7 +386,27 @@ class ConnectServiceImpl @Inject constructor(
                 delay(POSITION_REPORT_INTERVAL_MS)
                 if (isActive) {
                     val positionMs = mediaControllerRepository.currentPosition.value.toInt()
-                    sendPosition(positionMs)
+                    val localIndex = mediaControllerRepository.currentTrackIndex.value
+                    val serverIndex = _connectState.value?.trackIndex
+                    if (serverIndex != null && localIndex != serverIndex) {
+                        // The active device's track changed without going through
+                        // Connect — a lock-screen / headset / Bluetooth skip drives
+                        // ExoPlayer directly (REASON_SEEK), so no sendNext fires.
+                        // Forward it as an absolute seek so the index resyncs; a bare
+                        // position report would land the new position on the stale
+                        // server index (track looks right elsewhere, progress bar wrong).
+                        // Sent via sendCommand (not sendSeek) so this background sync
+                        // doesn't arm the transport-command spinner.
+                        val durationMs = mediaControllerRepository.duration.value.toInt()
+                        Log.d(TAG, "positionReport: local track $localIndex != server $serverIndex — seek sync (pos=$positionMs)")
+                        sendCommand("seek", mapOf(
+                            "trackIndex" to localIndex,
+                            "positionMs" to positionMs,
+                            "durationMs" to durationMs,
+                        ))
+                    } else {
+                        sendPosition(positionMs)
+                    }
                 }
             }
         }
