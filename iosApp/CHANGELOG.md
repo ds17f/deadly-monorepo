@@ -3,6 +3,12 @@
 ## [2.33.0] - 2026-06-06
 
 ### New Features
+* add Connect‑v2 release notes (7b11af22)
+
+
+## [2.33.0] - 2026-06-06
+
+### New Features
 - feat(ios/connect): Add Connect‑v2 client and remote‑control polish
 - feat(all/connect): Shared protocol improvements (epoch, version monotonicity, crash‑safe state)
 
@@ -13,8 +19,6 @@
 
 ### Bug Fixes
 * flush outbox on sign-in so signed-out favorites reach the server (b58d9ac4)
-
-
 ## [2.31.0] - 2026-05-28
 
 ### New Features
