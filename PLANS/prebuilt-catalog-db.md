@@ -10,10 +10,21 @@ Binding decisions + trade-offs: [`docs/adr/0007-prebuilt-catalog-db.md`](../docs
 
 - ✅ **Investigation + architecture validated.** Read both apps' launch/import
   paths; confirmed sizes and schema with a working spike against local `stage02`.
-- ✅ **Spike committed** at `data/scripts/build_catalog_db.py` (marked spike, not
-  yet wired into CI) — produces a real `catalog.db` faithful to the iOS importers.
-  Run: `cd data && python3 scripts/build_catalog_db.py stage02-generated-data /tmp/catalog.db 2.3.0`.
-- ⬜ **Phase 1 — pipeline (producer).** Not started.
+- ✅ **Phase 1 — pipeline (producer). DONE.**
+  - `data/catalog_schema.json` — canonical seed schema contract (builder + drift
+    tests read it as source of truth).
+  - `data/scripts/build_catalog_db.py` — production builder: creates tables from
+    the contract, mirrors the iOS importers, resolves collections `show_selector`
+    against the shows table (validated: all 137 match the pipeline's pre-resolved
+    `show_ids`), drops orphans, deterministic owner for shared recordings, sanity
+    checks (fails on empty). `--version` required.
+  - `make data-build-db` (root) → `package-catalog-db` (data) → `catalog.db` +
+    `catalog.db.zip`. Builds in ~3s; **16.6 MB → 2.18 MB zipped**.
+  - `data-release.yml` builds + publishes `catalog.db.zip` alongside `data.zip` on
+    `data-v*` tags. Artifacts gitignored.
+  - **Remaining for Phase 1:** cut a `data-vX` tag to publish the first
+    `catalog.db.zip` (deferred until consumers are closer, to avoid a dangling
+    asset — or publish early; it's additive and ignored by current apps).
 - ⬜ **Phase 2 — Android consumer.** Not started.
 - ⬜ **Phase 3 — iOS consumer.** Not started.
 - ⬜ **Phase 4 — `data.zip` fallback both platforms.** Not started.

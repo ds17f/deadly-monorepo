@@ -4,7 +4,7 @@
 .PHONY: help stage01-collect-data stage02-generate-data
 .PHONY: collect-archive-data collect-jerrygarcia-shows collect-show-image-urls collect-show-image-files
 .PHONY: generate-recordings integrate-shows process-collections
-.PHONY: package-data package-data-versioned package-release package-dev
+.PHONY: package-data package-data-versioned package-release package-dev package-catalog-db
 .PHONY: download-stage01 upload-stage01 download-data
 .PHONY: process-reviews setup-review-processor extract-ai-reviews clean-ai-reviews
 .PHONY: all clean
@@ -123,6 +123,13 @@ package-dev:
 	@echo "Creating development build package..."
 	python scripts/package_datazip.py --dev-build --verbose
 	@echo "Development package created!"
+
+package-catalog-db:
+	@echo "Building prebuilt catalog.db seed from stage02..."
+	python scripts/build_catalog_db.py --stage stage02-generated-data --out catalog.db --version $(VERSION) --verbose
+	@echo "Zipping catalog.db -> catalog.db.zip..."
+	@rm -f catalog.db.zip && cd $(CURDIR) && zip -q -j catalog.db.zip catalog.db
+	@echo "Catalog seed complete: catalog.db (+ catalog.db.zip)"
 
 # =============================================================================
 # Download / Upload Targets (GitHub Releases)
