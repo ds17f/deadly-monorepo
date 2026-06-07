@@ -92,8 +92,28 @@ API effort.
   *then* drop the strip. Until that nav exists, leave it in place.
 - **Done:** `/mockup` prototype route group removed (`3bfdc8f2`).
 
+### 5. Faster first launch (prebuilt catalog DB)
+First launch downloads a 25 MB `data.zip` and imports ~20k JSON files on-device
+(minutes on venue cell). Replace it with a **prebuilt SQLite catalog seed**
+built in CI (~2.2 MB gzip), bulk-copied into each app's DB (sub-second), FTS
+rebuilt on-device. Also fixes Android's silent false-complete on kill
+mid-import. Architecture validated with a spike; not yet implemented.
+- Decisions in **ADR-0007** (`docs/adr/0007-prebuilt-catalog-db.md`); phased
+  plan + findings + schema contract in
+  [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md).
+- Order: pipeline producer (build + publish `catalog.db.zip`) → Android consumer
+  → iOS consumer → `data.zip` fallback both.
+
 ## Deferred / explicit non-goals (sync v0)
 Cross-device deletion **tombstones**, **settings sync**, and **background sync**
 (WorkManager / BGTaskScheduler). Revisit tombstones before flipping sync
 default-on for production — deleting on phone while editing on web is a known
 last-write-wins foot-gun.
+
+**One recording can attach to only one show.** `recordings.identifier` is the sole
+PK on both platforms (lookup is `WHERE show_id = ?`), so the ~57 tapes shared by
+two shows (early/late, same-date multi-venue) surface under only one. A
+composite-PK / `recording_shows` join-table fix is a coordinated iOS+Android+seed
+migration for a small edge case — deferred. Why + path in
+[`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md) "Known limitations";
+decision in ADR-0007 §9.

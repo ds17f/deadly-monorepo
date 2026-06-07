@@ -1,0 +1,201 @@
+# Prebuilt catalog DB — first-launch fast path
+
+Replace the slow first-launch JSON import (download 25 MB `data.zip` → extract
+~20k JSON → parse → insert → build FTS, minutes on venue cell) with a prebuilt
+SQLite **catalog seed** built in CI and bulk-copied into each app's DB.
+
+Binding decisions + trade-offs: [`docs/adr/0007-prebuilt-catalog-db.md`](../docs/adr/0007-prebuilt-catalog-db.md).
+
+## Status (2026-06-06)
+
+- ✅ **Investigation + architecture validated.** Read both apps' launch/import
+  paths; confirmed sizes and schema with a working spike against local `stage02`.
+- ✅ **Spike committed** at `data/scripts/build_catalog_db.py` (marked spike, not
+  yet wired into CI) — produces a real `catalog.db` faithful to the iOS importers.
+  Run: `cd data && python3 scripts/build_catalog_db.py stage02-generated-data /tmp/catalog.db 2.3.0`.
+- ⬜ **Phase 1 — pipeline (producer).** Not started.
+- ⬜ **Phase 2 — Android consumer.** Not started.
+- ⬜ **Phase 3 — iOS consumer.** Not started.
+- ⬜ **Phase 4 — `data.zip` fallback both platforms.** Not started.
+
+## Why (current first-launch behaviour)
+
+- **iOS** (`deadlyApp.swift` → `DataImportScreen`/`DataImportService`): `.task`
+  gates on `SELECT COUNT(*) FROM data_version`; empty → modal `fullScreenCover`
+  runs download→extract→parse→**clear**→import→**write data_version (last step)**.
+  Kill mid-import = full re-do (and the zip is `defer`-deleted). Skip dismisses the
+  cover but the import keeps running in a detached `Task` → lands on a half-empty
+  home until relaunch.
+- **Android** (`MainActivity` → `splash` graph → `DatabaseManager`): `splashGraph`
+  is the start destination; `SplashViewModel.viewModelScope` runs
+  `initializeDataIfNeeded()`. Skip/Abort flips `isReady` and pops splash →
+  ViewModel cleared → import coroutine **cancelled**. Downloaded `data.zip` is
+  saved to `filesDir` (survives), import is not resumable.
+- **Android silent-incomplete bug:** `DatabaseHealthService.isDatabaseHealthy()` =
+  `showCount > 0 && recordingCount > 0`. Kill during the recordings import →
+  healthy=true next launch → skips re-import → permanently partial catalog.
+  (iOS can't hit this; it gates on the end-written `data_version` row.)
+
+## Numbers (real, from the spike against `stage02` @ data v2.3.0)
+
+| | Today (`data.zip`) | Prebuilt `catalog.db` |
+|---|---|---|
+| Download (gzip) | **25 MB** | **2.2 MB** |
+| Uncompressed | ~103 MB | 16.7 MB (`shows` 9.5, `recordings` 6.1) |
+| On-device | download + extract + parse 20k JSON + insert + FTS | download + bulk copy (sub-second) |
+
+Counts: 2,313 shows, 17,854 recordings, 137 collections. `data.zip` is bloated by
+per-recording track listings + `ai_review` blobs the apps parse and **discard**.
+
+## Architecture (see ADR for rationale)
+
+Ship one neutral `catalog.db` (catalog tables only). Each app migrates its OWN
+empty DB, then `ATTACH` the seed + bulk `INSERT…SELECT` + write `data_version`, all
+in **one transaction**, then rebuilds FTS on-device. Keep `data.zip` as fallback.
+Avoids GRDB migration bookkeeping (iOS) and Room identity-hash crash (Android)
+because the seed is never opened as the live ORM DB.
+
+## Schema (canonical seed = catalog subset)
+
+Column names verified identical across iOS (GRDB `ShowRecord`/`RecordingRecord` +
+`AppDatabase` migrations) and Android (Room `ShowEntity`/`RecordingEntity`), so a
+single seed copies into both with no per-platform mapping.
+
+- **`shows`** (catalog only — EXCLUDES device-local `isFavorite`/`favoritedAt`):
+  showId(PK), date, year, month, yearMonth, band, url, venueName, city, state,
+  country, locationRaw, setlistStatus, setlistRaw, songList, lineupStatus,
+  lineupRaw, memberList, showSequence, recordingsRaw, recordingCount,
+  bestRecordingId, bestSourceType, averageRating, totalReviews, coverImageUrl,
+  createdAt, updatedAt
+- **`recordings`**: identifier(PK), show_id, source_type, rating, raw_rating,
+  review_count, confidence, high_ratings, low_ratings, taper, source, lineage,
+  source_type_string, collection_timestamp
+- **`dead_collections`**: id(PK), name, description, tagsJson, showIdsJson,
+  totalShows, primaryTag, createdAt, updatedAt
+- **`data_version`**: single row (id=1, dataVersion, packageName, versionType,
+  description, importedAt, gitCommit, gitTag, buildTimestamp, totalShows,
+  totalVenues, totalFiles, totalSizeBytes)
+- **NOT in seed:** FTS (`show_search` iOS FTS4 custom tokenizer / `shows_fts`
+  Android) — rebuilt on-device. Device-local tables (`library_shows`,
+  `recent_shows`, reviews, sync outbox).
+
+### Field derivations (from iOS `ShowImporter`/`RecordingImporter`/`ImportModels`)
+
+- JSON is snake_case (`show_id`, `location_raw`, `avg_rating`, `best_recording`,
+  `source_types`, `total_high_ratings`/`total_low_ratings`, `ticket_images`).
+- `year`/`month`/`yearMonth` from splitting `date`.
+- `songList` = comma-joined song `name`s from `setlist[].songs[]`.
+- `setlistRaw` = serialized `setlist` JSON; `lineupRaw` = serialized `lineup` JSON.
+- `memberList` = comma-joined `lineup[].name`.
+- `recordingsRaw` = JSON array of the show's recording ids.
+- `bestSourceType` = first present in rank `["SBD","FM","MATRIX","REMASTER","AUD"]`
+  from `source_types` keys.
+- `averageRating` = `avg_rating` if > 0 else null. `totalReviews` = high + low.
+- `coverImageUrl` = first `ticket_images` side=="front", else side=="unknown",
+  else first `photos[].url`.
+
+### Builder gotchas (surfaced by the spike — the real builder MUST handle)
+
+1. **Recordings have no `show_id` in source** (keys: ai_review, confidence, date,
+   high_ratings, identifier, lineage, location, low_ratings, rating, raw_rating,
+   review_count, runtime, source, source_type, taper, title, venue). Linkage is
+   inverted from each show's `recordings[]` array (mirrors iOS `recordingToShows`).
+   Mapping buckets (17,854 files): **17,588** referenced by exactly 1 show,
+   **57** by 2 shows, **209** orphans (0 shows), **0** dangling refs.
+2. **209 orphan recordings** (file on disk, no show lists them) — studio sessions,
+   rehearsals, interviews, "various"/"unknown" venues, partial dates (`XX-XX`/`00`)
+   that can't match a dated show. iOS *skips* them
+   (`guard let showIds = recordingToShows[recId]`); the builder drops them
+   (`DROP_ORPHANS`). Not reachable in-app anyway — both apps query recordings
+   `WHERE show_id = ?`, so an unlinked recording can never surface.
+3. **57 recordings shared by 2 shows** — early/late splits and same-date
+   multi-venue (e.g. acid-test + Matrix on 1966-01-29). `recordings.identifier` is
+   the **sole PK**, so the schema can't attach one tape to two shows. **The live
+   apps already disagree here:** iOS `insert(onConflict: .ignore)` keeps the
+   **first** show, Android `OnConflictStrategy.REPLACE` keeps the **last** — so the
+   two platforms attach these 57 tapes to *different* shows today. The seed picks
+   one deterministically (first by sorted `show_id`) → **makes both platforms
+   consistent** for free. (Truly fixing "one tape, two shows" would need a
+   composite PK / join table — a separate, larger decision, not in scope.)
+4. **Collections need `showSelector` → showIds resolution** — the spike stubbed
+   this. Port `CollectionsImporter` selector logic (dates/ranges/exclusions/
+   venues/years/explicit showIds) to Python and compute `totalShows` correctly.
+5. Exclude the `ai_review` blob and track listings — not stored by either app.
+
+## Plan
+
+### Phase 1 — pipeline (producer; do first, everything depends on it)
+- `data/catalog_schema.json` — the schema contract (tables/columns/types).
+- `data/scripts/build_catalog_db.py` — harden the spike: real collections
+  resolution, orphan-recording skip, build from `stage02`, VACUUM, gzip.
+- `make data-build-db` target (mirror `data-package`).
+- `data-release.yml`: add a "Build catalog.db" step; `gh release create` uploads
+  both `data.zip` and `catalog.db.zip`. Cut a `data-vX` tag to publish the first.
+
+### Phase 2 — Android (restore scaffolding partly exists)
+- Point `FileDiscoveryService` at the new `catalog.db` asset.
+- In `DatabaseManager`/`DataImportService`: replace the JSON-import branch with
+  attach-and-copy (open seed via SupportSQLite/raw, `INSERT…SELECT` into Room's DB
+  in a transaction, rebuild `shows_fts`, write `data_version`).
+- Fix `isDatabaseHealthy()` to gate on a committed `data_version` row.
+- Flip Room `exportSchema = true` (`DeadlyDatabase.kt`), commit schema JSON.
+- Add schema-drift test (expected catalog columns ⊆ `catalog_schema.json`).
+- Build/verify locally (Android builds run on this machine, never remote).
+
+### Phase 3 — iOS
+- Add seed discovery/download (GitHub release asset).
+- Add an attach-and-copy variant in `DataImportService` (GRDB `ATTACH` + bulk
+  insert into the migrated DB, rebuild `show_search` FTS, write `data_version` in
+  one transaction).
+- Persist the downloaded seed (don't `defer`-delete) so relaunch skips re-download.
+- Add schema-drift test (`deadlyTests`).
+
+### Phase 4 — fallback
+- Both apps: if the seed asset is missing or copy fails, fall back to the existing
+  `data.zip` JSON import. Default to seed; zero-risk migration.
+
+## Spike script (reproduce / recover)
+
+`data/scripts/build_catalog_db.py` (committed, marked spike; not yet in CI). Run:
+`cd data && python3 scripts/build_catalog_db.py stage02-generated-data /tmp/catalog.db 2.3.0`.
+It parses `stage02` like the iOS importers, drops orphan recordings, picks a
+deterministic show for shared recordings, emits the catalog-only seed, VACUUMs,
+gzips, and prints row counts + size. Stdlib only (no new deps). This is the basis
+for the CI-wired builder in Phase 1; the schema here is the proposed
+`catalog_schema.json` contract.
+
+## Known limitations / future work
+
+### A recording can belong to only one show (`recordings.identifier` sole PK)
+**Why it's this way:** both apps model recordings with `identifier` as the sole
+primary key and look them up via `WHERE show_id = ?`. So the schema structurally
+cannot attach one Archive.org tape to more than one show. This predates the
+prebuilt-DB work — it's a property of the live app schemas, not something the seed
+introduces.
+
+**Impact:** ~57 of 17,854 tapes are legitimately shared by two shows (early/late
+splits; same-date multi-venue, e.g. the 1966-01-29 acid-test *and* the Matrix).
+Each such tape surfaces under only one of its shows. Today the apps even pick
+*different* ones (iOS `onConflict: .ignore` → first; Android `REPLACE` → last), so
+they disagree. The seed picks one deterministically (first by sorted `show_id`),
+which at least makes both platforms consistent — but the second show still misses
+the tape.
+
+**To address later (out of scope now):** give recordings a composite identity
+(`(identifier, show_id)` PK) or a `recording_shows` join table, then have both apps
+query through it. That's a coordinated schema migration on iOS (GRDB) + Android
+(Room) + the seed builder + `catalog_schema.json`, plus a data backfill — a real
+chunk of work for a 57-tape edge case. Worth doing if/when we want full fidelity
+for early/late and multi-venue dates, but not blocking the first-launch speedup.
+Surfaced in ROADMAP "Deferred". See ADR-0007 decision #9.
+
+## Open decisions
+
+- FTS: rebuild on-device (chosen) vs ship index — chosen rebuild.
+- Roll out behind a flag vs seed-with-JSON-fallback — chosen fallback (Phase 4).
+- One canonical seed + on-device FTS (chosen) vs two per-platform DBs.
+
+## Related
+- ADR: [`docs/adr/0007-prebuilt-catalog-db.md`](../docs/adr/0007-prebuilt-catalog-db.md)
+- Existing pipeline docs: [`data/docs/grateful-dead-database-pipeline.md`](../data/docs/grateful-dead-database-pipeline.md)
+- `../dead-metadata` is a stale upstream fork of the pipeline — archive eventually.
