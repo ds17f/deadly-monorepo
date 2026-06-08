@@ -4,8 +4,11 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -42,11 +45,22 @@ class NotificationStore @Inject constructor(
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
     private val json = Json { ignoreUnknownKeys = true }
 
+    /** This app's version name, for targeting eligibility (decision E). */
+    val appVersion: String = runCatching {
+        context.packageManager.getPackageInfo(context.packageName, 0).versionName
+    }.getOrNull() ?: "0"
+
     private var persisted: Persisted = load()
 
     private val _notifications = MutableStateFlow(persisted.messages)
     /** The full local cache. Use [active]/[dismissed]/[unreadCount] to derive views. */
     val notifications: StateFlow<List<CachedNotification>> = _notifications.asStateFlow()
+
+    // Fires when a delta (not a cold start) brings new eligible unread messages,
+    // so the UI can show a transient toast/snackbar. Replays the latest to a
+    // late collector that connects right after a background pull.
+    private val _newArrivals = MutableSharedFlow<NewArrival>(replay = 1, extraBufferCapacity = 4)
+    val newArrivals: SharedFlow<NewArrival> = _newArrivals.asSharedFlow()
 
     val cursor: Long get() = persisted.cursor
 
@@ -67,14 +81,16 @@ class NotificationStore @Inject constructor(
     }
 
     /**
-     * Merge a fetch result into the store and prune. On a cold start (no cursor
-     * yet) the batch is marked seen-not-dismissed so a fresh user isn't slammed
-     * with unread badges — the messages appear in the inbox but don't nag.
-     * Subsequent deltas arrive unseen (they raise the badge).
+     * Merge a fetch result into the store and prune. v2 (decision G): new
+     * arrivals — including the cold-start batch — start **unread**; targeting +
+     * expiry keep the backlog relevant and "Mark all read" handles volume.
+     * A non-cold delta that adds eligible unread messages emits [newArrivals]
+     * so the UI can toast.
      */
     fun merge(result: NotificationFetchResult) {
         val coldStart = persisted.cursor == 0L
         val now = System.currentTimeMillis()
+        val knownIds = persisted.messages.mapTo(HashSet()) { it.id }
         val byId = persisted.messages.associateBy { it.id }.toMutableMap()
 
         for (m in result.messages) {
@@ -84,10 +100,14 @@ class NotificationStore @Inject constructor(
                 title = m.title,
                 body = m.body,
                 level = m.level,
+                category = m.category,
+                minVersion = m.minVersion,
+                maxVersion = m.maxVersion,
+                platforms = m.platforms,
                 createdAt = m.createdAt,
                 expiresAt = m.expiresAt,
-                // Preserve local state across re-fetches; default for new arrivals.
-                seenAt = existing?.seenAt ?: if (coldStart) now else null,
+                // Preserve local state across re-fetches; new arrivals start unread.
+                seenAt = existing?.seenAt,
                 dismissedAt = existing?.dismissedAt,
             )
         }
@@ -100,6 +120,30 @@ class NotificationStore @Inject constructor(
         }
 
         commit(Persisted(cursor = maxOf(persisted.cursor, result.cursor), messages = pruned))
+
+        // Toast signal: genuinely new, eligible, unread messages from a delta.
+        if (!coldStart) {
+            val fresh = result.messages
+                .filter { it.id !in knownIds }
+                .map { byId.getValue(it.id) }
+                .filter { it.isEligible(appVersion) && it.dismissedAt == null }
+                .sortedByDescending { it.createdAt }
+            if (fresh.isNotEmpty()) {
+                _newArrivals.tryEmit(
+                    NewArrival(title = fresh.first().title, count = fresh.size, key = fresh.first().id),
+                )
+            }
+        }
+    }
+
+    /** Mark a single message read ("tap to read" — opening its detail). */
+    fun markRead(id: Long) {
+        val now = System.currentTimeMillis()
+        if (persisted.messages.none { it.id == id && it.seenAt == null }) return
+        val updated = persisted.messages.map {
+            if (it.id == id && it.seenAt == null) it.copy(seenAt = now) else it
+        }
+        commit(persisted.copy(messages = updated))
     }
 
     /** Clear the unread badge: stamp every unseen message as seen. */
@@ -112,7 +156,7 @@ class NotificationStore @Inject constructor(
         commit(persisted.copy(messages = updated))
     }
 
-    /** Remove a message from the active queue (stays in the archive). */
+    /** Archive (remove from the active queue; stays in the archive). */
     fun dismiss(id: Long) {
         val now = System.currentTimeMillis()
         if (persisted.messages.none { it.id == id && it.dismissedAt == null }) return
@@ -121,4 +165,21 @@ class NotificationStore @Inject constructor(
         }
         commit(persisted.copy(messages = updated))
     }
+
+    /** Archive every active eligible message at once. */
+    fun archiveAll() {
+        val now = System.currentTimeMillis()
+        val updated = persisted.messages.map {
+            if (it.isEligible(appVersion) && it.dismissedAt == null) it.copy(dismissedAt = now) else it
+        }
+        if (updated == persisted.messages) return
+        commit(persisted.copy(messages = updated))
+    }
 }
+
+/**
+ * A toast-worthy batch of new arrivals from a delta pull. [key] is the newest
+ * message id — a stable token so the UI can dedupe and not re-toast the same
+ * arrival on recomposition/rotation (the flow replays its last value).
+ */
+data class NewArrival(val title: String, val count: Int, val key: Long)
