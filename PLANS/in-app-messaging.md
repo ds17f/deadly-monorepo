@@ -42,6 +42,26 @@ nothing implemented. Commit the doc, decide later whether/when to build.
   - Both clients store local-only seen/dismiss, cold-start marks the capped
     batch seen-not-dismissed (decision #8), and render `\n`/Unicode as-is.
 - ⏳ **Phase 3 (social 1:1 + push)** not started.
+- ✅ **v2 — real inbox + targeting (2026-06-07, built, all platforms)** on
+  `worktree-in-app-messaging`. Upgrades the shipped bell/sheet into a proper
+  mail-style inbox (list + detail + archive + bulk actions), makes the unread
+  badge persistent (cleared only by explicit read/archive), adds tappable links,
+  client-side **targeting** (platform + app-version range) to kill stale release
+  notices, a small **category** taxonomy, a subreddit link, and polling tuning.
+  Full design in **[§ v2 — Real inbox + targeting](#v2--real-inbox--targeting-2026-06-07)** below; it supersedes the
+  "Client surfaces" / "Phase 2 — mobile consume" sections for the inbox UI and
+  the cold-start rule (decision #8). No push; still in-app only.
+  - **Verified end-to-end** (user-confirmed on device) + builds green across all
+    four steps: `make api-typecheck`/`make api-test` (139), `make ui-build`,
+    `./gradlew assembleDebug`, `make ios-remote-build`.
+  - **Pull-to-refresh** on both mobile inboxes (manual `?since` delta fetch +
+    merge): Android `PullToRefreshBox` → `NotificationViewModel.refresh()`; iOS
+    `.refreshable` → `NotificationService.refresh(reason:"pull")`. The empty
+    inbox is still pullable (Android renders the empty state inside a `LazyColumn`
+    item) so you can pull to check for new messages.
+  - **Category glyphs are monochrome**, not emoji (see decision F): web inline
+    outline SVG (`currentColor`, `text-zinc-500`), Android `material-icons`
+    outlined tinted `onSurfaceVariant`, iOS SF Symbols tinted `.secondary`.
 
 ### Known limitation surfaced in Phase 1: retraction doesn't reach delivered copies
 The consume endpoint is a **forward-only** delta (`id > since`). So retiring
@@ -52,6 +72,183 @@ So: **`expires_at` is the reliable "take it down" lever; `DELETE`/retire is best
 understood as "stop new deliveries," not a true unsend.** Fixing real retraction
 would mean a change-cursor (by mutation time, not id) or a periodic full-active
 reconcile — more machinery than v1 warrants. Documented, not built.
+
+## v2 — Real inbox + targeting (2026-06-07)
+
+> Supersedes the **Client surfaces** + **Phase 2 — mobile consume** UI sections
+> and **decision #8** (cold start). Server's "dumb global publisher, clients
+> filter locally" model (decisions #1–2) is unchanged — every v2 addition is
+> additive metadata the client interprets. Branch: `worktree-in-app-messaging`.
+> Decided in session 2026-06-07. **No push** — still in-app only.
+
+### A. Persistent unread badge (read-state semantics change)
+Today opening the inbox auto-stamps everything `seen` (web `toggleOpen`, Android
+`onClick`, iOS `Button` action all call `markAllSeen()`), so the badge clears on
+a mere glance. **v2: the badge persists across opens.** It counts active & unread
+and only drops via explicit user action:
+
+| Action | Mechanism |
+|---|---|
+| **Tap a message → detail** | marks *that* message read (`seen_at`) on open — "tap to read" |
+| **Archive** (per message) | sets `dismissed_at`; leaves the active list → no longer counted |
+| **Mark all read** | `markAllSeen()` — the old on-open behavior, now behind a button |
+| **Archive all** | archive every active message at once |
+
+`seen_at` keeps its name but now means "read" (set by detail-open / mark-all-read,
+**not** by opening the list). Remove `markAllSeen()` from all three open handlers.
+
+### B. Real inbox screen (replaces dropdown/sheet)
+The bell + badge stays in the top bar as the entry point; tapping it now opens a
+**navigable screen**, not a popover:
+- **Web:** a `/notifications` route/page. Drop the header dropdown — the bell
+  navigates straight to the page (decided: consistency with mobile).
+- **iOS:** push a `List` screen in the NavigationStack → `NavigationLink` detail.
+  Replaces the current `.sheet`.
+- **Android:** a Compose nav destination (list → detail). Replaces the
+  `ModalBottomSheet`.
+
+Layout:
+```
+Inbox                          [Archived]
+┌─────────────────────────────────────┐
+│ ● v2.4 is live              2h ago  │  unread: filled dot + bold title
+│   Heads up, the new release adds…   │  body preview (1–2 lines)
+├─────────────────────────────────────┤
+│   Archive.org outage        Jun 3   │  read: no dot, muted
+│   Playback may fail while Archive…  │
+└─────────────────────────────────────┘
+  [ Mark all read ]      [ Archive all ]
+  More at r/thedeadlyapp →               (footer link, § I)
+
+— tap row → detail (full body + tappable links); opening marks read
+— swipe (mobile) / button (web) on a row → archive
+— [Archived] tab/section lists dismissed messages (read-only)
+```
+Row = category glyph + unread dot + title + body preview + relative time. Detail =
+title + timestamp + full body with links.
+
+### C. Toast on arrival (transient — coexists with the inbox)
+The inbox is the screen; the **toast is the "ping."** It fires when a foreground
+poll merges a **new, eligible, unread** message (post-targeting filter, `cursor>0`
+delta — never on the cold-start batch). Tapping it opens the inbox. Rides existing
+surfaces:
+- **Web:** existing `ToastProvider` (`ui/src/components/ui/ToastProvider.tsx`).
+  Extend `showToast` to carry an optional tap target → navigate to
+  `/notifications`. Text: `New: <title>`.
+- **Android:** existing app-wide `SnackbarHostState` (already in `AppScaffold` /
+  `MainNavigation`, used for offline/online). `showSnackbar(msg, actionLabel="View")`
+  → action navigates to the inbox.
+- **iOS:** the only gap — `OfflineBanner` is a *status* banner (shows while a
+  condition holds), not transient. Add a transient `.message(text, onTap)` style
+  that auto-clears after ~3–4s, reusing the existing banner styling + the
+  `safeAreaInset(edge:.bottom)` slot. Tap → inbox.
+
+### D. Links in message bodies (markdown + autolink)
+Parser per platform: support `[label](url)` **and** autolink bare `http(s)://`
+URLs not already inside a markdown link. **Restrict schemes to http/https** (drop
+`javascript:`/`data:` etc.) even though the admin is the only author.
+- **Web:** render parsed tokens to `<a target="_blank" rel="noopener noreferrer">`
+  (opens a new tab). **No `dangerouslySetInnerHTML`** — build anchors from tokens.
+- **iOS:** `AttributedString` with `.link` runs (`AttributedString(markdown:)` +
+  `NSDataDetector` for bare URLs); `Text(attr)` opens Safari on tap.
+- **Android:** `AnnotatedString` + `LinkAnnotation.Url`;
+  `LocalUriHandler.current.openUri(url)` opens the system browser (hands off to
+  the Reddit app for reddit.com links if installed).
+
+### E. Targeting — client-side relevance filter (the stale-release fix)
+The real fix for "don't show a v2.4 release notice to someone already on 2.4+" is
+**targeting, not a type label.** The client already knows its platform + app
+version, so hang optional predicates on the message and filter locally — server
+stays dumb. New **optional** fields:
+- `min_version` / `max_version` (semver) — show only if the client's app version
+  is in range (null = unbounded).
+- `platforms` (e.g. `["ios"]`; null/absent = all).
+
+**Eligibility is computed at view/badge/toast time, NOT dropped at ingest** — a
+message with `min_version: 2.5` is ineligible for a 2.4 client but must become
+eligible after they update (the delta is long past their cursor by then, so the
+store must still hold it). Store everything (subject to cold-start cap + prune);
+filter on display using current version/platform. Ineligible messages are never
+shown, counted, or toasted.
+- **Web nuance:** continuously deployed → version targeting is **N/A** on web
+  (treat version bounds as always-pass); platform targeting still applies.
+- Needs a small semver-compare helper per platform.
+
+### F. Category (cosmetic, small set)
+Keep `level` (`info`/`warn`) as **severity/color**. Add an optional `category` for
+**icon + label**, tight set: `general | release | feature | outage`. Drives a
+glyph in the row/detail. Additive enum; old clients ignore unknown values.
+
+**Glyphs are monochrome, not emoji** (emoji read as clumsy colorful stickers).
+Each platform uses its native vector icon set tinted to a muted neutral so the
+glyph is a quiet marker: web inline outline SVG (`currentColor`), Android
+`material-icons-extended` outlined (`onSurfaceVariant`), iOS SF Symbols
+(`.secondary`). Mapping: `general`→megaphone, `release`→rocket (iOS:
+`shippingbox`, no rocket symbol), `feature`→sparkles, `outage`→warning triangle.
+
+### G. Cold start — show the (targeted) backlog (supersedes decision #8)
+v2 reverses #8's "pre-mark the cold batch seen." A fresh client now **sees the
+active backlog as unread**, because:
+- targeting (E) already prunes stale release notes (a new install on 2.5 won't
+  match the 2.4 announcement's `max_version`),
+- `expires_at` prunes time-bound notices,
+- **Mark all read** (A) handles any residual volume.
+
+Keep the cold-start **cap** (N active, newest-first) as a safety bound, but the
+batch is now **unread**, not pre-seen.
+
+### H. Polling tuning (no push — keep it cheap)
+- **Server:** keep an in-memory `latestNotificationId` (seeded at boot, bumped on
+  admin `POST`/retire). A `GET /api/notifications?since=<cursor>` with
+  `cursor >= latestNotificationId` returns `{messages:[], cursor}` **without
+  touching SQLite** — empty polls cost an int compare. (Per-request cost is
+  dominated by routing/JSON, so this pairs with fewer requests below.)
+- **Web:** drop the 5-min `setInterval`; poll on mount + focus/visibility only
+  (keep the 30s focus guard), matching mobile. Idle/blurred tabs stop polling.
+- **Opportunistic refresh on a real user action** ("they're looking at the phone
+  and took an action"): on navigation/screen-change, call refresh **throttled to
+  ~10 min** (collapses a whole session's events into a couple of polls). Pick a
+  rare, user-visible event (navigation), **not** next-track. Optional/low-priority
+  — the foreground trigger is the floor.
+
+### I. Subreddit link (`r/thedeadlyapp`)
+A persistent community link, **not** a message. Define `SUBREDDIT_URL`
+(`https://www.reddit.com/r/thedeadlyapp`) **once per platform** (shared constant),
+rendered via the § D link machinery (opens browser / Reddit app):
+- **Settings:** a "Community" / "Reddit" row near About/version/legal — the
+  durable home.
+- **Inbox:** a quiet **footer** ("More at r/thedeadlyapp →") at the bottom of the
+  list, not the top.
+
+### Publish-side changes (server + admin web)
+Targeting/category grow the authoring path too:
+- **DB** (`api/src/db/users.ts`, `addColumnIfMissing`): add `category`,
+  `min_version`, `max_version`, `platforms` (store `platforms` as JSON/CSV TEXT).
+- **API** (`api/src/routes/notifications.ts`): accept + validate + store + serve
+  the new fields on `POST` and the feed.
+- **Admin page** (`ui/src/app/admin/notifications/page.tsx`): category dropdown,
+  platform multiselect, optional `min/max version` inputs.
+
+### v2 build order (extend `worktree-in-app-messaging`)
+1. **Server** — schema columns + API fields + polling short-circuit.
+   `make api-typecheck` + `make api-test` green.
+2. **Web** (fastest loop) — link parser, targeting filter + semver, persistent
+   badge, `/notifications` page, toast tap-to-open, subreddit (settings + footer),
+   focus-only polling, admin compose controls. `make ui-build` + docker redeploy.
+3. **Android** (builds locally) — store/model targeting + category, link renderer,
+   persistent badge, inbox screen (list+detail+archive), snackbar toast, subreddit
+   (settings + footer), throttled nav refresh. `make android-install`.
+4. **iOS** (remote Mac) — same surface + the transient banner toast variant.
+   `make ios-remote-build` / install.
+
+### v2 exit checks (per platform)
+Publish a plain message → appears unread, badge persists across opens until
+read/archive/mark-all-read · open detail → marks read, links tap out to
+browser/new tab · publish a `min_version` above the build → does **not** appear;
+below/within range → appears · publish `platforms:["other"]` → filtered out ·
+archive removes from active, stays in Archived; relaunch preserves read/archive ·
+toast pings on a new delta (not cold start) and opens the inbox · subreddit link
+opens from settings + inbox footer · empty polls return without a DB hit.
 
 ## The one slice worth building first
 
