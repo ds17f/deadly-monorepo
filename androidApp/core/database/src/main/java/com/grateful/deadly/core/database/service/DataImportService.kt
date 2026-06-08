@@ -546,71 +546,20 @@ class DataImportService @Inject constructor(
     }
     
     private fun createSearchEntity(showData: ShowImportData): ShowSearchEntity {
-        // Combine all searchable text for FTS
-        val searchableText = buildList {
-            // Enhanced date indexing for comprehensive search support
-            add(showData.date) // Original: "1977-05-08"
-            
-            // Parse date components for alternative formats
-            val dateParts = showData.date.split("-")
-            val year = dateParts[0]      // "1977"
-            val month = dateParts[1]     // "05"
-            val day = dateParts[2]       // "08"
-            
-            // Core date components
-            add(year)                    // "1977"
-            add(year.takeLast(2))        // "77"
+        // Combine all searchable text for FTS. Shared with the prebuilt-seed
+        // import path (SeedDatabaseImportService) so search text is identical
+        // regardless of source — see ShowSearchText.
+        val searchableText = ShowSearchText.build(
+            date = showData.date,
+            venue = showData.venue,
+            locationRaw = showData.locationRaw,
+            memberListCsv = extractMemberListFromLineup(showData.lineup),
+            songListCsv = extractSongListFromSetlist(showData.setlist),
+            sourceTypeKeys = showData.sourceTypes.keys,
+            avgRating = showData.avgRating,
+            totalReviews = showData.totalHighRatings + showData.totalLowRatings
+        )
 
-            // Original delimiters you were using: -, /, now adding .
-            val delimiters = listOf("-", "/", ".")
-
-            // Day / month / year formats
-            delimiters.forEach { delim ->
-                add("${month.toInt()}$delim${day.toInt()}$delim${year.takeLast(2)}")  // 5-8-77, 5/8/77, 5.8.77
-                add("${month}$delim${day}$delim${year}")                               // 05-08-1977, 05/08/1977, 05.08.1977
-                add("${year}$delim${month.toInt()}$delim${day.toInt()}")               // 1977-5-8, 1977/5/8, 1977.5.8
-            }
-
-            // Month / year formats
-            delimiters.forEach { delim ->
-                add("${month.toInt()}$delim${year.takeLast(2)}")  // 5-77, 5/77, 5.77
-                add("${year}$delim${month}")                      // 1977-05, 1977/05, 1977.05
-                add("${year}$delim${month.toInt()}")             // 1977-5, 1977/5, 1977.5
-                add("${year.takeLast(2)}$delim${month.toInt()}") // 77-5, 77/5, 77.5
-            }
-
-            // Century prefix for decade searches
-            add(year.take(3))            // "197" (enables 1970s searches)
-            
-            // Venue information
-            add(showData.venue)
-            
-            // Consolidated location (avoid redundancy)
-            showData.locationRaw?.let { add(it) } // Single location field: "Ithaca, NY"
-            
-            // Band member names (no instruments - reduces noise)
-            val memberList = extractMemberListFromLineup(showData.lineup)
-            if (!memberList.isNullOrBlank()) {
-                add(memberList.replace(",", " ")) // "Jerry Garcia Bob Weir Phil Lesh"
-            }
-            
-            // Song list for setlist searches
-            val songList = extractSongListFromSetlist(showData.setlist)
-            if (!songList.isNullOrBlank()) {
-                add(songList.replace(",", " ")) // "Scarlet Begonias Fire On The Mountain"
-            }
-
-            // Source type tags
-            if (showData.sourceTypes.containsKey("SBD")) add("soundboard sbd")
-            if (showData.sourceTypes.containsKey("AUD")) add("audience aud")
-            if (showData.sourceTypes.containsKey("MATRIX")) add("matrix")
-
-            // Quality/popularity tags
-            val totalReviews = showData.totalHighRatings + showData.totalLowRatings
-            if (showData.avgRating >= 4.0 && totalReviews >= 10) add("top-rated")
-            if (totalReviews >= 50) add("popular")
-        }.joinToString(" ")
-        
         return ShowSearchEntity(rowid = 0, showId = showData.showId, searchText = searchableText)
     }
     

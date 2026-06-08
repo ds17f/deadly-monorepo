@@ -108,8 +108,7 @@ fun SplashScreen(
                 currentTime = currentTime,
                 onRetry = { viewModel.retryInitialization() },
                 onSkip = { viewModel.skipInitialization() },
-                onAbort = { viewModel.abortInitialization() },
-                onSelectSource = { viewModel.selectDatabaseSource(it) }
+                onAbort = { viewModel.abortInitialization() }
             )
 
             Spacer(modifier = Modifier.height(40.dp))
@@ -200,18 +199,9 @@ private fun StatusSection(
     currentTime: Long,
     onRetry: () -> Unit,
     onSkip: () -> Unit,
-    onAbort: () -> Unit,
-    onSelectSource: (com.grateful.deadly.core.database.service.DatabaseManager.DatabaseSource) -> Unit
+    onAbort: () -> Unit
 ) {
     when {
-        uiState.showSourceSelection -> {
-            SourceSelectionContent(
-                availableSources = uiState.availableSources,
-                onSelectSource = onSelectSource,
-                onSkip = onAbort
-            )
-        }
-
         uiState.showError -> {
             ErrorContent(
                 errorMessage = uiState.errorMessage,
@@ -234,83 +224,6 @@ private fun StatusSection(
 
         else -> {
             LoadingContent(message = uiState.message)
-        }
-    }
-}
-
-@Composable
-private fun SourceSelectionContent(
-    availableSources: List<com.grateful.deadly.core.database.service.DatabaseManager.DatabaseSource>,
-    onSelectSource: (com.grateful.deadly.core.database.service.DatabaseManager.DatabaseSource) -> Unit,
-    onSkip: () -> Unit
-) {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(24.dp)
-    ) {
-        Text(
-            text = "Choose Database Source",
-            style = MaterialTheme.typography.titleLarge,
-            textAlign = TextAlign.Center
-        )
-
-        Text(
-            text = "Multiple initialization options are available",
-            style = MaterialTheme.typography.bodyMedium,
-            textAlign = TextAlign.Center,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-
-        Column(
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            availableSources.forEach { source ->
-                when (source) {
-                    com.grateful.deadly.core.database.service.DatabaseManager.DatabaseSource.ZIP_BACKUP -> {
-                        Button(
-                            onClick = { onSelectSource(source) },
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Column(
-                                horizontalAlignment = Alignment.CenterHorizontally
-                            ) {
-                                Text("Restore from Backup")
-                                Text(
-                                    "Fast - uses pre-built database",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.8f)
-                                )
-                            }
-                        }
-                    }
-                    com.grateful.deadly.core.database.service.DatabaseManager.DatabaseSource.DATA_IMPORT -> {
-                        OutlinedButton(
-                            onClick = { onSelectSource(source) },
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Column(
-                                horizontalAlignment = Alignment.CenterHorizontally
-                            ) {
-                                Text("Import Fresh Data")
-                                Text(
-                                    "Complete - builds from latest data files",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
-                                )
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        OutlinedButton(
-            onClick = onSkip,
-            modifier = Modifier.padding(horizontal = 32.dp)
-        ) {
-            Text("Skip")
         }
     }
 }

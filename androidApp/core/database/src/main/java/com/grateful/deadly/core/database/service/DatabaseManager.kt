@@ -30,7 +30,7 @@ class DatabaseManager @Inject constructor(
     private val fileDiscoveryService: FileDiscoveryService,
     private val downloadService: DownloadService,
     private val zipExtractionService: ZipExtractionService,
-    private val databaseRestoreService: DatabaseRestoreService
+    private val seedDatabaseImportService: SeedDatabaseImportService
 ) {
     
     companion object {
@@ -42,7 +42,7 @@ class DatabaseManager @Inject constructor(
     val progress: Flow<DatabaseProgress> = _progress.asStateFlow()
     
     enum class DatabaseSource {
-        ZIP_BACKUP,
+        SEED,
         DATA_IMPORT
     }
     
@@ -82,8 +82,11 @@ class DatabaseManager @Inject constructor(
                 if (isDataVersionStale(currentVersion)) {
                     Log.i(TAG, "Data version $currentVersion is below required $REQUIRED_DATA_VERSION, upgrading...")
                     _progress.value = DatabaseProgress(phase = "UPGRADING", currentItem = "New data available, upgrading...")
+                    // Drop stale local artifacts so the newer version is re-fetched, then
+                    // re-initialize preferring the prebuilt seed (same path as first launch).
                     deleteStaleLocalDataFile()
-                    return initializeFromSource(DatabaseSource.DATA_IMPORT)
+                    deleteStaleLocalDatabaseFile()
+                    return initializePreferringSeed(findAvailableDataSources())
                 }
 
                 Log.i(TAG, "Data already initialized")
@@ -93,29 +96,44 @@ class DatabaseManager @Inject constructor(
                 return DatabaseImportResult.Success(healthInfo.showCount, healthInfo.recordingCount)
             }
             
-            // Check for available data sources
-            val availableSources = findAvailableDataSources()
-            
-            when {
-                availableSources.sources.isEmpty() -> {
-                    Log.w(TAG, "❌ No data sources available for initialization")
-                    DatabaseImportResult.Error("No data sources available. Please ensure you have network access to download files or manually place data files in the app directory.")
-                }
-                availableSources.sources.size == 1 -> {
-                    // Auto-select the only available source
-                    val singleSource = availableSources.sources.first()
-                    Log.i(TAG, "✅ Single data source available: $singleSource - proceeding automatically")
-                    initializeFromSource(singleSource)
-                }
-                else -> {
-                    // Multiple sources available - require user choice
-                    Log.i(TAG, "⚠️ Multiple data sources available: ${availableSources.sources.joinToString(", ")} - requiring user choice")
-                    DatabaseImportResult.RequiresUserChoice(availableSources)
-                }
-            }
+            // Check for available data sources and initialize, preferring the seed.
+            initializePreferringSeed(findAvailableDataSources())
         } catch (e: Exception) {
             Log.e(TAG, "Failed to initialize data", e)
             DatabaseImportResult.Error(e.message ?: "Initialization failed")
+        }
+    }
+
+    /**
+     * Initialize the catalog from the available sources, preferring the prebuilt
+     * seed (SEED) and falling back to the JSON `data.zip` import. If the seed
+     * import fails and JSON is available, fall back to it — zero-risk migration
+     * (ADR-0007, Phase 4). No user prompt: the seed is strictly faster/cheaper.
+     */
+    private suspend fun initializePreferringSeed(available: AvailableSources): DatabaseImportResult {
+        val sources = available.sources
+        val hasSeed = sources.contains(DatabaseSource.SEED)
+        val hasJson = sources.contains(DatabaseSource.DATA_IMPORT)
+
+        return when {
+            !hasSeed && !hasJson -> {
+                Log.w(TAG, "❌ No data sources available for initialization")
+                DatabaseImportResult.Error("No data sources available. Please ensure you have network access to download files or manually place data files in the app directory.")
+            }
+            hasSeed -> {
+                Log.i(TAG, "✅ Prebuilt seed available - importing catalog.db")
+                val seedResult = initializeFromSource(DatabaseSource.SEED)
+                if (seedResult is DatabaseImportResult.Error && hasJson) {
+                    Log.w(TAG, "Seed import failed (${seedResult.error}); falling back to JSON data.zip import")
+                    initializeFromSource(DatabaseSource.DATA_IMPORT)
+                } else {
+                    seedResult
+                }
+            }
+            else -> {
+                Log.i(TAG, "✅ Only JSON data.zip available - importing")
+                initializeFromSource(DatabaseSource.DATA_IMPORT)
+            }
         }
     }
     
@@ -228,8 +246,8 @@ class DatabaseManager @Inject constructor(
                     }
                 }
                 
-                DatabaseSource.ZIP_BACKUP -> {
-                    Log.d(TAG, "Processing ZIP_BACKUP source...")
+                DatabaseSource.SEED -> {
+                    Log.d(TAG, "Processing SEED source...")
                     
                     // Check for local database file first
                     var dbFile = findLocalDatabaseFile()
@@ -240,7 +258,7 @@ class DatabaseManager @Inject constructor(
                     } else {
                         // No local file, download from remote
                         Log.i(TAG, "No local database file found, downloading from remote...")
-                        _progress.value = DatabaseProgress(phase = "DOWNLOADING", currentItem = "Downloading backup...")
+                        _progress.value = DatabaseProgress(phase = "DOWNLOADING", currentItem = "Downloading catalog...")
                         
                         val downloadResult = downloadService.downloadFileByType(
                             FileDiscoveryService.FileType.DATABASE_ZIP
@@ -264,9 +282,9 @@ class DatabaseManager @Inject constructor(
                         }
                     }
                     
-                    // Extract ZIP file containing database
-                    Log.i(TAG, "Extracting database backup ZIP file...")
-                    _progress.value = DatabaseProgress(phase = "EXTRACTING", currentItem = "Extracting backup...")
+                    // Extract ZIP file containing the catalog seed
+                    Log.i(TAG, "Extracting catalog seed ZIP file...")
+                    _progress.value = DatabaseProgress(phase = "EXTRACTING", currentItem = "Extracting catalog...")
                     
                     val extractionResult = zipExtractionService.extractDatabaseZip(dbFile) { progress ->
                         _progress.value = DatabaseProgress(
@@ -279,33 +297,34 @@ class DatabaseManager @Inject constructor(
                     
                     when (extractionResult) {
                         is DatabaseExtractionResult.Success -> {
-                            Log.i(TAG, "✅ Database extraction successful")
-                            
-                            // Restore the extracted database
-                            Log.i(TAG, "Restoring database from backup...")
-                            val restoreResult = databaseRestoreService.restoreFromBackup(
-                                extractedDatabaseFile = extractionResult.databaseFile
+                            Log.i(TAG, "✅ Catalog seed extraction successful")
+
+                            // Attach-and-copy the neutral catalog seed into the live
+                            // migrated Room DB. This is NOT a full-DB restore: the seed
+                            // has no Room identity / device-local tables (see ADR-0007).
+                            Log.i(TAG, "Importing catalog seed...")
+                            val seedResult = seedDatabaseImportService.importFromSeed(
+                                seedFile = extractionResult.databaseFile
                             ) { progress ->
                                 _progress.value = DatabaseProgress(
-                                    phase = "RESTORING",
-                                    totalItems = progress.total,
-                                    processedItems = progress.progress,
+                                    phase = progress.phase,
                                     currentItem = progress.currentItem
                                 )
                             }
-                            
-                            // Cleanup extraction directory
+
+                            // Cleanup extraction directory (the .zip stays in filesDir so a
+                            // relaunch can re-seed without re-downloading).
                             zipExtractionService.cleanupExtractions()
-                            
-                            when (restoreResult) {
-                                is RestoreResult.Success -> {
-                                    _progress.value = DatabaseProgress(phase = "COMPLETED", currentItem = "Restore completed successfully")
-                                    Log.i(TAG, "✅ Database restore completed: ${restoreResult.showCount} shows, ${restoreResult.recordingCount} recordings")
+
+                            when (seedResult) {
+                                is SeedImportResult.Success -> {
+                                    _progress.value = DatabaseProgress(phase = "COMPLETED", currentItem = "Catalog ready")
+                                    Log.i(TAG, "✅ Catalog seed import completed: ${seedResult.showCount} shows, ${seedResult.recordingCount} recordings")
                                     populateShowArtworkService()
-                                    DatabaseImportResult.Success(restoreResult.showCount, restoreResult.recordingCount)
+                                    DatabaseImportResult.Success(seedResult.showCount, seedResult.recordingCount)
                                 }
-                                is RestoreResult.Error -> {
-                                    DatabaseImportResult.Error("Database restore failed: ${restoreResult.error}")
+                                is SeedImportResult.Error -> {
+                                    DatabaseImportResult.Error("Catalog seed import failed: ${seedResult.error}")
                                 }
                             }
                         }
@@ -358,6 +377,14 @@ class DatabaseManager @Inject constructor(
         }
     }
 
+    private fun deleteStaleLocalDatabaseFile() {
+        val localFile = findLocalDatabaseFile()
+        if (localFile != null) {
+            Log.i(TAG, "Deleting stale local seed file: ${localFile.name} (${localFile.length()} bytes)")
+            localFile.delete()
+        }
+    }
+
     private suspend fun findAvailableDataSources(): AvailableSources {
         val sources = mutableListOf<DatabaseSource>()
         
@@ -373,13 +400,13 @@ class DatabaseManager @Inject constructor(
             sources.add(DatabaseSource.DATA_IMPORT)
         }
         
-        // Check for database backup files (local or remote)  
+        // Check for prebuilt catalog seed files (local or remote)
         val hasDbFile = discoveryResult.localFiles.any { it.type == FileDiscoveryService.FileType.DATABASE_ZIP } ||
                        discoveryResult.remoteFiles.any { it.type == FileDiscoveryService.FileType.DATABASE_ZIP }
-        
+
         if (hasDbFile) {
-            Log.d(TAG, "Data source available: ZIP_BACKUP")
-            sources.add(DatabaseSource.ZIP_BACKUP)
+            Log.d(TAG, "Data source available: SEED")
+            sources.add(DatabaseSource.SEED)
         }
         
         Log.d(TAG, "Available sources: ${sources.joinToString(", ")}")
@@ -509,5 +536,4 @@ class DatabaseManager @Inject constructor(
 sealed class DatabaseImportResult {
     data class Success(val showsImported: Int, val venuesImported: Int) : DatabaseImportResult()
     data class Error(val error: String) : DatabaseImportResult()
-    data class RequiresUserChoice(val availableSources: DatabaseManager.AvailableSources) : DatabaseImportResult()
 }

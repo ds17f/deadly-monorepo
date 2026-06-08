@@ -7,7 +7,6 @@ import com.grateful.deadly.feature.splash.service.SplashService
 import com.grateful.deadly.feature.splash.service.SplashUiState
 import com.grateful.deadly.feature.splash.service.InitResult
 import com.grateful.deadly.core.database.AnalyticsService
-import com.grateful.deadly.core.database.service.DatabaseManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -118,9 +117,5 @@ class SplashViewModel @Inject constructor(
     
     fun abortInitialization() {
         splashService.abortInitialization()
-    }
-    
-    fun selectDatabaseSource(source: DatabaseManager.DatabaseSource) {
-        splashService.selectDatabaseSource(source, viewModelScope)
     }
 }

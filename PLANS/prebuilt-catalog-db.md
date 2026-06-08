@@ -25,9 +25,39 @@ Binding decisions + trade-offs: [`docs/adr/0007-prebuilt-catalog-db.md`](../docs
   - **Remaining for Phase 1:** cut a `data-vX` tag to publish the first
     `catalog.db.zip` (deferred until consumers are closer, to avoid a dangling
     asset — or publish early; it's additive and ignored by current apps).
-- ⬜ **Phase 2 — Android consumer.** Not started.
+- 🟡 **Phase 2 — Android consumer. CODE COMPLETE + compiles locally; needs a device run.**
+  - `SeedDatabaseImportService` — ATTACH the seed to the live migrated Room DB,
+    `INSERT…SELECT` catalog columns into `shows`/`recordings`/`dead_collections`
+    in one txn (favorites preserved across the `shows` CASCADE), rebuild the
+    `show_search` FTS on-device, copy `data_version` **last**, DETACH.
+  - `ShowSearchText` — shared FTS `searchText` builder used by **both** the JSON
+    importer and the seed importer, so search is identical regardless of source.
+  - `DatabaseManager` — prefers the prebuilt seed, falls back to the JSON
+    `data.zip` import if the seed is absent or fails (**Phase 4 for Android, done
+    here**); removed the user-choice prompt. The `DatabaseSource` enum value that
+    drives the seed import is named `SEED` (was the legacy `ZIP_BACKUP`, a dead
+    full-DB *restore* path that even targeted the wrong filename).
+  - `DatabaseHealthService` — now gates on a committed `data_version` row (closes
+    the silent-partial-catalog bug).
+  - `DeadlyDatabase` `exportSchema=true` + `room.schemaLocation`; drift test
+    `CatalogSeedSchemaDriftTest` asserts the contract's catalog columns ⊆ Room's
+    exported schema. **The exported `schemas/…/25.json` is generated on the next
+    build and must be committed** (the drift test skips until it exists).
+  - ⚠️ **Plan correction:** the Android FTS table is **`show_search`** (registered
+    `ShowSearchEntity`), not `shows_fts`. `searchText` is a computed blob, so FTS
+    is *rebuilt*, not copied.
+  - **Dead code removed** (this pass): `DatabaseRestoreService` (legacy full-DB
+    restore), the unregistered `ShowFtsEntity`/`shows_fts`, and the now-unreachable
+    splash source-selection flow (`DatabaseImportResult.RequiresUserChoice` +
+    `SourceSelectionContent` UI + `selectDatabaseSource`) — the seed path no longer
+    prompts, so `RequiresUserChoice` was never returned. `ZIP_BACKUP` → `SEED`.
+  - **Built locally:** `:core:database` + `:feature:splash` `compileDebugKotlin`
+    pass; the Room schema `schemas/…/25.json` is generated **and committed**; the
+    `CatalogSeedSchemaDriftTest` now runs (not skipped) and **passes**.
+  - **Not yet done:** a device first-launch run to verify the attach-copy + FTS
+    rebuild end-to-end against a published/sideloaded `catalog.db.zip`.
 - ⬜ **Phase 3 — iOS consumer.** Not started.
-- ⬜ **Phase 4 — `data.zip` fallback both platforms.** Not started.
+- ⬜ **Phase 4 — `data.zip` fallback.** Android done (above); iOS pending.
 
 ## Why (current first-launch behaviour)
 
@@ -86,8 +116,10 @@ single seed copies into both with no per-platform mapping.
 - **`data_version`**: single row (id=1, dataVersion, packageName, versionType,
   description, importedAt, gitCommit, gitTag, buildTimestamp, totalShows,
   totalVenues, totalFiles, totalSizeBytes)
-- **NOT in seed:** FTS (`show_search` iOS FTS4 custom tokenizer / `shows_fts`
-  Android) — rebuilt on-device. Device-local tables (`library_shows`,
+- **NOT in seed:** FTS — both platforms use an FTS4 table named `show_search`
+  (`unicode61 "tokenchars=-."`); the indexed `searchText` is computed, so it is
+  *rebuilt* on-device, not copied. (Android's unregistered `ShowFtsEntity`/
+  `shows_fts` has been deleted.) Device-local tables (`library_shows`,
   `recent_shows`, reviews, sync outbox).
 
 ### Field derivations (from iOS `ShowImporter`/`RecordingImporter`/`ImportModels`)
@@ -143,15 +175,18 @@ single seed copies into both with no per-platform mapping.
 - `data-release.yml`: add a "Build catalog.db" step; `gh release create` uploads
   both `data.zip` and `catalog.db.zip`. Cut a `data-vX` tag to publish the first.
 
-### Phase 2 — Android (restore scaffolding partly exists)
-- Point `FileDiscoveryService` at the new `catalog.db` asset.
-- In `DatabaseManager`/`DataImportService`: replace the JSON-import branch with
-  attach-and-copy (open seed via SupportSQLite/raw, `INSERT…SELECT` into Room's DB
-  in a transaction, rebuild `shows_fts`, write `data_version`).
-- Fix `isDatabaseHealthy()` to gate on a committed `data_version` row.
-- Flip Room `exportSchema = true` (`DeadlyDatabase.kt`), commit schema JSON.
-- Add schema-drift test (expected catalog columns ⊆ `catalog_schema.json`).
-- Build/verify locally (Android builds run on this machine, never remote).
+### Phase 2 — Android (CODE COMPLETE — see Status block for the file list)
+- ✅ `FileDiscoveryService`/`DownloadService` already classify `catalog.db.zip` as
+  `DATABASE_ZIP`; `DatabaseManager` prefers it (seed) over `DATA_IMPORT` (JSON).
+- ✅ `SeedDatabaseImportService`: ATTACH the seed → `INSERT…SELECT` into Room's DB
+  in one txn → rebuild the `show_search` FTS on-device → write `data_version` last
+  → DETACH. (Replaces the dead full-restore path; its `DatabaseSource` is `SEED`.)
+- ✅ `isDatabaseHealthy()` now gates on a committed `data_version` row.
+- ✅ Room `exportSchema = true` + `room.schemaLocation`. ⏳ commit the generated
+  `schemas/…/25.json` after the first build.
+- ✅ `CatalogSeedSchemaDriftTest` (catalog columns ⊆ Room's exported schema).
+- ⏳ Build/verify locally (Android builds run on this machine, never remote) +
+  device first-launch run.
 
 ### Phase 3 — iOS
 - Add seed discovery/download (GitHub release asset).

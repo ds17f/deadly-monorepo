@@ -111,17 +111,6 @@ class SplashService @Inject constructor(
                     Log.e(TAG, "Database initialization failed: ${result.error}")
                     InitResult.Error(result.error)
                 }
-                is DatabaseImportResult.RequiresUserChoice -> {
-                    Log.d(TAG, "Multiple database sources available, requiring user choice")
-                    // Update UI to show source selection
-                    updateUiState(
-                        showProgress = false,
-                        showSourceSelection = true,
-                        availableSources = result.availableSources.sources,
-                        message = "Choose database source"
-                    )
-                    InitResult.Error("User choice required") // Will be handled by source selection UI
-                }
             }
         } catch (e: Exception) {
             Log.e(TAG, "Database initialization exception", e)
@@ -148,8 +137,6 @@ class SplashService @Inject constructor(
         isReady: Boolean = _uiState.value.isReady,
         showError: Boolean = _uiState.value.showError,
         showProgress: Boolean = _uiState.value.showProgress,
-        showSourceSelection: Boolean = _uiState.value.showSourceSelection,
-        availableSources: List<DatabaseManager.DatabaseSource> = _uiState.value.availableSources,
         message: String = _uiState.value.message,
         errorMessage: String? = _uiState.value.errorMessage,
         progress: Progress = _uiState.value.progress
@@ -158,8 +145,6 @@ class SplashService @Inject constructor(
             isReady = isReady,
             showError = showError,
             showProgress = showProgress,
-            showSourceSelection = showSourceSelection,
-            availableSources = availableSources,
             message = message,
             errorMessage = errorMessage,
             progress = progress
@@ -219,70 +204,8 @@ class SplashService @Inject constructor(
             isReady = true,
             showError = false,
             showProgress = false,
-            showSourceSelection = false,
             message = "Database import aborted"
         )
-    }
-    
-    /**
-     * User selected a database source for initialization
-     */
-    fun selectDatabaseSource(source: DatabaseManager.DatabaseSource, coroutineScope: CoroutineScope) {
-        coroutineScope.launch {
-            Log.d(TAG, "User selected database source: $source")
-            
-            // Hide source selection and show progress
-            updateUiState(
-                showSourceSelection = false,
-                showProgress = true,
-                message = when (source) {
-                    DatabaseManager.DatabaseSource.ZIP_BACKUP -> "Restoring from backup..."
-                    DatabaseManager.DatabaseSource.DATA_IMPORT -> "Importing fresh data..."
-                }
-            )
-            
-            try {
-                val result = databaseManager.initializeFromSource(source)
-                
-                when (result) {
-                    is DatabaseImportResult.Success -> {
-                        updateUiState(
-                            isReady = true,
-                            showProgress = false,
-                            message = when (source) {
-                                DatabaseManager.DatabaseSource.ZIP_BACKUP -> "Database restored from backup"
-                                DatabaseManager.DatabaseSource.DATA_IMPORT -> "Database ready: ${result.showsImported} shows loaded"
-                            }
-                        )
-                    }
-                    is DatabaseImportResult.Error -> {
-                        updateUiState(
-                            showError = true,
-                            showProgress = false,
-                            message = "Database initialization failed",
-                            errorMessage = result.error
-                        )
-                    }
-                    is DatabaseImportResult.RequiresUserChoice -> {
-                        // This shouldn't happen when selecting a specific source
-                        updateUiState(
-                            showError = true,
-                            showProgress = false,
-                            message = "Unexpected error: user choice required again",
-                            errorMessage = "Internal error"
-                        )
-                    }
-                }
-            } catch (e: Exception) {
-                Log.e(TAG, "Failed to initialize from selected source: $source", e)
-                updateUiState(
-                    showError = true,
-                    showProgress = false,
-                    message = "Database initialization failed",
-                    errorMessage = e.message
-                )
-            }
-        }
     }
 }
 
@@ -293,8 +216,6 @@ data class SplashUiState(
     val isReady: Boolean = false,
     val showError: Boolean = false,
     val showProgress: Boolean = false,
-    val showSourceSelection: Boolean = false,
-    val availableSources: List<DatabaseManager.DatabaseSource> = emptyList(),
     val message: String = "Loading database...",
     val errorMessage: String? = null,
     val progress: Progress = Progress(

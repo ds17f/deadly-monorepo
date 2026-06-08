@@ -97,12 +97,15 @@ First launch downloads a 25 MB `data.zip` and imports ~20k JSON files on-device
 (minutes on venue cell). Replace it with a **prebuilt SQLite catalog seed**
 built in CI (~2.2 MB gzip), bulk-copied into each app's DB (sub-second), FTS
 rebuilt on-device. Also fixes Android's silent false-complete on kill
-mid-import. Architecture validated with a spike; not yet implemented.
+mid-import.
 - Decisions in **ADR-0007** (`docs/adr/0007-prebuilt-catalog-db.md`); phased
   plan + findings + schema contract in
   [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md).
 - Order: pipeline producer (build + publish `catalog.db.zip`) → Android consumer
   → iOS consumer → `data.zip` fallback both.
+- **Progress:** ✅ Phase 1 (pipeline) done (not yet tagged/published) · 🟡 Phase 2
+  (Android consumer + JSON fallback) code-complete, pending local build + device
+  run · ⬜ Phase 3/4 (iOS) not started.
 
 ## Deferred / explicit non-goals (sync v0)
 Cross-device deletion **tombstones**, **settings sync**, and **background sync**

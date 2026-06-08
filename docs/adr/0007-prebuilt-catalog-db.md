@@ -2,7 +2,26 @@
 
 ## Status
 
-Proposed (2026-06-06). Not yet implemented.
+Accepted (2026-06-06). **Partially implemented (2026-06-07).**
+
+- ✅ **Phase 1 — pipeline producer** (`catalog_schema.json` contract,
+  `build_catalog_db.py`, `make data-build-db`, `data-release.yml` publishes
+  `catalog.db.zip`). Not yet tagged/published.
+- 🟡 **Phase 2 — Android consumer:** code-complete on `prebuilt-catalog-db`,
+  compiles locally with the Room schema JSON committed and the drift test passing;
+  pending a device first-launch run. See PLANS Status for the file-by-file list.
+- ⬜ **Phase 3 — iOS consumer / Phase 4 — iOS fallback:** not started.
+
+**Implementation corrections to decisions below** (surfaced while building Phase 2):
+- Decision #5 named Android's FTS table `shows_fts`; the table the app actually
+  registers and queries is **`show_search`** (`ShowSearchEntity`). The decision
+  stands (FTS rebuilt on-device); only the name was wrong. The dead, unregistered
+  `ShowFtsEntity`/`shows_fts` has since been **deleted**.
+- Decision #7's "reuse the `ZIP_BACKUP` idea" landed as: a new attach-and-copy
+  `SeedDatabaseImportService`, driven by the `DatabaseSource.SEED` enum value
+  (renamed from the legacy `ZIP_BACKUP` — a full-DB *restore* that wrote to the
+  wrong filename and was effectively dead). The old `DatabaseRestoreService` and
+  the now-unreachable splash source-selection prompt have been **deleted**.
 
 Execution detail, phased steps, and findings live in
 [`PLANS/prebuilt-catalog-db.md`](../../PLANS/prebuilt-catalog-db.md); this ADR
@@ -60,11 +79,14 @@ of importing JSON on-device.
 4. **One canonical seed serves both platforms.** `shows` and `recordings` column
    names are already identical across GRDB and Room, so a direct `INSERT…SELECT`
    works with no per-platform column mapping for the base tables.
-5. **FTS is rebuilt on-device, never shipped.** iOS uses `show_search` (FTS4 with a
-   custom `tokenize=unicode61 "tokenchars=-."` tokenizer); Android uses `shows_fts`
-   (FTS4). They cannot share an index, and rebuilding 2,313 rows from the copied
-   `shows` is trivial. Shipping the index would couple the seed to one platform's
-   FTS engine/version.
+5. **FTS is rebuilt on-device, never shipped.** Both apps use an FTS4 table named
+   `show_search` with a `unicode61 "tokenchars=-."` tokenizer (the names happen to
+   match; iOS and Android still each own their own index). The indexed `searchText`
+   is a *computed* blob (multi-format dates, member/song lists, source-type tags),
+   so the rebuild recomputes it from the copied `shows` rows — it is not a column
+   copy. On Android that logic is shared between the JSON and seed import paths via
+   `ShowSearchText` so search is identical regardless of source. Shipping the index
+   would couple the seed to one platform's FTS engine/version.
 6. **`data.zip` stays as fallback.** New app versions prefer the seed and fall back
    to the JSON import if the asset is missing or the copy fails. Older app versions
    keep using `data.zip` unchanged. Web continues to consume `data.zip`.
@@ -142,10 +164,10 @@ of importing JSON on-device.
   loader is still fine to do later; with the seed the wait is short enough that it
   matters far less.)
 - **Use Android's existing `ZIP_BACKUP` path** (download a prebuilt DB and restore
-  the file in place). It's already coded but unused, and restoring the file as
-  Room's live DB still hits the identity-hash requirement. The attach-and-copy
-  approach reuses the *idea* (prebuilt DB) without the drop-in fragility, and works
-  identically on iOS.
+  the file in place). It was coded but unused (and has since been deleted), and
+  restoring the file as Room's live DB still hits the identity-hash requirement. The
+  attach-and-copy approach reuses the *idea* (prebuilt DB) without the drop-in
+  fragility, and works identically on iOS.
 - **Ship the FTS index in the seed.** Rejected: the two platforms' FTS tables
   differ (name + tokenizer), and a shipped index couples the seed to one FTS
   engine version. On-device rebuild is cheap for 2,313 rows.
