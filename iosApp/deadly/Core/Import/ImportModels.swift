@@ -25,6 +25,12 @@ struct GitHubRelease: Decodable, Sendable {
     var dataZipAsset: Asset? {
         assets.first(where: { $0.name.hasPrefix("data") && $0.name.hasSuffix(".zip") })
     }
+
+    /// Prebuilt catalog seed asset (`catalog.db.zip`). Absent until a data release
+    /// publishes one — in which case the importer falls back to `dataZipAsset`.
+    var catalogDbAsset: Asset? {
+        assets.first(where: { $0.name.hasPrefix("catalog") && $0.name.hasSuffix(".zip") })
+    }
 }
 
 // MARK: - JSON value helper

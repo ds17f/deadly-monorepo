@@ -55,6 +55,15 @@ struct AppDatabase: @unchecked Sendable {
         try dbWriter.write(block)
     }
 
+    /// Exclusive write that runs OUTSIDE GRDB's automatic transaction. Required
+    /// for statements SQLite forbids inside a transaction — notably `ATTACH`/
+    /// `DETACH` (see `SeedImportService`). The block manages its own transaction
+    /// for the actual writes. Barrier semantics block concurrent reads/writes for
+    /// the duration, which suits the one-shot catalog seed import.
+    func writeWithoutTransaction<T>(_ block: (Database) throws -> T) throws -> T {
+        try dbWriter.barrierWriteWithoutTransaction(block)
+    }
+
     func observe<Reducer: ValueReducer>(
         _ observation: ValueObservation<Reducer>
     ) -> AsyncValueObservation<Reducer.Value> where Reducer.Value: Equatable & Sendable {

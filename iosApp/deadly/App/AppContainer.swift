@@ -69,6 +69,7 @@ final class AppContainer {
             dataImportService = DataImportService(
                 gitHubClient: URLSessionGitHubReleasesClient(),
                 zipExtractor: ZipExtractor(),
+                database: db,
                 showDAO: ShowDAO(database: db),
                 recordingDAO: RecordingDAO(database: db),
                 collectionsDAO: CollectionsDAO(database: db),
@@ -192,12 +193,13 @@ final class AppContainer {
 
             // RecentShowsService is @MainActor; wires up automatic play tracking via StreamPlayer
             let recentService = MainActor.assumeIsolated {
-                RecentShowsServiceImpl(
+                let svc = RecentShowsServiceImpl(
                     recentShowDAO: RecentShowDAO(database: db),
                     showRepository: showRepo,
-                    streamPlayer: player,
-                    favoritesPushService: pushSvc
+                    streamPlayer: player
                 )
+                svc.favoritesPushService = pushSvc
+                return svc
             }
             recentShowsService = recentService
 

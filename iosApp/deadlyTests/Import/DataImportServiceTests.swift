@@ -103,6 +103,7 @@ struct DataImportServiceTests {
         return DataImportService(
             gitHubClient: StubGitHubReleasesClient(release: release, fixtureDir: fixtures.rootDir),
             zipExtractor: StubZipExtractor(fixtureDir: fixtures.rootDir),
+            database: db,
             showDAO: ShowDAO(database: db),
             recordingDAO: RecordingDAO(database: db),
             collectionsDAO: CollectionsDAO(database: db),
@@ -235,7 +236,8 @@ struct DataImportServiceTests {
             downloadedFormat: nil,
             customRating: nil,
             lastAccessedAt: nil,
-            tags: nil
+            tags: nil,
+            updatedAt: now
         ))
         #expect(try libraryDAO.fetchCount() == 1)
 

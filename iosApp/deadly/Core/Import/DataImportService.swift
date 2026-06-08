@@ -8,6 +8,7 @@ import Foundation
 struct DataImportService: Sendable {
     let gitHubClient: any GitHubReleasesClient
     let zipExtractor: any ZipExtracting
+    let database: AppDatabase
     let showDAO: ShowDAO
     let recordingDAO: RecordingDAO
     let collectionsDAO: CollectionsDAO
@@ -53,7 +54,14 @@ struct DataImportService: Sendable {
             return
         }
 
-        // 2. DOWNLOAD
+        // 2. PREFER the prebuilt catalog seed (sub-second attach-copy). Falls through
+        //    to the JSON import below if no seed is published yet or the seed fails —
+        //    zero-risk migration (ADR-0007, Phase 4).
+        if await importFromSeedIfAvailable(progress: emit) {
+            return
+        }
+
+        // 3. DOWNLOAD (JSON fallback)
         emit(ImportProgress(phase: .downloading, processed: 0, total: 1, message: "Fetching latest release…"))
         let release = try await gitHubClient.fetchLatestRelease()
         guard let asset = release.dataZipAsset else {
@@ -199,6 +207,73 @@ struct DataImportService: Sendable {
             total: importedShows + importedRecordings,
             message: "Imported \(importedShows) shows, \(importedRecordings) recordings, \(collectionRecords.count) collections"
         ))
+    }
+
+    // MARK: - Prebuilt seed (fast path)
+
+    /// Attempts the fast path: download the prebuilt catalog seed and attach-copy it
+    /// into the migrated DB. Returns `true` if the catalog was fully imported; `false`
+    /// to signal the caller to fall back to the JSON import (no seed published yet, or
+    /// a recoverable failure). Never throws — failures degrade to the JSON path.
+    private func importFromSeedIfAvailable(progress emit: @Sendable (ImportProgress) -> Void) async -> Bool {
+        emit(ImportProgress(phase: .downloading, processed: 0, total: 1, message: "Looking for prebuilt catalog…"))
+
+        guard let release = try? await gitHubClient.fetchLatestRelease() else {
+            return false  // network issue — let the JSON path surface the error
+        }
+        guard let asset = release.catalogDbAsset,
+              let assetURL = URL(string: asset.browserDownloadUrl) else {
+            return false  // no seed published yet → JSON import
+        }
+
+        do {
+            emit(ImportProgress(phase: .downloading, processed: 0, total: 1, message: "Downloading \(asset.name)…"))
+            let zipURL = try await gitHubClient.downloadZIP(from: assetURL)
+            defer { try? FileManager.default.removeItem(at: zipURL) }
+
+            emit(ImportProgress(phase: .extracting, processed: 0, total: 1, message: "Extracting catalog…"))
+            let extractDir = try zipExtractor.extract(from: zipURL)
+            defer { try? FileManager.default.removeItem(at: extractDir) }
+
+            guard let seedFile = findSeedDatabase(in: extractDir) else {
+                return false
+            }
+
+            emit(ImportProgress(phase: .importingShows, processed: 0, total: 1, message: "Loading catalog…"))
+            let seedImporter = SeedImportService(database: database, favoritesDAO: favoritesDAO)
+            let result = try seedImporter.importSeed(at: seedFile)
+
+            emit(ImportProgress(
+                phase: .completed,
+                processed: result.shows + result.recordings,
+                total: result.shows + result.recordings,
+                message: "Imported \(result.shows) shows, \(result.recordings) recordings"
+            ))
+            return true
+        } catch {
+            analyticsService?.track("error", props: [
+                "source": "seed_import",
+                "message": error.localizedDescription,
+            ])
+            return false  // recoverable — fall back to JSON import
+        }
+    }
+
+    /// Locate the extracted `catalog.db` (the zip ships a bare `.db`; tolerate one
+    /// level of nesting in case it's wrapped in a folder).
+    private func findSeedDatabase(in dir: URL) -> URL? {
+        let fm = FileManager.default
+        guard let files = try? fm.contentsOfDirectory(at: dir, includingPropertiesForKeys: [.isDirectoryKey]) else {
+            return nil
+        }
+        if let db = files.first(where: { $0.pathExtension == "db" }) { return db }
+        for sub in files where (try? sub.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true {
+            if let nested = try? fm.contentsOfDirectory(at: sub, includingPropertiesForKeys: nil),
+               let db = nested.first(where: { $0.pathExtension == "db" }) {
+                return db
+            }
+        }
+        return nil
     }
 
     // MARK: - Helpers

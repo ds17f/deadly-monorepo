@@ -8,9 +8,12 @@ enum ImportError: Error, LocalizedError {
     case extractionFailed(Error)
     case parseError(file: String, underlying: Error)
     case databaseError(Error)
+    case seedInvalid(String)
 
     var errorDescription: String? {
         switch self {
+        case .seedInvalid(let reason):
+            return "Catalog seed invalid: \(reason)"
         case .networkError(let e):
             return "Network error: \(e.localizedDescription)"
         case .downloadFailed(let code):
