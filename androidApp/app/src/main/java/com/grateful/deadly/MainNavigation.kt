@@ -36,6 +36,9 @@ import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.design.scaffold.AppScaffold
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.feature.home.navigation.homeGraph
+import com.grateful.deadly.notifications.NotificationBell
+import com.grateful.deadly.notifications.NotificationViewModel
+import com.grateful.deadly.notifications.NotificationsScreen
 import com.grateful.deadly.feature.settings.SettingsScreen
 import com.grateful.deadly.feature.settings.navigation.CONNECT_ROUTE
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
@@ -104,6 +107,26 @@ fun MainNavigation(
     val prevIsOffline = remember { mutableStateOf<Boolean?>(null) }
     var pendingDeepLink by remember { mutableStateOf<PendingDeepLink?>(null) }
 
+    // New-message toast: a snackbar with a "View" action that opens the inbox.
+    // Deduped by arrival key so rotation/recomposition can't re-toast (decision C).
+    val notificationViewModel: NotificationViewModel = hiltViewModel()
+    val lastToastKey = remember { mutableStateOf<Long?>(null) }
+    LaunchedEffect(Unit) {
+        notificationViewModel.newArrivals.collect { arrival ->
+            if (lastToastKey.value == arrival.key) return@collect
+            lastToastKey.value = arrival.key
+            val msg = if (arrival.count > 1) "${arrival.count} new messages" else "New: ${arrival.title}"
+            val result = snackbarHostState.showSnackbar(
+                message = msg,
+                actionLabel = "View",
+                duration = SnackbarDuration.Short,
+            )
+            if (result == SnackbarResult.ActionPerformed) {
+                navController.navigate("notifications")
+            }
+        }
+    }
+
     // Redirect to downloads and show snackbar on connectivity changes
     LaunchedEffect(isOffline) {
         // Show snackbar only on changes, not initial composition
@@ -163,10 +186,17 @@ fun MainNavigation(
         isOffline = isOffline,
     )
 
-    // Augment top bar with logo click to open drawer
-    val augmentedTopBar = barConfig.topBar?.copy(
+    // Augment top bar with logo click to open drawer, and add the notifications
+    // bell to the home screen's actions (the app's primary landing surface).
+    val baseTopBar = barConfig.topBar
+    val augmentedTopBar = baseTopBar?.copy(
         onLogoClick = {
             scope.launch { drawerState.open() }
+        },
+        actions = if (currentRoute == "home") {
+            { NotificationBell(onClick = { navController.navigate("notifications") }) }
+        } else {
+            baseTopBar.actions
         }
     )
 
@@ -283,6 +313,11 @@ fun MainNavigation(
 
                 // Settings feature - app configuration and about page
                 settingsGraph(navController)
+
+                // Notifications inbox (in-app messaging)
+                composable("notifications") {
+                    NotificationsScreen(onNavigateBack = { navController.popBackStack() })
+                }
             }
 
             AnimatedVisibility(

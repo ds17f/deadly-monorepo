@@ -470,6 +470,10 @@ struct SettingsScreen: View {
             }
 
             Section {
+                Link(destination: Community.subredditURL) {
+                    settingsRow("Community (\(Community.subredditHandle))", systemImage: "bubble.left.and.bubble.right")
+                }
+                .foregroundStyle(.primary)
                 Link(destination: URL(string: "https://archive.org/donate/")!) {
                     settingsRow("Donate to Internet Archive", systemImage: "heart")
                 }

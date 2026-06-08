@@ -392,6 +392,27 @@ fun SettingsScreen(
             )
         }
 
+        // Community link (decision I). Canonical URL lives in
+        // com.grateful.deadly.notifications.Community; inlined here because
+        // feature:settings can't depend on the app module.
+        item {
+            PreferenceRow(
+                title = "Community (r/thedeadlyapp)",
+                onClick = {
+                    context.startActivity(
+                        Intent(Intent.ACTION_VIEW, Uri.parse("https://www.reddit.com/r/thedeadlyapp"))
+                    )
+                },
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+
         if (developerModeUnlocked) {
             item {
                 PreferenceRow(

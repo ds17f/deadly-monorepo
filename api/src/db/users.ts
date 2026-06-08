@@ -176,6 +176,31 @@ function initSchema(db: Database.Database): void {
       key TEXT PRIMARY KEY,
       value TEXT NOT NULL
     );
+
+    -- In-app messaging: the server is a dumb publisher of a flat message list.
+    -- There is deliberately NO per-user state table — seen/dismissed lives on
+    -- each client (localStorage / Room / GRDB). A global broadcast is one row,
+    -- never one-per-account. The monotonic integer id doubles as the cursor
+    -- clients track (?since=<id>). See PLANS/in-app-messaging.md.
+    CREATE TABLE IF NOT EXISTS notifications (
+      id             INTEGER PRIMARY KEY AUTOINCREMENT,
+      author_id      TEXT NOT NULL REFERENCES accounts(id),
+      scope          TEXT NOT NULL DEFAULT 'global',  -- 'global' | 'direct' (future)
+      target_user_id TEXT REFERENCES accounts(id) ON DELETE CASCADE, -- null for global
+      title          TEXT NOT NULL,
+      body           TEXT NOT NULL,
+      level          TEXT NOT NULL DEFAULT 'info',     -- info | warn (severity/color)
+      category       TEXT NOT NULL DEFAULT 'general',  -- general | release | feature | outage (cosmetic glyph)
+      min_version    TEXT,                             -- semver lower bound; clients filter locally
+      max_version    TEXT,                             -- semver upper bound; clients filter locally
+      platforms      TEXT,                             -- JSON array e.g. ["ios","android"]; null = all
+      created_at     INTEGER NOT NULL DEFAULT (unixepoch()),
+      expires_at     INTEGER,                          -- optional auto-retire; drives cold-start filter
+      deleted_at     INTEGER                           -- admin tombstone / unsend
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_notifications_scope_id
+      ON notifications(scope, id);
   `);
 
   db.exec(`
@@ -248,6 +273,14 @@ function initSchema(db: Database.Database): void {
   // but is treated as gone — the getters below filter deleted_at IS NULL, so
   // every auth path rejects it. Re-signing in reactivates (see adapter).
   addColumnIfMissing("accounts", "deleted_at", "INTEGER");
+
+  // Notifications v2: category (cosmetic glyph) + client-side targeting metadata
+  // (semver range + platform list). All optional/additive — the server stores
+  // and serves them; each client filters locally. See PLANS/in-app-messaging.md.
+  addColumnIfMissing("notifications", "category", "TEXT NOT NULL DEFAULT 'general'");
+  addColumnIfMissing("notifications", "min_version", "TEXT");
+  addColumnIfMissing("notifications", "max_version", "TEXT");
+  addColumnIfMissing("notifications", "platforms", "TEXT");
 
   db.exec(`UPDATE favorite_shows SET updated_at = unixepoch() WHERE updated_at = 0`);
   db.exec(`UPDATE favorite_songs SET updated_at = unixepoch() WHERE updated_at = 0`);

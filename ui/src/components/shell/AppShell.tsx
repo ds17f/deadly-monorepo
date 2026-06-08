@@ -26,6 +26,7 @@ import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import * as analytics from "@/lib/analytics";
 import UserMenu from "@/components/auth/UserMenu";
+import NotificationBell from "@/components/notifications/NotificationBell";
 import HeaderPlayerWrapper from "@/components/player/HeaderPlayerWrapper";
 import LibraryRail from "./LibraryRail";
 import MobileTabBar from "./MobileTabBar";
@@ -77,7 +78,8 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
           <Logo />
         </div>
         <SearchBox />
-        <div className="flex items-center justify-end sm:flex-1">
+        <div className="flex items-center justify-end gap-1 sm:flex-1">
+          <NotificationBell />
           <UserMenu />
         </div>
       </header>

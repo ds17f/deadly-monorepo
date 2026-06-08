@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/contexts/AuthContext";
 import { deleteAccount } from "@/lib/userDataApi";
+import { SUBREDDIT_HANDLE, SUBREDDIT_URL } from "@/lib/community";
 
 export default function SettingsTab() {
   const { user, signOut } = useAuth();
@@ -52,6 +53,22 @@ export default function SettingsTab() {
         >
           Sign out
         </button>
+      </section>
+
+      {/* Community */}
+      <section className="rounded-lg border border-white/10 bg-deadly-surface p-5">
+        <h3 className="mb-2 font-medium text-white">Community</h3>
+        <p className="text-sm text-white/50">
+          News, tips, and discussion live on our subreddit.
+        </p>
+        <a
+          href={SUBREDDIT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-block rounded-md border border-white/15 px-3 py-1.5 text-sm text-white/70 transition hover:border-white/30 hover:text-white"
+        >
+          {SUBREDDIT_HANDLE} →
+        </a>
       </section>
 
       {/* Danger zone */}

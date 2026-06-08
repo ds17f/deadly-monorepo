@@ -16,6 +16,8 @@ struct MainNavigation: View {
     @State private var searchResetToken = 0
     @State private var showingSettings = false
     @State private var showingEqualizer = false
+    @State private var notificationToast: NewArrival?
+    @State private var lastToastKey: Int64?
 
     private var isOffline: Bool { !container.networkMonitor.isConnected }
 
@@ -35,6 +37,11 @@ struct MainNavigation: View {
                 NavigationStack(path: $homeStack) {
                     HomeScreen()
                         .settingsLogoButton($showingSettings, title: "Home")
+                        .toolbar {
+                            ToolbarItem(placement: .topBarTrailing) {
+                                NotificationBell()
+                            }
+                        }
                         .navigationDestination(for: String.self) { showId in
                             ShowDetailScreen(showId: showId)
                         }
@@ -43,6 +50,9 @@ struct MainNavigation: View {
                             case .detail(let id):
                                 CollectionDetailScreen(collectionId: id)
                             }
+                        }
+                        .navigationDestination(for: NotificationRoute.self) { _ in
+                            NotificationsInboxScreen()
                         }
                 }
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
@@ -102,6 +112,29 @@ struct MainNavigation: View {
                 showingSettings = false
                 showingEqualizer = true
             })
+        }
+        // Transient new-message toast (decision C): tap opens the inbox.
+        .overlay(alignment: .bottom) {
+            if let toast = notificationToast {
+                NotificationToastView(arrival: toast) {
+                    notificationToast = nil
+                    selectedTab = .home
+                    homeStack.append(NotificationRoute.inbox)
+                }
+                .padding(.bottom, 96)
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .onChange(of: container.notificationStore.lastArrival) { _, arrival in
+            guard let arrival, arrival.key != lastToastKey else { return }
+            lastToastKey = arrival.key
+            withAnimation { notificationToast = arrival }
+            Task {
+                try? await Task.sleep(for: .seconds(4))
+                if notificationToast?.key == arrival.key {
+                    withAnimation { notificationToast = nil }
+                }
+            }
         }
         .sheet(isPresented: $showingEqualizer) {
             EqualizerSheet()
