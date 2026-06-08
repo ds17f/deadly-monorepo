@@ -10,7 +10,11 @@ Accepted (2026-06-06). **Partially implemented (2026-06-07).**
 - 🟡 **Phase 2 — Android consumer:** code-complete on `prebuilt-catalog-db`,
   compiles locally with the Room schema JSON committed and the drift test passing;
   pending a device first-launch run. See PLANS Status for the file-by-file list.
-- ⬜ **Phase 3 — iOS consumer / Phase 4 — iOS fallback:** not started.
+- 🟡 **Phase 3 — iOS consumer / Phase 4 — iOS fallback:** code-complete; the app
+  target builds (`make ios-remote-build` → BUILD SUCCEEDED). Seed-preferred import
+  with JSON fallback via `SeedImportService` + `ShowSearchText`. New seed tests are
+  written but the iOS test target is blocked by pre-existing, unrelated drift
+  (connect-v2/sync test constructors) — repair is a separate task.
 
 **Implementation corrections to decisions below** (surfaced while building Phase 2):
 - Decision #5 named Android's FTS table `shows_fts`; the table the app actually

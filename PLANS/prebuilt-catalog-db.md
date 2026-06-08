@@ -6,6 +6,62 @@ SQLite **catalog seed** built in CI and bulk-copied into each app's DB.
 
 Binding decisions + trade-offs: [`docs/adr/0007-prebuilt-catalog-db.md`](../docs/adr/0007-prebuilt-catalog-db.md).
 
+## Release & versioning mechanics (how a seed reaches a device) — 2026-06-08
+
+The thing that unblocks device testing without risking users:
+
+- **Both apps pin an EXACT data tag, not "latest".** iOS
+  `GitHubReleasesClient.swift:17` `dataVersion = "2.3.0"` → fetches
+  `releases/tags/data-v2.3.0` (the method is *named* `fetchLatestRelease()` but is
+  pinned). Android `GitHubDataService.kt:21` `REQUIRED_DATA_VERSION = "2.3.0"` →
+  `getRelease("data-v2.3.0")`. A shipped binary only ever fetches the tag baked into
+  it → **publishing a new `data-vX` tag never reaches production users** until an app
+  update bumps the constant. So device-test (Phase 3/2 device runs) and publish are
+  NOT chicken-and-egg — cut throwaway test tags freely.
+- **Asset discovery is additive:** iOS `catalogDbAsset` finds `catalog*.zip`, falls
+  back to `data.zip`. The live `data-v2.3.0` release has only `data.zip` (no seed),
+  which is why on-device testing needs a NEW tag that carries `catalog.db.zip`.
+- **Versioning: NOT 3.0.0.** Data *content* is unchanged (same `stage02`; `data.zip`
+  byte-identical) — `catalog.db.zip` is additive packaging. Scheme:
+  - throwaway test cuts → **patch** (`data-v2.3.1`, `.2`, …)
+  - the real ship → **minor** `data-v2.4.0` ("package gained a seed artifact")
+  - reserve **major** `3.0.0` for the composite-PK / `recording_shows` schema break
+    (the Known-limitation below). Major/minor is purely cosmetic anyway since apps
+    pin exact tags (no range-matching).
+- **Cut the tag from THIS branch, not main.** `data-release.yml` triggers on tag
+  name `data-v*` regardless of branch, and for a tag push GitHub runs the
+  workflow + builder **as they exist at the tagged commit**. The builder
+  (`build_catalog_db.py`) + the seed-aware workflow live **only on
+  `prebuilt-catalog-db`** (not merged to main) → tagging main yields a release with
+  only `data.zip`. CI reads the version from the **tag name**
+  (`--version ${GITHUB_REF_NAME#data-v}`), not `data/version`, and self-rebuilds
+  `stage02` from the stage01 cache.
+- **Two ways to tag:**
+  - `make data-release VERSION=X` — writes `data/version`, commits
+    `chore(all/data): bump…` to the branch, tags, and **only prints** a push hint
+    (does NOT push; unlike app `release.sh` it does not auto-push or trigger store
+    builds). ⚠️ Do **not** run its printed `git push origin main data-v…` hint.
+  - Throwaway test cut (preferred while iterating) — manual tag, no branch churn:
+    `git tag data-v2.3.1 HEAD && git push origin data-v2.3.1` (tag only, moves no
+    branch ref). Use the make target for the real `2.4.0` ship where the
+    `data/version` bump is meaningful.
+- **Device testing also needs the app constants bumped** to the test version in the
+  LOCAL dev build (iOS `dataVersion`, Android `REQUIRED_DATA_VERSION`); set them to
+  the real ship version (`2.4.0`) before merging the feature.
+
+## Status (2026-06-08)
+
+- 🟡 **Phase 3 iOS — CODE COMPLETE, UNCOMMITTED** in this worktree (16 changed
+  files). App target builds; test-target connect-v2 drift repairs are in the working
+  tree but unverified. Commit split: Phase 3 feature commit + a separate
+  `fix(ios/tests):` for the connect-v2 repair. See the Phase 3 block below.
+- **Next concrete steps:** (1) commit Phase 3; (2) run only the seed tests
+  (`-only-testing:deadlyTests/SeedImportServiceTests
+  -only-testing:deadlyTests/CatalogSeedSchemaDriftTests` — whole target still must
+  compile, the slow part); (3) cut `data-v2.3.1` from this branch + bump the two app
+  constants locally → Android & iOS device first-launch runs; iterate via patch
+  bumps; (4) real ship at `data-v2.4.0`.
+
 ## Status (2026-06-06)
 
 - ✅ **Investigation + architecture validated.** Read both apps' launch/import
@@ -56,8 +112,33 @@ Binding decisions + trade-offs: [`docs/adr/0007-prebuilt-catalog-db.md`](../docs
     `CatalogSeedSchemaDriftTest` now runs (not skipped) and **passes**.
   - **Not yet done:** a device first-launch run to verify the attach-copy + FTS
     rebuild end-to-end against a published/sideloaded `catalog.db.zip`.
-- ⬜ **Phase 3 — iOS consumer.** Not started.
-- ⬜ **Phase 4 — `data.zip` fallback.** Android done (above); iOS pending.
+- 🟡 **Phase 3 — iOS consumer. CODE COMPLETE + app target builds; tests blocked.**
+  - `SeedImportService` — GRDB `ATTACH` of the seed (via a new
+    `AppDatabase.writeWithoutTransaction` barrier, since `ATTACH` can't run inside a
+    txn) → `INSERT…SELECT` into `shows`/`recordings`/`dead_collections` in one txn
+    (favorites snapshot/restored across the `shows` CASCADE) → rebuild `show_search`
+    FTS → write `data_version` LAST → `DETACH`. Validates the SQLite header first.
+  - `ShowSearchText` (Swift) — shared FTS builder; `ShowImporter.buildSearchText`
+    now delegates to it so JSON and seed index identical text (both fed CSV inputs).
+  - `DataImportService` — `run()` now tries the seed first
+    (`importFromSeedIfAvailable`) and falls back to the JSON import if no
+    `catalog.db.zip` asset exists or the seed fails (**Phase 4 for iOS, done here**).
+    `GitHubRelease.catalogDbAsset` finds `catalog*.zip`; seed zip is downloaded to
+    temp + `defer`-deleted (the single txn is interruption-safe, so a kill mid-copy
+    rolls back and relaunch re-fetches the ~2 MB — no persisted-seed bookkeeping).
+  - Tests written: `CatalogSeedSchemaDriftTests` (introspects a migrated in-memory
+    DB; contract columns ⊆ live + PK match) and `SeedImportServiceTests` (full
+    round-trip: catalog copy, FTS rebuild + MATCH, `data_version` gate, favorites
+    preserved; plus a non-SQLite rejection case).
+  - **Verified:** `make ios-remote-build` → **BUILD SUCCEEDED** (app target, all
+    Phase 3 code).
+  - **⚠️ Blocked:** the iOS *test target* does not compile on this branch due to
+    **pre-existing, unrelated drift** from the connect-v2/sync work —
+    `RecentShowsServiceTests`/`PlaylistServiceTests` miss the `favoritesPushService`
+    arg, `DataImportServiceTests` missed `updatedAt` (fixed in passing). Running the
+    new seed tests needs that suite repaired first (separate task).
+- ✅ **Phase 4 — `data.zip` fallback.** Done on both platforms (seed-preferred with
+  JSON fallback baked into each consumer above).
 
 ## Why (current first-launch behaviour)
 
