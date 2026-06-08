@@ -7,14 +7,39 @@ import { useEffect, useState, useCallback } from "react";
 const TITLE_MAX = 120;
 const BODY_MAX = 2000;
 
+type Category = "general" | "release" | "feature" | "outage";
+const CATEGORIES: Category[] = ["general", "release", "feature", "outage"];
+type Platform = "ios" | "android" | "web";
+const PLATFORMS: Platform[] = ["ios", "android", "web"];
+
 interface AdminNotification {
   id: number;
   title: string;
   body: string;
   level: "info" | "warn";
+  category: Category;
+  min_version: string | null;
+  max_version: string | null;
+  platforms: string | null;
   created_at: number;
   expires_at: number | null;
   deleted_at: number | null;
+}
+
+/** Compact "ios·android ≥2.4.0 <2.3.9" targeting summary, or "" if untargeted. */
+function targetingLabel(n: AdminNotification): string {
+  const parts: string[] = [];
+  if (n.platforms) {
+    try {
+      const arr = JSON.parse(n.platforms);
+      if (Array.isArray(arr) && arr.length > 0) parts.push(arr.join("·"));
+    } catch {
+      /* ignore malformed */
+    }
+  }
+  if (n.min_version) parts.push(`≥${n.min_version}`);
+  if (n.max_version) parts.push(`≤${n.max_version}`);
+  return parts.join(" ");
 }
 
 function formatTs(ts: number | null): string {
@@ -37,8 +62,15 @@ export default function NotificationsAdminPage() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [level, setLevel] = useState<"info" | "warn">("info");
+  const [category, setCategory] = useState<Category>("general");
+  const [platforms, setPlatforms] = useState<Platform[]>([]);
+  const [minVersion, setMinVersion] = useState("");
+  const [maxVersion, setMaxVersion] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState<number | null>(null);
+
+  const togglePlatform = (p: Platform) =>
+    setPlatforms((cur) => (cur.includes(p) ? cur.filter((x) => x !== p) : [...cur, p]));
 
   const fetchData = useCallback(async () => {
     try {
@@ -76,7 +108,15 @@ export default function NotificationsAdminPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
-        body: JSON.stringify({ title: title.trim(), body: body.trim(), level }),
+        body: JSON.stringify({
+          title: title.trim(),
+          body: body.trim(),
+          level,
+          category,
+          platforms: platforms.length > 0 ? platforms : null,
+          minVersion: minVersion.trim() || null,
+          maxVersion: maxVersion.trim() || null,
+        }),
       });
       if (!res.ok) {
         const b = await res.json().catch(() => ({}));
@@ -86,6 +126,10 @@ export default function NotificationsAdminPage() {
       setTitle("");
       setBody("");
       setLevel("info");
+      setCategory("general");
+      setPlatforms([]);
+      setMinVersion("");
+      setMaxVersion("");
       await fetchData();
     } finally {
       setSubmitting(false);
@@ -176,7 +220,7 @@ export default function NotificationsAdminPage() {
               className="w-full bg-zinc-800 border border-zinc-700 rounded px-3 py-2 text-sm resize-y"
             />
           </div>
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex flex-wrap items-center gap-4">
             <label className="flex items-center gap-2 text-sm text-zinc-400">
               Level
               <select
@@ -188,12 +232,69 @@ export default function NotificationsAdminPage() {
                 <option value="warn">Warning</option>
               </select>
             </label>
+            <label className="flex items-center gap-2 text-sm text-zinc-400">
+              Category
+              <select
+                value={category}
+                onChange={(e) => setCategory(e.target.value as Category)}
+                className="bg-zinc-800 border border-zinc-700 rounded px-2 py-1 text-sm capitalize"
+              >
+                {CATEGORIES.map((c) => (
+                  <option key={c} value={c}>{c}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+
+          {/* Targeting (optional) — clients filter locally on platform + app version */}
+          <div className="rounded border border-zinc-800 bg-zinc-900/40 p-3 space-y-2">
+            <div className="text-xs font-medium text-zinc-400">Targeting (optional)</div>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="text-xs text-zinc-500">Platforms</span>
+              {PLATFORMS.map((p) => (
+                <label key={p} className="flex items-center gap-1.5 text-sm text-zinc-300">
+                  <input
+                    type="checkbox"
+                    checked={platforms.includes(p)}
+                    onChange={() => togglePlatform(p)}
+                  />
+                  <span className="capitalize">{p}</span>
+                </label>
+              ))}
+              <span className="text-xs text-zinc-600">{platforms.length === 0 ? "(all)" : ""}</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-3 text-sm text-zinc-300">
+              <label className="flex items-center gap-1.5">
+                <span className="text-xs text-zinc-500">Min version</span>
+                <input
+                  type="text"
+                  value={minVersion}
+                  onChange={(e) => setMinVersion(e.target.value)}
+                  placeholder="e.g. 2.4.0"
+                  className="w-24 bg-zinc-800 border border-zinc-700 rounded px-2 py-1 text-sm"
+                />
+              </label>
+              <label className="flex items-center gap-1.5">
+                <span className="text-xs text-zinc-500">Max version</span>
+                <input
+                  type="text"
+                  value={maxVersion}
+                  onChange={(e) => setMaxVersion(e.target.value)}
+                  placeholder="e.g. 2.3.9"
+                  className="w-24 bg-zinc-800 border border-zinc-700 rounded px-2 py-1 text-sm"
+                />
+              </label>
+              <span className="text-xs text-zinc-600">(web ignores version bounds)</span>
+            </div>
+          </div>
+
+          <div className="flex justify-end">
             <button
               type="submit"
               disabled={submitting || !title.trim() || !body.trim()}
               className="px-4 py-1.5 bg-deadly-red text-white rounded text-sm hover:bg-red-700 disabled:opacity-50"
             >
-              {submitting ? "Sending…" : "Send to everybody"}
+              {submitting ? "Sending…" : "Send"}
             </button>
           </div>
         </form>
@@ -212,10 +313,14 @@ export default function NotificationsAdminPage() {
                 <div key={n.id} className="bg-deadly-surface rounded-lg border border-zinc-800 p-4">
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
-                      <div className="flex items-center gap-2">
+                      <div className="flex flex-wrap items-center gap-2">
                         <span className={`px-2 py-0.5 rounded text-xs font-medium ${status.cls}`}>{status.label}</span>
+                        <span className="px-2 py-0.5 rounded text-xs font-medium bg-zinc-700/40 text-zinc-300 capitalize">{n.category ?? "general"}</span>
                         {n.level === "warn" && (
                           <span className="px-2 py-0.5 rounded text-xs font-medium bg-yellow-600/20 text-yellow-400">warn</span>
+                        )}
+                        {targetingLabel(n) && (
+                          <span className="px-2 py-0.5 rounded text-xs font-medium bg-blue-600/20 text-blue-300">{targetingLabel(n)}</span>
                         )}
                         <span className="text-xs text-zinc-500">{formatTs(n.created_at)}</span>
                       </div>

@@ -4,6 +4,7 @@ import UserDataProvider from "@/components/userdata/UserDataProvider";
 import ConnectProvider from "@/components/connect/ConnectProvider";
 import PlayerProvider from "@/components/player/PlayerProvider";
 import ToastProvider from "@/components/ui/ToastProvider";
+import NotificationsProvider from "@/components/notifications/NotificationsProvider";
 import AppShell from "@/components/shell/AppShell";
 import ServiceWorkerRegistrar from "@/components/pwa/ServiceWorkerRegistrar";
 import InstallPrompt from "@/components/pwa/InstallPrompt";
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-deadly-bg text-white antialiased">
         <ServiceWorkerRegistrar />
         <ToastProvider>
+        <NotificationsProvider>
         <AuthProvider>
         <UserDataProvider>
         <ConnectProvider>
@@ -60,6 +62,7 @@ export default function RootLayout({
         </ConnectProvider>
         </UserDataProvider>
         </AuthProvider>
+        </NotificationsProvider>
         </ToastProvider>
       </body>
     </html>

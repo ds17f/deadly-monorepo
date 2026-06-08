@@ -189,7 +189,11 @@ function initSchema(db: Database.Database): void {
       target_user_id TEXT REFERENCES accounts(id) ON DELETE CASCADE, -- null for global
       title          TEXT NOT NULL,
       body           TEXT NOT NULL,
-      level          TEXT NOT NULL DEFAULT 'info',     -- info | warn
+      level          TEXT NOT NULL DEFAULT 'info',     -- info | warn (severity/color)
+      category       TEXT NOT NULL DEFAULT 'general',  -- general | release | feature | outage (cosmetic glyph)
+      min_version    TEXT,                             -- semver lower bound; clients filter locally
+      max_version    TEXT,                             -- semver upper bound; clients filter locally
+      platforms      TEXT,                             -- JSON array e.g. ["ios","android"]; null = all
       created_at     INTEGER NOT NULL DEFAULT (unixepoch()),
       expires_at     INTEGER,                          -- optional auto-retire; drives cold-start filter
       deleted_at     INTEGER                           -- admin tombstone / unsend
@@ -269,6 +273,14 @@ function initSchema(db: Database.Database): void {
   // but is treated as gone — the getters below filter deleted_at IS NULL, so
   // every auth path rejects it. Re-signing in reactivates (see adapter).
   addColumnIfMissing("accounts", "deleted_at", "INTEGER");
+
+  // Notifications v2: category (cosmetic glyph) + client-side targeting metadata
+  // (semver range + platform list). All optional/additive — the server stores
+  // and serves them; each client filters locally. See PLANS/in-app-messaging.md.
+  addColumnIfMissing("notifications", "category", "TEXT NOT NULL DEFAULT 'general'");
+  addColumnIfMissing("notifications", "min_version", "TEXT");
+  addColumnIfMissing("notifications", "max_version", "TEXT");
+  addColumnIfMissing("notifications", "platforms", "TEXT");
 
   db.exec(`UPDATE favorite_shows SET updated_at = unixepoch() WHERE updated_at = 0`);
   db.exec(`UPDATE favorite_songs SET updated_at = unixepoch() WHERE updated_at = 0`);

@@ -6,6 +6,8 @@
 // See PLANS/in-app-messaging.md.
 
 export type NotificationLevel = "info" | "warn";
+export type NotificationCategory = "general" | "release" | "feature" | "outage";
+export type NotificationPlatform = "ios" | "android" | "web";
 
 /** Wire shape from GET /api/notifications. */
 export interface NotificationWire {
@@ -13,6 +15,10 @@ export interface NotificationWire {
   title: string;
   body: string;
   level: NotificationLevel;
+  category?: NotificationCategory;
+  min_version?: string | null;
+  max_version?: string | null;
+  platforms?: NotificationPlatform[] | null;
   created_at: number;
   expires_at: number | null;
 }
@@ -21,6 +27,18 @@ export interface NotificationWire {
 export interface CachedNotification extends NotificationWire {
   seen_at: number | null;
   dismissed_at: number | null;
+}
+
+/**
+ * Client-side targeting (decision E). The web app is continuously deployed, so
+ * app-version bounds are N/A here — only platform targeting applies. A message
+ * is eligible on web unless it explicitly targets platforms that exclude `web`.
+ */
+export function isEligible(m: NotificationWire): boolean {
+  if (m.platforms && m.platforms.length > 0 && !m.platforms.includes("web")) {
+    return false;
+  }
+  return true;
 }
 
 interface NotifStore {
@@ -68,16 +86,16 @@ export async function fetchNotifications(
 }
 
 /**
- * Merge a fetch result into the store and prune. On a cold start (the client
- * had no cursor yet) the batch is marked seen-not-dismissed so a fresh user
- * isn't slammed with unread badges — the messages appear in the inbox but
- * don't nag. Subsequent deltas arrive unseen (they raise the badge).
+ * Merge a fetch result into the store and prune. v2 (decision G): the
+ * cold-start batch arrives **unread** like any delta — the badge shows the
+ * active backlog. Targeting (eligibility) + expiry keep it relevant, and
+ * "Mark all read" handles volume. Local seen/dismissed state is preserved
+ * across re-fetches.
  */
 export function mergeStore(
   store: NotifStore,
   fetched: { messages: NotificationWire[]; cursor: number },
 ): NotifStore {
-  const coldStart = store.cursor === 0;
   const now = Date.now();
   const messages = { ...store.messages };
 
@@ -85,8 +103,8 @@ export function mergeStore(
     const existing = messages[m.id];
     messages[m.id] = {
       ...m,
-      // Preserve local state across re-fetches; default for new arrivals.
-      seen_at: existing?.seen_at ?? (coldStart ? now : null),
+      // Preserve local state across re-fetches; new arrivals start unread.
+      seen_at: existing?.seen_at ?? null,
       dismissed_at: existing?.dismissed_at ?? null,
     };
   }
@@ -102,25 +120,39 @@ export function mergeStore(
   return { cursor: Math.max(store.cursor, fetched.cursor), messages };
 }
 
-/** Active inbox: not dismissed, newest first. */
+/** Active inbox: eligible, not archived, newest first. */
 export function activeMessages(store: NotifStore): CachedNotification[] {
   return Object.values(store.messages)
-    .filter((m) => m.dismissed_at == null)
+    .filter((m) => isEligible(m) && m.dismissed_at == null)
     .sort((a, b) => b.created_at - a.created_at);
 }
 
-/** Dismissed archive, newest first. */
+/** Archived (dismissed) view: eligible, newest first. */
 export function dismissedMessages(store: NotifStore): CachedNotification[] {
   return Object.values(store.messages)
-    .filter((m) => m.dismissed_at != null)
+    .filter((m) => isEligible(m) && m.dismissed_at != null)
     .sort((a, b) => b.created_at - a.created_at);
 }
 
-/** Unread badge count: active and not yet seen. */
+/**
+ * Unread badge count: eligible, active, and not yet read. Persistent — only
+ * read/archive/mark-all-read drop it (decision A); merely opening the inbox
+ * no longer clears it.
+ */
 export function unreadCount(store: NotifStore): number {
   return Object.values(store.messages).filter(
-    (m) => m.dismissed_at == null && m.seen_at == null,
+    (m) => isEligible(m) && m.dismissed_at == null && m.seen_at == null,
   ).length;
+}
+
+/** Mark a single message read ("tap to read" — opening its detail). */
+export function markRead(store: NotifStore, id: number): NotifStore {
+  const m = store.messages[id];
+  if (!m || m.seen_at != null) return store;
+  return {
+    ...store,
+    messages: { ...store.messages, [id]: { ...m, seen_at: Date.now() } },
+  };
 }
 
 export function markAllSeen(store: NotifStore): NotifStore {
@@ -133,6 +165,7 @@ export function markAllSeen(store: NotifStore): NotifStore {
   return { ...store, messages };
 }
 
+/** Archive (dismiss) a message: removes it from the active inbox. */
 export function dismiss(store: NotifStore, id: number): NotifStore {
   const m = store.messages[id];
   if (!m) return store;
@@ -140,4 +173,16 @@ export function dismiss(store: NotifStore, id: number): NotifStore {
     ...store,
     messages: { ...store.messages, [id]: { ...m, dismissed_at: Date.now() } },
   };
+}
+
+/** Archive every active (eligible, not-yet-archived) message at once. */
+export function archiveAll(store: NotifStore): NotifStore {
+  const now = Date.now();
+  const messages = { ...store.messages };
+  for (const m of Object.values(store.messages)) {
+    if (isEligible(m) && m.dismissed_at == null) {
+      messages[m.id] = { ...m, dismissed_at: now };
+    }
+  }
+  return { ...store, messages };
 }

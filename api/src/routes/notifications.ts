@@ -6,12 +6,26 @@ import {
   deleteNotification,
   getNotificationsSince,
   getActiveNotifications,
+  getLatestNotificationId,
   TITLE_MAX,
   BODY_MAX,
+  CATEGORIES,
+  PLATFORMS,
   type NotificationLevel,
+  type NotificationCategory,
+  type NotificationPlatform,
 } from "../db/notifications.js";
 
 const LEVELS: NotificationLevel[] = ["info", "warn"];
+
+/** Coerce/validate an incoming platforms value into a clean array or null. */
+function parsePlatformsInput(raw: unknown): NotificationPlatform[] | null {
+  if (!Array.isArray(raw)) return null;
+  const valid = raw.filter((p): p is NotificationPlatform =>
+    (PLATFORMS as readonly string[]).includes(p),
+  );
+  return valid.length > 0 ? valid : null;
+}
 
 export async function notificationRoutes(app: FastifyInstance): Promise<void> {
   // ── Consume (public) ────────────────────────────────────────────────
@@ -33,19 +47,32 @@ export async function notificationRoutes(app: FastifyInstance): Promise<void> {
     async (request, reply) => {
       const raw = request.query.since;
       const cursor = raw != null && raw !== "" ? Number(raw) : null;
+      // Short edge cache — the feed is the same for everyone.
+      reply.header("Cache-Control", "public, max-age=30");
+
+      // Polling short-circuit: a delta poll that's already caught up skips the
+      // DB entirely (decision H). The common "nothing new" poll is an int
+      // compare, not a query. Cold start (no cursor) always hits the DB.
+      if (cursor != null && Number.isFinite(cursor) && cursor >= getLatestNotificationId()) {
+        return { messages: [], cursor };
+      }
+
       const messages =
         cursor != null && Number.isFinite(cursor)
           ? getNotificationsSince(cursor)
           : getActiveNotifications();
-      // Short edge cache — the feed is the same for everyone.
-      reply.header("Cache-Control", "public, max-age=30");
       const latest = messages.reduce((max, m) => Math.max(max, m.id), cursor ?? 0);
       return { messages, cursor: latest };
     },
   );
 
   // ── Admin (compose / manage) ────────────────────────────────────────
-  app.post<{ Body: { title?: unknown; body?: unknown; level?: unknown; expiresAt?: unknown } }>(
+  app.post<{
+    Body: {
+      title?: unknown; body?: unknown; level?: unknown; category?: unknown;
+      minVersion?: unknown; maxVersion?: unknown; platforms?: unknown; expiresAt?: unknown;
+    };
+  }>(
     "/api/admin/notifications",
     {
       schema: {
@@ -58,6 +85,10 @@ export async function notificationRoutes(app: FastifyInstance): Promise<void> {
             title: { type: "string" },
             body: { type: "string" },
             level: { type: "string", enum: LEVELS },
+            category: { type: "string", enum: CATEGORIES },
+            minVersion: { type: "string", nullable: true },
+            maxVersion: { type: "string", nullable: true },
+            platforms: { type: "array", items: { type: "string", enum: PLATFORMS }, nullable: true },
             expiresAt: { type: "number", nullable: true },
           },
         },
@@ -65,9 +96,11 @@ export async function notificationRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAdmin,
     },
     async (request: FastifyRequest, reply: FastifyReply) => {
-      const { title, body, level, expiresAt } = request.body as {
-        title?: unknown; body?: unknown; level?: unknown; expiresAt?: unknown;
-      };
+      const { title, body, level, category, minVersion, maxVersion, platforms, expiresAt } =
+        request.body as {
+          title?: unknown; body?: unknown; level?: unknown; category?: unknown;
+          minVersion?: unknown; maxVersion?: unknown; platforms?: unknown; expiresAt?: unknown;
+        };
 
       const t = typeof title === "string" ? title.trim() : "";
       const b = typeof body === "string" ? body.trim() : "";
@@ -81,13 +114,23 @@ export async function notificationRoutes(app: FastifyInstance): Promise<void> {
         return reply.code(400).send({ error: `body exceeds ${BODY_MAX} chars` });
       }
       const lvl: NotificationLevel = level === "warn" ? "warn" : "info";
+      const cat: NotificationCategory =
+        typeof category === "string" && (CATEGORIES as string[]).includes(category)
+          ? (category as NotificationCategory)
+          : "general";
       const exp = typeof expiresAt === "number" && Number.isFinite(expiresAt) ? expiresAt : null;
+      const minV = typeof minVersion === "string" && minVersion.trim() ? minVersion.trim() : null;
+      const maxV = typeof maxVersion === "string" && maxVersion.trim() ? maxVersion.trim() : null;
 
       const created = createNotification({
         authorId: request.user!.id,
         title: t,
         body: b,
         level: lvl,
+        category: cat,
+        minVersion: minV,
+        maxVersion: maxV,
+        platforms: parsePlatformsInput(platforms),
         expiresAt: exp,
         scope: "global",
       });
