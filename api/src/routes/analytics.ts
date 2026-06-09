@@ -19,6 +19,8 @@ import {
   getRecentListening,
   getNetworkErrorOutcomes,
   getGrowthByPlatform,
+  getVersionDistribution,
+  getVersionTimeseries,
   getTopShows,
   getWatchedInstalls,
   setWatchedInstall,
@@ -679,6 +681,97 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       };
       const clamped = Math.min(Math.max(days ?? 60, 1), 365);
       return { days: getGrowthByPlatform(clamped, parsePlatforms(platforms)) };
+    },
+  );
+
+  // GET /api/analytics/versions — installs by current version (view A).
+  app.get(
+    "/api/analytics/versions",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Installs by current app version (admin)",
+        description:
+          "Each install attributed to the version on its most recent event, bucketed by recency: active (≤7d) / idle (8–30d) / stale (>30d).",
+        querystring: {
+          type: "object",
+          properties: {
+            platforms: { type: "string" },
+          },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              versions: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    version: { type: "string" },
+                    active: { type: "number" },
+                    idle: { type: "number" },
+                    stale: { type: "number" },
+                    total: { type: "number" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { platforms } = request.query as { platforms?: string };
+      return { versions: getVersionDistribution(parsePlatforms(platforms)) };
+    },
+  );
+
+  // GET /api/analytics/version-timeseries — daily version mix (view B).
+  app.get(
+    "/api/analytics/version-timeseries",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Daily active-install version mix (admin)",
+        description:
+          "Per day, distinct installs that opened the app grouped by the version they ran that day. Drives the version-adoption stacked area.",
+        querystring: {
+          type: "object",
+          properties: {
+            days: { type: "number", default: 90 },
+            platforms: { type: "string" },
+          },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              days: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    day: { type: "string" },
+                    version: { type: "string" },
+                    count: { type: "number" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days, platforms } = request.query as {
+        days?: number;
+        platforms?: string;
+      };
+      const clamped = Math.min(Math.max(days ?? 90, 1), 365);
+      return { days: getVersionTimeseries(clamped, parsePlatforms(platforms)) };
     },
   );
 

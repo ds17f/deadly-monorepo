@@ -15,6 +15,7 @@ import ListeningNow from "./components/ListeningNow";
 import RecentListening from "./components/RecentListening";
 import NetworkErrorOutcomes from "./components/NetworkErrorOutcomes";
 import GrowthChart from "./components/GrowthChart";
+import VersionPanel from "./components/VersionPanel";
 import FeatureAdoption from "./components/FeatureAdoption";
 import CollapsibleSection from "./components/CollapsibleSection";
 import ShowEngagement, { TopShowsByAction } from "./components/ShowEngagement";
@@ -378,6 +379,11 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
         onDetail={() => openDetail("new_installs")}
       >
         <GrowthChart onDayClick={(day) => openDetail("new_installs", day)} />
+      </CollapsibleSection>
+
+      {/* Versions — current install-base mix + adoption over time */}
+      <CollapsibleSection title="Versions" forceOpen={forceOpen}>
+        <VersionPanel />
       </CollapsibleSection>
 
       {/* Installs by platform */}
