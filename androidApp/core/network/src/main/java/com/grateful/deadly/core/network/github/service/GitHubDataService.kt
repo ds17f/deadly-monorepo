@@ -18,7 +18,7 @@ class GitHubDataService @Inject constructor(
     companion object {
         private const val TAG = "GitHubDataService"
         /** Data version pinned at build time from data/version. Update when bumping data release. */
-        const val REQUIRED_DATA_VERSION = "2.3.1"
+        const val REQUIRED_DATA_VERSION = "2.4.0"
     }
     
     suspend fun getLatestRelease(): GitHubRelease? {
