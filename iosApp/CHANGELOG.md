@@ -1,11 +1,18 @@
 # Changelog
 
+## [2.35.0] - 2026-06-08
+
+### New Features
+* prebuilt catalog.db first-launch import + non-destructive refresh (d8442651)
+
+### Bug Fixes
+* correct Bruce Hornsby lineup + post-death keyboardist credits (663bb2f7)
+
+
 ## [2.34.0] - 2026-06-07
 
 ### New Features
 * admin → all in-app messaging (v1 + v2 inbox) (#55) (51b97f5b)
-
-
 ## [2.33.1] - 2026-06-07
 
 ### Bug Fixes
