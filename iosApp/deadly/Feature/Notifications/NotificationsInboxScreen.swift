@@ -28,10 +28,17 @@ struct NotificationsInboxScreen: View {
                     EmptyView()
                 } header: {
                     HStack {
-                        Button("Mark all read") { store.markAllSeen() }
-                            .disabled(!active.contains { $0.seenAt == nil })
+                        Button("Mark all read") {
+                            container.analyticsService.trackNotificationMarkAllRead(
+                                count: active.filter { $0.seenAt == nil }.count)
+                            store.markAllSeen()
+                        }
+                        .disabled(!active.contains { $0.seenAt == nil })
                         Spacer()
-                        Button("Archive all", role: .destructive) { store.archiveAll() }
+                        Button("Archive all", role: .destructive) {
+                            container.analyticsService.trackNotificationArchiveAll(count: active.count)
+                            store.archiveAll()
+                        }
                     }
                     .font(.footnote)
                     .textCase(nil)
@@ -44,15 +51,23 @@ struct NotificationsInboxScreen: View {
             } else {
                 ForEach(list) { message in
                     Button {
+                        container.analyticsService.trackNotificationOpen(message)
                         if !showArchive && message.seenAt == nil { store.markRead(message.id) }
                         selected = message
                     } label: {
                         NotificationRowView(message: message, unread: !showArchive && message.seenAt == nil)
+                            // First time this row appears, count one impression.
+                            .onAppear {
+                                if store.registerImpression(message.id) {
+                                    container.analyticsService.trackNotificationImpression(message)
+                                }
+                            }
                     }
                     .buttonStyle(.plain)
                     .swipeActions(edge: .trailing) {
                         if !showArchive {
                             Button(role: .destructive) {
+                                container.analyticsService.trackNotificationArchive(message)
                                 store.dismiss(message.id)
                             } label: {
                                 Label("Archive", systemImage: "archivebox")
@@ -68,11 +83,17 @@ struct NotificationsInboxScreen: View {
                         .font(.footnote)
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
+                // A simultaneous TapGesture swallows Link activation; intercept
+                // via openURL instead — track, then let the system open it.
+                .environment(\.openURL, OpenURLAction { _ in
+                    container.analyticsService.trackNotificationCommunityTap()
+                    return .systemAction
+                })
             }
             .listRowBackground(Color.clear)
         }
         .refreshable {
-            await container.notificationService.refresh(reason: "pull")
+            await container.notificationService.refresh(reason: "refresh")
         }
         .navigationTitle(showArchive ? "Archived" : "Notifications")
         .navigationBarTitleDisplayMode(.inline)
@@ -148,8 +169,16 @@ private struct NotificationDetailView: View {
                     .foregroundColor(.secondary)
                 Text(notificationBody(message.body, linkColor: DeadlyColors.primary))
                     .font(.body)
+                    // Links carry a `.link` attribute; intercept the tap to
+                    // track click-through, then let the system open Safari.
+                    .environment(\.openURL, OpenURLAction { url in
+                        container.analyticsService.trackNotificationLinkTap(
+                            id: message.id, url: url.absoluteString)
+                        return .systemAction
+                    })
                 if !archived {
                     Button {
+                        container.analyticsService.trackNotificationArchive(message)
                         container.notificationStore.dismiss(message.id)
                         dismiss()
                     } label: {

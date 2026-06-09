@@ -117,6 +117,7 @@ struct MainNavigation: View {
         .overlay(alignment: .bottom) {
             if let toast = notificationToast {
                 NotificationToastView(arrival: toast) {
+                    container.analyticsService.trackNotificationToastTap(toast)
                     notificationToast = nil
                     selectedTab = .home
                     homeStack.append(NotificationRoute.inbox)
@@ -128,6 +129,7 @@ struct MainNavigation: View {
         .onChange(of: container.notificationStore.lastArrival) { _, arrival in
             guard let arrival, arrival.key != lastToastKey else { return }
             lastToastKey = arrival.key
+            container.analyticsService.trackNotificationToastShown(arrival)
             withAnimation { notificationToast = arrival }
             Task {
                 try? await Task.sleep(for: .seconds(4))

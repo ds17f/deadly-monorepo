@@ -21,6 +21,7 @@ import {
   getGrowthByPlatform,
   getVersionDistribution,
   getVersionTimeseries,
+  getNotificationEngagement,
   getTopShows,
   getWatchedInstalls,
   setWatchedInstall,
@@ -633,6 +634,57 @@ export async function analyticsRoutes(app: FastifyInstance): Promise<void> {
       const clampedLimit = Math.min(Math.max(limit ?? 20, 1), 100);
       return {
         shows: getTopShows(clampedDays, clampedLimit, parsePlatforms(platforms)),
+      };
+    },
+  );
+
+  // GET /api/analytics/notifications — per-notification engagement funnel
+  // (delivered → displayed → opened → archived), keyed by notification id.
+  app.get(
+    "/api/analytics/notifications",
+    {
+      schema: {
+        tags: ["analytics"],
+        summary: "Per-notification engagement funnel (admin)",
+        querystring: {
+          type: "object",
+          properties: {
+            days: { type: "number", default: 90 },
+            platforms: { type: "string" },
+          },
+        },
+        response: {
+          200: {
+            type: "object",
+            properties: {
+              notifications: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    id: { type: "number" },
+                    delivered: { type: "number" },
+                    displayed: { type: "number" },
+                    opened: { type: "number" },
+                    archived: { type: "number" },
+                    link_clicks: { type: "number" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      preHandler: requireAdmin,
+    },
+    async (request) => {
+      const { days, platforms } = request.query as {
+        days?: number;
+        platforms?: string;
+      };
+      const clamped = Math.min(Math.max(days ?? 90, 1), 365);
+      return {
+        notifications: getNotificationEngagement(clamped, parsePlatforms(platforms)),
       };
     },
   );

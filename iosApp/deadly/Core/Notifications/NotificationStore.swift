@@ -51,11 +51,20 @@ final class NotificationStore {
         }
     }
 
+    /// Ids already counted as an inbox impression this session, to dedupe
+    /// re-renders / scrolls. Not persisted — an impression is per-session.
+    private var impressed: Set<Int64> = []
+
     /// Merge a fetch result into the store and prune. v2 (decision G): new
     /// arrivals — including the cold-start batch — start **unread**; targeting +
     /// expiry keep the backlog relevant and "Mark all read" handles volume.
     /// A non-cold delta that adds eligible unread messages sets `lastArrival`.
-    func merge(_ result: NotificationFetchResult) {
+    ///
+    /// Returns the genuinely-new, eligible messages added by this merge (for any
+    /// reason, including cold start) so the caller can emit per-message
+    /// `notification_received` analytics. Empty when nothing new arrived.
+    @discardableResult
+    func merge(_ result: NotificationFetchResult) -> [CachedNotification] {
         let coldStart = cursor == 0
         let now = NotificationClock.now()
         let knownIds = Set(notifications.map { $0.id })
@@ -91,17 +100,26 @@ final class NotificationStore {
         notifications = pruned.sorted { $0.createdAt > $1.createdAt }
         persist()
 
-        // Toast signal: genuinely new, eligible, unread messages from a delta.
-        if !coldStart {
-            let fresh = result.messages
-                .filter { !knownIds.contains($0.id) }
-                .compactMap { byId[$0.id] }
-                .filter { $0.isEligible(appVersion: appVersion) && $0.dismissedAt == nil }
-                .sorted { $0.createdAt > $1.createdAt }
-            if let newest = fresh.first {
-                lastArrival = NewArrival(title: newest.title, count: fresh.count, key: newest.id)
-            }
+        // Genuinely new, eligible messages added by this merge — the basis for
+        // both the toast (delta only) and `notification_received` analytics (any).
+        let fresh = result.messages
+            .filter { !knownIds.contains($0.id) }
+            .compactMap { byId[$0.id] }
+            .filter { $0.isEligible(appVersion: appVersion) && $0.dismissedAt == nil }
+            .sorted { $0.createdAt > $1.createdAt }
+
+        // Toast signal: only on a delta (never the cold-start backlog).
+        if !coldStart, let newest = fresh.first {
+            lastArrival = NewArrival(title: newest.title, count: fresh.count, key: newest.id)
         }
+
+        return fresh
+    }
+
+    /// Record an inbox impression for `id`; returns true the first time per
+    /// session so the caller emits exactly one `notification_impression`.
+    func registerImpression(_ id: Int64) -> Bool {
+        impressed.insert(id).inserted
     }
 
     /// Mark a single message read ("tap to read" — opening its detail).
