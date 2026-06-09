@@ -36,6 +36,7 @@ import logging
 sys.path.append(str(Path(__file__).parent.parent))
 from shared.models import RecordingMetadata, ProcessedRecordingMetadata, processed_recording_to_dict
 from shared.recording_utils import improve_source_type_detection, detect_recording_time, normalize_venue_name, calculate_venue_similarity
+from shared.hornsby import HORNSBY_ABSENT_DATES
 
 
 class JerryGarciaShowIntegrator:
@@ -448,6 +449,28 @@ class JerryGarciaShowIntegrator:
             show_data["country"] = state
             self.logger.debug(f"Fixed international venue for {venue}: moved '{state}' from state to country field")
     
+    def apply_hornsby_lineup_fixes(self, show_data: Dict[str, Any]) -> None:
+        """Remove Bruce Hornsby from the lineup on the 22 tenure-window dates he
+        was absent.
+
+        jerrygarcia.com lists Hornsby in the lineup for the entire
+        1990-09-15..1992-03-24 tenure block, but per Jeff Lester's authoritative
+        performance history he missed 22 of those shows (Vince Welnick covered
+        keys alone). See scripts/shared/hornsby.py. Keyed on the ISO show date;
+        idempotent.
+        """
+        date = (show_data.get("date") or "")[:10]
+        if date not in HORNSBY_ABSENT_DATES:
+            return
+        lineup = show_data.get("lineup") or []
+        kept = [m for m in lineup
+                if "hornsby" not in (m.get("name", "") or "").lower()]
+        if len(kept) != len(lineup):
+            show_data["lineup"] = kept
+            self.logger.info(
+                f"Hornsby fix: removed Bruce Hornsby from lineup on {date} "
+                f"(absent per Jeff Lester performance history)")
+
     def load_jerrygarcia_shows(self) -> Dict[str, Dict[str, Any]]:
         """Load all JerryGarcia show data."""
         shows = {}
@@ -468,7 +491,10 @@ class JerryGarciaShowIntegrator:
                     iso_date, show_time = self.parse_show_date_and_time(show_data["date"])
                     show_data["date"] = iso_date
                     show_data["show_time"] = show_time
-                    
+
+                    # Lineup data quality fix (needs the normalized ISO date)
+                    self.apply_hornsby_lineup_fixes(show_data)
+
                     # Check if show_id date matches actual date (only correct if mismatch)
                     original_show_id = show_data.get("show_id", "")
                     original_date_from_id = original_show_id.split('-')[:3]

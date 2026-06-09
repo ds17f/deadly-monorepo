@@ -82,6 +82,10 @@ data/stage01-collected-data/
 data/stage02-generated-data/
 data/stage02-processed-data/
 data/stage03-search-data/
+# `make data-download-stage01` unzips the prefix-less stage01 cache into data/
+# root (not data/stage01-collected-data/), so ignore its contents here too.
+data/archive/
+data/jerrygarcia/
 data/data.zip
 data/data-v*.zip
 data/catalog.db.zip
