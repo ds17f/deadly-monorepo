@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.36.0] - 2026-06-09
+
+### New Features
+* track engagement funnel + per-notification admin stats (#57) (d35d5a6a)
+
+
 ## [2.34.0] - 2026-06-08
 
 ### New Features
@@ -7,8 +13,6 @@
 
 ### Bug Fixes
 * correct Bruce Hornsby lineup + post-death keyboardist credits (663bb2f7)
-
-
 ## [2.33.0] - 2026-06-07
 
 ### New Features
