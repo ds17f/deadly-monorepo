@@ -19,6 +19,7 @@ import VersionPanel from "./components/VersionPanel";
 import FeatureAdoption from "./components/FeatureAdoption";
 import CollapsibleSection from "./components/CollapsibleSection";
 import ShowEngagement, { TopShowsByAction } from "./components/ShowEngagement";
+import NotificationEngagement from "./components/NotificationEngagement";
 import { WatchedInstallsProvider } from "./components/WatchedInstallsContext";
 import WatchedInstallsPanel from "./components/WatchedInstallsPanel";
 import {
@@ -509,6 +510,11 @@ function AnalyticsDashboardInner({ showNames }: { showNames: ShowName[] }) {
           data={data.feature_adoption}
           onFeatureClick={(f) => openDetail("feature_adoption", f)}
         />
+      </CollapsibleSection>
+
+      {/* Notification engagement (delivered → displayed → opened → archived) */}
+      <CollapsibleSection title="Notification Engagement (90d)" forceOpen={forceOpen}>
+        <NotificationEngagement />
       </CollapsibleSection>
       </>}
 

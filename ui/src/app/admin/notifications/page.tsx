@@ -12,6 +12,15 @@ const CATEGORIES: Category[] = ["general", "release", "feature", "outage"];
 type Platform = "ios" | "android" | "web";
 const PLATFORMS: Platform[] = ["ios", "android", "web"];
 
+interface NotificationEngagement {
+  id: number;
+  delivered: number;
+  displayed: number;
+  opened: number;
+  archived: number;
+  link_clicks: number;
+}
+
 interface AdminNotification {
   id: number;
   title: string;
@@ -56,6 +65,7 @@ export default function NotificationsAdminPage() {
   const { user, isLoading: authLoading } = useAuth();
   const router = useRouter();
   const [items, setItems] = useState<AdminNotification[]>([]);
+  const [stats, setStats] = useState<Record<number, NotificationEngagement>>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -83,6 +93,19 @@ export default function NotificationsAdminPage() {
       const data = await res.json();
       setItems(data.notifications);
       setError(null);
+
+      // Engagement is best-effort — never block the authoring list on it.
+      try {
+        const eng = await fetch("/api/analytics/notifications", { credentials: "include" });
+        if (eng.ok) {
+          const { notifications } = (await eng.json()) as {
+            notifications: NotificationEngagement[];
+          };
+          setStats(Object.fromEntries(notifications.map((n) => [n.id, n])));
+        }
+      } catch {
+        /* leave stats empty */
+      }
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to load");
     } finally {
@@ -326,6 +349,7 @@ export default function NotificationsAdminPage() {
                       </div>
                       <p className="mt-1.5 font-medium text-zinc-100 truncate">{n.title}</p>
                       <p className="mt-0.5 text-sm text-zinc-400 whitespace-pre-wrap break-words">{n.body}</p>
+                      <EngagementStrip stats={stats[n.id]} />
                     </div>
                     {!n.deleted_at && (
                       confirmDelete === n.id ? (
@@ -349,6 +373,34 @@ export default function NotificationsAdminPage() {
           )}
         </div>
       </div>
+    </div>
+  );
+}
+
+/**
+ * Per-notification engagement funnel (distinct clients). "Displayed" unions
+ * inbox impressions and toasts; "Opened" is deliberate tap-to-read. Empty until
+ * the first analytics events land for this message.
+ */
+function EngagementStrip({ stats }: { stats?: NotificationEngagement }) {
+  if (!stats) {
+    return <p className="mt-2 text-xs text-zinc-600">No engagement yet</p>;
+  }
+  const metrics: Array<[string, number]> = [
+    ["Delivered", stats.delivered],
+    ["Displayed", stats.displayed],
+    ["Opened", stats.opened],
+    ["Archived", stats.archived],
+    ["Links", stats.link_clicks],
+  ];
+  return (
+    <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-zinc-400">
+      {metrics.map(([label, value]) => (
+        <span key={label}>
+          <span className="text-zinc-200 font-medium tabular-nums">{value}</span>{" "}
+          <span className="text-zinc-500">{label}</span>
+        </span>
+      ))}
     </div>
   );
 }

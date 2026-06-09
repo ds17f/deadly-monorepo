@@ -8,10 +8,12 @@ import Foundation
 final class NotificationService {
     private let appPreferences: AppPreferences
     let store: NotificationStore
+    private let analytics: AnalyticsService
 
-    init(appPreferences: AppPreferences, store: NotificationStore) {
+    init(appPreferences: AppPreferences, store: NotificationStore, analytics: AnalyticsService) {
         self.appPreferences = appPreferences
         self.store = store
+        self.analytics = analytics
     }
 
     /// Pull a `?since=<cursor>` delta and merge it. Best-effort: failures are
@@ -27,7 +29,9 @@ final class NotificationService {
                 return
             }
             let result = try JSONDecoder().decode(NotificationFetchResult.self, from: data)
-            store.merge(result)
+            for message in store.merge(result) {
+                analytics.trackNotificationReceived(message, reason: reason)
+            }
             print("[Notifications] refresh[\(reason)] ok: +\(result.messages.count) (cursor=\(store.cursor))")
         } catch {
             print("[Notifications] refresh[\(reason)] failed: \(error)")

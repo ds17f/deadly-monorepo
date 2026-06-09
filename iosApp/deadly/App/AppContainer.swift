@@ -343,7 +343,7 @@ final class AppContainer {
             let notifStore = MainActor.assumeIsolated { NotificationStore() }
             notificationStore = notifStore
             notificationService = MainActor.assumeIsolated {
-                NotificationService(appPreferences: prefs, store: notifStore)
+                NotificationService(appPreferences: prefs, store: notifStore, analytics: analytics)
             }
 
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)

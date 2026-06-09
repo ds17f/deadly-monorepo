@@ -82,9 +82,10 @@ fun NotificationsScreen(
                     message = selected,
                     archived = showArchive,
                     onArchive = {
-                        viewModel.dismiss(selected.id)
+                        viewModel.archive(selected)
                         selectedId = null
                     },
+                    onLinkTap = { url -> viewModel.onLinkTap(selected.id, url) },
                 )
             } else {
                 PullToRefreshBox(
@@ -120,19 +121,23 @@ fun NotificationsScreen(
                                 }
                             } else {
                                 items(list, key = { it.id }) { m ->
+                                    // First time this row renders, count one impression.
+                                    LaunchedEffect(m.id) { viewModel.onImpression(m) }
                                     NotificationRow(
                                         message = m,
                                         unread = !showArchive && m.seenAt == null,
                                         onClick = {
-                                            if (!showArchive && m.seenAt == null) viewModel.markRead(m.id)
+                                            viewModel.open(m)
                                             selectedId = m.id
                                         },
                                     )
                                     HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f))
                                 }
-                                item { CommunityFooter() }
                             }
                         }
+
+                        // Always present (empty inbox + archive too), matching iOS.
+                        CommunityFooter(onTap = { viewModel.onCommunityTap() })
                     }
                 }
             }
@@ -200,7 +205,9 @@ private fun NotificationDetail(
     message: CachedNotification,
     archived: Boolean,
     onArchive: () -> Unit,
+    onLinkTap: (String) -> Unit,
 ) {
+    val uriHandler = LocalUriHandler.current
     Column(
         Modifier
             .fillMaxSize()
@@ -231,7 +238,10 @@ private fun NotificationDetail(
         )
         // Body renders newlines as-is and turns links tappable.
         Text(
-            text = notificationBody(message.body, MaterialTheme.colorScheme.primary),
+            text = notificationBody(message.body, MaterialTheme.colorScheme.primary) { url ->
+                onLinkTap(url)
+                uriHandler.openUri(url)
+            },
             style = MaterialTheme.typography.bodyLarge,
         )
         if (!archived) {
@@ -241,10 +251,13 @@ private fun NotificationDetail(
 }
 
 @Composable
-private fun CommunityFooter() {
+private fun CommunityFooter(onTap: () -> Unit) {
     val uriHandler = LocalUriHandler.current
     Box(Modifier.fillMaxWidth().padding(24.dp), contentAlignment = Alignment.Center) {
-        TextButton(onClick = { uriHandler.openUri(Community.SUBREDDIT_URL) }) {
+        TextButton(onClick = {
+            onTap()
+            uriHandler.openUri(Community.SUBREDDIT_URL)
+        }) {
             Text("More at ${Community.SUBREDDIT_HANDLE} →")
         }
     }

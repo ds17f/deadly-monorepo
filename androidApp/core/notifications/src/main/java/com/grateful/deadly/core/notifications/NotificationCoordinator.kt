@@ -1,6 +1,7 @@
 package com.grateful.deadly.core.notifications
 
 import android.util.Log
+import com.grateful.deadly.core.database.AnalyticsService
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
@@ -28,6 +29,7 @@ import javax.inject.Singleton
 class NotificationCoordinator @Inject constructor(
     private val apiService: NotificationApiService,
     private val store: NotificationStore,
+    private val analytics: AnalyticsService,
 ) {
     companion object {
         private const val TAG = "NotificationCoord"
@@ -58,7 +60,8 @@ class NotificationCoordinator @Inject constructor(
         scope.launch {
             apiService.fetch(store.cursor).fold(
                 onSuccess = {
-                    store.merge(it)
+                    val fresh = store.merge(it)
+                    fresh.forEach { m -> analytics.trackNotificationReceived(m, reason) }
                     Log.d(TAG, "pull[$reason] ok: +${it.messages.size} (cursor=${store.cursor})")
                 },
                 onFailure = { Log.w(TAG, "pull[$reason] failed: ${it.message}") },

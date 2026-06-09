@@ -1,10 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNotifications } from "@/components/notifications/NotificationsProvider";
 import { linkify } from "@/lib/linkify";
 import { SUBREDDIT_HANDLE, SUBREDDIT_URL } from "@/lib/community";
 import type { CachedNotification, NotificationCategory } from "@/lib/notifications";
+import {
+  trackNotificationOpen,
+  trackNotificationImpression,
+  trackNotificationLinkTap,
+  trackNotificationCommunityTap,
+} from "@/lib/notificationAnalytics";
+
+// Ids already counted as an impression this session (module scope so it
+// survives re-renders), deduping re-renders/scrolls into one impression.
+const impressed = new Set<number>();
+
+/** Fires exactly one `notification_impression` the first time a row renders. */
+function Impression({ message }: { message: CachedNotification }) {
+  useEffect(() => {
+    if (!impressed.has(message.id)) {
+      impressed.add(message.id);
+      trackNotificationImpression(message);
+    }
+  }, [message.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  return null;
+}
+
+/** Track a click on a link inside linkified body text (delegated). */
+function onBodyClick(id: number, e: React.MouseEvent<HTMLParagraphElement>) {
+  const anchor = (e.target as HTMLElement).closest("a");
+  if (anchor) trackNotificationLinkTap(id, anchor.getAttribute("href") ?? "");
+}
 
 // Monochrome outline glyphs (heroicons-style, currentColor) — they inherit the
 // muted row text color so they read as quiet markers, not colorful stickers.
@@ -58,6 +85,7 @@ export default function NotificationsPage() {
       setExpanded(null);
     } else {
       setExpanded(m.id);
+      trackNotificationOpen(m);
       if (!showArchive && m.seen_at == null) markRead(m.id); // tap to read
     }
   };
@@ -105,6 +133,7 @@ export default function NotificationsPage() {
             const isOpen = expanded === m.id;
             return (
               <div key={m.id} className="px-4 py-3 transition hover:bg-zinc-800/30">
+                <Impression message={m} />
                 <button
                   onClick={() => onToggle(m)}
                   className="flex w-full items-start gap-3 text-left"
@@ -131,7 +160,10 @@ export default function NotificationsPage() {
 
                 {isOpen && (
                   <div className="mt-2 pl-9">
-                    <p className="whitespace-pre-wrap break-words text-sm text-zinc-300">
+                    <p
+                      className="whitespace-pre-wrap break-words text-sm text-zinc-300"
+                      onClick={(e) => onBodyClick(m.id, e)}
+                    >
                       {linkify(m.body)}
                     </p>
                     {!showArchive && (
@@ -160,6 +192,7 @@ export default function NotificationsPage() {
           href={SUBREDDIT_URL}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackNotificationCommunityTap()}
           className="text-deadly-accent underline underline-offset-2 hover:text-white"
         >
           {SUBREDDIT_HANDLE}

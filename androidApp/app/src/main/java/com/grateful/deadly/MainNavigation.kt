@@ -115,6 +115,7 @@ fun MainNavigation(
         notificationViewModel.newArrivals.collect { arrival ->
             if (lastToastKey.value == arrival.key) return@collect
             lastToastKey.value = arrival.key
+            notificationViewModel.onToastShown(arrival)
             val msg = if (arrival.count > 1) "${arrival.count} new messages" else "New: ${arrival.title}"
             val result = snackbarHostState.showSnackbar(
                 message = msg,
@@ -122,6 +123,7 @@ fun MainNavigation(
                 duration = SnackbarDuration.Short,
             )
             if (result == SnackbarResult.ActionPerformed) {
+                notificationViewModel.onToastTap(arrival)
                 navController.navigate("notifications")
             }
         }

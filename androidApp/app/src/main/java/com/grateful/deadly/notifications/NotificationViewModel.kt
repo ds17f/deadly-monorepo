@@ -2,12 +2,23 @@ package com.grateful.deadly.notifications
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.notifications.CachedNotification
 import com.grateful.deadly.core.notifications.NewArrival
 import com.grateful.deadly.core.notifications.NotificationApiService
 import com.grateful.deadly.core.notifications.NotificationStore
 import com.grateful.deadly.core.notifications.active
 import com.grateful.deadly.core.notifications.dismissed
+import com.grateful.deadly.core.notifications.trackNotificationArchive
+import com.grateful.deadly.core.notifications.trackNotificationArchiveAll
+import com.grateful.deadly.core.notifications.trackNotificationCommunityTap
+import com.grateful.deadly.core.notifications.trackNotificationImpression
+import com.grateful.deadly.core.notifications.trackNotificationLinkTap
+import com.grateful.deadly.core.notifications.trackNotificationMarkAllRead
+import com.grateful.deadly.core.notifications.trackNotificationOpen
+import com.grateful.deadly.core.notifications.trackNotificationReceived
+import com.grateful.deadly.core.notifications.trackNotificationToastShown
+import com.grateful.deadly.core.notifications.trackNotificationToastTap
 import com.grateful.deadly.core.notifications.unreadCount
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -28,9 +39,13 @@ import javax.inject.Inject
 class NotificationViewModel @Inject constructor(
     private val store: NotificationStore,
     private val apiService: NotificationApiService,
+    private val analytics: AnalyticsService,
 ) : ViewModel() {
 
     private val version = store.appVersion
+
+    /** Ids already counted as an impression this session, to dedupe re-scrolls. */
+    private val impressed = mutableSetOf<Long>()
 
     private val _refreshing = MutableStateFlow(false)
     /** Drives the pull-to-refresh spinner on the inbox screen. */
@@ -59,19 +74,47 @@ class NotificationViewModel @Inject constructor(
         if (_refreshing.value) return
         viewModelScope.launch {
             _refreshing.value = true
-            apiService.fetch(store.cursor).onSuccess { store.merge(it) }
+            apiService.fetch(store.cursor).onSuccess { result ->
+                store.merge(result).forEach { analytics.trackNotificationReceived(it, "refresh") }
+            }
             _refreshing.value = false
         }
     }
 
+    /** A message row became visible in the inbox — count one impression per id. */
+    fun onImpression(message: CachedNotification) {
+        if (impressed.add(message.id)) analytics.trackNotificationImpression(message)
+    }
+
     /** "Tap to read" — opening a message's detail marks just that one read. */
-    fun markRead(id: Long) = store.markRead(id)
+    fun open(message: CachedNotification) {
+        analytics.trackNotificationOpen(message)
+        if (message.seenAt == null) store.markRead(message.id)
+    }
 
     /** Bulk "Mark all read". */
-    fun markAllSeen() = store.markAllSeen()
+    fun markAllSeen() {
+        analytics.trackNotificationMarkAllRead(active.value.count { it.seenAt == null })
+        store.markAllSeen()
+    }
 
-    fun dismiss(id: Long) = store.dismiss(id)
+    /** Archive a single message (row swipe / detail button). */
+    fun archive(message: CachedNotification) {
+        analytics.trackNotificationArchive(message)
+        store.dismiss(message.id)
+    }
 
     /** Bulk "Archive all". */
-    fun archiveAll() = store.archiveAll()
+    fun archiveAll() {
+        analytics.trackNotificationArchiveAll(active.value.size)
+        store.archiveAll()
+    }
+
+    fun onLinkTap(id: Long, url: String) = analytics.trackNotificationLinkTap(id, url)
+
+    fun onCommunityTap() = analytics.trackNotificationCommunityTap()
+
+    fun onToastShown(arrival: NewArrival) = analytics.trackNotificationToastShown(arrival)
+
+    fun onToastTap(arrival: NewArrival) = analytics.trackNotificationToastTap(arrival)
 }

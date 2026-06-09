@@ -3,6 +3,7 @@ package com.grateful.deadly.notifications
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.LinkInteractionListener
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.text.buildAnnotatedString
@@ -22,10 +23,22 @@ private val TOKEN =
 
 private val TRAILING = Regex("""[).,!?;:]+$""")
 
-fun notificationBody(body: String, linkColor: Color): AnnotatedString =
+// [onLinkClick] fully handles a tapped link (track + open): supplying a
+// LinkInteractionListener overrides Compose's default browser launch, so the
+// caller is responsible for opening the URL (see NotificationDetail).
+fun notificationBody(
+    body: String,
+    linkColor: Color,
+    onLinkClick: (String) -> Unit,
+): AnnotatedString =
     buildAnnotatedString {
         val styles = TextLinkStyles(
             style = SpanStyle(color = linkColor, textDecoration = TextDecoration.Underline),
+        )
+        fun urlLink(url: String) = LinkAnnotation.Url(
+            url,
+            styles,
+            LinkInteractionListener { onLinkClick(url) },
         )
         var last = 0
         for (match in TOKEN.findAll(body)) {
@@ -35,12 +48,12 @@ fun notificationBody(body: String, linkColor: Color): AnnotatedString =
             val bareUrl = match.groupValues[3]
             when {
                 mdUrl.isNotEmpty() -> {
-                    withLink(LinkAnnotation.Url(mdUrl, styles)) { append(mdLabel) }
+                    withLink(urlLink(mdUrl)) { append(mdLabel) }
                 }
                 bareUrl.isNotEmpty() -> {
                     val trailing = TRAILING.find(bareUrl)?.value ?: ""
                     val url = bareUrl.dropLast(trailing.length)
-                    withLink(LinkAnnotation.Url(url, styles)) { append(url) }
+                    withLink(urlLink(url)) { append(url) }
                     if (trailing.isNotEmpty()) append(trailing)
                 }
                 else -> append(match.value)

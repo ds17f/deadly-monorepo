@@ -86,8 +86,12 @@ class NotificationStore @Inject constructor(
      * expiry keep the backlog relevant and "Mark all read" handles volume.
      * A non-cold delta that adds eligible unread messages emits [newArrivals]
      * so the UI can toast.
+     *
+     * Returns the genuinely-new, eligible messages added by this merge (for any
+     * reason, including cold start) so the caller can emit per-message
+     * `notification_received` analytics. Empty when nothing new arrived.
      */
-    fun merge(result: NotificationFetchResult) {
+    fun merge(result: NotificationFetchResult): List<CachedNotification> {
         val coldStart = persisted.cursor == 0L
         val now = System.currentTimeMillis()
         val knownIds = persisted.messages.mapTo(HashSet()) { it.id }
@@ -121,19 +125,22 @@ class NotificationStore @Inject constructor(
 
         commit(Persisted(cursor = maxOf(persisted.cursor, result.cursor), messages = pruned))
 
-        // Toast signal: genuinely new, eligible, unread messages from a delta.
-        if (!coldStart) {
-            val fresh = result.messages
-                .filter { it.id !in knownIds }
-                .map { byId.getValue(it.id) }
-                .filter { it.isEligible(appVersion) && it.dismissedAt == null }
-                .sortedByDescending { it.createdAt }
-            if (fresh.isNotEmpty()) {
-                _newArrivals.tryEmit(
-                    NewArrival(title = fresh.first().title, count = fresh.size, key = fresh.first().id),
-                )
-            }
+        // Genuinely new, eligible messages added by this merge — the basis for
+        // both the toast (delta only) and `notification_received` analytics (any).
+        val fresh = result.messages
+            .filter { it.id !in knownIds }
+            .mapNotNull { byId[it.id] }
+            .filter { it.isEligible(appVersion) && it.dismissedAt == null }
+            .sortedByDescending { it.createdAt }
+
+        // Toast signal: only on a delta (never the cold-start backlog).
+        if (!coldStart && fresh.isNotEmpty()) {
+            _newArrivals.tryEmit(
+                NewArrival(title = fresh.first().title, count = fresh.size, key = fresh.first().id),
+            )
         }
+
+        return fresh
     }
 
     /** Mark a single message read ("tap to read" — opening its detail). */

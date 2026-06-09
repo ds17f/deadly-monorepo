@@ -249,6 +249,19 @@ const EVENT_SCHEMAS: Record<string, Set<string>> = {
   ]),
   error: new Set(["source", "message", "is_fatal"]),
   cold_start: new Set(["duration_ms"]),
+  // In-app notifications funnel. `id` is the notification id (number) — every
+  // message-scoped event carries it so engagement aggregates per notification
+  // via json_extract(props,'$.id'). See getNotificationEngagement.
+  notification_received: new Set(["id", "category", "level", "reason"]),
+  notification_impression: new Set(["id", "category", "level"]),
+  notification_open: new Set(["id", "category", "level", "was_unread"]),
+  notification_link_tap: new Set(["id", "url"]),
+  notification_archive: new Set(["id", "category"]),
+  notification_toast_shown: new Set(["id", "count"]),
+  notification_toast_tap: new Set(["id"]),
+  notification_mark_all_read: new Set(["count"]),
+  notification_archive_all: new Set(["count"]),
+  notification_community_tap: new Set<string>([]),
 };
 
 export const VALID_EVENTS = new Set(Object.keys(EVENT_SCHEMAS));
@@ -1340,6 +1353,54 @@ export type TrackOutcome = "complete" | "skipped" | "error" | "partial";
 export interface TrackPlay {
   index: number;
   outcome: TrackOutcome;
+}
+
+export interface NotificationEngagement {
+  id: number;
+  delivered: number;
+  displayed: number;
+  opened: number;
+  archived: number;
+  link_clicks: number;
+}
+
+/**
+ * Per-notification engagement funnel, keyed by notification id. Each metric is
+ * a distinct-install count (`COUNT(DISTINCT iid)`) so it reads as "N clients".
+ * Aggregated from the `notification_*` events via `json_extract(props,'$.id')`,
+ * mirroring the show_id grouping in getShowPlaybackSummary. "Displayed" unions
+ * inbox impressions and toasts — both mean a human saw the message.
+ */
+export function getNotificationEngagement(
+  days = 90,
+  platforms?: string[],
+): NotificationEngagement[] {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+  const pc = platformClause(platforms);
+
+  return db
+    .prepare(
+      `SELECT
+         CAST(json_extract(props, '$.id') AS INTEGER) AS id,
+         COUNT(DISTINCT CASE WHEN event = 'notification_received' THEN iid END) AS delivered,
+         COUNT(DISTINCT CASE WHEN event IN ('notification_impression', 'notification_toast_shown') THEN iid END) AS displayed,
+         COUNT(DISTINCT CASE WHEN event = 'notification_open' THEN iid END) AS opened,
+         COUNT(DISTINCT CASE WHEN event = 'notification_archive' THEN iid END) AS archived,
+         COUNT(DISTINCT CASE WHEN event = 'notification_link_tap' THEN iid END) AS link_clicks
+       FROM analytics_events
+       WHERE event IN (
+           'notification_received', 'notification_impression', 'notification_toast_shown',
+           'notification_open', 'notification_archive', 'notification_link_tap'
+         )
+         AND ts > ?${pc}
+         AND json_extract(props, '$.id') IS NOT NULL
+       -- GROUP/ORDER by the expression, not the alias: the table has its own
+       -- 'id' PK column that would otherwise shadow the aliased notification id.
+       GROUP BY json_extract(props, '$.id')
+       ORDER BY json_extract(props, '$.id') DESC`,
+    )
+    .all(cutoff) as NotificationEngagement[];
 }
 
 export interface ShowPlaybackSummary {
