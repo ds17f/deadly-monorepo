@@ -1223,6 +1223,106 @@ export function getTimeseries(
   }
 }
 
+// ── Version distribution & adoption ─────────────────────────────────
+
+export interface VersionDistributionRow {
+  version: string;
+  /** Installs whose most recent event was within 7 days. */
+  active: number;
+  /** Most recent event 8–30 days ago. */
+  idle: number;
+  /** Most recent event > 30 days ago. */
+  stale: number;
+  total: number;
+}
+
+/**
+ * Snapshot of installs by their *current* app version (view A of the
+ * Versions panel). Each install is attributed to the `app_version` on its
+ * most recent event — not a lexical MAX, which would sort "2.9.0" above
+ * "2.10.0" — and bucketed by how recently that install was last seen,
+ * reusing the dashboard's active(≤7d)/idle(8–30d)/stale(>30d) thresholds.
+ * One row per iid via a window function (same pattern as getLiveListeners).
+ */
+export function getVersionDistribution(
+  platforms?: string[],
+): VersionDistributionRow[] {
+  const db = getAnalyticsDb();
+  const now = Date.now();
+  const weekAgo = now - 7 * 24 * 3600 * 1000;
+  const monthAgo = now - 30 * 24 * 3600 * 1000;
+  const pc = platformClause(platforms);
+
+  return db
+    .prepare(
+      `WITH latest AS (
+         SELECT iid, app_version, ts,
+                ROW_NUMBER() OVER (PARTITION BY iid ORDER BY ts DESC) AS rn
+         FROM analytics_events
+         WHERE 1=1${pc}
+       )
+       SELECT
+         app_version AS version,
+         SUM(CASE WHEN ts > ? THEN 1 ELSE 0 END) AS active,
+         SUM(CASE WHEN ts <= ? AND ts > ? THEN 1 ELSE 0 END) AS idle,
+         SUM(CASE WHEN ts <= ? THEN 1 ELSE 0 END) AS stale,
+         COUNT(*) AS total
+       FROM latest
+       -- Hide local dev/debug builds; they aren't a released version.
+       WHERE rn = 1 AND app_version != 'dev'
+       GROUP BY app_version
+       ORDER BY total DESC`,
+    )
+    .all(weekAgo, weekAgo, monthAgo, monthAgo) as VersionDistributionRow[];
+}
+
+export interface VersionDay {
+  day: string;
+  version: string;
+  /** Distinct installs active that day running this version. */
+  count: number;
+}
+
+/**
+ * Version mix over time (view B of the Versions panel). For each day, counts
+ * the distinct installs that opened the app, grouped by the version they ran
+ * *that day*. An install that updated mid-day is counted once under its newer
+ * version (latest app_open that day wins), so daily counts never double-count
+ * an iid. The component normalizes each day to 100% share to draw the fading
+ * stacked-area rollout curve. Window is the last `days` days.
+ */
+export function getVersionTimeseries(
+  days = 90,
+  platforms?: string[],
+): VersionDay[] {
+  const db = getAnalyticsDb();
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+  const pc = platformClause(platforms);
+
+  return db
+    .prepare(
+      `WITH opens AS (
+         SELECT
+           date(ts / 1000, 'unixepoch') AS day,
+           iid,
+           app_version,
+           ROW_NUMBER() OVER (
+             PARTITION BY date(ts / 1000, 'unixepoch'), iid
+             ORDER BY ts DESC
+           ) AS rn
+         FROM analytics_events
+         -- Hide local dev/debug builds; they aren't a released version.
+         WHERE event = 'app_open' AND ts > ? AND app_version != 'dev'${pc}
+       )
+       SELECT day, app_version AS version, COUNT(*) AS count
+       FROM opens
+       WHERE rn = 1
+       GROUP BY day, version
+       ORDER BY day ASC`,
+    )
+    .all(cutoff) as VersionDay[];
+}
+
 // ── Show-level playback queries ─────────────────────────────────────
 
 export interface ShowListeningSession {
