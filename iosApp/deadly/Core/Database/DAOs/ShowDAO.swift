@@ -21,6 +21,40 @@ struct ShowDAO: Sendable {
         }
     }
 
+    /// Catalog refresh: update-or-insert by showId without deleting the row, so
+    /// CASCADE children (favorites, reviews, prefs, …) survive. The denormalized
+    /// isFavorite/favoritedAt columns this clobbers are restored by
+    /// reconcileFavoriteFlags() after the refresh.
+    /// See docs/adr/0009-non-destructive-catalog-refresh.md.
+    func upsertAll(_ shows: [ShowRecord]) throws {
+        try database.write { db in
+            for show in shows {
+                var record = show
+                try record.upsert(db)
+            }
+        }
+    }
+
+    /// Re-derive the denormalized favorite flags on `shows` from the source of
+    /// truth (`favorite_shows`, tombstones excluded). Run after any catalog
+    /// refresh so the flags stay correct without snapshot/restore.
+    /// See docs/adr/0009-non-destructive-catalog-refresh.md.
+    func reconcileFavoriteFlags() throws {
+        try database.write { db in
+            try db.execute(sql: """
+                UPDATE shows SET
+                    isFavorite = EXISTS(
+                        SELECT 1 FROM favorite_shows f
+                        WHERE f.showId = shows.showId AND f.deletedAt IS NULL
+                    ),
+                    favoritedAt = (
+                        SELECT f.addedToFavoritesAt FROM favorite_shows f
+                        WHERE f.showId = shows.showId AND f.deletedAt IS NULL LIMIT 1
+                    )
+                """)
+        }
+    }
+
     // MARK: - Fetch
 
     func fetchAll() throws -> [ShowRecord] {

@@ -46,7 +46,7 @@ import com.grateful.deadly.core.database.dao.SyncOutboxDao
         SyncOutboxEntity::class
     ],
     version = 25,
-    exportSchema = false
+    exportSchema = true
 )
 abstract class DeadlyDatabase : RoomDatabase() {
     

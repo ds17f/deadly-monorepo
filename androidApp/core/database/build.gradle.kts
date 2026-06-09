@@ -37,6 +37,12 @@ android {
     }
 }
 
+// Export the Room schema to a committed directory so schema drift is reviewable in
+// diffs and asserted by CatalogSeedSchemaDriftTest against data/catalog_schema.json.
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
 dependencies {
     implementation(project(":core:model"))
     implementation(project(":core:domain"))

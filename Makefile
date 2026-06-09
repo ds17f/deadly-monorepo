@@ -16,7 +16,7 @@
 .PHONY: android-build android-emulator android-emu-list android-emu-stop android-run-emulator
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
 .PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output web-deploy web-promote infra-logs infra-ssh images-build
-.PHONY: data-download data-generate data-package data-download-stage01 data-upload-stage01 data-collect data-release data-clean
+.PHONY: data-download data-generate data-package data-build-db data-download-stage01 data-upload-stage01 data-collect data-release data-clean
 .PHONY: db-backup-list db-restore db-pull-analytics
 
 # Load KEYCHAIN_PASSWORD from .env if not set in environment.
@@ -278,6 +278,7 @@ help:
 	@echo "  data-download VERSION=X    - Download released data.zip + populate ui/data/"
 	@echo "  data-generate              - Run stage02 generation (stage00+stage01 -> stage02)"
 	@echo "  data-package               - Build data.zip from stage02"
+	@echo "  data-build-db              - Build prebuilt catalog.db seed (+ .zip) from stage02"
 	@echo "  data-download-stage01      - Fetch stage01 API cache from GitHub Release"
 	@echo "  data-upload-stage01        - Publish stage01 API cache as GitHub Release"
 	@echo "  data-collect               - Re-collect stage01 from APIs (rare, hours)"
@@ -899,6 +900,10 @@ data-generate:
 # Build data.zip from stage02
 data-package:
 	@$(MAKE) -C data package-data
+
+# Build prebuilt catalog.db seed (+ catalog.db.zip) from stage02
+data-build-db:
+	@$(MAKE) -C data package-catalog-db $(if $(VERSION),VERSION=$(VERSION))
 
 # Download stage01 API cache from GitHub Release
 data-download-stage01:

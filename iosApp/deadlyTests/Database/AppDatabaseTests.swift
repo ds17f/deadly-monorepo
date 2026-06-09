@@ -295,7 +295,8 @@ struct AppDatabaseTests {
                 downloadedFormat: nil,
                 customRating: nil,
                 lastAccessedAt: nil,
-                tags: nil
+                tags: nil,
+                updatedAt: now
             )
             try favoriteShow.insert(database)
 

@@ -8,13 +8,20 @@ import Foundation
 struct DataImportService: Sendable {
     let gitHubClient: any GitHubReleasesClient
     let zipExtractor: any ZipExtracting
+    let database: AppDatabase
     let showDAO: ShowDAO
     let recordingDAO: RecordingDAO
     let collectionsDAO: CollectionsDAO
     let showSearchDAO: ShowSearchDAO
     let dataVersionDAO: DataVersionDAO
-    let favoritesDAO: FavoritesDAO
     let analyticsService: AnalyticsService?
+
+    /// The data version this build requires; the single source of truth is the
+    /// pinned release client (`URLSessionGitHubReleasesClient.dataVersion`). A
+    /// stored version below this triggers a re-import — non-destructive per
+    /// ADR-0009, so user data is preserved across the refresh. Injectable so
+    /// tests can pin it; defaults to the build's pinned constant.
+    var requiredDataVersion: String = URLSessionGitHubReleasesClient.dataVersion
 
     private static let batchSize = 500
 
@@ -46,14 +53,27 @@ struct DataImportService: Sendable {
 
     private func performImport(force: Bool, progress emit: @Sendable (ImportProgress) -> Void) async throws {
 
-        // 1. CHECK
+        // 1. CHECK — import when there's no data OR the stored version is behind
+        //    the build's required version (a data-version bump). Mirrors Android's
+        //    DatabaseManager.isDataVersionStale. ADR-0009 makes the import
+        //    non-destructive (upsert + reconcile), so a refresh preserves user data.
         emit(ImportProgress(phase: .checking, processed: 0, total: 0, message: "Checking for existing data…"))
-        if !force, (try? dataVersionDAO.hasData()) == true {
-            emit(ImportProgress(phase: .completed, processed: 0, total: 0, message: "Data already present; skipping import"))
+        if !force {
+            let current = (try? dataVersionDAO.currentVersion()) ?? nil
+            if !Self.isDataVersionStale(current, required: requiredDataVersion) {
+                emit(ImportProgress(phase: .completed, processed: 0, total: 0, message: "Data up to date (\(current ?? "?")); skipping import"))
+                return
+            }
+        }
+
+        // 2. PREFER the prebuilt catalog seed (sub-second attach-copy). Falls through
+        //    to the JSON import below if no seed is published yet or the seed fails —
+        //    zero-risk migration (ADR-0007, Phase 4).
+        if await importFromSeedIfAvailable(progress: emit) {
             return
         }
 
-        // 2. DOWNLOAD
+        // 3. DOWNLOAD (JSON fallback)
         emit(ImportProgress(phase: .downloading, processed: 0, total: 1, message: "Fetching latest release…"))
         let release = try await gitHubClient.fetchLatestRelease()
         guard let asset = release.dataZipAsset else {
@@ -90,13 +110,13 @@ struct DataImportService: Sendable {
         }
         emit(ImportProgress(phase: .readingShows, processed: showFiles.count, total: showFiles.count, message: "Parsed \(showsMap.count) shows"))
 
-        // 5. PRESERVE favorites (CASCADE on shows FK will delete favorite_shows on clear)
-        let savedFavorites = (try? favoritesDAO.fetchAll()) ?? []
-
-        // 6. CLEAR existing data
+        // 5. CLEAR the childless catalog/derived tables only. `shows` is NOT deleted
+        //    — it has CASCADE children holding user data (favorites, reviews, prefs,
+        //    …); it is upserted below so those survive, and the denormalized favorite
+        //    flags are reconciled at the end. See
+        //    docs/adr/0009-non-destructive-catalog-refresh.md.
         try showSearchDAO.clearAll()
         try recordingDAO.deleteAll()
-        try showDAO.deleteAll()
 
         // Build reverse index: recordingId → [showId]  O(shows) to build, O(1) per lookup
         // Only holds IDs (strings), not full ShowImportData objects
@@ -117,7 +137,10 @@ struct DataImportService: Sendable {
         for batch in allShows.chunks(of: Self.batchSize) {
             let showRecords = batch.map { ShowImporter.makeRecord(from: $0, now: now) }
             let searchRecords = batch.map { ShowImporter.makeSearchRecord(from: $0) }
-            try showDAO.insertAll(showRecords)
+            // Upsert (not insert) so an existing row is updated in place rather than
+            // deleted+recreated — keeps CASCADE children intact. The favorite flags
+            // this writes are reconciled after the import.
+            try showDAO.upsertAll(showRecords)
             try showSearchDAO.insertAll(searchRecords)
             importedShows += batch.count
             emit(ImportProgress(phase: .importingShows, processed: importedShows, total: totalShows, message: "Importing shows…"))
@@ -186,12 +209,9 @@ struct DataImportService: Sendable {
         )
         try dataVersionDAO.upsert(versionRecord)
 
-        // Restore favorites entries (filter to shows that still exist after re-import)
-        if !savedFavorites.isEmpty {
-            let existingIds = Set((try? showDAO.fetchAll().map(\.showId)) ?? [])
-            let toRestore = savedFavorites.filter { existingIds.contains($0.showId) }
-            try? favoritesDAO.addAll(toRestore)
-        }
+        // Favorites (and other CASCADE children) were never deleted; re-derive the
+        // denormalized favorite flags on the freshly-upserted shows.
+        try showDAO.reconcileFavoriteFlags()
 
         emit(ImportProgress(
             phase: .completed,
@@ -199,6 +219,96 @@ struct DataImportService: Sendable {
             total: importedShows + importedRecordings,
             message: "Imported \(importedShows) shows, \(importedRecordings) recordings, \(collectionRecords.count) collections"
         ))
+    }
+
+    // MARK: - Prebuilt seed (fast path)
+
+    /// Attempts the fast path: download the prebuilt catalog seed and attach-copy it
+    /// into the migrated DB. Returns `true` if the catalog was fully imported; `false`
+    /// to signal the caller to fall back to the JSON import (no seed published yet, or
+    /// a recoverable failure). Never throws — failures degrade to the JSON path.
+    private func importFromSeedIfAvailable(progress emit: @Sendable (ImportProgress) -> Void) async -> Bool {
+        emit(ImportProgress(phase: .downloading, processed: 0, total: 1, message: "Looking for prebuilt catalog…"))
+
+        guard let release = try? await gitHubClient.fetchLatestRelease() else {
+            return false  // network issue — let the JSON path surface the error
+        }
+        guard let asset = release.catalogDbAsset,
+              let assetURL = URL(string: asset.browserDownloadUrl) else {
+            return false  // no seed published yet → JSON import
+        }
+
+        do {
+            emit(ImportProgress(phase: .downloading, processed: 0, total: 1, message: "Downloading \(asset.name)…"))
+            let zipURL = try await gitHubClient.downloadZIP(from: assetURL)
+            defer { try? FileManager.default.removeItem(at: zipURL) }
+
+            emit(ImportProgress(phase: .extracting, processed: 0, total: 1, message: "Extracting catalog…"))
+            let extractDir = try zipExtractor.extract(from: zipURL)
+            defer { try? FileManager.default.removeItem(at: extractDir) }
+
+            guard let seedFile = findSeedDatabase(in: extractDir) else {
+                return false
+            }
+
+            emit(ImportProgress(phase: .importingShows, processed: 0, total: 1, message: "Loading catalog…"))
+            let seedImporter = SeedImportService(database: database, showDAO: showDAO)
+            let result = try seedImporter.importSeed(at: seedFile)
+
+            emit(ImportProgress(
+                phase: .completed,
+                processed: result.shows + result.recordings,
+                total: result.shows + result.recordings,
+                message: "Imported \(result.shows) shows, \(result.recordings) recordings"
+            ))
+            return true
+        } catch {
+            analyticsService?.track("error", props: [
+                "source": "seed_import",
+                "message": error.localizedDescription,
+            ])
+            return false  // recoverable — fall back to JSON import
+        }
+    }
+
+    /// Locate the extracted `catalog.db` (the zip ships a bare `.db`; tolerate one
+    /// level of nesting in case it's wrapped in a folder).
+    private func findSeedDatabase(in dir: URL) -> URL? {
+        let fm = FileManager.default
+        guard let files = try? fm.contentsOfDirectory(at: dir, includingPropertiesForKeys: [.isDirectoryKey]) else {
+            return nil
+        }
+        if let db = files.first(where: { $0.pathExtension == "db" }) { return db }
+        for sub in files where (try? sub.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true {
+            if let nested = try? fm.contentsOfDirectory(at: sub, includingPropertiesForKeys: nil),
+               let db = nested.first(where: { $0.pathExtension == "db" }) {
+                return db
+            }
+        }
+        return nil
+    }
+
+    // MARK: - Version staleness (mirrors Android DatabaseManager)
+
+    /// True when the catalog should be (re-)imported: no stored version, or the
+    /// stored version is numerically below `required`. A higher/equal stored
+    /// version is left untouched.
+    static func isDataVersionStale(_ current: String?, required: String) -> Bool {
+        guard let current, !current.isEmpty else { return true }
+        return compareVersions(current, required) < 0
+    }
+
+    /// Numeric, part-by-part semver compare. Non-numeric parts count as 0 (so a
+    /// legacy/garbage version sorts below any real `x.y.z`). Returns <0, 0, or >0.
+    static func compareVersions(_ a: String, _ b: String) -> Int {
+        let aParts = a.split(separator: ".", omittingEmptySubsequences: false).map { Int($0) ?? 0 }
+        let bParts = b.split(separator: ".", omittingEmptySubsequences: false).map { Int($0) ?? 0 }
+        for i in 0..<max(aParts.count, bParts.count) {
+            let av = i < aParts.count ? aParts[i] : 0
+            let bv = i < bParts.count ? bParts[i] : 0
+            if av != bv { return av < bv ? -1 : 1 }
+        }
+        return 0
     }
 
     // MARK: - Helpers

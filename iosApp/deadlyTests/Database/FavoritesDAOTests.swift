@@ -70,7 +70,8 @@ struct FavoritesDAOTests {
             downloadedFormat: nil,
             customRating: nil,
             lastAccessedAt: nil,
-            tags: nil
+            tags: nil,
+            updatedAt: addedAt
         )
     }
 

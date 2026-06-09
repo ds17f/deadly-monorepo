@@ -3,19 +3,50 @@ package com.grateful.deadly.core.database.dao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Upsert
 import com.grateful.deadly.core.database.entities.ShowEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ShowDao {
-    
+
     // Core operations for import
     @Insert
     suspend fun insert(show: ShowEntity)
-    
+
     @Insert
     suspend fun insertAll(shows: List<ShowEntity>)
-    
+
+    // Catalog refresh: update-or-insert by showId without deleting the row, so
+    // CASCADE children (favorites, reviews, prefs, …) survive. The denormalized
+    // isFavorite/favoritedAt columns this clobbers are restored by
+    // reconcileFavoriteFlags() after the refresh. See
+    // docs/adr/0009-non-destructive-catalog-refresh.md.
+    @Upsert
+    suspend fun upsert(show: ShowEntity)
+
+    @Upsert
+    suspend fun upsertAll(shows: List<ShowEntity>)
+
+    /**
+     * Re-derive the denormalized favorite flags on `shows` from the source of
+     * truth (`favorite_shows`, tombstones excluded). Run after any catalog
+     * refresh so the flags stay correct without snapshot/restore.
+     * See docs/adr/0009-non-destructive-catalog-refresh.md.
+     */
+    @Query("""
+        UPDATE shows SET
+            isFavorite = EXISTS(
+                SELECT 1 FROM favorite_shows f
+                WHERE f.showId = shows.showId AND f.deletedAt IS NULL
+            ),
+            favoritedAt = (
+                SELECT f.addedToFavoritesAt FROM favorite_shows f
+                WHERE f.showId = shows.showId AND f.deletedAt IS NULL LIMIT 1
+            )
+    """)
+    suspend fun reconcileFavoriteFlags()
+
     // Basic queries for verification
     @Query("SELECT * FROM shows ORDER BY date DESC")
     suspend fun getAllShows(): List<ShowEntity>

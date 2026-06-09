@@ -103,12 +103,12 @@ struct DataImportServiceTests {
         return DataImportService(
             gitHubClient: StubGitHubReleasesClient(release: release, fixtureDir: fixtures.rootDir),
             zipExtractor: StubZipExtractor(fixtureDir: fixtures.rootDir),
+            database: db,
             showDAO: ShowDAO(database: db),
             recordingDAO: RecordingDAO(database: db),
             collectionsDAO: CollectionsDAO(database: db),
             showSearchDAO: ShowSearchDAO(database: db),
             dataVersionDAO: DataVersionDAO(database: db),
-            favoritesDAO: FavoritesDAO(database: db),
             analyticsService: nil
         )
     }
@@ -176,13 +176,15 @@ struct DataImportServiceTests {
         #expect(version?.gitCommit == "abc123")
     }
 
-    @Test("Pipeline skips import if data already exists and force = false")
+    @Test("Pipeline skips import if data is present and up to date, force = false")
     func testSkipsWhenDataPresent() async throws {
         let db = try AppDatabase.makeEmpty()
-        // Pre-insert a data version record
+        // Pre-insert a data version row that is NOT stale (== the required version),
+        // so the staleness gate skips the import.
         let dataVersionDAO = DataVersionDAO(database: db)
         try dataVersionDAO.upsert(DataVersionRecord(
-            id: 1, dataVersion: "existing", packageName: "p", versionType: "r",
+            id: 1, dataVersion: URLSessionGitHubReleasesClient.dataVersion,
+            packageName: "p", versionType: "r",
             description: nil, importedAt: 1000, gitCommit: nil, gitTag: nil,
             buildTimestamp: nil, totalShows: 5, totalVenues: 0, totalFiles: 0, totalSizeBytes: 0
         ))
@@ -202,6 +204,35 @@ struct DataImportServiceTests {
 
         // Shows table should still be empty (import was skipped)
         #expect(try ShowDAO(database: db).fetchCount() == 0)
+    }
+
+    @Test("Pipeline re-imports when the stored version is behind required, force = false")
+    func testReimportsWhenVersionStale() async throws {
+        let fixtures = try Fixtures()
+        defer { fixtures.cleanup() }
+        try fixtures.writeShow([
+            "show_id": "gd1977-05-08", "band": "GD", "venue": "Barton Hall",
+            "date": "1977-05-08", "recordings": [], "avg_rating": 0.0,
+            "recording_count": 0, "total_high_ratings": 0, "total_low_ratings": 0
+        ])
+        try fixtures.writeManifest(version: "1.0.0")
+
+        let db = try AppDatabase.makeEmpty()
+        // A data_version row is present but far below the build's required version,
+        // so the staleness gate must still import (not skip) even with force = false.
+        try DataVersionDAO(database: db).upsert(DataVersionRecord(
+            id: 1, dataVersion: "0.0.1", packageName: "p", versionType: "r",
+            description: nil, importedAt: 1, gitCommit: nil, gitTag: nil,
+            buildTimestamp: nil, totalShows: 0, totalVenues: 0, totalFiles: 0, totalSizeBytes: 0
+        ))
+
+        let service = makeService(fixtures: fixtures, db: db)
+        var events: [ImportProgress] = []
+        for await p in service.run(force: false) { events.append(p) }
+
+        #expect(events.last?.phase == .completed)
+        // Import actually ran (the show was loaded), not skipped.
+        #expect(try ShowDAO(database: db).fetchCount() == 1)
     }
 
     @Test("Favorite entries are preserved across re-import")
@@ -235,7 +266,8 @@ struct DataImportServiceTests {
             downloadedFormat: nil,
             customRating: nil,
             lastAccessedAt: nil,
-            tags: nil
+            tags: nil,
+            updatedAt: now
         ))
         #expect(try libraryDAO.fetchCount() == 1)
 
@@ -298,5 +330,45 @@ struct DataImportServiceTests {
         let col = try collectionsDAO.fetchById("col1")
         #expect(col?.name == "My Collection")
         #expect(col?.totalShows == 1)
+    }
+}
+
+// MARK: - Version staleness (mirrors Android DatabaseManager.isDataVersionStale)
+
+@Suite("Data version staleness")
+struct DataVersionStalenessTests {
+
+    @Test("Missing or blank stored version is stale")
+    func missingIsStale() {
+        #expect(DataImportService.isDataVersionStale(nil, required: "2.3.1"))
+        #expect(DataImportService.isDataVersionStale("", required: "2.3.1"))
+    }
+
+    @Test("Lower is stale; equal or higher is not")
+    func ordering() {
+        #expect(DataImportService.isDataVersionStale("2.3.0", required: "2.3.1"))
+        #expect(DataImportService.isDataVersionStale("2.2.9", required: "2.3.1"))
+        #expect(!DataImportService.isDataVersionStale("2.3.1", required: "2.3.1"))
+        #expect(!DataImportService.isDataVersionStale("2.4.0", required: "2.3.1"))
+        #expect(!DataImportService.isDataVersionStale("10.0.0", required: "2.3.1"))
+    }
+
+    @Test("Compare is numeric, not lexicographic")
+    func numericCompare() {
+        #expect(!DataImportService.isDataVersionStale("2.10.0", required: "2.9.0"))
+        #expect(DataImportService.isDataVersionStale("2.9.0", required: "2.10.0"))
+    }
+
+    @Test("Non-numeric / legacy versions sort below any real version")
+    func legacySortsLow() {
+        // e.g. the on-device legacy stamp `dead-metadata` / `existing`.
+        #expect(DataImportService.isDataVersionStale("existing", required: "2.3.1"))
+        #expect(DataImportService.isDataVersionStale("dead-metadata", required: "2.3.1"))
+    }
+
+    @Test("Differing component counts compare by value")
+    func differingLengths() {
+        #expect(DataImportService.isDataVersionStale("2.3", required: "2.3.1"))     // 2.3(.0) < 2.3.1
+        #expect(!DataImportService.isDataVersionStale("2.3.0", required: "2.3"))    // equal
     }
 }

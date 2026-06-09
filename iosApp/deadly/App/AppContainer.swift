@@ -71,12 +71,12 @@ final class AppContainer {
             dataImportService = DataImportService(
                 gitHubClient: URLSessionGitHubReleasesClient(),
                 zipExtractor: ZipExtractor(),
+                database: db,
                 showDAO: ShowDAO(database: db),
                 recordingDAO: RecordingDAO(database: db),
                 collectionsDAO: CollectionsDAO(database: db),
                 showSearchDAO: ShowSearchDAO(database: db),
                 dataVersionDAO: DataVersionDAO(database: db),
-                favoritesDAO: FavoritesDAO(database: db),
                 analyticsService: analytics
             )
             let showRepo = GRDBShowRepository(
@@ -194,12 +194,13 @@ final class AppContainer {
 
             // RecentShowsService is @MainActor; wires up automatic play tracking via StreamPlayer
             let recentService = MainActor.assumeIsolated {
-                RecentShowsServiceImpl(
+                let svc = RecentShowsServiceImpl(
                     recentShowDAO: RecentShowDAO(database: db),
                     showRepository: showRepo,
-                    streamPlayer: player,
-                    favoritesPushService: pushSvc
+                    streamPlayer: player
                 )
+                svc.favoritesPushService = pushSvc
+                return svc
             }
             recentShowsService = recentService
 

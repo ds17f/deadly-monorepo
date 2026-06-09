@@ -33,7 +33,9 @@ final class RecentShowsServiceImpl: RecentShowsService {
     private let recentShowDAO: RecentShowDAO
     private let showRepository: any ShowRepository
     private let streamPlayer: StreamPlayer
-    private let favoritesPushService: FavoritesPushService
+    /// Injected by AppContainer after construction (mirrors FavoritesServiceImpl).
+    /// Optional so tests and any non-sync context can omit the heavy push chain.
+    var favoritesPushService: FavoritesPushService?
 
     // MARK: - Observable state
 
@@ -52,13 +54,11 @@ final class RecentShowsServiceImpl: RecentShowsService {
     nonisolated init(
         recentShowDAO: RecentShowDAO,
         showRepository: some ShowRepository,
-        streamPlayer: StreamPlayer,
-        favoritesPushService: FavoritesPushService
+        streamPlayer: StreamPlayer
     ) {
         self.recentShowDAO = recentShowDAO
         self.showRepository = showRepository
         self.streamPlayer = streamPlayer
-        self.favoritesPushService = favoritesPushService
     }
 
     // MARK: - RecentShowsService
@@ -84,7 +84,7 @@ final class RecentShowsServiceImpl: RecentShowsService {
             logger.info("Recorded show play: \(showId)")
             // Announce the play to the server (issue 4). Fire-and-forget via
             // the outbox; this chokepoint fires once per show-session.
-            favoritesPushService.enqueueAndPushRecent(showId: showId)
+            favoritesPushService?.enqueueAndPushRecent(showId: showId)
             Task {
                 await refreshRecentShows()
             }

@@ -1,7 +1,6 @@
 package com.grateful.deadly.core.database.entities
 
 import androidx.room.Entity
-import androidx.room.Fts4
 import androidx.room.Index
 import androidx.room.PrimaryKey
 
@@ -68,10 +67,4 @@ data class ShowEntity(
     // Timestamps
     val createdAt: Long,
     val updatedAt: Long
-)
-
-@Fts4
-@Entity(tableName = "shows_fts")
-data class ShowFtsEntity(
-    val searchText: String  // Combined searchable text: date + venue + location + songList
 )

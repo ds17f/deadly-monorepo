@@ -84,6 +84,8 @@ data/stage02-processed-data/
 data/stage03-search-data/
 data/data.zip
 data/data-v*.zip
+data/catalog.db.zip
+data/catalog.db.gz
 data/**/__pycache__/
 data/scripts/.venv/
 data/scripts/review-processor/.venv/

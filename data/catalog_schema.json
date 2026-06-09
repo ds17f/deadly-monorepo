@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "description": "Canonical prebuilt catalog seed (catalog.db) schema. Catalog data only; device-local state (favorites, library, recents, reviews, sync outbox) is created empty by each app and excluded here. FTS is NOT shipped — each app rebuilds its own (iOS show_search FTS4 / Android shows_fts). Column names match both GRDB (iOS) and Room (Android) so the seed copies into either with no per-platform mapping. The builder (scripts/build_catalog_db.py) creates tables from this file; both apps' drift tests assert their expected catalog columns are covered here. See docs/adr/0007-prebuilt-catalog-db.md.",
+  "tables": {
+    "shows": {
+      "primaryKey": ["showId"],
+      "columns": [
+        {"name": "showId", "type": "TEXT"},
+        {"name": "date", "type": "TEXT"},
+        {"name": "year", "type": "INTEGER"},
+        {"name": "month", "type": "INTEGER"},
+        {"name": "yearMonth", "type": "TEXT"},
+        {"name": "band", "type": "TEXT"},
+        {"name": "url", "type": "TEXT"},
+        {"name": "venueName", "type": "TEXT"},
+        {"name": "city", "type": "TEXT"},
+        {"name": "state", "type": "TEXT"},
+        {"name": "country", "type": "TEXT"},
+        {"name": "locationRaw", "type": "TEXT"},
+        {"name": "setlistStatus", "type": "TEXT"},
+        {"name": "setlistRaw", "type": "TEXT"},
+        {"name": "songList", "type": "TEXT"},
+        {"name": "lineupStatus", "type": "TEXT"},
+        {"name": "lineupRaw", "type": "TEXT"},
+        {"name": "memberList", "type": "TEXT"},
+        {"name": "showSequence", "type": "INTEGER"},
+        {"name": "recordingsRaw", "type": "TEXT"},
+        {"name": "recordingCount", "type": "INTEGER"},
+        {"name": "bestRecordingId", "type": "TEXT"},
+        {"name": "bestSourceType", "type": "TEXT"},
+        {"name": "averageRating", "type": "REAL"},
+        {"name": "totalReviews", "type": "INTEGER"},
+        {"name": "coverImageUrl", "type": "TEXT"},
+        {"name": "createdAt", "type": "INTEGER"},
+        {"name": "updatedAt", "type": "INTEGER"}
+      ]
+    },
+    "recordings": {
+      "primaryKey": ["identifier"],
+      "columns": [
+        {"name": "identifier", "type": "TEXT"},
+        {"name": "show_id", "type": "TEXT"},
+        {"name": "source_type", "type": "TEXT"},
+        {"name": "rating", "type": "REAL"},
+        {"name": "raw_rating", "type": "REAL"},
+        {"name": "review_count", "type": "INTEGER"},
+        {"name": "confidence", "type": "REAL"},
+        {"name": "high_ratings", "type": "INTEGER"},
+        {"name": "low_ratings", "type": "INTEGER"},
+        {"name": "taper", "type": "TEXT"},
+        {"name": "source", "type": "TEXT"},
+        {"name": "lineage", "type": "TEXT"},
+        {"name": "source_type_string", "type": "TEXT"},
+        {"name": "collection_timestamp", "type": "INTEGER"}
+      ]
+    },
+    "dead_collections": {
+      "primaryKey": ["id"],
+      "columns": [
+        {"name": "id", "type": "TEXT"},
+        {"name": "name", "type": "TEXT"},
+        {"name": "description", "type": "TEXT"},
+        {"name": "tagsJson", "type": "TEXT"},
+        {"name": "showIdsJson", "type": "TEXT"},
+        {"name": "totalShows", "type": "INTEGER"},
+        {"name": "primaryTag", "type": "TEXT"},
+        {"name": "createdAt", "type": "INTEGER"},
+        {"name": "updatedAt", "type": "INTEGER"}
+      ]
+    },
+    "data_version": {
+      "primaryKey": ["id"],
+      "columns": [
+        {"name": "id", "type": "INTEGER"},
+        {"name": "dataVersion", "type": "TEXT"},
+        {"name": "packageName", "type": "TEXT"},
+        {"name": "versionType", "type": "TEXT"},
+        {"name": "description", "type": "TEXT"},
+        {"name": "importedAt", "type": "INTEGER"},
+        {"name": "gitCommit", "type": "TEXT"},
+        {"name": "gitTag", "type": "TEXT"},
+        {"name": "buildTimestamp", "type": "TEXT"},
+        {"name": "totalShows", "type": "INTEGER"},
+        {"name": "totalVenues", "type": "INTEGER"},
+        {"name": "totalFiles", "type": "INTEGER"},
+        {"name": "totalSizeBytes", "type": "INTEGER"}
+      ]
+    }
+  }
+}

@@ -14,7 +14,7 @@ protocol GitHubReleasesClient: Sendable {
 struct URLSessionGitHubReleasesClient: GitHubReleasesClient {
     /// Data version pinned at build time from data/version.
     /// Update this when bumping the data release.
-    static let dataVersion = "2.3.0"
+    static let dataVersion = "2.3.1"
 
     private static let releasesURL = URL(string: "https://api.github.com/repos/ds17f/deadly-monorepo/releases/tags/data-v\(dataVersion)")!
 

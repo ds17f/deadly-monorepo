@@ -3,7 +3,6 @@ package com.grateful.deadly.core.database.service
 import android.util.Log
 import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.dao.DataVersionDao
-import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowSearchDao
 import com.grateful.deadly.core.database.dao.RecordingDao
@@ -122,7 +121,6 @@ class DataImportService @Inject constructor(
     @AppDatabase private val showSearchDao: ShowSearchDao,
     @AppDatabase private val recordingDao: RecordingDao,
     @AppDatabase private val dataVersionDao: DataVersionDao,
-    @AppDatabase private val favoritesDao: FavoritesDao,
     private val collectionsImportService: CollectionsImportService
 ) {
     
@@ -152,17 +150,14 @@ class DataImportService @Inject constructor(
             
             progressCallback?.invoke(ImportProgress("READING_FILES", 0, showFiles.size + recordingFiles.size, "Preparing data files..."))
             
-            // Preserve favorite entries (CASCADE FK on shows would delete them)
-            val savedFavorites = favoritesDao.getAllFavoriteShows()
-            if (savedFavorites.isNotEmpty()) {
-                Log.i(TAG, "Preserving ${savedFavorites.size} favorite entries across re-import")
-            }
-
-            // Clear existing data
+            // Clear the childless catalog/derived tables only. `shows` is NOT deleted
+            // — it has CASCADE children holding user data (favorites, reviews, prefs,
+            // …); it is upserted below so those survive, and the denormalized favorite
+            // flags are reconciled at the end. See
+            // docs/adr/0009-non-destructive-catalog-refresh.md.
             progressCallback?.invoke(ImportProgress("CLEARING", 0, 0, "Clearing existing data..."))
             showSearchDao.clearAllSearchData()
             recordingDao.deleteAllRecordings()
-            showDao.deleteAll()
             dataVersionDao.deleteAll()
             
             var importedShows = 0
@@ -252,9 +247,12 @@ class DataImportService @Inject constructor(
                 Log.d(TAG, "Inserting show to database ${index + 1}/${showsMap.size}: ${showData.showId}")
                 
                 try {
-                    // Create ShowEntity from data
+                    // Create ShowEntity from data. Upsert (not insert) so an existing
+                    // row is updated in place rather than deleted+recreated — keeps
+                    // CASCADE children intact. isFavorite/favoritedAt this writes are
+                    // reconciled after the import.
                     val showEntity = createShowEntity(showData, recordingsMap)
-                    showDao.insert(showEntity)
+                    showDao.upsert(showEntity)
                     importedShows++
                     showDbSuccessCount++
                     
@@ -366,11 +364,9 @@ class DataImportService @Inject constructor(
                 )
             )
             
-            // Restore favorite entries that were preserved before clearing
-            if (savedFavorites.isNotEmpty()) {
-                favoritesDao.addMultipleToFavorites(savedFavorites)
-                Log.i(TAG, "Restored ${savedFavorites.size} favorite entries after re-import")
-            }
+            // Favorites (and other CASCADE children) were never deleted; re-derive the
+            // denormalized favorite flags on the freshly-upserted shows.
+            showDao.reconcileFavoriteFlags()
 
             progressCallback?.invoke(ImportProgress("COMPLETED", importedShows + importedRecordings, importedShows + importedRecordings, "Import completed successfully"))
 
@@ -546,71 +542,20 @@ class DataImportService @Inject constructor(
     }
     
     private fun createSearchEntity(showData: ShowImportData): ShowSearchEntity {
-        // Combine all searchable text for FTS
-        val searchableText = buildList {
-            // Enhanced date indexing for comprehensive search support
-            add(showData.date) // Original: "1977-05-08"
-            
-            // Parse date components for alternative formats
-            val dateParts = showData.date.split("-")
-            val year = dateParts[0]      // "1977"
-            val month = dateParts[1]     // "05"
-            val day = dateParts[2]       // "08"
-            
-            // Core date components
-            add(year)                    // "1977"
-            add(year.takeLast(2))        // "77"
+        // Combine all searchable text for FTS. Shared with the prebuilt-seed
+        // import path (SeedDatabaseImportService) so search text is identical
+        // regardless of source — see ShowSearchText.
+        val searchableText = ShowSearchText.build(
+            date = showData.date,
+            venue = showData.venue,
+            locationRaw = showData.locationRaw,
+            memberListCsv = extractMemberListFromLineup(showData.lineup),
+            songListCsv = extractSongListFromSetlist(showData.setlist),
+            sourceTypeKeys = showData.sourceTypes.keys,
+            avgRating = showData.avgRating,
+            totalReviews = showData.totalHighRatings + showData.totalLowRatings
+        )
 
-            // Original delimiters you were using: -, /, now adding .
-            val delimiters = listOf("-", "/", ".")
-
-            // Day / month / year formats
-            delimiters.forEach { delim ->
-                add("${month.toInt()}$delim${day.toInt()}$delim${year.takeLast(2)}")  // 5-8-77, 5/8/77, 5.8.77
-                add("${month}$delim${day}$delim${year}")                               // 05-08-1977, 05/08/1977, 05.08.1977
-                add("${year}$delim${month.toInt()}$delim${day.toInt()}")               // 1977-5-8, 1977/5/8, 1977.5.8
-            }
-
-            // Month / year formats
-            delimiters.forEach { delim ->
-                add("${month.toInt()}$delim${year.takeLast(2)}")  // 5-77, 5/77, 5.77
-                add("${year}$delim${month}")                      // 1977-05, 1977/05, 1977.05
-                add("${year}$delim${month.toInt()}")             // 1977-5, 1977/5, 1977.5
-                add("${year.takeLast(2)}$delim${month.toInt()}") // 77-5, 77/5, 77.5
-            }
-
-            // Century prefix for decade searches
-            add(year.take(3))            // "197" (enables 1970s searches)
-            
-            // Venue information
-            add(showData.venue)
-            
-            // Consolidated location (avoid redundancy)
-            showData.locationRaw?.let { add(it) } // Single location field: "Ithaca, NY"
-            
-            // Band member names (no instruments - reduces noise)
-            val memberList = extractMemberListFromLineup(showData.lineup)
-            if (!memberList.isNullOrBlank()) {
-                add(memberList.replace(",", " ")) // "Jerry Garcia Bob Weir Phil Lesh"
-            }
-            
-            // Song list for setlist searches
-            val songList = extractSongListFromSetlist(showData.setlist)
-            if (!songList.isNullOrBlank()) {
-                add(songList.replace(",", " ")) // "Scarlet Begonias Fire On The Mountain"
-            }
-
-            // Source type tags
-            if (showData.sourceTypes.containsKey("SBD")) add("soundboard sbd")
-            if (showData.sourceTypes.containsKey("AUD")) add("audience aud")
-            if (showData.sourceTypes.containsKey("MATRIX")) add("matrix")
-
-            // Quality/popularity tags
-            val totalReviews = showData.totalHighRatings + showData.totalLowRatings
-            if (showData.avgRating >= 4.0 && totalReviews >= 10) add("top-rated")
-            if (totalReviews >= 50) add("popular")
-        }.joinToString(" ")
-        
         return ShowSearchEntity(rowid = 0, showId = showData.showId, searchText = searchableText)
     }
     

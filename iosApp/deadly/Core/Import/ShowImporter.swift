@@ -61,69 +61,24 @@ struct ShowImporter {
 
     // MARK: - Search text construction
 
+    /// Delegates to the shared `ShowSearchText` builder so the JSON import and the
+    /// prebuilt-seed import (`SeedImportService`) index identical text. The seed
+    /// path has only the stored `songList`/`memberList` CSVs, so both paths feed
+    /// the builder CSV inputs.
     static func buildSearchText(from data: ShowImportData) -> String {
-        var parts: [String] = []
-
-        // Date variations
-        let dateParts = data.date.split(separator: "-").map(String.init)
-        guard dateParts.count == 3 else {
-            return data.date
-        }
-        let yearStr = dateParts[0]
-        let monthStr = dateParts[1]
-        let dayStr = dateParts[2]
-        let monthInt = Int(monthStr) ?? 0
-        let dayInt = Int(dayStr) ?? 0
-        let yearShort = String(yearStr.suffix(2))
-        let yearPrefix = String(yearStr.prefix(3))
-
-        parts.append(data.date)          // "1977-05-08"
-        parts.append(yearStr)            // "1977"
-        parts.append(yearShort)          // "77"
-        parts.append(yearPrefix)         // "197"
-
-        let delimiters = ["-", "/", "."]
-
-        // Day/month/year formats
-        for d in delimiters {
-            parts.append("\(monthInt)\(d)\(dayInt)\(d)\(yearShort)")   // 5-8-77
-            parts.append("\(monthStr)\(d)\(dayStr)\(d)\(yearStr)")     // 05-08-1977
-            parts.append("\(yearStr)\(d)\(monthInt)\(d)\(dayInt)")     // 1977-5-8
-        }
-
-        // Month/year formats
-        for d in delimiters {
-            parts.append("\(monthInt)\(d)\(yearShort)")   // 5-77
-            parts.append("\(yearStr)\(d)\(monthStr)")     // 1977-05
-            parts.append("\(yearStr)\(d)\(monthInt)")     // 1977-5
-            parts.append("\(yearShort)\(d)\(monthInt)")   // 77-5
-        }
-
-        // Location
-        parts.append(data.venue)
-        if let loc = data.locationRaw { parts.append(loc) }
-
-        // Members (space-separated names)
-        if let members = extractMemberList(from: data.lineup) {
-            parts.append(members.replacingOccurrences(of: ",", with: " "))
-        }
-
-        // Songs (space-separated)
-        if let songs = data.setlist.flatMap({ $0.extractSongList() }) {
-            parts.append(songs.joined(separator: " "))
-        }
-
-        // Source type tags
-        if data.sourceTypes.keys.contains("SBD") { parts.append("soundboard sbd") }
-        if data.sourceTypes.keys.contains("AUD") { parts.append("audience aud") }
-        if data.sourceTypes.keys.contains("MATRIX") { parts.append("matrix") }
-
-        // Quality tags
-        let totalReviews = data.totalHighRatings + data.totalLowRatings
-        if data.avgRating >= 4.0 && totalReviews >= 10 { parts.append("top-rated") }
-        if totalReviews >= 50 { parts.append("popular") }
-
-        return parts.joined(separator: " ")
+        let songListCsv = data.setlist
+            .flatMap { $0.extractSongList() }
+            .map { $0.joined(separator: ",") }
+        return ShowSearchText.build(
+            date: data.date,
+            venue: data.venue,
+            locationRaw: data.locationRaw,
+            memberListCsv: extractMemberList(from: data.lineup),
+            songListCsv: songListCsv,
+            sourceTypeKeys: Set(data.sourceTypes.keys),
+            avgRating: data.avgRating,
+            totalReviews: data.totalHighRatings + data.totalLowRatings
+        )
     }
 
     // MARK: - Private helpers

@@ -96,11 +96,18 @@ struct deadlyApp: App {
                         .environment(\.appContainer, container)
                 }
                 .task {
-                    // Show the import screen if the DB has no data yet.
-                    let hasData = ((try? container.database.read { db in
-                        try Int.fetchOne(db, sql: "SELECT COUNT(*) FROM data_version") ?? 0
-                    }) ?? 0) > 0
-                    if !hasData {
+                    // Show the import screen if the DB has no data yet, or its data
+                    // version is behind what this build requires (a data-version
+                    // bump). The refresh is non-destructive per ADR-0009. Mirrors
+                    // Android DatabaseManager; same staleness check the import re-runs.
+                    let currentVersion = (try? container.database.read { db in
+                        try String.fetchOne(db, sql: "SELECT dataVersion FROM data_version WHERE id = 1")
+                    }) ?? nil
+                    let needsImport = DataImportService.isDataVersionStale(
+                        currentVersion,
+                        required: container.dataImportService.requiredDataVersion
+                    )
+                    if needsImport {
                         showingImport = true
                     } else {
                         // Populate source type badge service from database
