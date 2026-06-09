@@ -4,6 +4,7 @@ import android.util.Log
 import com.grateful.deadly.core.api.home.PopularContent
 import com.grateful.deadly.core.api.home.PopularService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.service.DatabaseManager
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -12,6 +13,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -32,6 +34,7 @@ import javax.inject.Singleton
 class PopularServiceImpl @Inject constructor(
     private val appPreferences: AppPreferences,
     private val showRepository: ShowRepository,
+    private val databaseManager: DatabaseManager,
 ) : PopularService {
 
     companion object {
@@ -50,6 +53,18 @@ class PopularServiceImpl @Inject constructor(
                 delay(REFRESH_INTERVAL_MS)
             }
         }
+        // Re-fetch when the first-launch catalog import completes — the init
+        // refresh above races the import and resolves IDs against an empty
+        // catalog, leaving Fan Favorites blank until restart. See
+        // TrendingServiceImpl for the full rationale.
+        scope.launch {
+            databaseManager.progress
+                .filter { it.phase == "COMPLETED" }
+                .collect {
+                    Log.d(TAG, "Catalog import completed → refresh popular")
+                    refresh()
+                }
+        }
     }
 
     override suspend fun refresh(): Result<Unit> = withContext(Dispatchers.IO) {
@@ -62,6 +77,12 @@ class PopularServiceImpl @Inject constructor(
             val ids90 = extractIds(decades.optJSONArray("90s"))
             val unionIds = (ids60 + ids70 + ids80 + ids90).distinct()
             val byId = showRepository.getShowsByIds(unionIds).associateBy { it.id }
+            // First-launch race guard: IDs returned but none resolve means the
+            // catalog isn't populated yet — keep previous content (see Trending).
+            if (unionIds.isNotEmpty() && byId.isEmpty()) {
+                Log.d(TAG, "Popular IDs unresolved (catalog not ready) — keeping previous content")
+                return@runCatching
+            }
             _popular.value = PopularContent(
                 pool60 = ids60.mapNotNull { byId[it] },
                 pool70 = ids70.mapNotNull { byId[it] },

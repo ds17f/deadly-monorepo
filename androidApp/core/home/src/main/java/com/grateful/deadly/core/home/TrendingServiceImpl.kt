@@ -4,6 +4,7 @@ import android.util.Log
 import com.grateful.deadly.core.api.home.TrendingContent
 import com.grateful.deadly.core.api.home.TrendingService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.service.DatabaseManager
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.Show
 import kotlinx.coroutines.CoroutineScope
@@ -14,6 +15,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -32,6 +34,7 @@ import javax.inject.Singleton
 class TrendingServiceImpl @Inject constructor(
     private val appPreferences: AppPreferences,
     private val showRepository: ShowRepository,
+    private val databaseManager: DatabaseManager,
 ) : TrendingService {
 
     companion object {
@@ -57,6 +60,20 @@ class TrendingServiceImpl @Inject constructor(
                 .drop(1)
                 .collect { refresh() }
         }
+        // Re-fetch when the first-launch catalog import completes. On a fresh
+        // install the init refresh above races the import: the API call
+        // succeeds but the returned show IDs resolve against an empty catalog,
+        // so without this the rail stays blank until the next 10-min tick or a
+        // cold restart. Observing the import-complete signal repaints it as
+        // soon as the catalog is queryable.
+        scope.launch {
+            databaseManager.progress
+                .filter { it.phase == "COMPLETED" }
+                .collect {
+                    Log.d(TAG, "Catalog import completed → refresh trending")
+                    refresh()
+                }
+        }
     }
 
     override suspend fun refresh(): Result<Unit> = withContext(Dispatchers.IO) {
@@ -73,6 +90,14 @@ class TrendingServiceImpl @Inject constructor(
             // we reorder each window list ourselves.
             val unique = (nowIds + weekIds + monthIds + allIds).toSet().toList()
             val shows = showRepository.getShowsByIds(unique).associateBy { it.id }
+
+            // Guard the first-launch race: if the API returned IDs but none
+            // resolve, the catalog isn't populated yet. Keep the previous
+            // content instead of caching an empty rail until the next tick.
+            if (unique.isNotEmpty() && shows.isEmpty()) {
+                Log.d(TAG, "Trending IDs unresolved (catalog not ready) — keeping previous content")
+                return@runCatching
+            }
 
             _trending.value = TrendingContent(
                 now = nowIds.mapNotNull { shows[it] },

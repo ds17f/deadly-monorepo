@@ -89,6 +89,13 @@ struct deadlyApp: App {
                             ShowArtworkService.shared.populate(sourceTypes)
                         }
                         await container.homeService.refresh()
+                        // Re-fetch the API rails now that the catalog is
+                        // populated. HomeScreen's .task already fired during
+                        // import and resolved the trending/popular show IDs
+                        // against an empty catalog; without these the rails stay
+                        // blank until a cold relaunch.
+                        await container.trendingService.refresh()
+                        await container.popularService.refresh()
                         await container.playbackRestorationService.restoreIfAvailable()
                     }
                 }) {
