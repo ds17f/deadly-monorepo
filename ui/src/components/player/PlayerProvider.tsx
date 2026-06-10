@@ -12,6 +12,7 @@ import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
 
+const AUTO_ADVANCE_DELAY_MS = 15_000; // ADR-0010 chunk 2: end-of-show countdown
 const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
 const GAPLESS_PRELOAD_THRESHOLD = 2; // seconds before end to start preloading
@@ -78,6 +79,11 @@ export default function PlayerProvider({
   // Connect hydration so we resume at the server's interpolated position.
   const pendingSeekMsRef = useRef<number | null>(null);
   const sendCommandRef = useRef(sendCommand);
+  // ADR-0010 chunk 2: pending end-of-show auto-advance. Held in refs so the
+  // (non-React) audio `ended` handler can trigger the latest coordinator and so
+  // the countdown can be canceled by any subsequent play.
+  const autoAdvanceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const onShowCompleteRef = useRef<((completedShowId: string) => void) | null>(null);
   const reportVolumeRef = useRef(reportVolume);
   const isActiveDeviceRef = useRef(false);
   const isRemoteControllingRef = useRef(false);
@@ -288,6 +294,8 @@ export default function PlayerProvider({
           // generic stop. The advance coordinator will hang off this point.
           const completedShowId = activeShowRef.current?.showId ?? "";
           console.info(`🏁 [SHOW-COMPLETE] onShowCompleted(showId=${completedShowId})`);
+          // ADR-0010 chunk 2: drive chronological auto-advance off this signal.
+          if (completedShowId) onShowCompleteRef.current?.(completedShowId);
           // Last track finished on its own — no track change will drive the
           // playback_end, so emit the completed end here.
           const c = committedPlaybackRef.current;
@@ -837,6 +845,13 @@ export default function PlayerProvider({
 
   const playShow = useCallback(
     async (show: ViewedShow) => {
+      // A manual play cancels any pending auto-advance countdown. (When the
+      // countdown timer itself fires it nulls the ref before calling, so this
+      // is a no-op in that path.)
+      if (autoAdvanceTimerRef.current) {
+        clearTimeout(autoAdvanceTimerRef.current);
+        autoAdvanceTimerRef.current = null;
+      }
       nextPlaybackSourceRef.current = "browse";
       setActiveShow(show);
       // Remember the cover so a page refresh (which rehydrates from the
@@ -870,6 +885,65 @@ export default function PlayerProvider({
     },
     [playRecording, sendCommand]
   );
+
+  // ADR-0010 chunk 2: chronological auto-advance. Driven solely by the end-of-show
+  // signal (the `ended` last-track branch); reads no transport state to decide.
+  // Park → countdown → playShow(next), whose output (local audio + sendLoad) is
+  // identical to a user tap, so remote Connect clients follow for free.
+  const onShowComplete = useCallback(
+    async (completedShowId: string) => {
+      // 1. Park: stop the server believing we're playing so it can't drag us
+      //    back during the countdown. No-op when not in a Connect session.
+      sendCommandRef.current("stop");
+
+      // 2. Resolve the next chronological show. The browser has no catalog
+      //    (shows are static SSG), so ask the API, which holds it in memory.
+      let next: {
+        showId: string;
+        date: string | null;
+        venue: string | null;
+        city: string | null;
+        state: string | null;
+        bestRecordingId: string | null;
+        image: string | null;
+      };
+      try {
+        const res = await fetch(`/api/shows/${encodeURIComponent(completedShowId)}/next`);
+        if (!res.ok) {
+          console.info("[auto-advance] no next show after", completedShowId);
+          return;
+        }
+        next = await res.json();
+      } catch {
+        return;
+      }
+      const viewed: ViewedShow = {
+        showId: next.showId,
+        recordings: [],
+        bestRecordingId: next.bestRecordingId,
+        date: next.date ?? "",
+        venue: next.venue ?? "",
+        location: [next.city, next.state].filter(Boolean).join(", "),
+        image: next.image,
+        review: null,
+      };
+
+      // 3. Cancelable countdown, then advance (== a user tap; remotes follow
+      //    via the sendLoad inside playShow).
+      if (autoAdvanceTimerRef.current) clearTimeout(autoAdvanceTimerRef.current);
+      console.info(`[auto-advance] next in ${AUTO_ADVANCE_DELAY_MS / 1000}s → ${viewed.showId}`);
+      autoAdvanceTimerRef.current = setTimeout(() => {
+        autoAdvanceTimerRef.current = null;
+        console.info(`[auto-advance] advancing → ${viewed.showId}`);
+        playShow(viewed);
+      }, AUTO_ADVANCE_DELAY_MS);
+    },
+    [playShow]
+  );
+
+  useEffect(() => {
+    onShowCompleteRef.current = onShowComplete;
+  }, [onShowComplete]);
 
   // Play a show then jump to a specific track once its tracks load. Matches by
   // title first (the stable identity of a favorite song), then by track number.
