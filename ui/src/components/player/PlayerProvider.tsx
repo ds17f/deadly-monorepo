@@ -281,6 +281,13 @@ export default function PlayerProvider({
           sendCommandRef.current("next");
         } else {
           setStatus("paused");
+          // ADR-0010 Chunk 1: the final track finished on its own — the positive
+          // "show completed" signal. `ended` only fires on natural EOF (a user
+          // stop/pause doesn't fire it; load errors go to the "error" listener),
+          // and this is the last-track branch — so this is end-of-show, not a
+          // generic stop. The advance coordinator will hang off this point.
+          const completedShowId = activeShowRef.current?.showId ?? "";
+          console.info(`🏁 [SHOW-COMPLETE] onShowCompleted(showId=${completedShowId})`);
           // Last track finished on its own — no track change will drive the
           // playback_end, so emit the completed end here.
           const c = committedPlaybackRef.current;
