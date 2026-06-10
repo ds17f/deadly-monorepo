@@ -1,11 +1,15 @@
 # Changelog
 
+## [2.36.1] - 2026-06-09
+
+### Bug Fixes
+* populate cold-start rails on first launch (#58) (684657ff)
+
+
 ## [2.36.0] - 2026-06-09
 
 ### New Features
 * track engagement funnel + per-notification admin stats (#57) (d35d5a6a)
-
-
 ## [2.34.0] - 2026-06-08
 
 ### New Features
