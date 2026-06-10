@@ -57,25 +57,37 @@ two-state dormant/active queue. There is no "enter the queue" mode to learn.
   and entries are **swipe-removable**.
 - An **empty queue is the normal resting state**, not an error.
 
-### 2. Auto-advance is gated and cancelable
+### 2. End-of-show behavior is user-configurable
 
-When the current show ends **and** the queue is non-empty:
+A show ending is **one event handled several ways**, controlled by a
+**Settings → "When a show ends"** section (this is the ROADMAP §1 bullet-2
+autoplay setting, defined here rather than deferred). Two independent
+dimensions:
 
-- A **cancelable countdown** ("N seconds until next show… [Cancel]") precedes
-  advancing. Cancel stops playback and leaves the queue intact.
-- Advancing pops the head of the queue and makes it current.
-- Auto-advance is **gated by the autoplay setting** (ROADMAP §1 bullet 2):
-  - **Autoplay OFF** → end of show stops; the queue stays populated; the user
-    taps the next show manually. The queue is a pure "what's next" list.
-  - **Autoplay ON** → countdown → auto-advance.
+**Auto-advance source** — where the next show comes from:
+- **Off** → playback stops at end of show; the queue stays populated and the
+  user taps the next show manually. The queue is a pure "what's next" list.
+- **Queue only** → advance through the queue; stop when the queue is empty.
+- **Queue, then history** → advance through the queue; when the queue is
+  **empty**, roll to the **next show chronologically** (later date), reusing the
+  existing `PlaylistService.navigateToNextShow()`. This makes the queue an
+  override that, once exhausted, falls back to date order.
 
-The queue's data model is identical under both settings — the setting only
-controls whether end-of-show advances automatically. Building the queue now
-therefore does **not** pre-spend bullet 2; it leaves a clean switch for it.
+**Advance timing** — how the transition happens (applies whenever an
+auto-advance fires, queue or history):
+- **15s countdown** → a **cancelable** countdown ("N seconds until next show…
+  [Cancel]") precedes advancing. Cancel stops playback and leaves the queue
+  intact.
+- **Immediate** → advance with no countdown.
 
-Auto-advancing between whole shows (2+ hours) is a much larger event than the
-next-track autoplay users expect, which is exactly why it is gated **and**
-softened by the countdown.
+Advancing from the queue pops its head and makes it current. The queue's data
+model is identical under every setting — these only control *whether* and *how*
+an end-of-show event advances.
+
+**Default: "Queue, then history" + 15s countdown** — the most discoverable
+behavior, softened against the surprise of a 2+ hour show silently rolling into
+another (far larger than the next-track autoplay users are used to). Persisted
+in `AppPreferences` (Android) / the equivalent settings store (iOS).
 
 ### 3. Queue entry shape
 
