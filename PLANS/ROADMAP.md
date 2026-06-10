@@ -59,9 +59,25 @@ web-launch threads, 2026-06).
 ### 1. Playback queue + autoplay + shuffle (community's top ask)
 The loudest, most-aligned cluster of requests, all client-side (no backend),
 and the just-rebuilt Connect-v2 player surfaces are the right foundation.
-- **Queue of shows** — a transient "play next" list, separate from Favorites
-  (which never clear and pollute Fan-Favorites stats). Shows leave the queue
-  once played; can be reordered. *(OP idea #1.)*
+- **Queue of shows** — a persistent, reorderable "play next" list of whole
+  shows, separate from Favorites (which never clear and pollute Fan-Favorites
+  stats). **Unified model** (Apple Music "Playing Next", not a dormant/active
+  queue): the current show is a separate pointer, the queue holds *upcoming*
+  shows only, and playing any show makes it current and pops it from the queue.
+  "Add to Queue" appends to the bottom; entries reorder and swipe-remove; an
+  empty queue is the normal resting state. End-of-show **auto-advance is gated
+  by the autoplay setting** (next bullet) and softened by a **cancelable
+  countdown** ("N seconds until next show… [Cancel]"). Play-now that interrupts
+  a show in progress **replaces** by default, with a **non-blocking "Queue A"
+  snackbar** that re-queues the interrupted show at the head *with a resume
+  snapshot* (there is no per-show resume — see ADR). Backed by a **local,
+  unsynced `play_queue` table**; queue entries are `showId` + optional
+  `recordingId` (recommended if null) + optional resume pointer. UI lives as a
+  **third Favorites segment (Shows · Songs · Queue)** plus a **Queue button on
+  the player** (distinct from the existing within-show track sheet). Shows-only;
+  track/playlist queuing deferred to §8. Decisions in **ADR-0010**
+  ([`docs/adr/0010-show-queue.md`](../docs/adr/0010-show-queue.md)). *(OP idea
+  #1; MazelTov countdown; MuffDiving.)*
 - **Autoplay / Go-to-next-show** — when a show ends, roll into the next. A
   user-proposed setting shape: `OFF` / `ON (queues + collections only)` /
   `ON (individual shows, queues, collections)`. *(OP idea #3; MazelTov.)*
