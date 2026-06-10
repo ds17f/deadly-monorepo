@@ -56,17 +56,25 @@ web-launch threads, 2026-06).
 
 ## What remains
 
-### 1. Playback queue + autoplay + shuffle (community's top ask)
-The loudest, most-aligned cluster of requests, all client-side (no backend),
-and the just-rebuilt Connect-v2 player surfaces are the right foundation.
-- **Queue of shows** — a transient "play next" list, separate from Favorites
+### 1. Playback auto-advance + show queue + shuffle (community's top ask)
+The loudest, most-aligned cluster of requests. **Now in build (v2 design):**
+[`docs/adr/0010-playback-auto-advance-and-show-queue.md`](../docs/adr/0010-playback-auto-advance-and-show-queue.md),
+plan [`show-queue-v2.md`](show-queue-v2.md), branch `show-queue-v2`. A first
+attempt (abandoned `show-queue` branch) entangled the queue with auto-advance
+and fought Connect-v2's transport authority — the v2 design fixes that by making
+advance an independent coordinator off a positive `onShowCompleted` event,
+keeping the queue local-first (synced like Favorites), and adding one
+informational Connect "park" primitive. Built chunk-by-chunk, proven on all
+three platforms.
+- **Auto-advance / Go-to-next-show** — the foundational, highest-risk piece;
+  built first (chronological, then queue-fed). *(OP idea #3; MazelTov.)*
+- **Queue of shows** — a local-first "play next" list, separate from Favorites
   (which never clear and pollute Fan-Favorites stats). Shows leave the queue
-  once played; can be reordered. *(OP idea #1.)*
-- **Autoplay / Go-to-next-show** — when a show ends, roll into the next. A
-  user-proposed setting shape: `OFF` / `ON (queues + collections only)` /
-  `ON (individual shows, queues, collections)`. *(OP idea #3; MazelTov.)*
+  once played; reorderable; syncs as a whole-list snapshot when signed in
+  (absorbs the old `show-queue-sync` effort). *(OP idea #1.)*
 - **Shuffle** — both *tracks* and *shows*, with the ability to curate which
-  collections feed the shuffle pool. *(MuffDiving — "greedy, I want both".)*
+  collections feed the shuffle pool. Layers on the queue. *(MuffDiving — "greedy,
+  I want both".)*
 
 ### 2. Connect-v2 — finish the remaining edges
 MVP shipped (see Shipped). Open:
