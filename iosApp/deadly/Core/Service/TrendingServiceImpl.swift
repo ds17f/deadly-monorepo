@@ -38,6 +38,13 @@ final class TrendingServiceImpl: TrendingService {
                 uniqueKeysWithValues: try showRepository.getShowsByIds(unique).map { ($0.id, $0) }
             )
 
+            // First-launch race guard: if the API returned IDs but none resolve,
+            // the catalog isn't populated yet. Keep previous content instead of
+            // overwriting with an empty rail.
+            if !unique.isEmpty && byId.isEmpty {
+                return
+            }
+
             content = TrendingContent(
                 now: nowIds.compactMap { byId[$0] },
                 week: weekIds.compactMap { byId[$0] },

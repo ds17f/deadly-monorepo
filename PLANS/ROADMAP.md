@@ -3,7 +3,9 @@
 The single source of active work. Replaces the per-epic plans
 (`mobile-server-sync`, `web-profile`, `web-spotify-shell`,
 `home-discovery-rails`, `DEAD-335-followups`, `DEAD-119`) — all either
-shipped or folded into "What remains" below.
+shipped or folded into "What remains" below. Community feedback that informs
+this list comes from r/thedeadlyapp (the "what should I build next" and
+web-launch threads, 2026-06).
 
 ## Shipped (the foundation — don't re-plan it)
 
@@ -21,91 +23,136 @@ shipped or folded into "What remains" below.
 - **Web analytics + discovery.** Web listens feed Trending; Fan Favorites and
   Today-in-GD-History rails.
 - **Reactive favorites UI (both platforms).** The favorites screen observes the
-  local DB — shows *and* songs via Room `Flow` on Android (now at parity with
+  local DB — shows *and* songs via Room `Flow` on Android (at parity with
   iOS GRDB `ValueObservation`, `b5decdb7`) — so a change pulled from another
-  device repaints live instead of going stale. Vestigial imperative
-  song-refresh removed from `FavoritesViewModel`.
+  device repaints live instead of going stale.
+- **Connect-v2 (cross-device playback) — MVP shipped.** Spotify-Connect-style
+  control: see what's playing elsewhere, transfer playback, live
+  position/transport over WebSocket. API + web client (#50), iOS (#51),
+  Android + restart/transfer resilience (#52), plus external media-control
+  forwarding and background keepalive (#53, #54). Live in **iOS 2.33 /
+  Android 2.32**. `ConnectState` carries transport only; display metadata is
+  client-resolved. Decisions in **ADR-0006**; spec in
+  `docs/connect-v2-architecture.md`; strategy/status in
+  [`PLANS/connect-v2-port.md`](connect-v2-port.md). **Remaining edges** moved to
+  "What remains" §2.
+- **Faster first launch (prebuilt catalog DB) — shipped.** First launch now
+  bulk-copies a prebuilt SQLite catalog seed (`d8442651`) instead of importing
+  ~20k JSON files; FTS rebuilt on-device; fixes Android's silent false-complete
+  on kill mid-import. Data pinned to 2.4.0 (`fb90535d`). Decisions in
+  **ADR-0007**; details in [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md).
+- **Admin → user messaging + notifications.** In-app inbox (v1 + v2, #55),
+  engagement funnel + per-notification admin stats (#57), admin dashboard
+  Versions panel (#56). New `track()` events must be registered in
+  `EVENT_SCHEMAS` (`api/src/db/analytics.ts`) or they're dropped.
+- **Cold-start home rails populate on first launch — fixed (both platforms).**
+  Trending and Fan Favorites no longer stay blank until restart on a fresh
+  install. Both rail services now re-`refresh()` when the first-launch catalog
+  import completes (Android observes `DatabaseManager.progress` →
+  `phase = "COMPLETED"`; iOS re-fetches after import from `deadlyApp`), and a
+  guard keeps prior content instead of caching an empty rail when API IDs
+  resolve against a not-yet-populated catalog. Verified on remote simulator +
+  emulator (2026-06-09).
 
 ## What remains
 
-### 1. Sync hardening (mobile)
-Favorites are now observation-driven on both platforms (see Shipped). Remaining:
-- **Extend observation to recents / reviews / position** on both platforms — the
-  favorites path is the proven pattern; recents/reviews surfaces aren't wired
-  the same way yet. (Position is slated for Connect-v2 §2, not REST observation.)
-- **Android Auto browse tree** (`BrowseTreeProvider`) still reads favorite songs
-  one-shot; invalidate via `notifyChildrenChanged` when sync-apply writes, if the
-  staleness there proves noticeable.
-- **Extract favorite-songs off `ReviewService`** onto `FavoritesService` (both
-  platforms) — legacy mis-placement with call-site churn. File a Linear
-  tech-debt ticket.
+### 1. Playback queue + autoplay + shuffle (community's top ask)
+The loudest, most-aligned cluster of requests, all client-side (no backend),
+and the just-rebuilt Connect-v2 player surfaces are the right foundation.
+- **Queue of shows** — a transient "play next" list, separate from Favorites
+  (which never clear and pollute Fan-Favorites stats). Shows leave the queue
+  once played; can be reordered. *(OP idea #1.)*
+- **Autoplay / Go-to-next-show** — when a show ends, roll into the next. A
+  user-proposed setting shape: `OFF` / `ON (queues + collections only)` /
+  `ON (individual shows, queues, collections)`. *(OP idea #3; MazelTov.)*
+- **Shuffle** — both *tracks* and *shows*, with the ability to curate which
+  collections feed the shuffle pool. *(MuffDiving — "greedy, I want both".)*
 
-### 2. Connect-v2 / real-time (the next backbone)
-Spotify-Connect-style cross-device control: see what's playing elsewhere,
-transfer playback, live position/transport over WebSocket. This is the correct
-home for **playback-position sync** (deliberately cut from REST) and the
-**presence layer** the social "hear" feature depends on.
-- **Layered re-integration** (no rebase — PR #48 rewrote the player surfaces the
-  branch built on), using `connect-v2` as reference. **API (Layer 1) + web
-  client (Layer 2) shipped in PR #50; iOS (Layer 3) merged in PR #51; Android
-  (Layer 4) in PR #52** (`connect-v2-android`). #52 also hardens the shared
-  protocol so a session survives a **server restart** and a **device transfer**
-  on all clients, via an explicit `epoch` (boot id) that replaces the implicit
-  null-active / empty-tracks heuristics — verified on a Pixel 6 + device iOS.
-  Full strategy + status in [`PLANS/connect-v2-port.md`](connect-v2-port.md);
-  the epoch decision is in
-  [`PLANS/connect-v2-android-debugging.md`](connect-v2-android-debugging.md).
-  Decisions recorded in **ADR-0006** (`docs/adr/0006-connect-v2.md`); the
-  detailed spec (`docs/connect-v2-architecture.md`) is amended to match the
-  shipped system.
-- **Display metadata is client-resolved**, not server state: `ConnectState`
-  carries live transport only (ids/index/position/playing/active); each client
-  derives title/duration/date/venue from the show it already loads. A
-  server-side track cache was tried and reverted. Android must follow this.
-- **Revisit the state model with web as a first-class participant** — a browser
-  tab is now a controller/target, which changes device identity and presence.
-- **Pre-ship rule (mobile):** the social protocol is **not** pre-designed as a
-  gate (decided 2026-06-06) — presence is mostly server-side already and will be
-  added *additively + version-gated* later. The standing rule that does survive:
-  once shipped, **never change/retype/remove an existing wire field — only add**;
-  and numeric wire fields must be **64-bit safe** (`version`/`epoch` are ms — a
-  32-bit `Int` silently drops the whole state on Kotlin). See
-  [`PLANS/connect-v2-port.md`](connect-v2-port.md) "Ship checklist".
+### 2. Connect-v2 — finish the remaining edges
+MVP shipped (see Shipped). Open:
+- **Web as a first-class controllable target ("remote").** A browser tab is now
+  a controller/target — control the web player from the phone. In flight,
+  promised publicly. Current constraint: the controlling app can't be
+  backgrounded (phone must be on/unlocked); lock-screen persistence was
+  deferred. Revisit device identity + presence with web as a participant.
+- **Downstream once solid:** Alexa and Sonos apps that the phone can drive.
 
-### 3. Web profile — social (`/me` 1b)
+### 3. Source / recording picker (power-user delight, unblocked)
+Surface *which* recording is playing and let users see and switch sources
+easily — Matrix vs SBD vs AUD, label Charlie Miller boards, etc. *(ebash42.)*
+Schema supports it: many recordings *per* show is fine (the deferred PK limit is
+the reverse — one recording → two shows). This is a UI problem: where to put the
+source selector on the show/now-playing surface.
+
+### 4. "Hot track" highlights on the mobile setlist
+Flag standout tracks (e.g. 🔥) on the setlist / now-playing screen, derived from
+review sentiment. *(MazelTov.)* **The data already exists** — the web shows it
+from the AI reviews in `stage00`. Cheap to surface on the *setlist*; the caveat
+is the recording-track vs setlist-song mapping ("Tuning" et al. don't map to a
+played song), so do it on the setlist where the mapping is clean.
+
+### 5. Web profile — social (`/me` 1b)
 Friends graph + listening-privacy controls. No backend yet — its own design +
-API effort.
-- **"See" before "hear":** seeing a friend's activity ships on plain
-  request/response and comes first; live "what they're playing right now" is
-  presence and depends on Connect-v2 (§2).
+API effort. Now fully unblocked: the presence layer that "hear" depends on
+shipped with Connect-v2 (§ Shipped).
+- **"See" before "hear":** seeing a friend's recents / reviews / favorites ships
+  on plain request/response and comes first.
+- **Listening Parties** (one DJ, friends listen along) ride directly on
+  Connect-v2 presence/transport — the natural follow-on once friends exist.
+- **Custom user collections** (build, then share by link, ultimately "publish"
+  into the system) are the bridge between §1 and social — shareable curation is
+  the on-ramp to the friends graph. *(OP idea #2; GrrGrrBear.)*
 
-### 4. Web shell — tail-end cleanup
+### 6. Tablet + landscape layouts (responsive native)
+iPad and Android-tablet layouts plus a proper **landscape** layout so the apps
+look right rotated, instead of stretched phone UI. Two parallel efforts (SwiftUI
+size classes / Android window-size classes), same design problem — a
+wider/master-detail layout echoing the web shell's rail+content. Has user pull
+(Used_Bandicoot asked for iPad/native clients) on top of being a maintainer
+priority. The big polish track; run it alongside the cheap wins in §1/§3, ahead
+of the §5 social backbone.
+
+### 7. Sync hardening (mobile)
+Favorites are observation-driven on both platforms. Remaining:
+- **Extend observation to recents / reviews / position** — the favorites path is
+  the proven pattern; those surfaces aren't wired the same way yet. (Position is
+  Connect-v2 territory.)
+- **Android Auto browse tree** (`BrowseTreeProvider`) still reads favorite songs
+  one-shot; invalidate via `notifyChildrenChanged` on sync-apply if staleness is
+  noticeable.
+- **Extract favorite-songs off `ReviewService`** onto `FavoritesService` (both
+  platforms) — legacy mis-placement. File a Linear tech-debt ticket.
+
+### 8. Smaller asks / integrations (backlog)
+- **Reviews published to Archive.org** — if the user links their archive.org
+  account, post their review there too. *(OP idea #5.)* External write.
+- **In-app feature request system** — replace the Reddit thread with an in-app
+  channel. *(OP idea #7.)* Partial infra exists from the admin→user inbox
+  (#55/#57); this is the reverse (user→admin) direction.
+- **headyversion.com integration** — show each song's headyversion score, sort
+  by it, and a "best version of each song" playlist. *(ItsMichaelRay.)* External
+  data import.
+- **Track-level playlists** — put individual songs into a playlist (e.g.
+  reconstruct an unreleased album from live tracks). *(ItsMichaelRay.)* Bumps the
+  track≠setlist and one-recording-one-show limitations (§Deferred).
+- **Native desktop / iPad clients** — partially covered today by the PWA and
+  iOS-app-on-Mac. *(Used_Bandicoot.)* Low priority vs §6.
+
+### 9. Known bug — Google sign-in
+At least one user (GrrGrrBear) can't complete Google login; OP suspects an
+**international** issue. Needs reproduction + a ticket — not a feature, but it
+blocks onboarding for affected users.
+
+### 10. Web shell — tail-end cleanup
 - **Collections** (parked): box-set-icon card + `/collections/<id>` detail
-  surface, then flip `COLLECTIONS_ENABLED` in `HomeDiscovery.tsx`.
-- **Retire the `/me` tab strip — blocked, deferred.** It looks superseded by the
-  shell, but the audit found it's still the *only* nav path to two things:
-  **Settings on desktop** (`UserMenu` links `/me` but not `/me/settings`, and
-  `LibraryRail` only covers Recent/Reviews/Favorites) and **Recent + Reviews on
-  mobile** (`MobileTabBar` is Home/Favorites/Settings only; the rail is
-  `lg:hidden`). To retire it: add a Settings entry to `UserMenu` for the desktop
-  gap, surface Recent/Reviews in mobile nav (a "Library" view or extra tabs),
-  *then* drop the strip. Until that nav exists, leave it in place.
-- **Done:** `/mockup` prototype route group removed (`3bfdc8f2`).
-
-### 5. Faster first launch (prebuilt catalog DB)
-First launch downloads a 25 MB `data.zip` and imports ~20k JSON files on-device
-(minutes on venue cell). Replace it with a **prebuilt SQLite catalog seed**
-built in CI (~2.2 MB gzip), bulk-copied into each app's DB (sub-second), FTS
-rebuilt on-device. Also fixes Android's silent false-complete on kill
-mid-import.
-- Decisions in **ADR-0007** (`docs/adr/0007-prebuilt-catalog-db.md`); phased
-  plan + findings + schema contract in
-  [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md).
-- Order: pipeline producer (build + publish `catalog.db.zip`) → Android consumer
-  → iOS consumer → `data.zip` fallback both.
-- **Progress:** ✅ Phase 1 (pipeline) done (not yet tagged/published) · 🟡 Phase 2
-  (Android consumer + JSON fallback) code-complete, pending local build + device
-  run · ⬜ Phase 3/4 (iOS) not started.
+  surface, then flip `COLLECTIONS_ENABLED` in `HomeDiscovery.tsx`. (Distinct
+  from the *user-built* custom collections in §5.)
+- **Retire the `/me` tab strip — blocked, deferred.** Still the only nav path to
+  **Settings on desktop** (`UserMenu` lacks `/me/settings`; `LibraryRail` covers
+  only Recent/Reviews/Favorites) and **Recent + Reviews on mobile**
+  (`MobileTabBar` is Home/Favorites/Settings; the rail is `lg:hidden`). To
+  retire: add Settings to `UserMenu`, surface Recent/Reviews in mobile nav, then
+  drop the strip. Until that nav exists, leave it.
 
 ## Deferred / explicit non-goals (sync v0)
 Cross-device deletion **tombstones**, **settings sync**, and **background sync**
@@ -120,3 +167,6 @@ composite-PK / `recording_shows` join-table fix is a coordinated iOS+Android+see
 migration for a small edge case — deferred. Why + path in
 [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md) "Known limitations";
 decision in ADR-0007 §9.
+
+**Out of scope entirely:** additional bands / non-Grateful-Dead content. The
+Deadly is bounded by what's in the Grateful Dead's Internet Archive collection.

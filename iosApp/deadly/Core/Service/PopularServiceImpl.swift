@@ -36,6 +36,11 @@ final class PopularServiceImpl: PopularService {
             let byId: [String: Show] = Dictionary(
                 uniqueKeysWithValues: try showRepository.getShowsByIds(Array(allIds)).map { ($0.id, $0) }
             )
+            // First-launch race guard: IDs returned but none resolve means the
+            // catalog isn't populated yet — keep previous content (see Trending).
+            if !allIds.isEmpty && byId.isEmpty {
+                return
+            }
             content = PopularContent(
                 pool60: payload.decades.s60.compactMap { byId[$0.show_id] },
                 pool70: payload.decades.s70.compactMap { byId[$0.show_id] },
