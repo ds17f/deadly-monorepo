@@ -26,6 +26,7 @@ final class AppContainer {
     let panelContentService: PanelContentService
     let networkMonitor: NetworkMonitor
     let recentShowsService: RecentShowsServiceImpl
+    let playQueueService: PlayQueueService
     let miniPlayerService: MiniPlayerServiceImpl
     let archiveClient: URLSessionArchiveMetadataClient
     let downloadService: DownloadServiceImpl
@@ -203,6 +204,11 @@ final class AppContainer {
                 return svc
             }
             recentShowsService = recentService
+
+            // PlayQueueService — persistent show queue (ADR-0010). @MainActor.
+            playQueueService = MainActor.assumeIsolated {
+                PlayQueueService(dao: PlayQueueDAO(database: db), showRepository: showRepo)
+            }
 
             // One-time startup backfill: push all local data (favorites +
             // top recents) so a freshly-synced web profile isn't empty.

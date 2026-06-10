@@ -146,7 +146,25 @@ struct AppDatabase: @unchecked Sendable {
         migrator.registerMigration("v14-favorite-songs-natural-key") { db in
             try AppDatabase.relaxFavoriteSongsNaturalKey(db)
         }
+        migrator.registerMigration("v15-play-queue") { db in
+            try AppDatabase.createPlayQueueTable(db)
+        }
         try migrator.migrate(dbWriter)
+    }
+
+    /// Persistent show queue (ADR-0010). Local-only, never synced. Ordered by
+    /// `position` ascending (head = MIN).
+    private static func createPlayQueueTable(_ db: Database) throws {
+        try db.create(table: "play_queue", ifNotExists: true) { t in
+            t.autoIncrementedPrimaryKey("id")
+            t.column("showId", .text).notNull()
+            t.column("recordingId", .text)
+            t.column("position", .integer).notNull()
+            t.column("resumeTrackIndex", .integer)
+            t.column("resumePositionMs", .integer)
+            t.column("addedAt", .integer).notNull()
+        }
+        try db.create(index: "idx_play_queue_position", on: "play_queue", columns: ["position"], ifNotExists: true)
     }
 
     /// Outbox of pending server pushes. One row per (kind, refId) — re-enqueue

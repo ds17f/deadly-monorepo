@@ -87,14 +87,16 @@ struct FavoritesScreen: View {
         VStack(spacing: 0) {
             filterChips
             tabPicker
-            sortAndDisplayControls
-                .padding(.bottom, 8)
+            if selectedTab != .queue {
+                sortAndDisplayControls
+                    .padding(.bottom, 8)
+            }
             Divider()
 
-            if selectedTab == .shows {
-                showsContent
-            } else {
-                songsContent
+            switch selectedTab {
+            case .shows: showsContent
+            case .songs: songsContent
+            case .queue: queueContent
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -281,6 +283,77 @@ struct FavoritesScreen: View {
             let idx = track.trackNumber.map { max(0, $0 - 1) } ?? 0
             container.playlistService.playTrack(at: idx, source: "library_favorites")
             container.playlistService.recordRecentPlay()
+            showFullPlayer = true
+        }
+    }
+
+    // MARK: - Queue content (ADR-0010)
+
+    @ViewBuilder
+    private var queueContent: some View {
+        let items = container.playQueueService.items
+        if items.isEmpty {
+            ContentUnavailableView(
+                "Queue is Empty",
+                systemImage: "list.number",
+                description: Text("Add shows to the queue from a show's menu. They play in order, and each leaves the queue once it plays.")
+            )
+        } else {
+            VStack(spacing: 0) {
+                HStack {
+                    Text("\(items.count) show\(items.count == 1 ? "" : "s") up next")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                    Button("Clear") { container.playQueueService.clear() }
+                        .font(.caption)
+                    EditButton()
+                        .font(.caption)
+                }
+                .padding(.horizontal, DeadlySpacing.screenPadding)
+                .padding(.vertical, 4)
+
+                List {
+                    ForEach(items) { item in
+                        ShowRowView(show: item.show)
+                            .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                                Button { playFromQueue(item) } label: {
+                                    Label("Play", systemImage: "play.fill")
+                                }
+                                .tint(.green)
+                            }
+                            .swipeActions(edge: .trailing) {
+                                Button(role: .destructive) {
+                                    container.playQueueService.remove(id: item.id)
+                                } label: {
+                                    Label("Remove", systemImage: "trash")
+                                }
+                            }
+                    }
+                    .onMove { from, to in
+                        container.playQueueService.move(from: from, to: to)
+                    }
+                    .onDelete { indexSet in
+                        for index in indexSet { container.playQueueService.remove(id: items[index].id) }
+                    }
+                }
+                .listStyle(.plain)
+            }
+        }
+    }
+
+    /// Play a queued show now and pop it off the queue (head becomes current).
+    private func playFromQueue(_ item: QueuedShowItem) {
+        Task {
+            await container.playlistService.loadShow(item.show.id)
+            if let rid = item.recordingId,
+               let rec = try? container.showRepository.getRecordingById(rid) {
+                await container.playlistService.selectRecording(rec)
+            }
+            let idx = item.resumeTrackIndex ?? 0
+            container.playlistService.playTrack(at: idx, source: "queue")
+            container.playlistService.recordRecentPlay()
+            container.playQueueService.remove(id: item.id)
             showFullPlayer = true
         }
     }
@@ -568,6 +641,13 @@ struct FavoritesScreen: View {
             shareChooserShow = favoriteShow
         } label: {
             Label("Share", systemImage: "square.and.arrow.up")
+        }
+
+        // Add to Queue (ADR-0010)
+        Button {
+            container.playQueueService.enqueue(showId: showId)
+        } label: {
+            Label("Add to Queue", systemImage: "text.append")
         }
 
         Divider()
