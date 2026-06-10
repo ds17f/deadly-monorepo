@@ -80,6 +80,38 @@ Genuinely good, framework-level pieces (re-introduce in Chunk 3+):
 Leave behind: the advance coordinator's transport-state interrogation, the
 Connect guards, the end-of-show settings matrix, the interrupt snackbar.
 
+## Gotcha: wipe stale DB on devices that ran the abandoned branch
+The old `show-queue` branch bumped the schema (Android Room **v26** +
+`MIGRATION_25_26`; iOS GRDB `v15-play-queue`). `show-queue-v2` is off `main`, so
+its schema is **lower** — a device still holding the v26 DB crashes on launch
+(`IllegalStateException: A migration from 26 to 25 was required but not found`;
+Room can't downgrade). Fix: clear app data —
+`adb shell pm clear com.grateful.deadly.debug` (Android) / delete+reinstall the
+iOS app — before installing a `show-queue-v2` build on such a device.
+
 ## Status
-2026-06-10: **Design accepted (ADR-0010), branch created, no code yet.** Next:
-Chunk 1 — `onShowCompleted` detection across the three platforms.
+2026-06-10: **Chunk 1 (`onShowCompleted` detection) — code complete, proven on
+web + Android; iOS verification in progress.**
+- **Web ✓** — `🏁 SHOW-COMPLETE` fires on natural end-of-show, silent on
+  pause/stop/skip (browser console; needs a hard-refresh past the PWA service
+  worker after each redeploy).
+- **Android ✓** — fires on `READY → ENDED`; silent on pause, stop (`→ IDLE`),
+  show-switch, and **force-quit + cold relaunch** (the `hasPlayedThisSession`
+  guard — the exact false-positive the old build tripped on).
+- **iOS ✓** — verified in Console.app (`PlaylistService` category): fires on
+  natural end-of-show, silent on the negatives.
+
+**Chunk 1 COMPLETE on all three platforms.** Next: Chunk 2 — chronological
+auto-advance + the Connect "park" primitive (verify the original
+Android-under-Connect bug is dead).
+
+### Known pre-existing bug to fix *during* Chunk 2 (not a Chunk 1 regression)
+iOS miniplayer play/pause icon **sometimes** sticks on "play" after
+`ended → tap a song in the same show` — the full-player button + track highlight
+stay correct. Both icons read `service.isPlaying` (= `playbackState == .playing`,
+false during `.buffering`); the miniplayer-only divergence is a SwiftUI
+re-render timing gap in `MiniPlayerOverlay` as the engine settles
+`buffering → playing`. Fix in Chunk 2 by driving the icon off **play-intent**
+(`StreamPlayer.onPlayIntentChange`, true through buffering) rather than the
+knife-edge `.playing` state — Chunk 2 reworks this exact `ended → play next`
+transition anyway.
