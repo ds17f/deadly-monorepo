@@ -117,15 +117,22 @@ resolved via new **`GET /api/shows/:id/next`** + `getNextShow()` in
 `api/src/showCatalog.ts` (the browser has no catalog — shows are static SSG and
 the search index lacks recording ids).
 
-Remaining in Chunk 2:
+**Chunk 2 — iOS DONE + device-verified (`77a3def6`).** Advances on its own and
+follows/leads under Connect. `playShow` = loadShow + playTrack(0); coordinator
+`AutoAdvanceCoordinator` (@MainActor @Observable) wired in AppContainer; park via
+the existing `ConnectService.sendStop()`; next-show via on-device
+`getNextShow(afterDate:)`.
+
+### ✅ Advance mechanism COMPLETE + verified on all three platforms (incl. multi-client Connect).
+Remaining in Chunk 2 (UX/polish — mechanism is done):
 1. Cancelable countdown **overlay UI** (advances silently after 15s today).
    - Also: during the countdown the active device is *parked*, so remotes render
      a bare parked scrubber and disagree on its position (Android remote → 0;
      iOS/web → held at end). Minor/cosmetic; likely resolved by giving remotes a
      proper "next show in Ns" display instead of the parked state.
-2. **iOS parity** (last platform; already consolidates play+Connect).
-3. The **"when a show ends" setting** (on/off, countdown/immediate).
-4. The **play/pause affordance fix** (iOS miniplayer icon + Android restore).
+2. The **"when a show ends" setting** (on/off, countdown/immediate) — needed
+   before shipping (auto-advance is hardcoded ON today).
+3. The **play/pause affordance fix** (iOS miniplayer icon + Android restore).
 
 ### Known pre-existing bug to fix *during* Chunk 2 (not a Chunk 1 regression)
 iOS miniplayer play/pause icon **sometimes** sticks on "play" after
