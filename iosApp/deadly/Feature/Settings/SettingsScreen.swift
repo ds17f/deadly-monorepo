@@ -215,6 +215,56 @@ struct SettingsScreen: View {
 
             }
 
+            // MARK: - Playback (end-of-show / queue, ADR-0010)
+            Section("When a Show Ends") {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Auto-advance")
+                    Picker("Auto-advance", selection: Binding(
+                        get: { container.appPreferences.endOfShowMode },
+                        set: {
+                            container.appPreferences.endOfShowMode = $0
+                            container.analyticsService.track("feature_use", props: [
+                                "feature": "set_end_of_show_mode",
+                                "category": "preference",
+                                "value": $0,
+                            ])
+                        }
+                    )) {
+                        Text("Off").tag(AppPreferences.endOfShowOff)
+                        Text("Queue").tag(AppPreferences.endOfShowQueue)
+                        Text("Queue, then history").tag(AppPreferences.endOfShowQueueHistory)
+                    }
+                    .pickerStyle(.segmented)
+                    Text("When a show finishes: stop, play the next queued show, or — once the queue is empty — roll to the next show by date.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                }
+
+                if container.appPreferences.endOfShowMode != AppPreferences.endOfShowOff {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Timing")
+                        Picker("Timing", selection: Binding(
+                            get: { container.appPreferences.endOfShowImmediate },
+                            set: {
+                                container.appPreferences.endOfShowImmediate = $0
+                                container.analyticsService.track("feature_use", props: [
+                                    "feature": "set_end_of_show_timing",
+                                    "category": "preference",
+                                    "value": $0 ? "immediate" : "countdown",
+                                ])
+                            }
+                        )) {
+                            Text("15s countdown").tag(false)
+                            Text("Immediate").tag(true)
+                        }
+                        .pickerStyle(.segmented)
+                        Text("Wait with a cancelable 15-second countdown, or advance immediately.")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+
             // MARK: - Home Screen
             Section("Home Screen") {
                 VStack(alignment: .leading, spacing: 6) {

@@ -26,7 +26,8 @@ class AppViewModel @Inject constructor(
     private val lastPlayedTrackService: LastPlayedTrackService,
     private val showRepository: ShowRepository,
     private val favoritesService: FavoritesService,
-    private val appReviewManager: AppReviewManager
+    private val appReviewManager: AppReviewManager,
+    private val showQueueCoordinator: com.grateful.deadly.playback.ShowQueueCoordinator
 ) : ViewModel() {
 
     val isOffline: StateFlow<Boolean> = combine(
@@ -34,6 +35,13 @@ class AppViewModel @Inject constructor(
         appPreferences.forceOnline
     ) { online, forced -> !online && !forced }
         .stateIn(viewModelScope, SharingStarted.Eagerly, initialValue = false)
+
+    // ── Show queue auto-advance + interrupt (ADR-0010) ───────────────────
+    val queueCountdown = showQueueCoordinator.countdown
+    val queueInterrupt = showQueueCoordinator.interrupt
+    fun cancelQueueCountdown() = showQueueCoordinator.cancelCountdown()
+    fun requeueInterrupted() = showQueueCoordinator.requeueInterrupted()
+    fun dismissQueueInterrupt() = showQueueCoordinator.dismissInterrupt()
 
     init {
         lastPlayedTrackService.startMonitoring()

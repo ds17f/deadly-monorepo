@@ -25,6 +25,16 @@ final class PlaylistServiceImpl: PlaylistService {
     private let analyticsService: AnalyticsService?
     let streamPlayer: StreamPlayer
     var connectService: ConnectService?
+
+    /// Show queue (ADR-0010). Playing any show pops it from the queue; a show
+    /// ending consults the queue for auto-advance. Optional so tests can omit it.
+    private let playQueueService: PlayQueueService?
+    private let appPreferences: AppPreferences?
+    private let advanceCoordinator: PlaybackAdvanceCoordinator?
+
+    /// True while an end-of-show auto-advance is driving playback, so the
+    /// interrupt "Queue A" snackbar doesn't fire for the automatic transition.
+    private var isAutoAdvancing = false
     /// When true, playTrack() skips notifying Connect to avoid Connect→load→sendLoad loops.
     var suppressConnectNotify = false
 
@@ -95,7 +105,10 @@ final class PlaylistServiceImpl: PlaylistService {
         recordingPreferenceDAO: RecordingPreferenceDAO,
         streamPlayer: StreamPlayer,
         downloadService: DownloadService? = nil,
-        analyticsService: AnalyticsService? = nil
+        analyticsService: AnalyticsService? = nil,
+        playQueueService: PlayQueueService? = nil,
+        appPreferences: AppPreferences? = nil,
+        advanceCoordinator: PlaybackAdvanceCoordinator? = nil
     ) {
         self.showRepository = showRepository
         self.archiveClient = archiveClient
@@ -104,6 +117,9 @@ final class PlaylistServiceImpl: PlaylistService {
         self.streamPlayer = streamPlayer
         self.downloadService = downloadService
         self.analyticsService = analyticsService
+        self.playQueueService = playQueueService
+        self.appPreferences = appPreferences
+        self.advanceCoordinator = advanceCoordinator
 
         MainActor.assumeIsolated {
             self.startProgressObservation()
@@ -230,6 +246,14 @@ final class PlaylistServiceImpl: PlaylistService {
 
         nextPlaybackSource = source
 
+        // Playing a show makes it current and pops it from the upcoming queue
+        // (ADR-0010 §1). Restore (autoPlay=false) must not consume the queue.
+        if autoPlay {
+            if let showId = currentShow?.id { playQueueService?.remove(showId: showId) }
+            // A user-initiated play cancels any pending end-of-show countdown.
+            if !isAutoAdvancing { advanceCoordinator?.cancelCountdown() }
+        }
+
         // Remote-controlling another device: push intent to the active device and
         // never start local audio (otherwise the show plays on BOTH devices). Every
         // play entry point (track tap, play button, favorites, deeplink) routes
@@ -309,6 +333,12 @@ final class PlaylistServiceImpl: PlaylistService {
                 ]
             )
         }
+        // Interrupt handling (ADR-0010 §4): if a *different* show was playing and
+        // this is a user play-now (not auto-advance), offer a non-blocking "Queue
+        // A" snackbar to re-queue the interrupted show with a resume snapshot.
+        if autoPlay && !isAutoAdvancing {
+            captureInterruptIfNeeded(newShowId: showId)
+        }
         streamPlayer.loadQueue(trackItems, startingAt: index, autoPlay: autoPlay)
         startTrackObservation()
         // The observer will pick up the eventual settled track and fire
@@ -331,6 +361,84 @@ final class PlaylistServiceImpl: PlaylistService {
                 location: currentShow?.location.displayText,
                 autoplay: autoPlay
             )
+        }
+    }
+
+    // MARK: - Show queue: interrupt capture + auto-advance (ADR-0010)
+
+    /// If audio for a *different* show is currently playing, present the "Queue A"
+    /// snackbar so the user can re-queue the interrupted show (with a resume
+    /// snapshot of where they were). Reads the outgoing track from the player
+    /// before its queue is replaced.
+    private func captureInterruptIfNeeded(newShowId: String) {
+        guard let coordinator = advanceCoordinator else { return }
+        guard streamPlayer.playbackState.isActive else { return }
+        guard let outgoing = streamPlayer.currentTrack,
+              let oldShowId = outgoing.metadata["showId"],
+              !oldShowId.isEmpty, oldShowId != newShowId else { return }
+
+        let oldRecordingId = outgoing.metadata["recordingId"]
+        let oldTrackIndex = (outgoing.metadata["trackNumber"].flatMap { Int($0) }).map { $0 - 1 }
+        let positionMs = Int64(lastKnownProgress.currentTime * 1000)
+        let title = (try? showRepository.getShowById(oldShowId))
+            .map { "\($0.date)" } ?? "previous show"
+
+        coordinator.presentRequeue(.init(
+            showId: oldShowId,
+            showTitle: title,
+            recordingId: oldRecordingId,
+            resumeTrackIndex: oldTrackIndex,
+            resumePositionMs: positionMs > 0 ? positionMs : nil
+        ))
+    }
+
+    /// A show finished. Per the end-of-show preference, optionally advance to the
+    /// next show — either immediately or after a cancelable countdown.
+    private func handleShowEnded() {
+        guard let prefs = appPreferences else { return }
+        let mode = prefs.endOfShowMode
+        guard mode != AppPreferences.endOfShowOff else { return }
+
+        // Is there anything to advance to?
+        let nextQueued = playQueueService?.peekNext()
+        let hasHistory = mode == AppPreferences.endOfShowQueueHistory && hasNextShow
+        guard nextQueued != nil || hasHistory else { return }
+
+        if prefs.endOfShowImmediate {
+            advanceToNextShow()
+        } else {
+            let title = nextQueued?.show.date
+                ?? (try? showRepository.getNextShow(afterDate: currentShow?.date ?? ""))?.date
+            advanceCoordinator?.startCountdown(
+                seconds: AppPreferences.endOfShowCountdownSeconds,
+                nextTitle: title
+            ) { [weak self] in
+                self?.advanceToNextShow()
+            }
+        }
+    }
+
+    /// Pop the queue head (or roll to the next chronological show) and play it.
+    private func advanceToNextShow() {
+        isAutoAdvancing = true
+        Task { [weak self] in
+            guard let self else { return }
+            defer { self.isAutoAdvancing = false }
+            if let item = self.playQueueService?.popNext() {
+                await self.loadShow(item.show.id, recordingId: item.recordingId)
+                if let rid = item.recordingId,
+                   let rec = try? self.showRepository.getRecordingById(rid) {
+                    await self.selectRecording(rec)
+                }
+                let idx = item.resumeTrackIndex ?? 0
+                self.playTrack(at: idx, source: "auto_advance")
+                self.recordRecentPlay()
+            } else if self.appPreferences?.endOfShowMode == AppPreferences.endOfShowQueueHistory {
+                if await self.navigateToNextShow() {
+                    self.playTrack(at: 0, source: "auto_advance")
+                    self.recordRecentPlay()
+                }
+            }
         }
     }
 
@@ -563,6 +671,13 @@ final class PlaylistServiceImpl: PlaylistService {
                 }
                 if next.isPlaying && !self.isRestoring {
                     self.flushDeferredStart()
+                }
+
+                // End-of-show auto-advance (ADR-0010 §2). The within-show queue is
+                // a single show, so `.ended` = the show finished. Guard the
+                // transition so it fires once.
+                if next == .ended && prev != .ended {
+                    self.handleShowEnded()
                 }
             }
         }

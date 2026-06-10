@@ -47,6 +47,8 @@ dependencies {
     implementation(project(":core:design"))
     implementation(project(":core:api:home"))
     implementation(project(":core:home"))
+    implementation(project(":core:api:playqueue"))
+    implementation(project(":core:domain"))
     implementation(project(":core:database"))
     implementation(project(":core:model"))
     

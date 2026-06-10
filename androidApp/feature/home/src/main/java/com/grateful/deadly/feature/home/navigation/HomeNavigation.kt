@@ -22,6 +22,9 @@ fun NavGraphBuilder.homeGraph(navController: NavController) {
             },
             onNavigateToCollection = { collectionId ->
                 navController.navigate("collection/$collectionId")
+            },
+            onPlayShow = { showId ->
+                navController.navigate("playlist/$showId?autoPlay=true")
             }
         )
     }

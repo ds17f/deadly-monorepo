@@ -7,6 +7,79 @@ extension View {
             .overlay(alignment: .bottom) {
                 MiniPlayerOverlay(service: miniPlayerService, showFullPlayer: showFullPlayer)
             }
+            .overlay(alignment: .bottom) {
+                // End-of-show countdown + "Queue A" snackbar (ADR-0010), floated
+                // just above the mini player bar.
+                QueueAdvanceOverlay()
+                    .padding(.bottom, miniPlayerService.isVisible ? 84 : 4)
+            }
+    }
+}
+
+/// Bottom-floating banner for end-of-show auto-advance: a cancelable countdown
+/// and the interrupt "Queue A" snackbar (ADR-0010).
+struct QueueAdvanceOverlay: View {
+    @Environment(\.appContainer) private var container
+
+    var body: some View {
+        let coordinator = container.playbackAdvanceCoordinator
+        VStack(spacing: 8) {
+            if let remaining = coordinator.countdownRemaining {
+                banner {
+                    HStack(spacing: 12) {
+                        Image(systemName: "forward.fill").font(.subheadline)
+                        VStack(alignment: .leading, spacing: 1) {
+                            Text("Next show in \(remaining)s")
+                                .font(.subheadline).fontWeight(.semibold)
+                            if let title = coordinator.countdownNextTitle {
+                                Text(title).font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                            }
+                        }
+                        Spacer()
+                        Button("Cancel") { coordinator.cancelCountdown() }
+                            .font(.subheadline.weight(.semibold))
+                            .buttonStyle(.plain)
+                            .foregroundStyle(DeadlyColors.primary)
+                    }
+                }
+            }
+            if let payload = coordinator.pendingRequeue {
+                banner {
+                    HStack(spacing: 12) {
+                        Image(systemName: "play.fill").font(.subheadline)
+                        Text("Now playing").font(.subheadline).fontWeight(.semibold)
+                        Spacer()
+                        Button("Queue \(payload.showTitle)") {
+                            container.playQueueService.enqueueNext(
+                                showId: payload.showId,
+                                recordingId: payload.recordingId,
+                                resumeTrackIndex: payload.resumeTrackIndex,
+                                resumePositionMs: payload.resumePositionMs
+                            )
+                            coordinator.dismissRequeue()
+                        }
+                        .font(.subheadline.weight(.semibold))
+                        .buttonStyle(.plain)
+                        .foregroundStyle(DeadlyColors.primary)
+                        .lineLimit(1)
+                    }
+                }
+            }
+        }
+        .padding(.horizontal, 12)
+        .animation(.spring(response: 0.35), value: coordinator.countdownRemaining)
+        .animation(.spring(response: 0.35), value: coordinator.pendingRequeue)
+    }
+
+    @ViewBuilder
+    private func banner<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        content()
+            .padding(.horizontal, 14)
+            .padding(.vertical, 10)
+            .background(Color(.secondarySystemBackground))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .shadow(color: .black.opacity(0.18), radius: 8, y: 2)
+            .transition(.move(edge: .bottom).combined(with: .opacity))
     }
 }
 

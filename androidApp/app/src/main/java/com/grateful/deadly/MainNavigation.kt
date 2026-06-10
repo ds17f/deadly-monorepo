@@ -23,6 +23,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.zIndex
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
@@ -277,6 +278,16 @@ fun MainNavigation(
         snackbarHostState = snackbarHostState
     ) { paddingValues ->
         Box(modifier = Modifier.fillMaxSize()) {
+            // End-of-show countdown + "Queue A" interrupt snackbar (ADR-0010),
+            // floated at the bottom above the mini player.
+            ShowQueueAdvanceOverlay(
+                appViewModel = appViewModel,
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(paddingValues)
+                    .padding(horizontal = 12.dp, vertical = 8.dp)
+                    .zIndex(1f)
+            )
             NavHost(
                 navController = navController,
                 startDestination = "splash",
@@ -308,6 +319,11 @@ fun MainNavigation(
                     onNavigateBack = { navController.popBackStack() },
                     onNavigateToPlaylist = { showId, recordingId ->
                         navController.navigateToPlaylist(showId, recordingId) {
+                            popUpTo("player") { inclusive = true }
+                        }
+                    },
+                    onPlayShow = { showId ->
+                        navController.navigateToPlaylist(showId, autoPlay = true) {
                             popUpTo("player") { inclusive = true }
                         }
                     }
@@ -683,6 +699,85 @@ private fun DeepLinkActionSheet(
             }
 
             Spacer(modifier = Modifier.height(16.dp))
+        }
+    }
+}
+
+/**
+ * Bottom-floating banner for end-of-show auto-advance: a cancelable countdown
+ * and the interrupt "Queue A" snackbar (ADR-0010).
+ */
+@Composable
+private fun ShowQueueAdvanceOverlay(
+    appViewModel: AppViewModel,
+    modifier: Modifier = Modifier,
+) {
+    val countdown by appViewModel.queueCountdown.collectAsState()
+    val interrupt by appViewModel.queueInterrupt.collectAsState()
+
+    Column(
+        modifier = modifier,
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        countdown?.let { state ->
+            Surface(
+                tonalElevation = 6.dp,
+                shadowElevation = 6.dp,
+                shape = RoundedCornerShape(12.dp),
+                color = MaterialTheme.colorScheme.surfaceVariant,
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 14.dp, vertical = 10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            "Next show in ${state.remaining}s",
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.SemiBold,
+                        )
+                        state.nextLabel?.let {
+                            Text(
+                                it,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                maxLines = 1,
+                            )
+                        }
+                    }
+                    TextButton(onClick = { appViewModel.cancelQueueCountdown() }) {
+                        Text("Cancel")
+                    }
+                }
+            }
+        }
+
+        interrupt?.let { info ->
+            Surface(
+                tonalElevation = 6.dp,
+                shadowElevation = 6.dp,
+                shape = RoundedCornerShape(12.dp),
+                color = MaterialTheme.colorScheme.surfaceVariant,
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 14.dp, vertical = 10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        "Now playing",
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier.weight(1f),
+                    )
+                    TextButton(onClick = { appViewModel.requeueInterrupted() }) {
+                        Text("Queue ${info.label}", maxLines = 1)
+                    }
+                }
+            }
         }
     }
 }

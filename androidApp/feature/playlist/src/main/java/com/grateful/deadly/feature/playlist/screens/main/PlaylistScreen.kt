@@ -314,6 +314,7 @@ fun PlaylistScreen(
                 onShareClick = { showShareChooser = true },
                 onChooseRecordingClick = viewModel::chooseRecording,
                 onEqualizerClick = { showEqualizerSheet = true },
+                onAddToQueueClick = { viewModel.addToQueue() },
                 onDismiss = viewModel::hideMenu
             )
         }

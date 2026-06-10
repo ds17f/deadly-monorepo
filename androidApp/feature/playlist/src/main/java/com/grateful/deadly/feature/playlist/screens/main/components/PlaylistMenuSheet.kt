@@ -27,6 +27,7 @@ fun PlaylistMenuSheet(
     onShareClick: () -> Unit,
     onChooseRecordingClick: () -> Unit,
     onEqualizerClick: () -> Unit,
+    onAddToQueueClick: () -> Unit = {},
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -127,6 +128,29 @@ fun PlaylistMenuSheet(
                 Spacer(modifier = Modifier.width(16.dp))
                 Text(
                     text = "Collections",
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+
+            // Add to Queue option (ADR-0010)
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        onAddToQueueClick()
+                        onDismiss()
+                    }
+                    .padding(vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = IconResources.Content.PlaylistAdd(),
+                    contentDescription = "Add to Queue",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(16.dp))
+                Text(
+                    text = "Add to Queue",
                     style = MaterialTheme.typography.bodyLarge
                 )
             }

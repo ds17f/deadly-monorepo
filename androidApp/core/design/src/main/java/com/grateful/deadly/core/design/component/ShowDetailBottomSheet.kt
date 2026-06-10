@@ -18,7 +18,8 @@ fun ShowDetailBottomSheet(
     venue: String,
     location: String,
     rating: String?,
-    onDismiss: () -> Unit
+    onDismiss: () -> Unit,
+    onAddToQueue: (() -> Unit)? = null
 ) {
     ModalBottomSheet(onDismissRequest = onDismiss) {
         Column(
@@ -54,6 +55,16 @@ fun ShowDetailBottomSheet(
                     fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.secondary
                 )
+            }
+
+            if (onAddToQueue != null) {
+                Spacer(modifier = Modifier.height(16.dp))
+                FilledTonalButton(
+                    onClick = onAddToQueue,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("Add to Queue")
+                }
             }
 
             Spacer(modifier = Modifier.height(24.dp))

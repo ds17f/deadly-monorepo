@@ -27,6 +27,7 @@ final class AppContainer {
     let networkMonitor: NetworkMonitor
     let recentShowsService: RecentShowsServiceImpl
     let playQueueService: PlayQueueService
+    let playbackAdvanceCoordinator: PlaybackAdvanceCoordinator
     let miniPlayerService: MiniPlayerServiceImpl
     let archiveClient: URLSessionArchiveMetadataClient
     let downloadService: DownloadServiceImpl
@@ -209,6 +210,7 @@ final class AppContainer {
             playQueueService = MainActor.assumeIsolated {
                 PlayQueueService(dao: PlayQueueDAO(database: db), showRepository: showRepo)
             }
+            playbackAdvanceCoordinator = MainActor.assumeIsolated { PlaybackAdvanceCoordinator() }
 
             // One-time startup backfill: push all local data (favorites +
             // top recents) so a freshly-synced web profile isn't empty.
@@ -269,7 +271,10 @@ final class AppContainer {
                 recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
                 streamPlayer: player,
                 downloadService: downloadSvc,
-                analyticsService: analytics
+                analyticsService: analytics,
+                playQueueService: playQueueService,
+                appPreferences: prefs,
+                advanceCoordinator: playbackAdvanceCoordinator
             )
             playlistService = playlistSvc
 

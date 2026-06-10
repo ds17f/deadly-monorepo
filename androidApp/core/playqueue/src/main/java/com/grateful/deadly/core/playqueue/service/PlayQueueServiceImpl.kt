@@ -54,6 +54,8 @@ class PlayQueueServiceImpl @Inject constructor(
 
     override suspend fun remove(id: Long) = dao.deleteById(id)
 
+    override suspend fun removeByShowId(showId: String) = dao.deleteByShowId(showId)
+
     override suspend fun move(fromIndex: Int, toIndex: Int) {
         val ids = dao.getQueue().map { it.id }.toMutableList()
         if (fromIndex !in ids.indices) return

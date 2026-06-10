@@ -41,6 +41,11 @@ interface PlayQueueDao {
     @Query("DELETE FROM play_queue WHERE id = :id")
     suspend fun deleteById(id: Long)
 
+    /** Remove all entries for a show. Used when a show becomes current — playing
+     *  any show pops it from the upcoming queue (ADR-0010 §1). */
+    @Query("DELETE FROM play_queue WHERE showId = :showId")
+    suspend fun deleteByShowId(showId: String)
+
     @Query("DELETE FROM play_queue")
     suspend fun clear()
 

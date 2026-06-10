@@ -439,6 +439,13 @@ struct ShowDetailScreen: View {
                     }
 
                     Button {
+                        container.playQueueService.enqueue(showId: currentShowId)
+                        showMenuSheet = false
+                    } label: {
+                        Label("Add to Queue", systemImage: "text.append")
+                    }
+
+                    Button {
                         showMenuSheet = false
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                             showSetlistSheet = true

@@ -41,7 +41,8 @@ sealed interface ReviewsState {
 class SearchViewModel @Inject constructor(
     private val searchService: SearchService,
     private val favoritesService: FavoritesService,
-    private val archiveService: ArchiveService
+    private val archiveService: ArchiveService,
+    private val playQueueService: com.grateful.deadly.core.api.playqueue.PlayQueueService
 ) : ViewModel() {
     
     companion object {
@@ -271,6 +272,11 @@ class SearchViewModel @Inject constructor(
     }
 
     fun isShowFavorite(showId: String): StateFlow<Boolean> = favoritesService.isShowFavorite(showId)
+
+    /** Append a show to the play queue ("Add to Queue", ADR-0010). */
+    fun addToQueue(showId: String) {
+        viewModelScope.launch { playQueueService.enqueue(showId) }
+    }
 
     // Reviews state
     private val _reviewsState = MutableStateFlow<ReviewsState>(ReviewsState.Idle)

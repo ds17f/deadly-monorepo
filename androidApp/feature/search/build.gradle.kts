@@ -46,6 +46,7 @@ dependencies {
     // V2 dependencies
     implementation(project(":core:api:search"))
     implementation(project(":core:api:favorites"))
+    implementation(project(":core:api:playqueue"))
     implementation(project(":core:search"))
     implementation(project(":core:model"))
     implementation(project(":core:design"))

@@ -16,6 +16,7 @@ import com.grateful.deadly.feature.home.screens.main.components.CollectionItemTy
 import com.grateful.deadly.feature.home.screens.main.components.RecentShowsGrid
 import com.grateful.deadly.feature.home.screens.main.components.FanFavoritesSection
 import com.grateful.deadly.feature.home.screens.main.components.TrendingNowSection
+import com.grateful.deadly.feature.home.screens.main.components.QueueUpNextSection
 
 /**
  * HomeScreen - Rich home interface with content discovery
@@ -34,9 +35,11 @@ fun HomeScreen(
     onNavigateToShow: (String) -> Unit,
     onNavigateToSearch: () -> Unit,
     onNavigateToCollection: (String) -> Unit,
+    onPlayShow: (String) -> Unit = {},
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val queueShows by viewModel.queueShows.collectAsState()
     var detailShow by remember { mutableStateOf<Show?>(null) }
 
     detailShow?.let { show ->
@@ -45,7 +48,11 @@ fun HomeScreen(
             venue = show.venue.name,
             location = show.location.displayText,
             rating = if (show.hasRating) show.displayRating else null,
-            onDismiss = { detailShow = null }
+            onDismiss = { detailShow = null },
+            onAddToQueue = {
+                viewModel.addToQueue(show.id)
+                detailShow = null
+            }
         )
     }
 
@@ -54,6 +61,17 @@ fun HomeScreen(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(24.dp)
     ) {
+        // Up Next — the show queue, head leftmost (ADR-0010). Hidden when empty.
+        if (queueShows.isNotEmpty()) {
+            item {
+                QueueUpNextSection(
+                    shows = queueShows,
+                    onPlayShow = onPlayShow,
+                    onShowLongPress = { show -> detailShow = show },
+                )
+            }
+        }
+
         // Recent Shows Grid Section - only show if there are recent shows
         if (uiState.homeContent.recentShows.isNotEmpty()) {
             item {

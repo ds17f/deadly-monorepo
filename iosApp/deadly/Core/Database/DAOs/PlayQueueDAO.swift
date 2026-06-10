@@ -64,6 +64,14 @@ struct PlayQueueDAO: Sendable {
         }
     }
 
+    /// Remove every queued entry for a show. Used when a show becomes current
+    /// (playing any show pops it from the upcoming queue — ADR-0010 §1).
+    func deleteByShowId(_ showId: String) throws {
+        _ = try database.write { db in
+            try PlayQueueRecord.filter(Column("showId") == showId).deleteAll(db)
+        }
+    }
+
     /// Remove and return the head (end-of-show auto-advance).
     func popHead() throws -> PlayQueueRecord? {
         try database.write { db in

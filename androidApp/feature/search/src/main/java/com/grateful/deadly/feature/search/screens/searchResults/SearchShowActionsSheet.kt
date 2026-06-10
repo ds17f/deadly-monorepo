@@ -18,7 +18,8 @@ fun SearchShowActionsSheet(
     viewModel: SearchViewModel,
     onDismiss: () -> Unit,
     onFavoriteToggled: (added: Boolean) -> Unit,
-    onSeeReviews: () -> Unit = {}
+    onSeeReviews: () -> Unit = {},
+    onAddToQueue: () -> Unit = {}
 ) {
     val show = searchResult.show
     val isFavorite by viewModel.isShowFavorite(show.id).collectAsState()
@@ -79,6 +80,18 @@ fun SearchShowActionsSheet(
                     }
                 )
             }
+
+            // Add to Queue (ADR-0010)
+            ListItem(
+                headlineContent = { Text("Add to Queue") },
+                leadingContent = {
+                    Icon(
+                        painter = IconResources.Content.PlaylistAdd(),
+                        contentDescription = null
+                    )
+                },
+                modifier = Modifier.clickable { onAddToQueue() }
+            )
 
             // See Reviews (only if recording exists)
             if (show.bestRecordingId != null) {

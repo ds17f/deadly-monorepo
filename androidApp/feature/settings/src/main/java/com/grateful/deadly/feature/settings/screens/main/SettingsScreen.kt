@@ -37,6 +37,8 @@ fun SettingsScreen(
     val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
+    val endOfShowMode by viewModel.endOfShowMode.collectAsState()
+    val endOfShowImmediate by viewModel.endOfShowImmediate.collectAsState()
     val homeTrendingWindow by viewModel.homeTrendingWindow.collectAsState()
     val homeTrendingAboveToday by viewModel.homeTrendingAboveToday.collectAsState()
     val homeTrendingIncludeAnniversaries by viewModel.homeTrendingIncludeAnniversaries.collectAsState()
@@ -150,6 +152,27 @@ fun SettingsScreen(
                 currentStyle = PlayerControlsStyle.fromString(playerControlsStyle),
                 onStyleSelected = { viewModel.setPlayerControlsStyle(it.name) }
             )
+        }
+
+        item { HorizontalDivider() }
+
+        // ── WHEN A SHOW ENDS (show queue, ADR-0010) ──────────────────
+        item { SectionHeader("When a Show Ends") }
+
+        item {
+            EndOfShowModeRow(
+                currentMode = endOfShowMode,
+                onSelected = { viewModel.setEndOfShowMode(it) }
+            )
+        }
+
+        if (endOfShowMode != "off") {
+            item {
+                EndOfShowTimingRow(
+                    immediate = endOfShowImmediate,
+                    onSelected = { viewModel.setEndOfShowImmediate(it) }
+                )
+            }
         }
 
         item { HorizontalDivider() }
@@ -658,6 +681,76 @@ private fun PlayerControlsStyleRow(
                     )
                 ) {
                     Text(style.label)
+                }
+            }
+        }
+    }
+}
+
+// ── End-of-show behavior selectors (show queue, ADR-0010) ─────────────────────
+
+@Composable
+private fun EndOfShowModeRow(
+    currentMode: String,
+    onSelected: (String) -> Unit
+) {
+    val options = listOf(
+        "off" to "Off",
+        "queue" to "Queue",
+        "queue_history" to "Queue, then history",
+    )
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Auto-advance", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "When a show finishes: stop, play the next queued show, or — once the queue is empty — roll to the next show by date.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            options.forEachIndexed { index, (key, label) ->
+                SegmentedButton(
+                    selected = currentMode == key,
+                    onClick = { onSelected(key) },
+                    shape = SegmentedButtonDefaults.itemShape(index = index, count = options.size)
+                ) {
+                    Text(label)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun EndOfShowTimingRow(
+    immediate: Boolean,
+    onSelected: (Boolean) -> Unit
+) {
+    val options = listOf(false to "15s countdown", true to "Immediate")
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Timing", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "Wait with a cancelable 15-second countdown, or advance immediately.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            options.forEachIndexed { index, (value, label) ->
+                SegmentedButton(
+                    selected = immediate == value,
+                    onClick = { onSelected(value) },
+                    shape = SegmentedButtonDefaults.itemShape(index = index, count = options.size)
+                ) {
+                    Text(label)
                 }
             }
         }

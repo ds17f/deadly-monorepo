@@ -72,6 +72,13 @@ final class PlayQueueService {
         catch { logger.error("remove failed: \(error.localizedDescription)") }
     }
 
+    /// Remove all entries for a show. Called from the playback layer so that
+    /// playing any show (from anywhere) pops it from the upcoming queue.
+    func remove(showId: String) {
+        do { try dao.deleteByShowId(showId); reload() }
+        catch { logger.error("remove(showId:) failed: \(error.localizedDescription)") }
+    }
+
     func clear() {
         do { try dao.clear(); reload() }
         catch { logger.error("clear failed: \(error.localizedDescription)") }

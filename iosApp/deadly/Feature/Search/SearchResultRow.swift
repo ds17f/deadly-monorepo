@@ -94,6 +94,8 @@ struct SearchResultRow: View {
             )
         }
 
+        AddToQueueButton(showId: result.show.id)
+
         if result.show.bestRecordingId != nil {
             Button {
                 showReviews = true

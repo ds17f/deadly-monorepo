@@ -41,6 +41,12 @@ struct HomeScreen: View {
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: DeadlySpacing.sectionSpacing) {
+                // Up Next — the show queue, fixed order with the head leftmost
+                // (ADR-0010). Hidden when the queue is empty.
+                if !container.playQueueService.isEmpty {
+                    queueSection
+                }
+
                 if !content.recentShows.isEmpty {
                     recentShowsSection
                 }
@@ -88,6 +94,61 @@ struct HomeScreen: View {
         // wouldn't refetch without this observer.
         .onChange(of: appPreferences.homeTrendingIncludeAnniversaries) { _, _ in
             Task { await trendingService.refresh() }
+        }
+    }
+
+    // MARK: - Up Next (show queue, ADR-0010)
+
+    private var queueSection: some View {
+        let items = container.playQueueService.items
+        return VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
+            Text("Up Next")
+                .font(.title2)
+                .fontWeight(.bold)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(spacing: DeadlySpacing.itemSpacing) {
+                    // Fixed order — head (next show) leftmost.
+                    ForEach(items) { item in
+                        Button {
+                            playFromQueue(item)
+                        } label: {
+                            ShowCarouselCard(
+                                imageRecordingId: item.show.bestRecordingId,
+                                imageUrl: item.show.coverImageUrl,
+                                lines: [item.show.date, item.show.venue.name, item.show.location.displayText],
+                                recordingCount: item.show.recordingCount,
+                                size: todayCardSize.width
+                            )
+                        }
+                        .buttonStyle(.plain)
+                        .contextMenu {
+                            NavigationLink(value: item.show.id) {
+                                Label("View Show", systemImage: "eye")
+                            }
+                            Button(role: .destructive) {
+                                container.playQueueService.remove(id: item.id)
+                            } label: {
+                                Label("Remove from Queue", systemImage: "trash")
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /// Play a queued show now; the playback layer pops it from the queue.
+    private func playFromQueue(_ item: QueuedShowItem) {
+        Task {
+            await container.playlistService.loadShow(item.show.id)
+            if let rid = item.recordingId,
+               let rec = try? container.showRepository.getRecordingById(rid) {
+                await container.playlistService.selectRecording(rec)
+            }
+            let idx = item.resumeTrackIndex ?? 0
+            container.playlistService.playTrack(at: idx, source: "queue_carousel")
+            container.playlistService.recordRecentPlay()
         }
     }
 
@@ -146,6 +207,7 @@ struct HomeScreen: View {
                             NavigationLink(value: show.id) {
                                 Label("View Show", systemImage: "eye")
                             }
+                            AddToQueueButton(showId: show.id)
                         } preview: {
                             ShowDetailPopover(
                                 date: show.date,
@@ -219,6 +281,7 @@ struct HomeScreen: View {
                                 NavigationLink(value: show.id) {
                                     Label("View Show", systemImage: "eye")
                                 }
+                                AddToQueueButton(showId: show.id)
                             } preview: {
                                 ShowDetailPopover(
                                     date: show.date,
@@ -262,6 +325,7 @@ struct HomeScreen: View {
                         NavigationLink(value: show.id) {
                             Label("View Show", systemImage: "eye")
                         }
+                        AddToQueueButton(showId: show.id)
                     } preview: {
                         ShowDetailPopover(
                             date: show.date,
@@ -298,6 +362,7 @@ struct HomeScreen: View {
                             NavigationLink(value: show.id) {
                                 Label("View Show", systemImage: "eye")
                             }
+                            AddToQueueButton(showId: show.id)
                         } preview: {
                             ShowDetailPopover(
                                 date: show.date,

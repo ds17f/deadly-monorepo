@@ -28,6 +28,7 @@ class MainActivity : ComponentActivity() {
     @Inject lateinit var analyticsService: AnalyticsService
     @Inject lateinit var mediaControllerRepository: MediaControllerRepository
     @Inject lateinit var connectService: ConnectService
+    @Inject lateinit var showQueueCoordinator: com.grateful.deadly.playback.ShowQueueCoordinator
 
     private var deepLinkUri by mutableStateOf<Uri?>(null)
 
@@ -37,6 +38,9 @@ class MainActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
         analyticsService.track("app_open")
+
+        // Drive show-queue pop-on-play, auto-advance, and interrupt snackbar (ADR-0010).
+        showQueueCoordinator.start()
 
         deepLinkUri = intent?.data
 

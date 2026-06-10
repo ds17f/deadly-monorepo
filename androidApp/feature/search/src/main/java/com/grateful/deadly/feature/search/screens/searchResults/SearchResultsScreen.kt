@@ -164,6 +164,11 @@ fun SearchResultsScreen(
                 showReviewsForShow = result
                 result.show.bestRecordingId?.let { viewModel.loadReviews(it) }
                 selectedShowForActions = null
+            },
+            onAddToQueue = {
+                viewModel.addToQueue(result.show.id)
+                Toast.makeText(context, "Added to Queue", Toast.LENGTH_SHORT).show()
+                selectedShowForActions = null
             }
         )
     }

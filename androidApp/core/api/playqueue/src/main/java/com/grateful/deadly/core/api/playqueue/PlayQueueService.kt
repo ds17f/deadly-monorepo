@@ -37,6 +37,12 @@ interface PlayQueueService {
     /** Remove a single entry by its stable id. */
     suspend fun remove(id: Long)
 
+    /**
+     * Remove all entries for a show. Called from the playback layer so that
+     * playing any show (from anywhere) pops it from the upcoming queue.
+     */
+    suspend fun removeByShowId(showId: String)
+
     /** Reorder: move the entry at [fromIndex] to [toIndex] (0-based). */
     suspend fun move(fromIndex: Int, toIndex: Int)
 

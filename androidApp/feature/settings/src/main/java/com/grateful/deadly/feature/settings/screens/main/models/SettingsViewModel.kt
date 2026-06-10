@@ -92,6 +92,29 @@ class SettingsViewModel @Inject constructor(
         ))
     }
 
+    // ── End-of-show behavior (show queue, ADR-0010) ──────────────────────
+    val endOfShowMode: StateFlow<String> = appPreferences.endOfShowMode
+
+    fun setEndOfShowMode(value: String) {
+        appPreferences.setEndOfShowMode(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_end_of_show_mode",
+            "category" to "preference",
+            "value" to value,
+        ))
+    }
+
+    val endOfShowImmediate: StateFlow<Boolean> = appPreferences.endOfShowImmediate
+
+    fun setEndOfShowImmediate(value: Boolean) {
+        appPreferences.setEndOfShowImmediate(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_end_of_show_timing",
+            "category" to "preference",
+            "value" to if (value) "immediate" else "countdown",
+        ))
+    }
+
     val playerControlsStyle: StateFlow<String> = appPreferences.playerControlsStyle
 
     fun setPlayerControlsStyle(value: String) {

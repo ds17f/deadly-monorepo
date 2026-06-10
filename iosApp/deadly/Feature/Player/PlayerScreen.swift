@@ -13,6 +13,7 @@ struct PlayerScreen: View {
     @State private var showMessageShare = false
     @State private var showEqualizerSheet = false
     @State private var showPlayerMenuSheet = false
+    @State private var showQueueSheet = false
     @State private var showConnectSheet = false
     @State private var isCurrentTrackFavorite = false
     @Environment(\.appContainer) private var container
@@ -221,6 +222,10 @@ struct PlayerScreen: View {
             EqualizerSheet()
                 .presentationDetents([.medium, .large])
         }
+        .sheet(isPresented: $showQueueSheet) {
+            ShowQueueSheet()
+                .environment(\.appContainer, container)
+        }
         .sheet(isPresented: $showPlayerMenuSheet) {
             playerMenuSheet
         }
@@ -358,6 +363,17 @@ struct PlayerScreen: View {
 
             // Right section
             HStack(spacing: 8) {
+                // Up Next — the show queue (ADR-0010 §6)
+                Button {
+                    showQueueSheet = true
+                } label: {
+                    Image(systemName: "list.number")
+                        .font(.title2)
+                        .foregroundStyle(container.playQueueService.isEmpty ? .secondary : DeadlyColors.primary)
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain)
+
                 // Equalizer
                 Button {
                     showEqualizerSheet = true
@@ -409,6 +425,15 @@ struct PlayerScreen: View {
                             isCurrentTrackFavorite ? "Favorited" : "Favorite",
                             systemImage: isCurrentTrackFavorite ? "heart.fill" : "heart"
                         )
+                    }
+
+                    Button {
+                        showPlayerMenuSheet = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            showQueueSheet = true
+                        }
+                    } label: {
+                        Label("Up Next", systemImage: "list.number")
                     }
 
                     Button {

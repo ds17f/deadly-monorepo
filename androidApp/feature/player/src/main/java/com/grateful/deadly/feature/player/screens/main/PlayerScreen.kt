@@ -23,6 +23,7 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerSecondar
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMaterialPanels
 import com.grateful.deadly.feature.player.screens.main.components.PlayerTrackActionsSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerQueueSheet
+import com.grateful.deadly.feature.player.screens.main.components.PlayerUpNextSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerEqualizerSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlayer
 
@@ -42,6 +43,7 @@ import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
 fun PlayerScreen(
     onNavigateBack: () -> Unit,
     onNavigateToPlaylist: (String, String?) -> Unit,
+    onPlayShow: (String) -> Unit = {},
     viewModel: PlayerViewModel = hiltViewModel()
 ) {
     Log.d("PlayerScreen", "=== PLAYER SCREEN LOADED ===")
@@ -67,6 +69,7 @@ fun PlayerScreen(
     var showShareChooser by remember { mutableStateOf(false) }
     var showEqualizerBottomSheet by remember { mutableStateOf(false) }
     var showQueueBottomSheet by remember { mutableStateOf(false) }
+    var showUpNextBottomSheet by remember { mutableStateOf(false) }
     var showConnectSheet by remember { mutableStateOf(false) }
     // Mini player visibility based on scroll position
     // Show mini player only when player controls are completely off screen
@@ -161,6 +164,7 @@ fun PlayerScreen(
                     onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
                     onShareClick = { showShareChooser = true },
                     onQueueClick = { showQueueBottomSheet = true },
+                    onUpNextClick = { showUpNextBottomSheet = true },
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
                 )
             }
@@ -251,6 +255,19 @@ fun PlayerScreen(
         if (showQueueBottomSheet) {
             PlayerQueueSheet(
                 onDismiss = { showQueueBottomSheet = false }
+            )
+        }
+
+        if (showUpNextBottomSheet) {
+            PlayerUpNextSheet(
+                items = viewModel.queueShows.collectAsState().value,
+                onPlayShow = { showId ->
+                    showUpNextBottomSheet = false
+                    onPlayShow(showId)
+                },
+                onRemove = { viewModel.removeFromQueue(it) },
+                onClear = { viewModel.clearQueue() },
+                onDismiss = { showUpNextBottomSheet = false }
             )
         }
 

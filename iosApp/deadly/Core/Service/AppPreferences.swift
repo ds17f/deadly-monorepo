@@ -30,6 +30,14 @@ final class AppPreferences {
     private static let homePopularDecadeKey = "home_popular_decade"
     private static let homeTodayCardSizeKey = "home_today_card_size"
     private static let homeCollectionsCardSizeKey = "home_collections_card_size"
+    private static let endOfShowModeKey = "end_of_show_mode"
+    private static let endOfShowImmediateKey = "end_of_show_immediate"
+
+    // MARK: - End-of-show behavior (ADR-0010). Mirrors Android AppPreferences.
+    static let endOfShowOff = "off"
+    static let endOfShowQueue = "queue"
+    static let endOfShowQueueHistory = "queue_history"
+    static let endOfShowCountdownSeconds = 15
 
     /// Server environment: "prod", "beta", or "custom".
     var serverEnvironment: String {
@@ -170,6 +178,18 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(homeCollectionsCardSize, forKey: Self.homeCollectionsCardSizeKey) }
     }
 
+    /// What happens when a show ends (ADR-0010). One of `endOfShowOff`,
+    /// `endOfShowQueue`, `endOfShowQueueHistory`. Default: queue, then history.
+    var endOfShowMode: String {
+        didSet { UserDefaults.standard.set(endOfShowMode, forKey: Self.endOfShowModeKey) }
+    }
+
+    /// When true, auto-advance fires immediately; when false, a 15s cancelable
+    /// countdown precedes it. Default: false (countdown).
+    var endOfShowImmediate: Bool {
+        didSet { UserDefaults.standard.set(endOfShowImmediate, forKey: Self.endOfShowImmediateKey) }
+    }
+
     /// Restore all Home Screen preferences to defaults.
     func resetHomePreferences() {
         homeTrendingWindow = "now"
@@ -216,6 +236,8 @@ final class AppPreferences {
             Self.homePopularEnabledKey: true,
             Self.homePopularCardSizeKey: "small",
             Self.homePopularDecadeKey: "all",
+            Self.endOfShowModeKey: Self.endOfShowQueueHistory,
+            Self.endOfShowImmediateKey: false,
         ])
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
@@ -249,6 +271,8 @@ final class AppPreferences {
             : UserDefaults.standard.bool(forKey: Self.homePopularEnabledKey)
         homePopularCardSize = UserDefaults.standard.string(forKey: Self.homePopularCardSizeKey) ?? "small"
         homePopularDecade = UserDefaults.standard.string(forKey: Self.homePopularDecadeKey) ?? "all"
+        endOfShowMode = UserDefaults.standard.string(forKey: Self.endOfShowModeKey) ?? Self.endOfShowQueueHistory
+        endOfShowImmediate = UserDefaults.standard.bool(forKey: Self.endOfShowImmediateKey)
         analyticsEnabled = UserDefaults.standard.object(forKey: Self.analyticsEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.analyticsEnabledKey)

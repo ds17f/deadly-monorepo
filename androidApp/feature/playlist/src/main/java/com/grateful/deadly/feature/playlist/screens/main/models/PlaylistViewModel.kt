@@ -59,10 +59,22 @@ class PlaylistViewModel @Inject constructor(
     private val equalizerRepository: EqualizerRepository,
     private val analyticsService: AnalyticsService,
     private val connectService: ConnectService,
+    private val playQueueService: com.grateful.deadly.core.api.playqueue.PlayQueueService,
     networkMonitor: NetworkMonitor,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
 ) : ViewModel() {
+
+    /** Append the current show to the play queue ("Add to Queue", ADR-0010). */
+    fun addToQueue() {
+        val showId = _baseUiState.value.showData?.showId ?: return
+        viewModelScope.launch { playQueueService.enqueue(showId) }
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "add_to_queue",
+            "category" to "playback",
+            "source" to "playlist",
+        ))
+    }
 
     val isOffline: StateFlow<Boolean> = networkMonitor.isOnline
         .map { !it }

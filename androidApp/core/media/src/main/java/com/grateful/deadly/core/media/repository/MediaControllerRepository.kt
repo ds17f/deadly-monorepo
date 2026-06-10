@@ -53,6 +53,10 @@ class MediaControllerRepository @Inject constructor(
 ) {
     companion object {
         private const val TAG = "MediaControllerRepository"
+
+        // Format priority for headless auto-advance (FLAC excluded — ExoPlayer
+        // compatibility). Mirrors PlaylistServiceImpl.DEFAULT_FORMAT_PRIORITY.
+        private val AUTO_FORMAT_PRIORITY = listOf("VBR MP3", "MP3", "Ogg Vorbis")
     }
     
     // Connection state
@@ -124,6 +128,20 @@ class MediaControllerRepository @Inject constructor(
     private val _trackAutoAdvanced = MutableSharedFlow<Int>(extraBufferCapacity = 1)
     val trackAutoAdvanced: SharedFlow<Int> = _trackAutoAdvanced.asSharedFlow()
 
+    /** Snapshot of a show that was interrupted by a play-now (ADR-0010 §4). */
+    data class InterruptSnapshot(
+        val showId: String,
+        val recordingId: String?,
+        val trackIndex: Int,
+        val positionMs: Long
+    )
+
+    // Emits when a user play-now replaces a *different* show that was playing, so
+    // the UI can offer the "Queue A" re-queue snackbar. Captured before playAll
+    // resets position. Not emitted for auto-advance (isUserInterrupt = false).
+    private val _interruptEvents = MutableSharedFlow<InterruptSnapshot>(extraBufferCapacity = 1)
+    val interruptEvents: SharedFlow<InterruptSnapshot> = _interruptEvents.asSharedFlow()
+
     // Analytics: tracks the currently playing item for playback_end
     private var analyticsPlaybackInfo: Triple<String, String, Int>? = null // showId, recordingId, trackNumber
 
@@ -180,10 +198,28 @@ class MediaControllerRepository @Inject constructor(
         coverImageUrl: String? = null,
         startPosition: Long = 0L,
         autoPlay: Boolean = true,
-        source: String = "browse"
+        source: String = "browse",
+        isUserInterrupt: Boolean = true
     ) {
         nextPlaybackSource = source
         Log.d(TAG, "playAll: $recordingId ($format) at position $startPosition")
+
+        // Capture the interrupted show *before* any state reset, so the UI can
+        // offer to re-queue it with a resume snapshot (ADR-0010 §4). Only a user
+        // play-now over a different, currently-playing show counts.
+        if (isUserInterrupt && autoPlay) {
+            val oldShow = _currentShowId.value
+            if (oldShow != null && oldShow != showId && _isPlaying.value) {
+                _interruptEvents.tryEmit(
+                    InterruptSnapshot(
+                        showId = oldShow,
+                        recordingId = _currentRecordingId.value,
+                        trackIndex = _currentTrackIndex.value,
+                        positionMs = _currentPosition.value
+                    )
+                )
+            }
+        }
         
         executeWhenConnected {
             val controller = mediaController
@@ -274,6 +310,68 @@ class MediaControllerRepository @Inject constructor(
         }
     }
     
+    /**
+     * Play a whole show, auto-selecting a playable audio format. Used by
+     * end-of-show auto-advance (ADR-0010), which has no UI-selected format.
+     * No-op if the recording has no playable tracks.
+     */
+    suspend fun playShow(
+        recordingId: String,
+        showId: String,
+        showDate: String,
+        venue: String?,
+        location: String?,
+        coverImageUrl: String? = null,
+        startTrackIndex: Int = 0,
+        startPosition: Long = 0L,
+        source: String = "auto_advance"
+    ) {
+        val format = resolvePlayableFormat(recordingId)
+        if (format == null) {
+            Log.w(TAG, "playShow: no playable format for $recordingId — skipping advance")
+            return
+        }
+        if (startTrackIndex > 0) {
+            // Resume a re-queued interrupted show mid-set (ADR-0010 §4).
+            playTrack(
+                trackIndex = startTrackIndex,
+                recordingId = recordingId,
+                format = format,
+                showId = showId,
+                showDate = showDate,
+                venue = venue,
+                location = location,
+                coverImageUrl = coverImageUrl,
+                position = startPosition,
+                autoPlay = true,
+                source = source
+            )
+        } else {
+            playAll(
+                recordingId = recordingId,
+                format = format,
+                showId = showId,
+                showDate = showDate,
+                venue = venue,
+                location = location,
+                coverImageUrl = coverImageUrl,
+                startPosition = startPosition,
+                autoPlay = true,
+                source = source,
+                isUserInterrupt = false
+            )
+        }
+    }
+
+    /** Pick the best available audio format for a recording (priority list, then
+     *  whatever exists). Mirrors PlaylistService's selection for headless plays. */
+    private suspend fun resolvePlayableFormat(recordingId: String): String? {
+        val tracks = archiveService.getRecordingTracks(recordingId).getOrNull() ?: return null
+        val available = tracks.map { it.format }.distinct()
+        return AUTO_FORMAT_PRIORITY.firstOrNull { p -> available.any { it.equals(p, ignoreCase = true) } }
+            ?: available.firstOrNull()
+    }
+
     /**
      * Play specific track within recording
      * Loads full recording queue, then plays specified track at specified position

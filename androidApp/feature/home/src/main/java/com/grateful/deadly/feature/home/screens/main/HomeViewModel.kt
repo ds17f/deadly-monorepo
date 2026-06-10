@@ -6,13 +6,19 @@ import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.home.HomeService
 import com.grateful.deadly.core.api.home.HomeContent
 import com.grateful.deadly.core.api.home.TrendingService
+import com.grateful.deadly.core.api.playqueue.PlayQueueService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.domain.repository.ShowRepository
+import com.grateful.deadly.core.model.Show
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -30,6 +36,8 @@ class HomeViewModel @Inject constructor(
     private val trendingService: TrendingService,
     private val appPreferences: AppPreferences,
     private val analyticsService: AnalyticsService,
+    private val playQueueService: PlayQueueService,
+    private val showRepository: ShowRepository,
 ) : ViewModel() {
 
     companion object {
@@ -38,6 +46,24 @@ class HomeViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(HomeUiState.initial())
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
+
+    /** Upcoming queued shows, head first — drives the "Up Next" home rail (ADR-0010). */
+    val queueShows: StateFlow<List<Show>> = playQueueService.queue
+        .map { queued ->
+            val byId = showRepository.getShowsByIds(queued.map { it.showId }).associateBy { it.id }
+            queued.mapNotNull { byId[it.showId] }
+        }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    /** Append a show to the play queue ("Add to Queue"). */
+    fun addToQueue(showId: String) {
+        viewModelScope.launch { playQueueService.enqueue(showId) }
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "add_to_queue",
+            "category" to "playback",
+            "source" to "home",
+        ))
+    }
 
     init {
         Log.d(TAG, "HomeViewModel initialized")
