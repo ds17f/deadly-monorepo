@@ -37,6 +37,7 @@ final class AppContainer {
     let playbackRestorationService: PlaybackRestorationService
     let analyticsService: AnalyticsService
     let connectService: ConnectService
+    let autoAdvanceCoordinator: AutoAdvanceCoordinator
     let notificationStore: NotificationStore
     let notificationService: NotificationService
 
@@ -337,6 +338,17 @@ final class AppContainer {
                     }
                 }
             }
+
+            // ADR-0010 chunk 2: chronological auto-advance, driven off the
+            // end-of-show signal (PlaylistServiceImpl.onShowCompleted).
+            autoAdvanceCoordinator = MainActor.assumeIsolated {
+                AutoAdvanceCoordinator(
+                    playlistService: playlistSvc,
+                    showRepository: showRepo,
+                    connectService: connect
+                )
+            }
+
             // In-app messaging — public/global feed; store + fetch service.
             // No auth, so it isn't wired into the sign-in flow; deadlyApp pulls
             // it on cold start + foreground.

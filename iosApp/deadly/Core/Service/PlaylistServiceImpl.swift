@@ -227,6 +227,16 @@ final class PlaylistServiceImpl: PlaylistService {
         }
     }
 
+    /// Play an arbitrary show from scratch — the canonical "play a show" entry.
+    /// Loads its preferred/best recording + tracks, then starts at track 0, which
+    /// also notifies Connect (sendLoad) via playTrack. Auto-advance (ADR-0010)
+    /// routes through this so it can't diverge from a user tap; remotes follow.
+    func playShow(_ show: Show, autoPlay: Bool = true) async {
+        await loadShow(show.id)
+        guard !tracks.isEmpty else { return }
+        playTrack(at: 0, source: "auto_advance", autoPlay: autoPlay)
+    }
+
     func selectRecording(_ recording: Recording) async {
         currentRecording = recording
         reviews = []
