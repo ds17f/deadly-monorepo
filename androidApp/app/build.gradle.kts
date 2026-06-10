@@ -161,6 +161,8 @@ dependencies {
     implementation(project(":core:collections"))
     implementation(project(":core:api:recent"))
     implementation(project(":core:recent"))
+    implementation(project(":core:api:playqueue"))
+    implementation(project(":core:playqueue"))
     implementation(project(":core:api:usersync"))
     implementation(project(":core:usersync"))
     implementation(project(":core:connect"))

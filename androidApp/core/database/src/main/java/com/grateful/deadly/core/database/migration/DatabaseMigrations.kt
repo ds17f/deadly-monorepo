@@ -248,6 +248,27 @@ object DatabaseMigrations {
      *
      * See PLANS/mobile-server-sync.md.
      */
+    /**
+     * v25 → v26: play_queue table for the persistent show queue (ADR-0010).
+     * Local-only, never synced. Ordered by `position` ascending (head = MIN).
+     */
+    val MIGRATION_25_26 = object : Migration(25, 26) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("""
+                CREATE TABLE IF NOT EXISTS play_queue (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                    showId TEXT NOT NULL,
+                    recordingId TEXT,
+                    position INTEGER NOT NULL,
+                    resumeTrackIndex INTEGER,
+                    resumePositionMs INTEGER,
+                    addedAt INTEGER NOT NULL
+                )
+            """.trimIndent())
+            db.execSQL("CREATE INDEX IF NOT EXISTS index_play_queue_position ON play_queue(position)")
+        }
+    }
+
     val MIGRATION_24_25 = object : Migration(24, 25) {
         override fun migrate(db: SupportSQLiteDatabase) {
             // Step 1: dedupe via a temp keep-list, then delete losers.
