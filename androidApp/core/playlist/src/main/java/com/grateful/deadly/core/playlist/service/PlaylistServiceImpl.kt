@@ -9,6 +9,7 @@ import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.network.archive.service.ArchiveService
 import com.grateful.deadly.core.media.download.MediaDownloadManager
 import com.grateful.deadly.core.network.monitor.NetworkMonitor
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.media.state.MediaControllerStateUtil
 import com.grateful.deadly.core.player.service.ShareService
@@ -46,6 +47,7 @@ class PlaylistServiceImpl @Inject constructor(
     private val archiveService: ArchiveService,
     private val mediaControllerRepository: MediaControllerRepository,
     private val mediaControllerStateUtil: MediaControllerStateUtil,
+    private val connectService: ConnectService,
     private val shareService: ShareService,
     private val collectionsService: DeadCollectionsService,
     private val favoritesService: FavoritesService,
@@ -129,6 +131,69 @@ class PlaylistServiceImpl @Inject constructor(
 
     override fun getCurrentShowLineup(): List<String> {
         return currentShow?.lineup?.members?.map { it.name } ?: emptyList()
+    }
+
+    override suspend fun playShow(show: Show, autoPlay: Boolean) {
+        // Resolve the recording: user's preferred for this show, else the best.
+        val recordingId = favoritesService.getPreferredRecordingId(show.id) ?: show.bestRecordingId
+        if (recordingId.isNullOrBlank()) {
+            Log.w(TAG, "playShow: no recording for show ${show.id}")
+            return
+        }
+
+        // Resolve tracks + format from scratch (this is the "arbitrary show" path,
+        // unlike the playlist screen which plays already-loaded state).
+        val rawTracks = archiveService.getRecordingTracks(recordingId).getOrNull().orEmpty()
+        if (rawTracks.isEmpty()) {
+            Log.w(TAG, "playShow: no tracks for recording $recordingId")
+            return
+        }
+        val format = selectBestAvailableFormat(rawTracks)
+        if (format == null) {
+            Log.w(TAG, "playShow: no playable format for recording $recordingId")
+            return
+        }
+        val formatTracks = filterTracksToFormat(rawTracks, format)
+
+        // Keep service pointers consistent so chronological nav continues correctly.
+        currentShow = show
+        currentRecordingId = recordingId
+        currentSelectedFormat = format
+
+        Log.d(TAG, "playShow: ${show.displayTitle} rec=$recordingId fmt=$format autoPlay=$autoPlay")
+
+        // Local audio — identical to the UI's Play All.
+        mediaControllerRepository.playAll(
+            recordingId = recordingId,
+            format = format,
+            showId = show.id,
+            showDate = show.date,
+            venue = show.venue.name,
+            location = show.location.displayText,
+            coverImageUrl = show.coverImageUrl,
+            autoPlay = autoPlay,
+            source = "auto_advance",
+        )
+
+        // Tell Connect so other devices follow — identical to the UI's sendLoad.
+        val sessionTracks = formatTracks.map { t ->
+            ConnectSessionTrack(
+                title = t.title ?: t.name,
+                durationMs = parseDurationToMs(t.duration).toInt(),
+            )
+        }
+        connectService.sendLoad(
+            showId = show.id,
+            recordingId = recordingId,
+            tracks = sessionTracks,
+            trackIndex = 0,
+            positionMs = 0,
+            durationMs = sessionTracks.firstOrNull()?.durationMs ?: 0,
+            date = show.date,
+            venue = show.venue.name,
+            location = show.location.displayText,
+            autoplay = autoPlay,
+        )
     }
 
     override suspend fun navigateToNextShow() {
@@ -832,6 +897,22 @@ class PlaylistServiceImpl @Inject constructor(
      */
     private fun filterTracksToFormat(tracks: List<Track>, selectedFormat: String): List<Track> {
         return tracks.filter { it.format.equals(selectedFormat, ignoreCase = true) }
+    }
+
+    /** Parse "mm:ss" / "hh:mm:ss" track duration into milliseconds (0 if unknown). */
+    private fun parseDurationToMs(durationString: String?): Long {
+        if (durationString.isNullOrBlank()) return 0L
+        return try {
+            val parts = durationString.split(":").map { it.trim().toLong() }
+            when (parts.size) {
+                2 -> (parts[0] * 60 + parts[1]) * 1000
+                3 -> (parts[0] * 3600 + parts[1] * 60 + parts[2]) * 1000
+                1 -> parts[0] * 1000
+                else -> 0L
+            }
+        } catch (e: NumberFormatException) {
+            0L
+        }
     }
     
     /**
