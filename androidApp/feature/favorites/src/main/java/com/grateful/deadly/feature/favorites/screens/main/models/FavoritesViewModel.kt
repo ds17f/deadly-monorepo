@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
+import com.grateful.deadly.core.api.playqueue.PlayQueueService
+import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.service.BackupImportExportService
@@ -45,8 +47,26 @@ class FavoritesViewModel @Inject constructor(
     val appPreferences: AppPreferences,
     private val backupImportExportService: BackupImportExportService,
     private val analyticsService: AnalyticsService,
+    private val playQueueService: PlayQueueService,
+    private val showRepository: ShowRepository,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
+
+    /** A queued upcoming show, hydrated for display (ADR-0010). */
+    data class QueuedShowUi(val entryId: Long, val show: Show)
+
+    /** Persistent show queue, hydrated to Shows, head first. */
+    val queueShows: StateFlow<List<QueuedShowUi>> = playQueueService.queue
+        .map { queued ->
+            val byId = showRepository.getShowsByIds(queued.map { it.showId }).associateBy { it.id }
+            queued.mapNotNull { q -> byId[q.showId]?.let { QueuedShowUi(q.id, it) } }
+        }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+
+    fun addToQueue(showId: String) = viewModelScope.launch { playQueueService.enqueue(showId) }
+    fun removeFromQueue(entryId: Long) = viewModelScope.launch { playQueueService.remove(entryId) }
+    fun moveInQueue(fromIndex: Int, toIndex: Int) = viewModelScope.launch { playQueueService.move(fromIndex, toIndex) }
+    fun clearQueue() = viewModelScope.launch { playQueueService.clear() }
 
     companion object {
         private const val TAG = "FavoritesViewModel"

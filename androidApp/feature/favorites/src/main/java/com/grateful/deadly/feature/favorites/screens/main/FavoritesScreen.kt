@@ -1,6 +1,7 @@
 package com.grateful.deadly.feature.favorites.screens.main
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -55,6 +56,7 @@ fun FavoritesScreen(
     val uiState by viewModel.uiState.collectAsState()
     val favoriteSongs by viewModel.favoriteSongs.collectAsState()
     val songsLoading by viewModel.songsLoading.collectAsState()
+    val queueShows by viewModel.queueShows.collectAsState()
 
     // UI State
     var selectedTab by remember { mutableStateOf(FavoritesTab.SHOWS) }
@@ -122,8 +124,8 @@ fun FavoritesScreen(
             }
 
             // Sort Controls and Display Toggle
-            if (selectedTab == FavoritesTab.SHOWS) {
-                SortAndDisplayControls(
+            when (selectedTab) {
+                FavoritesTab.SHOWS -> SortAndDisplayControls(
                     sortBy = sortBy,
                     sortDirection = sortDirection,
                     displayMode = displayMode,
@@ -132,19 +134,19 @@ fun FavoritesScreen(
                     count = showsCount,
                     modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
                 )
-            } else {
-                SongSortControls(
+                FavoritesTab.SONGS -> SongSortControls(
                     sortBy = songSortBy,
                     sortDirection = sortDirection,
                     onSortSelectorClick = { showSongSortBottomSheet = true },
                     count = songsCount,
                     modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
                 )
+                FavoritesTab.QUEUE -> {}
             }
 
             // Main Content
-            if (selectedTab == FavoritesTab.SHOWS) {
-                ShowsTabContent(
+            when (selectedTab) {
+                FavoritesTab.SHOWS -> ShowsTabContent(
                     uiState = uiState,
                     filterPath = filterPath,
                     sortBy = sortBy,
@@ -156,8 +158,7 @@ fun FavoritesScreen(
                     onRetry = viewModel::retry,
                     modifier = Modifier.weight(1f)
                 )
-            } else {
-                SongsTabContent(
+                FavoritesTab.SONGS -> SongsTabContent(
                     songs = favoriteSongs,
                     isLoading = songsLoading,
                     filterPath = filterPath,
@@ -171,6 +172,17 @@ fun FavoritesScreen(
                             true
                         )
                     },
+                    modifier = Modifier.weight(1f)
+                )
+                FavoritesTab.QUEUE -> QueueTabContent(
+                    items = queueShows,
+                    onPlayClick = { item ->
+                        onNavigateToPlayer(item.show.id)
+                        viewModel.removeFromQueue(item.entryId)
+                    },
+                    onShowClick = onNavigateToShow,
+                    onRemove = { viewModel.removeFromQueue(it) },
+                    onClear = { viewModel.clearQueue() },
                     modifier = Modifier.weight(1f)
                 )
             }
@@ -220,6 +232,10 @@ fun FavoritesScreen(
             onReviewShow = {
                 viewModel.loadReview(show.showId)
                 reviewShowTarget = show
+                selectedShowForActions = null
+            },
+            onAddToQueue = {
+                viewModel.addToQueue(show.showId)
                 selectedShowForActions = null
             },
             onRemoveFromFavorites = {
@@ -854,5 +870,75 @@ private fun extractMonthFromDate(date: String): Int? {
         }
     } catch (e: Exception) {
         null
+    }
+}
+
+/**
+ * Queue tab content (ADR-0010): the persistent show queue, head first.
+ * Tap a row to play it now (and pop it off the queue); Remove drops it.
+ */
+@Composable
+private fun QueueTabContent(
+    items: List<FavoritesViewModel.QueuedShowUi>,
+    onPlayClick: (FavoritesViewModel.QueuedShowUi) -> Unit,
+    onShowClick: (String) -> Unit,
+    onRemove: (Long) -> Unit,
+    onClear: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    if (items.isEmpty()) {
+        Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text("Queue is empty", style = MaterialTheme.typography.titleMedium)
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    "Add shows from a show's menu. They play in order, and each leaves the queue once it plays.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(horizontal = 32.dp)
+                )
+            }
+        }
+        return
+    }
+    Column(modifier = modifier.fillMaxSize()) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                "${items.size} show${if (items.size == 1) "" else "s"} up next",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(Modifier.weight(1f))
+            TextButton(onClick = onClear) { Text("Clear") }
+        }
+        LazyColumn(modifier = Modifier.fillMaxSize()) {
+            items(items, key = { it.entryId }) { item ->
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp, vertical = 4.dp)
+                        .clickable { onPlayClick(item) }
+                ) {
+                    Row(
+                        modifier = Modifier.padding(12.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(item.show.displayTitle, style = MaterialTheme.typography.titleSmall)
+                            Text(
+                                item.show.date,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        TextButton(onClick = { onRemove(item.entryId) }) { Text("Remove") }
+                    }
+                }
+            }
+        }
     }
 }

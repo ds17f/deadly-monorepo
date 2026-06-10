@@ -48,7 +48,9 @@ dependencies {
 
     // V2 dependencies
     implementation(project(":core:api:favorites"))
+    implementation(project(":core:api:playqueue"))
     implementation(project(":core:database"))
+    implementation(project(":core:domain"))
     implementation(project(":core:favorites"))
     implementation(project(":core:model"))
     implementation(project(":core:design"))

@@ -147,7 +147,8 @@ fun ShowActionsBottomSheet(
     onDownload: () -> Unit,
     onRemoveDownload: () -> Unit,
     onPin: () -> Unit,
-    onUnpin: () -> Unit
+    onUnpin: () -> Unit,
+    onAddToQueue: () -> Unit = {}
 ) {
     ModalBottomSheet(
         onDismissRequest = onDismiss
@@ -201,6 +202,12 @@ fun ShowActionsBottomSheet(
                         )
                     },
                     modifier = Modifier.clickable { onShowQrCode() }
+                )
+
+                // Add to Queue (ADR-0010)
+                ListItem(
+                    headlineContent = { Text("Add to Queue") },
+                    modifier = Modifier.clickable { onAddToQueue() }
                 )
 
                 // Pin/Unpin
