@@ -35,6 +35,10 @@ final class PlaylistServiceImpl: PlaylistService {
     /// True while an end-of-show auto-advance is driving playback, so the
     /// interrupt "Queue A" snackbar doesn't fire for the automatic transition.
     private var isAutoAdvancing = false
+
+    /// Set once the player actually plays; gates end-of-show auto-advance so a
+    /// cold-start / restored `.ended` state can't spuriously advance (and play).
+    private var hasPlayedSinceLoad = false
     /// When true, playTrack() skips notifying Connect to avoid Connect→load→sendLoad loops.
     var suppressConnectNotify = false
 
@@ -246,10 +250,13 @@ final class PlaylistServiceImpl: PlaylistService {
 
         nextPlaybackSource = source
 
-        // Playing a show makes it current and pops it from the upcoming queue
-        // (ADR-0010 §1). Restore (autoPlay=false) must not consume the queue.
+        // Playing a show pops it from the queue *only if it's the head* (playing
+        // the next-up show consumes it; playing one from deeper leaves it in
+        // place). Restore (autoPlay=false) must not consume the queue.
         if autoPlay {
-            if let showId = currentShow?.id { playQueueService?.remove(showId: showId) }
+            if let showId = currentShow?.id, playQueueService?.peekNext()?.show.id == showId {
+                playQueueService?.remove(showId: showId)
+            }
             // A user-initiated play cancels any pending end-of-show countdown.
             if !isAutoAdvancing { advanceCoordinator?.cancelCountdown() }
         }
@@ -424,7 +431,14 @@ final class PlaylistServiceImpl: PlaylistService {
         Task { [weak self] in
             guard let self else { return }
             defer { self.isAutoAdvancing = false }
-            if let item = self.playQueueService?.popNext() {
+            // Skip any queued entry for the show that just ended, so we never
+            // replay the current show.
+            let endedShowId = self.currentShow?.id
+            var item = self.playQueueService?.popNext()
+            while let i = item, i.show.id == endedShowId {
+                item = self.playQueueService?.popNext()
+            }
+            if let item {
                 await self.loadShow(item.show.id, recordingId: item.recordingId)
                 if let rid = item.recordingId,
                    let rec = try? self.showRepository.getRecordingById(rid) {
@@ -672,11 +686,13 @@ final class PlaylistServiceImpl: PlaylistService {
                 if next.isPlaying && !self.isRestoring {
                     self.flushDeferredStart()
                 }
+                if next.isPlaying { self.hasPlayedSinceLoad = true }
 
                 // End-of-show auto-advance (ADR-0010 §2). The within-show queue is
-                // a single show, so `.ended` = the show finished. Guard the
-                // transition so it fires once.
-                if next == .ended && prev != .ended {
+                // a single show, so `.ended` = the show finished. Only advance if
+                // we actually played (cold-start `.ended` must not auto-play).
+                if next == .ended && prev != .ended && self.hasPlayedSinceLoad {
+                    self.hasPlayedSinceLoad = false
                     self.handleShowEnded()
                 }
             }

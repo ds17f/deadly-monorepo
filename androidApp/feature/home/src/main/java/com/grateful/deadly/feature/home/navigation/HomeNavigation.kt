@@ -23,8 +23,9 @@ fun NavGraphBuilder.homeGraph(navController: NavController) {
             onNavigateToCollection = { collectionId ->
                 navController.navigate("collection/$collectionId")
             },
+            // Open the show (no autoplay) — the user presses play there.
             onPlayShow = { showId ->
-                navController.navigate("playlist/$showId?autoPlay=true")
+                navController.navigate("playlist/$showId?autoPlay=false")
             }
         )
     }

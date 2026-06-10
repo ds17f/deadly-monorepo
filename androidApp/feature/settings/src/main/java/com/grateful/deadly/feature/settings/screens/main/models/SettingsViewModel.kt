@@ -174,6 +174,18 @@ class SettingsViewModel @Inject constructor(
         ))
     }
 
+    val homeQueueEnabled: StateFlow<Boolean> = appPreferences.homeQueueEnabled
+
+    fun toggleHomeQueueEnabled() {
+        val newValue = !appPreferences.homeQueueEnabled.value
+        appPreferences.setHomeQueueEnabled(newValue)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_home_queue_enabled",
+            "category" to "preference",
+            "value" to newValue.toString(),
+        ))
+    }
+
     val homePopularCardSize: StateFlow<String> = appPreferences.homePopularCardSize
 
     fun setHomePopularCardSize(value: String) {

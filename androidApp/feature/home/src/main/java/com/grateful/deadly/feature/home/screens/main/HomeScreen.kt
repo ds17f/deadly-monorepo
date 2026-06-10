@@ -40,7 +40,9 @@ fun HomeScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val queueShows by viewModel.queueShows.collectAsState()
+    val queueEnabled by viewModel.homeQueueEnabled.collectAsState()
     var detailShow by remember { mutableStateOf<Show?>(null) }
+    var queueDetailItem by remember { mutableStateOf<HomeViewModel.QueuedShowUi?>(null) }
 
     detailShow?.let { show ->
         ShowDetailBottomSheet(
@@ -56,22 +58,27 @@ fun HomeScreen(
         )
     }
 
+    // Long-press on a queued show offers to remove it (it's already queued).
+    queueDetailItem?.let { item ->
+        val show = item.show
+        ShowDetailBottomSheet(
+            date = show.date,
+            venue = show.venue.name,
+            location = show.location.displayText,
+            rating = if (show.hasRating) show.displayRating else null,
+            onDismiss = { queueDetailItem = null },
+            onRemoveFromQueue = {
+                viewModel.removeFromQueue(item.entryId)
+                queueDetailItem = null
+            }
+        )
+    }
+
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(24.dp)
     ) {
-        // Up Next — the show queue, head leftmost (ADR-0010). Hidden when empty.
-        if (queueShows.isNotEmpty()) {
-            item {
-                QueueUpNextSection(
-                    shows = queueShows,
-                    onPlayShow = onPlayShow,
-                    onShowLongPress = { show -> detailShow = show },
-                )
-            }
-        }
-
         // Recent Shows Grid Section - only show if there are recent shows
         if (uiState.homeContent.recentShows.isNotEmpty()) {
             item {
@@ -184,6 +191,18 @@ fun HomeScreen(
                     viewModel.trackCollectionsShowMore()
                 },
             )
+        }
+
+        // Your Queue — the show queue (ADR-0010), at the bottom of Home by
+        // default. Hidden when empty or when the user turns it off in Settings.
+        if (queueEnabled && queueShows.isNotEmpty()) {
+            item {
+                QueueUpNextSection(
+                    items = queueShows,
+                    onOpenShow = onPlayShow,
+                    onLongPress = { item -> queueDetailItem = item },
+                )
+            }
         }
     }
 }

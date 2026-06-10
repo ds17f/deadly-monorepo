@@ -47,11 +47,14 @@ class HomeViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(HomeUiState.initial())
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
 
-    /** Upcoming queued shows, head first — drives the "Up Next" home rail (ADR-0010). */
-    val queueShows: StateFlow<List<Show>> = playQueueService.queue
+    /** A queued upcoming show, hydrated for the "Your Queue" home rail (ADR-0010). */
+    data class QueuedShowUi(val entryId: Long, val show: Show)
+
+    /** Upcoming queued shows, head first — drives the "Your Queue" home rail. */
+    val queueShows: StateFlow<List<QueuedShowUi>> = playQueueService.queue
         .map { queued ->
             val byId = showRepository.getShowsByIds(queued.map { it.showId }).associateBy { it.id }
-            queued.mapNotNull { byId[it.showId] }
+            queued.mapNotNull { q -> byId[q.showId]?.let { QueuedShowUi(q.id, it) } }
         }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
@@ -64,6 +67,14 @@ class HomeViewModel @Inject constructor(
             "source" to "home",
         ))
     }
+
+    /** Remove a queued entry ("Remove from Queue" on the rail). */
+    fun removeFromQueue(entryId: Long) {
+        viewModelScope.launch { playQueueService.remove(entryId) }
+    }
+
+    /** Whether the "Your Queue" rail is shown on Home (Settings toggle). */
+    val homeQueueEnabled: StateFlow<Boolean> = appPreferences.homeQueueEnabled
 
     init {
         Log.d(TAG, "HomeViewModel initialized")

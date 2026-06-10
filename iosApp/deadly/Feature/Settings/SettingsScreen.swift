@@ -394,6 +394,25 @@ struct SettingsScreen: View {
                     }
                 }
 
+                Toggle(isOn: Binding(
+                    get: { container.appPreferences.homeQueueEnabled },
+                    set: { newValue in
+                        container.appPreferences.homeQueueEnabled = newValue
+                        container.analyticsService.track("feature_use", props: [
+                            "feature": "set_home_queue_enabled",
+                            "category": "preference",
+                            "value": String(newValue),
+                        ])
+                    }
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Show Your Queue")
+                        Text("Show the play queue as a rail at the bottom of the home screen.")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Fan Favorites decade")
                     Picker("Fan Favorites decade", selection: Binding(

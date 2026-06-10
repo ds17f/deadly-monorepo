@@ -433,7 +433,7 @@ struct PlayerScreen: View {
                             showQueueSheet = true
                         }
                     } label: {
-                        Label("Up Next", systemImage: "list.number")
+                        Label("Your Queue", systemImage: "list.number")
                     }
 
                     Button {

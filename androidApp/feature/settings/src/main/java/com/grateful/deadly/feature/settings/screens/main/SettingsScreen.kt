@@ -47,6 +47,7 @@ fun SettingsScreen(
     val homeTodayCardSize by viewModel.homeTodayCardSize.collectAsState()
     val homeCollectionsCardSize by viewModel.homeCollectionsCardSize.collectAsState()
     val homePopularEnabled by viewModel.homePopularEnabled.collectAsState()
+    val homeQueueEnabled by viewModel.homeQueueEnabled.collectAsState()
     val homePopularCardSize by viewModel.homePopularCardSize.collectAsState()
     val homePopularDecade by viewModel.homePopularDecade.collectAsState()
     val authState by viewModel.authState.collectAsState()
@@ -261,6 +262,15 @@ fun SettingsScreen(
                 subtitle = "Size of cards in the Fan Favorites carousel.",
                 current = homePopularCardSize,
                 onSelected = { viewModel.setHomePopularCardSize(it) }
+            )
+        }
+
+        item {
+            PreferenceToggleRow(
+                title = "Show Your Queue",
+                subtitle = "Show the play queue as a rail at the bottom of the home screen.",
+                checked = homeQueueEnabled,
+                onCheckedChange = { viewModel.toggleHomeQueueEnabled() }
             )
         }
 

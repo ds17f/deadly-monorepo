@@ -322,8 +322,9 @@ fun MainNavigation(
                             popUpTo("player") { inclusive = true }
                         }
                     },
+                    // Open the show (no autoplay) — the user presses play there.
                     onPlayShow = { showId ->
-                        navController.navigateToPlaylist(showId, autoPlay = true) {
+                        navController.navigateToPlaylist(showId, autoPlay = false) {
                             popUpTo("player") { inclusive = true }
                         }
                     }
@@ -721,61 +722,78 @@ private fun ShowQueueAdvanceOverlay(
     ) {
         countdown?.let { state ->
             Surface(
-                tonalElevation = 6.dp,
-                shadowElevation = 6.dp,
-                shape = RoundedCornerShape(12.dp),
-                color = MaterialTheme.colorScheme.surfaceVariant,
+                shadowElevation = 8.dp,
+                shape = RoundedCornerShape(16.dp),
+                color = MaterialTheme.colorScheme.primaryContainer,
+                contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
             ) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 14.dp, vertical = 10.dp),
+                        .padding(start = 16.dp, end = 8.dp, top = 10.dp, bottom = 10.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
+                    Icon(
+                        painter = IconResources.PlayerControls.SkipNext(),
+                        contentDescription = null,
+                        modifier = Modifier.size(22.dp),
+                    )
+                    Spacer(Modifier.width(12.dp))
                     Column(modifier = Modifier.weight(1f)) {
                         Text(
-                            "Next show in ${state.remaining}s",
-                            style = MaterialTheme.typography.bodyMedium,
+                            "Up next in ${state.remaining}s",
+                            style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.SemiBold,
                         )
                         state.nextLabel?.let {
                             Text(
                                 it,
                                 style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 maxLines = 1,
                             )
                         }
                     }
-                    TextButton(onClick = { appViewModel.cancelQueueCountdown() }) {
-                        Text("Cancel")
-                    }
+                    TextButton(
+                        onClick = { appViewModel.cancelQueueCountdown() },
+                        colors = ButtonDefaults.textButtonColors(
+                            contentColor = MaterialTheme.colorScheme.onPrimaryContainer
+                        )
+                    ) { Text("Cancel", fontWeight = FontWeight.SemiBold) }
                 }
             }
         }
 
         interrupt?.let { info ->
             Surface(
-                tonalElevation = 6.dp,
-                shadowElevation = 6.dp,
-                shape = RoundedCornerShape(12.dp),
-                color = MaterialTheme.colorScheme.surfaceVariant,
+                shadowElevation = 8.dp,
+                shape = RoundedCornerShape(16.dp),
+                color = MaterialTheme.colorScheme.secondaryContainer,
+                contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
             ) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 14.dp, vertical = 10.dp),
+                        .padding(start = 16.dp, end = 8.dp, top = 10.dp, bottom = 10.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
+                    Icon(
+                        painter = IconResources.PlayerControls.Play(),
+                        contentDescription = null,
+                        modifier = Modifier.size(22.dp),
+                    )
+                    Spacer(Modifier.width(12.dp))
                     Text(
                         "Now playing",
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.SemiBold,
                         modifier = Modifier.weight(1f),
                     )
-                    TextButton(onClick = { appViewModel.requeueInterrupted() }) {
-                        Text("Queue ${info.label}", maxLines = 1)
-                    }
+                    TextButton(
+                        onClick = { appViewModel.requeueInterrupted() },
+                        colors = ButtonDefaults.textButtonColors(
+                            contentColor = MaterialTheme.colorScheme.onSecondaryContainer
+                        )
+                    ) { Text("Queue ${info.label}", maxLines = 1, fontWeight = FontWeight.SemiBold) }
                 }
             }
         }

@@ -30,6 +30,7 @@ final class AppPreferences {
     private static let homePopularDecadeKey = "home_popular_decade"
     private static let homeTodayCardSizeKey = "home_today_card_size"
     private static let homeCollectionsCardSizeKey = "home_collections_card_size"
+    private static let homeQueueEnabledKey = "home_queue_enabled"
     private static let endOfShowModeKey = "end_of_show_mode"
     private static let endOfShowImmediateKey = "end_of_show_immediate"
 
@@ -158,6 +159,11 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(homePopularEnabled, forKey: Self.homePopularEnabledKey) }
     }
 
+    /// Show the "Your Queue" home rail (ADR-0010). On by default.
+    var homeQueueEnabled: Bool {
+        didSet { UserDefaults.standard.set(homeQueueEnabled, forKey: Self.homeQueueEnabledKey) }
+    }
+
     /// Card size for the Fan Favorites carousel: "small" or "large".
     var homePopularCardSize: String {
         didSet { UserDefaults.standard.set(homePopularCardSize, forKey: Self.homePopularCardSizeKey) }
@@ -234,6 +240,7 @@ final class AppPreferences {
             Self.homeCollectionsCardSizeKey: "large",
             Self.homeTrendingIncludeAnniversariesKey: false,
             Self.homePopularEnabledKey: true,
+            Self.homeQueueEnabledKey: true,
             Self.homePopularCardSizeKey: "small",
             Self.homePopularDecadeKey: "all",
             Self.endOfShowModeKey: Self.endOfShowQueueHistory,
@@ -269,6 +276,9 @@ final class AppPreferences {
         homePopularEnabled = UserDefaults.standard.object(forKey: Self.homePopularEnabledKey) == nil
             ? true
             : UserDefaults.standard.bool(forKey: Self.homePopularEnabledKey)
+        homeQueueEnabled = UserDefaults.standard.object(forKey: Self.homeQueueEnabledKey) == nil
+            ? true
+            : UserDefaults.standard.bool(forKey: Self.homeQueueEnabledKey)
         homePopularCardSize = UserDefaults.standard.string(forKey: Self.homePopularCardSizeKey) ?? "small"
         homePopularDecade = UserDefaults.standard.string(forKey: Self.homePopularDecadeKey) ?? "all"
         endOfShowMode = UserDefaults.standard.string(forKey: Self.endOfShowModeKey) ?? Self.endOfShowQueueHistory

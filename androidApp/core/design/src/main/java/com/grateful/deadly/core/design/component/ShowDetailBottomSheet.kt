@@ -19,7 +19,8 @@ fun ShowDetailBottomSheet(
     location: String,
     rating: String?,
     onDismiss: () -> Unit,
-    onAddToQueue: (() -> Unit)? = null
+    onAddToQueue: (() -> Unit)? = null,
+    onRemoveFromQueue: (() -> Unit)? = null
 ) {
     ModalBottomSheet(onDismissRequest = onDismiss) {
         Column(
@@ -57,7 +58,15 @@ fun ShowDetailBottomSheet(
                 )
             }
 
-            if (onAddToQueue != null) {
+            if (onRemoveFromQueue != null) {
+                Spacer(modifier = Modifier.height(16.dp))
+                FilledTonalButton(
+                    onClick = onRemoveFromQueue,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("Remove from Queue")
+                }
+            } else if (onAddToQueue != null) {
                 Spacer(modifier = Modifier.height(16.dp))
                 FilledTonalButton(
                     onClick = onAddToQueue,

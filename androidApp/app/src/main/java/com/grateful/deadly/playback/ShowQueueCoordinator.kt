@@ -70,13 +70,19 @@ class ShowQueueCoordinator @Inject constructor(
         if (started) return
         started = true
 
-        // Pop the now-current show; cancel any pending countdown on a user play.
+        // When a show becomes current: pop it from the queue *only if it's the
+        // head* (playing the next-up show consumes it; playing one from deeper in
+        // the queue leaves it in place). Cancel any pending countdown on a user play.
         scope.launch {
             media.currentShowId.collect { showId ->
                 if (showId != null && showId != lastShowId) {
                     lastShowId = showId
-                    playQueue.removeByShowId(showId)
-                    if (!isAutoAdvancing) cancelCountdown()
+                    if (!isAutoAdvancing) {
+                        if (playQueue.peekNext()?.showId == showId) {
+                            playQueue.removeByShowId(showId)
+                        }
+                        cancelCountdown()
+                    }
                 }
             }
         }
@@ -100,14 +106,17 @@ class ShowQueueCoordinator @Inject constructor(
             }
         }
 
-        // End-of-show detection.
+        // End-of-show detection. Only treat ENDED as end-of-show if we actually
+        // played in this session — otherwise a cold-start / restored ENDED state
+        // would spuriously auto-advance (and auto-play) at launch.
         scope.launch {
-            var prev: PlaybackState? = null
+            var hasBeenPlaying = false
             media.playbackState.collect { state ->
-                if (state == PlaybackState.ENDED && prev != PlaybackState.ENDED) {
+                if (state == PlaybackState.PLAYING) hasBeenPlaying = true
+                if (state == PlaybackState.ENDED && hasBeenPlaying) {
+                    hasBeenPlaying = false
                     onShowEnded()
                 }
-                prev = state
             }
         }
     }
@@ -172,7 +181,13 @@ class ShowQueueCoordinator @Inject constructor(
         isAutoAdvancing = true
         try {
             val mode = appPreferences.endOfShowMode.value
-            val queued = playQueue.popNext()
+            val endedShowId = lastShowId
+            // Pop the head, skipping any entry for the show that just ended so we
+            // never replay the current show (guards a queue that still holds it).
+            var queued = playQueue.popNext()
+            while (queued != null && queued.showId == endedShowId) {
+                queued = playQueue.popNext()
+            }
             val targetShowId: String
             val recordingOverride: String?
             val resumeTrackIndex: Int

@@ -20,7 +20,7 @@ struct ShowQueueSheet: View {
                 } else {
                     List {
                         ForEach(items) { item in
-                            Button { playFromQueue(item) } label: {
+                            Button { openShow(item) } label: {
                                 ShowRowView(show: item.show)
                             }
                             .buttonStyle(.plain)
@@ -41,7 +41,7 @@ struct ShowQueueSheet: View {
                     }
                 }
             }
-            .navigationTitle("Up Next")
+            .navigationTitle("Your Queue")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -57,8 +57,10 @@ struct ShowQueueSheet: View {
         }
     }
 
-    /// Play a queued show now. The playback layer pops it from the queue.
-    private func playFromQueue(_ item: QueuedShowItem) {
+    /// Open a queued show in the player *without* auto-playing — the user
+    /// presses play, which pops it from the queue (if it's the head).
+    private func openShow(_ item: QueuedShowItem) {
+        dismiss()
         Task {
             await container.playlistService.loadShow(item.show.id)
             if let rid = item.recordingId,
@@ -66,8 +68,7 @@ struct ShowQueueSheet: View {
                 await container.playlistService.selectRecording(rec)
             }
             let idx = item.resumeTrackIndex ?? 0
-            container.playlistService.playTrack(at: idx, source: "queue")
-            container.playlistService.recordRecentPlay()
+            container.playlistService.playTrack(at: idx, source: "queue", autoPlay: false)
         }
     }
 }

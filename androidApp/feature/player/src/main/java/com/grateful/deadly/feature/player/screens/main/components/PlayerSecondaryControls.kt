@@ -110,14 +110,14 @@ fun PlayerSecondaryControls(
                 )
             }
 
-            // Up Next (the show queue — ADR-0010)
+            // Your Queue (the show queue — ADR-0010)
             IconButton(
                 onClick = onUpNextClick,
                 modifier = Modifier.size(40.dp)
             ) {
                 Icon(
                     painter = IconResources.Content.PlaylistAdd(),
-                    contentDescription = "Up Next",
+                    contentDescription = "Your Queue",
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }

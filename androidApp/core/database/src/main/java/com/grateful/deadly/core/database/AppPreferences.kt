@@ -72,6 +72,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_HOME_COLLECTIONS_CARD_SIZE = "home_collections_card_size"
         private const val KEY_HOME_TRENDING_INCLUDE_ANNIVERSARIES = "home_trending_include_anniversaries"
         private const val KEY_HOME_POPULAR_ENABLED = "home_popular_enabled"
+        private const val KEY_HOME_QUEUE_ENABLED = "home_queue_enabled"
         private const val KEY_HOME_POPULAR_CARD_SIZE = "home_popular_card_size"
         private const val KEY_HOME_POPULAR_DECADE = "home_popular_decade"
     }
@@ -127,6 +128,18 @@ class AppPreferences @Inject constructor(
     fun setHomePopularEnabled(value: Boolean) {
         prefs.edit().putBoolean(KEY_HOME_POPULAR_ENABLED, value).apply()
         _homePopularEnabled.value = value
+    }
+
+    private val _homeQueueEnabled = MutableStateFlow(
+        prefs.getBoolean(KEY_HOME_QUEUE_ENABLED, true)
+    )
+
+    /** Show the "Your Queue" home rail (ADR-0010). On by default. */
+    val homeQueueEnabled: StateFlow<Boolean> = _homeQueueEnabled.asStateFlow()
+
+    fun setHomeQueueEnabled(value: Boolean) {
+        prefs.edit().putBoolean(KEY_HOME_QUEUE_ENABLED, value).apply()
+        _homeQueueEnabled.value = value
     }
 
     private val _homePopularCardSize = MutableStateFlow(

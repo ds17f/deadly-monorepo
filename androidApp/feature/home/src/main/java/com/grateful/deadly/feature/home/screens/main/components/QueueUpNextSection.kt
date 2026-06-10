@@ -9,33 +9,34 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.grateful.deadly.core.model.Show
+import com.grateful.deadly.feature.home.screens.main.HomeViewModel
 
 /**
- * "Up Next" home rail — the persistent show queue (ADR-0010), fixed order with
- * the head (next to play) leftmost. Tap plays the show; long-press opens the
- * detail sheet. Hidden when the queue is empty.
+ * "Your Queue" home rail — the persistent show queue (ADR-0010), fixed order
+ * with the head (next to play) leftmost. Tap opens the show (no autoplay);
+ * long-press offers to remove it (it's already queued). Hidden when empty.
  */
 @Composable
 fun QueueUpNextSection(
-    shows: List<Show>,
-    onPlayShow: (String) -> Unit,
-    onShowLongPress: (Show) -> Unit,
+    items: List<HomeViewModel.QueuedShowUi>,
+    onOpenShow: (String) -> Unit,
+    onLongPress: (HomeViewModel.QueuedShowUi) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    if (shows.isEmpty()) return
+    if (items.isEmpty()) return
 
     Column(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         Text(
-            text = "Up Next",
+            text = "Your Queue",
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold,
         )
         LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-            items(shows, key = { it.id }) { show ->
+            items(items, key = { it.entryId }) { item ->
+                val show = item.show
                 CollectionItemCard(
                     item = HorizontalCollectionItem(
                         id = show.id,
@@ -45,8 +46,8 @@ fun QueueUpNextSection(
                         imageUrl = show.coverImageUrl,
                     ),
                     cardWidth = 160.dp,
-                    onItemClick = { onPlayShow(show.id) },
-                    onItemLongPress = { onShowLongPress(show) },
+                    onItemClick = { onOpenShow(show.id) },
+                    onItemLongPress = { onLongPress(item) },
                 )
             }
         }

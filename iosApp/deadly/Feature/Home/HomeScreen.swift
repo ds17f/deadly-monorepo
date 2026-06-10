@@ -41,12 +41,6 @@ struct HomeScreen: View {
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: DeadlySpacing.sectionSpacing) {
-                // Up Next — the show queue, fixed order with the head leftmost
-                // (ADR-0010). Hidden when the queue is empty.
-                if !container.playQueueService.isEmpty {
-                    queueSection
-                }
-
                 if !content.recentShows.isEmpty {
                     recentShowsSection
                 }
@@ -77,6 +71,12 @@ struct HomeScreen: View {
                     collectionsSection
                 }
 
+                // Your Queue — the show queue (ADR-0010), at the bottom of Home
+                // by default. Hidden when empty or turned off in Settings.
+                if appPreferences.homeQueueEnabled && !container.playQueueService.isEmpty {
+                    queueSection
+                }
+
                 if content.recentShows.isEmpty && content.todayInHistory.isEmpty && content.featuredCollections.isEmpty && !homeService.isLoading {
                     emptyState
                 }
@@ -102,17 +102,16 @@ struct HomeScreen: View {
     private var queueSection: some View {
         let items = container.playQueueService.items
         return VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
-            Text("Up Next")
+            Text("Your Queue")
                 .font(.title2)
                 .fontWeight(.bold)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: DeadlySpacing.itemSpacing) {
-                    // Fixed order — head (next show) leftmost.
+                    // Fixed order — head (next show) leftmost. Tap opens the
+                    // show (no autoplay); the user presses play there.
                     ForEach(items) { item in
-                        Button {
-                            playFromQueue(item)
-                        } label: {
+                        NavigationLink(value: item.show.id) {
                             ShowCarouselCard(
                                 imageRecordingId: item.show.bestRecordingId,
                                 imageUrl: item.show.coverImageUrl,
@@ -135,20 +134,6 @@ struct HomeScreen: View {
                     }
                 }
             }
-        }
-    }
-
-    /// Play a queued show now; the playback layer pops it from the queue.
-    private func playFromQueue(_ item: QueuedShowItem) {
-        Task {
-            await container.playlistService.loadShow(item.show.id)
-            if let rid = item.recordingId,
-               let rec = try? container.showRepository.getRecordingById(rid) {
-                await container.playlistService.selectRecording(rec)
-            }
-            let idx = item.resumeTrackIndex ?? 0
-            container.playlistService.playTrack(at: idx, source: "queue_carousel")
-            container.playlistService.recordRecentPlay()
         }
     }
 
