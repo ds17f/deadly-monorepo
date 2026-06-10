@@ -124,6 +124,24 @@ class MediaControllerRepository @Inject constructor(
     private val _trackAutoAdvanced = MutableSharedFlow<Int>(extraBufferCapacity = 1)
     val trackAutoAdvanced: SharedFlow<Int> = _trackAutoAdvanced.asSharedFlow()
 
+    // ADR-0010 Chunk 1: the show-completion signal for auto-advance. Emits the
+    // showId of the show that just finished — and *only* on natural end of the
+    // last track. This is the positive "final track played to its natural end"
+    // event, NOT a generic "playback stopped": ExoPlayer reaches STATE_ENDED only
+    // after running off the end of the media-item list (user-stop is STATE_IDLE,
+    // pause stays STATE_READY, errors go through onPlayerError). The
+    // `hasPlayedThisSession` guard suppresses the cold-start / restored-ENDED case
+    // (a session restored into ENDED must not fire). Disambiguation lives here, in
+    // the player adapter, so the advance coordinator can subscribe to one clean
+    // event and read no transport state.
+    private val _showCompleted = MutableSharedFlow<String>(extraBufferCapacity = 1)
+    val showCompleted: SharedFlow<String> = _showCompleted.asSharedFlow()
+
+    // True once real playback has occurred since the last completion/load. Set on
+    // the first onIsPlayingChanged(true); cleared when we emit showCompleted so a
+    // single end-of-show fires exactly once.
+    @Volatile private var hasPlayedThisSession: Boolean = false
+
     // Analytics: tracks the currently playing item for playback_end
     private var analyticsPlaybackInfo: Triple<String, String, Int>? = null // showId, recordingId, trackNumber
 
@@ -524,6 +542,10 @@ class MediaControllerRepository @Inject constructor(
                         override fun onIsPlayingChanged(isPlaying: Boolean) {
                             if (isPlaying) {
                                 Log.d(TAG, "🕒🎵 [AUDIO] MediaController detected AUDIO STARTED at ${System.currentTimeMillis()}")
+                                // ADR-0010 Chunk 1: real playback has occurred, so a
+                                // subsequent STATE_ENDED is a genuine end-of-show (not a
+                                // cold-start restored ENDED).
+                                hasPlayedThisSession = true
                                 // If no playback_start has been emitted for the current item
                                 // (restore loaded items with playWhenReady=false), emit now
                                 // that playback has actually begun.
@@ -620,6 +642,25 @@ class MediaControllerRepository @Inject constructor(
 
                             currentExoPlayerState = playbackState
                             updatePlaybackState()
+
+                            // ADR-0010 Chunk 1: emit onShowCompleted on the natural end
+                            // of the last track. STATE_ENDED is reached only after the
+                            // media-item list runs off the end; the session guard rejects
+                            // a restored-into-ENDED cold start; the prevState check makes
+                            // it fire exactly once.
+                            if (playbackState == Player.STATE_ENDED &&
+                                prevState != Player.STATE_ENDED &&
+                                hasPlayedThisSession
+                            ) {
+                                hasPlayedThisSession = false
+                                val completedShowId = controller.currentMediaItem
+                                    ?.let { extractShowIdFromMediaItem(it) }
+                                    ?: _currentShowId.value
+                                if (completedShowId != null) {
+                                    Log.d(TAG, "🏁 [SHOW-COMPLETE] onShowCompleted(showId=$completedShowId)")
+                                    _showCompleted.tryEmit(completedShowId)
+                                }
+                            }
 
                             // Stall detection: only count BUFFERING as a stall if we were
                             // already READY (i.e. mid-playback rebuffer). Initial load

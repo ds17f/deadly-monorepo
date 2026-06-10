@@ -118,6 +118,11 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     // MARK: - AudioEngineProtocol callbacks
     nonisolated(unsafe) var onStateChange: ((PlaybackState) -> Void)?
     nonisolated(unsafe) var onTrackComplete: (() -> Void)?
+    /// Fired when the *last* track of the queue reaches its natural end of file
+    /// (the positive "show completed" signal — see ADR-0010 Chunk 1). Distinct
+    /// from onTrackComplete (mid-queue auto-advance) and from a user stop/pause
+    /// or an error (which never reach this `.eof && isLastTrack` path).
+    nonisolated(unsafe) var onQueueComplete: (() -> Void)?
     nonisolated(unsafe) var onProgressUpdate: ((PlaybackProgress) -> Void)?
     /// Fired when the engine surfaces a user-visible playback failure.
     /// The second parameter, when non-nil, is the playback position at the
@@ -815,6 +820,7 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         if stopReason == .eof && isLastTrack {
             logger.notice("[PB] final track finished, queue ended")
             onStateChange?(.ended)
+            onQueueComplete?()
         }
     }
 
