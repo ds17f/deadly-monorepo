@@ -526,8 +526,15 @@ export default function HeaderPlayer() {
     tracks && currentTrackIndex >= 0 ? tracks[currentTrackIndex] : null;
   const hasNext = tracks ? currentTrackIndex < tracks.length - 1 : false;
   const hasPrevious = currentTrackIndex > 0;
-  // Local audio engaged (we own the Connect session and play here).
-  const isActive = isActiveDevice && status !== "idle";
+  // Local audio is what we display and control unless we're remote-controlling
+  // another device. Crucially this is true even with NO Connect session — signed
+  // out, or the WS not yet connected — when `isActiveDevice` is false but local
+  // playback is still what's making sound. Using `isActiveDevice` here is the bug
+  // that left signed-out playback with a blank title and a wrong play/pause icon
+  // (the display branches below fell through to reading a null `connectState`).
+  const localAuthoritative = !isRemoteControlling;
+  // Local audio engaged (we play here, not remote-controlling another device).
+  const isActive = localAuthoritative && status !== "idle";
 
   // Another device is the active player.
   const isRemoteActive = isRemoteControlling && !!connectState?.activeDeviceId;
@@ -590,8 +597,8 @@ export default function HeaderPlayer() {
     ? connectState.tracks[connectState.trackIndex] ?? null
     : null;
 
-  const displayElapsed = isActiveDevice ? elapsed : interpolatedMs / 1000;
-  const displayDuration = isActiveDevice ? duration : (connectState?.durationMs ?? 0) / 1000;
+  const displayElapsed = localAuthoritative ? elapsed : interpolatedMs / 1000;
+  const displayDuration = localAuthoritative ? duration : (connectState?.durationMs ?? 0) / 1000;
   const progress = displayDuration > 0 ? (displayElapsed / displayDuration) * 100 : 0;
 
   // Use the locally-resolved show (date/venue/location from Archive.org, set on
@@ -599,7 +606,7 @@ export default function HeaderPlayer() {
   // Fall back to the showId slug for the date until that resolves.
   const sessionShowId = connectState?.showId ?? null;
   const showInfo =
-    activeShow && (isActiveDevice || activeShow.showId === sessionShowId)
+    activeShow && (localAuthoritative || activeShow.showId === sessionShowId)
       ? showLabel(activeShow)
       : sessionShowId
         ? {
@@ -608,14 +615,14 @@ export default function HeaderPlayer() {
           }
         : null;
 
-  const displayTrackTitle = isActiveDevice
+  const displayTrackTitle = localAuthoritative
     ? currentTrack?.title ?? null
     : remoteTrack?.title ?? null;
 
-  const displayTrackCount = isActiveDevice ? (tracks?.length ?? 0) : (connectState?.tracks.length ?? 0);
-  const displayTrackIndex = isActiveDevice ? currentTrackIndex : (connectState?.trackIndex ?? 0);
+  const displayTrackCount = localAuthoritative ? (tracks?.length ?? 0) : (connectState?.tracks.length ?? 0);
+  const displayTrackIndex = localAuthoritative ? currentTrackIndex : (connectState?.trackIndex ?? 0);
 
-  const displayIsPlaying = isActiveDevice
+  const displayIsPlaying = localAuthoritative
     ? (status === "playing" || status === "buffering")
     : (connectState?.playing ?? false);
 
@@ -673,9 +680,9 @@ export default function HeaderPlayer() {
   // Track index to highlight in the queue: our local audio index when we're the
   // active player, else the authoritative server index (the local audio index
   // does not follow remote skips — only the active device's does).
-  const queueTrackIndex = isActiveDevice ? currentTrackIndex : (connectState?.trackIndex ?? currentTrackIndex);
+  const queueTrackIndex = localAuthoritative ? currentTrackIndex : (connectState?.trackIndex ?? currentTrackIndex);
   // Likewise the playing indicator: server truth when remote.
-  const queueStatus = isActiveDevice ? status : (connectState?.playing ? "playing" : "paused");
+  const queueStatus = localAuthoritative ? status : (connectState?.playing ? "playing" : "paused");
 
   // Rail track pick. playTrack routes through Connect: active → jump locally and
   // broadcast; remote/parked → ask the server to move and our audio follows.
