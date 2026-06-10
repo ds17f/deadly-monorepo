@@ -101,9 +101,19 @@ web + Android; iOS verification in progress.**
 - **iOS ✓** — verified in Console.app (`PlaylistService` category): fires on
   natural end-of-show, silent on the negatives.
 
-**Chunk 1 COMPLETE on all three platforms.** Next: Chunk 2 — chronological
-auto-advance + the Connect "park" primitive (verify the original
-Android-under-Connect bug is dead).
+**Chunk 1 COMPLETE on all three platforms.**
+
+**Chunk 2 — Android DONE + device-verified (`1f5091a8`).** Chronological
+auto-advance works signed-out and signed-in; under Connect the park
+(`sendStop`) fires and the 15s countdown survives with **no drag-back/restart**
+— the original v1 bug is dead. Built as `playShow(show)` (canonical play entry
+in `core:playlist`: resolve recording/format/tracks → playAll + sendLoad) +
+`AutoAdvanceCoordinator` (app; subscribes to `showCompleted`, reads no transport
+state). Remaining in Chunk 2:
+1. Cancelable countdown **overlay UI** (Android advances silently after 15s today).
+2. **iOS + web parity** (lighter — both already consolidate play+Connect).
+3. The **"when a show ends" setting** (on/off, countdown/immediate).
+4. The **play/pause affordance fix** (iOS miniplayer icon + Android restore).
 
 ### Known pre-existing bug to fix *during* Chunk 2 (not a Chunk 1 regression)
 iOS miniplayer play/pause icon **sometimes** sticks on "play" after
