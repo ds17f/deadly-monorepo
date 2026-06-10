@@ -37,15 +37,16 @@ fun QueueUpNextSection(
         LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             items(items, key = { it.entryId }) { item ->
                 val show = item.show
+                // Small cards, same size as the Trending Now rail.
                 CollectionItemCard(
                     item = HorizontalCollectionItem(
                         id = show.id,
-                        displayText = "${show.date}\n${show.venue.name}\n${show.location.displayText}",
+                        displayText = show.date,
                         type = CollectionItemType.SHOW,
                         recordingId = show.bestRecordingId,
                         imageUrl = show.coverImageUrl,
                     ),
-                    cardWidth = 160.dp,
+                    cardWidth = 100.dp,
                     onItemClick = { onOpenShow(show.id) },
                     onItemLongPress = { onLongPress(item) },
                 )

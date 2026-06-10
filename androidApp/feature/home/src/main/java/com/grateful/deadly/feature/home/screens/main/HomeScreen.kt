@@ -143,6 +143,18 @@ fun HomeScreen(
             item { trendingItem() }
         }
 
+        // Your Queue — the show queue (ADR-0010), under Today In History.
+        // Hidden when empty or turned off in Settings.
+        if (queueEnabled && queueShows.isNotEmpty()) {
+            item {
+                QueueUpNextSection(
+                    items = queueShows,
+                    onOpenShow = onPlayShow,
+                    onLongPress = { item -> queueDetailItem = item },
+                )
+            }
+        }
+
         // Fan Favorites — sits below the Trending/Today pair. Hidden when
         // the user has the rail off, or when no decade has any results
         // (small install base, nothing has met the floor). The selected
@@ -191,18 +203,6 @@ fun HomeScreen(
                     viewModel.trackCollectionsShowMore()
                 },
             )
-        }
-
-        // Your Queue — the show queue (ADR-0010), at the bottom of Home by
-        // default. Hidden when empty or when the user turns it off in Settings.
-        if (queueEnabled && queueShows.isNotEmpty()) {
-            item {
-                QueueUpNextSection(
-                    items = queueShows,
-                    onOpenShow = onPlayShow,
-                    onLongPress = { item -> queueDetailItem = item },
-                )
-            }
         }
     }
 }

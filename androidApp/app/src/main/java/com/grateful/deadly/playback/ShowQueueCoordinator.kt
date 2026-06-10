@@ -2,6 +2,7 @@ package com.grateful.deadly.playback
 
 import android.util.Log
 import com.grateful.deadly.core.api.playqueue.PlayQueueService
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
@@ -39,6 +40,7 @@ class ShowQueueCoordinator @Inject constructor(
     private val playQueue: PlayQueueService,
     private val showRepository: ShowRepository,
     private val appPreferences: AppPreferences,
+    private val connectService: ConnectService,
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
@@ -150,6 +152,10 @@ class ShowQueueCoordinator @Inject constructor(
         val mode = appPreferences.endOfShowMode.value
         if (mode == AppPreferences.END_OF_SHOW_OFF) return
 
+        // In a Connect session, only the active device drives auto-advance; a
+        // device remote-controlling another must not advance its own playback.
+        if (connectService.connectState.value != null && !connectService.isActiveDevice.value) return
+
         val nextQueued = playQueue.peekNext()
         val nextHistory = if (nextQueued == null && mode == AppPreferences.END_OF_SHOW_QUEUE_HISTORY) {
             lastShowId?.let { showRepository.getShowById(it) }
@@ -161,7 +167,11 @@ class ShowQueueCoordinator @Inject constructor(
         val label = nextQueued?.let { showRepository.getShowById(it.showId)?.date }
             ?: nextHistory?.date
 
-        if (appPreferences.endOfShowImmediate.value) {
+        // In a Connect session, advance immediately: leaving the show paused at
+        // ENDED during a countdown lets Connect's "server still playing" state
+        // drag the active device back and restart the track.
+        val inConnectSession = connectService.connectState.value != null
+        if (appPreferences.endOfShowImmediate.value || inConnectSession) {
             advance()
         } else {
             cancelCountdown()
@@ -221,6 +231,25 @@ class ShowQueueCoordinator @Inject constructor(
                 startPosition = resumePositionMs,
                 source = "auto_advance",
             )
+
+            // Tell Connect about the new show so the server state matches — else
+            // the active device gets dragged back to the old show (the repeat
+            // bug). Mirrors what the play path does on a normal play.
+            if (connectService.connectState.value != null) {
+                val tracks = media.sessionTracksFor(recordingId)
+                connectService.sendLoad(
+                    showId = show.id,
+                    recordingId = recordingId,
+                    tracks = tracks,
+                    trackIndex = resumeTrackIndex,
+                    positionMs = resumePositionMs.toInt(),
+                    durationMs = tracks.getOrNull(resumeTrackIndex)?.durationMs ?: 0,
+                    date = show.date,
+                    venue = show.venue.name,
+                    location = show.location.displayText,
+                    autoplay = true,
+                )
+            }
         } catch (e: Exception) {
             Log.e(TAG, "advance() failed", e)
         } finally {

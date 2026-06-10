@@ -22,6 +22,64 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.FavoriteShowViewModel
 import com.grateful.deadly.core.model.FavoritesDownloadStatus
+import com.grateful.deadly.core.model.Show
+
+/**
+ * Queue row — styled like [FavoriteShowListItem] (artwork + 2-line) for the
+ * Favorites "Queue" tab (ADR-0010). Tap opens the show; the trailing button
+ * removes it from the queue.
+ */
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+fun QueueShowListItem(
+    show: Show,
+    onClick: () -> Unit,
+    onRemove: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier
+            .fillMaxWidth()
+            .semantics(mergeDescendants = true) {}
+            .combinedClickable(onClick = onClick, onLongClick = {}),
+        colors = CardDefaults.cardColors(containerColor = Color.Transparent)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            ShowArtwork(
+                recordingId = show.bestRecordingId,
+                contentDescription = "Show artwork for ${show.date}",
+                modifier = Modifier.size(60.dp).clip(RoundedCornerShape(8.dp)),
+                imageUrl = show.coverImageUrl
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = "${show.date} • ${show.location.displayText}",
+                    style = MaterialTheme.typography.titleSmall,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                Text(
+                    text = show.venue.name,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+            IconButton(onClick = onRemove) {
+                Icon(
+                    painter = IconResources.Navigation.Close(),
+                    contentDescription = "Remove from queue",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+    }
+}
 
 /**
  * Favorite Show List Item Component

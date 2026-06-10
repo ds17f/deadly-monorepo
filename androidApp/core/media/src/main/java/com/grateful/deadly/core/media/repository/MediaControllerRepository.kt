@@ -363,6 +363,22 @@ class MediaControllerRepository @Inject constructor(
         }
     }
 
+    /**
+     * Build the Connect session track list (title + duration, in playback order)
+     * for a recording, using the same format selection as [playShow]. Used by
+     * end-of-show auto-advance to notify Connect of the new show (ADR-0010), so
+     * the server state matches and the active device isn't dragged back.
+     */
+    suspend fun sessionTracksFor(recordingId: String): List<com.grateful.deadly.core.model.ConnectSessionTrack> {
+        val format = resolvePlayableFormat(recordingId) ?: return emptyList()
+        val tracks = archiveService.getRecordingTracks(recordingId).getOrNull() ?: return emptyList()
+        return tracks.filter { it.format.equals(format, ignoreCase = true) }
+            .map { com.grateful.deadly.core.model.ConnectSessionTrack(
+                title = it.title ?: it.name,
+                durationMs = parseDurationToMs(it.duration).toInt(),
+            ) }
+    }
+
     /** Pick the best available audio format for a recording (priority list, then
      *  whatever exists). Mirrors PlaylistService's selection for headless plays. */
     private suspend fun resolvePlayableFormat(recordingId: String): String? {

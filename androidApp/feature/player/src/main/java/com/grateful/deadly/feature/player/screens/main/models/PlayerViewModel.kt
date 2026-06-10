@@ -17,9 +17,6 @@ import com.grateful.deadly.core.model.LineupMember
 import com.grateful.deadly.core.model.PlaybackStatus
 import com.grateful.deadly.core.model.QueueInfo
 import com.grateful.deadly.core.connect.ConnectService
-import com.grateful.deadly.core.api.playqueue.PlayQueueService
-import com.grateful.deadly.core.domain.repository.ShowRepository
-import com.grateful.deadly.core.model.Show
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.async
@@ -35,8 +32,6 @@ class PlayerViewModel @Inject constructor(
     private val reviewService: ReviewService,
     private val equalizerRepository: EqualizerRepository,
     private val connectService: ConnectService,
-    private val playQueueService: PlayQueueService,
-    private val showRepository: ShowRepository,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
 ) : ViewModel() {
@@ -44,20 +39,6 @@ class PlayerViewModel @Inject constructor(
     companion object {
         private const val TAG = "PlayerViewModel"
     }
-
-    /** A queued upcoming show, hydrated for the player "Up Next" sheet (ADR-0010). */
-    data class QueuedShowUi(val entryId: Long, val show: Show)
-
-    /** Upcoming queued shows, head first. */
-    val queueShows: StateFlow<List<QueuedShowUi>> = playQueueService.queue
-        .map { queued ->
-            val byId = showRepository.getShowsByIds(queued.map { it.showId }).associateBy { it.id }
-            queued.mapNotNull { q -> byId[q.showId]?.let { QueuedShowUi(q.id, it) } }
-        }
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
-
-    fun removeFromQueue(entryId: Long) = viewModelScope.launch { playQueueService.remove(entryId) }
-    fun clearQueue() = viewModelScope.launch { playQueueService.clear() }
 
     val connectRemoteDeviceName: StateFlow<String?> = combine(
         connectService.connectState,

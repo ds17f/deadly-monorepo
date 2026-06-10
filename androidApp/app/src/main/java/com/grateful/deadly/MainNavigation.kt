@@ -321,12 +321,6 @@ fun MainNavigation(
                         navController.navigateToPlaylist(showId, recordingId) {
                             popUpTo("player") { inclusive = true }
                         }
-                    },
-                    // Open the show (no autoplay) — the user presses play there.
-                    onPlayShow = { showId ->
-                        navController.navigateToPlaylist(showId, autoPlay = false) {
-                            popUpTo("player") { inclusive = true }
-                        }
                     }
                 )
 

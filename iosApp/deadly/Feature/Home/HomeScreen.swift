@@ -59,6 +59,12 @@ struct HomeScreen: View {
                     if !trendingShows.isEmpty { trendingSection }
                 }
 
+                // Your Queue — the show queue (ADR-0010), under Today In History.
+                // Hidden when empty or turned off in Settings.
+                if appPreferences.homeQueueEnabled && !container.playQueueService.isEmpty {
+                    queueSection
+                }
+
                 // "Fan Favorites" — sits below the Trending/Today pair until
                 // the drag-list reorder lands. Render as long as *some* decade
                 // has content; an empty selected decade still shows the
@@ -69,12 +75,6 @@ struct HomeScreen: View {
 
                 if !content.featuredCollections.isEmpty {
                     collectionsSection
-                }
-
-                // Your Queue — the show queue (ADR-0010), at the bottom of Home
-                // by default. Hidden when empty or turned off in Settings.
-                if appPreferences.homeQueueEnabled && !container.playQueueService.isEmpty {
-                    queueSection
                 }
 
                 if content.recentShows.isEmpty && content.todayInHistory.isEmpty && content.featuredCollections.isEmpty && !homeService.isLoading {
@@ -112,12 +112,13 @@ struct HomeScreen: View {
                     // show (no autoplay); the user presses play there.
                     ForEach(items) { item in
                         NavigationLink(value: item.show.id) {
+                            // Small cards, same size as the Trending Now rail.
                             ShowCarouselCard(
                                 imageRecordingId: item.show.bestRecordingId,
                                 imageUrl: item.show.coverImageUrl,
-                                lines: [item.show.date, item.show.venue.name, item.show.location.displayText],
+                                lines: [item.show.date],
                                 recordingCount: item.show.recordingCount,
-                                size: todayCardSize.width
+                                size: trendingCardSize.width
                             )
                         }
                         .buttonStyle(.plain)

@@ -24,7 +24,6 @@ fun PlayerSecondaryControls(
     onFavoriteClick: () -> Unit,
     onShareClick: () -> Unit,
     onQueueClick: () -> Unit,
-    onUpNextClick: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -106,18 +105,6 @@ fun PlayerSecondaryControls(
                 Icon(
                     painter = IconResources.PlayerControls.Queue(),
                     contentDescription = "Queue",
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-
-            // Your Queue (the show queue — ADR-0010)
-            IconButton(
-                onClick = onUpNextClick,
-                modifier = Modifier.size(40.dp)
-            ) {
-                Icon(
-                    painter = IconResources.Content.PlaylistAdd(),
-                    contentDescription = "Your Queue",
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }

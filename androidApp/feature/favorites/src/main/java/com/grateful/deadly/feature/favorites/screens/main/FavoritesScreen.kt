@@ -176,10 +176,6 @@ fun FavoritesScreen(
                 )
                 FavoritesTab.QUEUE -> QueueTabContent(
                     items = queueShows,
-                    onPlayClick = { item ->
-                        onNavigateToPlayer(item.show.id)
-                        viewModel.removeFromQueue(item.entryId)
-                    },
                     onShowClick = onNavigateToShow,
                     onRemove = { viewModel.removeFromQueue(it) },
                     onClear = { viewModel.clearQueue() },
@@ -880,7 +876,6 @@ private fun extractMonthFromDate(date: String): Int? {
 @Composable
 private fun QueueTabContent(
     items: List<FavoritesViewModel.QueuedShowUi>,
-    onPlayClick: (FavoritesViewModel.QueuedShowUi) -> Unit,
     onShowClick: (String) -> Unit,
     onRemove: (Long) -> Unit,
     onClear: () -> Unit,
@@ -915,29 +910,13 @@ private fun QueueTabContent(
             Spacer(Modifier.weight(1f))
             TextButton(onClick = onClear) { Text("Clear") }
         }
-        LazyColumn(modifier = Modifier.fillMaxSize()) {
+        LazyColumn(modifier = Modifier.fillMaxSize().padding(horizontal = 8.dp)) {
             items(items, key = { it.entryId }) { item ->
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 4.dp)
-                        .clickable { onPlayClick(item) }
-                ) {
-                    Row(
-                        modifier = Modifier.padding(12.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(item.show.displayTitle, style = MaterialTheme.typography.titleSmall)
-                            Text(
-                                item.show.date,
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                        TextButton(onClick = { onRemove(item.entryId) }) { Text("Remove") }
-                    }
-                }
+                QueueShowListItem(
+                    show = item.show,
+                    onClick = { onShowClick(item.show.id) },
+                    onRemove = { onRemove(item.entryId) },
+                )
             }
         }
     }
