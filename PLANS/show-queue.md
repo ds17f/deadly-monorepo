@@ -3,11 +3,16 @@
 Branch `show-queue`. Design spec: [`docs/adr/0010-show-queue.md`](../docs/adr/0010-show-queue.md).
 Roadmap: §1 bullet 1 in [`ROADMAP.md`](ROADMAP.md).
 
-## Deployed 2026-06-09 (both physical devices)
-A working **visible show queue** is on iOS ("Damian's iPhone") and Android
-("Pixel 6 - 16"). Build/install commands:
+## Status 2026-06-10: feature COMPLETE, deployed both devices, ready for PR
+The full ADR-0010 feature (queue + auto-advance + countdown + interrupt
+snackbar + Settings + "Your Queue" home rail + add-to-queue entry points) is
+built, deployed, and verified through two on-device feedback rounds on iOS
+("Damian's iPhone") and Android ("Pixel 6 - 16"). Build/install commands:
 - iOS: `KEYCHAIN_PASSWORD="Hack your world5" make ios-remote-install`
 - Android: `cd androidApp && ./gradlew installDebug`
+
+Server sync + web queue is a separate follow-up project:
+[`show-queue-sync.md`](show-queue-sync.md).
 
 ## Done
 - **ADR-0010** + ROADMAP §1 rewrite.
@@ -66,43 +71,42 @@ A working **visible show queue** is on iOS ("Damian's iPhone") and Android
   `iosApp/deadly/Feature/Favorites/FavoritesScreen.swift` (`queueContent`,
   `playFromQueue`, "Add to Queue" in the context menu).
 
-## Not done (the deeper half — only queue + add + play-pop shipped)
-1. **End-of-show auto-advance + cancelable countdown** — neither platform.
-   Playing from the queue plays + pops, but a show *ending* does nothing yet.
-   Gate by the end-of-show pref (off / queue / queue-then-history). Hooks:
-   Android `MediaControllerRepository.playbackState == ENDED`; iOS StreamPlayer
-   completion. **Android caveat:** `PlaylistService.playTrack` is a stub — the
-   real play pipeline is in feature `PlaylistViewModel.playAll`; background
-   advance needs a service-level "play show by id" extraction. iOS
-   `playlistService.loadShow + playTrack` already plays (easier first target).
-2. **Interrupt "Queue A" snackbar** (resume snapshot) — `enqueueNext` + resume
-   columns exist but are unused.
-3. **Player queue button** (open the queue from now-playing) — neither.
-4. **Settings UI** for end-of-show behavior — Android pref exists, no UI; iOS has
-   no pref yet.
-5. **Android reorder** — service `move()` exists; no drag UI (iOS has it).
-6. **More add-to-queue entry points** — search rows, player menu, collections,
-   shared-link open.
+## Done (deeper half, commits 69cb6ba9 + 9161a853 + d2762477)
+- **End-of-show auto-advance + cancelable 15s countdown** (or immediate mode),
+  both platforms, gated by the end-of-show pref. Guards: only fires after real
+  playback (no cold-start/restored-ENDED autoplay), advance skips a queued
+  entry for the show that just ended, Connect-aware (only the active device
+  advances, notifies Connect via sendLoad, immediate-advance in a session).
+- **Interrupt "Queue A" snackbar** with resume snapshot on play-now displace.
+- **Settings UI** — "When a Show Ends" mode + timing pickers, both platforms;
+  iOS pref added to mirror Android's `AppPreferences.endOfShowMode`.
+- **Add-to-queue entry points** — playlist menu, home context menus, search
+  actions sheet, show detail menu.
+- **"Your Queue" home rail** (small cards, under Today In History, Settings
+  toggle to hide). Tap opens the show page without autoplay.
+- **Head-only pop** — playing a show only consumes it if it's the queue head;
+  `removeByShowId` pops a queued show when played from anywhere.
+- Player "Up Next" button was added then **removed** (d2762477) — the player
+  screen keeps the within-show track queue; the show queue lives on Home +
+  Favorites.
+
+## Not done (deliberately left out of this branch)
+1. **Android drag-reorder** — `FavoritesViewModel.moveInQueue` + service
+   `move()` exist; no drag UI in `FavoritesScreen` (iOS has EditButton reorder).
+2. **Server sync + web queue** — see [`show-queue-sync.md`](show-queue-sync.md).
 
 ## How to resume (after a context clear)
 
-1. `git checkout show-queue` (9 commits, local only, nothing pushed; tree clean).
-2. Read `docs/adr/0010-show-queue.md` first — it is the spec.
-3. Both apps are already installed on the physical devices (see top). To rebuild:
+1. `git checkout show-queue`; read `docs/adr/0010-show-queue.md` (the spec).
+2. Feature is complete + device-verified. Next step = push + PR
+   (title must be a conventional commit, e.g.
+   `feat(mobile/player): show queue — auto-advance, interrupts, Your Queue rail (ADR-0010)`).
+3. To rebuild:
    - Android: `cd androidApp && ./gradlew installDebug` (device "Pixel 6").
    - iOS: `KEYCHAIN_PASSWORD="Hack your world5" make ios-remote-install`
      (device "Damian's iPhone"; simulator alt: `make ios-remote-sim`).
    - To see iOS compiler errors (the make target hides them behind `tail -20`),
      ssh the remote and grep `error:` directly — REMOTE_HOST/REMOTE_PATH in Makefile.
-4. Next task = **auto-advance** (item 1 below). Start with **iOS** — its
-   `playlistService.loadShow + playTrack` already plays, and `PlaybackState.ended`
-   exists (`Packages/SwiftAudioStreamEx/.../Models/PlaybackState.swift`); observe
-   `streamPlayer.playbackState == .ended`, then `playQueueService.popNext()` and
-   play it (gate by an end-of-show setting; add the iOS pref to mirror Android's
-   `AppPreferences.endOfShowMode`). Android is harder: `PlaylistService.playTrack`
-   is a stub — extract a service-level "play show by id" from feature
-   `PlaylistViewModel.playAll`, then observe
-   `MediaControllerRepository.playbackState == ENDED`.
 
 ## Design decisions settled in conversation (all captured in ADR-0010)
 - Unified "always playing from the queue" (Apple-Music Playing-Next), NOT a
