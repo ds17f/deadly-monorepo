@@ -54,6 +54,16 @@ class AppPreferences @Inject constructor(
         private const val KEY_LOCAL_BACKFILLED_V1 = "local_backfilled_v1"
         private const val KEY_DEVELOPER_MODE_UNLOCKED = "developer_mode_unlocked"
         private const val KEY_PLAYER_CONTROLS_STYLE = "player_controls_style"
+        private const val KEY_END_OF_SHOW_MODE = "end_of_show_mode"
+        private const val KEY_END_OF_SHOW_IMMEDIATE = "end_of_show_immediate"
+
+        /** End-of-show auto-advance sources (ADR-0010). */
+        const val END_OF_SHOW_OFF = "off"
+        const val END_OF_SHOW_QUEUE = "queue"
+        const val END_OF_SHOW_QUEUE_HISTORY = "queue_history"
+
+        /** Countdown length before an auto-advance fires, in seconds. */
+        const val END_OF_SHOW_COUNTDOWN_SECONDS = 15
         private const val KEY_HOME_TRENDING_WINDOW = "home_trending_window"
         private const val KEY_HOME_TRENDING_ABOVE_TODAY = "home_trending_above_today"
         private const val KEY_HOME_RECENT_ROWS = "home_recent_rows"
@@ -309,6 +319,36 @@ class AppPreferences @Inject constructor(
     fun setPlayerControlsStyle(value: String) {
         prefs.edit().putString(KEY_PLAYER_CONTROLS_STYLE, value).apply()
         _playerControlsStyle.value = value
+    }
+
+    // ── End-of-show behavior (show queue, ADR-0010) ──────────────────────────
+
+    private val _endOfShowMode = MutableStateFlow(
+        prefs.getString(KEY_END_OF_SHOW_MODE, null) ?: END_OF_SHOW_QUEUE_HISTORY
+    )
+
+    /**
+     * What happens when a show ends. One of [END_OF_SHOW_OFF],
+     * [END_OF_SHOW_QUEUE], [END_OF_SHOW_QUEUE_HISTORY]. Default: queue, then
+     * fall back to the next show chronologically when the queue is empty.
+     */
+    val endOfShowMode: StateFlow<String> = _endOfShowMode.asStateFlow()
+
+    fun setEndOfShowMode(value: String) {
+        prefs.edit().putString(KEY_END_OF_SHOW_MODE, value).apply()
+        _endOfShowMode.value = value
+    }
+
+    private val _endOfShowImmediate = MutableStateFlow(
+        prefs.getBoolean(KEY_END_OF_SHOW_IMMEDIATE, false)
+    )
+
+    /** True = advance with no countdown. False (default) = 15s cancelable countdown. */
+    val endOfShowImmediate: StateFlow<Boolean> = _endOfShowImmediate.asStateFlow()
+
+    fun setEndOfShowImmediate(value: Boolean) {
+        prefs.edit().putBoolean(KEY_END_OF_SHOW_IMMEDIATE, value).apply()
+        _endOfShowImmediate.value = value
     }
 
     // ── Analytics ──────────────────────────────────────────────────────
