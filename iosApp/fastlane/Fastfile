@@ -204,29 +204,64 @@ platform :ios do
     release_notes = (ENV['RELEASE_NOTES'] || '').strip
     release_notes_hash = release_notes.empty? ? nil : { "en-US" => release_notes }
 
-    deliver(
-      api_key: api_key,
-      app_identifier: "com.grateful.deadly",
-      app_version: version,
-      submit_for_review: true,
-      automatic_release: true,
-      phased_release: false,
-      force: true,
-      skip_screenshots: true,
-      skip_metadata: release_notes_hash.nil?,
-      skip_binary_upload: true,
-      precheck_include_in_app_purchases: false,
-      release_notes: release_notes_hash,
-      # Note: content_rights_contains_third_party_content is *not* included
-      # here. It maps to ASC's contentRightsDeclaration, which can't be
-      # patched once the app has a stable value (already set on this app
-      # from a prior submission). Sending it triggers ASC error 409:
-      # "An attribute value is not acceptable for the current resource state".
-      submission_information: {
-        add_id_info_uses_idfa: false,
-        export_compliance_uses_encryption: false,
-      }
-    )
+    begin
+      deliver(
+        api_key: api_key,
+        app_identifier: "com.grateful.deadly",
+        app_version: version,
+        submit_for_review: true,
+        automatic_release: true,
+        phased_release: false,
+        force: true,
+        skip_screenshots: true,
+        skip_metadata: release_notes_hash.nil?,
+        skip_binary_upload: true,
+        precheck_include_in_app_purchases: false,
+        release_notes: release_notes_hash,
+        # Note: content_rights_contains_third_party_content is *not* included
+        # here. It maps to ASC's contentRightsDeclaration, which can't be
+        # patched once the app has a stable value (already set on this app
+        # from a prior submission). Sending it triggers ASC error 409:
+        # "An attribute value is not acceptable for the current resource state".
+        submission_information: {
+          add_id_info_uses_idfa: false,
+          export_compliance_uses_encryption: false,
+        }
+      )
+    rescue => e
+      # Idempotent success check. `deliver` attaches the build *then* submits
+      # for review; if ASC has already moved the version past the editable
+      # state (build attached + submitted on a prior pass, or ASC auto-attached
+      # it), the attach step throws "pre-release build could not be added" even
+      # though the submission genuinely succeeded. Query the version's real
+      # state and treat any submitted/released state as success instead of
+      # failing the lane (which previously prompted a retry that always failed
+      # because the version is locked). Only an unexpected, still-editable state
+      # re-raises.
+      submitted_states = %w[
+        WAITING_FOR_REVIEW IN_REVIEW PENDING_DEVELOPER_RELEASE
+        PENDING_APPLE_RELEASE PROCESSING_FOR_APP_STORE READY_FOR_SALE
+      ]
+      require 'spaceship'
+      Spaceship::ConnectAPI.token = Spaceship::ConnectAPI::Token.create(
+        key_id: "V862XWV7WB",
+        issuer_id: "9501cc7b-1a6c-4e4d-8c37-c04149a31886",
+        filepath: api_key_path
+      )
+      asc_app = Spaceship::ConnectAPI::App.find("com.grateful.deadly")
+      asc_version = asc_app&.get_app_store_versions(
+        filter: { versionString: version }
+      )&.first
+      state = asc_version&.app_store_state
+
+      if submitted_states.include?(state)
+        UI.important("deliver exited non-zero (#{e.message.lines.first&.strip})")
+        UI.success("✅ v#{version} is already in '#{state}' — submission succeeded; ignoring the false failure.")
+      else
+        UI.error("v#{version} state is '#{state || 'unknown'}' — not a submitted state, re-raising.")
+        raise e
+      end
+    end
 
     UI.success("✅ Submitted v#{version} for App Store review (auto-release + phased rollout)")
   end
