@@ -1,3 +1,4 @@
+import Foundation
 import GRDB
 
 /// Data access for the persistent show queue (ADR-0010).
