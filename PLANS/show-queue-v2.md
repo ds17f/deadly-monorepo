@@ -109,9 +109,21 @@ auto-advance works signed-out and signed-in; under Connect the park
 — the original v1 bug is dead. Built as `playShow(show)` (canonical play entry
 in `core:playlist`: resolve recording/format/tracks → playAll + sendLoad) +
 `AutoAdvanceCoordinator` (app; subscribes to `showCompleted`, reads no transport
-state). Remaining in Chunk 2:
-1. Cancelable countdown **overlay UI** (Android advances silently after 15s today).
-2. **iOS + web parity** (lighter — both already consolidate play+Connect).
+state).
+
+**Chunk 2 — Web DONE + verified on localhost (`a78511be`).** `ended` → park
+(`sendCommand "stop"`) → 15s → `playShow(next)`; remotes followed. Next show
+resolved via new **`GET /api/shows/:id/next`** + `getNextShow()` in
+`api/src/showCatalog.ts` (the browser has no catalog — shows are static SSG and
+the search index lacks recording ids).
+
+Remaining in Chunk 2:
+1. Cancelable countdown **overlay UI** (advances silently after 15s today).
+   - Also: during the countdown the active device is *parked*, so remotes render
+     a bare parked scrubber and disagree on its position (Android remote → 0;
+     iOS/web → held at end). Minor/cosmetic; likely resolved by giving remotes a
+     proper "next show in Ns" display instead of the parked state.
+2. **iOS parity** (last platform; already consolidates play+Connect).
 3. The **"when a show ends" setting** (on/off, countdown/immediate).
 4. The **play/pause affordance fix** (iOS miniplayer icon + Android restore).
 
