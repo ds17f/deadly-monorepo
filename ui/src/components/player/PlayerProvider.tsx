@@ -765,7 +765,21 @@ export default function PlayerProvider({
         !reassertingTracksRef.current
       ) {
         reassertingTracksRef.current = true;
-        const idx = currentTrackIndexRef.current;
+        // This `load` only needs to backfill the `tracks` array the ownerless
+        // session lacked — it must NOT move the transport. Which cursor is
+        // authoritative depends on why we're reasserting:
+        //   • reclaim (server restarted while we kept playing locally) → LOCAL
+        //     is the truth; the server's restored index/position lag behind.
+        //   • fresh claim of an ownerless session (we just seek+play'd to take
+        //     it over) → the SERVER cursor is the truth; our local index is
+        //     stale because we were a remote and hadn't applied the seek yet.
+        //     Using local here clobbered the just-seeked track back to the old
+        //     one (tap Franklin's Tower, get the previously-cued track).
+        const idx = reclaim ? currentTrackIndexRef.current : connectState.trackIndex;
+        const loadIndex = idx >= 0 ? idx : 0;
+        const positionMs = reclaim
+          ? Math.round(audio.currentTime * 1000)
+          : connectState.positionMs;
         sendCommand("load", {
           showId: connectState.showId ?? activeShowRef.current?.showId ?? "",
           recordingId: connectState.recordingId,
@@ -773,13 +787,13 @@ export default function PlayerProvider({
             title: t.title,
             durationMs: Math.round((t.duration || 0) * 1000),
           })),
-          trackIndex: idx >= 0 ? idx : 0,
-          positionMs: Math.round(audio.currentTime * 1000),
-          durationMs: Math.round((localTracks[idx]?.duration ?? 0) * 1000),
+          trackIndex: loadIndex,
+          positionMs,
+          durationMs: Math.round((localTracks[loadIndex]?.duration ?? 0) * 1000),
           date: connectState.date ?? activeShowRef.current?.date,
           venue: connectState.venue ?? activeShowRef.current?.venue,
           location: connectState.location ?? activeShowRef.current?.location,
-          autoplay: !audio.paused,
+          autoplay: reclaim ? !audio.paused : connectState.playing,
         });
       }
 
@@ -796,15 +810,26 @@ export default function PlayerProvider({
       // completion and resetting the countdown. The note effect owns the transition.
       if (connectState.pendingAdvance) return;
 
-      // Track changed by a remote next/prev.
-      if (connectState.trackIndex !== currentTrackIndexRef.current) {
+      // Track changed by a remote next/prev/seek. The trackEffect (keyed on
+      // currentTrackIndex) fully owns loading + starting the NEW track — so we
+      // must NOT also touch the outgoing track here. The old code fell through
+      // and called audio.play() on the still-loaded previous track, then the
+      // trackEffect swapped src and played again — briefly starting the wrong
+      // track (an audible blip of the previous one) before the selected track
+      // loads. Sync the index and let the trackEffect take it from there.
+      const indexChanging = connectState.trackIndex !== currentTrackIndexRef.current;
+      if (indexChanging) {
+        // If the session is paused, tell the trackEffect to load without playing.
+        if (!connectState.playing) suppressAutoplayRef.current = true;
         setCurrentTrackIndex(connectState.trackIndex);
+        return;
       }
 
-      // Position changed by a remote seek or reconnect. Translate Date.now()
-      // into server-clock via serverTimeOffsetMs before subtracting positionTs —
-      // a skewed client clock otherwise jumps by the skew on every periodic
-      // broadcast and trips the guard below, causing audible skipping.
+      // Same track — reconcile position and play/pause on the already-loaded
+      // element. Translate Date.now() into server-clock via serverTimeOffsetMs
+      // before subtracting positionTs — a skewed client clock otherwise jumps by
+      // the skew on every periodic broadcast and trips the guard below, causing
+      // audible skipping.
       const interpolatedPosMs = connectState.playing
         ? connectState.positionMs + ((Date.now() + serverTimeOffsetMs) - connectState.positionTs)
         : connectState.positionMs;
@@ -1108,9 +1133,17 @@ export default function PlayerProvider({
     // Manual track selection — attribute the resulting playback_start.
     nextPlaybackSourceRef.current = "track_list";
     if (isRemoteControllingRef.current) {
-      // Remote: ask the server to move; our audio follows on the broadcast.
-      setPendingCommand("seek");
+      // Remote: move the shared cursor, then express the play-intent. A tap on a
+      // queue item means "play this track" — same as the Play button — but a bare
+      // `seek` only repositions: it never claims ownership or sets playing. On an
+      // ownerless session (activeDeviceId=null, e.g. all devices idle/ghosted)
+      // nobody acts on the seek, so it silently does nothing; on a paused active
+      // device the seek alone wouldn't resume. Following with `play` fixes both —
+      // handlePlay claims THIS device when the session is ownerless (and is a
+      // safe no-op when another device is already playing, so it never hijacks).
+      setPendingCommand("play");
       sendCommandRef.current("seek", { trackIndex: index, positionMs: 0, durationMs });
+      sendCommandRef.current("play");
       return;
     }
     // Reset gapless state since user is manually selecting
