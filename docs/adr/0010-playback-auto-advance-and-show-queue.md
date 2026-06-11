@@ -142,6 +142,88 @@ implemented **and verified on iOS, Android, and web** before the next. (Web audi
 is verified on beta / another machine, not the primary dev box.) This is the
 deliberate antidote to the first model's "one big change, many small problems."
 
+### 7. Cross-device countdown over Connect (one shared note + explicit commands)
+
+The end-of-show countdown is shown on **every** device in the session and can be
+controlled from any of them — but the device producing audio stays solely
+responsible for actually starting the next show. The mechanism is **one shared
+piece of server state**, not per-second messaging:
+
+- **Server state:** an additive, optional `pendingAdvance: { showId, deadline } | null`
+  on `ConnectState` (the "note"). `deadline` is an absolute **server timestamp**.
+  Additive-only per ADR-0006 §8; old clients ignore it.
+- **Explicit commands** (no implicit inference — mirrors ADR-0006's `epoch`
+  lesson that explicit beats inferred):
+  - `announce_next { showId, deadline }` → server **sets** the note.
+  - `cancel_advance` → server **clears** the note.
+  - `advance_now` → server sets the note's **`deadline = now`** ("Play now").
+- **Remotes count down locally.** Each device renders the note and computes
+  `remaining = deadline − serverNow` using the existing clock sync
+  (`serverTimeOffsetMs`), ticking on its own. The `announce` is the *only*
+  message; there is **no per-second traffic**. Remotes resolve the show's
+  art/info from `showId` themselves (consistent with Amendment #1).
+- **One uniform rule for the playing device:** *advance when the note is present
+  and `now ≥ deadline`.* So Cancel (note cleared → not present at the deadline →
+  no advance) and Play now (deadline moved to now → advance immediately) both
+  fall out of the same rule. The decision is an **explicit presence check at the
+  deadline**, never an inference from a transition. Offline / no session: the
+  device falls back to a plain local timer (no note exists).
+- **Self-clearing:** the active device's own `load` on advance clears the note
+  server-side; an explicit `cancel_advance` clears it on cancel.
+
+This is **Phase B** (the local, active-device-only countdown is Phase A). It is
+designed so the per-platform countdown UI reads a single merged source —
+*local coordinator countdown OR the broadcast note* — and is therefore built
+**once** per platform rather than retrofitted.
+
+#### Sequence: normal end-of-show advance
+
+```
+ Active device (playing)        Server                Remote(s)
+        |                         |                       |
+   show ends                      |                       |
+        |---- announce_next X,T -->|                      |
+        |                     SET note {X,T}              |
+        |<------- state ----------|------- state -------->|
+   show "Next up Ns"                          show "Next up Ns"
+        |        (every device ticks down to T locally)   |
+   now >= T, note present -> play X                        |
+        |---- load X ------------>|                       |
+        |                    CLEAR note                   |
+        |<------- state ----------|------- state -------->|
+   now playing X                              hide countdown, follow X
+```
+
+#### Sequence: Cancel (from any device)
+
+```
+ Active device (playing)        Server                Remote
+        |                         |<--- cancel_advance ---|   (Cancel tapped on remote)
+        |                     CLEAR note                  |
+        |<------- state ----------|------- state -------->|
+   note no longer present:                     hide countdown
+   at the deadline it won't advance;
+   (and hides its countdown now)
+```
+
+#### Sequence: Play now (from any device)
+
+```
+ Active device (playing)        Server                Remote
+        |                         |<--- advance_now ------|   (Play now tapped on remote)
+        |                  SET note.deadline = now        |
+        |<------- state ----------|------- state -------->|
+   now >= deadline, note present -> play X                |
+        |---- load X ------------>|                       |
+        |                    CLEAR note                   |
+        |<------- state ----------|------- state -------->|
+   now playing X                              follow X
+```
+
+Local Cancel / Play now are the trivial cases — the active device acts directly
+*and* sends the matching command so the shared note (and every remote) stays in
+sync.
+
 ## Consequences
 
 **Gained:**
@@ -180,6 +262,15 @@ an authority.
 **Key advance off a generic "playback stopped" signal.** Rejected (Decision #1):
 ambiguous on every platform; it is the source of the cold-start and
 stopped-for-the-wrong-reason false advances.
+
+**Infer "cancelled" implicitly from the note becoming null** (the active device
+watches `pendingAdvance` go set→null). Rejected (Decision #7): it has a race —
+between sending `announce` and the server echoing it back, the note still reads
+null, so a naive "null ⇒ cancel" would cancel the device's own pending advance.
+Worse, it repeats the exact implicit-inference mistake ADR-0006 fixed with the
+explicit `epoch`. Replaced by an **explicit `cancel_advance` command** plus an
+**explicit presence check at the deadline** ("advance only if the note is still
+there"), which is race-free and unambiguous.
 
 **Client-side advance that interrogates transport state to self-gate** (the
 abandoned model). Rejected: that interrogation is the whack-a-mole; the
