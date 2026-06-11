@@ -66,6 +66,13 @@ export interface RegisterMessage {
 
 export interface HeartbeatMessage {
   type: "heartbeat";
+  // ADR-0011 Chunk B: ownership-lease renewal. The device producing audio
+  // piggybacks its local playback state so the server can heal an ownerless
+  // session (activeDeviceId == null) without a new explicit command. Additive/
+  // optional — legacy clients omit them. Server gates on protocolVersion >= 1.
+  playing?: boolean;
+  recordingId?: string;
+  positionMs?: number;
 }
 
 export interface CommandMessage {

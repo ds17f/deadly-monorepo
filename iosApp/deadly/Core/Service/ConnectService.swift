@@ -751,9 +751,29 @@ final class ConnectService: NSObject {
             while !Task.isCancelled {
                 try? await Task.sleep(nanoseconds: Self.heartbeatInterval)
                 guard !Task.isCancelled else { break }
-                webSocket?.send(.string(#"{"type":"heartbeat"}"#)) { _ in }
+                webSocket?.send(.string(buildHeartbeat())) { _ in }
             }
         }
+    }
+
+    // ADR-0011 Chunk B: renew the ownership lease. When audio is loaded locally,
+    // piggyback {playing, recordingId, positionMs} so the server can heal an
+    // ownerless session from our heartbeat (the restart/disconnect "ghost" fix).
+    // Plain heartbeat when nothing is loaded. See docs/PROTOCOL.md.
+    private func buildHeartbeat() -> String {
+        let plain = #"{"type":"heartbeat"}"#
+        guard let recordingId = streamPlayer.currentTrack?.metadata["recordingId"] else {
+            return plain
+        }
+        let lease: [String: Any] = [
+            "type": "heartbeat",
+            "playing": streamPlayer.playbackState.isPlaying,
+            "recordingId": recordingId,
+            "positionMs": Int(streamPlayer.progress.currentTime * 1000),
+        ]
+        guard let data = try? JSONSerialization.data(withJSONObject: lease),
+              let text = String(data: data, encoding: .utf8) else { return plain }
+        return text
     }
 
     private func stopHeartbeat() {

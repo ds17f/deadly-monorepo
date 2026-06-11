@@ -259,11 +259,56 @@ export function unregisterDevice(userId: string, deviceId: string): void {
   broadcastDevices(userId);
 }
 
-export function handleHeartbeat(userId: string, deviceId: string): void {
+export interface LeaseRenewal {
+  playing: boolean;
+  recordingId: string;
+  positionMs: number;
+}
+
+export function handleHeartbeat(userId: string, deviceId: string, lease?: LeaseRenewal): void {
   const entry = liveDevices.get(deviceKey(userId, deviceId));
-  if (entry) {
-    entry.device.lastHeartbeat = Date.now();
+  if (!entry) return;
+  entry.device.lastHeartbeat = Date.now();
+
+  // ── ADR-0011 Chunk B: ownership lease ──────────────────────────────────────
+  // The audio-producing device heals an ownerless session by claiming it on its
+  // heartbeat. This is the convergent recovery for the restart/disconnect
+  // "ghost" — server believes activeDeviceId == null while a device is in fact
+  // still playing — replacing the cause-specific client reclaim heuristics
+  // (those stay until Chunk C proves the lease covers them). Conservative rule
+  // (ADR §2): the renewal FILLS A VACUUM, it never preempts an existing owner.
+  if (!lease) return;                       // legacy heartbeat — no lease payload
+  if (entry.protocolVersion < 1) return;    // gated on the Chunk A primitive
+
+  const state = userStates.get(userId);
+  if (!state || !state.recordingId) return;          // no session to heal
+  if (lease.recordingId !== state.recordingId) return; // device is on a different recording
+
+  // Owner: its lease renews implicitly via lastHeartbeat above; ownership already
+  // held, so nothing to broadcast. (A paused owner keeps the lease — ADR §2.)
+  if (state.activeDeviceId === deviceId) return;
+
+  // Vacuum claim: only a device actually producing audio (playing) fills an
+  // ownerless session. Requiring `playing` disambiguates a parked-but-still-
+  // loaded device (playing=false, e.g. transferred away) from the real source,
+  // so it can't steal ownership back after a restart.
+  if (state.activeDeviceId === null && lease.playing) {
+    log(`handleHeartbeat: lease claim — ${entry.device.name}[${entry.device.type}] heals ownerless session rec=${lease.recordingId} pos=${lease.positionMs}`);
+    mutate(userId, {
+      activeDeviceId: deviceId,
+      activeDeviceName: entry.device.name,
+      activeDeviceType: entry.device.type,
+      playing: true,
+      positionMs: lease.positionMs,
+      positionTs: Date.now(),
+    });
+    return;
   }
+
+  // Otherwise owned by another device (or ownerless + paused): back off — the
+  // lease never preempts. Split-brain (two devices both playing the same
+  // recording with no owner) is the rare path; first heartbeat wins, the other
+  // backs off here.
 }
 
 export function startHeartbeatSweep(): void {

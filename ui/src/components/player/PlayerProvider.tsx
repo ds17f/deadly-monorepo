@@ -55,6 +55,7 @@ export default function PlayerProvider({
     sendCommand,
     onVolumeMessage,
     reportVolume,
+    setLocalPlaybackSource,
     serverTimeOffsetMs,
   } = useConnect();
 
@@ -640,6 +641,24 @@ export default function PlayerProvider({
     }, 5000);
     return () => clearInterval(id);
   }, [isActiveDevice, connectState?.playing]);
+
+  // ADR-0011 Chunk B: expose this device's local playback to the Connect
+  // heartbeat so it can renew the ownership lease (heals an ownerless session
+  // after a server restart / socket blip). The getter reads live refs, so a
+  // single registration stays current; null when nothing is loaded.
+  useEffect(() => {
+    setLocalPlaybackSource(() => {
+      const audio = getActiveAudio();
+      const recordingId = selectedRecordingRef.current;
+      if (!audio || !recordingId) return null;
+      return {
+        playing: !audio.paused,
+        recordingId,
+        positionMs: Math.round(audio.currentTime * 1000),
+      };
+    });
+    return () => setLocalPlaybackSource(null);
+  }, [setLocalPlaybackSource]);
 
   // ── React to authoritative ConnectState broadcasts ───────────────────
   // Single reconciliation path keyed on the server's monotonic version: clear

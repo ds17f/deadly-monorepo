@@ -68,7 +68,16 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
 
         case "heartbeat": {
           if (!registeredDeviceId) return;
-          handleHeartbeat(userId!, registeredDeviceId);
+          // ADR-0011 Chunk B: optional ownership-lease payload. Present only when
+          // the client has audio loaded locally (it carries recordingId).
+          const lease = typeof msg.recordingId === "string"
+            ? {
+                playing: msg.playing === true,
+                recordingId: msg.recordingId,
+                positionMs: typeof msg.positionMs === "number" ? msg.positionMs : 0,
+              }
+            : undefined;
+          handleHeartbeat(userId!, registeredDeviceId, lease);
           break;
         }
 

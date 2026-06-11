@@ -345,9 +345,25 @@ class ConnectServiceImpl @Inject constructor(
         heartbeatJob = scope.launch {
             while (isActive) {
                 delay(HEARTBEAT_INTERVAL_MS)
-                if (isActive) ws.send("""{"type":"heartbeat"}""")
+                if (isActive) ws.send(buildHeartbeat())
             }
         }
+    }
+
+    // ADR-0011 Chunk B: renew the ownership lease. When this device has audio
+    // loaded locally, piggyback {playing, recordingId, positionMs} so the server
+    // can heal an ownerless session from our heartbeat (the restart/disconnect
+    // "ghost" fix). Plain heartbeat when nothing is loaded (we're not a candidate
+    // owner). See docs/PROTOCOL.md.
+    private fun buildHeartbeat(): String {
+        val recordingId = mediaControllerRepository.currentRecordingId.value
+            ?: return """{"type":"heartbeat"}"""
+        return buildJsonObject {
+            put("type", "heartbeat")
+            put("playing", mediaControllerRepository.isPlaying.value)
+            put("recordingId", recordingId)
+            put("positionMs", mediaControllerRepository.currentPosition.value.toInt())
+        }.toString()
     }
 
     private fun stopHeartbeat() {

@@ -81,5 +81,17 @@ Once B is proven on all three platforms and telemetry shows the fleet on
 
 ## Status
 2026-06-11: **ADR-0011 accepted (design); server claim-when-null shipped
-(`52942d45`). Chunks A–C not started.** Ship Chunk A (protocol versioning) ASAP —
-it has standalone value (telemetry + forced-update lever) independent of the lease.
+(`52942d45`).**
+- **Chunk A — DONE** (`4564d2d4`, `feat(all/connect)`): `protocolVersion`(=1) +
+  `appVersion` on register, stamped onto the in-memory `liveDevices` record, with
+  per-session protocol-distribution telemetry. `docs/PROTOCOL.md` added.
+- **Chunk B — code-complete, built on all 3 platforms + server, NOT yet
+  device-verified.** Heartbeat carries `{playing, recordingId, positionMs}` when
+  audio is loaded locally; `handleHeartbeat` claims an ownerless session
+  (`activeDeviceId == null`, requires `playing`, recordingId must match the
+  session) and never preempts an existing owner. Gated on `protocolVersion >= 1`.
+  **Outstanding: run the exit-criterion test** — play through an API restart →
+  next heartbeat reconverges `activeDeviceId` → end-of-show advance fires; plus the
+  disconnect-reconnect variant.
+- **Chunk C — not started.** Gated on Chunk B device-verification + telemetry
+  showing the fleet on `protocolVersion >= 1`.

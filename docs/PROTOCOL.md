@@ -48,14 +48,14 @@ separate per-session lifetime; see ADR-0011 §3.)
 | `protocolVersion` | Shipped | Meaning |
 |---|---|---|
 | `0` | (implicit) | Legacy: any client that omits the field. No `protocolVersion`/`appVersion` on register. |
-| `1` | Chunk A (ADR-0011) | Client sends `protocolVersion` + `appVersion` on `register`. Purely additive — no message shape changed, no server behavior branches on it yet. Establishes the primitive + telemetry that later chunks gate on. |
+| `1` | Chunk A + B (ADR-0011) | **A:** client sends `protocolVersion` + `appVersion` on `register`. **B:** the audio-producing device piggybacks `{ playing, recordingId, positionMs }` on its `heartbeat` to renew the ownership lease. Server reads the lease only when `protocolVersion >= 1`; a renewal **claims an ownerless session** (`activeDeviceId == null`, requires `playing`) but never preempts an existing owner. All additive — no register/heartbeat shape that an old client sends changed. |
 
 ### Reserved / planned
 
-- **Ownership lease (ADR-0011 Chunk B)** will be gated on `protocolVersion >= 1`:
-  the audio-producing device renews ownership by piggybacking `{ playing,
-  recordingId, positionMs }` on the heartbeat. When that lands, note here whether it
-  rides on `1` or bumps to `2`.
+- **Heuristic deletion (ADR-0011 Chunk C)** removes the client-side reclaim
+  detectors (epoch-change reclaim, empty-tracks re-assert) and the `playWhenReady`
+  reconciler's `if (!isActive) return` gate once telemetry shows the fleet on
+  `protocolVersion >= 1`. No wire change — purely deleting code the lease subsumes.
 
 ## When you bump the version
 

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { ConnectContext } from "@/contexts/ConnectContext";
+import type { LocalPlaybackSnapshot } from "@/contexts/ConnectContext";
 import type { ConnectDevice, ConnectState } from "@/types/connect";
 import { randomUUID } from "@/lib/uuid";
 
@@ -70,6 +71,10 @@ export default function ConnectProvider({
   const shouldConnectRef = useRef(false);
   const currentVersionRef = useRef(0);
   const volumeListenersRef = useRef<Array<(volume: number) => void>>([]);
+  // ADR-0011 Chunk B: getter for this device's local playback, registered by the
+  // player. The heartbeat calls it to renew the ownership lease. Default: no
+  // source loaded ⇒ plain heartbeat.
+  const localPlaybackRef = useRef<() => LocalPlaybackSnapshot | null>(() => null);
   // Tracks the best (lowest-RTT) sample within the current sync batch so we
   // can keep updating as better samples arrive but ignore worse ones.
   const timeSyncBestRttRef = useRef<number>(Number.POSITIVE_INFINITY);
@@ -154,7 +159,10 @@ export default function ConnectProvider({
       clearHeartbeat();
       heartbeatRef.current = setInterval(() => {
         if (ws.readyState === WebSocket.OPEN) {
-          ws.send(JSON.stringify({ type: "heartbeat" }));
+          // ADR-0011 Chunk B: piggyback the ownership-lease renewal when audio is
+          // loaded locally so the server can heal an ownerless session.
+          const lease = localPlaybackRef.current();
+          ws.send(JSON.stringify(lease ? { type: "heartbeat", ...lease } : { type: "heartbeat" }));
         }
       }, HEARTBEAT_INTERVAL_MS);
 
@@ -272,6 +280,13 @@ export default function ConnectProvider({
     }
   }, []);
 
+  const setLocalPlaybackSource = useCallback(
+    (source: (() => LocalPlaybackSnapshot | null) | null) => {
+      localPlaybackRef.current = source ?? (() => null);
+    },
+    [],
+  );
+
   const disconnect = useCallback(() => {
     log("disconnect() called");
     shouldConnectRef.current = false;
@@ -312,7 +327,7 @@ export default function ConnectProvider({
   }, [user, isLoading]);
 
   return (
-    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, serverTimeOffsetMs }}>
+    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, setLocalPlaybackSource, serverTimeOffsetMs }}>
       {children}
     </ConnectContext.Provider>
   );
