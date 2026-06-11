@@ -788,6 +788,14 @@ export default function PlayerProvider({
       // load back (next version, by which point activeDeviceId === us).
       if (reclaim) return;
 
+      // Same rule for an end-of-show park: we "became active" only because we
+      // announced our OWN completion and the server claimed us active (ADR-0011).
+      // We're parked at the end of the show waiting for the note effect below to
+      // advance — our position is authoritative, the server's positionMs is the
+      // stale pre-end value. Syncing would seek back and replay the tail, re-firing
+      // completion and resetting the countdown. The note effect owns the transition.
+      if (connectState.pendingAdvance) return;
+
       // Track changed by a remote next/prev.
       if (connectState.trackIndex !== currentTrackIndexRef.current) {
         setCurrentTrackIndex(connectState.trackIndex);

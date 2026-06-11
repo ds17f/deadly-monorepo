@@ -56,6 +56,13 @@ Once B is proven on all three platforms and telemetry shows the fleet on
 - Remove epoch-change reclaim (`serverRestarted`/`lastEpoch`), empty-tracks
   re-assert (`reassertingTracks`), and the `playWhenReady` reconciler's
   `if (!isActive) return` gate — the lease subsumes them.
+- Collapse the **transport-authority guards** into one lease invariant. There are
+  now two "don't sync transport DOWN to stale server state because this device is
+  the real source" exceptions in `reactToState`: `if (reclaimAfterRestart) return`
+  and the `justBecameActive && pendingAdvance == null` become-active guard (added
+  while fixing the announce-park seek-back glitch, 2026-06-11). Both are the same
+  rule — *the device producing audio is the transport authority* — which the lease
+  makes first-class, so both guards go away.
 - Keep the deletion gated on telemetry; each removed branch is debt paid down.
 
 ## Already shipped (pre-plan)
