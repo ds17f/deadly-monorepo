@@ -6,6 +6,12 @@ import { ConnectContext } from "@/contexts/ConnectContext";
 import type { ConnectDevice, ConnectState } from "@/types/connect";
 import { randomUUID } from "@/lib/uuid";
 
+// Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
+// Bump in lockstep with the documented protocol; the server may branch on it.
+const CONNECT_PROTOCOL_VERSION = 1;
+// Build identity for telemetry only — never branched on. Mirrors analytics.ts.
+const APP_VERSION = (process.env.NEXT_PUBLIC_DATA_VERSION ?? "web").slice(0, 20);
+
 const HEARTBEAT_INTERVAL_MS = 15_000;
 const RECONNECT_DELAYS_MS = [1_000, 2_000, 4_000, 8_000, 30_000];
 const DEVICE_ID_KEY = "deadly-device-id";
@@ -139,6 +145,10 @@ export default function ConnectProvider({
         deviceId,
         deviceType: "web",
         deviceName,
+        // ADR-0011 §3 / docs/PROTOCOL.md: wire-contract version the server may
+        // branch on; appVersion is build identity for telemetry only.
+        protocolVersion: CONNECT_PROTOCOL_VERSION,
+        appVersion: APP_VERSION,
       }));
 
       clearHeartbeat();

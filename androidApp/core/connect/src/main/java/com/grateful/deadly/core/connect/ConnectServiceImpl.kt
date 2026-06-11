@@ -50,10 +50,14 @@ class ConnectServiceImpl @Inject constructor(
     private val mediaControllerRepository: MediaControllerRepository,
     private val networkMonitor: NetworkMonitor,
     private val showRepository: com.grateful.deadly.core.domain.repository.ShowRepository,
+    @javax.inject.Named("appVersionName") private val appVersion: String,
 ) : ConnectService {
 
     companion object {
         private const val TAG = "ConnectService"
+        // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
+        // Bump in lockstep with the documented protocol; the server may branch on it.
+        private const val CONNECT_PROTOCOL_VERSION = 1
         private val RECONNECT_DELAYS_S = listOf(1L, 2L, 4L, 8L, 30L)
         private const val HEARTBEAT_INTERVAL_MS = 15_000L
         private const val CLOSE_CODE_UNAUTHORIZED = 4003
@@ -328,6 +332,10 @@ class ConnectServiceImpl @Inject constructor(
             put("deviceId", appPreferences.installId)
             put("deviceType", "android")
             put("deviceName", Build.MODEL)
+            // ADR-0011 §3 / docs/PROTOCOL.md: wire-contract version the server may
+            // branch on; appVersion is build identity for telemetry only.
+            put("protocolVersion", CONNECT_PROTOCOL_VERSION)
+            put("appVersion", appVersion)
         }
         ws.send(msg.toString())
     }

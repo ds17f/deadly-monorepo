@@ -75,6 +75,9 @@ final class ConnectService: NSObject {
     // gets promoted to serverTimeOffsetMs.
     private var timeSyncBestRttMs: Double = .infinity
 
+    // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
+    // Bump in lockstep with the documented protocol; the server may branch on it.
+    private static let protocolVersion = 1
     private static let reconnectDelays: [Double] = [1, 2, 4, 8, 30]
     private static let heartbeatInterval: UInt64 = 15_000_000_000 // 15s in nanoseconds
     private static let timeSyncRefreshInterval: UInt64 = 5 * 60 * 1_000_000_000 // 5 min
@@ -671,14 +674,22 @@ final class ConnectService: NSObject {
         let deviceName = "iPhone"
         #endif
 
-        logger.info("sendRegister: deviceId=\(deviceId, privacy: .public) name=\(deviceName, privacy: .public)")
-        let msg: [String: String] = [
+        // ADR-0011 §3 / docs/PROTOCOL.md: build identity for telemetry only —
+        // the server never branches behavior on appVersion.
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
+
+        logger.info("sendRegister: deviceId=\(deviceId, privacy: .public) name=\(deviceName, privacy: .public) proto=\(Self.protocolVersion, privacy: .public) app=\(appVersion, privacy: .public)")
+        // Mixed value types (string + int) → encode as a JSON object explicitly.
+        let msg: [String: Any] = [
             "type": "register",
             "deviceId": deviceId,
             "deviceType": "ios",
             "deviceName": deviceName,
+            // Wire-contract version the server may branch on; see docs/PROTOCOL.md.
+            "protocolVersion": Self.protocolVersion,
+            "appVersion": appVersion,
         ]
-        guard let data = try? JSONEncoder().encode(msg),
+        guard let data = try? JSONSerialization.data(withJSONObject: msg),
               let text = String(data: data, encoding: .utf8) else { return }
         webSocket?.send(.string(text)) { _ in }
     }

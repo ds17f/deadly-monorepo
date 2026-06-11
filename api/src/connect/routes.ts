@@ -59,7 +59,10 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
         case "register": {
           if (!msg.deviceId || !msg.deviceType || !msg.deviceName) return;
           registeredDeviceId = msg.deviceId;
-          registerDevice(userId!, msg.deviceId, msg.deviceType as DeviceType, msg.deviceName, socket);
+          // ADR-0011 §3: additive, optional. Absent ⇒ legacy ⇒ 0.
+          const protocolVersion = typeof msg.protocolVersion === "number" ? msg.protocolVersion : 0;
+          const appVersion = typeof msg.appVersion === "string" ? msg.appVersion : null;
+          registerDevice(userId!, msg.deviceId, msg.deviceType as DeviceType, msg.deviceName, socket, protocolVersion, appVersion);
           break;
         }
 
