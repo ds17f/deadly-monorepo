@@ -134,6 +134,17 @@ Remaining in Chunk 2 (UX/polish — mechanism is done):
    before shipping (auto-advance is hardcoded ON today).
 3. The **play/pause affordance fix** (iOS miniplayer icon + Android restore).
 
+### Phase B (later): broadcast "next up" over Connect (display on remotes)
+Additive `pendingAdvance: { showId, deadline }` on `ConnectState`. The active
+device announces on countdown start; remotes **render only** (resolve art/info by
+showId locally/API; tick from `deadline − now` via existing `serverTimeOffsetMs`).
+**Asymmetry:** the announce is a one-way display hint, but **cancel is two-way
+control** — a remote's Cancel sends a command that clears `pendingAdvance`
+server-side; the **active device watches `pendingAdvance` and cancels its own
+timer when it's cleared** (same as reacting to a remote pause). Server clears it
+on load/stop. Build Phase A (local UI, below) so the countdown component can be
+fed by either the local coordinator OR an incoming `pendingAdvance`.
+
 ### Known pre-existing bug to fix *during* Chunk 2 (not a Chunk 1 regression)
 iOS miniplayer play/pause icon **sometimes** sticks on "play" after
 `ended → tap a song in the same show` — the full-player button + track highlight

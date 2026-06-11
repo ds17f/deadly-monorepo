@@ -10,6 +10,7 @@ import type { AiShowReview } from "@/types/show";
 import type { ShowReview } from "@/types/userdata";
 
 import { useInterpolatedPosition } from "@/hooks/useInterpolatedPosition";
+import ShowArtwork from "@/components/show/ShowArtwork";
 import AutoplayPrompt from "./AutoplayPrompt";
 import RecordingSelector from "./RecordingSelector";
 import TrackList from "./TrackList";
@@ -419,6 +420,9 @@ export default function HeaderPlayer() {
     dismiss,
     volume,
     setVolume,
+    autoAdvance,
+    cancelAutoAdvance,
+    playNextNow,
   } = usePlayer();
 
   const { connected: isConnected, state: connectState, serverTimeOffsetMs } = useConnect();
@@ -976,6 +980,50 @@ export default function HeaderPlayer() {
             )}
           </div>
         </div>
+
+        {/* ── End-of-show "Next up" takeover (ADR-0010): while the countdown
+            runs, the fullscreen player previews the next show — its cover +
+            details under a "Next up in Ns" banner, with Play now / Cancel.
+            An absolute layer so it covers the now-playing content without
+            disturbing the mobile/desktop layouts beneath. ── */}
+        {autoAdvance && (
+          <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-6 bg-gradient-to-b from-deadly-surface to-deadly-bg px-6 text-center">
+            <div className="text-sm font-semibold uppercase tracking-[0.25em] text-deadly-primary">
+              Next up in {autoAdvance.secondsRemaining}s
+            </div>
+            {/* Whole ticket at its natural shape (contain) / square logo —
+                matched to the playing fullscreen view's sizing. */}
+            <ShowArtwork
+              image={autoAdvance.nextShow.image}
+              alt={autoAdvance.nextShow.date}
+              className="max-h-[34vh] max-w-[min(90vw,30rem)] rounded-xl object-contain shadow-2xl shadow-black/50"
+              fallbackClassName="aspect-square w-[min(34vh,18rem)] rounded-xl object-cover"
+            />
+            <div>
+              <p className="text-2xl font-bold text-white">{autoAdvance.nextShow.date}</p>
+              {autoAdvance.nextShow.venue && (
+                <p className="mt-1 text-base text-white/70">{autoAdvance.nextShow.venue}</p>
+              )}
+              {autoAdvance.nextShow.location && (
+                <p className="text-sm text-white/50">{autoAdvance.nextShow.location}</p>
+              )}
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <button
+                onClick={playNextNow}
+                className="rounded-full bg-deadly-primary px-6 py-2.5 text-sm font-semibold text-black"
+              >
+                Play now
+              </button>
+              <button
+                onClick={cancelAutoAdvance}
+                className="rounded-full border border-white/25 px-6 py-2.5 text-sm font-medium text-white/80"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* ── Mobile layout: native player parity — a compact ticket + show
             info header, the transport docked beneath it, then the TRACK LIST

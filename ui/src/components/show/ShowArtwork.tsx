@@ -12,10 +12,17 @@ import { useState } from "react";
 export default function ShowArtwork({
   image,
   alt = "",
+  className = "h-14 w-14 flex-shrink-0 rounded-md bg-white/5 object-cover",
+  fallbackClassName,
 }: {
   image?: string | null;
   bestRecordingId?: string | null;
   alt?: string;
+  className?: string;
+  // Applied instead of `className` when the logo fallback is showing — lets
+  // callers contain the natural ticket but square-crop the logo (as the
+  // fullscreen player does).
+  fallbackClassName?: string;
 }) {
   const sources = [image].filter(Boolean) as string[];
 
@@ -28,14 +35,12 @@ export default function ShowArtwork({
     <img
       src={src}
       alt={alt}
-      width={56}
-      height={56}
       loading="lazy"
       referrerPolicy="no-referrer"
       onError={() => {
         if (idx < sources.length) setIdx((i) => i + 1);
       }}
-      className="h-14 w-14 flex-shrink-0 rounded-md bg-white/5 object-cover"
+      className={showingFallback ? (fallbackClassName ?? className) : className}
     />
   );
 }

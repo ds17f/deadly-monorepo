@@ -46,6 +46,13 @@ export default function PlayerProvider({
   const [tracks, setTracks] = useState<ArchiveTrack[] | null>(null);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(-1);
   const [status, setStatus] = useState<PlaybackStatus>("idle");
+  // ADR-0010 chunk 2: pending end-of-show auto-advance, surfaced to the UI so the
+  // full player can preview the next show + a "Next up in Ns" banner. nextShow
+  // carries the display data; secondsRemaining ticks 15→0.
+  const [autoAdvance, setAutoAdvance] = useState<{
+    secondsRemaining: number;
+    nextShow: ViewedShow;
+  } | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [selectedRecording, setSelectedRecording] = useState<string | null>(
@@ -82,7 +89,7 @@ export default function PlayerProvider({
   // ADR-0010 chunk 2: pending end-of-show auto-advance. Held in refs so the
   // (non-React) audio `ended` handler can trigger the latest coordinator and so
   // the countdown can be canceled by any subsequent play.
-  const autoAdvanceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const autoAdvanceTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const onShowCompleteRef = useRef<((completedShowId: string) => void) | null>(null);
   const reportVolumeRef = useRef(reportVolume);
   const isActiveDeviceRef = useRef(false);
@@ -846,12 +853,13 @@ export default function PlayerProvider({
   const playShow = useCallback(
     async (show: ViewedShow) => {
       // A manual play cancels any pending auto-advance countdown. (When the
-      // countdown timer itself fires it nulls the ref before calling, so this
+      // countdown itself fires it clears the ref/state before calling, so this
       // is a no-op in that path.)
       if (autoAdvanceTimerRef.current) {
-        clearTimeout(autoAdvanceTimerRef.current);
+        clearInterval(autoAdvanceTimerRef.current);
         autoAdvanceTimerRef.current = null;
       }
+      setAutoAdvance(null);
       nextPlaybackSourceRef.current = "browse";
       setActiveShow(show);
       // Remember the cover so a page refresh (which rehydrates from the
@@ -928,18 +936,48 @@ export default function PlayerProvider({
         review: null,
       };
 
-      // 3. Cancelable countdown, then advance (== a user tap; remotes follow
-      //    via the sendLoad inside playShow).
-      if (autoAdvanceTimerRef.current) clearTimeout(autoAdvanceTimerRef.current);
-      console.info(`[auto-advance] next in ${AUTO_ADVANCE_DELAY_MS / 1000}s → ${viewed.showId}`);
-      autoAdvanceTimerRef.current = setTimeout(() => {
+      // 3. Cancelable countdown (ticks the UI each second), then advance (== a
+      //    user tap; remotes follow via the sendLoad inside playShow).
+      if (autoAdvanceTimerRef.current) clearInterval(autoAdvanceTimerRef.current);
+      let remaining = Math.round(AUTO_ADVANCE_DELAY_MS / 1000);
+      setAutoAdvance({ secondsRemaining: remaining, nextShow: viewed });
+      console.info(`[auto-advance] next in ${remaining}s → ${viewed.showId}`);
+      autoAdvanceTimerRef.current = setInterval(() => {
+        remaining -= 1;
+        if (remaining > 0) {
+          setAutoAdvance({ secondsRemaining: remaining, nextShow: viewed });
+          return;
+        }
+        if (autoAdvanceTimerRef.current) clearInterval(autoAdvanceTimerRef.current);
         autoAdvanceTimerRef.current = null;
+        setAutoAdvance(null);
         console.info(`[auto-advance] advancing → ${viewed.showId}`);
         playShow(viewed);
-      }, AUTO_ADVANCE_DELAY_MS);
+      }, 1000);
     },
     [playShow]
   );
+
+  // Cancel a pending auto-advance (user tapped Cancel). Leaves playback stopped.
+  const cancelAutoAdvance = useCallback(() => {
+    if (autoAdvanceTimerRef.current) {
+      clearInterval(autoAdvanceTimerRef.current);
+      autoAdvanceTimerRef.current = null;
+    }
+    setAutoAdvance(null);
+  }, []);
+
+  // Skip the countdown and play the next show immediately ("Play now").
+  const playNextNow = useCallback(() => {
+    const next = autoAdvance?.nextShow;
+    if (!next) return;
+    if (autoAdvanceTimerRef.current) {
+      clearInterval(autoAdvanceTimerRef.current);
+      autoAdvanceTimerRef.current = null;
+    }
+    setAutoAdvance(null);
+    playShow(next);
+  }, [autoAdvance, playShow]);
 
   useEffect(() => {
     onShowCompleteRef.current = onShowComplete;
@@ -1199,6 +1237,9 @@ export default function PlayerProvider({
       autoplayInfo,
       retryAutoplay,
       dismissAutoplay,
+      autoAdvance,
+      cancelAutoAdvance,
+      playNextNow,
     }),
     [
       activeShow,
@@ -1235,6 +1276,9 @@ export default function PlayerProvider({
       retryAutoplay,
       dismissAutoplay,
       updateViewedShow,
+      autoAdvance,
+      cancelAutoAdvance,
+      playNextNow,
     ]
   );
 
