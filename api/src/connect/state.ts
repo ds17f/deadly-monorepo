@@ -78,6 +78,7 @@ function initialState(): ConnectState {
     date: null,
     venue: null,
     location: null,
+    pendingAdvance: null,
   };
 }
 
@@ -307,6 +308,8 @@ export function handleLoad(userId: string, deviceId: string, socket: WebSocket, 
     date: params.date ?? null,
     venue: params.venue ?? null,
     location: params.location ?? null,
+    // A new show loading supersedes any pending end-of-show countdown.
+    pendingAdvance: null,
   };
 
   if (params.autoplay) {
@@ -409,6 +412,50 @@ export function handleStop(userId: string): void {
     activeDeviceType: null,
     positionMs,
     positionTs: now,
+    pendingAdvance: null,
+  });
+}
+
+// ── ADR-0010 §7: end-of-show countdown (cross-device) ────────────────────────
+
+/**
+ * The active device finished a show and is counting down to [showId] at
+ * [deadline]. Parks playback (so it isn't dragged back) and sets the shared
+ * note every device renders. Only the active device announces its own end.
+ */
+export function handleAnnounceNext(
+  userId: string,
+  deviceId: string,
+  params: { showId: string; deadline: number },
+): void {
+  const state = userStates.get(userId);
+  if (!state) return;
+  if (state.activeDeviceId && state.activeDeviceId !== deviceId) return;
+  log(`handleAnnounceNext: next=${params.showId} deadline=${params.deadline}`);
+  mutate(userId, {
+    playing: false,
+    pendingAdvance: { showId: params.showId, deadline: params.deadline },
+  });
+}
+
+/** Anyone cancels the pending advance — clears the note; stays parked. */
+export function handleCancelAdvance(userId: string): void {
+  const state = userStates.get(userId);
+  if (!state || !state.pendingAdvance) return;
+  log(`handleCancelAdvance: clearing pendingAdvance`);
+  mutate(userId, { pendingAdvance: null });
+}
+
+/**
+ * "Play now" from anywhere — move the deadline to now so the active device's
+ * uniform rule (advance when present && now >= deadline) fires immediately.
+ */
+export function handleAdvanceNow(userId: string): void {
+  const state = userStates.get(userId);
+  if (!state || !state.pendingAdvance) return;
+  log(`handleAdvanceNow: deadline -> now for ${state.pendingAdvance.showId}`);
+  mutate(userId, {
+    pendingAdvance: { showId: state.pendingAdvance.showId, deadline: Date.now() },
   });
 }
 

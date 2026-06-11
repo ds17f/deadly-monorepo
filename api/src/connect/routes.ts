@@ -13,6 +13,9 @@ import {
   handleTransfer,
   handlePosition,
   handleStop,
+  handleAnnounceNext,
+  handleCancelAdvance,
+  handleAdvanceNow,
   handleVolume,
   handleVolumeReport,
   startHeartbeatSweep,
@@ -112,6 +115,20 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             }
             case "stop": {
               handleStop(userId!);
+              break;
+            }
+            case "announce_next": {
+              const { showId, deadline } = msg as Record<string, unknown>;
+              if (typeof showId !== "string" || typeof deadline !== "number") return;
+              handleAnnounceNext(userId!, registeredDeviceId, { showId, deadline });
+              break;
+            }
+            case "cancel_advance": {
+              handleCancelAdvance(userId!);
+              break;
+            }
+            case "advance_now": {
+              handleAdvanceNow(userId!);
               break;
             }
             case "seek": {

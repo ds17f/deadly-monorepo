@@ -27,6 +27,13 @@ export interface ConnectState {
   date: string | null;
   venue: string | null;
   location: string | null;
+
+  // ADR-0010 §7: end-of-show countdown shared across the session. Set by the
+  // active device's `announce_next`; cleared on load/stop/cancel. `deadline` is
+  // an absolute server timestamp (ms) — every device ticks down to it locally,
+  // and the active device advances when it's still set and `now >= deadline`.
+  // Additive/optional (ADR-0006 §8): older clients ignore it.
+  pendingAdvance?: { showId: string; deadline: number } | null;
 }
 
 export interface ConnectDevice {
