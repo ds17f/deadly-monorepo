@@ -1008,6 +1008,12 @@ export default function PlayerProvider({
       }
       if (cancelled) return;
 
+      // Cache the next show's cover now, so when this (remote) device follows the
+      // advance its now-playing player can resolve the art (the active device
+      // caches it via playShow; remotes otherwise never would). No-op for
+      // ticket-less shows — the player's logo fallback handles those.
+      if (viewed.image) rememberArt(viewed.showId, viewed.image);
+
       const tick = () => {
         const serverNow = Date.now() + serverTimeOffsetMs;
         const remaining = Math.ceil((note.deadline - serverNow) / 1000);
