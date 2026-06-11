@@ -127,10 +127,21 @@ the existing `ConnectService.sendStop()`; next-show via on-device
 ### ✅ Phase B (cross-device countdown over Connect) COMPLETE + verified on all three.
 Server `pendingAdvance` + announce_next/cancel_advance/advance_now; each client
 emits + drives the countdown/advance off the shared note; Cancel & Play-now work
-from any device. Web has the fullscreen takeover; Android/iOS use a docked card.
-Also fixed: Android connect-follow now resolves the ticket cover (was logo).
-Remaining polish: **mobile fullscreen-takeover** (parity with web) and the
-**play/pause affordance** fixes.
+from any device. Also fixed: Android connect-follow now resolves the ticket cover
+(was logo).
+
+**Full-screen "Up Next" takeover — DONE on all three platforms (2026-06-11).**
+While the countdown runs and the player is open, the player is replaced by a
+preview of the next show (large cover, date/venue/location, "UP NEXT IN Ns",
+Play now / Cancel). Web = `HeaderPlayer` takeover; Android = `AutoAdvanceTakeover`
+(`e06e5841`); iOS = `AutoAdvanceTakeover` (`f2e4a59f`), both fed by the existing
+`AutoAdvanceCoordinator.countdown`, route-gated so the small docked card still
+shows everywhere outside the player. This also gives remotes a real "next show in
+Ns" view instead of the bare parked scrubber (the cosmetic item below).
+
+Remaining polish: the **play/pause affordance** fixes. Known intermittent bug
+(seen once, not reproduced): iOS advance lands on track 0 then a stray `next`
+jumps to "Track 2" — suspect onTrackComplete/reconnect race; needs a repro.
 
 **"When a show ends" ship gate — DONE on all three platforms.** Per-device
 opt-out gating whether THIS device initiates an advance; default ON. Android
@@ -140,14 +151,13 @@ opt-out gating whether THIS device initiates an advance; default ON. Android
 `onShowComplete`, toggle in `/me` SettingsTab). `feature_use` /
 `toggle_auto_advance` analytics on each.
 Remaining in Chunk 2 (UX/polish — mechanism is done):
-1. Cancelable countdown **overlay UI** (advances silently after 15s today).
-   - Also: during the countdown the active device is *parked*, so remotes render
-     a bare parked scrubber and disagree on its position (Android remote → 0;
-     iOS/web → held at end). Minor/cosmetic; likely resolved by giving remotes a
-     proper "next show in Ns" display instead of the parked state.
-2. The **"when a show ends" setting** (on/off, countdown/immediate) — needed
-   before shipping (auto-advance is hardcoded ON today).
-3. The **play/pause affordance fix** (iOS miniplayer icon + Android restore).
+1. ✅ Cancelable countdown **overlay UI** — DONE. Docked card + full-screen
+   "Up Next" takeover on all three platforms (see above). The parked-scrubber
+   disagreement on remotes is subsumed: a remote viewing the player now sees the
+   takeover's "UP NEXT IN Ns" instead of a bare parked scrubber.
+2. ✅ The **"when a show ends" setting** — DONE on all three (see ship gate above).
+3. The **play/pause affordance fix** (iOS miniplayer icon + Android restore) —
+   still open.
 
 ### Phase B: broadcast "next up" over Connect — full design + sequence diagrams in ADR-0010 §7
 One shared note `pendingAdvance: { showId, deadline }` on `ConnectState`

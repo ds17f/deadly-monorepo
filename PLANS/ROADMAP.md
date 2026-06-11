@@ -66,8 +66,12 @@ advance an independent coordinator off a positive `onShowCompleted` event,
 keeping the queue local-first (synced like Favorites), and adding one
 informational Connect "park" primitive. Built chunk-by-chunk, proven on all
 three platforms.
-- **Auto-advance / Go-to-next-show** — the foundational, highest-risk piece;
-  built first (chronological, then queue-fed). *(OP idea #3; MazelTov.)*
+- **Auto-advance / Go-to-next-show** — ✅ **mechanism complete on all three
+  platforms**, incl. cross-device end-of-show countdown over Connect and the
+  full-screen "Up Next" takeover + per-device "when a show ends" setting
+  (2026-06-11). Chronological today; queue-fed once the queue lands. Remaining:
+  the play/pause affordance fix and an intermittent iOS spurious-`next` (seen
+  once, needs a repro). *(OP idea #3; MazelTov.)*
 - **Queue of shows** — a local-first "play next" list, separate from Favorites
   (which never clear and pollute Fan-Favorites stats). Shows leave the queue
   once played; reorderable; syncs as a whole-list snapshot when signed in
