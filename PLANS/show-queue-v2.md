@@ -124,6 +124,14 @@ the existing `ConnectService.sendStop()`; next-show via on-device
 `getNextShow(afterDate:)`.
 
 ### ✅ Advance mechanism COMPLETE + verified on all three platforms (incl. multi-client Connect).
+### ✅ Phase B (cross-device countdown over Connect) COMPLETE + verified on all three.
+Server `pendingAdvance` + announce_next/cancel_advance/advance_now; each client
+emits + drives the countdown/advance off the shared note; Cancel & Play-now work
+from any device. Web has the fullscreen takeover; Android/iOS use a docked card.
+Also fixed: Android connect-follow now resolves the ticket cover (was logo).
+Remaining polish: **mobile fullscreen-takeover** (parity with web), the
+**"when a show ends" setting** (advance is hardcoded ON — ship gate), and the
+**play/pause affordance** fixes.
 Remaining in Chunk 2 (UX/polish — mechanism is done):
 1. Cancelable countdown **overlay UI** (advances silently after 15s today).
    - Also: during the countdown the active device is *parked*, so remotes render
