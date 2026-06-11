@@ -35,6 +35,7 @@ import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.design.scaffold.AppScaffold
 import com.grateful.deadly.playback.AutoAdvanceOverlay
+import com.grateful.deadly.playback.AutoAdvanceTakeover
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.feature.home.navigation.homeGraph
 import com.grateful.deadly.notifications.NotificationBell
@@ -52,6 +53,7 @@ import com.grateful.deadly.feature.search.navigation.searchGraph
 import com.grateful.deadly.feature.playlist.navigation.playlistGraph
 import com.grateful.deadly.feature.playlist.navigation.navigateToPlaylist
 import com.grateful.deadly.feature.player.navigation.playerScreen
+import com.grateful.deadly.feature.player.navigation.PLAYER_ROUTE
 import com.grateful.deadly.feature.miniplayer.screens.main.MiniPlayerScreen
 import com.grateful.deadly.feature.favorites.navigation.favoritesNavigation
 import com.grateful.deadly.feature.collections.navigation.collectionsGraph
@@ -336,18 +338,30 @@ fun MainNavigation(
                 OfflineBanner()
             }
 
-            // ADR-0010: end-of-show "Next up in Ns" countdown — docked above the
-            // mini player; shown on the active device and remotes alike.
+            // ADR-0010: end-of-show "Next up in Ns" countdown — shown on the
+            // active device and remotes alike. On the open player screen it's a
+            // full-screen "Up Next" takeover previewing the next show (parity
+            // with web's HeaderPlayer); everywhere else it's a docked card above
+            // the mini player.
             autoAdvanceCountdown?.let { countdown ->
-                AutoAdvanceOverlay(
-                    countdown = countdown,
-                    onPlayNow = { appViewModel.playNextNow() },
-                    onCancel = { appViewModel.cancelAutoAdvance() },
-                    modifier = Modifier
-                        .align(Alignment.BottomCenter)
-                        .padding(horizontal = 8.dp)
-                        .padding(bottom = paddingValues.calculateBottomPadding() + 8.dp),
-                )
+                if (currentRoute == PLAYER_ROUTE) {
+                    AutoAdvanceTakeover(
+                        countdown = countdown,
+                        onPlayNow = { appViewModel.playNextNow() },
+                        onCancel = { appViewModel.cancelAutoAdvance() },
+                        modifier = Modifier.align(Alignment.Center),
+                    )
+                } else {
+                    AutoAdvanceOverlay(
+                        countdown = countdown,
+                        onPlayNow = { appViewModel.playNextNow() },
+                        onCancel = { appViewModel.cancelAutoAdvance() },
+                        modifier = Modifier
+                            .align(Alignment.BottomCenter)
+                            .padding(horizontal = 8.dp)
+                            .padding(bottom = paddingValues.calculateBottomPadding() + 8.dp),
+                    )
+                }
             }
         }
     }
