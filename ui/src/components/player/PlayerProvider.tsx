@@ -55,6 +55,7 @@ export default function PlayerProvider({
     sendCommand,
     onVolumeMessage,
     reportVolume,
+    setLocalPlaybackSource,
     serverTimeOffsetMs,
   } = useConnect();
 
@@ -124,12 +125,15 @@ export default function PlayerProvider({
   const reportVolumeRef = useRef(reportVolume);
   const isActiveDeviceRef = useRef(false);
   const isRemoteControllingRef = useRef(false);
-  // Guards the one-shot track re-assert (below) so position broadcasts arriving
-  // before our load echoes back don't make us re-send it repeatedly.
+  // Guards the one-shot tracklist re-hydration (below) so position broadcasts
+  // arriving before our load echoes back don't make us re-send it repeatedly.
   const reassertingTracksRef = useRef(false);
-  // Last server epoch seen. A change means the server restarted (and rehydrated
-  // the session), which is the only situation a still-playing device reclaims.
-  const lastEpochRef = useRef<number | null>(null);
+  // True from a (re)connect until the server next assigns an owner. Distinguishes
+  // an ownerless GHOST (server lost us across a restart/socket drop — reclaim) from
+  // a deliberate PARK (transfer/stop on a live socket — pause). Set on the
+  // disconnected→connected transition; cleared once active is non-null again.
+  const reclaimOnReconnectRef = useRef(false);
+  const prevConnectedRef = useRef(false);
   // Name of the most recent OTHER active device, used to attribute the
   // "Play on this device?" autoplay prompt after a transfer to us.
   const prevActiveDeviceNameRef = useRef<string | null>(null);
@@ -641,6 +645,34 @@ export default function PlayerProvider({
     return () => clearInterval(id);
   }, [isActiveDevice, connectState?.playing]);
 
+  // ADR-0011 Chunk C: arm ghost-reclaim on each (re)connect. A null active device
+  // in the first state(s) after the socket reconnects is a ghost to heal; once
+  // connected steady-state, a null active is a deliberate park (transfer/stop).
+  useEffect(() => {
+    if (connected && !prevConnectedRef.current) {
+      reclaimOnReconnectRef.current = true;
+    }
+    prevConnectedRef.current = connected;
+  }, [connected]);
+
+  // ADR-0011 Chunk B: expose this device's local playback to the Connect
+  // heartbeat so it can renew the ownership lease (heals an ownerless session
+  // after a server restart / socket blip). The getter reads live refs, so a
+  // single registration stays current; null when nothing is loaded.
+  useEffect(() => {
+    setLocalPlaybackSource(() => {
+      const audio = getActiveAudio();
+      const recordingId = selectedRecordingRef.current;
+      if (!audio || !recordingId) return null;
+      return {
+        playing: !audio.paused,
+        recordingId,
+        positionMs: Math.round(audio.currentTime * 1000),
+      };
+    });
+    return () => setLocalPlaybackSource(null);
+  }, [setLocalPlaybackSource]);
+
   // ── React to authoritative ConnectState broadcasts ───────────────────
   // Single reconciliation path keyed on the server's monotonic version: clear
   // resolved pending commands, hydrate audio when the shared recording changes,
@@ -715,24 +747,25 @@ export default function PlayerProvider({
       return; // defer play/pause sync until tracks load
     }
 
-    // Did the server restart? An epoch change is the explicit, authoritative
-    // signal (vs. inferring it from null-active + empty-tracks coincidences).
-    const prevEpoch = lastEpochRef.current;
-    const serverRestarted = prevEpoch !== null && connectState.epoch !== prevEpoch;
-    lastEpochRef.current = connectState.epoch;
-
-    // Reclaim only when the server restarted and rehydrated the session (so it
-    // has no active device) while we're still playing this recording — take
-    // ownership back without a gap. reassertingTracksRef keeps us in this mode
-    // while our reclaim load is in flight (epoch is unchanged on later states).
-    // A deliberate transition (transfer park, stop) keeps the same epoch, so it
-    // is never mistaken for a restart.
+    // ADR-0011 Chunk C: the device producing audio is the transport authority.
+    // Whenever the session is ownerless (server forgot the active device — a
+    // restart rehydrated position-only, or a socket drop nulled it) and we're
+    // still playing this recording, keep playing and let the heartbeat ownership
+    // lease reclaim us server-side. No epoch heuristic — this is cause-agnostic
+    // (restart, disconnect-cleanup, dropped message all converge the same way).
+    // Gated on reclaimOnReconnect so a deliberate PARK (transfer/stop, which nulls
+    // active on our LIVE socket) is NOT mistaken for a ghost — only a post-reconnect
+    // null active is a ghost. Cause-agnostic (restart + disconnect both reconnect).
     const audio = getActiveAudio();
     const reclaim =
       connectState.activeDeviceId === null &&
       !!audio && !audio.paused &&
       connectState.recordingId === selectedRecordingRef.current &&
-      (serverRestarted || reassertingTracksRef.current);
+      reclaimOnReconnectRef.current;
+    // Once the server assigns an owner (us via the lease, or another device), the
+    // post-reconnect ghost window is over: any later activeDevice=null is then a
+    // deliberate park we must pause for, not reclaim.
+    if (connectState.activeDeviceId !== null) reclaimOnReconnectRef.current = false;
 
     // Not the active device and not reclaiming → another device owns the session
     // (a real takeover) OR we were parked/stopped during a transfer. Either way,
@@ -747,13 +780,14 @@ export default function PlayerProvider({
       return;
     }
 
-    // We ARE the active device, or we're reclaiming a restarted session.
+    // We ARE the active device, or we're the ownerless ghost holding the lease.
     if (isActiveDevice || reclaim) {
       if (!audio) return;
 
-      // handleLoad (re)claims us active, honors the index/position we pass, and
-      // — because we pass autoplay — restores playing, so this refills tracks
-      // (and re-establishes the active device on a reclaim) without a gap.
+      // Hydrate the tracklist the ownerless session lost. On a reclaim we pass
+      // autoplay=false so this load does NOT claim ownership — the heartbeat lease
+      // does that; this only backfills `tracks` so viewers/next-prev work. (When
+      // we're already active with an empty tracklist, autoplay tracks real state.)
       const localTracks = tracksRef.current;
       if (connectState.tracks.length > 0 && !reclaim) {
         reassertingTracksRef.current = false;
@@ -793,13 +827,13 @@ export default function PlayerProvider({
           date: connectState.date ?? activeShowRef.current?.date,
           venue: connectState.venue ?? activeShowRef.current?.venue,
           location: connectState.location ?? activeShowRef.current?.location,
-          autoplay: reclaim ? !audio.paused : connectState.playing,
+          autoplay: reclaim ? false : connectState.playing,
         });
       }
 
-      // On a reclaim, don't sync transport DOWN to the stale playing:false /
-      // saved position — we're the source of truth until the server echoes our
-      // load back (next version, by which point activeDeviceId === us).
+      // Ownerless ghost: we're the transport authority — don't sync transport DOWN
+      // to the stale playing:false / saved position. Keep playing; the lease claims
+      // us within a heartbeat and the server echoes activeDeviceId === us.
       if (reclaim) return;
 
       // Same rule for an end-of-show park: we "became active" only because we

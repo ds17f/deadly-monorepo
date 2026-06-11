@@ -1,5 +1,11 @@
 export type DeviceType = "ios" | "android" | "web";
 
+// WS wire-contract version. See docs/PROTOCOL.md for the authoritative semantics.
+// Clients that omit `protocolVersion` on register are legacy and treated as 0.
+// Behavior is gated on this integer ONLY — never on `appVersion` (ADR-0011 §3).
+export const CURRENT_PROTOCOL_VERSION = 1;
+export const LEGACY_PROTOCOL_VERSION = 0;
+
 export interface SessionTrack {
   title: string;
   durationMs: number;
@@ -51,10 +57,22 @@ export interface RegisterMessage {
   deviceId: string;
   deviceType: DeviceType;
   deviceName: string;
+  // ADR-0011 §3. Additive/optional: absent ⇒ legacy ⇒ LEGACY_PROTOCOL_VERSION (0).
+  // `protocolVersion` is the wire contract the server may branch on; `appVersion`
+  // is build identity for telemetry/"please update" UX only — never branched on.
+  protocolVersion?: number;
+  appVersion?: string;
 }
 
 export interface HeartbeatMessage {
   type: "heartbeat";
+  // ADR-0011 Chunk B: ownership-lease renewal. The device producing audio
+  // piggybacks its local playback state so the server can heal an ownerless
+  // session (activeDeviceId == null) without a new explicit command. Additive/
+  // optional — legacy clients omit them. Server gates on protocolVersion >= 1.
+  playing?: boolean;
+  recordingId?: string;
+  positionMs?: number;
 }
 
 export interface CommandMessage {

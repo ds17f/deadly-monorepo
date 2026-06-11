@@ -1,5 +1,6 @@
 import type { WebSocket } from "ws";
 import type { ConnectState, ConnectDevice, DeviceType, SessionTrack } from "./types.js";
+import { LEGACY_PROTOCOL_VERSION } from "./types.js";
 import { upsertPlaybackPosition, getPlaybackPosition } from "../db/userdata.js";
 
 const log = (msg: string) => console.log(`[Connect] ${msg}`);
@@ -12,6 +13,12 @@ const SERVER_EPOCH = Date.now();
 interface LiveDevice {
   device: ConnectDevice;
   socket: WebSocket;
+  // Per-CONNECTION facts (ADR-0011 §3). Same lifetime as the socket: stamped on
+  // `register`, valid until close, re-sent on every reconnect (self-refreshing,
+  // never persisted). `protocolVersion` is the wire contract the server may
+  // branch on; `appVersion` is build identity for telemetry only.
+  protocolVersion: number;
+  appVersion: string | null;
 }
 
 // userId -> ConnectState
@@ -172,6 +179,8 @@ export function registerDevice(
   type: DeviceType,
   name: string,
   socket: WebSocket,
+  protocolVersion: number = LEGACY_PROTOCOL_VERSION,
+  appVersion: string | null = null,
 ): void {
   const key = deviceKey(userId, deviceId);
 
@@ -189,12 +198,32 @@ export function registerDevice(
     lastHeartbeat: Date.now(),
   };
 
-  liveDevices.set(key, { device, socket });
+  liveDevices.set(key, { device, socket, protocolVersion, appVersion });
 
   const state = getOrCreateState(userId);
-  log(`registerDevice: ${name}[${type}] (${deviceId}) — sending state v${state.version} show=${state.showId} rec=${state.recordingId} track=${state.trackIndex}/${state.tracks.length} pos=${state.positionMs} playing=${state.playing}`);
+  log(`registerDevice: ${name}[${type}] (${deviceId}) proto=${protocolVersion} app=${appVersion ?? "?"} — sending state v${state.version} show=${state.showId} rec=${state.recordingId} track=${state.trackIndex}/${state.tracks.length} pos=${state.positionMs} playing=${state.playing}`);
+  logProtocolDistribution(userId);
   sendJson(socket, { type: "state", state });
   broadcastDevices(userId);
+}
+
+// Telemetry (ADR-0011 §3, Chunk A): per-session distribution of the connected
+// devices' protocol/app versions. This is what licenses retiring a legacy
+// branch / advancing MIN_SUPPORTED later — on evidence, not hope.
+function logProtocolDistribution(userId: string): void {
+  const byProto = new Map<number, string[]>();
+  for (const [k, entry] of liveDevices) {
+    if (!k.startsWith(`${userId}:`)) continue;
+    const tag = `${entry.device.type}${entry.appVersion ? `@${entry.appVersion}` : ""}`;
+    const list = byProto.get(entry.protocolVersion) ?? [];
+    list.push(tag);
+    byProto.set(entry.protocolVersion, list);
+  }
+  const dist = [...byProto.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .map(([proto, tags]) => `proto${proto}×${tags.length}[${tags.join(",")}]`)
+    .join(" ");
+  log(`protocolDistribution: ${userId} — ${dist}`);
 }
 
 export function unregisterDevice(userId: string, deviceId: string): void {
@@ -230,11 +259,61 @@ export function unregisterDevice(userId: string, deviceId: string): void {
   broadcastDevices(userId);
 }
 
-export function handleHeartbeat(userId: string, deviceId: string): void {
+export interface LeaseRenewal {
+  playing: boolean;
+  recordingId: string;
+  positionMs: number;
+}
+
+export function handleHeartbeat(userId: string, deviceId: string, lease?: LeaseRenewal): void {
   const entry = liveDevices.get(deviceKey(userId, deviceId));
-  if (entry) {
-    entry.device.lastHeartbeat = Date.now();
+  if (!entry) return;
+  entry.device.lastHeartbeat = Date.now();
+
+  // ── ADR-0011 Chunk B: ownership lease ──────────────────────────────────────
+  // The audio-producing device heals an ownerless session by claiming it on its
+  // heartbeat. This is the convergent recovery for the restart/disconnect
+  // "ghost" — server believes activeDeviceId == null while a device is in fact
+  // still playing — replacing the cause-specific client reclaim heuristics
+  // (those stay until Chunk C proves the lease covers them). Conservative rule
+  // (ADR §2): the renewal FILLS A VACUUM, it never preempts an existing owner.
+  if (!lease) return;                       // legacy heartbeat — no lease payload
+  if (entry.protocolVersion < 1) return;    // gated on the Chunk A primitive
+
+  const state = userStates.get(userId);
+  if (!state || !state.recordingId) return;          // no session to heal
+  if (lease.recordingId !== state.recordingId) return; // device is on a different recording
+
+  // Owner: its lease renews implicitly via lastHeartbeat above; ownership already
+  // held, so nothing to broadcast. (A paused owner keeps the lease — ADR §2.)
+  if (state.activeDeviceId === deviceId) return;
+
+  // A transfer is mid-flight for this user (the server parked the source and is
+  // about to activate the target — activeDeviceId is transiently null). Don't let
+  // the source's lease re-claim the parked session and fight the handoff.
+  if (pendingTransfers.has(userId)) return;
+
+  // Vacuum claim: only a device actually producing audio (playing) fills an
+  // ownerless session. Requiring `playing` disambiguates a parked-but-still-
+  // loaded device (playing=false, e.g. transferred away) from the real source,
+  // so it can't steal ownership back after a restart.
+  if (state.activeDeviceId === null && lease.playing) {
+    log(`handleHeartbeat: lease claim — ${entry.device.name}[${entry.device.type}] heals ownerless session rec=${lease.recordingId} pos=${lease.positionMs}`);
+    mutate(userId, {
+      activeDeviceId: deviceId,
+      activeDeviceName: entry.device.name,
+      activeDeviceType: entry.device.type,
+      playing: true,
+      positionMs: lease.positionMs,
+      positionTs: Date.now(),
+    });
+    return;
   }
+
+  // Otherwise owned by another device (or ownerless + paused): back off — the
+  // lease never preempts. Split-brain (two devices both playing the same
+  // recording with no owner) is the rare path; first heartbeat wins, the other
+  // backs off here.
 }
 
 export function startHeartbeatSweep(): void {

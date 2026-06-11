@@ -59,13 +59,25 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
         case "register": {
           if (!msg.deviceId || !msg.deviceType || !msg.deviceName) return;
           registeredDeviceId = msg.deviceId;
-          registerDevice(userId!, msg.deviceId, msg.deviceType as DeviceType, msg.deviceName, socket);
+          // ADR-0011 §3: additive, optional. Absent ⇒ legacy ⇒ 0.
+          const protocolVersion = typeof msg.protocolVersion === "number" ? msg.protocolVersion : 0;
+          const appVersion = typeof msg.appVersion === "string" ? msg.appVersion : null;
+          registerDevice(userId!, msg.deviceId, msg.deviceType as DeviceType, msg.deviceName, socket, protocolVersion, appVersion);
           break;
         }
 
         case "heartbeat": {
           if (!registeredDeviceId) return;
-          handleHeartbeat(userId!, registeredDeviceId);
+          // ADR-0011 Chunk B: optional ownership-lease payload. Present only when
+          // the client has audio loaded locally (it carries recordingId).
+          const lease = typeof msg.recordingId === "string"
+            ? {
+                playing: msg.playing === true,
+                recordingId: msg.recordingId,
+                positionMs: typeof msg.positionMs === "number" ? msg.positionMs : 0,
+              }
+            : undefined;
+          handleHeartbeat(userId!, registeredDeviceId, lease);
           break;
         }
 

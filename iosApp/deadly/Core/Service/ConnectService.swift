@@ -57,12 +57,14 @@ final class ConnectService: NSObject {
     private var timeSyncRefreshTask: Task<Void, Never>?
     private var reconnectAttempt = 0
     private var shouldConnect = false
-    // Guards the one-shot track re-assert so position broadcasts arriving before
-    // our load echoes back don't make us re-send it repeatedly.
+    // Guards the one-shot tracklist re-hydration so position broadcasts arriving
+    // before our load echoes back don't make us re-send it repeatedly.
     private var reassertingTracks = false
-    // Last server epoch seen. A change means the server restarted (and rehydrated
-    // the session), which is the only situation a still-playing device reclaims.
-    private var lastEpoch: Int? = nil
+    // True from a (re)connect until the server next assigns an owner. Distinguishes
+    // an ownerless GHOST (server lost us across a restart/socket drop — reclaim) from
+    // a deliberate PARK (transfer/stop on a live socket — pause). Only the ghost
+    // arrives right after a reconnect; a park arrives mid-connection.
+    private var reclaimOnReconnect = false
     // Set on every (re)connect. The monotonic version guard only dedupes
     // out-of-order messages within one connection; across a reconnect the
     // server may have restarted and reset its counter, so the first snapshot
@@ -75,6 +77,9 @@ final class ConnectService: NSObject {
     // gets promoted to serverTimeOffsetMs.
     private var timeSyncBestRttMs: Double = .infinity
 
+    // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
+    // Bump in lockstep with the documented protocol; the server may branch on it.
+    private static let protocolVersion = 1
     private static let reconnectDelays: [Double] = [1, 2, 4, 8, 30]
     private static let heartbeatInterval: UInt64 = 15_000_000_000 // 15s in nanoseconds
     private static let timeSyncRefreshInterval: UInt64 = 5 * 60 * 1_000_000_000 // 5 min
@@ -413,29 +418,29 @@ final class ConnectService: NSObject {
             pendingTransfer = nil
         }
 
-        // Did the server restart? An epoch change is the explicit, authoritative
-        // signal (vs. inferring it from null-active + empty-tracks coincidences).
-        let prevEpoch = lastEpoch
-        let serverRestarted = prevEpoch != nil && new.epoch != prevEpoch
-        lastEpoch = new.epoch
-
-        // Reclaim only when the server restarted and rehydrated the session (so it
-        // has no active device) while we're still playing this recording — take
-        // ownership back without a gap. reassertingTracks keeps us in this mode
-        // while our reclaim load is in flight (epoch is unchanged on later states).
-        // A deliberate transition (transfer park, stop) keeps the same epoch, so
-        // it is never mistaken for a restart.
-        let reclaimAfterRestart = new.activeDeviceId == nil
+        // ADR-0011 Chunk C: the device producing audio is the transport authority.
+        // When the session is ownerless (server forgot the active device across a
+        // restart/socket drop) and we're still playing this recording, KEEP PLAYING
+        // and let the heartbeat ownership lease reclaim us server-side. Gated on
+        // reclaimOnReconnect so a deliberate PARK (transfer/stop, which nulls active
+        // on our LIVE socket) is NOT mistaken for a ghost — only a post-reconnect
+        // null active is a ghost. Cause-agnostic (restart + disconnect both reconnect).
+        let reclaimOwnerless = new.activeDeviceId == nil
             && streamPlayer.playbackState.isPlaying
             && streamPlayer.currentTrack?.metadata["recordingId"] == new.recordingId
-            && (serverRestarted || reassertingTracks)
+            && reclaimOnReconnect
+        // Once the server assigns an owner (us via the lease, or another device), the
+        // post-reconnect ghost window is over: any later activeDevice=nil is then a
+        // deliberate park we must pause for, not reclaim.
+        if new.activeDeviceId != nil { reclaimOnReconnect = false }
 
         // If this device was active but is no longer — a different device took
         // over, or we were parked during a transfer — pause and report final
-        // position. Skipped on a reclaim, where we keep playing and re-assert.
+        // position. Skipped when the session went ownerless (reclaimOwnerless): a
+        // null active device is a ghost we heal by holding the lease, not a takeover.
         let wasActive = old?.activeDeviceId == appPreferences.installId
         let nowActive = new.activeDeviceId == appPreferences.installId
-        if wasActive && !nowActive && !reclaimAfterRestart {
+        if wasActive && !nowActive && !reclaimOwnerless {
             let positionMs = Int(streamPlayer.progress.currentTime * 1000)
             logger.info("reactToState: parked/transferred away — pausing and reporting position \(positionMs, privacy: .public)ms")
             streamPlayer.pause()
@@ -456,19 +461,21 @@ final class ConnectService: NSObject {
             return
         }
 
-        // Only drive local playback when this device is active (or reclaiming a
-        // restarted session — reclaimAfterRestart computed above).
-        guard isActiveDevice || reclaimAfterRestart else {
+        // Only drive local playback when this device is active (or we're the
+        // ownerless ghost holding the lease — reclaimOwnerless computed above).
+        guard isActiveDevice || reclaimOwnerless else {
             logger.info("reactToState: not active device, skipping playback control")
             reassertingTracks = false
             stopPositionReporting()
             return
         }
 
-        // Server forgot our tracklist (it restarted and rehydrated the session
-        // from the saved position only). We still hold the queue — re-assert the
-        // load so viewers' display and the server's next/prev get the tracks
-        // back. handleLoad keeps us active and honors the index/position we pass.
+        // Server forgot our tracklist (a restart rehydrated the session from the
+        // saved position only). We still hold the queue — re-send the load so
+        // viewers' display and the server's next/prev get the tracks back. This
+        // hydrates TRACKS ONLY: autoplay=false when we're the ownerless ghost, so
+        // the load does NOT claim ownership — the heartbeat lease does that. (When
+        // already active, autoplay tracks our real playing state.)
         if new.tracks.isEmpty {
             let queue = streamPlayer.loadedTracks
             let localRecId = streamPlayer.currentTrack?.metadata["recordingId"]
@@ -492,18 +499,18 @@ final class ConnectService: NSObject {
                     date: new.date ?? meta["showDate"],
                     venue: new.venue ?? meta["venue"],
                     location: new.location ?? meta["location"],
-                    autoplay: streamPlayer.playbackState.isPlaying
+                    autoplay: nowActive && streamPlayer.playbackState.isPlaying
                 )
             }
         } else {
             reassertingTracks = false
         }
 
-        // On a reclaim we are the source of truth: don't sync transport down to
-        // the stale playing:false / saved position. The server will echo our
-        // re-asserted load back on the next version (activeDeviceId == us), and
+        // Ownerless ghost: we are the transport authority — don't sync transport
+        // down to the stale playing:false / saved position. Keep playing; the lease
+        // claims us within a heartbeat, the server echoes activeDeviceId == us, and
         // normal active-device sync resumes from there.
-        if reclaimAfterRestart { return }
+        if reclaimOwnerless { return }
 
         // When this device just became active (e.g. transfer in), sync local player
         // to server state — the local player may be at a completely different track/position.
@@ -515,7 +522,7 @@ final class ConnectService: NSObject {
         // the server, whose positionMs is the stale pre-end value. Without this guard
         // we seek back to that stale position and resume, replaying the tail, which
         // re-fires onShowCompleted and re-announces (resetting the countdown). The
-        // note-collector owns the transition from here. (Mirrors reclaimAfterRestart.)
+        // note-collector owns the transition from here. (Mirrors reclaimOwnerless.)
         let justBecameActive = !wasActive && nowActive
         if justBecameActive && new.pendingAdvance == nil {
             let currentVolume = Int(streamPlayer.volume * 100)
@@ -664,6 +671,9 @@ final class ConnectService: NSObject {
     // MARK: - Registration
 
     private func sendRegister() {
+        // Arm ghost-reclaim: a null active device in the first state(s) after this
+        // (re)connect is a ghost to heal (lease), not a deliberate park.
+        reclaimOnReconnect = true
         let deviceId = appPreferences.installId
         #if canImport(UIKit)
         let deviceName = UIDevice.current.name
@@ -671,14 +681,22 @@ final class ConnectService: NSObject {
         let deviceName = "iPhone"
         #endif
 
-        logger.info("sendRegister: deviceId=\(deviceId, privacy: .public) name=\(deviceName, privacy: .public)")
-        let msg: [String: String] = [
+        // ADR-0011 §3 / docs/PROTOCOL.md: build identity for telemetry only —
+        // the server never branches behavior on appVersion.
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
+
+        logger.info("sendRegister: deviceId=\(deviceId, privacy: .public) name=\(deviceName, privacy: .public) proto=\(Self.protocolVersion, privacy: .public) app=\(appVersion, privacy: .public)")
+        // Mixed value types (string + int) → encode as a JSON object explicitly.
+        let msg: [String: Any] = [
             "type": "register",
             "deviceId": deviceId,
             "deviceType": "ios",
             "deviceName": deviceName,
+            // Wire-contract version the server may branch on; see docs/PROTOCOL.md.
+            "protocolVersion": Self.protocolVersion,
+            "appVersion": appVersion,
         ]
-        guard let data = try? JSONEncoder().encode(msg),
+        guard let data = try? JSONSerialization.data(withJSONObject: msg),
               let text = String(data: data, encoding: .utf8) else { return }
         webSocket?.send(.string(text)) { _ in }
     }
@@ -740,9 +758,29 @@ final class ConnectService: NSObject {
             while !Task.isCancelled {
                 try? await Task.sleep(nanoseconds: Self.heartbeatInterval)
                 guard !Task.isCancelled else { break }
-                webSocket?.send(.string(#"{"type":"heartbeat"}"#)) { _ in }
+                webSocket?.send(.string(buildHeartbeat())) { _ in }
             }
         }
+    }
+
+    // ADR-0011 Chunk B: renew the ownership lease. When audio is loaded locally,
+    // piggyback {playing, recordingId, positionMs} so the server can heal an
+    // ownerless session from our heartbeat (the restart/disconnect "ghost" fix).
+    // Plain heartbeat when nothing is loaded. See docs/PROTOCOL.md.
+    private func buildHeartbeat() -> String {
+        let plain = #"{"type":"heartbeat"}"#
+        guard let recordingId = streamPlayer.currentTrack?.metadata["recordingId"] else {
+            return plain
+        }
+        let lease: [String: Any] = [
+            "type": "heartbeat",
+            "playing": streamPlayer.playbackState.isPlaying,
+            "recordingId": recordingId,
+            "positionMs": Int(streamPlayer.progress.currentTime * 1000),
+        ]
+        guard let data = try? JSONSerialization.data(withJSONObject: lease),
+              let text = String(data: data, encoding: .utf8) else { return plain }
+        return text
     }
 
     private func stopHeartbeat() {
