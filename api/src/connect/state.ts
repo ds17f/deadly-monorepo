@@ -435,10 +435,28 @@ export function handleAnnounceNext(
   if (!state) return;
   if (state.activeDeviceId && state.activeDeviceId !== deviceId) return;
   log(`handleAnnounceNext: next=${params.showId} deadline=${params.deadline}`);
-  mutate(userId, {
+
+  const patch: Partial<ConnectState> = {
     playing: false,
     pendingAdvance: { showId: params.showId, deadline: params.deadline },
-  });
+  };
+
+  // The announcing device just finished playing locally, so it IS the active
+  // device — even if the server lost that (e.g. in-memory state wiped on a
+  // restart while the device kept playing across the reconnect, leaving it a
+  // connected-but-not-active ghost). Claim it here like handlePlay/handleLoad
+  // do; otherwise the note broadcasts but no device counts as active, so nobody
+  // fires the advance at the deadline and the countdown dies silently.
+  if (!state.activeDeviceId) {
+    const entry = liveDevices.get(deviceKey(userId, deviceId));
+    if (entry) {
+      patch.activeDeviceId = deviceId;
+      patch.activeDeviceName = entry.device.name;
+      patch.activeDeviceType = entry.device.type;
+    }
+  }
+
+  mutate(userId, patch);
 }
 
 /** Anyone cancels the pending advance — clears the note; stays parked. */
