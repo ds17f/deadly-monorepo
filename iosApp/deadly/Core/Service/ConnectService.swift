@@ -242,6 +242,22 @@ final class ConnectService: NSObject {
         sendCommand("stop")
     }
 
+    // ADR-0010 §7: cross-device end-of-show countdown.
+    func sendAnnounceNext(showId: String, deadline: Double) {
+        logger.info("sendAnnounceNext: \(showId, privacy: .public) @ \(deadline)")
+        sendCommand("announce_next", extra: ["showId": showId, "deadline": deadline])
+    }
+
+    func sendCancelAdvance() {
+        logger.info("sendCancelAdvance")
+        sendCommand("cancel_advance")
+    }
+
+    func sendAdvanceNow() {
+        logger.info("sendAdvanceNow")
+        sendCommand("advance_now")
+    }
+
     func sendVolume(volume: Int) {
         logger.info("sendVolume: \(volume, privacy: .public)")
         sendCommand("volume", extra: ["volume": volume])

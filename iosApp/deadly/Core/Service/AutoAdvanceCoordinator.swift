@@ -3,33 +3,40 @@ import os.log
 
 private let logger = Logger(subsystem: "com.grateful.deadly", category: "AutoAdvance")
 
-/// ADR-0010 Chunk 2 — chronological auto-advance (iOS).
+/// ADR-0010 Chunk 2 + §7 — chronological auto-advance, cross-device (iOS).
 ///
-/// An independent coordinator whose only input is
-/// `PlaylistServiceImpl.onShowCompleted` (the Chunk 1 end-of-show signal). It
-/// reads no transport/Connect state to decide whether/what to advance — that
-/// interrogation was the v1 whack-a-mole. Gating is intrinsic: only the
-/// audio-producing device reaches end-of-show, so only it advances.
+/// Driven by `PlaylistServiceImpl.onShowCompleted` (the Chunk 1 end-of-show
+/// signal). Reads no transport state to *decide* whether to advance.
 ///
-/// On end of show: **park** (`sendStop`, so the server stops believing we're
-/// playing and can't drag us back) → **cancelable countdown** →
-/// `playShow(next chronological)`, whose output (local audio + sendLoad) is
-/// identical to a user tap, so remote Connect clients follow for free.
+/// In a Connect session it `announce`s the next show + a server-time deadline;
+/// the shared `pendingAdvance` note then drives the countdown UI **and** the
+/// advance on every device (the note-poll below). Offline it runs a purely local
+/// countdown. The active device advances when the note is present and the
+/// deadline passes; its `playShow` load clears the note for all. Cancel / Play
+/// now work from any device (commands when remote; act directly when
+/// active/offline).
 @MainActor
 @Observable
 final class AutoAdvanceCoordinator {
     struct Countdown: Equatable {
         let secondsRemaining: Int
-        let nextShowLabel: String?
+        let nextShow: Show
     }
 
-    /// Drives the cancelable "next show in Ns" overlay; nil when idle.
+    /// Drives the "Next up in Ns" UI; nil when idle.
     private(set) var countdown: Countdown?
 
     private let playlistService: PlaylistServiceImpl
     private let showRepository: any ShowRepository
     private let connectService: ConnectService
-    private var advanceTask: Task<Void, Never>?
+
+    private var localTask: Task<Void, Never>?
+    private var noteWatcher: Task<Void, Never>?
+
+    // Cache the resolved show for the current note, and guard one-shot advance.
+    private var resolvedShowId: String?
+    private var resolvedShow: Show?
+    private var advanceTriggered = false
 
     private static let countdownSeconds = 15
 
@@ -44,48 +51,106 @@ final class AutoAdvanceCoordinator {
         playlistService.onShowCompleted = { [weak self] completedShowId in
             self?.onShowCompleted(completedShowId)
         }
+        startNoteWatcher()
     }
 
-    /// User canceled the pending advance.
+    /// Cancel the pending advance.
     func cancel() {
-        logger.notice("auto-advance: canceled by user")
-        advanceTask?.cancel()
-        advanceTask = nil
+        logger.notice("auto-advance: cancel")
+        localTask?.cancel()
+        localTask = nil
         countdown = nil
+        if connectService.isConnected { connectService.sendCancelAdvance() }
+    }
+
+    /// Skip the countdown ("Play now").
+    func playNow() {
+        guard let show = countdown?.nextShow else { return }
+        if connectService.isConnected && !connectService.isActiveDevice {
+            connectService.sendAdvanceNow()
+            return
+        }
+        localTask?.cancel()
+        localTask = nil
+        countdown = nil
+        Task { await playlistService.playShow(show) }
+    }
+
+    // ADR-0010 §7: poll the shared note (1s) — drives the countdown + advance on
+    // every device when connected. Cheap; mirrors the always-on interpolation
+    // ticker elsewhere. Offline, the local countdown task owns `countdown`.
+    private func startNoteWatcher() {
+        noteWatcher = Task { @MainActor [weak self] in
+            while !Task.isCancelled {
+                self?.tickNote()
+                try? await Task.sleep(nanoseconds: 1_000_000_000)
+            }
+        }
+    }
+
+    private func tickNote() {
+        guard connectService.isConnected else { return } // offline: local task owns it
+        guard let note = connectService.connectState?.pendingAdvance else {
+            countdown = nil
+            resolvedShowId = nil
+            resolvedShow = nil
+            advanceTriggered = false
+            return
+        }
+        if resolvedShowId != note.showId {
+            resolvedShowId = note.showId
+            resolvedShow = try? showRepository.getShowById(note.showId)
+            advanceTriggered = false
+        }
+        guard let show = resolvedShow else { return }
+
+        let serverNow = Date().timeIntervalSince1970 * 1000 + connectService.serverTimeOffsetMs
+        let remaining = Int(ceil((note.deadline - serverNow) / 1000.0))
+        if remaining <= 0 {
+            countdown = nil
+            if connectService.isActiveDevice && !advanceTriggered {
+                advanceTriggered = true
+                logger.notice("auto-advance: advancing to \(show.displayTitle, privacy: .public)")
+                Task { await playlistService.playShow(show) } // load clears the note
+            }
+            return
+        }
+        countdown = Countdown(secondsRemaining: remaining, nextShow: show)
     }
 
     private func onShowCompleted(_ completedShowId: String) {
         logger.notice("auto-advance: show completed = \(completedShowId, privacy: .public)")
-        advanceTask?.cancel()
-        advanceTask = Task { @MainActor [weak self] in
+        localTask?.cancel()
+        localTask = Task { @MainActor [weak self] in
             guard let self else { return }
-
-            // 1. Park: stop the server believing we're playing so it can't drag
-            //    us back during the countdown. No-op on the wire when not connected.
-            self.connectService.sendStop()
-
-            // 2. Resolve the next chronological show.
             guard
                 let completed = try? self.showRepository.getShowById(completedShowId),
                 let next = try? self.showRepository.getNextShow(afterDate: completed.date)
             else {
                 logger.notice("auto-advance: no next show after \(completedShowId, privacy: .public)")
-                self.countdown = nil
                 return
             }
 
-            // 3. Cancelable countdown (server is parked, so no drag-back).
+            if self.connectService.isConnected {
+                // In a session: announce; the note-poll drives the rest. Deadline
+                // in server time so every device ticks to the same instant.
+                let deadline = Date().timeIntervalSince1970 * 1000
+                    + self.connectService.serverTimeOffsetMs
+                    + Double(Self.countdownSeconds) * 1000
+                self.connectService.sendAnnounceNext(showId: next.id, deadline: deadline)
+                return
+            }
+
+            // Offline: local-only countdown, then advance.
             var remaining = Self.countdownSeconds
             while remaining > 0 {
                 if Task.isCancelled { return }
-                self.countdown = Countdown(secondsRemaining: remaining, nextShowLabel: next.displayTitle)
+                self.countdown = Countdown(secondsRemaining: remaining, nextShow: next)
                 try? await Task.sleep(nanoseconds: 1_000_000_000)
                 remaining -= 1
             }
             if Task.isCancelled { return }
             self.countdown = nil
-
-            // 4. Advance — identical to a user tap; remotes follow via sendLoad.
             logger.notice("auto-advance: advancing to \(next.displayTitle, privacy: .public)")
             await self.playlistService.playShow(next)
         }
