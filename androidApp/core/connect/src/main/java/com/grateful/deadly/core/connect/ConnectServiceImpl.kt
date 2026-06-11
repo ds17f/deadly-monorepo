@@ -106,12 +106,14 @@ class ConnectServiceImpl @Inject constructor(
     // forgets it (e.g. a server restart rehydrates the session position-only).
     private var cachedTracks: List<ConnectSessionTrack> = emptyList()
     private var cachedTracksRecordingId: String? = null
-    // Guards the one-shot re-assert so position broadcasts arriving before our
-    // load echoes back don't make us re-send it repeatedly.
+    // Guards the one-shot tracklist re-hydration so position broadcasts arriving
+    // before our load echoes back don't make us re-send it repeatedly.
     private var reassertingTracks = false
-    // Last server epoch seen. A change means the server restarted (and rehydrated
-    // the session), which is the only situation a still-playing device reclaims.
-    @Volatile private var lastEpoch: Long? = null
+    // True from a (re)connect until the server next assigns an owner. Distinguishes
+    // an ownerless GHOST (server lost us across a restart/socket drop — reclaim) from
+    // a deliberate PARK (transfer/stop on a live socket — pause). Only the ghost
+    // arrives right after a reconnect; a park arrives mid-connection.
+    @Volatile private var reclaimOnReconnect = false
 
     private val _pendingTransfer = MutableStateFlow<String?>(null)
     override val pendingTransfer: StateFlow<String?> = _pendingTransfer.asStateFlow()
@@ -305,6 +307,9 @@ class ConnectServiceImpl @Inject constructor(
             // snapshot after connecting is authoritative regardless of version.
             // (-1 so the server's lowest possible version, 0, is still accepted.)
             currentVersion = -1L
+            // Arm ghost-reclaim: a null active device in the first state(s) after
+            // this (re)connect is a ghost to heal (lease), not a deliberate park.
+            reclaimOnReconnect = true
             sendRegister(webSocket)
             startHeartbeat(webSocket)
             startTimeSyncRefresh(webSocket)
@@ -564,25 +569,26 @@ class ConnectServiceImpl @Inject constructor(
         val localRecordingId = mediaControllerRepository.currentRecordingId.value
         val locallyPlaying = mediaControllerRepository.isPlaying.value
 
-        // Did the server restart? An epoch change is the explicit, authoritative
-        // signal (vs. inferring it from null-active + empty-tracks coincidences).
-        val serverRestarted = lastEpoch != null && new.epoch != lastEpoch
-        lastEpoch = new.epoch
-
-        // Reclaim only when the server restarted and rehydrated the session (so it
-        // has no active device) while we're still playing this recording — take
-        // ownership back without a gap. reassertingTracks keeps us in this mode
-        // while our reclaim load is in flight (epoch is unchanged on later states).
-        // A deliberate transition (transfer park, stop) keeps the same epoch, so
-        // it is never mistaken for a restart.
-        val reclaimAfterRestart = new.activeDeviceId == null &&
+        // ADR-0011 Chunk C: the device producing audio is the transport authority.
+        // When the session is ownerless (server forgot the active device across a
+        // restart/socket drop) and we're still playing this recording, KEEP PLAYING
+        // and let the heartbeat ownership lease reclaim us server-side. Gated on
+        // reclaimOnReconnect so a deliberate PARK (transfer/stop, which nulls active
+        // on our LIVE socket) is NOT mistaken for a ghost — only a post-reconnect
+        // null active is a ghost. Cause-agnostic (restart + disconnect both reconnect).
+        val reclaimOwnerless = new.activeDeviceId == null &&
             locallyPlaying && localRecordingId == new.recordingId &&
-            (serverRestarted || reassertingTracks)
+            reclaimOnReconnect
+        // Once the server assigns an owner (us via the lease, or another device), the
+        // post-reconnect ghost window is over: any later activeDevice=null is then a
+        // deliberate park we must pause for, not reclaim.
+        if (new.activeDeviceId != null) reclaimOnReconnect = false
 
         // If this device was active but is no longer — a different device took
         // over, or we were parked during a transfer — pause and report final
-        // position. Skipped on a reclaim, where we keep playing and re-assert.
-        if (wasActive && !nowActive && !reclaimAfterRestart) {
+        // position. Skipped when the session went ownerless (reclaimOwnerless): a
+        // null active device is a ghost we heal by holding the lease, not a takeover.
+        if (wasActive && !nowActive && !reclaimOwnerless) {
             val positionMs = mediaControllerRepository.currentPosition.value.toInt()
             Log.d(TAG, "reactToState: parked/transferred away — pausing and reporting position ${positionMs}ms")
             mediaControllerRepository.pause()
@@ -621,8 +627,9 @@ class ConnectServiceImpl @Inject constructor(
         // Compare against the LOCAL track index (not old server state) so the
         // very first snapshot (old == null) still aligns — e.g. when the app
         // just restored the same recording at a different track on startup.
-        // Skipped while reclaiming: we keep playing and re-assert below instead.
-        if (!isActive && !reclaimAfterRestart) {
+        // Skipped when we're the ownerless ghost: we keep playing and let the
+        // lease reclaim us (and hydrate tracks below) instead of pausing.
+        if (!isActive && !reclaimOwnerless) {
             reassertingTracks = false
             val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
             if (new.trackIndex != localTrackIndex) {
@@ -639,15 +646,17 @@ class ConnectServiceImpl @Inject constructor(
             return
         }
 
-        // Server forgot our tracklist (it restarted and rehydrated the session
-        // from the saved position only). We still hold it — re-assert the load so
-        // viewers' display and the server's next/prev get the tracks back.
-        // handleLoad keeps us active and honors the index/position we pass.
+        // Server forgot our tracklist (a restart rehydrated the session from the
+        // saved position only). We still hold it — re-send the load so viewers'
+        // display and the server's next/prev get the tracks back. This hydrates
+        // TRACKS ONLY: autoplay=false when we're the ownerless ghost, so the load
+        // does NOT claim ownership — the heartbeat lease does that. (When we're
+        // already active, autoplay tracks our real playing state.)
         if (new.tracks.isEmpty() && cachedTracks.isNotEmpty() &&
             cachedTracksRecordingId == new.recordingId && !reassertingTracks) {
             reassertingTracks = true
             val idx = mediaControllerRepository.currentTrackIndex.value
-            Log.d(TAG, "reactToState: server tracks empty — re-asserting load (${cachedTracks.size} tracks, idx=$idx)")
+            Log.d(TAG, "reactToState: server tracks empty — hydrating tracklist (${cachedTracks.size} tracks, idx=$idx, active=$nowActive)")
             sendLoad(
                 showId = new.showId ?: mediaControllerRepository.currentShowId.value ?: "",
                 recordingId = new.recordingId ?: cachedTracksRecordingId ?: "",
@@ -658,15 +667,15 @@ class ConnectServiceImpl @Inject constructor(
                 date = new.date,
                 venue = new.venue,
                 location = new.location,
-                autoplay = mediaControllerRepository.isPlaying.value,
+                autoplay = nowActive && mediaControllerRepository.isPlaying.value,
             )
         }
 
-        // On a reclaim we are the source of truth: don't sync transport down to
-        // the stale playing:false / saved position. The server echoes our
-        // re-asserted load back on the next version (activeDeviceId == us), and
+        // Ownerless ghost: we are the transport authority — don't sync transport
+        // down to the stale playing:false / saved position. Keep playing; the lease
+        // claims us within a heartbeat, the server echoes activeDeviceId == us, and
         // normal active-device sync resumes from there.
-        if (reclaimAfterRestart) return
+        if (reclaimOwnerless) return
 
         // When this device just became active (e.g. transfer in), sync local player
         // to server state — the local player may be at a completely different track/position.

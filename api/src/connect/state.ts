@@ -288,6 +288,11 @@ export function handleHeartbeat(userId: string, deviceId: string, lease?: LeaseR
   // held, so nothing to broadcast. (A paused owner keeps the lease — ADR §2.)
   if (state.activeDeviceId === deviceId) return;
 
+  // A transfer is mid-flight for this user (the server parked the source and is
+  // about to activate the target — activeDeviceId is transiently null). Don't let
+  // the source's lease re-claim the parked session and fight the handoff.
+  if (pendingTransfers.has(userId)) return;
+
   // Vacuum claim: only a device actually producing audio (playing) fills an
   // ownerless session. Requiring `playing` disambiguates a parked-but-still-
   // loaded device (playing=false, e.g. transferred away) from the real source,

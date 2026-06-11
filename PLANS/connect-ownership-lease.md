@@ -93,5 +93,19 @@ Once B is proven on all three platforms and telemetry shows the fleet on
   **Outstanding: run the exit-criterion test** — play through an API restart →
   next heartbeat reconverges `activeDeviceId` → end-of-show advance fires; plus the
   disconnect-reconnect variant.
-- **Chunk C — not started.** Gated on Chunk B device-verification + telemetry
-  showing the fleet on `protocolVersion >= 1`.
+- **Chunk C — code-complete, built on all 3 platforms, NOT yet device-verified.**
+  Deleted the epoch-change reclaim (`lastEpoch`/`serverRestarted`) on iOS/Android/
+  web. Reconcile now honors "the device producing audio is the transport authority":
+  ownerless session + still playing our recording ⇒ keep playing, let the lease
+  reclaim (no pause-on-null, no self-claim via `load`). The empty-tracks re-send is
+  kept but decoupled — it hydrates tracks with `autoplay=false` so it restores the
+  tracklist WITHOUT claiming ownership (the lease owns that). This removes the
+  masking that hid the lease, so a restart/blip on a new build now produces
+  `handleHeartbeat: lease claim`. Kept deliberately: the `playWhenReady`
+  `if (!isActive) return` gate (removing it risks a follower pushing pause onto the
+  active session; the lease doesn't need it gone) and the `justBecameActive &&
+  pendingAdvance == null` guard (still protects the announce-park seek-back, and is
+  safe now because the lease seeds the server with our own position on claim).
+  **Outstanding: device test — new build, play → restart server (or network blip) →
+  device keeps playing → next heartbeat → `lease claim` → advance fires; and a real
+  takeover by another device still pauses the loser (no double-play).**

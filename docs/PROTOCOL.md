@@ -50,12 +50,17 @@ separate per-session lifetime; see ADR-0011 §3.)
 | `0` | (implicit) | Legacy: any client that omits the field. No `protocolVersion`/`appVersion` on register. |
 | `1` | Chunk A + B (ADR-0011) | **A:** client sends `protocolVersion` + `appVersion` on `register`. **B:** the audio-producing device piggybacks `{ playing, recordingId, positionMs }` on its `heartbeat` to renew the ownership lease. Server reads the lease only when `protocolVersion >= 1`; a renewal **claims an ownerless session** (`activeDeviceId == null`, requires `playing`) but never preempts an existing owner. All additive — no register/heartbeat shape that an old client sends changed. |
 
-### Reserved / planned
+### Chunk C (landed) — client recovery is now lease-driven
 
-- **Heuristic deletion (ADR-0011 Chunk C)** removes the client-side reclaim
-  detectors (epoch-change reclaim, empty-tracks re-assert) and the `playWhenReady`
-  reconciler's `if (!isActive) return` gate once telemetry shows the fleet on
-  `protocolVersion >= 1`. No wire change — purely deleting code the lease subsumes.
+No wire/version change. All three clients deleted the **epoch-change reclaim**
+heuristic (`lastEpoch`/`serverRestarted`) and made the reconcile loop honor one
+invariant: **the device producing audio is the transport authority.** When the
+session is ownerless (`activeDeviceId == null`) and we're still playing the
+session's recording, we keep playing and let the heartbeat **lease** reclaim us
+server-side instead of pausing or self-claiming via `load`. The empty-tracks
+re-send is **kept but decoupled** — it now hydrates the tracklist with
+`autoplay=false`, so it restores tracks without claiming ownership (the lease owns
+that). This is what makes the lease the load-bearing, observable recovery path.
 
 ## When you bump the version
 
