@@ -58,6 +58,18 @@ class SettingsViewModel @Inject constructor(
     private val _migrationImportState = MutableStateFlow<MigrationImportState>(MigrationImportState.Idle)
     val migrationImportState: StateFlow<MigrationImportState> = _migrationImportState
 
+    val autoAdvanceEnabled: StateFlow<Boolean> = appPreferences.autoAdvanceEnabled
+
+    fun toggleAutoAdvanceEnabled() {
+        val newValue = !appPreferences.autoAdvanceEnabled.value
+        appPreferences.setAutoAdvanceEnabled(newValue)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "toggle_auto_advance",
+            "category" to "playback",
+            "enabled" to newValue,
+        ))
+    }
+
     val includeShowsWithoutRecordings: StateFlow<Boolean> = appPreferences.includeShowsWithoutRecordings
 
     fun toggleIncludeShowsWithoutRecordings() {

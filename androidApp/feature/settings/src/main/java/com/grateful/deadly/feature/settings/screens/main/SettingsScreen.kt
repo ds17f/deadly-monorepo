@@ -34,6 +34,7 @@ fun SettingsScreen(
     onNavigateToConnect: () -> Unit = {}
 ) {
     val context = LocalContext.current
+    val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
     val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
@@ -122,6 +123,20 @@ fun SettingsScreen(
                     }
                 }
             }
+        }
+
+        item { HorizontalDivider() }
+
+        // ── PLAYBACK ─────────────────────────────────────────────────
+        item { SectionHeader("Playback") }
+
+        item {
+            PreferenceToggleRow(
+                title = "When a show ends",
+                subtitle = "Roll into the next show automatically, after a 15-second countdown you can cancel.",
+                checked = autoAdvanceEnabled,
+                onCheckedChange = { viewModel.toggleAutoAdvanceEnabled() }
+            )
         }
 
         item { HorizontalDivider() }

@@ -3,6 +3,7 @@ package com.grateful.deadly.playback
 import android.util.Log
 import com.grateful.deadly.core.api.playlist.PlaylistService
 import com.grateful.deadly.core.connect.ConnectService
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.model.Show
@@ -42,6 +43,7 @@ class AutoAdvanceCoordinator @Inject constructor(
     private val showRepository: ShowRepository,
     private val playlistService: PlaylistService,
     private val connectService: ConnectService,
+    private val appPreferences: AppPreferences,
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
@@ -121,6 +123,10 @@ class AutoAdvanceCoordinator @Inject constructor(
 
     private fun onShowCompleted(completedShowId: String) {
         Log.d(TAG, "auto-advance: show completed = $completedShowId")
+        if (!appPreferences.autoAdvanceEnabled.value) {
+            Log.d(TAG, "auto-advance: disabled by preference — not advancing")
+            return
+        }
         localJob?.cancel()
         localJob = scope.launch {
             val completed = showRepository.getShowById(completedShowId)
