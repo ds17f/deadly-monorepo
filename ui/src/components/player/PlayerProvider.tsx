@@ -13,6 +13,29 @@ import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
 
 const AUTO_ADVANCE_DELAY_MS = 15_000; // ADR-0010 chunk 2: end-of-show countdown
+
+// The /api/shows[/:id|/:id/next] catalog shape → a playable ViewedShow.
+interface ShowMetaResponse {
+  showId: string;
+  date: string | null;
+  venue: string | null;
+  city: string | null;
+  state: string | null;
+  bestRecordingId: string | null;
+  image: string | null;
+}
+function metaToViewedShow(m: ShowMetaResponse): ViewedShow {
+  return {
+    showId: m.showId,
+    recordings: [],
+    bestRecordingId: m.bestRecordingId,
+    date: m.date ?? "",
+    venue: m.venue ?? "",
+    location: [m.city, m.state].filter(Boolean).join(", "),
+    image: m.image,
+    review: null,
+  };
+}
 const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
 const GAPLESS_PRELOAD_THRESHOLD = 2; // seconds before end to start preloading
@@ -27,6 +50,7 @@ export default function PlayerProvider({
   const {
     state: connectState,
     myDeviceId,
+    connected,
     sendCommand,
     onVolumeMessage,
     reportVolume,
@@ -894,27 +918,16 @@ export default function PlayerProvider({
     [playRecording, sendCommand]
   );
 
-  // ADR-0010 chunk 2: chronological auto-advance. Driven solely by the end-of-show
-  // signal (the `ended` last-track branch); reads no transport state to decide.
-  // Park → countdown → playShow(next), whose output (local audio + sendLoad) is
-  // identical to a user tap, so remote Connect clients follow for free.
+  // ADR-0010 chunk 2 / §7: end-of-show advance, driven by the `onShowComplete`
+  // signal. In a Connect session it `announce`s the next show + deadline so the
+  // shared note drives the countdown + advance on EVERY device (see the effect
+  // below). Offline it runs a purely local countdown. Reads no transport state
+  // to decide whether to advance.
   const onShowComplete = useCallback(
     async (completedShowId: string) => {
-      // 1. Park: stop the server believing we're playing so it can't drag us
-      //    back during the countdown. No-op when not in a Connect session.
-      sendCommandRef.current("stop");
-
-      // 2. Resolve the next chronological show. The browser has no catalog
-      //    (shows are static SSG), so ask the API, which holds it in memory.
-      let next: {
-        showId: string;
-        date: string | null;
-        venue: string | null;
-        city: string | null;
-        state: string | null;
-        bestRecordingId: string | null;
-        image: string | null;
-      };
+      // Resolve the next chronological show. The browser has no catalog (shows
+      // are static SSG), so ask the API, which holds it in memory.
+      let next: ShowMetaResponse;
       try {
         const res = await fetch(`/api/shows/${encodeURIComponent(completedShowId)}/next`);
         if (!res.ok) {
@@ -925,23 +938,23 @@ export default function PlayerProvider({
       } catch {
         return;
       }
-      const viewed: ViewedShow = {
-        showId: next.showId,
-        recordings: [],
-        bestRecordingId: next.bestRecordingId,
-        date: next.date ?? "",
-        venue: next.venue ?? "",
-        location: [next.city, next.state].filter(Boolean).join(", "),
-        image: next.image,
-        review: null,
-      };
 
-      // 3. Cancelable countdown (ticks the UI each second), then advance (== a
-      //    user tap; remotes follow via the sendLoad inside playShow).
+      if (connected) {
+        // In a session: announce. The server parks playback + sets the shared
+        // note; the effect below renders the countdown and (on the active
+        // device) advances at the deadline. Deadline is in SERVER time so every
+        // device ticks to the same instant.
+        const deadline = Date.now() + serverTimeOffsetMs + AUTO_ADVANCE_DELAY_MS;
+        console.info(`[auto-advance] announce → ${next.showId} @ ${deadline}`);
+        sendCommandRef.current("announce_next", { showId: next.showId, deadline });
+        return;
+      }
+
+      // Offline: local-only countdown, then advance.
+      const viewed = metaToViewedShow(next);
       if (autoAdvanceTimerRef.current) clearInterval(autoAdvanceTimerRef.current);
       let remaining = Math.round(AUTO_ADVANCE_DELAY_MS / 1000);
       setAutoAdvance({ secondsRemaining: remaining, nextShow: viewed });
-      console.info(`[auto-advance] next in ${remaining}s → ${viewed.showId}`);
       autoAdvanceTimerRef.current = setInterval(() => {
         remaining -= 1;
         if (remaining > 0) {
@@ -951,25 +964,85 @@ export default function PlayerProvider({
         if (autoAdvanceTimerRef.current) clearInterval(autoAdvanceTimerRef.current);
         autoAdvanceTimerRef.current = null;
         setAutoAdvance(null);
-        console.info(`[auto-advance] advancing → ${viewed.showId}`);
         playShow(viewed);
       }, 1000);
     },
-    [playShow]
+    [playShow, connected, serverTimeOffsetMs]
   );
 
-  // Cancel a pending auto-advance (user tapped Cancel). Leaves playback stopped.
+  // ADR-0010 §7: in a Connect session, the shared `pendingAdvance` note is the
+  // source of the countdown on EVERY device. Resolve the show, tick down to the
+  // server deadline locally, and — on the active device — advance when it's
+  // present and the deadline passes (uniform rule: cancel clears the note;
+  // "play now" moves the deadline to now). The active device advancing sends a
+  // load, which clears the note for everyone.
+  useEffect(() => {
+    if (!connected) return; // offline: the local driver above owns autoAdvance
+    const note = connectState?.pendingAdvance;
+    if (!note) {
+      setAutoAdvance(null);
+      return;
+    }
+
+    let cancelled = false;
+    let interval: ReturnType<typeof setInterval> | null = null;
+    (async () => {
+      let viewed: ViewedShow;
+      try {
+        const res = await fetch(`/api/shows/${encodeURIComponent(note.showId)}`);
+        if (!res.ok) return;
+        viewed = metaToViewedShow(await res.json());
+      } catch {
+        return;
+      }
+      if (cancelled) return;
+
+      const tick = () => {
+        const serverNow = Date.now() + serverTimeOffsetMs;
+        const remaining = Math.ceil((note.deadline - serverNow) / 1000);
+        if (remaining <= 0) {
+          if (interval) clearInterval(interval);
+          setAutoAdvance(null);
+          if (isActiveDeviceRef.current) playShow(viewed); // load clears the note
+          return;
+        }
+        setAutoAdvance({ secondsRemaining: remaining, nextShow: viewed });
+      };
+      tick();
+      interval = setInterval(tick, 1000);
+    })();
+
+    return () => {
+      cancelled = true;
+      if (interval) clearInterval(interval);
+    };
+  }, [
+    connected,
+    connectState?.pendingAdvance?.showId,
+    connectState?.pendingAdvance?.deadline,
+    serverTimeOffsetMs,
+    playShow,
+  ]);
+
+  // Cancel the pending advance. In a session, tell everyone (server clears the
+  // note); offline, just stop the local countdown.
   const cancelAutoAdvance = useCallback(() => {
     if (autoAdvanceTimerRef.current) {
       clearInterval(autoAdvanceTimerRef.current);
       autoAdvanceTimerRef.current = null;
     }
     setAutoAdvance(null);
-  }, []);
+    if (connected) sendCommandRef.current("cancel_advance");
+  }, [connected]);
 
-  // Skip the countdown and play the next show immediately ("Play now").
+  // "Play now". Active device (or offline) plays immediately — its load clears
+  // the note for everyone. A remote asks the active device to advance now.
   const playNextNow = useCallback(() => {
     const next = autoAdvance?.nextShow;
+    if (connected && !isActiveDevice) {
+      sendCommandRef.current("advance_now");
+      return;
+    }
     if (!next) return;
     if (autoAdvanceTimerRef.current) {
       clearInterval(autoAdvanceTimerRef.current);
@@ -977,7 +1050,7 @@ export default function PlayerProvider({
     }
     setAutoAdvance(null);
     playShow(next);
-  }, [autoAdvance, playShow]);
+  }, [autoAdvance, connected, isActiveDevice, playShow]);
 
   useEffect(() => {
     onShowCompleteRef.current = onShowComplete;
