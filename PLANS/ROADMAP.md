@@ -78,6 +78,17 @@ three platforms.
 
 ### 2. Connect-v2 — finish the remaining edges
 MVP shipped (see Shipped). Open:
+- **Session ownership lease + WS protocol versioning (ship ASAP).** Connect's
+  `activeDeviceId` is in-memory server state that clients rebuild via a growing
+  pile of cause-specific reclaim detectors — which miss the fresh-reconnect-after-
+  restart case (an end-of-show advance silently died this way, 2026-06-11) and the
+  disconnect-cleanup case. Replace them with one convergent **ownership lease** the
+  audio-producing device renews via heartbeat, gated on a new **`protocolVersion`**
+  primitive (monotonic int on `register`, stamped on the in-memory connection
+  record — telemetry + soft forced-update lever). **`protocolVersion` has standalone
+  value — ship it first.** Server claim-when-null already landed (`52942d45`).
+  Decisions in **ADR-0011**; plan in [`PLANS/connect-ownership-lease.md`](connect-ownership-lease.md).
+  Redis-persist stays deferred (ADR-0008); the lease covers what we need without it.
 - **Web as a first-class controllable target ("remote").** A browser tab is now
   a controller/target — control the web player from the phone. In flight,
   promised publicly. Current constraint: the controlling app can't be
@@ -161,6 +172,16 @@ blocks onboarding for affected users.
   (`MobileTabBar` is Home/Favorites/Settings; the rail is `lg:hidden`). To
   retire: add Settings to `UserMenu`, surface Recent/Reviews in mobile nav, then
   drop the strip. Until that nav exists, leave it.
+
+### 11. Settings screen reorganization (cross-platform, maintainer pain)
+The settings screens (iOS `SettingsScreen.swift`, Android `SettingsScreen.kt`,
+web `/me` SettingsTab) have grown overloaded and are increasingly hard to work in
+— findability is poor and adding a toggle means scanning a long flat list (the
+"When a show ends" / Playback section just landed into this sprawl). Regroup into
+clear sections with better findability; keep it a presentation/IA change, not new
+settings. Independent of any feature — the show-queue plan flags it as
+"Settings cleanup (independent, anytime)." Do it before the settings list grows
+again (shuffle, queue, and source-picker options are all coming).
 
 ## Deferred / explicit non-goals (sync v0)
 Cross-device deletion **tombstones**, **settings sync**, and **background sync**
