@@ -78,6 +78,7 @@ function initialState(): ConnectState {
     date: null,
     venue: null,
     location: null,
+    pendingAdvance: null,
   };
 }
 
@@ -221,6 +222,8 @@ export function unregisterDevice(userId: string, deviceId: string): void {
       activeDeviceName: null,
       activeDeviceType: null,
       playing: false,
+      // The device that would have advanced is gone — drop the countdown note.
+      pendingAdvance: null,
     });
   }
 
@@ -264,6 +267,7 @@ export function startHeartbeatSweep(): void {
           activeDeviceName: null,
           activeDeviceType: null,
           playing: false,
+          pendingAdvance: null,
         });
       }
       // Cancel pending transfer if evicted device was the target
@@ -307,6 +311,8 @@ export function handleLoad(userId: string, deviceId: string, socket: WebSocket, 
     date: params.date ?? null,
     venue: params.venue ?? null,
     location: params.location ?? null,
+    // A new show loading supersedes any pending end-of-show countdown.
+    pendingAdvance: null,
   };
 
   if (params.autoplay) {
@@ -409,6 +415,68 @@ export function handleStop(userId: string): void {
     activeDeviceType: null,
     positionMs,
     positionTs: now,
+    pendingAdvance: null,
+  });
+}
+
+// ── ADR-0010 §7: end-of-show countdown (cross-device) ────────────────────────
+
+/**
+ * The active device finished a show and is counting down to [showId] at
+ * [deadline]. Parks playback (so it isn't dragged back) and sets the shared
+ * note every device renders. Only the active device announces its own end.
+ */
+export function handleAnnounceNext(
+  userId: string,
+  deviceId: string,
+  params: { showId: string; deadline: number },
+): void {
+  const state = userStates.get(userId);
+  if (!state) return;
+  if (state.activeDeviceId && state.activeDeviceId !== deviceId) return;
+  log(`handleAnnounceNext: next=${params.showId} deadline=${params.deadline}`);
+
+  const patch: Partial<ConnectState> = {
+    playing: false,
+    pendingAdvance: { showId: params.showId, deadline: params.deadline },
+  };
+
+  // The announcing device just finished playing locally, so it IS the active
+  // device — even if the server lost that (e.g. in-memory state wiped on a
+  // restart while the device kept playing across the reconnect, leaving it a
+  // connected-but-not-active ghost). Claim it here like handlePlay/handleLoad
+  // do; otherwise the note broadcasts but no device counts as active, so nobody
+  // fires the advance at the deadline and the countdown dies silently.
+  if (!state.activeDeviceId) {
+    const entry = liveDevices.get(deviceKey(userId, deviceId));
+    if (entry) {
+      patch.activeDeviceId = deviceId;
+      patch.activeDeviceName = entry.device.name;
+      patch.activeDeviceType = entry.device.type;
+    }
+  }
+
+  mutate(userId, patch);
+}
+
+/** Anyone cancels the pending advance — clears the note; stays parked. */
+export function handleCancelAdvance(userId: string): void {
+  const state = userStates.get(userId);
+  if (!state || !state.pendingAdvance) return;
+  log(`handleCancelAdvance: clearing pendingAdvance`);
+  mutate(userId, { pendingAdvance: null });
+}
+
+/**
+ * "Play now" from anywhere — move the deadline to now so the active device's
+ * uniform rule (advance when present && now >= deadline) fires immediately.
+ */
+export function handleAdvanceNow(userId: string): void {
+  const state = userStates.get(userId);
+  if (!state || !state.pendingAdvance) return;
+  log(`handleAdvanceNow: deadline -> now for ${state.pendingAdvance.showId}`);
+  mutate(userId, {
+    pendingAdvance: { showId: state.pendingAdvance.showId, deadline: Date.now() },
   });
 }
 

@@ -8,10 +8,35 @@ import { updatePlaybackPosition, addRecentShow } from "@/lib/userDataApi";
 import { notifyUserDataChanged } from "@/lib/userDataEvents";
 import { useAuth } from "@/contexts/AuthContext";
 import { rememberArt, lookupArt, rememberReview, lookupReview } from "@/lib/artCache";
+import { getAutoAdvanceEnabled } from "@/lib/playbackPrefs";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
 
+const AUTO_ADVANCE_DELAY_MS = 15_000; // ADR-0010 chunk 2: end-of-show countdown
+
+// The /api/shows[/:id|/:id/next] catalog shape → a playable ViewedShow.
+interface ShowMetaResponse {
+  showId: string;
+  date: string | null;
+  venue: string | null;
+  city: string | null;
+  state: string | null;
+  bestRecordingId: string | null;
+  image: string | null;
+}
+function metaToViewedShow(m: ShowMetaResponse): ViewedShow {
+  return {
+    showId: m.showId,
+    recordings: [],
+    bestRecordingId: m.bestRecordingId,
+    date: m.date ?? "",
+    venue: m.venue ?? "",
+    location: [m.city, m.state].filter(Boolean).join(", "),
+    image: m.image,
+    review: null,
+  };
+}
 const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
 const GAPLESS_PRELOAD_THRESHOLD = 2; // seconds before end to start preloading
@@ -26,6 +51,7 @@ export default function PlayerProvider({
   const {
     state: connectState,
     myDeviceId,
+    connected,
     sendCommand,
     onVolumeMessage,
     reportVolume,
@@ -45,6 +71,13 @@ export default function PlayerProvider({
   const [tracks, setTracks] = useState<ArchiveTrack[] | null>(null);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(-1);
   const [status, setStatus] = useState<PlaybackStatus>("idle");
+  // ADR-0010 chunk 2: pending end-of-show auto-advance, surfaced to the UI so the
+  // full player can preview the next show + a "Next up in Ns" banner. nextShow
+  // carries the display data; secondsRemaining ticks 15→0.
+  const [autoAdvance, setAutoAdvance] = useState<{
+    secondsRemaining: number;
+    nextShow: ViewedShow;
+  } | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [selectedRecording, setSelectedRecording] = useState<string | null>(
@@ -78,6 +111,16 @@ export default function PlayerProvider({
   // Connect hydration so we resume at the server's interpolated position.
   const pendingSeekMsRef = useRef<number | null>(null);
   const sendCommandRef = useRef(sendCommand);
+  // ADR-0010 chunk 2: pending end-of-show auto-advance. Held in refs so the
+  // (non-React) audio `ended` handler can trigger the latest coordinator and so
+  // the countdown can be canceled by any subsequent play.
+  const autoAdvanceTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const onShowCompleteRef = useRef<((completedShowId: string) => void) | null>(null);
+  // ADR-0010: true once real playback has happened this session. Guards the
+  // `ended` end-of-show signal against firing on restore/cold-start, when the
+  // player is rehydrated at the last track and the audio element can emit a
+  // spurious `ended` (mirrors Android's hasPlayedThisSession).
+  const hasPlayedThisSessionRef = useRef(false);
   const reportVolumeRef = useRef(reportVolume);
   const isActiveDeviceRef = useRef(false);
   const isRemoteControllingRef = useRef(false);
@@ -231,6 +274,7 @@ export default function PlayerProvider({
         (activeAudioRef.current === "B" && audio === audioBRef.current)
       ) {
         setStatus("playing");
+        hasPlayedThisSessionRef.current = true;
         retryCountRef.current = 0;
         setAutoplayBlocked(false);
         setAutoplayInfo(null);
@@ -281,6 +325,20 @@ export default function PlayerProvider({
           sendCommandRef.current("next");
         } else {
           setStatus("paused");
+          // ADR-0010 Chunk 1: the final track finished on its own — the positive
+          // "show completed" signal. `ended` only fires on natural EOF (a user
+          // stop/pause doesn't fire it; load errors go to the "error" listener),
+          // and this is the last-track branch. The `hasPlayedThisSession` guard
+          // rejects the restore/cold-start case (rehydrated at the last track,
+          // where the audio element can emit a spurious `ended` with no real
+          // playback) — without it, a hard refresh spuriously auto-advances.
+          const completedShowId = activeShowRef.current?.showId ?? "";
+          if (completedShowId && hasPlayedThisSessionRef.current) {
+            hasPlayedThisSessionRef.current = false;
+            console.info(`🏁 [SHOW-COMPLETE] onShowCompleted(showId=${completedShowId})`);
+            // ADR-0010 chunk 2: drive chronological auto-advance off this signal.
+            onShowCompleteRef.current?.(completedShowId);
+          }
           // Last track finished on its own — no track change will drive the
           // playback_end, so emit the completed end here.
           const c = committedPlaybackRef.current;
@@ -707,7 +765,21 @@ export default function PlayerProvider({
         !reassertingTracksRef.current
       ) {
         reassertingTracksRef.current = true;
-        const idx = currentTrackIndexRef.current;
+        // This `load` only needs to backfill the `tracks` array the ownerless
+        // session lacked — it must NOT move the transport. Which cursor is
+        // authoritative depends on why we're reasserting:
+        //   • reclaim (server restarted while we kept playing locally) → LOCAL
+        //     is the truth; the server's restored index/position lag behind.
+        //   • fresh claim of an ownerless session (we just seek+play'd to take
+        //     it over) → the SERVER cursor is the truth; our local index is
+        //     stale because we were a remote and hadn't applied the seek yet.
+        //     Using local here clobbered the just-seeked track back to the old
+        //     one (tap Franklin's Tower, get the previously-cued track).
+        const idx = reclaim ? currentTrackIndexRef.current : connectState.trackIndex;
+        const loadIndex = idx >= 0 ? idx : 0;
+        const positionMs = reclaim
+          ? Math.round(audio.currentTime * 1000)
+          : connectState.positionMs;
         sendCommand("load", {
           showId: connectState.showId ?? activeShowRef.current?.showId ?? "",
           recordingId: connectState.recordingId,
@@ -715,13 +787,13 @@ export default function PlayerProvider({
             title: t.title,
             durationMs: Math.round((t.duration || 0) * 1000),
           })),
-          trackIndex: idx >= 0 ? idx : 0,
-          positionMs: Math.round(audio.currentTime * 1000),
-          durationMs: Math.round((localTracks[idx]?.duration ?? 0) * 1000),
+          trackIndex: loadIndex,
+          positionMs,
+          durationMs: Math.round((localTracks[loadIndex]?.duration ?? 0) * 1000),
           date: connectState.date ?? activeShowRef.current?.date,
           venue: connectState.venue ?? activeShowRef.current?.venue,
           location: connectState.location ?? activeShowRef.current?.location,
-          autoplay: !audio.paused,
+          autoplay: reclaim ? !audio.paused : connectState.playing,
         });
       }
 
@@ -730,15 +802,34 @@ export default function PlayerProvider({
       // load back (next version, by which point activeDeviceId === us).
       if (reclaim) return;
 
-      // Track changed by a remote next/prev.
-      if (connectState.trackIndex !== currentTrackIndexRef.current) {
+      // Same rule for an end-of-show park: we "became active" only because we
+      // announced our OWN completion and the server claimed us active (ADR-0011).
+      // We're parked at the end of the show waiting for the note effect below to
+      // advance — our position is authoritative, the server's positionMs is the
+      // stale pre-end value. Syncing would seek back and replay the tail, re-firing
+      // completion and resetting the countdown. The note effect owns the transition.
+      if (connectState.pendingAdvance) return;
+
+      // Track changed by a remote next/prev/seek. The trackEffect (keyed on
+      // currentTrackIndex) fully owns loading + starting the NEW track — so we
+      // must NOT also touch the outgoing track here. The old code fell through
+      // and called audio.play() on the still-loaded previous track, then the
+      // trackEffect swapped src and played again — briefly starting the wrong
+      // track (an audible blip of the previous one) before the selected track
+      // loads. Sync the index and let the trackEffect take it from there.
+      const indexChanging = connectState.trackIndex !== currentTrackIndexRef.current;
+      if (indexChanging) {
+        // If the session is paused, tell the trackEffect to load without playing.
+        if (!connectState.playing) suppressAutoplayRef.current = true;
         setCurrentTrackIndex(connectState.trackIndex);
+        return;
       }
 
-      // Position changed by a remote seek or reconnect. Translate Date.now()
-      // into server-clock via serverTimeOffsetMs before subtracting positionTs —
-      // a skewed client clock otherwise jumps by the skew on every periodic
-      // broadcast and trips the guard below, causing audible skipping.
+      // Same track — reconcile position and play/pause on the already-loaded
+      // element. Translate Date.now() into server-clock via serverTimeOffsetMs
+      // before subtracting positionTs — a skewed client clock otherwise jumps by
+      // the skew on every periodic broadcast and trips the guard below, causing
+      // audible skipping.
       const interpolatedPosMs = connectState.playing
         ? connectState.positionMs + ((Date.now() + serverTimeOffsetMs) - connectState.positionTs)
         : connectState.positionMs;
@@ -830,6 +921,14 @@ export default function PlayerProvider({
 
   const playShow = useCallback(
     async (show: ViewedShow) => {
+      // A manual play cancels any pending auto-advance countdown. (When the
+      // countdown itself fires it clears the ref/state before calling, so this
+      // is a no-op in that path.)
+      if (autoAdvanceTimerRef.current) {
+        clearInterval(autoAdvanceTimerRef.current);
+        autoAdvanceTimerRef.current = null;
+      }
+      setAutoAdvance(null);
       nextPlaybackSourceRef.current = "browse";
       setActiveShow(show);
       // Remember the cover so a page refresh (which rehydrates from the
@@ -864,6 +963,156 @@ export default function PlayerProvider({
     [playRecording, sendCommand]
   );
 
+  // ADR-0010 chunk 2 / §7: end-of-show advance, driven by the `onShowComplete`
+  // signal. In a Connect session it `announce`s the next show + deadline so the
+  // shared note drives the countdown + advance on EVERY device (see the effect
+  // below). Offline it runs a purely local countdown. Reads no transport state
+  // to decide whether to advance.
+  const onShowComplete = useCallback(
+    async (completedShowId: string) => {
+      // ADR-0010 ship gate: per-device opt-out. Gates whether THIS device
+      // initiates an advance when it's the one playing (announce/countdown/advance).
+      if (!getAutoAdvanceEnabled()) {
+        console.info("[auto-advance] disabled by preference — not advancing");
+        return;
+      }
+      // Resolve the next chronological show. The browser has no catalog (shows
+      // are static SSG), so ask the API, which holds it in memory.
+      let next: ShowMetaResponse;
+      try {
+        const res = await fetch(`/api/shows/${encodeURIComponent(completedShowId)}/next`);
+        if (!res.ok) {
+          console.info("[auto-advance] no next show after", completedShowId);
+          return;
+        }
+        next = await res.json();
+      } catch {
+        return;
+      }
+
+      if (connected) {
+        // In a session: announce. The server parks playback + sets the shared
+        // note; the effect below renders the countdown and (on the active
+        // device) advances at the deadline. Deadline is in SERVER time so every
+        // device ticks to the same instant.
+        const deadline = Date.now() + serverTimeOffsetMs + AUTO_ADVANCE_DELAY_MS;
+        console.info(`[auto-advance] announce → ${next.showId} @ ${deadline}`);
+        sendCommandRef.current("announce_next", { showId: next.showId, deadline });
+        return;
+      }
+
+      // Offline: local-only countdown, then advance.
+      const viewed = metaToViewedShow(next);
+      if (autoAdvanceTimerRef.current) clearInterval(autoAdvanceTimerRef.current);
+      let remaining = Math.round(AUTO_ADVANCE_DELAY_MS / 1000);
+      setAutoAdvance({ secondsRemaining: remaining, nextShow: viewed });
+      autoAdvanceTimerRef.current = setInterval(() => {
+        remaining -= 1;
+        if (remaining > 0) {
+          setAutoAdvance({ secondsRemaining: remaining, nextShow: viewed });
+          return;
+        }
+        if (autoAdvanceTimerRef.current) clearInterval(autoAdvanceTimerRef.current);
+        autoAdvanceTimerRef.current = null;
+        setAutoAdvance(null);
+        playShow(viewed);
+      }, 1000);
+    },
+    [playShow, connected, serverTimeOffsetMs]
+  );
+
+  // ADR-0010 §7: in a Connect session, the shared `pendingAdvance` note is the
+  // source of the countdown on EVERY device. Resolve the show, tick down to the
+  // server deadline locally, and — on the active device — advance when it's
+  // present and the deadline passes (uniform rule: cancel clears the note;
+  // "play now" moves the deadline to now). The active device advancing sends a
+  // load, which clears the note for everyone.
+  useEffect(() => {
+    if (!connected) return; // offline: the local driver above owns autoAdvance
+    const note = connectState?.pendingAdvance;
+    if (!note) {
+      setAutoAdvance(null);
+      return;
+    }
+
+    let cancelled = false;
+    let interval: ReturnType<typeof setInterval> | null = null;
+    (async () => {
+      let viewed: ViewedShow;
+      try {
+        const res = await fetch(`/api/shows/${encodeURIComponent(note.showId)}`);
+        if (!res.ok) return;
+        viewed = metaToViewedShow(await res.json());
+      } catch {
+        return;
+      }
+      if (cancelled) return;
+
+      // Cache the next show's cover now, so when this (remote) device follows the
+      // advance its now-playing player can resolve the art (the active device
+      // caches it via playShow; remotes otherwise never would). No-op for
+      // ticket-less shows — the player's logo fallback handles those.
+      if (viewed.image) rememberArt(viewed.showId, viewed.image);
+
+      const tick = () => {
+        const serverNow = Date.now() + serverTimeOffsetMs;
+        const remaining = Math.ceil((note.deadline - serverNow) / 1000);
+        if (remaining <= 0) {
+          if (interval) clearInterval(interval);
+          setAutoAdvance(null);
+          if (isActiveDeviceRef.current) playShow(viewed); // load clears the note
+          return;
+        }
+        setAutoAdvance({ secondsRemaining: remaining, nextShow: viewed });
+      };
+      tick();
+      interval = setInterval(tick, 1000);
+    })();
+
+    return () => {
+      cancelled = true;
+      if (interval) clearInterval(interval);
+    };
+  }, [
+    connected,
+    connectState?.pendingAdvance?.showId,
+    connectState?.pendingAdvance?.deadline,
+    serverTimeOffsetMs,
+    playShow,
+  ]);
+
+  // Cancel the pending advance. In a session, tell everyone (server clears the
+  // note); offline, just stop the local countdown.
+  const cancelAutoAdvance = useCallback(() => {
+    if (autoAdvanceTimerRef.current) {
+      clearInterval(autoAdvanceTimerRef.current);
+      autoAdvanceTimerRef.current = null;
+    }
+    setAutoAdvance(null);
+    if (connected) sendCommandRef.current("cancel_advance");
+  }, [connected]);
+
+  // "Play now". Active device (or offline) plays immediately — its load clears
+  // the note for everyone. A remote asks the active device to advance now.
+  const playNextNow = useCallback(() => {
+    const next = autoAdvance?.nextShow;
+    if (connected && !isActiveDevice) {
+      sendCommandRef.current("advance_now");
+      return;
+    }
+    if (!next) return;
+    if (autoAdvanceTimerRef.current) {
+      clearInterval(autoAdvanceTimerRef.current);
+      autoAdvanceTimerRef.current = null;
+    }
+    setAutoAdvance(null);
+    playShow(next);
+  }, [autoAdvance, connected, isActiveDevice, playShow]);
+
+  useEffect(() => {
+    onShowCompleteRef.current = onShowComplete;
+  }, [onShowComplete]);
+
   // Play a show then jump to a specific track once its tracks load. Matches by
   // title first (the stable identity of a favorite song), then by track number.
   const pendingTrackRef = useRef<{ title: string; number?: number | null } | null>(null);
@@ -884,9 +1133,17 @@ export default function PlayerProvider({
     // Manual track selection — attribute the resulting playback_start.
     nextPlaybackSourceRef.current = "track_list";
     if (isRemoteControllingRef.current) {
-      // Remote: ask the server to move; our audio follows on the broadcast.
-      setPendingCommand("seek");
+      // Remote: move the shared cursor, then express the play-intent. A tap on a
+      // queue item means "play this track" — same as the Play button — but a bare
+      // `seek` only repositions: it never claims ownership or sets playing. On an
+      // ownerless session (activeDeviceId=null, e.g. all devices idle/ghosted)
+      // nobody acts on the seek, so it silently does nothing; on a paused active
+      // device the seek alone wouldn't resume. Following with `play` fixes both —
+      // handlePlay claims THIS device when the session is ownerless (and is a
+      // safe no-op when another device is already playing, so it never hijacks).
+      setPendingCommand("play");
       sendCommandRef.current("seek", { trackIndex: index, positionMs: 0, durationMs });
+      sendCommandRef.current("play");
       return;
     }
     // Reset gapless state since user is manually selecting
@@ -1118,6 +1375,9 @@ export default function PlayerProvider({
       autoplayInfo,
       retryAutoplay,
       dismissAutoplay,
+      autoAdvance,
+      cancelAutoAdvance,
+      playNextNow,
     }),
     [
       activeShow,
@@ -1154,6 +1414,9 @@ export default function PlayerProvider({
       retryAutoplay,
       dismissAutoplay,
       updateViewedShow,
+      autoAdvance,
+      cancelAutoAdvance,
+      playNextNow,
     ]
   );
 

@@ -39,6 +39,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_EQ_PRESET = "eq_preset"
         private const val KEY_EQ_BAND_LEVELS = "eq_band_levels"
         private const val KEY_SHARE_ATTACH_IMAGE = "share_attach_image"
+        private const val KEY_AUTO_ADVANCE_ENABLED = "auto_advance_enabled"
         private const val KEY_SOURCE_BADGE_STYLE = "source_badge_style"
         private const val KEY_USE_BETA_SHARE_LINKS = "use_beta_share_links"
         private const val KEY_USE_BETA_MODE = "use_beta_mode"
@@ -105,6 +106,18 @@ class AppPreferences @Inject constructor(
         setHomePopularEnabled(true)
         setHomePopularCardSize("small")
         setHomePopularDecade("all")
+    }
+
+    private val _autoAdvanceEnabled = MutableStateFlow(
+        prefs.getBoolean(KEY_AUTO_ADVANCE_ENABLED, true)
+    )
+
+    /** ADR-0010: roll into the next show when one ends. On by default. */
+    val autoAdvanceEnabled: StateFlow<Boolean> = _autoAdvanceEnabled.asStateFlow()
+
+    fun setAutoAdvanceEnabled(value: Boolean) {
+        prefs.edit().putBoolean(KEY_AUTO_ADVANCE_ENABLED, value).apply()
+        _autoAdvanceEnabled.value = value
     }
 
     private val _homePopularEnabled = MutableStateFlow(

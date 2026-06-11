@@ -48,6 +48,17 @@ interface PlaylistService {
     suspend fun playTrack(trackIndex: Int)
     
     /**
+     * Play an arbitrary show from scratch — the canonical "play a show" entry.
+     *
+     * Resolves the show's preferred/best recording, loads its tracks, picks the
+     * best available format, starts local playback, and tells Connect (sendLoad)
+     * — i.e. exactly what a user tap on a show does. Auto-advance (ADR-0010) and
+     * any "play from a list" surface route through this so they can't diverge
+     * from real playback.
+     */
+    suspend fun playShow(show: Show, autoPlay: Boolean = true)
+
+    /**
      * Navigate to the next show chronologically
      */
     suspend fun navigateToNextShow()

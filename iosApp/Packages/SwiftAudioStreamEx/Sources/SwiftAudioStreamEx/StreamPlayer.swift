@@ -56,6 +56,13 @@ public final class StreamPlayer {
     /// uses this so the active device broadcasts the new track index to the session.
     public var onTrackComplete: (() -> Void)?
 
+    /// Called when the *last* track of the queue reaches its natural end of file —
+    /// the positive "show completed" signal (ADR-0010 Chunk 1). Fires only on
+    /// `.eof && isLastTrack`, so a user stop/pause, an error, or a mid-queue
+    /// transition never trigger it. The package stays show-agnostic; the app
+    /// layer translates this into `onShowCompleted(showId)`.
+    public var onQueueComplete: (() -> Void)?
+
     /// Called when play INTENT changes — true when the player wants to be playing
     /// (`.playing`/`.buffering`), false when it has stopped (`.paused`/`.ended`/
     /// `.idle`). Distinct from `playbackState.isPlaying`, which is false during
@@ -464,6 +471,14 @@ public final class StreamPlayer {
                 let newTitle = self.currentTrack?.title ?? "(none)"
                 self.logger.notice("[PB] onTrackComplete prev=\(previousTitle, privacy: .public) → newIdx=\(self.engine.currentIndex, privacy: .public) new=\(newTitle, privacy: .public)")
                 self.onTrackComplete?()
+            }
+        }
+
+        engine.onQueueComplete = { [weak self] in
+            Task { @MainActor in
+                guard let self else { return }
+                self.logger.notice("[PB] onQueueComplete — final track finished naturally")
+                self.onQueueComplete?()
             }
         }
 

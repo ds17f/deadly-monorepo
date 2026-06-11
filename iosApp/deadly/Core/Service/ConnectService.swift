@@ -242,6 +242,22 @@ final class ConnectService: NSObject {
         sendCommand("stop")
     }
 
+    // ADR-0010 §7: cross-device end-of-show countdown.
+    func sendAnnounceNext(showId: String, deadline: Double) {
+        logger.info("sendAnnounceNext: \(showId, privacy: .public) @ \(deadline)")
+        sendCommand("announce_next", extra: ["showId": showId, "deadline": deadline])
+    }
+
+    func sendCancelAdvance() {
+        logger.info("sendCancelAdvance")
+        sendCommand("cancel_advance")
+    }
+
+    func sendAdvanceNow() {
+        logger.info("sendAdvanceNow")
+        sendCommand("advance_now")
+    }
+
     func sendVolume(volume: Int) {
         logger.info("sendVolume: \(volume, privacy: .public)")
         sendCommand("volume", extra: ["volume": volume])
@@ -491,8 +507,17 @@ final class ConnectService: NSObject {
 
         // When this device just became active (e.g. transfer in), sync local player
         // to server state — the local player may be at a completely different track/position.
+        //
+        // BUT skip the transport sync when a pendingAdvance note is present: here we
+        // "became active" only because we announced our OWN end-of-show (the server
+        // claims the announcer active, ADR-0011). We are parked at the end of the show
+        // waiting for the note-collector to advance — we know our position better than
+        // the server, whose positionMs is the stale pre-end value. Without this guard
+        // we seek back to that stale position and resume, replaying the tail, which
+        // re-fires onShowCompleted and re-announces (resetting the countdown). The
+        // note-collector owns the transition from here. (Mirrors reclaimAfterRestart.)
         let justBecameActive = !wasActive && nowActive
-        if justBecameActive {
+        if justBecameActive && new.pendingAdvance == nil {
             let currentVolume = Int(streamPlayer.volume * 100)
             activeDeviceVolume = currentVolume
             sendVolumeReport(volume: currentVolume)

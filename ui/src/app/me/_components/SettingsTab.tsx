@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/contexts/AuthContext";
 import { deleteAccount } from "@/lib/userDataApi";
 import { SUBREDDIT_HANDLE, SUBREDDIT_URL } from "@/lib/community";
+import { getAutoAdvanceEnabled, setAutoAdvanceEnabled } from "@/lib/playbackPrefs";
+import * as analytics from "@/lib/analytics";
 
 export default function SettingsTab() {
   const { user, signOut } = useAuth();
@@ -14,6 +16,21 @@ export default function SettingsTab() {
   const [confirmText, setConfirmText] = useState("");
   const [deleting, setDeleting] = useState(false);
   const [error, setError] = useState(false);
+
+  // ADR-0010 ship gate: roll into the next show when one ends. Read from
+  // localStorage on mount (SSR-safe default until then).
+  const [autoAdvance, setAutoAdvance] = useState(true);
+  useEffect(() => setAutoAdvance(getAutoAdvanceEnabled()), []);
+  function toggleAutoAdvance() {
+    const next = !autoAdvance;
+    setAutoAdvance(next);
+    setAutoAdvanceEnabled(next);
+    analytics.track("feature_use", {
+      feature: "toggle_auto_advance",
+      category: "playback",
+      enabled: next,
+    });
+  }
 
   async function handleDelete() {
     setDeleting(true);
@@ -52,6 +69,36 @@ export default function SettingsTab() {
           className="mt-4 rounded-md border border-white/15 px-3 py-1.5 text-sm text-white/70 transition hover:border-white/30 hover:text-white"
         >
           Sign out
+        </button>
+      </section>
+
+      {/* Playback */}
+      <section className="rounded-lg border border-white/10 bg-deadly-surface p-5">
+        <h3 className="mb-3 font-medium text-white">Playback</h3>
+        <button
+          onClick={toggleAutoAdvance}
+          role="switch"
+          aria-checked={autoAdvance}
+          className="flex w-full items-start justify-between gap-4 text-left"
+        >
+          <span>
+            <span className="block text-sm text-white/80">When a show ends</span>
+            <span className="mt-0.5 block text-xs text-white/40">
+              Roll into the next show automatically, after a 15-second countdown
+              you can cancel.
+            </span>
+          </span>
+          <span
+            className={`mt-0.5 flex h-6 w-11 flex-shrink-0 items-center rounded-full p-0.5 transition ${
+              autoAdvance ? "bg-deadly-highlight" : "bg-white/15"
+            }`}
+          >
+            <span
+              className={`h-5 w-5 rounded-full bg-white transition ${
+                autoAdvance ? "translate-x-5" : "translate-x-0"
+              }`}
+            />
+          </span>
         </button>
       </section>
 

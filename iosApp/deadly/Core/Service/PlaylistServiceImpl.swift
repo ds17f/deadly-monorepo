@@ -1,8 +1,11 @@
 import Foundation
 import SwiftAudioStreamEx
+import os.log
 #if canImport(UIKit)
 import UIKit
 #endif
+
+private let logger = Logger(subsystem: "com.grateful.deadly", category: "PlaylistService")
 
 @Observable
 @MainActor
@@ -27,6 +30,15 @@ final class PlaylistServiceImpl: PlaylistService {
     var connectService: ConnectService?
     /// When true, playTrack() skips notifying Connect to avoid Connect→load→sendLoad loops.
     var suppressConnectNotify = false
+
+    /// ADR-0010 Chunk 1: the show-completion signal for auto-advance. Fired with
+    /// the showId of the show that just finished — and *only* on the natural end
+    /// of its last track (the package's `onQueueComplete`, which is `.eof &&
+    /// isLastTrack`). A user stop/pause, an error, or a mid-show track transition
+    /// never reach it, and a cold-start restore never plays to EOF, so no session
+    /// guard is needed on iOS. The advance coordinator subscribes to this and
+    /// reads no transport state.
+    var onShowCompleted: ((String) -> Void)?
 
     /// Tracks the currently playing item for playback_end analytics.
     private var playbackStartInfo: (showId: String, recordingId: String, trackNumber: Int)?
@@ -108,6 +120,13 @@ final class PlaylistServiceImpl: PlaylistService {
         MainActor.assumeIsolated {
             self.startProgressObservation()
             self.startPlaybackStateObservation()
+            // ADR-0010 Chunk 1: translate the package's show-agnostic
+            // "queue completed naturally" into onShowCompleted(showId).
+            self.streamPlayer.onQueueComplete = { [weak self] in
+                guard let self, let showId = self.currentShow?.id else { return }
+                logger.notice("🏁 [SHOW-COMPLETE] onShowCompleted(showId=\(showId, privacy: .public))")
+                self.onShowCompleted?(showId)
+            }
             self.willResignActiveObserver = NotificationCenter.default.addObserver(
                 forName: UIApplication.willResignActiveNotification,
                 object: nil,
@@ -206,6 +225,16 @@ final class PlaylistServiceImpl: PlaylistService {
         } catch {
             trackLoadError = error.localizedDescription
         }
+    }
+
+    /// Play an arbitrary show from scratch — the canonical "play a show" entry.
+    /// Loads its preferred/best recording + tracks, then starts at track 0, which
+    /// also notifies Connect (sendLoad) via playTrack. Auto-advance (ADR-0010)
+    /// routes through this so it can't diverge from a user tap; remotes follow.
+    func playShow(_ show: Show, autoPlay: Bool = true) async {
+        await loadShow(show.id)
+        guard !tracks.isEmpty else { return }
+        playTrack(at: 0, source: "auto_advance", autoPlay: autoPlay)
     }
 
     func selectRecording(_ recording: Recording) async {

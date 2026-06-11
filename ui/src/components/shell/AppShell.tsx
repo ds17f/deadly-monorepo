@@ -28,6 +28,7 @@ import * as analytics from "@/lib/analytics";
 import UserMenu from "@/components/auth/UserMenu";
 import NotificationBell from "@/components/notifications/NotificationBell";
 import HeaderPlayerWrapper from "@/components/player/HeaderPlayerWrapper";
+import AutoAdvanceBanner from "@/components/player/AutoAdvanceBanner";
 import LibraryRail from "./LibraryRail";
 import MobileTabBar from "./MobileTabBar";
 import MobileBackButton from "./MobileBackButton";
@@ -105,6 +106,12 @@ function ShellChrome({ children }: { children: React.ReactNode }) {
             {rightNode}
           </div>
         )}
+      </div>
+
+      {/* End-of-show "Next up in Ns" announcement, docked just above the
+          transport. Renders only while a countdown is running. */}
+      <div className="flex-shrink-0">
+        <AutoAdvanceBanner />
       </div>
 
       {/* bottom transport — existing HeaderPlayer, do not fork. A fixed flex

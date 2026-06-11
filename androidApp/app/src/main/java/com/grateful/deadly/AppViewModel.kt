@@ -10,6 +10,7 @@ import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.miniplayer.LastPlayedTrackService
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.core.network.monitor.NetworkMonitor
+import com.grateful.deadly.playback.AutoAdvanceCoordinator
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -26,8 +27,15 @@ class AppViewModel @Inject constructor(
     private val lastPlayedTrackService: LastPlayedTrackService,
     private val showRepository: ShowRepository,
     private val favoritesService: FavoritesService,
-    private val appReviewManager: AppReviewManager
+    private val appReviewManager: AppReviewManager,
+    private val autoAdvanceCoordinator: AutoAdvanceCoordinator,
 ) : ViewModel() {
+
+    // ADR-0010: end-of-show countdown UI (active device or remote).
+    val autoAdvanceCountdown: StateFlow<AutoAdvanceCoordinator.Countdown?> =
+        autoAdvanceCoordinator.countdown
+    fun cancelAutoAdvance() = autoAdvanceCoordinator.cancel()
+    fun playNextNow() = autoAdvanceCoordinator.playNow()
 
     val isOffline: StateFlow<Boolean> = combine(
         networkMonitor.isOnline,

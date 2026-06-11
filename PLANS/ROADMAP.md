@@ -56,20 +56,43 @@ web-launch threads, 2026-06).
 
 ## What remains
 
-### 1. Playback queue + autoplay + shuffle (community's top ask)
-The loudest, most-aligned cluster of requests, all client-side (no backend),
-and the just-rebuilt Connect-v2 player surfaces are the right foundation.
-- **Queue of shows** — a transient "play next" list, separate from Favorites
+### 1. Playback auto-advance + show queue + shuffle (community's top ask)
+The loudest, most-aligned cluster of requests. **Now in build (v2 design):**
+[`docs/adr/0010-playback-auto-advance-and-show-queue.md`](../docs/adr/0010-playback-auto-advance-and-show-queue.md),
+plan [`show-queue-v2.md`](show-queue-v2.md), branch `show-queue-v2`. A first
+attempt (abandoned `show-queue` branch) entangled the queue with auto-advance
+and fought Connect-v2's transport authority — the v2 design fixes that by making
+advance an independent coordinator off a positive `onShowCompleted` event,
+keeping the queue local-first (synced like Favorites), and adding one
+informational Connect "park" primitive. Built chunk-by-chunk, proven on all
+three platforms.
+- **Auto-advance / Go-to-next-show** — ✅ **mechanism complete on all three
+  platforms**, incl. cross-device end-of-show countdown over Connect and the
+  full-screen "Up Next" takeover + per-device "when a show ends" setting
+  (2026-06-11). Chronological today; queue-fed once the queue lands. Remaining:
+  the play/pause affordance fix and an intermittent iOS spurious-`next` (seen
+  once, needs a repro). *(OP idea #3; MazelTov.)*
+- **Queue of shows** — a local-first "play next" list, separate from Favorites
   (which never clear and pollute Fan-Favorites stats). Shows leave the queue
-  once played; can be reordered. *(OP idea #1.)*
-- **Autoplay / Go-to-next-show** — when a show ends, roll into the next. A
-  user-proposed setting shape: `OFF` / `ON (queues + collections only)` /
-  `ON (individual shows, queues, collections)`. *(OP idea #3; MazelTov.)*
+  once played; reorderable; syncs as a whole-list snapshot when signed in
+  (absorbs the old `show-queue-sync` effort). *(OP idea #1.)*
 - **Shuffle** — both *tracks* and *shows*, with the ability to curate which
-  collections feed the shuffle pool. *(MuffDiving — "greedy, I want both".)*
+  collections feed the shuffle pool. Layers on the queue. *(MuffDiving — "greedy,
+  I want both".)*
 
 ### 2. Connect-v2 — finish the remaining edges
 MVP shipped (see Shipped). Open:
+- **Session ownership lease + WS protocol versioning (ship ASAP).** Connect's
+  `activeDeviceId` is in-memory server state that clients rebuild via a growing
+  pile of cause-specific reclaim detectors — which miss the fresh-reconnect-after-
+  restart case (an end-of-show advance silently died this way, 2026-06-11) and the
+  disconnect-cleanup case. Replace them with one convergent **ownership lease** the
+  audio-producing device renews via heartbeat, gated on a new **`protocolVersion`**
+  primitive (monotonic int on `register`, stamped on the in-memory connection
+  record — telemetry + soft forced-update lever). **`protocolVersion` has standalone
+  value — ship it first.** Server claim-when-null already landed (`52942d45`).
+  Decisions in **ADR-0011**; plan in [`PLANS/connect-ownership-lease.md`](connect-ownership-lease.md).
+  Redis-persist stays deferred (ADR-0008); the lease covers what we need without it.
 - **Web as a first-class controllable target ("remote").** A browser tab is now
   a controller/target — control the web player from the phone. In flight,
   promised publicly. Current constraint: the controlling app can't be
@@ -153,6 +176,16 @@ blocks onboarding for affected users.
   (`MobileTabBar` is Home/Favorites/Settings; the rail is `lg:hidden`). To
   retire: add Settings to `UserMenu`, surface Recent/Reviews in mobile nav, then
   drop the strip. Until that nav exists, leave it.
+
+### 11. Settings screen reorganization (cross-platform, maintainer pain)
+The settings screens (iOS `SettingsScreen.swift`, Android `SettingsScreen.kt`,
+web `/me` SettingsTab) have grown overloaded and are increasingly hard to work in
+— findability is poor and adding a toggle means scanning a long flat list (the
+"When a show ends" / Playback section just landed into this sprawl). Regroup into
+clear sections with better findability; keep it a presentation/IA change, not new
+settings. Independent of any feature — the show-queue plan flags it as
+"Settings cleanup (independent, anytime)." Do it before the settings list grows
+again (shuffle, queue, and source-picker options are all coming).
 
 ## Deferred / explicit non-goals (sync v0)
 Cross-device deletion **tombstones**, **settings sync**, and **background sync**

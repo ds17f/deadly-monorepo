@@ -18,6 +18,7 @@ import androidx.core.view.WindowCompat
 import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
+import com.grateful.deadly.playback.AutoAdvanceCoordinator
 import com.grateful.deadly.theme.DeadlyMaterialTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -28,6 +29,7 @@ class MainActivity : ComponentActivity() {
     @Inject lateinit var analyticsService: AnalyticsService
     @Inject lateinit var mediaControllerRepository: MediaControllerRepository
     @Inject lateinit var connectService: ConnectService
+    @Inject lateinit var autoAdvanceCoordinator: AutoAdvanceCoordinator
 
     private var deepLinkUri by mutableStateOf<Uri?>(null)
 
@@ -37,6 +39,9 @@ class MainActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
         analyticsService.track("app_open")
+
+        // ADR-0010 Chunk 2: drive chronological auto-advance off the end-of-show signal.
+        autoAdvanceCoordinator.start()
 
         deepLinkUri = intent?.data
 

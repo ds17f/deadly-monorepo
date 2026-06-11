@@ -49,6 +49,7 @@ class ConnectServiceImpl @Inject constructor(
     private val authService: AuthService,
     private val mediaControllerRepository: MediaControllerRepository,
     private val networkMonitor: NetworkMonitor,
+    private val showRepository: com.grateful.deadly.core.domain.repository.ShowRepository,
 ) : ConnectService {
 
     companion object {
@@ -569,6 +570,11 @@ class ConnectServiceImpl @Inject constructor(
         // Non-active device: load paused so the player shows the shared show.
         if (new.recordingId != null && new.recordingId != localRecordingId) {
             val autoPlay = isActive && new.playing
+            // ConnectState is transport-only (no ticket image). Resolve the show's
+            // cover from the local catalog so a follower's now-playing/mini player
+            // shows the ticket art instead of the Archive-thumbnail fallback.
+            val coverImageUrl = new.showId
+                ?.let { runCatching { showRepository.getShowById(it)?.coverImageUrl }.getOrNull() }
             Log.d(TAG, "reactToState: NEW RECORDING — server=${new.recordingId} local=$localRecordingId " +
                 "isActive=$isActive autoPlay=$autoPlay trackIndex=${new.trackIndex} positionMs=${new.positionMs}")
             mediaControllerRepository.playTrack(
@@ -579,6 +585,7 @@ class ConnectServiceImpl @Inject constructor(
                 showDate = new.date ?: "",
                 venue = new.venue,
                 location = new.location,
+                coverImageUrl = coverImageUrl,
                 position = new.positionMs.toLong(),
                 autoPlay = autoPlay,
             )
@@ -639,8 +646,17 @@ class ConnectServiceImpl @Inject constructor(
 
         // When this device just became active (e.g. transfer in), sync local player
         // to server state — the local player may be at a completely different track/position.
+        //
+        // BUT skip the transport sync when a pendingAdvance note is present: here we
+        // "became active" only because we announced our OWN end-of-show (the server
+        // claims the announcer active, ADR-0011). We are parked at the end of the
+        // show waiting for the note-collector to advance — we know our position
+        // better than the server, whose positionMs is the stale pre-end value. Without
+        // this guard we seek back to that stale position and resume, replaying the
+        // tail, which re-fires onShowCompleted and re-announces (resetting the
+        // countdown). The note-collector owns the transition from here.
         val justBecameActive = !wasActive && nowActive
-        if (justBecameActive) {
+        if (justBecameActive && new.pendingAdvance == null) {
             val currentVolume = mediaControllerRepository.getVolume()
             _activeDeviceVolume.value = currentVolume
             sendVolumeReport(currentVolume)
@@ -723,6 +739,21 @@ class ConnectServiceImpl @Inject constructor(
     override fun sendStop() {
         Log.d(TAG, "sendStop")
         sendCommand("stop")
+    }
+
+    override fun sendAnnounceNext(showId: String, deadline: Double) {
+        Log.d(TAG, "sendAnnounceNext: $showId @ $deadline")
+        sendCommand("announce_next", mapOf("showId" to showId, "deadline" to deadline))
+    }
+
+    override fun sendCancelAdvance() {
+        Log.d(TAG, "sendCancelAdvance")
+        sendCommand("cancel_advance")
+    }
+
+    override fun sendAdvanceNow() {
+        Log.d(TAG, "sendAdvanceNow")
+        sendCommand("advance_now")
     }
 
     override fun sendLoad(

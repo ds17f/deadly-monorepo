@@ -35,6 +35,15 @@ struct SessionTrack: Codable {
     let durationMs: Int
 }
 
+// MARK: - PendingAdvance
+
+// ADR-0010 §7: shared end-of-show countdown. deadline is an absolute server
+// timestamp (ms), Double like positionTs (the server may send a fractional value).
+struct PendingAdvance: Codable, Equatable {
+    let showId: String
+    let deadline: Double
+}
+
 // MARK: - ConnectState
 
 struct ConnectState: Codable {
@@ -55,4 +64,7 @@ struct ConnectState: Codable {
     let date: String?
     let venue: String?
     let location: String?
+    // ADR-0010 §7: shared end-of-show countdown. Optional/additive — a missing
+    // key decodes to nil (synthesized Decodable uses decodeIfPresent for optionals).
+    let pendingAdvance: PendingAdvance?
 }

@@ -167,6 +167,7 @@ dependencies {
     implementation(project(":core:notifications"))
     implementation(project(":core:model"))
     implementation(project(":core:domain"))
+    implementation(project(":core:api:playlist"))
     implementation(project(":core:api:auth"))
     implementation(project(":core:auth"))
     implementation(project(":core:api:favorites"))

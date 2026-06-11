@@ -5,7 +5,11 @@ extension View {
         self
             .contentMargins(.bottom, miniPlayerService.isVisible ? 80 : 0, for: .scrollContent)
             .overlay(alignment: .bottom) {
-                MiniPlayerOverlay(service: miniPlayerService, showFullPlayer: showFullPlayer)
+                VStack(spacing: 8) {
+                    // ADR-0010: end-of-show countdown card, above the mini player.
+                    AutoAdvanceOverlay()
+                    MiniPlayerOverlay(service: miniPlayerService, showFullPlayer: showFullPlayer)
+                }
             }
     }
 }

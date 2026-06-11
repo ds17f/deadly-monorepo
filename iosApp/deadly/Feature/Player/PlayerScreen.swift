@@ -206,6 +206,10 @@ struct PlayerScreen: View {
                     }
                 }
             }
+
+            // ADR-0010: full-screen "Up Next" takeover during the end-of-show
+            // countdown — covers the player with a preview of the next show.
+            AutoAdvanceTakeover()
         }
         .task(id: streamPlayer.currentTrack?.id) {
             let show = container.playlistService.currentShow

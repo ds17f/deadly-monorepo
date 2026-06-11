@@ -29,4 +29,6 @@ export interface ConnectState {
   date: string | null;
   venue: string | null;
   location: string | null;
+  // ADR-0010 §7: shared end-of-show countdown. Optional/additive.
+  pendingAdvance?: { showId: string; deadline: number } | null;
 }

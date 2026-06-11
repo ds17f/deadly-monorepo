@@ -11,6 +11,7 @@ final class AppPreferences {
     private static let eqPresetKey = "eq_preset"
     private static let eqBandGainsKey = "eq_band_gains"
     private static let shareAttachImageKey = "share_attach_image"
+    private static let autoAdvanceEnabledKey = "auto_advance_enabled"
     private static let sourceBadgeStyleKey = "source_badge_style"
     private static let useBetaShareLinksKey = "use_beta_share_links"
     private static let useBetaModeKey = "use_beta_mode"
@@ -103,6 +104,11 @@ final class AppPreferences {
 
     var sourceBadgeStyle: String {
         didSet { UserDefaults.standard.set(sourceBadgeStyle, forKey: Self.sourceBadgeStyleKey) }
+    }
+
+    /// ADR-0010: roll into the next show when one ends. On by default.
+    var autoAdvanceEnabled: Bool {
+        didSet { UserDefaults.standard.set(autoAdvanceEnabled, forKey: Self.autoAdvanceEnabledKey) }
     }
 
     var analyticsEnabled: Bool {
@@ -204,6 +210,7 @@ final class AppPreferences {
             Self.eqEnabledKey: false,
             Self.eqPresetKey: "flat",
             Self.shareAttachImageKey: false,
+            Self.autoAdvanceEnabledKey: true,
             Self.sourceBadgeStyleKey: "LONG",
             Self.playerControlsStyleKey: "skipTrack",
             Self.homeTrendingWindowKey: "now",
@@ -235,6 +242,7 @@ final class AppPreferences {
             ?? UserDefaults.standard.string(forKey: Self.legacyLibraryDisplayModeKey)
             ?? "LIST"
         shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
+        autoAdvanceEnabled = UserDefaults.standard.bool(forKey: Self.autoAdvanceEnabledKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
         playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
         homeTrendingWindow = UserDefaults.standard.string(forKey: Self.homeTrendingWindowKey) ?? "now"

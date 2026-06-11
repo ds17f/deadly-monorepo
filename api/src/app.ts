@@ -14,6 +14,7 @@ import { connectRoutes } from "./connect/routes.js";
 import { analyticsRoutes } from "./routes/analytics.js";
 import { trendingRoutes } from "./routes/trending.js";
 import { popularRoutes } from "./routes/popular.js";
+import { showRoutes } from "./routes/shows.js";
 import { betaRoutes } from "./routes/beta.js";
 import { notificationRoutes } from "./routes/notifications.js";
 import { devTokenRoutes } from "./auth/dev-token.js";
@@ -68,6 +69,7 @@ export function buildApp() {
   app.register(analyticsRoutes);
   app.register(trendingRoutes);
   app.register(popularRoutes);
+  app.register(showRoutes);
   app.register(betaRoutes);
   app.register(notificationRoutes);
 

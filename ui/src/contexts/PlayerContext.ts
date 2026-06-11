@@ -75,6 +75,13 @@ export interface PlayerContextValue {
   autoplayInfo: { showDate: string; venue: string; fromDevice: string } | null;
   retryAutoplay: () => void;
   dismissAutoplay: () => void;
+
+  // End-of-show auto-advance (ADR-0010). Non-null while the countdown to the
+  // next show is running; nextShow carries its display data so the full player
+  // can preview it under a "Next up in Ns" banner.
+  autoAdvance: { secondsRemaining: number; nextShow: ViewedShow } | null;
+  cancelAutoAdvance: () => void;
+  playNextNow: () => void;
 }
 
 export const PlayerContext = createContext<PlayerContextValue | null>(null);
