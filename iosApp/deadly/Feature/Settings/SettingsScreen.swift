@@ -146,6 +146,27 @@ struct SettingsScreen: View {
             }
 
             // MARK: - Preferences
+            Section("Playback") {
+                Toggle(isOn: Binding(
+                    get: { container.appPreferences.autoAdvanceEnabled },
+                    set: {
+                        container.appPreferences.autoAdvanceEnabled = $0
+                        container.analyticsService.track("feature_use", props: [
+                            "feature": "toggle_auto_advance",
+                            "category": "playback",
+                            "enabled": $0,
+                        ])
+                    }
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("When a show ends")
+                        Text("Roll into the next show automatically, after a 15-second countdown you can cancel.")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+
             Section("Preferences") {
                 Toggle(isOn: Binding(
                     get: { container.appPreferences.includeShowsWithoutRecordings },

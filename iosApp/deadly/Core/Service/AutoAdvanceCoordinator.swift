@@ -29,6 +29,7 @@ final class AutoAdvanceCoordinator {
     private let playlistService: PlaylistServiceImpl
     private let showRepository: any ShowRepository
     private let connectService: ConnectService
+    private let appPreferences: AppPreferences
 
     private var localTask: Task<Void, Never>?
     private var noteWatcher: Task<Void, Never>?
@@ -43,11 +44,13 @@ final class AutoAdvanceCoordinator {
     init(
         playlistService: PlaylistServiceImpl,
         showRepository: any ShowRepository,
-        connectService: ConnectService
+        connectService: ConnectService,
+        appPreferences: AppPreferences
     ) {
         self.playlistService = playlistService
         self.showRepository = showRepository
         self.connectService = connectService
+        self.appPreferences = appPreferences
         playlistService.onShowCompleted = { [weak self] completedShowId in
             self?.onShowCompleted(completedShowId)
         }
@@ -120,6 +123,10 @@ final class AutoAdvanceCoordinator {
 
     private func onShowCompleted(_ completedShowId: String) {
         logger.notice("auto-advance: show completed = \(completedShowId, privacy: .public)")
+        guard appPreferences.autoAdvanceEnabled else {
+            logger.notice("auto-advance: disabled by preference — not advancing")
+            return
+        }
         localTask?.cancel()
         localTask = Task { @MainActor [weak self] in
             guard let self else { return }

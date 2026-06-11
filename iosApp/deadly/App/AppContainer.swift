@@ -345,7 +345,8 @@ final class AppContainer {
                 AutoAdvanceCoordinator(
                     playlistService: playlistSvc,
                     showRepository: showRepo,
-                    connectService: connect
+                    connectService: connect,
+                    appPreferences: prefs
                 )
             }
 
