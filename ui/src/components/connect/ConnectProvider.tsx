@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { ConnectContext } from "@/contexts/ConnectContext";
 import type { ConnectDevice, ConnectState } from "@/types/connect";
+import { randomUUID } from "@/lib/uuid";
 
 const HEARTBEAT_INTERVAL_MS = 15_000;
 const RECONNECT_DELAYS_MS = [1_000, 2_000, 4_000, 8_000, 30_000];
@@ -18,7 +19,7 @@ const warn = (...args: unknown[]) => console.warn("[Connect]", ...args);
 function getOrCreateDeviceId(): string {
   let id = localStorage.getItem(DEVICE_ID_KEY);
   if (!id) {
-    id = crypto.randomUUID();
+    id = randomUUID();
     localStorage.setItem(DEVICE_ID_KEY, id);
   }
   return id;

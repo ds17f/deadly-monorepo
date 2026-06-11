@@ -10,6 +10,8 @@
 // (a bundle can't keep a secret) — Caddy injects X-Analytics-Key on
 // /api/analytics in production; in dev the API accepts keyless.
 
+import { randomUUID } from "@/lib/uuid";
+
 const IID_KEY = "deadly_iid";
 const OPT_OUT_KEY = "deadly_analytics_off";
 const ENDPOINT = "/api/analytics";
@@ -36,10 +38,7 @@ let sessionId = "";
 let buffer: AnalyticsEvent[] = [];
 let wired = false;
 
-function uuid(): string {
-  if (typeof crypto !== "undefined" && crypto.randomUUID) return crypto.randomUUID();
-  return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
-}
+const uuid = randomUUID;
 
 // Stable per-browser anonymous id. Distinct from mobile IIDs by design — a
 // web-only listener is a real, separate user (just not an app install).
