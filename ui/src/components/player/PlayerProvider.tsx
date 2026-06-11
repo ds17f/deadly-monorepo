@@ -8,6 +8,7 @@ import { updatePlaybackPosition, addRecentShow } from "@/lib/userDataApi";
 import { notifyUserDataChanged } from "@/lib/userDataEvents";
 import { useAuth } from "@/contexts/AuthContext";
 import { rememberArt, lookupArt, rememberReview, lookupReview } from "@/lib/artCache";
+import { getAutoAdvanceEnabled } from "@/lib/playbackPrefs";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
@@ -936,6 +937,12 @@ export default function PlayerProvider({
   // to decide whether to advance.
   const onShowComplete = useCallback(
     async (completedShowId: string) => {
+      // ADR-0010 ship gate: per-device opt-out. Gates whether THIS device
+      // initiates an advance when it's the one playing (announce/countdown/advance).
+      if (!getAutoAdvanceEnabled()) {
+        console.info("[auto-advance] disabled by preference — not advancing");
+        return;
+      }
       // Resolve the next chronological show. The browser has no catalog (shows
       // are static SSG), so ask the API, which holds it in memory.
       let next: ShowMetaResponse;

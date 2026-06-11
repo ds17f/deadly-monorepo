@@ -129,9 +129,16 @@ Server `pendingAdvance` + announce_next/cancel_advance/advance_now; each client
 emits + drives the countdown/advance off the shared note; Cancel & Play-now work
 from any device. Web has the fullscreen takeover; Android/iOS use a docked card.
 Also fixed: Android connect-follow now resolves the ticket cover (was logo).
-Remaining polish: **mobile fullscreen-takeover** (parity with web), the
-**"when a show ends" setting** (advance is hardcoded ON — ship gate), and the
+Remaining polish: **mobile fullscreen-takeover** (parity with web) and the
 **play/pause affordance** fixes.
+
+**"When a show ends" ship gate — DONE on all three platforms.** Per-device
+opt-out gating whether THIS device initiates an advance; default ON. Android
+`abafadc9` (AppPreferences + Settings "Playback"), iOS (AppPreferences
+`autoAdvanceEnabled` + gated `AutoAdvanceCoordinator.onShowCompleted` + Settings
+"Playback" section), web (`lib/playbackPrefs.ts` localStorage flag, gated
+`onShowComplete`, toggle in `/me` SettingsTab). `feature_use` /
+`toggle_auto_advance` analytics on each.
 Remaining in Chunk 2 (UX/polish — mechanism is done):
 1. Cancelable countdown **overlay UI** (advances silently after 15s today).
    - Also: during the countdown the active device is *parked*, so remotes render
