@@ -15,12 +15,12 @@ export default function AutoAdvanceBanner() {
   const subtitle = [nextShow.venue, nextShow.location].filter(Boolean).join(" · ");
 
   return (
-    <div className="mx-2 mb-2 flex items-center gap-3 rounded-lg border border-deadly-primary/40 bg-deadly-surface px-3 py-2 shadow-lg">
+    <div className="mx-2 mb-2 flex items-center gap-3 rounded-lg border border-deadly-accent/40 bg-deadly-surface px-3 py-2 shadow-lg">
       {/* Ticket image, else the Deadly logo — same convention as ShowArtwork. */}
       <ShowArtwork image={nextShow.image} alt={nextShow.date} />
 
       <div className="min-w-0 flex-1">
-        <div className="text-xs font-semibold uppercase tracking-wide text-deadly-primary">
+        <div className="text-xs font-semibold uppercase tracking-wide text-deadly-highlight">
           Next up in {secondsRemaining}s
         </div>
         <div className="truncate text-sm font-medium text-white">{nextShow.date}</div>
@@ -29,13 +29,13 @@ export default function AutoAdvanceBanner() {
 
       <button
         onClick={playNextNow}
-        className="flex-shrink-0 rounded-full bg-deadly-primary px-3 py-1.5 text-xs font-semibold text-black"
+        className="flex-shrink-0 rounded-full bg-deadly-accent px-4 py-1.5 text-xs font-bold text-black transition hover:scale-105"
       >
         Play now
       </button>
       <button
         onClick={cancelAutoAdvance}
-        className="flex-shrink-0 rounded-full border border-white/20 px-3 py-1.5 text-xs font-medium text-white/80"
+        className="flex-shrink-0 rounded-full border border-white/25 px-4 py-1.5 text-xs font-medium text-white/80"
       >
         Cancel
       </button>

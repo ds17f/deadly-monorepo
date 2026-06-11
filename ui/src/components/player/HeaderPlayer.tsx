@@ -988,7 +988,7 @@ export default function HeaderPlayer() {
             disturbing the mobile/desktop layouts beneath. ── */}
         {autoAdvance && (
           <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-6 bg-gradient-to-b from-deadly-surface to-deadly-bg px-6 text-center">
-            <div className="text-sm font-semibold uppercase tracking-[0.25em] text-deadly-primary">
+            <div className="text-sm font-semibold uppercase tracking-[0.25em] text-deadly-highlight">
               Next up in {autoAdvance.secondsRemaining}s
             </div>
             {/* Whole ticket at its natural shape (contain) / square logo —
@@ -1011,7 +1011,7 @@ export default function HeaderPlayer() {
             <div className="flex flex-col items-center gap-3">
               <button
                 onClick={playNextNow}
-                className="rounded-full bg-deadly-primary px-6 py-2.5 text-sm font-semibold text-black"
+                className="rounded-full bg-deadly-accent px-8 py-2.5 text-sm font-bold text-black transition hover:scale-105"
               >
                 Play now
               </button>
