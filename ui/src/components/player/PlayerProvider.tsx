@@ -115,6 +115,11 @@ export default function PlayerProvider({
   // the countdown can be canceled by any subsequent play.
   const autoAdvanceTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const onShowCompleteRef = useRef<((completedShowId: string) => void) | null>(null);
+  // ADR-0010: true once real playback has happened this session. Guards the
+  // `ended` end-of-show signal against firing on restore/cold-start, when the
+  // player is rehydrated at the last track and the audio element can emit a
+  // spurious `ended` (mirrors Android's hasPlayedThisSession).
+  const hasPlayedThisSessionRef = useRef(false);
   const reportVolumeRef = useRef(reportVolume);
   const isActiveDeviceRef = useRef(false);
   const isRemoteControllingRef = useRef(false);
@@ -268,6 +273,7 @@ export default function PlayerProvider({
         (activeAudioRef.current === "B" && audio === audioBRef.current)
       ) {
         setStatus("playing");
+        hasPlayedThisSessionRef.current = true;
         retryCountRef.current = 0;
         setAutoplayBlocked(false);
         setAutoplayInfo(null);
@@ -321,12 +327,17 @@ export default function PlayerProvider({
           // ADR-0010 Chunk 1: the final track finished on its own — the positive
           // "show completed" signal. `ended` only fires on natural EOF (a user
           // stop/pause doesn't fire it; load errors go to the "error" listener),
-          // and this is the last-track branch — so this is end-of-show, not a
-          // generic stop. The advance coordinator will hang off this point.
+          // and this is the last-track branch. The `hasPlayedThisSession` guard
+          // rejects the restore/cold-start case (rehydrated at the last track,
+          // where the audio element can emit a spurious `ended` with no real
+          // playback) — without it, a hard refresh spuriously auto-advances.
           const completedShowId = activeShowRef.current?.showId ?? "";
-          console.info(`🏁 [SHOW-COMPLETE] onShowCompleted(showId=${completedShowId})`);
-          // ADR-0010 chunk 2: drive chronological auto-advance off this signal.
-          if (completedShowId) onShowCompleteRef.current?.(completedShowId);
+          if (completedShowId && hasPlayedThisSessionRef.current) {
+            hasPlayedThisSessionRef.current = false;
+            console.info(`🏁 [SHOW-COMPLETE] onShowCompleted(showId=${completedShowId})`);
+            // ADR-0010 chunk 2: drive chronological auto-advance off this signal.
+            onShowCompleteRef.current?.(completedShowId);
+          }
           // Last track finished on its own — no track change will drive the
           // playback_end, so emit the completed end here.
           const c = committedPlaybackRef.current;

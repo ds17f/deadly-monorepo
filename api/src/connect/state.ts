@@ -222,6 +222,8 @@ export function unregisterDevice(userId: string, deviceId: string): void {
       activeDeviceName: null,
       activeDeviceType: null,
       playing: false,
+      // The device that would have advanced is gone — drop the countdown note.
+      pendingAdvance: null,
     });
   }
 
@@ -265,6 +267,7 @@ export function startHeartbeatSweep(): void {
           activeDeviceName: null,
           activeDeviceType: null,
           playing: false,
+          pendingAdvance: null,
         });
       }
       // Cancel pending transfer if evicted device was the target
