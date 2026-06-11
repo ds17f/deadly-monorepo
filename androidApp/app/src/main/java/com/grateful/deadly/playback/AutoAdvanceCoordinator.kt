@@ -5,6 +5,7 @@ import com.grateful.deadly.core.api.playlist.PlaylistService
 import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
+import com.grateful.deadly.core.model.Show
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -13,31 +14,27 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
+import kotlin.math.ceil
 import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * ADR-0010 Chunk 2 — chronological auto-advance.
+ * ADR-0010 Chunk 2 + §7 — chronological auto-advance, cross-device.
  *
- * An independent coordinator whose ONLY input is
- * [MediaControllerRepository.showCompleted] (the positive end-of-show signal
- * from Chunk 1). It reads NO transport/Connect state to decide *whether* or
- * *what* to advance — that interrogation was the v1 whack-a-mole. Gating is
- * intrinsic: only the audio-producing device fires `showCompleted`, so only it
- * advances; a remote-controlling device never reaches end-of-show locally.
+ * Driven by [MediaControllerRepository.showCompleted] (the Chunk 1 end-of-show
+ * signal). It reads no transport state to *decide* whether to advance.
  *
- * On end-of-show:
- *   1. **Park** — tell Connect we're done ([ConnectService.sendStop]) so the
- *      server stops believing we're playing and can't drag the device back
- *      during the countdown (the structural fix for the v1 "advance immediately,
- *      no countdown in Connect" workaround).
- *   2. **Cancelable countdown.**
- *   3. **Advance** — [PlaylistService.playShow] of the next chronological show,
- *      whose output is byte-identical to a user tap (local audio + sendLoad).
- *
- * Its only interaction with transport is that final play — input-decoupled,
- * output-normal.
+ * In a Connect session it `announce`s the next show + a server-time deadline; the
+ * shared `pendingAdvance` note then drives the countdown UI **and** the advance
+ * on every device (this coordinator's note-collector). Offline it runs a purely
+ * local countdown. The active device advances when the note is present and the
+ * deadline passes; its [PlaylistService.playShow] load clears the note for all.
+ * Cancel / Play now work from any device (commands when remote; act directly
+ * when active/offline).
  */
 @Singleton
 class AutoAdvanceCoordinator @Inject constructor(
@@ -48,65 +45,107 @@ class AutoAdvanceCoordinator @Inject constructor(
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
-    data class Countdown(val secondsRemaining: Int, val nextShowLabel: String?)
+    data class Countdown(val secondsRemaining: Int, val nextShow: Show)
 
     private val _countdown = MutableStateFlow<Countdown?>(null)
-    /** Drives the cancelable "next show in Ns" overlay; null when idle. */
+    /** Drives the "Next up in Ns" UI; null when idle. */
     val countdown: StateFlow<Countdown?> = _countdown.asStateFlow()
 
-    private var advanceJob: Job? = null
+    private var localJob: Job? = null
     private var started = false
 
     /** Called once at app launch (MainActivity). */
     fun start() {
         if (started) return
         started = true
+
+        // End-of-show → announce (in a session) or run a local countdown.
         scope.launch {
-            media.showCompleted.collect { completedShowId ->
-                onShowCompleted(completedShowId)
-            }
+            media.showCompleted.collect { completedShowId -> onShowCompleted(completedShowId) }
+        }
+
+        // The shared note drives the countdown + advance when connected. Keyed on
+        // the note alone (distinctUntilChanged), so position broadcasts don't
+        // restart the ticker; collectLatest restarts it when the note changes
+        // (e.g. advance_now moves the deadline).
+        scope.launch {
+            connectService.connectState
+                .map { it?.pendingAdvance }
+                .distinctUntilChanged()
+                .collectLatest { note ->
+                    if (!connectService.isConnected.value) return@collectLatest // offline: local job owns it
+                    if (note == null) {
+                        _countdown.value = null
+                        return@collectLatest
+                    }
+                    val show = showRepository.getShowById(note.showId) ?: return@collectLatest
+                    while (true) {
+                        val serverNow = System.currentTimeMillis() + connectService.serverTimeOffsetMs.value
+                        val remaining = ceil((note.deadline - serverNow) / 1000.0).toInt()
+                        if (remaining <= 0) {
+                            _countdown.value = null
+                            if (connectService.isActiveDevice.value) {
+                                Log.d(TAG, "auto-advance: advancing to ${show.displayTitle}")
+                                playlistService.playShow(show, autoPlay = true) // load clears the note
+                            }
+                            break
+                        }
+                        _countdown.value = Countdown(remaining, show)
+                        delay(1000)
+                    }
+                }
         }
     }
 
-    /** User canceled the pending advance. */
+    /** Cancel the pending advance. */
     fun cancel() {
-        Log.d(TAG, "auto-advance: canceled by user")
-        advanceJob?.cancel()
-        advanceJob = null
+        Log.d(TAG, "auto-advance: cancel")
+        localJob?.cancel()
+        localJob = null
         _countdown.value = null
+        if (connectService.isConnected.value) connectService.sendCancelAdvance()
+    }
+
+    /** Skip the countdown ("Play now"). */
+    fun playNow() {
+        val show = _countdown.value?.nextShow ?: return
+        if (connectService.isConnected.value && !connectService.isActiveDevice.value) {
+            connectService.sendAdvanceNow()
+            return
+        }
+        localJob?.cancel()
+        localJob = null
+        _countdown.value = null
+        scope.launch { playlistService.playShow(show, autoPlay = true) }
     }
 
     private fun onShowCompleted(completedShowId: String) {
         Log.d(TAG, "auto-advance: show completed = $completedShowId")
-        advanceJob?.cancel()
-        advanceJob = scope.launch {
-            // 1. Park: tell Connect we're done so the server stops believing we're
-            //    playing and can't drag us back during the countdown. Sent
-            //    unconditionally — it's a no-op (dropped) when not in a session,
-            //    and `connectState` is an unreliable "am I connected" signal
-            //    (it can be null mid-session). Only the audio-producing (active)
-            //    device reaches here, so a stop is always the right thing to send.
-            Log.d(TAG, "auto-advance: parking Connect (sendStop)")
-            connectService.sendStop()
-
-            // 2. Resolve the next chronological show.
+        localJob?.cancel()
+        localJob = scope.launch {
             val completed = showRepository.getShowById(completedShowId)
             val next = completed?.let { showRepository.getNextShowByDate(it.date) }
             if (next == null) {
-                Log.d(TAG, "auto-advance: no next show after $completedShowId — stopping")
+                Log.d(TAG, "auto-advance: no next show after $completedShowId")
                 _countdown.value = null
                 return@launch
             }
 
-            // 3. Cancelable countdown (server is parked, so no drag-back).
+            if (connectService.isConnected.value) {
+                // In a session: announce; the note-collector above drives the rest.
+                val deadline = (System.currentTimeMillis() +
+                    connectService.serverTimeOffsetMs.value +
+                    COUNTDOWN_SECONDS * 1000L).toDouble()
+                connectService.sendAnnounceNext(next.id, deadline)
+                return@launch
+            }
+
+            // Offline: local-only countdown, then advance.
             for (remaining in COUNTDOWN_SECONDS downTo 1) {
-                _countdown.value = Countdown(remaining, next.displayTitle)
+                _countdown.value = Countdown(remaining, next)
                 delay(1000)
             }
             _countdown.value = null
-
-            // 4. Advance — identical to a user tap on the next show.
-            Log.d(TAG, "auto-advance: advancing to ${next.displayTitle}")
             playlistService.playShow(next, autoPlay = true)
         }
     }

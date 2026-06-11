@@ -34,6 +34,7 @@ import com.grateful.deadly.navigation.NavigationBarConfig
 import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.design.scaffold.AppScaffold
+import com.grateful.deadly.playback.AutoAdvanceOverlay
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.feature.home.navigation.homeGraph
 import com.grateful.deadly.notifications.NotificationBell
@@ -277,6 +278,8 @@ fun MainNavigation(
         snackbarHostState = snackbarHostState
     ) { paddingValues ->
         Box(modifier = Modifier.fillMaxSize()) {
+            val autoAdvanceCountdown by appViewModel.autoAdvanceCountdown.collectAsState()
+
             NavHost(
                 navController = navController,
                 startDestination = "splash",
@@ -331,6 +334,20 @@ fun MainNavigation(
                 exit = slideOutVertically(targetOffsetY = { it }) + fadeOut()
             ) {
                 OfflineBanner()
+            }
+
+            // ADR-0010: end-of-show "Next up in Ns" countdown — docked above the
+            // mini player; shown on the active device and remotes alike.
+            autoAdvanceCountdown?.let { countdown ->
+                AutoAdvanceOverlay(
+                    countdown = countdown,
+                    onPlayNow = { appViewModel.playNextNow() },
+                    onCancel = { appViewModel.cancelAutoAdvance() },
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .padding(horizontal = 8.dp)
+                        .padding(bottom = paddingValues.calculateBottomPadding() + 8.dp),
+                )
             }
         }
     }

@@ -15,6 +15,15 @@ data class ConnectSessionTrack(
     val durationMs: Int,
 )
 
+// ADR-0010 §7: shared end-of-show countdown. deadline is an absolute server
+// timestamp (ms); Double for the same reason as positionTs — the server may
+// send a fractional value and an Int/Long parse would drop the whole state.
+@Serializable
+data class PendingAdvance(
+    val showId: String,
+    val deadline: Double,
+)
+
 @Serializable
 data class ConnectState(
     // Long, not Int: the server seeds version from wall-clock ms (Date.now())
@@ -38,4 +47,6 @@ data class ConnectState(
     val date: String? = null,
     val venue: String? = null,
     val location: String? = null,
+    // ADR-0010 §7: shared end-of-show countdown. Optional/additive.
+    val pendingAdvance: PendingAdvance? = null,
 )

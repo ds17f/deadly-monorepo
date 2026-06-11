@@ -725,6 +725,21 @@ class ConnectServiceImpl @Inject constructor(
         sendCommand("stop")
     }
 
+    override fun sendAnnounceNext(showId: String, deadline: Double) {
+        Log.d(TAG, "sendAnnounceNext: $showId @ $deadline")
+        sendCommand("announce_next", mapOf("showId" to showId, "deadline" to deadline))
+    }
+
+    override fun sendCancelAdvance() {
+        Log.d(TAG, "sendCancelAdvance")
+        sendCommand("cancel_advance")
+    }
+
+    override fun sendAdvanceNow() {
+        Log.d(TAG, "sendAdvanceNow")
+        sendCommand("advance_now")
+    }
+
     override fun sendLoad(
         showId: String,
         recordingId: String,

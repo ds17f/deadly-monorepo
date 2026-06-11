@@ -29,6 +29,12 @@ interface ConnectService {
     fun handleNetworkRestored()
 
     fun sendStop()
+
+    // ADR-0010 §7: cross-device end-of-show countdown.
+    fun sendAnnounceNext(showId: String, deadline: Double)
+    fun sendCancelAdvance()
+    fun sendAdvanceNow()
+
     fun sendTransfer(targetDeviceId: String)
     fun sendPosition(positionMs: Int)
 
