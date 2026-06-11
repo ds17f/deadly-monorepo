@@ -49,6 +49,7 @@ class ConnectServiceImpl @Inject constructor(
     private val authService: AuthService,
     private val mediaControllerRepository: MediaControllerRepository,
     private val networkMonitor: NetworkMonitor,
+    private val showRepository: com.grateful.deadly.core.domain.repository.ShowRepository,
 ) : ConnectService {
 
     companion object {
@@ -569,6 +570,11 @@ class ConnectServiceImpl @Inject constructor(
         // Non-active device: load paused so the player shows the shared show.
         if (new.recordingId != null && new.recordingId != localRecordingId) {
             val autoPlay = isActive && new.playing
+            // ConnectState is transport-only (no ticket image). Resolve the show's
+            // cover from the local catalog so a follower's now-playing/mini player
+            // shows the ticket art instead of the Archive-thumbnail fallback.
+            val coverImageUrl = new.showId
+                ?.let { runCatching { showRepository.getShowById(it)?.coverImageUrl }.getOrNull() }
             Log.d(TAG, "reactToState: NEW RECORDING — server=${new.recordingId} local=$localRecordingId " +
                 "isActive=$isActive autoPlay=$autoPlay trackIndex=${new.trackIndex} positionMs=${new.positionMs}")
             mediaControllerRepository.playTrack(
@@ -579,6 +585,7 @@ class ConnectServiceImpl @Inject constructor(
                 showDate = new.date ?: "",
                 venue = new.venue,
                 location = new.location,
+                coverImageUrl = coverImageUrl,
                 position = new.positionMs.toLong(),
                 autoPlay = autoPlay,
             )

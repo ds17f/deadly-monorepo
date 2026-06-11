@@ -39,6 +39,7 @@ android {
 dependencies {
     implementation(project(":core:model"))
     implementation(project(":core:database"))
+    implementation(project(":core:domain"))
     implementation(project(":core:api:auth"))
     implementation(project(":core:media"))
     implementation(project(":core:network"))
