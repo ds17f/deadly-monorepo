@@ -207,6 +207,27 @@ exist (iOS/Android: Account, Playback, Preferences, Home Screen, Audio, Connect,
 Favorites & Data, Support, About) — the work is turning sections into drill-in
 categories, not inventing new groupings. Not started.
 
+## TECH DEBT
+
+Known shortcuts we took deliberately, with the trigger that should make us pay
+them down. Not features — corrections we owe the codebase.
+
+- **Show index is a boot-loaded in-memory JSON blob (move to SQLite when
+  recording fields grow).** The API holds no catalog; `api/src/showCatalog.ts`
+  loads `show-index.json` once at boot into an in-memory `Map`, built offline by
+  `api/scripts/build-show-index.mjs`. PR #66 baked a per-**recording** display
+  array into it for the web recording picker, which ~5×'d the file on disk and in
+  resident memory (~0.6 → ~3.1 MB). Fine today (read-only, keyed reads, single
+  instance), but `better-sqlite3` is already loaded in-process and this is the
+  only show-metadata store *not* in SQLite. **Trigger:** the next time someone
+  adds per-recording fields (track lists, per-recording reviews, waveforms,
+  lineage, sizes…), migrate the index to a SQLite table queried by `showId`
+  instead of fattening the blob — also forced if API memory starts to matter or
+  it needs to scale horizontally. Decision + triggers in **ADR-0012**; code
+  breadcrumbs point there from both the producer and consumer.
+- **Favorite-songs logic mis-placed on `ReviewService`.** Extract onto
+  `FavoritesService` (both platforms) — see §7. File a Linear tech-debt ticket.
+
 ## Deferred / explicit non-goals (sync v0)
 Cross-device deletion **tombstones**, **settings sync**, and **background sync**
 (WorkManager / BGTaskScheduler). Revisit tombstones before flipping sync

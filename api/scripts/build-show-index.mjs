@@ -50,6 +50,13 @@ function resolveImage(s) {
 // The compact per-recording shape the web recording menu needs (source badge,
 // rating, review count, runtime). Resolved by reading each recording's own
 // JSON; the browser has no catalog, so the API serves this by showId.
+//
+// ⚠️ TECH DEBT — every field added to this shape is baked into the index for
+// EVERY recording of EVERY show, growing the blob the API loads wholesale into
+// RAM (adding these five fields already ~5×'d it: ~0.6 → ~3.1 MB). Before
+// widening this, read ADR-0012 (docs/adr/0012-show-index-in-memory-json.md):
+// more recording fields is the named trigger to move the show index into a
+// SQLite table instead of growing this file.
 const haveRecordings = fs.existsSync(recordingsDir);
 if (!haveRecordings) {
   console.warn(

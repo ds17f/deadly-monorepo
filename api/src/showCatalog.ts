@@ -10,6 +10,14 @@ import path from "node:path";
 // The compact per-recording fields the web recording menu renders. The browser
 // has no catalog of its own, so the API serves a show's recordings by showId
 // (e.g. to populate the picker for a Connect-hydrated / refreshed session).
+//
+// ⚠️ TECH DEBT — adding fields here grows the in-memory index. See ADR-0012
+// (docs/adr/0012-show-index-in-memory-json.md). This whole catalog is a
+// boot-loaded JSON blob held in RAM (see loadShowCatalog below); attaching these
+// recordings already ~5×'d it (~0.6 → ~3.1 MB), and each new per-recording field
+// multiplies across every recording of every show. If you are here to add a
+// field, that is the trigger to migrate this to a SQLite table (queried by
+// showId) rather than fatten the blob further — read the ADR first.
 export interface RecordingMeta {
   identifier: string;
   source_type: string;
