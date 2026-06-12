@@ -4,7 +4,7 @@
 
 Proposed (2026-06-08).
 
-Builds on [ADR-0007](0007-prebuilt-catalog-db.md) (prebuilt catalog seed). That
+Builds on [ADR-0013](0013-prebuilt-catalog-db.md) (prebuilt catalog seed). That
 ADR introduced a second import path (seed) alongside the existing JSON import;
 this ADR fixes a data-loss bug that exists in **both** and predates the seed
 work.
@@ -65,7 +65,7 @@ Make catalog refresh non-destructive to user data by never deleting `shows`.
 
 2. **Keep `DELETE` + re-insert for the childless catalog tables** —
    `recordings`, `dead_collections`, and the `show_search` FTS (rebuilt on-device
-   per ADR-0007 #5). They have no user children, so a clean replace is exact and
+   per ADR-0013 #5). They have no user children, so a clean replace is exact and
    simple. `recordings` is the volatile table (tapes are deprecated/added far more
    often than shows); replacing it wholesale handles its churn with no special
    casing. A `recording_preferences.recordingId` that points at a now-removed
@@ -129,7 +129,7 @@ there is no migration to ship.
   Pre-existing UI behavior already tolerates a missing recording.
 - Two import paths still coexist this release. The JSON path's deprecation is
   **scheduled for the release after the seed bakes in the wild** — it remains the
-  ADR-0007 zero-risk fallback for now, and costs nothing in the happy path
+  ADR-0013 zero-risk fallback for now, and costs nothing in the happy path
   (`data.zip` is only downloaded if the seed import fails).
 
 ## Alternatives considered
@@ -151,7 +151,7 @@ there is no migration to ship.
 - **Kill the JSON import path now and rely on the seed alone.** Tempting (the
   canonical transform already lives in `build_catalog_db.py`, and the duplicated
   bug shows the cost of two paths). Rejected for this release: it removes the
-  ADR-0007 zero-risk fallback in the same release the seed first ships broadly,
+  ADR-0013 zero-risk fallback in the same release the seed first ships broadly,
   with no happy-path benefit. Deferred to a follow-up release.
 </content>
 </invoke>

@@ -40,7 +40,7 @@ web-launch threads, 2026-06).
   bulk-copies a prebuilt SQLite catalog seed (`d8442651`) instead of importing
   ~20k JSON files; FTS rebuilt on-device; fixes Android's silent false-complete
   on kill mid-import. Data pinned to 2.4.0 (`fb90535d`). Decisions in
-  **ADR-0007**; details in [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md).
+  **ADR-0013**; details in [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md).
 - **Admin → user messaging + notifications.** In-app inbox (v1 + v2, #55),
   engagement funnel + per-notification admin stats (#57), admin dashboard
   Versions panel (#56). New `track()` events must be registered in
@@ -240,7 +240,7 @@ two shows (early/late, same-date multi-venue) surface under only one. A
 composite-PK / `recording_shows` join-table fix is a coordinated iOS+Android+seed
 migration for a small edge case — deferred. Why + path in
 [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md) "Known limitations";
-decision in ADR-0007 §9.
+decision in ADR-0013 §9.
 
 **Out of scope entirely:** additional bands / non-Grateful-Dead content. The
 Deadly is bounded by what's in the Grateful Dead's Internet Archive collection.

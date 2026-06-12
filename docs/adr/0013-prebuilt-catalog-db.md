@@ -1,4 +1,9 @@
-# ADR-0007: Prebuilt catalog DB for first-launch
+# ADR-0013: Prebuilt catalog DB for first-launch
+
+> Renumbered from ADR-0007 (2026-06-12): the number 0007 had been minted twice
+> (this ADR and `0007-connect-background-socket-lifecycle.md`). The connect ADR,
+> referenced more widely, kept 0007; this one moved to 0013. Older references to
+> "ADR-0007" meaning the catalog seed point here.
 
 ## Status
 

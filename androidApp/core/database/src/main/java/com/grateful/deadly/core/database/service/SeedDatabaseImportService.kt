@@ -21,7 +21,7 @@ import javax.inject.Singleton
  * identity hash (`room_master_table`) and none of the device-local tables
  * (favorites, library, recents, reviews, sync outbox). Opening it as the live ORM
  * DB would crash or lose user data. Instead we keep Room's own migrated DB and copy
- * the catalog rows into it. See `docs/adr/0007-prebuilt-catalog-db.md`.
+ * the catalog rows into it. See `docs/adr/0013-prebuilt-catalog-db.md`.
  *
  * Flow (catalog writes in one transaction so the health gate — a committed
  * `data_version` row — flips only on success):

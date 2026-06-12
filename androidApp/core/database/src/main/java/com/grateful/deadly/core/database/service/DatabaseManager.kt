@@ -108,7 +108,7 @@ class DatabaseManager @Inject constructor(
      * Initialize the catalog from the available sources, preferring the prebuilt
      * seed (SEED) and falling back to the JSON `data.zip` import. If the seed
      * import fails and JSON is available, fall back to it — zero-risk migration
-     * (ADR-0007, Phase 4). No user prompt: the seed is strictly faster/cheaper.
+     * (ADR-0013, Phase 4). No user prompt: the seed is strictly faster/cheaper.
      */
     private suspend fun initializePreferringSeed(available: AvailableSources): DatabaseImportResult {
         val sources = available.sources
@@ -301,7 +301,7 @@ class DatabaseManager @Inject constructor(
 
                             // Attach-and-copy the neutral catalog seed into the live
                             // migrated Room DB. This is NOT a full-DB restore: the seed
-                            // has no Room identity / device-local tables (see ADR-0007).
+                            // has no Room identity / device-local tables (see ADR-0013).
                             Log.i(TAG, "Importing catalog seed...")
                             val seedResult = seedDatabaseImportService.importFromSeed(
                                 seedFile = extractionResult.databaseFile

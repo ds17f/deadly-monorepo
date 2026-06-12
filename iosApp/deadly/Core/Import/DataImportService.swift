@@ -68,7 +68,7 @@ struct DataImportService: Sendable {
 
         // 2. PREFER the prebuilt catalog seed (sub-second attach-copy). Falls through
         //    to the JSON import below if no seed is published yet or the seed fails —
-        //    zero-risk migration (ADR-0007, Phase 4).
+        //    zero-risk migration (ADR-0013, Phase 4).
         if await importFromSeedIfAvailable(progress: emit) {
             return
         }
