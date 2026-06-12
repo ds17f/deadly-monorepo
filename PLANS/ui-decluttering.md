@@ -204,12 +204,23 @@ declutter-only, don't over-specify in the ADR.
   - Shared copy helper `autoplayToastMessage(enabled)` on each platform (matched text).
     Wired into both Player + Playlist `toggleAutoAdvance`.
 
-### Phase 2+ — NOT started (separate lighter passes, per ADR §8)
-- **Settings:** categorized subscreens + consolidated Home Layout screen (iOS+Android),
-  then close web Settings parity gap.
-- **Web:** light-touch show-page tidy; Autoplay one-home; Favorite/Share on the
-  active/expanded web player; confirm web-home-rails question for web Settings scope.
-- **Commit:** nothing committed yet; Phase 1 is on the working tree.
+### Phase 2 — Web — DONE (2026-06-12)
+- **Web player** (`ui/src/components/player/HeaderPlayer.tsx`): Autoplay given ONE
+  home (the expanded player) — removed from the persistent bar; added to the desktop
+  immersive docked controls (which had none) so desktop keeps the toggle. Favorite +
+  Share added to the expanded/active state on both the mobile sheet and desktop docked
+  controls, reusing `useUserData` (favorite) + `useShareLink` (copy-link + toast). No
+  Download, no EQ on web (intentional). Three small local helpers: `FavoriteAction`,
+  `ShareAction`, `AutoplayIcon`.
+- **Web Settings** (`ui/src/app/me/_components/SettingsTab.tsx`): added **Playback**
+  (Autoplay Next Show toggle, wired to `usePlayer().toggleAutoAdvance`) + **About**
+  (data version + Privacy link). Web-home-rails question RESOLVED: web home is a static
+  shell with NO rails/card-size/decade concept, so the mobile "Home Layout" category
+  has no web equivalent — dropped. Web Settings = Account + Playback + Community + About.
+- **Web show page:** already album-style; no change needed.
+
+### Phase 2+ — Settings (mobile) — NOT started
+- **Settings:** categorized subscreens + consolidated Home Layout screen (iOS+Android).
 
 ---
 

@@ -4,11 +4,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/contexts/AuthContext";
+import { usePlayer } from "@/contexts/PlayerContext";
 import { deleteAccount } from "@/lib/userDataApi";
 import { SUBREDDIT_HANDLE, SUBREDDIT_URL } from "@/lib/community";
 
+const DATA_VERSION = process.env.NEXT_PUBLIC_DATA_VERSION ?? "dev";
+
 export default function SettingsTab() {
   const { user, signOut } = useAuth();
+  const { autoAdvanceEnabled, toggleAutoAdvance } = usePlayer();
   const router = useRouter();
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [confirmText, setConfirmText] = useState("");
@@ -55,6 +59,34 @@ export default function SettingsTab() {
         </button>
       </section>
 
+      {/* Playback */}
+      <section className="rounded-lg border border-white/10 bg-deadly-surface p-5">
+        <h3 className="mb-3 font-medium text-white">Playback</h3>
+        <div className="flex items-center justify-between gap-4">
+          <div className="min-w-0">
+            <p className="text-sm text-white/80">Autoplay Next Show</p>
+            <p className="mt-0.5 text-xs text-white/40">
+              Roll into the next show automatically when the current one ends.
+            </p>
+          </div>
+          <button
+            role="switch"
+            aria-checked={autoAdvanceEnabled}
+            aria-label="Autoplay Next Show"
+            onClick={toggleAutoAdvance}
+            className={`inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full transition-colors ${
+              autoAdvanceEnabled ? "bg-deadly-highlight" : "bg-white/15"
+            }`}
+          >
+            <span
+              className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform ${
+                autoAdvanceEnabled ? "translate-x-[1.375rem]" : "translate-x-0.5"
+              }`}
+            />
+          </button>
+        </div>
+      </section>
+
       {/* Community */}
       <section className="rounded-lg border border-white/10 bg-deadly-surface p-5">
         <h3 className="mb-2 font-medium text-white">Community</h3>
@@ -69,6 +101,22 @@ export default function SettingsTab() {
         >
           {SUBREDDIT_HANDLE} →
         </a>
+      </section>
+
+      {/* About */}
+      <section className="rounded-lg border border-white/10 bg-deadly-surface p-5">
+        <h3 className="mb-3 font-medium text-white">About</h3>
+        <dl className="space-y-2 text-sm">
+          <div className="flex justify-between gap-4">
+            <dt className="text-white/40">Data version</dt>
+            <dd className="truncate text-white/80">{DATA_VERSION}</dd>
+          </div>
+        </dl>
+        <p className="mt-3 text-xs text-white/40">
+          <Link href="/privacy" className="text-deadly-highlight hover:underline">
+            Privacy policy
+          </Link>
+        </p>
       </section>
 
       {/* Danger zone */}

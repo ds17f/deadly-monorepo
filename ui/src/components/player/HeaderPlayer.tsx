@@ -14,6 +14,7 @@ import ShowArtwork from "@/components/show/ShowArtwork";
 import AutoplayPrompt from "./AutoplayPrompt";
 import RecordingSelector from "./RecordingSelector";
 import RecordingMenu from "./RecordingMenu";
+import { useShareLink } from "@/components/share/useShareLink";
 import TrackList from "./TrackList";
 import PlayerRailPanel from "./PlayerRailPanel";
 import DeviceList from "@/components/connect/DeviceList";
@@ -874,20 +875,6 @@ export default function HeaderPlayer() {
           </span>
         )}
         <div className="flex items-center justify-end gap-1">
-        {showLoaded && (
-          <button
-            onClick={toggleAutoAdvance}
-            className={`rounded-full p-2 transition-colors ${
-              autoAdvanceEnabled ? "text-deadly-highlight" : "text-white/50 hover:text-white/80"
-            }`}
-            aria-label={autoAdvanceEnabled ? "Autoplay Next Show on" : "Autoplay Next Show off"}
-            title="Autoplay Next Show — roll into the next show when this one ends"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L7.8 14.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.77-1.53l7.03-6.24c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.38-3.39 3.38c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.41 5.4-5.38s-2.42-5.37-5.4-5.37z" />
-            </svg>
-          </button>
-        )}
         {activeShow && activeShow.recordings.length > 1 && (
           <RecordingMenu
             recordings={activeShow.recordings}
@@ -1118,8 +1105,10 @@ export default function HeaderPlayer() {
               size="lg"
             />
           </div>
-          {/* Autoplay toggle — roll into the next show when this one ends. */}
-          <div className="mt-3 flex flex-shrink-0 justify-center">
+          {/* Secondary actions — Favorite · Autoplay · Share. The expanded
+              player is home for these; the compact bar stays minimal. */}
+          <div className="mt-3 flex flex-shrink-0 items-center justify-center gap-1">
+            {activeShow && <FavoriteAction showId={activeShow.showId} />}
             <button
               onClick={toggleAutoAdvance}
               role="switch"
@@ -1129,11 +1118,12 @@ export default function HeaderPlayer() {
               }`}
               title="Roll into the next show when this one ends"
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L7.8 14.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.77-1.53l7.03-6.24c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.38-3.39 3.38c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.41 5.4-5.38s-2.42-5.37-5.4-5.37z" />
-              </svg>
+              <AutoplayIcon />
               Autoplay Next Show {autoAdvanceEnabled ? "on" : "off"}
             </button>
+            {activeShow && (
+              <ShareAction showId={activeShow.showId} recordingId={selectedRecording} />
+            )}
           </div>
           {activeShow && activeShow.recordings.length > 1 && (
             <div className="flex-shrink-0">
@@ -1239,6 +1229,24 @@ export default function HeaderPlayer() {
             <div className="min-w-0 flex-1">
               <SeekBar progress={progress} elapsed={displayElapsed} duration={displayDuration} onSeek={handleSeek} />
             </div>
+            {activeShow && <FavoriteAction showId={activeShow.showId} />}
+            {showLoaded && (
+              <button
+                onClick={toggleAutoAdvance}
+                role="switch"
+                aria-checked={autoAdvanceEnabled}
+                className={`rounded-full p-2 transition-colors ${
+                  autoAdvanceEnabled ? "text-deadly-highlight" : "text-white/50 hover:text-white/80"
+                }`}
+                aria-label={autoAdvanceEnabled ? "Autoplay Next Show on" : "Autoplay Next Show off"}
+                title="Autoplay Next Show — roll into the next show when this one ends"
+              >
+                <AutoplayIcon />
+              </button>
+            )}
+            {activeShow && (
+              <ShareAction showId={activeShow.showId} recordingId={selectedRecording} />
+            )}
             {activeShow && activeShow.recordings.length > 0 && (
               <RecordingMenu
                 recordings={activeShow.recordings}
@@ -1285,5 +1293,55 @@ export default function HeaderPlayer() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Favorite toggle for the expanded player. Mirrors the show hero's heart
+// (red when favorited) and reuses the same userdata source of truth.
+function FavoriteAction({ showId }: { showId: string }) {
+  const { isFavorite, toggleFavorite } = useUserData();
+  const fav = isFavorite(showId);
+  return (
+    <button
+      onClick={() => toggleFavorite(showId)}
+      title={fav ? "Remove from favorites" : "Add to favorites"}
+      aria-label={fav ? "Remove from favorites" : "Add to favorites"}
+      aria-pressed={fav}
+      className={`rounded-full p-2 transition-colors ${
+        fav ? "text-deadly-accent" : "text-white/50 hover:text-white/80"
+      }`}
+    >
+      <svg width="18" height="18" viewBox="0 0 24 24" fill={fav ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </svg>
+    </button>
+  );
+}
+
+// Share the show's public link (copy to clipboard + toast). The scannable QR
+// stays on the show page; the player keeps just the one-tap copy.
+function ShareAction({ showId, recordingId }: { showId: string; recordingId: string | null }) {
+  const shareLink = useShareLink();
+  return (
+    <button
+      onClick={() => shareLink(showId, recordingId)}
+      title="Share link"
+      aria-label="Share link"
+      className="rounded-full p-2 text-white/50 transition-colors hover:text-white/80"
+    >
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3v12M8 7l4-4 4 4M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" />
+      </svg>
+    </button>
+  );
+}
+
+// The "infinity"/auto-advance glyph, shared by the expanded player's Autoplay
+// controls on both the mobile sheet and the desktop docked bar.
+function AutoplayIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L7.8 14.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.77-1.53l7.03-6.24c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.38-3.39 3.38c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.41 5.4-5.38s-2.42-5.37-5.4-5.37z" />
+    </svg>
   );
 }
