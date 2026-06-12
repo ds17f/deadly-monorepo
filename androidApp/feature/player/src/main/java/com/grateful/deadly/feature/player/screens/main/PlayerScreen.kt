@@ -1,7 +1,6 @@
 package com.grateful.deadly.feature.player.screens.main
 
 import android.util.Log
-import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -11,7 +10,6 @@ import androidx.compose.runtime.*
 import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.feature.player.screens.main.components.PlayerTopBar
@@ -21,13 +19,12 @@ import com.grateful.deadly.feature.player.screens.main.components.PlayerProgress
 import com.grateful.deadly.feature.player.screens.main.components.PlayerEnhancedControls
 import com.grateful.deadly.feature.player.screens.main.components.PlayerSecondaryControls
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMaterialPanels
-import com.grateful.deadly.feature.player.screens.main.components.PlayerTrackActionsSheet
-import com.grateful.deadly.feature.player.screens.main.components.PlayerQueueSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerEqualizerSheet
 import com.grateful.deadly.feature.player.screens.main.components.PlayerMiniPlayer
 
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.core.design.component.ShareChooserSheet
+import com.grateful.deadly.core.design.component.ShowActionsMenuSheet
 import com.grateful.deadly.feature.player.screens.main.models.PlayerViewModel
 import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
 
@@ -41,12 +38,10 @@ import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
 @Composable
 fun PlayerScreen(
     onNavigateBack: () -> Unit,
-    onNavigateToPlaylist: (String, String?) -> Unit,
+    onNavigateToPlaylist: (showId: String, recordingId: String?, openSheet: String?) -> Unit,
     viewModel: PlayerViewModel = hiltViewModel()
 ) {
     Log.d("PlayerScreen", "=== PLAYER SCREEN LOADED ===")
-
-    val context = LocalContext.current
 
     // Collect UI state from ViewModel
     val uiState by viewModel.uiState.collectAsState()
@@ -55,6 +50,7 @@ fun PlayerScreen(
     val equalizerState by viewModel.equalizerState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
     val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
+    val showCollectionsCount by viewModel.showCollectionsCount.collectAsState()
 
     val recordingId = uiState.navigationInfo.recordingId
 
@@ -67,7 +63,6 @@ fun PlayerScreen(
     var showQrCode by remember { mutableStateOf(false) }
     var showShareChooser by remember { mutableStateOf(false) }
     var showEqualizerBottomSheet by remember { mutableStateOf(false) }
-    var showQueueBottomSheet by remember { mutableStateOf(false) }
     var showConnectSheet by remember { mutableStateOf(false) }
     // Mini player visibility based on scroll position
     // Show mini player only when player controls are completely off screen
@@ -102,7 +97,7 @@ fun PlayerScreen(
                                 val showId = uiState.navigationInfo.showId
                                 val recordingId = uiState.navigationInfo.recordingId
                                 if (showId != null) {
-                                    onNavigateToPlaylist(showId, recordingId)
+                                    onNavigateToPlaylist(showId, recordingId, null)
                                 }
                             },
                             recordingId = recordingId,
@@ -118,14 +113,13 @@ fun PlayerScreen(
                                 .padding(horizontal = 24.dp)
                         )
 
-                        // Track information with add to playlist button
+                        // Track information with the prominent Favorite action
                         PlayerTrackInfoRow(
                             trackTitle = uiState.trackDisplayInfo.title,
                             showDate = uiState.trackDisplayInfo.showDate,
                             venue = uiState.trackDisplayInfo.venue,
-                            onAddToPlaylist = {
-                                Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show()
-                            },
+                            isFavorite = isCurrentTrackFavorite,
+                            onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
                             modifier = Modifier.padding(horizontal = 24.dp)
                         )
 
@@ -155,15 +149,10 @@ fun PlayerScreen(
             // Secondary controls row (updated for queue sheet)
             item {
                 PlayerSecondaryControls(
-                    isFavorite = isCurrentTrackFavorite,
-                    isAutoplayEnabled = autoAdvanceEnabled,
                     connectDeviceName = connectRemoteDeviceName,
                     onEqualizerClick = { showEqualizerBottomSheet = true },
                     onConnectClick = { showConnectSheet = true },
-                    onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
-                    onAutoplayClick = { viewModel.toggleAutoAdvance() },
                     onShareClick = { showShareChooser = true },
-                    onQueueClick = { showQueueBottomSheet = true },
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
                 )
             }
@@ -184,21 +173,23 @@ fun PlayerScreen(
 
         // Bottom Sheets
         if (showTrackActionsBottomSheet) {
-            PlayerTrackActionsSheet(
-                recordingId = uiState.navigationInfo.recordingId,
-                trackTitle = uiState.trackDisplayInfo.title,
+            val navShowId = uiState.navigationInfo.showId
+            val navRecordingId = uiState.navigationInfo.recordingId
+            ShowActionsMenuSheet(
+                recordingId = navRecordingId,
+                title = uiState.trackDisplayInfo.title,
                 showDate = uiState.trackDisplayInfo.showDate,
                 venue = uiState.trackDisplayInfo.venue,
-                isFavorite = isCurrentTrackFavorite,
                 isAutoplayEnabled = autoAdvanceEnabled,
-                onDismiss = { showTrackActionsBottomSheet = false },
-                onShare = { showShareChooser = true },
-                onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
-                onDownload = { viewModel.downloadCurrentShow() },
-                onFavorite = { viewModel.toggleCurrentTrackFavorite() },
+                collectionsCount = showCollectionsCount,
+                // Playback — Equalizer + Share are inline on the player, so hidden here.
+                onChooseRecording = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "recording") } },
                 onAutoplay = { viewModel.toggleAutoAdvance() },
-                onEqualizer = { showEqualizerBottomSheet = true },
-                onQueue = { showQueueBottomSheet = true },
+                // This Show — the player navigates to the playlist (their home).
+                onSetlist = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "setlist") } },
+                onCollections = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "collections") } },
+                onDownload = { viewModel.downloadCurrentShow() },
+                onDismiss = { showTrackActionsBottomSheet = false },
             )
         }
 
@@ -250,12 +241,6 @@ fun PlayerScreen(
                 onPresetSelected = viewModel::selectEqualizerPreset,
                 onBandLevelChanged = viewModel::setEqualizerBandLevel,
                 onReset = viewModel::resetEqualizer
-            )
-        }
-
-        if (showQueueBottomSheet) {
-            PlayerQueueSheet(
-                onDismiss = { showQueueBottomSheet = false }
             )
         }
 

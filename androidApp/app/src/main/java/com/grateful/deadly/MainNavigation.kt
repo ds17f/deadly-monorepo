@@ -311,8 +311,8 @@ fun MainNavigation(
                 // Player feature - playback interface
                 playerScreen(
                     onNavigateBack = { navController.popBackStack() },
-                    onNavigateToPlaylist = { showId, recordingId ->
-                        navController.navigateToPlaylist(showId, recordingId) {
+                    onNavigateToPlaylist = { showId, recordingId, openSheet ->
+                        navController.navigateToPlaylist(showId, recordingId, openSheet = openSheet) {
                             popUpTo("player") { inclusive = true }
                         }
                     }

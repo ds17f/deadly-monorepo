@@ -166,13 +166,36 @@ declutter-only, don't over-specify in the ADR.
 ## Remaining work
 0. Web is covered (light-touch, experimentation surface — see Web section). Verify the
    one open web item (does web home have rails? → web Settings scope) when convenient.
-1. ~~Settle the 3 menu-group labels + item assignment~~ DONE — Playback / This Show /
-   Share, single-item groups use a divider (mobile only; web has no ⋯ menu).
-2. Write **ADR-0014** (UI decluttering / control altitude) capturing principles +
-   the locked layouts + the unified menu taxonomy + the Settings direction.
-3. Decide ADR scope: one ADR for everything, or split player/playlist vs Settings.
-4. Implement per surface, iOS + Android in parity (+ web Settings). Use monorepo make
-   targets (`make ios-remote-install`, `make android-install`). NOT committed yet.
+1. ~~Settle the 3 menu-group labels + item assignment~~ DONE.
+2. ~~Write **ADR-0014**~~ DONE — `docs/adr/0014-ui-control-altitude-and-decluttering.md`.
+3. ~~Decide ADR scope~~ DONE — one ADR for everything.
+4. ~~Implement player + playlist, iOS + Android in parity~~ **DONE (Phase 1, built +
+   installed both platforms, NOT committed).** See "Phase 1 — implemented" below.
+
+### Phase 1 — implemented (player + playlist, iOS + Android)
+- **Shared `⋯` component:** Android `core/design/.../ShowActionsMenuSheet.kt`; iOS
+  `Core/Design/ShowActionsMenuSheet.swift`. Taxonomy Playback / This Show / Share,
+  hide-inline-via-null, single-item group → no header. Reused on both surfaces.
+- **Player:** Favorite → track-info row; `＋`/`≣ Queue` stubs deleted (Android
+  `PlayerTrackActionsSheet.kt` + `PlayerQueueSheet.kt` removed); secondary row =
+  cast … Share·EQ; `⋯` = Choose Recording·Autoplay │ Setlist·Collections·Download.
+  Player has no Setlist/Collections/recording state, so those + Choose Recording
+  **navigate to the playlist** and deep-link the matching sheet (Android: `openSheet`
+  query param on the playlist route; iOS: `ShowDetailSheet` hint via
+  `pendingShowSheet` binding). Download + Autoplay act in place. Collections shown
+  only when in ≥1 (Android `PlayerViewModel.showCollectionsCount` over new
+  `core:api:playlist` dep; iOS `collectionsContaining` count).
+- **Playlist:** action row → Setlist·Favorite·Download·⋯ … Autoplay·Play; Collections
+  out of inline row → menu (only if ≥1). Android `PlaylistMenuSheet.kt` removed;
+  iOS dead `// TODO Phase 5` Collections placeholders deleted, new per-show
+  `ShowCollectionsSheet.swift` + `CollectionsService.collectionsContaining(showId:)`.
+
+### Phase 2+ — NOT started (separate lighter passes, per ADR §8)
+- **Settings:** categorized subscreens + consolidated Home Layout screen (iOS+Android),
+  then close web Settings parity gap.
+- **Web:** light-touch show-page tidy; Autoplay one-home; Favorite/Share on the
+  active/expanded web player; confirm web-home-rails question for web Settings scope.
+- **Commit:** nothing committed yet; Phase 1 is on the working tree.
 
 ---
 

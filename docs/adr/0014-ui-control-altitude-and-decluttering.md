@@ -2,10 +2,12 @@
 
 ## Status
 
-Accepted (2026-06-12). Design settled across all surfaces; not yet implemented.
-Working notes and current-state inventory (with file paths) live in
-`PLANS/ui-decluttering.md`. Implementation is iOS + Android in parity, with a
-light-touch web pass and a web Settings parity follow-up.
+Accepted (2026-06-12). Design settled across all surfaces. **Phase 1 (player +
+playlist, iOS + Android in parity) implemented 2026-06-12** — see
+`PLANS/ui-decluttering.md` "Phase 1 — implemented" for the per-file change list.
+Still to do: Settings categorization + consolidated Home Layout (iOS + Android),
+the light-touch web pass, and web Settings parity. Working notes and current-state
+inventory (with file paths) live in `PLANS/ui-decluttering.md`.
 
 Related: [ADR-0010](0010-playback-auto-advance-and-show-queue.md) (auto-advance +
 queue — the `∞ Autoplay` toggle and the future `Queue` entry point this ADR

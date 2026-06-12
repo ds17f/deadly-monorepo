@@ -3,6 +3,9 @@ import SwiftAudioStreamEx
 
 struct ShowDetailScreen: View {
     let showId: String
+    /// Optional deep-link from the player's "⋯" menu: open this sheet once the
+    /// show loads, then clear (ADR-0014).
+    var pendingSheet: Binding<ShowDetailSheet?>? = nil
 
     @Environment(\.appContainer) private var container
 
@@ -30,6 +33,8 @@ struct ShowDetailScreen: View {
     @State private var showReviewSheet = false
     @State private var showSetlistSheet = false
     @State private var showWriteReviewSheet = false
+    @State private var showCollectionsSheet = false
+    @State private var showCollections: [CollectionListItem] = []
     @State private var favoriteTracks: Set<String> = []
     @State private var userReview: ShowReview?
 
@@ -55,6 +60,8 @@ struct ShowDetailScreen: View {
                 "target_id": showId,
             ])
             isFavorite = (try? container.favoritesService.isFavorite(showId: showId)) ?? false
+            showCollections = container.collectionsService.collectionsContaining(showId: currentShowId)
+            consumePendingSheet()
         }
         .task(id: playlistService.currentShow?.id ?? showId) {
             let activeShowId = playlistService.currentShow?.id ?? showId
@@ -77,6 +84,21 @@ struct ShowDetailScreen: View {
         .onChange(of: playlistService.currentShow?.id) { _, newId in
             if let newId {
                 isFavorite = (try? container.favoritesService.isFavorite(showId: newId)) ?? false
+                showCollections = container.collectionsService.collectionsContaining(showId: newId)
+            }
+        }
+    }
+
+    /// Open the sheet the player asked for, then clear the deep-link. Deferred a
+    /// beat so the push transition + content render settle before presenting.
+    private func consumePendingSheet() {
+        guard let pendingSheet, let target = pendingSheet.wrappedValue else { return }
+        pendingSheet.wrappedValue = nil
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+            switch target {
+            case .setlist: showSetlistSheet = true
+            case .collections: showCollectionsSheet = true
+            case .recording: showRecordingPicker = true
             }
         }
     }
@@ -142,9 +164,23 @@ struct ShowDetailScreen: View {
             .listRowBackground(Color.clear)
             .listRowSeparator(.hidden)
 
-            // Action row
+            // Action row — Spotify album layout plus a Setlist affordance
+            // (ADR-0014): Setlist · Favorite · Download · ⋯ … Autoplay · Play.
+            // Autoplay rides next to Play as a play-mode; Collections moved into
+            // the "⋯" menu.
             Section {
                 HStack(spacing: 8) {
+                    // Setlist button
+                    Button {
+                        showSetlistSheet = true
+                    } label: {
+                        Image(systemName: "list.bullet.rectangle")
+                            .font(.title2)
+                            .foregroundStyle(.secondary)
+                            .frame(width: 44, height: 44)
+                    }
+                    .buttonStyle(.plain)
+
                     Button {
                         if isFavorite {
                             try? container.favoritesService.removeFromFavorites(showId: currentShowId)
@@ -162,39 +198,6 @@ struct ShowDetailScreen: View {
 
                     downloadButton
 
-                    // Setlist button
-                    Button {
-                        showSetlistSheet = true
-                    } label: {
-                        Image(systemName: "list.bullet.rectangle")
-                            .font(.title2)
-                            .foregroundStyle(.secondary)
-                            .frame(width: 44, height: 44)
-                    }
-                    .buttonStyle(.plain)
-
-                    // Collections button (placeholder)
-                    Button {
-                        // TODO: Phase 5 — show collections sheet
-                    } label: {
-                        Image(systemName: "rectangle.stack")
-                            .font(.title2)
-                            .foregroundStyle(.secondary)
-                            .frame(width: 44, height: 44)
-                    }
-                    .buttonStyle(.plain)
-
-                    // Autoplay (roll into the next show when this one ends)
-                    Button {
-                        toggleAutoAdvance()
-                    } label: {
-                        Image(systemName: "infinity")
-                            .font(.title2)
-                            .foregroundStyle(container.appPreferences.autoAdvanceEnabled ? DeadlyColors.primary : .secondary)
-                            .frame(width: 44, height: 44)
-                    }
-                    .buttonStyle(.plain)
-
                     // Menu button
                     Button {
                         showMenuSheet = true
@@ -207,6 +210,17 @@ struct ShowDetailScreen: View {
                     .buttonStyle(.plain)
 
                     Spacer()
+
+                    // Autoplay (play-mode: roll into the next show when this ends)
+                    Button {
+                        toggleAutoAdvance()
+                    } label: {
+                        Image(systemName: "infinity")
+                            .font(.title2)
+                            .foregroundStyle(container.appPreferences.autoAdvanceEnabled ? DeadlyColors.primary : .secondary)
+                            .frame(width: 44, height: 44)
+                    }
+                    .buttonStyle(.plain)
 
                     playButton
                 }
@@ -314,6 +328,9 @@ struct ShowDetailScreen: View {
         }
         .sheet(isPresented: $showSetlistSheet) {
             SetlistSheet(show: show)
+        }
+        .sheet(isPresented: $showCollectionsSheet) {
+            ShowCollectionsSheet(collections: showCollections, isPresented: $showCollectionsSheet)
         }
         .sheet(isPresented: $showEqualizerSheet) {
             EqualizerSheet()
@@ -440,100 +457,39 @@ struct ShowDetailScreen: View {
         ])
     }
 
+    // The unified "⋯" overflow (ADR-0014). Setlist, Favorite, Download and
+    // Autoplay are inline on the playlist, so they're hidden here; the menu
+    // surfaces Choose Recording · Equalizer | Collections | Share.
     private func menuSheet(_ show: Show) -> some View {
-        NavigationStack {
-            List {
-                Section {
-                    Button {
-                        toggleAutoAdvance()
-                    } label: {
-                        HStack(alignment: .top) {
-                            Label("Autoplay Next Show", systemImage: "infinity")
-                            Spacer()
-                            if container.appPreferences.autoAdvanceEnabled {
-                                Image(systemName: "checkmark")
-                                    .foregroundStyle(DeadlyColors.primary)
-                            }
-                        }
-                    }
-
-                    Button {
-                        if isFavorite {
-                            try? container.favoritesService.removeFromFavorites(showId: currentShowId)
-                        } else {
-                            try? container.favoritesService.addToFavorites(showId: currentShowId)
-                        }
-                        isFavorite.toggle()
-                        showMenuSheet = false
-                    } label: {
-                        Label(
-                            isFavorite ? "Remove from Favorites" : "Add to Favorites",
-                            systemImage: isFavorite ? "heart.fill" : "heart"
-                        )
-                    }
-
-                    Button {
-                        showMenuSheet = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            showSetlistSheet = true
-                        }
-                    } label: {
-                        Label("Setlist", systemImage: "list.bullet.rectangle")
-                    }
-
-                    Button {
-                        // TODO: Phase 5 — show collections sheet
-                        showMenuSheet = false
-                    } label: {
-                        Label("Collections", systemImage: "rectangle.stack")
-                    }
+        ShowActionsMenuSheet(
+            isAutoplayEnabled: container.appPreferences.autoAdvanceEnabled,
+            collectionsCount: showCollections.count,
+            onChooseRecording: show.hasMultipleRecordings ? {
+                showMenuSheet = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    showRecordingPicker = true
                 }
-
-                Section {
-                    if playlistService.currentRecording != nil {
-                        Button {
-                            showMenuSheet = false
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                showShareChooser = true
-                            }
-                        } label: {
-                            Label("Share", systemImage: "square.and.arrow.up")
-                        }
-                    }
-
-                    if show.hasMultipleRecordings {
-                        Button {
-                            showMenuSheet = false
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                showRecordingPicker = true
-                            }
-                        } label: {
-                            Label("Choose Recording", systemImage: "waveform.circle")
-                        }
-                    }
-
-                    Button {
-                        showMenuSheet = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            showEqualizerSheet = true
-                        }
-                    } label: {
-                        Label("Equalizer", systemImage: "slider.vertical.3")
-                    }
+            } : nil,
+            onEqualizer: {
+                showMenuSheet = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    showEqualizerSheet = true
                 }
-            }
-            .tint(.primary)
-            .navigationTitle("Options")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Done") {
-                        showMenuSheet = false
-                    }
+            },
+            onCollections: {
+                showMenuSheet = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    showCollectionsSheet = true
                 }
-            }
-        }
-        .presentationDetents([.medium])
+            },
+            onShare: playlistService.currentRecording != nil ? {
+                showMenuSheet = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    showShareChooser = true
+                }
+            } : nil,
+            onDone: { showMenuSheet = false }
+        )
     }
 
     // MARK: - Play button

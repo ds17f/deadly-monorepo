@@ -80,6 +80,19 @@ final class CollectionsServiceImpl {
         }
     }
 
+    // MARK: - Per-show membership
+
+    /// Collections the given show belongs to (ADR-0014). Drives the conditional
+    /// "Collections" item in the player/playlist "⋯" menu and the per-show
+    /// collections sheet. Read-only over the existing DAO lookup.
+    func collectionsContaining(showId: String) -> [CollectionListItem] {
+        do {
+            return try collectionsDAO.fetchContainingShow(showId).map(mapRecord)
+        } catch {
+            return []
+        }
+    }
+
     // MARK: - Detail operations
 
     func loadCollection(id: String) {
