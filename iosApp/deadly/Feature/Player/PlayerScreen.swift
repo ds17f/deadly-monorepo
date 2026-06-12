@@ -451,6 +451,7 @@ struct PlayerScreen: View {
     private func toggleAutoAdvance() {
         let newValue = !container.appPreferences.autoAdvanceEnabled
         container.appPreferences.autoAdvanceEnabled = newValue
+        container.toastPresenter.show(autoplayToastMessage(newValue))
         container.analyticsService.track("feature_use", props: [
             "feature": "toggle_auto_advance",
             "category": "playback",

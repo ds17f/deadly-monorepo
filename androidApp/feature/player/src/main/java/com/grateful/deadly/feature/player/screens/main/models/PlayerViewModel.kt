@@ -12,6 +12,8 @@ import com.grateful.deadly.core.api.player.PlayerService
 import com.grateful.deadly.core.api.playlist.PlaylistService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.ToastController
+import com.grateful.deadly.core.database.autoplayToastMessage
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import com.grateful.deadly.core.media.equalizer.EqualizerState
 import com.grateful.deadly.core.model.CurrentTrackInfo
@@ -37,6 +39,7 @@ class PlayerViewModel @Inject constructor(
     private val connectService: ConnectService,
     val appPreferences: AppPreferences,
     private val analyticsService: AnalyticsService,
+    private val toastController: ToastController,
     @ApplicationContext private val appContext: Context
 ) : ViewModel() {
 
@@ -50,6 +53,7 @@ class PlayerViewModel @Inject constructor(
     fun toggleAutoAdvance() {
         val newValue = !appPreferences.autoAdvanceEnabled.value
         appPreferences.setAutoAdvanceEnabled(newValue)
+        toastController.show(autoplayToastMessage(newValue))
         analyticsService.track("feature_use", mapOf(
             "feature" to "toggle_auto_advance",
             "category" to "playback",

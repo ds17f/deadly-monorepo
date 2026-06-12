@@ -129,6 +129,15 @@ struct MainNavigation: View {
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
+        // App-wide transient toast (e.g. the Autoplay toggle confirmation).
+        .overlay(alignment: .bottom) {
+            if let message = container.toastPresenter.message {
+                ActionToastView(message: message)
+                    .padding(.bottom, 96)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .animation(.spring(duration: 0.3), value: container.toastPresenter.message)
         .onChange(of: container.notificationStore.lastArrival) { _, arrival in
             guard let arrival, arrival.key != lastToastKey else { return }
             lastToastKey = arrival.key

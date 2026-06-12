@@ -216,6 +216,18 @@ locally at the cost of a learnable, parity-checkable shared structure. The unifi
 taxonomy with per-surface hiding gives the same end result on each screen with one
 mental model and one component.
 
+**Icon discoverability — inline text labels, menu re-mirroring, or long-press
+tooltips.** The one genuinely opaque inline control is `∞ Autoplay` (and only on the
+playlist; the player already labels it in the `⋯` menu). Rejected inline text labels
+(adds the clutter this ADR removes), re-mirroring every inline action into the menu as
+a labeled glossary (reverses principle #3, re-lengthens the menu), and long-press
+tooltips as the *primary* mechanism (the gesture is itself undiscoverable; iOS has no
+system tooltip). Chose instead a **transient confirmation toast** fired on the Autoplay
+toggle: it doubles as the teaching moment (learn-by-doing once) and only fires where a
+control has no other on-screen feedback. Implemented as a reusable cross-platform toast
+bus (Android `ToastController` → root SnackbarHost; iOS `ToastPresenter` → root overlay)
+so other surfaces can reuse it. See `PLANS/ui-decluttering.md` Phase 1.
+
 **Give the web player a `⋯` menu mirroring mobile.** Rejected: web's constraint is
 surplus space, not scarcity, and it already has a natural detail tier (the expanded
 player). A `⋯` menu would import a mobile solution to a problem web doesn't have.

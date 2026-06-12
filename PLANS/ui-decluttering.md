@@ -189,6 +189,20 @@ declutter-only, don't over-specify in the ADR.
   out of inline row → menu (only if ≥1). Android `PlaylistMenuSheet.kt` removed;
   iOS dead `// TODO Phase 5` Collections placeholders deleted, new per-show
   `ShowCollectionsSheet.swift` + `CollectionsService.collectionsContaining(showId:)`.
+- **Discoverability — reusable toast (follow-up, 2nd commit):** the bare `∞` Autoplay
+  icon had no label. Rejected adding inline text / re-mirroring the menu / long-press.
+  Chose a **transient confirmation toast** on the Autoplay toggle — it doubles as the
+  teaching moment ("learn by doing once") and only fires where there's no other visible
+  feedback. Built as a **generic, reusable** bus so any surface can use it:
+  - Android: `core/database/ToastController.kt` (`@Singleton`, `MutableSharedFlow`)
+    → `AppViewModel.toasts` → collected at the root and rendered as `AppToast`
+    (`core/design/component/AppToast.kt`, surfaceVariant pill) in the global content
+    `Box` (top of z-stack, above the mini player). NOT the scaffold `SnackbarHost` —
+    that's occluded by the bottom bar + mini player on every screen except the player.
+  - iOS: `Core/Design/ToastPresenter.swift` (`@Observable` on `AppContainer`,
+    auto-dismiss ~2.5s) → `ActionToastView` overlay in `MainNavigation`.
+  - Shared copy helper `autoplayToastMessage(enabled)` on each platform (matched text).
+    Wired into both Player + Playlist `toggleAutoAdvance`.
 
 ### Phase 2+ — NOT started (separate lighter passes, per ADR §8)
 - **Settings:** categorized subscreens + consolidated Home Layout screen (iOS+Android),
