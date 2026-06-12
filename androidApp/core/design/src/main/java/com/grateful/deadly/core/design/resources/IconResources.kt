@@ -278,7 +278,10 @@ object IconResources {
         
         @Composable
         fun Cast() = customIcon(R.drawable.ic_cast)
-        
+
+        @Composable
+        fun Coffee() = customIcon(R.drawable.ic_coffee)
+
         @Composable
         fun TrendingUp() = customIcon(R.drawable.ic_trending_up)
         

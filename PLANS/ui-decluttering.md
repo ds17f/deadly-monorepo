@@ -219,8 +219,21 @@ declutter-only, don't over-specify in the ADR.
   has no web equivalent — dropped. Web Settings = Account + Playback + Community + About.
 - **Web show page:** already album-style; no change needed.
 
-### Phase 2+ — Settings (mobile) — NOT started
-- **Settings:** categorized subscreens + consolidated Home Layout screen (iOS+Android).
+### Phase 2 — Settings (mobile) — DONE (2026-06-12, branch `mobile-settings-rework`)
+- Flat `List`/`LazyColumn` replaced with a short landing of 5 categories, each its
+  own subscreen: **Account · Playback & Audio · Home Layout · Library & Data ·
+  About & Support**. All home-layout knobs gathered onto the one Home Layout screen.
+- iOS (`SettingsScreen.swift`): landing `List` of `NavigationLink`s → 5 subscreen
+  views; every binding/analytics call preserved verbatim. Compiles (`make ios-remote-build`).
+- Android (`SettingsScreen.kt`): Settings lives in the nav drawer, so landing →
+  subscreen is a local state drill-down with a back header + `BackHandler`; leaf
+  screens (Equalizer/Connect/Legal/…) stay full-screen routes. `SettingsScreen`
+  signature unchanged, so `SettingsNavigation.kt`/`MainNavigation.kt` untouched.
+  Compiles (`:feature:settings` + `:app`).
+- Knob→category map: Account=sign-in; Playback&Audio=controls+source badge+EQ+devices;
+  Home Layout=all trending/rails/fan-favorites/card-size knobs+reset; Library&Data=
+  include-no-recordings+downloads+import/export+migration; About&Support=version+
+  release notes+donate+community+mission+legal+privacy+developer.
 
 ---
 
