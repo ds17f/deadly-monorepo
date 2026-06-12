@@ -1,11 +1,16 @@
 # Changelog
 
+## [2.37.0] - 2026-06-11
+
+### New Features
+* session ownership lease + WS protocol versioning (ADR-0011) (#64) (a47843cd)
+* end-of-show auto-advance + cross-device countdown + Up Next takeover (ADR-0010) (#63) (6de25169)
+
+
 ## [2.36.1] - 2026-06-09
 
 ### Bug Fixes
 * populate cold-start rails on first launch (#58) (684657ff)
-
-
 ## [2.36.0] - 2026-06-09
 
 ### New Features
