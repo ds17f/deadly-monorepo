@@ -53,52 +53,48 @@ web-launch threads, 2026-06).
   guard keeps prior content instead of caching an empty rail when API IDs
   resolve against a not-yet-populated catalog. Verified on remote simulator +
   emulator (2026-06-09).
+- **Playback auto-advance + cross-device end-of-show — shipped.** Go-to-next-show
+  on all three platforms: an independent coordinator off a positive
+  `onShowCompleted` event, cross-device end-of-show countdown over Connect, and a
+  full-screen "Up Next" takeover + per-device "when a show ends" setting (#63).
+  Chronological today; queue-fed once the show queue (§1) lands. Decisions in
+  **ADR-0010**; plan [`show-queue-v2.md`](show-queue-v2.md). Known minor: an
+  intermittent iOS spurious-`next`, seen once — needs a repro.
 
 ## What remains
 
-### 1. Playback auto-advance + show queue + shuffle (community's top ask)
-The loudest, most-aligned cluster of requests. **Now in build (v2 design):**
-[`docs/adr/0010-playback-auto-advance-and-show-queue.md`](../docs/adr/0010-playback-auto-advance-and-show-queue.md),
-plan [`show-queue-v2.md`](show-queue-v2.md), branch `show-queue-v2`. A first
-attempt (abandoned `show-queue` branch) entangled the queue with auto-advance
-and fought Connect-v2's transport authority — the v2 design fixes that by making
-advance an independent coordinator off a positive `onShowCompleted` event,
-keeping the queue local-first (synced like Favorites), and adding one
-informational Connect "park" primitive. Built chunk-by-chunk, proven on all
-three platforms.
-- **Auto-advance / Go-to-next-show** — ✅ **mechanism complete on all three
-  platforms**, incl. cross-device end-of-show countdown over Connect and the
-  full-screen "Up Next" takeover + per-device "when a show ends" setting
-  (2026-06-11). Chronological today; queue-fed once the queue lands. Remaining:
-  the play/pause affordance fix and an intermittent iOS spurious-`next` (seen
-  once, needs a repro). *(OP idea #3; MazelTov.)*
+### 1. Show queue + shuffle (community's top ask)
+The loudest, most-aligned cluster of requests. **Auto-advance shipped** (see
+Shipped — ADR-0010, #63); queue + shuffle remain, and the chronological
+auto-advance mechanism is already built to be queue-fed once the queue lands.
 - **Queue of shows** — a local-first "play next" list, separate from Favorites
   (which never clear and pollute Fan-Favorites stats). Shows leave the queue
   once played; reorderable; syncs as a whole-list snapshot when signed in
-  (absorbs the old `show-queue-sync` effort). *(OP idea #1.)*
+  (absorbs the old `show-queue-sync` effort). *(OP idea #1.)* **TBD — not started.**
 - **Shuffle** — both *tracks* and *shows*, with the ability to curate which
   collections feed the shuffle pool. Layers on the queue. *(MuffDiving — "greedy,
-  I want both".)*
+  I want both".)* **TBD — not started.**
 
 ### 2. Connect-v2 — finish the remaining edges
 MVP shipped (see Shipped). Open:
-- **Session ownership lease + WS protocol versioning (ship ASAP).** Connect's
-  `activeDeviceId` is in-memory server state that clients rebuild via a growing
-  pile of cause-specific reclaim detectors — which miss the fresh-reconnect-after-
-  restart case (an end-of-show advance silently died this way, 2026-06-11) and the
-  disconnect-cleanup case. Replace them with one convergent **ownership lease** the
-  audio-producing device renews via heartbeat, gated on a new **`protocolVersion`**
-  primitive (monotonic int on `register`, stamped on the in-memory connection
-  record — telemetry + soft forced-update lever). **`protocolVersion` has standalone
-  value — ship it first.** Server claim-when-null already landed (`52942d45`).
-  Decisions in **ADR-0011**; plan in [`PLANS/connect-ownership-lease.md`](connect-ownership-lease.md).
-  Redis-persist stays deferred (ADR-0008); the lease covers what we need without it.
-- **Web as a first-class controllable target ("remote").** A browser tab is now
-  a controller/target — control the web player from the phone. In flight,
-  promised publicly. Current constraint: the controlling app can't be
-  backgrounded (phone must be on/unlocked); lock-screen persistence was
-  deferred. Revisit device identity + presence with web as a participant.
-- **Downstream once solid:** Alexa and Sonos apps that the phone can drive.
+- **Session ownership lease + WS protocol versioning — ✅ DONE (PR #64).** Replaced
+  the pile of cause-specific reclaim detectors with one convergent **ownership lease**
+  the audio-producing device renews via heartbeat, gated on a new **`protocolVersion`**
+  primitive (monotonic int on `register`, stamped on the in-memory connection record —
+  telemetry + soft forced-update lever, `MIN_SUPPORTED=0` for now). Retired the epoch
+  reclaim; recovery is now lease-driven, transfer-safe (`reclaimOnReconnect` gate).
+  Device-verified across a mixed proto0/proto1 fleet (restart heals via lease; transfers
+  park cleanly). Decisions in **ADR-0011**; `docs/PROTOCOL.md` is the version source of
+  truth; plan in [`PLANS/connect-ownership-lease.md`](connect-ownership-lease.md).
+  Redis-persist stays deferred (ADR-0008). **Follow-on (telemetry-gated):** raise
+  `MIN_SUPPORTED` / wire the "Update for Connect" nudge once the fleet is on v1.
+- **Web as a first-class controllable target ("remote") — ✅ DONE.** A browser tab
+  is a controllable target — drive the web player from the phone. Remaining edge
+  (deferred, not blocking): the controlling app can't be backgrounded (phone must
+  be on/unlocked); lock-screen persistence stays deferred.
+
+With the lease + web-remote both done and Alexa/Sonos pushed to backlog (§8),
+**§2 is effectively closed.**
 
 ### 3. Source / recording picker (power-user delight, unblocked)
 Surface *which* recording is playing and let users see and switch sources
@@ -160,6 +156,8 @@ Favorites are observation-driven on both platforms. Remaining:
   track≠setlist and one-recording-one-show limitations (§Deferred).
 - **Native desktop / iPad clients** — partially covered today by the PWA and
   iOS-app-on-Mac. *(Used_Bandicoot.)* Low priority vs §6.
+- **Alexa / Sonos as drivable targets** — apps the phone can drive, downstream of
+  Connect-v2 (moved here from §2). Much later. *(Maintainer.)*
 
 ### 9. Known bug — Google sign-in
 At least one user (GrrGrrBear) can't complete Google login; OP suspects an
@@ -177,7 +175,7 @@ blocks onboarding for affected users.
   retire: add Settings to `UserMenu`, surface Recent/Reviews in mobile nav, then
   drop the strip. Until that nav exists, leave it.
 
-### 11. Settings screen reorganization (cross-platform, maintainer pain)
+### 11. Settings screen reorganization (cross-platform, maintainer pain) — NEXT UP
 The settings screens (iOS `SettingsScreen.swift`, Android `SettingsScreen.kt`,
 web `/me` SettingsTab) have grown overloaded and are increasingly hard to work in
 — findability is poor and adding a toggle means scanning a long flat list (the
@@ -186,6 +184,16 @@ clear sections with better findability; keep it a presentation/IA change, not ne
 settings. Independent of any feature — the show-queue plan flags it as
 "Settings cleanup (independent, anytime)." Do it before the settings list grows
 again (shuffle, queue, and source-picker options are all coming).
+
+**Direction (maintainer, 2026-06-11):** master-detail, **all three platforms**.
+The current single complicated screen becomes a **left panel of one-line category
+rows** — `Autoplay >`, `Home Screen >`, etc. — each drilling into its own detail
+pane with only that category's controls. On web this is a literal left list +
+right detail pane; on mobile it's a category list that pushes to a detail screen.
+Collapses the long flat list into a scannable index. The section headers already
+exist (iOS/Android: Account, Playback, Preferences, Home Screen, Audio, Connect,
+Favorites & Data, Support, About) — the work is turning sections into drill-in
+categories, not inventing new groupings. Not started.
 
 ## Deferred / explicit non-goals (sync v0)
 Cross-device deletion **tombstones**, **settings sync**, and **background sync**
