@@ -60,6 +60,7 @@ fun PlaylistScreen(
     val showWriteReview by viewModel.showWriteReview.collectAsState()
     val userReview by viewModel.userReview.collectAsState()
     val reviewLineup by viewModel.reviewLineup.collectAsState()
+    val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
 
     // Load show data when screen opens - include recordingId for Player→Playlist navigation
     LaunchedEffect(showId, recordingId) {
@@ -156,11 +157,13 @@ fun PlaylistScreen(
                                 isPlaying = uiState.isPlaying,
                                 isLoading = uiState.mediaLoading,
                                 isCurrentShowAndRecording = uiState.isCurrentShowAndRecording,
+                                isAutoplayEnabled = autoAdvanceEnabled,
                                 showCollections = uiState.showCollections,
                                 onFavoritesAction = viewModel::handleFavoritesAction,
                                 onDownload = { viewModel.downloadShow() },
                                 onShowSetlist = viewModel::showSetlist,
                                 onShowCollections = viewModel::showCollectionsSheet,
+                                onToggleAutoplay = viewModel::toggleAutoAdvance,
                                 onShowMenu = viewModel::showMenu,
                                 onTogglePlayback = viewModel::togglePlayback
                             )
@@ -301,6 +304,7 @@ fun PlaylistScreen(
                 venue = showData.venue,
                 location = showData.location,
                 isFavorite = showData.isFavorite,
+                isAutoplayEnabled = autoAdvanceEnabled,
                 onFavoritesClick = {
                     if (showData.isFavorite) {
                         viewModel.handleFavoritesAction(FavoritesAction.REMOVE_FROM_FAVORITES)
@@ -313,6 +317,7 @@ fun PlaylistScreen(
                 onCollectionsClick = viewModel::showCollectionsSheet,
                 onShareClick = { showShareChooser = true },
                 onChooseRecordingClick = viewModel::chooseRecording,
+                onAutoplayClick = viewModel::toggleAutoAdvance,
                 onEqualizerClick = { showEqualizerSheet = true },
                 onDismiss = viewModel::hideMenu
             )

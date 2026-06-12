@@ -162,6 +162,10 @@ object IconResources {
         
         @Composable
         fun PauseCircleFilled() = customIcon(R.drawable.ic_pause_circle_filled)
+
+        /** Autoplay / auto-advance to the next show (infinity glyph). */
+        @Composable
+        fun Autoplay() = customIcon(R.drawable.ic_all_inclusive)
     }
     
     // Status icons are in the Status object category

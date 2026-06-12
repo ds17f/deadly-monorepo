@@ -8,7 +8,7 @@ import { updatePlaybackPosition, addRecentShow } from "@/lib/userDataApi";
 import { notifyUserDataChanged } from "@/lib/userDataEvents";
 import { useAuth } from "@/contexts/AuthContext";
 import { rememberArt, lookupArt, rememberReview, lookupReview } from "@/lib/artCache";
-import { getAutoAdvanceEnabled } from "@/lib/playbackPrefs";
+import { getAutoAdvanceEnabled, setAutoAdvanceEnabled } from "@/lib/playbackPrefs";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import { useConnect } from "@/contexts/ConnectContext";
@@ -79,6 +79,20 @@ export default function PlayerProvider({
     secondsRemaining: number;
     nextShow: ViewedShow;
   } | null>(null);
+  // "Autoplay" preference (roll into the next show when one ends). Off by
+  // default; persisted in localStorage. Read fresh from storage at end-of-show.
+  const [autoAdvanceEnabled, setAutoAdvanceEnabledState] = useState(false);
+  useEffect(() => setAutoAdvanceEnabledState(getAutoAdvanceEnabled()), []);
+  const toggleAutoAdvance = useCallback(() => {
+    const next = !getAutoAdvanceEnabled();
+    setAutoAdvanceEnabled(next);
+    setAutoAdvanceEnabledState(next);
+    analytics.track("feature_use", {
+      feature: "toggle_auto_advance",
+      category: "playback",
+      enabled: next,
+    });
+  }, []);
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
   const [selectedRecording, setSelectedRecording] = useState<string | null>(
@@ -1412,6 +1426,8 @@ export default function PlayerProvider({
       autoAdvance,
       cancelAutoAdvance,
       playNextNow,
+      autoAdvanceEnabled,
+      toggleAutoAdvance,
     }),
     [
       activeShow,
@@ -1451,6 +1467,8 @@ export default function PlayerProvider({
       autoAdvance,
       cancelAutoAdvance,
       playNextNow,
+      autoAdvanceEnabled,
+      toggleAutoAdvance,
     ]
   );
 

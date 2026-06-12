@@ -106,7 +106,7 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(sourceBadgeStyle, forKey: Self.sourceBadgeStyleKey) }
     }
 
-    /// ADR-0010: roll into the next show when one ends. On by default.
+    /// ADR-0010: roll into the next show when one ends ("Autoplay"). Off by default.
     var autoAdvanceEnabled: Bool {
         didSet { UserDefaults.standard.set(autoAdvanceEnabled, forKey: Self.autoAdvanceEnabledKey) }
     }
@@ -210,7 +210,7 @@ final class AppPreferences {
             Self.eqEnabledKey: false,
             Self.eqPresetKey: "flat",
             Self.shareAttachImageKey: false,
-            Self.autoAdvanceEnabledKey: true,
+            Self.autoAdvanceEnabledKey: false,
             Self.sourceBadgeStyleKey: "LONG",
             Self.playerControlsStyleKey: "skipTrack",
             Self.homeTrendingWindowKey: "now",

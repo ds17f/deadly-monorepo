@@ -4,10 +4,10 @@
 
 const AUTO_ADVANCE_KEY = "deadly_auto_advance";
 
-/** Roll into the next show when one ends. On by default (missing = enabled). */
+/** Roll into the next show when one ends ("Autoplay"). Off by default (missing = disabled). */
 export function getAutoAdvanceEnabled(): boolean {
-  if (typeof window === "undefined") return true;
-  return localStorage.getItem(AUTO_ADVANCE_KEY) !== "false";
+  if (typeof window === "undefined") return false;
+  return localStorage.getItem(AUTO_ADVANCE_KEY) === "true";
 }
 
 export function setAutoAdvanceEnabled(value: boolean): void {

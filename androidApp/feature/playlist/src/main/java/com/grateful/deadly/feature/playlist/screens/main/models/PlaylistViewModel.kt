@@ -91,6 +91,19 @@ class PlaylistViewModel @Inject constructor(
     private val _showWriteReview = MutableStateFlow(false)
     val showWriteReview: StateFlow<Boolean> = _showWriteReview.asStateFlow()
 
+    /** Autoplay (auto-advance to the next show when one ends). */
+    val autoAdvanceEnabled: StateFlow<Boolean> = appPreferences.autoAdvanceEnabled
+
+    fun toggleAutoAdvance() {
+        val newValue = !appPreferences.autoAdvanceEnabled.value
+        appPreferences.setAutoAdvanceEnabled(newValue)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "toggle_auto_advance",
+            "category" to "playback",
+            "enabled" to newValue,
+        ))
+    }
+
     init {
         // Reactive collections loading - watch for showId changes and update collections
         viewModelScope.launch {

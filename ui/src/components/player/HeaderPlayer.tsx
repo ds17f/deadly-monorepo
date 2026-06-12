@@ -423,6 +423,8 @@ export default function HeaderPlayer() {
     autoAdvance,
     cancelAutoAdvance,
     playNextNow,
+    autoAdvanceEnabled,
+    toggleAutoAdvance,
   } = usePlayer();
 
   const { connected: isConnected, state: connectState, serverTimeOffsetMs } = useConnect();
@@ -861,6 +863,20 @@ export default function HeaderPlayer() {
         <div className="flex items-center justify-end gap-1">
         {showLoaded && (
           <button
+            onClick={toggleAutoAdvance}
+            className={`rounded-full p-2 transition-colors ${
+              autoAdvanceEnabled ? "text-deadly-highlight" : "text-white/50 hover:text-white/80"
+            }`}
+            aria-label={autoAdvanceEnabled ? "Autoplay Next Show on" : "Autoplay Next Show off"}
+            title="Autoplay Next Show — roll into the next show when this one ends"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L7.8 14.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.77-1.53l7.03-6.24c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.38-3.39 3.38c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.41 5.4-5.38s-2.42-5.37-5.4-5.37z" />
+            </svg>
+          </button>
+        )}
+        {showLoaded && (
+          <button
             onClick={() => setRailMode((m) => (m === "queue" ? null : "queue"))}
             className={`rounded-full p-2 transition-colors ${
               railMode === "queue" ? "text-deadly-highlight" : "text-white/50 hover:text-white/80"
@@ -1078,6 +1094,23 @@ export default function HeaderPlayer() {
               toggleDisabled={sheetToggleDisabled}
               size="lg"
             />
+          </div>
+          {/* Autoplay toggle — roll into the next show when this one ends. */}
+          <div className="mt-3 flex flex-shrink-0 justify-center">
+            <button
+              onClick={toggleAutoAdvance}
+              role="switch"
+              aria-checked={autoAdvanceEnabled}
+              className={`flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
+                autoAdvanceEnabled ? "text-deadly-highlight" : "text-white/45 hover:text-white/70"
+              }`}
+              title="Roll into the next show when this one ends"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L7.8 14.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.77-1.53l7.03-6.24c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.38-3.39 3.38c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.41 5.4-5.38s-2.42-5.37-5.4-5.37z" />
+              </svg>
+              Autoplay Next Show {autoAdvanceEnabled ? "on" : "off"}
+            </button>
           </div>
           {activeShow && activeShow.recordings.length > 1 && (
             <div className="flex-shrink-0">

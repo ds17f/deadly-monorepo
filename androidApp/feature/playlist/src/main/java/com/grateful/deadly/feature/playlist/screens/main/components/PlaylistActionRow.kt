@@ -24,11 +24,13 @@ fun PlaylistActionRow(
     isPlaying: Boolean,
     isLoading: Boolean,
     isCurrentShowAndRecording: Boolean,
+    isAutoplayEnabled: Boolean,
     showCollections: List<com.grateful.deadly.core.model.DeadCollection>,
     onFavoritesAction: (FavoritesAction) -> Unit,
     onDownload: () -> Unit,
     onShowSetlist: () -> Unit,
     onShowCollections: () -> Unit,
+    onToggleAutoplay: () -> Unit,
     onShowMenu: () -> Unit,
     onTogglePlayback: () -> Unit,
     modifier: Modifier = Modifier
@@ -171,6 +173,23 @@ fun PlaylistActionRow(
                 )
             }
             
+            // Autoplay button (auto-advance to the next show when one ends)
+            IconButton(
+                onClick = onToggleAutoplay,
+                modifier = Modifier.size(40.dp)
+            ) {
+                Icon(
+                    painter = IconResources.PlayerControls.Autoplay(),
+                    contentDescription = if (isAutoplayEnabled) "Autoplay (active)" else "Autoplay",
+                    tint = if (isAutoplayEnabled) {
+                        MaterialTheme.colorScheme.primary
+                    } else {
+                        MaterialTheme.colorScheme.onSurfaceVariant
+                    },
+                    modifier = Modifier.size(24.dp)
+                )
+            }
+
             // Menu button
             IconButton(
                 onClick = onShowMenu,

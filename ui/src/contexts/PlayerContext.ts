@@ -82,6 +82,11 @@ export interface PlayerContextValue {
   autoAdvance: { secondsRemaining: number; nextShow: ViewedShow } | null;
   cancelAutoAdvance: () => void;
   playNextNow: () => void;
+
+  // "Autoplay" toggle (ADR-0010): whether to roll into the next show when one
+  // ends. Persisted in localStorage; off by default.
+  autoAdvanceEnabled: boolean;
+  toggleAutoAdvance: () => void;
 }
 
 export const PlayerContext = createContext<PlayerContextValue | null>(null);
