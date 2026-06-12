@@ -26,7 +26,7 @@ class DatabaseHealthService @Inject constructor(
      * (after all shows/recordings/FTS), so its presence proves the import ran to
      * completion. Counting rows alone is NOT enough: an import killed mid-recordings
      * leaves shows>0 && recordings>0 but a permanently partial catalog. Requiring the
-     * end-written marker closes that silent-incomplete bug (ADR-0007).
+     * end-written marker closes that silent-incomplete bug (ADR-0013).
      */
     suspend fun isDatabaseHealthy(): Boolean {
         return try {

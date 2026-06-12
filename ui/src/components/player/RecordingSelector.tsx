@@ -2,24 +2,11 @@
 
 import { useState } from "react";
 import type { Recording } from "@/types/recording";
-
-const SOURCE_COLORS: Record<string, string> = {
-  SBD: "bg-deadly-highlight text-white",
-  FM: "bg-deadly-highlight text-white",
-  Matrix: "bg-deadly-highlight text-white",
-  Remaster: "bg-deadly-highlight text-white",
-  AUD: "bg-amber-700 text-white",
-  UNKNOWN: "bg-white/20 text-white/70",
-};
-
-function sourceLabel(type: string): string {
-  return type === "UNKNOWN" ? "Unknown" : type;
-}
+import { sourceColors, sourceLabel } from "@/lib/sourceType";
 
 function SourcePill({ type }: { type: string }) {
-  const colors = SOURCE_COLORS[type] ?? SOURCE_COLORS.UNKNOWN;
   return (
-    <span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${colors}`}>
+    <span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${sourceColors(type)}`}>
       {sourceLabel(type)}
     </span>
   );

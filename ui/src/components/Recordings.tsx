@@ -1,23 +1,13 @@
 import type { Recording } from "@/types/recording";
 import type { AiShowReview } from "@/types/show";
-
-const SOURCE_COLORS: Record<string, string> = {
-  SBD: "bg-deadly-highlight text-white",
-  FM: "bg-deadly-highlight text-white",
-  Matrix: "bg-deadly-highlight text-white",
-  Remaster: "bg-deadly-highlight text-white",
-  AUD: "bg-amber-700 text-white",
-  UNKNOWN: "bg-white/20 text-white/70",
-};
+import { sourceColors, sourceLabel } from "@/lib/sourceType";
 
 function SourceBadge({ type }: { type: string }) {
-  const label = type === "UNKNOWN" ? "Unknown" : type;
-  const colors = SOURCE_COLORS[type] ?? SOURCE_COLORS.UNKNOWN;
   return (
     <span
-      className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${colors}`}
+      className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${sourceColors(type)}`}
     >
-      {label}
+      {sourceLabel(type)}
     </span>
   );
 }

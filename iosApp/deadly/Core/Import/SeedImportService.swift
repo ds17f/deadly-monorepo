@@ -9,7 +9,7 @@ import GRDB
 /// reviews, recents, sync outbox) and none of GRDB's migration bookkeeping.
 /// Opening it as the live DB would drop user data and confuse the migrator.
 /// Instead we keep the app's own migrated DB and copy the catalog rows into it.
-/// See `docs/adr/0007-prebuilt-catalog-db.md`.
+/// See `docs/adr/0013-prebuilt-catalog-db.md`.
 ///
 /// Flow (catalog writes in one transaction so the health gate — a committed
 /// `data_version` row — flips only on success):

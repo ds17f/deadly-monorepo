@@ -4,15 +4,7 @@ import { useEffect } from "react";
 import { usePlayer } from "@/contexts/PlayerContext";
 import TrackList from "./TrackList";
 import RecordingSelector from "./RecordingSelector";
-
-const SOURCE_COLORS: Record<string, string> = {
-  SBD: "bg-deadly-highlight text-white",
-  FM: "bg-deadly-highlight text-white",
-  Matrix: "bg-deadly-highlight text-white",
-  Remaster: "bg-deadly-highlight text-white",
-  AUD: "bg-amber-700 text-white",
-  UNKNOWN: "bg-white/20 text-white/70",
-};
+import { sourceColors, sourceLabel } from "@/lib/sourceType";
 
 function formatShowDate(dateStr: string): string {
   const [y, m, d] = dateStr.split("-").map(Number);
@@ -53,14 +45,8 @@ export default function QueuePanel({ onClose }: QueuePanelProps) {
   const recording = activeShow.recordings.find(
     (r) => r.identifier === selectedRecording
   );
-  const sourceLabel = recording
-    ? recording.source_type === "UNKNOWN"
-      ? "Unknown"
-      : recording.source_type
-    : null;
-  const sourceColors = recording
-    ? (SOURCE_COLORS[recording.source_type] ?? SOURCE_COLORS.UNKNOWN)
-    : null;
+  const srcLabel = recording ? sourceLabel(recording.source_type) : null;
+  const srcColors = recording ? sourceColors(recording.source_type) : null;
 
   const venue =
     activeShow.venue +
@@ -79,11 +65,11 @@ export default function QueuePanel({ onClose }: QueuePanelProps) {
             <p className="text-sm font-medium text-white">
               {formatShowDate(activeShow.date)}
             </p>
-            {sourceLabel && sourceColors && (
+            {srcLabel && srcColors && (
               <span
-                className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-medium ${sourceColors}`}
+                className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-medium ${srcColors}`}
               >
-                {sourceLabel}
+                {srcLabel}
               </span>
             )}
           </div>

@@ -4,7 +4,7 @@ Replace the slow first-launch JSON import (download 25 MB `data.zip` → extract
 ~20k JSON → parse → insert → build FTS, minutes on venue cell) with a prebuilt
 SQLite **catalog seed** built in CI and bulk-copied into each app's DB.
 
-Binding decisions + trade-offs: [`docs/adr/0007-prebuilt-catalog-db.md`](../docs/adr/0007-prebuilt-catalog-db.md).
+Binding decisions + trade-offs: [`docs/adr/0013-prebuilt-catalog-db.md`](../docs/adr/0013-prebuilt-catalog-db.md).
 
 ## Release & versioning mechanics (how a seed reaches a device) — 2026-06-08
 
@@ -314,7 +314,7 @@ query through it. That's a coordinated schema migration on iOS (GRDB) + Android
 (Room) + the seed builder + `catalog_schema.json`, plus a data backfill — a real
 chunk of work for a 57-tape edge case. Worth doing if/when we want full fidelity
 for early/late and multi-venue dates, but not blocking the first-launch speedup.
-Surfaced in ROADMAP "Deferred". See ADR-0007 decision #9.
+Surfaced in ROADMAP "Deferred". See ADR-0013 decision #9.
 
 ## Open decisions
 
@@ -323,6 +323,6 @@ Surfaced in ROADMAP "Deferred". See ADR-0007 decision #9.
 - One canonical seed + on-device FTS (chosen) vs two per-platform DBs.
 
 ## Related
-- ADR: [`docs/adr/0007-prebuilt-catalog-db.md`](../docs/adr/0007-prebuilt-catalog-db.md)
+- ADR: [`docs/adr/0013-prebuilt-catalog-db.md`](../docs/adr/0013-prebuilt-catalog-db.md)
 - Existing pipeline docs: [`data/docs/grateful-dead-database-pipeline.md`](../data/docs/grateful-dead-database-pipeline.md)
 - `../dead-metadata` is a stale upstream fork of the pipeline — archive eventually.

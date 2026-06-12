@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useUserData } from "@/contexts/UserDataContext";
 import { usePlayer } from "@/contexts/PlayerContext";
 import QrButton from "@/components/share/QrButton";
+import RecordingMenu from "@/components/player/RecordingMenu";
 import { useShareLink } from "@/components/share/useShareLink";
 import type { Recording } from "@/types/recording";
 import type { AiShowReview } from "@/types/show";
@@ -40,7 +41,9 @@ export default function HeroActions({
   const fav = isFavorite(showId);
   const existing = getReview(showId);
 
-  const [pendingRecordingId] = useState<string | null>(
+  // Which recording Play will load (and what QR/Share point at). Seeded from the
+  // best recording; the recording menu can change it before you ever hit Play.
+  const [pendingRecordingId, setPendingRecordingId] = useState<string | null>(
     bestRecordingId ?? recordings[0]?.identifier ?? null,
   );
 
@@ -74,6 +77,23 @@ export default function HeroActions({
   const isPlaying = isActiveShow && player.status === "playing";
   const canPlay = recordings.length > 0;
 
+  // The recording shown as selected: mirror the live player while this show is
+  // the active one (so switching from the player reflects here too), otherwise
+  // the pending pick that Play will load.
+  const selectedRecordingId =
+    isActiveShow && player.selectedRecording
+      ? player.selectedRecording
+      : pendingRecordingId;
+
+  function handleSelectRecording(identifier: string) {
+    setPendingRecordingId(identifier);
+    // If this show is already loaded in the player, switch it live; otherwise
+    // it just changes what the Play button will load.
+    if (isActiveShow && player.status !== "idle") {
+      player.selectRecording(identifier);
+    }
+  }
+
   function handlePlay() {
     // If this show is already loaded in the player, behave exactly like the
     // player's own play/pause button (toggle). Only fall through to a fresh
@@ -84,7 +104,7 @@ export default function HeroActions({
       player.playShow({
         showId,
         recordings,
-        bestRecordingId: pendingRecordingId,
+        bestRecordingId: selectedRecordingId,
         date,
         venue,
         location,
@@ -113,6 +133,8 @@ export default function HeroActions({
 
   return (
     <div className="mb-6 w-full">
+      {/* Primary line: Play (labeled) + the recording chip it loads. Secondary
+          actions collapse to icon-only buttons so the row stays uncluttered. */}
       <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
         {canPlay && (
           <button
@@ -125,42 +147,59 @@ export default function HeroActions({
           </button>
         )}
 
-        <PillButton active={fav} onClick={() => toggleFavorite(showId)}>
-          <Icon name="heart" filled={fav} />
-          {fav ? "Favorited" : "Favorite"}
-        </PillButton>
+        {recordings.length > 1 && (
+          <RecordingMenu
+            recordings={recordings}
+            selectedId={selectedRecordingId}
+            onSelect={handleSelectRecording}
+            variant="pill"
+            openDirection="down"
+            align="left"
+          />
+        )}
 
-        <PillButton
+        {/* A thin divider sets the labeled primaries off from the icon cluster. */}
+        <span className="mx-1 hidden h-6 w-px self-center bg-white/10 sm:block" aria-hidden="true" />
+
+        <IconButton
+          active={fav}
+          onClick={() => toggleFavorite(showId)}
+          label={fav ? "Favorited" : "Favorite"}
+        >
+          <Icon name="heart" filled={fav} />
+        </IconButton>
+
+        <IconButton
+          active={!!existing || reviewOpen}
+          onClick={() => setReviewOpen((o) => !o)}
+          label={existing ? "Your review" : "Review"}
+        >
+          <Icon name="star" filled={!!existing} />
+        </IconButton>
+
+        <IconButton
           active={player.autoAdvanceEnabled}
           onClick={player.toggleAutoAdvance}
-          title="Roll into the next show when this one ends"
+          label="Autoplay Next Show — roll into the next show when this one ends"
         >
           <Icon name="autoplay" />
-          Autoplay Next Show
-        </PillButton>
+        </IconButton>
 
-        <PillButton active={reviewOpen || !!existing} onClick={() => setReviewOpen((o) => !o)}>
-          <Icon name="star" filled={!!existing} />
-          {existing ? "Your review" : "Review"}
-        </PillButton>
+        <IconButton onClick={() => shareLink(showId, selectedRecordingId)} label="Share link">
+          <Icon name="share" />
+        </IconButton>
 
         <QrButton
           showId={showId}
-          recordingId={pendingRecordingId}
+          recordingId={selectedRecordingId}
           subtitle={venue ? `${date} · ${venue}` : date}
         >
           {(open) => (
-            <PillButton onClick={open}>
+            <IconButton onClick={open} label="QR code">
               <Icon name="qr" />
-              QR
-            </PillButton>
+            </IconButton>
           )}
         </QrButton>
-
-        <PillButton onClick={() => shareLink(showId, pendingRecordingId)}>
-          <Icon name="share" />
-          Share
-        </PillButton>
       </div>
 
       {reviewOpen && (
@@ -219,22 +258,26 @@ export default function HeroActions({
   );
 }
 
-function PillButton({
+// Compact, icon-only secondary action. `label` is both the tooltip and the
+// accessible name, so the icons stay self-explanatory without text pills.
+function IconButton({
   active,
   onClick,
-  title,
+  label,
   children,
 }: {
   active?: boolean;
   onClick: () => void;
-  title?: string;
+  label: string;
   children: React.ReactNode;
 }) {
   return (
     <button
       onClick={onClick}
-      title={title}
-      className={`inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition hover:scale-105 ${
+      title={label}
+      aria-label={label}
+      aria-pressed={active}
+      className={`inline-flex h-11 w-11 items-center justify-center rounded-full border transition hover:scale-105 ${
         active
           ? "border-deadly-accent text-deadly-accent"
           : "border-white/15 text-white/80 hover:border-white/30 hover:text-white"

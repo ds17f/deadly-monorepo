@@ -1,5 +1,6 @@
 import type { AiShowReview, LineupMember } from "@/types/show";
 import type { Recording } from "@/types/recording";
+import { sourceColors, sourceLabel } from "@/lib/sourceType";
 
 // The "liner notes" right rail on a show page — the editorial content that
 // makes The Deadly more than a Spotify clone. Surfaces the structured parts
@@ -8,20 +9,10 @@ import type { Recording } from "@/types/recording";
 // stays in the middle column ("About this show"); this is the at-a-glance
 // companion rail. Renders only the panels it has data for.
 
-const SOURCE_COLORS: Record<string, string> = {
-  SBD: "bg-deadly-highlight text-white",
-  FM: "bg-deadly-highlight text-white",
-  Matrix: "bg-deadly-highlight text-white",
-  Remaster: "bg-deadly-highlight text-white",
-  AUD: "bg-amber-700 text-white",
-  UNKNOWN: "bg-white/20 text-white/70",
-};
-
 function SourceBadge({ type }: { type: string }) {
-  const colors = SOURCE_COLORS[type] ?? SOURCE_COLORS.UNKNOWN;
   return (
-    <span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${colors}`}>
-      {type === "UNKNOWN" ? "Unknown" : type}
+    <span className={`inline-block rounded-full px-2 py-0.5 text-xs font-medium ${sourceColors(type)}`}>
+      {sourceLabel(type)}
     </span>
   );
 }

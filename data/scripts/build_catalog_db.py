@@ -4,7 +4,7 @@ Build the prebuilt catalog seed (catalog.db) from stage02.
 
 The seed is a catalog-only SQLite database that both apps copy into their own
 (already-migrated) DB via ATTACH + INSERT...SELECT, instead of importing ~20k
-JSON files on-device. See docs/adr/0007-prebuilt-catalog-db.md and
+JSON files on-device. See docs/adr/0013-prebuilt-catalog-db.md and
 PLANS/prebuilt-catalog-db.md.
 
   - Schema is created from data/catalog_schema.json (single source of truth; the

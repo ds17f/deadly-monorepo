@@ -40,7 +40,7 @@ web-launch threads, 2026-06).
   bulk-copies a prebuilt SQLite catalog seed (`d8442651`) instead of importing
   ~20k JSON files; FTS rebuilt on-device; fixes Android's silent false-complete
   on kill mid-import. Data pinned to 2.4.0 (`fb90535d`). Decisions in
-  **ADR-0007**; details in [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md).
+  **ADR-0013**; details in [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md).
 - **Admin → user messaging + notifications.** In-app inbox (v1 + v2, #55),
   engagement funnel + per-notification admin stats (#57), admin dashboard
   Versions panel (#56). New `track()` events must be registered in
@@ -207,6 +207,27 @@ exist (iOS/Android: Account, Playback, Preferences, Home Screen, Audio, Connect,
 Favorites & Data, Support, About) — the work is turning sections into drill-in
 categories, not inventing new groupings. Not started.
 
+## TECH DEBT
+
+Known shortcuts we took deliberately, with the trigger that should make us pay
+them down. Not features — corrections we owe the codebase.
+
+- **Show index is a boot-loaded in-memory JSON blob (move to SQLite when
+  recording fields grow).** The API holds no catalog; `api/src/showCatalog.ts`
+  loads `show-index.json` once at boot into an in-memory `Map`, built offline by
+  `api/scripts/build-show-index.mjs`. PR #66 baked a per-**recording** display
+  array into it for the web recording picker, which ~5×'d the file on disk and in
+  resident memory (~0.6 → ~3.1 MB). Fine today (read-only, keyed reads, single
+  instance), but `better-sqlite3` is already loaded in-process and this is the
+  only show-metadata store *not* in SQLite. **Trigger:** the next time someone
+  adds per-recording fields (track lists, per-recording reviews, waveforms,
+  lineage, sizes…), migrate the index to a SQLite table queried by `showId`
+  instead of fattening the blob — also forced if API memory starts to matter or
+  it needs to scale horizontally. Decision + triggers in **ADR-0012**; code
+  breadcrumbs point there from both the producer and consumer.
+- **Favorite-songs logic mis-placed on `ReviewService`.** Extract onto
+  `FavoritesService` (both platforms) — see §7. File a Linear tech-debt ticket.
+
 ## Deferred / explicit non-goals (sync v0)
 Cross-device deletion **tombstones**, **settings sync**, and **background sync**
 (WorkManager / BGTaskScheduler). Revisit tombstones before flipping sync
@@ -219,7 +240,7 @@ two shows (early/late, same-date multi-venue) surface under only one. A
 composite-PK / `recording_shows` join-table fix is a coordinated iOS+Android+seed
 migration for a small edge case — deferred. Why + path in
 [`PLANS/prebuilt-catalog-db.md`](prebuilt-catalog-db.md) "Known limitations";
-decision in ADR-0007 §9.
+decision in ADR-0013 §9.
 
 **Out of scope entirely:** additional bands / non-Grateful-Dead content. The
 Deadly is bounded by what's in the Grateful Dead's Internet Archive collection.
