@@ -19,15 +19,14 @@ import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistInte
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistActionRow
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistTrackList
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistReviewDetailsSheet
-import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistMenuSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistRecordingSelectionSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistCollectionsSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistSetlistBottomSheet
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistEqualizerSheet
-import com.grateful.deadly.core.model.FavoritesAction
 import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import com.grateful.deadly.core.design.component.QrCodeDisplay
 import com.grateful.deadly.core.design.component.ShareChooserSheet
+import com.grateful.deadly.core.design.component.ShowActionsMenuSheet
 import com.grateful.deadly.core.design.component.ShowReviewSheet
 import com.grateful.deadly.feature.playlist.screens.main.models.PlaylistViewModel
 /**
@@ -47,6 +46,7 @@ fun PlaylistScreen(
     showId: String? = null,
     trackNumber: Int? = null,
     autoPlay: Boolean = false,
+    openSheet: String? = null,
     viewModel: PlaylistViewModel = hiltViewModel(),
 ) {
     Log.d("PlaylistScreen", "=== PLAYLIST SCREEN LOADED === recordingId: $recordingId, showId: $showId, trackNumber: $trackNumber")
@@ -65,6 +65,21 @@ fun PlaylistScreen(
     // Load show data when screen opens - include recordingId for Player→Playlist navigation
     LaunchedEffect(showId, recordingId) {
         viewModel.loadShow(showId, recordingId, trackNumber, autoPlay)
+    }
+
+    // Deep-link from the player's "⋯" menu: once the show is loaded, auto-open the
+    // requested "This Show" sheet (ADR-0014). Fires once per arrival.
+    val loadedShowId = uiState.showData?.showId
+    var openedDeepLinkSheet by remember(openSheet) { mutableStateOf(false) }
+    LaunchedEffect(openSheet, loadedShowId) {
+        if (openSheet != null && loadedShowId != null && !openedDeepLinkSheet) {
+            openedDeepLinkSheet = true
+            when (openSheet) {
+                "setlist" -> viewModel.showSetlist()
+                "collections" -> viewModel.showCollectionsSheet()
+                "recording" -> viewModel.chooseRecording()
+            }
+        }
     }
     
     Box(modifier = Modifier.fillMaxSize()) {
@@ -158,11 +173,9 @@ fun PlaylistScreen(
                                 isLoading = uiState.mediaLoading,
                                 isCurrentShowAndRecording = uiState.isCurrentShowAndRecording,
                                 isAutoplayEnabled = autoAdvanceEnabled,
-                                showCollections = uiState.showCollections,
                                 onFavoritesAction = viewModel::handleFavoritesAction,
                                 onDownload = { viewModel.downloadShow() },
                                 onShowSetlist = viewModel::showSetlist,
-                                onShowCollections = viewModel::showCollectionsSheet,
                                 onToggleAutoplay = viewModel::toggleAutoAdvance,
                                 onShowMenu = viewModel::showMenu,
                                 onTogglePlayback = viewModel::togglePlayback
@@ -296,29 +309,33 @@ fun PlaylistScreen(
         }
     }
     
-    // Menu Bottom Sheet
+    // Menu Bottom Sheet — the unified "⋯" overflow (ADR-0014). Favorite, Setlist,
+    // Download and Autoplay are inline on the playlist, so they're hidden here.
     if (uiState.showMenu) {
         uiState.showData?.let { showData ->
-            PlaylistMenuSheet(
+            ShowActionsMenuSheet(
+                recordingId = showData.currentRecordingId,
+                title = showData.displayDate,
                 showDate = showData.displayDate,
                 venue = showData.venue,
-                location = showData.location,
-                isFavorite = showData.isFavorite,
                 isAutoplayEnabled = autoAdvanceEnabled,
-                onFavoritesClick = {
-                    if (showData.isFavorite) {
-                        viewModel.handleFavoritesAction(FavoritesAction.REMOVE_FROM_FAVORITES)
-                    } else {
-                        viewModel.handleFavoritesAction(FavoritesAction.ADD_TO_FAVORITES)
-                    }
+                collectionsCount = uiState.showCollections.size,
+                onChooseRecording = {
+                    viewModel.hideMenu()
+                    viewModel.chooseRecording()
                 },
-                onDownloadClick = { viewModel.downloadShow() },
-                onSetlistClick = viewModel::showSetlist,
-                onCollectionsClick = viewModel::showCollectionsSheet,
-                onShareClick = { showShareChooser = true },
-                onChooseRecordingClick = viewModel::chooseRecording,
-                onAutoplayClick = viewModel::toggleAutoAdvance,
-                onEqualizerClick = { showEqualizerSheet = true },
+                onEqualizer = {
+                    viewModel.hideMenu()
+                    showEqualizerSheet = true
+                },
+                onCollections = {
+                    viewModel.hideMenu()
+                    viewModel.showCollectionsSheet()
+                },
+                onShare = {
+                    viewModel.hideMenu()
+                    showShareChooser = true
+                },
                 onDismiss = viewModel::hideMenu
             )
         }

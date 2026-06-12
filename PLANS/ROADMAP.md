@@ -187,7 +187,7 @@ blocks onboarding for affected users.
   retire: add Settings to `UserMenu`, surface Recent/Reviews in mobile nav, then
   drop the strip. Until that nav exists, leave it.
 
-### 11. Settings screen reorganization (cross-platform, maintainer pain) — NEXT UP
+### 11. UI decluttering — Settings + player/playlist controls (cross-platform) — NEXT UP
 The settings screens (iOS `SettingsScreen.swift`, Android `SettingsScreen.kt`,
 web `/me` SettingsTab) have grown overloaded and are increasingly hard to work in
 — findability is poor and adding a toggle means scanning a long flat list (the
@@ -206,6 +206,16 @@ Collapses the long flat list into a scannable index. The section headers already
 exist (iOS/Android: Account, Playback, Preferences, Home Screen, Audio, Connect,
 Favorites & Data, Support, About) — the work is turning sections into drill-in
 categories, not inventing new groupings. Not started.
+
+**Designed + scope expanded (2026-06-12):** the cleanup now also covers the
+**player and playlist control surfaces** (the `∞ Autoplay` clutter, inline/overflow
+duplication, iOS/Android stub drift), not just Settings. First principles, the
+locked per-surface layouts, the unified `⋯`-menu taxonomy (Playback / This Show /
+Share, mobile only), the web light-touch posture, and the Settings categorized-
+subscreens + consolidated Home Layout direction are all captured in
+**ADR-0014** ([`docs/adr/0014-ui-control-altitude-and-decluttering.md`](../docs/adr/0014-ui-control-altitude-and-decluttering.md));
+execution notes + current-state inventory in
+[`PLANS/ui-decluttering.md`](ui-decluttering.md). Nothing built yet.
 
 ## TECH DEBT
 

@@ -9,8 +9,11 @@ import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.player.PanelContentService
 import com.grateful.deadly.core.api.player.PlayerService
+import com.grateful.deadly.core.api.playlist.PlaylistService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.ToastController
+import com.grateful.deadly.core.database.autoplayToastMessage
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import com.grateful.deadly.core.media.equalizer.EqualizerState
 import com.grateful.deadly.core.model.CurrentTrackInfo
@@ -28,6 +31,7 @@ import javax.inject.Inject
 @HiltViewModel
 class PlayerViewModel @Inject constructor(
     private val playerService: PlayerService,
+    private val playlistService: PlaylistService,
     private val panelContentService: PanelContentService,
     private val favoritesService: FavoritesService,
     private val reviewService: ReviewService,
@@ -35,6 +39,7 @@ class PlayerViewModel @Inject constructor(
     private val connectService: ConnectService,
     val appPreferences: AppPreferences,
     private val analyticsService: AnalyticsService,
+    private val toastController: ToastController,
     @ApplicationContext private val appContext: Context
 ) : ViewModel() {
 
@@ -48,12 +53,28 @@ class PlayerViewModel @Inject constructor(
     fun toggleAutoAdvance() {
         val newValue = !appPreferences.autoAdvanceEnabled.value
         appPreferences.setAutoAdvanceEnabled(newValue)
+        toastController.show(autoplayToastMessage(newValue))
         analyticsService.track("feature_use", mapOf(
             "feature" to "toggle_auto_advance",
             "category" to "playback",
             "enabled" to newValue,
         ))
     }
+
+    /**
+     * Number of collections the current show belongs to. Drives whether the
+     * "⋯" menu offers a Collections item (ADR-0014: shown only when in ≥1).
+     * The player navigates to the playlist to actually present collections, so
+     * this is a lightweight read-only count, not full collections state.
+     */
+    val showCollectionsCount: StateFlow<Int> = playerService.currentTrackInfo
+        .map { it?.showId }
+        .distinctUntilChanged()
+        .map { showId ->
+            if (showId == null) 0
+            else runCatching { playlistService.getShowCollections(showId).size }.getOrDefault(0)
+        }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0)
 
     val connectRemoteDeviceName: StateFlow<String?> = combine(
         connectService.connectState,

@@ -11,14 +11,19 @@ import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
 
 /**
- * Track information row with add to playlist button
+ * Track information row with the show's primary per-use action: Favorite.
+ *
+ * Favorite takes the prominent "save" position (Spotify-style) that the dead
+ * "add to playlist" stub used to occupy — the one frequent per-show action gets
+ * a dedicated home (ADR-0014).
  */
 @Composable
 fun PlayerTrackInfoRow(
     trackTitle: String,
     showDate: String,
     venue: String,
-    onAddToPlaylist: () -> Unit,
+    isFavorite: Boolean,
+    onFavoriteClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -52,17 +57,17 @@ fun PlayerTrackInfoRow(
                 overflow = TextOverflow.Ellipsis
             )
         }
-        
-        // Add to playlist button
+
+        // Favorite — the prominent per-show save action
         IconButton(
-            onClick = onAddToPlaylist,
-            modifier = Modifier.size(36.dp)
+            onClick = onFavoriteClick,
+            modifier = Modifier.size(40.dp)
         ) {
             Icon(
-                painter = IconResources.Content.AddCircle(),
-                contentDescription = "Add to playlist",
-                modifier = Modifier.size(36.dp),
-                tint = MaterialTheme.colorScheme.primary
+                painter = if (isFavorite) IconResources.Content.Favorite() else IconResources.Content.FavoriteBorder(),
+                contentDescription = if (isFavorite) "Remove from Favorites" else "Add to Favorites",
+                tint = if (isFavorite) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.size(28.dp)
             )
         }
     }

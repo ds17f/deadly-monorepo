@@ -13,19 +13,18 @@ import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
 
 /**
- * Secondary controls row (connections, share, queue)
+ * Secondary controls row: cast/Connect (left) and the two inline per-show
+ * actions Share · Equalizer (right).
+ *
+ * Favorite moved up to the track-info row and Autoplay moved into the "⋯" menu
+ * (ADR-0014); the "Queue" stub was removed until the queue feature ships.
  */
 @Composable
 fun PlayerSecondaryControls(
-    isFavorite: Boolean,
-    isAutoplayEnabled: Boolean,
     connectDeviceName: String?,
     onEqualizerClick: () -> Unit,
     onConnectClick: () -> Unit,
-    onFavoriteClick: () -> Unit,
-    onAutoplayClick: () -> Unit,
     onShareClick: () -> Unit,
-    onQueueClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -61,44 +60,8 @@ fun PlayerSecondaryControls(
             }
         }
 
-        // Right section
+        // Right section — inline per-show actions
         Row {
-            // Autoplay (auto-advance to the next show when one ends)
-            IconButton(
-                onClick = onAutoplayClick,
-                modifier = Modifier.size(40.dp)
-            ) {
-                Icon(
-                    painter = IconResources.PlayerControls.Autoplay(),
-                    contentDescription = if (isAutoplayEnabled) "Autoplay (active)" else "Autoplay",
-                    tint = if (isAutoplayEnabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-
-            // Equalizer
-            IconButton(
-                onClick = onEqualizerClick,
-                modifier = Modifier.size(40.dp)
-            ) {
-                Icon(
-                    painter = IconResources.PlayerControls.Equalizer(),
-                    contentDescription = "Equalizer",
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-
-            // Thumbs Up
-            IconButton(
-                onClick = onFavoriteClick,
-                modifier = Modifier.size(40.dp)
-            ) {
-                Icon(
-                    painter = if (isFavorite) IconResources.Content.Favorite() else IconResources.Content.FavoriteBorder(),
-                    contentDescription = if (isFavorite) "Favorite (active)" else "Favorite",
-                    tint = if (isFavorite) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-
             // Share
             IconButton(
                 onClick = onShareClick,
@@ -111,14 +74,14 @@ fun PlayerSecondaryControls(
                 )
             }
 
-            // Queue
+            // Equalizer
             IconButton(
-                onClick = onQueueClick,
+                onClick = onEqualizerClick,
                 modifier = Modifier.size(40.dp)
             ) {
                 Icon(
-                    painter = IconResources.PlayerControls.Queue(),
-                    contentDescription = "Queue",
+                    painter = IconResources.PlayerControls.Equalizer(),
+                    contentDescription = "Equalizer",
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }

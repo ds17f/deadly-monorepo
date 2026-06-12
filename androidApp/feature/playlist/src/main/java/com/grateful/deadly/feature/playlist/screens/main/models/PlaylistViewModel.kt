@@ -8,6 +8,8 @@ import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.playlist.PlaylistService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.ToastController
+import com.grateful.deadly.core.database.autoplayToastMessage
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.recent.RecentShowsService
@@ -59,6 +61,7 @@ class PlaylistViewModel @Inject constructor(
     private val equalizerRepository: EqualizerRepository,
     private val analyticsService: AnalyticsService,
     private val connectService: ConnectService,
+    private val toastController: ToastController,
     networkMonitor: NetworkMonitor,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
@@ -97,6 +100,7 @@ class PlaylistViewModel @Inject constructor(
     fun toggleAutoAdvance() {
         val newValue = !appPreferences.autoAdvanceEnabled.value
         appPreferences.setAutoAdvanceEnabled(newValue)
+        toastController.show(autoplayToastMessage(newValue))
         analyticsService.track("feature_use", mapOf(
             "feature" to "toggle_auto_advance",
             "category" to "playback",

@@ -12,11 +12,15 @@ import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import com.grateful.deadly.core.model.PlaylistShowViewModel
 
 /**
- * PlaylistActionRow - Action buttons row
- * 
- * Action buttons layout integrated with service architecture.
- * Left side: Grouped action buttons (Favorites, Download, Setlist, Menu)
- * Right side: Large play/pause button
+ * PlaylistActionRow - Action buttons row (ADR-0014)
+ *
+ * Spotify album layout plus a Setlist affordance:
+ *   Left:  Setlist · Favorite · Download · ⋯ Menu
+ *   Right: Autoplay · Play
+ *
+ * Autoplay rides next to Play as a play-*mode* (the slot Spotify gives shuffle).
+ * Collections left the inline row for the "⋯" menu (shown only when the show is
+ * in ≥1 collection).
  */
 @Composable
 fun PlaylistActionRow(
@@ -25,11 +29,9 @@ fun PlaylistActionRow(
     isLoading: Boolean,
     isCurrentShowAndRecording: Boolean,
     isAutoplayEnabled: Boolean,
-    showCollections: List<com.grateful.deadly.core.model.DeadCollection>,
     onFavoritesAction: (FavoritesAction) -> Unit,
     onDownload: () -> Unit,
     onShowSetlist: () -> Unit,
-    onShowCollections: () -> Unit,
     onToggleAutoplay: () -> Unit,
     onShowMenu: () -> Unit,
     onTogglePlayback: () -> Unit,
@@ -42,14 +44,27 @@ fun PlaylistActionRow(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Left side: Grouped action buttons
+        // Left side: Setlist · Favorite · Download · Menu
         Row(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
+            // Setlist button
+            IconButton(
+                onClick = onShowSetlist,
+                modifier = Modifier.size(40.dp)
+            ) {
+                Icon(
+                    painter = IconResources.Content.FormatListBulleted(),
+                    contentDescription = "Show Setlist",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.size(24.dp)
+                )
+            }
+
             // Favorites button
             IconButton(
-                onClick = { 
+                onClick = {
                     if (showData.isFavorite) {
                         onFavoritesAction(FavoritesAction.REMOVE_FROM_FAVORITES)
                     } else {
@@ -73,7 +88,7 @@ fun PlaylistActionRow(
                     modifier = Modifier.size(24.dp)
                 )
             }
-            
+
             // Download button
             IconButton(
                 onClick = onDownload,
@@ -142,37 +157,26 @@ fun PlaylistActionRow(
                     }
                 }
             }
-            
-            // Setlist button
+
+            // Menu button
             IconButton(
-                onClick = onShowSetlist,
+                onClick = onShowMenu,
                 modifier = Modifier.size(40.dp)
             ) {
                 Icon(
-                    painter = IconResources.Content.FormatListBulleted(),
-                    contentDescription = "Show Setlist",
+                    painter = IconResources.Navigation.MoreVertical(),
+                    contentDescription = "More options",
                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.size(24.dp)
                 )
             }
-            
-            // Collections button
-            IconButton(
-                onClick = onShowCollections,
-                modifier = Modifier.size(40.dp)
-            ) {
-                Icon(
-                    painter = IconResources.Navigation.Collections(),
-                    contentDescription = if (showCollections.isNotEmpty()) "Show Collections (${showCollections.size})" else "Show Collections",
-                    tint = if (showCollections.isNotEmpty()) {
-                        MaterialTheme.colorScheme.primary
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    },
-                    modifier = Modifier.size(24.dp)
-                )
-            }
-            
+        }
+
+        // Right side: Autoplay (play-mode) · Play/Pause
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             // Autoplay button (auto-advance to the next show when one ends)
             IconButton(
                 onClick = onToggleAutoplay,
@@ -190,51 +194,37 @@ fun PlaylistActionRow(
                 )
             }
 
-            // Menu button
+            // Play/Pause button (large) with loading state
             IconButton(
-                onClick = onShowMenu,
-                modifier = Modifier.size(40.dp)
+                onClick = onTogglePlayback,
+                modifier = Modifier.size(56.dp)
             ) {
-                Icon(
-                    painter = IconResources.Navigation.MoreVertical(),
-                    contentDescription = "More options",
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.size(24.dp)
-                )
-            }
-        }
-        
-        // Right side: Play/Pause button (large) with loading state
-        IconButton(
-            onClick = onTogglePlayback,
-            modifier = Modifier.size(56.dp)
-        ) {
-            if (isLoading) {
-                // Show loading spinner when any track is loading
-                Box(
-                    contentAlignment = Alignment.Center,
-                    modifier = Modifier.size(56.dp)
-                ) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(24.dp),
-                        color = MaterialTheme.colorScheme.primary,
-                        strokeWidth = 2.dp
+                if (isLoading) {
+                    Box(
+                        contentAlignment = Alignment.Center,
+                        modifier = Modifier.size(56.dp)
+                    ) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(24.dp),
+                            color = MaterialTheme.colorScheme.primary,
+                            strokeWidth = 2.dp
+                        )
+                    }
+                } else {
+                    // Show pause icon only if currently playing this exact show/recording
+                    val showPauseIcon = isCurrentShowAndRecording && isPlaying
+
+                    Icon(
+                        painter = if (showPauseIcon) {
+                            IconResources.PlayerControls.PauseCircleFilled()
+                        } else {
+                            IconResources.PlayerControls.PlayCircleFilled()
+                        },
+                        contentDescription = if (showPauseIcon) "Pause" else "Play",
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(56.dp)
                     )
                 }
-            } else {
-                // Show pause icon only if currently playing this exact show/recording
-                val showPauseIcon = isCurrentShowAndRecording && isPlaying
-                
-                Icon(
-                    painter = if (showPauseIcon) {
-                        IconResources.PlayerControls.PauseCircleFilled()
-                    } else {
-                        IconResources.PlayerControls.PlayCircleFilled()
-                    },
-                    contentDescription = if (showPauseIcon) "Pause" else "Play",
-                    tint = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(56.dp)
-                )
             }
         }
     }

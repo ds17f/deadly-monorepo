@@ -41,6 +41,9 @@ final class AppContainer {
     let notificationStore: NotificationStore
     let notificationService: NotificationService
 
+    /// App-wide transient toast bus (ADR-0014). No dependencies, so constructed inline.
+    let toastPresenter = ToastPresenter()
+
     /// True only during the first launch of the process. Cleared after Connect + restore complete.
     var isColdLaunch = true
 

@@ -4,7 +4,7 @@ import SwiftAudioStreamEx
 struct PlayerScreen: View {
     let streamPlayer: StreamPlayer
     @Binding var isPresented: Bool
-    var onViewShow: ((String) -> Void)? = nil
+    var onViewShow: ((String, ShowDetailSheet?) -> Void)? = nil
 
     @State private var sliderValue: Double?
     @State private var showBugReportSheet = false
@@ -15,6 +15,7 @@ struct PlayerScreen: View {
     @State private var showPlayerMenuSheet = false
     @State private var showConnectSheet = false
     @State private var isCurrentTrackFavorite = false
+    @State private var showCollectionsCount = 0
     @Environment(\.appContainer) private var container
 
     private var playbackError: StreamPlayerError? {
@@ -85,19 +86,34 @@ struct PlayerScreen: View {
 
                         Spacer().frame(height: 32)
 
-                        // Track info
-                        VStack(spacing: 6) {
-                            Text(container.miniPlayerService.trackTitle ?? streamPlayer.currentTrack?.title ?? "")
-                                .font(.title3)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.primary)
-                                .lineLimit(2)
-                                .multilineTextAlignment(.center)
+                        // Track info — title/subtitle with the prominent Favorite
+                        // action in the Spotify "save" slot (ADR-0014).
+                        HStack(alignment: .center, spacing: 12) {
+                            VStack(alignment: .leading, spacing: 6) {
+                                Text(container.miniPlayerService.trackTitle ?? streamPlayer.currentTrack?.title ?? "")
+                                    .font(.title3)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.primary)
+                                    .lineLimit(2)
+                                    .multilineTextAlignment(.leading)
 
-                            Text(container.miniPlayerService.displaySubtitle ?? streamPlayer.currentTrack?.albumTitle ?? "")
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                                .lineLimit(1)
+                                Text(container.miniPlayerService.displaySubtitle ?? streamPlayer.currentTrack?.albumTitle ?? "")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                                    .lineLimit(1)
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+
+                            Button {
+                                toggleFavoriteSong()
+                            } label: {
+                                Image(systemName: isCurrentTrackFavorite ? "heart.fill" : "heart")
+                                    .font(.title2)
+                                    .foregroundStyle(isCurrentTrackFavorite ? DeadlyColors.primary : .secondary)
+                                    .frame(width: 44, height: 44)
+                            }
+                            .buttonStyle(.plain)
+                            .disabled(currentShowId == nil)
                         }
                         .padding(.horizontal, 24)
 
@@ -216,6 +232,7 @@ struct PlayerScreen: View {
             let title = streamPlayer.currentTrack?.title
             await container.panelContentService.loadContent(show: show, songTitle: title)
             loadFavoriteState()
+            showCollectionsCount = currentShowId.map { container.collectionsService.collectionsContaining(showId: $0).count } ?? 0
         }
         .sheet(isPresented: $showConnectSheet) {
             ConnectSheet()
@@ -301,7 +318,7 @@ struct PlayerScreen: View {
             Spacer()
 
             Button {
-                if let showId = currentShowId { onViewShow?(showId) }
+                if let showId = currentShowId { onViewShow?(showId, nil) }
             } label: {
                 VStack(spacing: 2) {
                     Text("Now Playing")
@@ -360,42 +377,10 @@ struct PlayerScreen: View {
 
             Spacer()
 
-            // Right section
+            // Right section — inline per-show actions (Share · Equalizer).
+            // Favorite moved up to the track-info row, Autoplay into the "⋯"
+            // menu (ADR-0014).
             HStack(spacing: 8) {
-                // Autoplay (roll into the next show when this one ends)
-                Button {
-                    toggleAutoAdvance()
-                } label: {
-                    Image(systemName: "infinity")
-                        .font(.title2)
-                        .foregroundStyle(container.appPreferences.autoAdvanceEnabled ? DeadlyColors.primary : .secondary)
-                        .frame(width: 44, height: 44)
-                }
-                .buttonStyle(.plain)
-
-                // Equalizer
-                Button {
-                    showEqualizerSheet = true
-                } label: {
-                    Image(systemName: "slider.vertical.3")
-                        .font(.title2)
-                        .foregroundStyle(.secondary)
-                        .frame(width: 44, height: 44)
-                }
-                .buttonStyle(.plain)
-
-                // Favorite
-                Button {
-                    toggleFavoriteSong()
-                } label: {
-                    Image(systemName: isCurrentTrackFavorite ? "heart.fill" : "heart")
-                        .font(.title2)
-                        .foregroundStyle(isCurrentTrackFavorite ? DeadlyColors.primary : .secondary)
-                        .frame(width: 44, height: 44)
-                }
-                .buttonStyle(.plain)
-                .disabled(currentShowId == nil)
-
                 // Share
                 Button {
                     showShareChooser = true
@@ -407,74 +392,66 @@ struct PlayerScreen: View {
                 }
                 .buttonStyle(.plain)
                 .disabled(currentShowId == nil)
+
+                // Equalizer
+                Button {
+                    showEqualizerSheet = true
+                } label: {
+                    Image(systemName: "slider.vertical.3")
+                        .font(.title2)
+                        .foregroundStyle(.secondary)
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain)
             }
         }
         .padding(.horizontal, 24)
     }
 
+    // The unified "⋯" overflow (ADR-0014). Equalizer, Share and Favorite are
+    // inline on the player, so they're hidden here; the menu surfaces Choose
+    // Recording · Autoplay | Setlist · Collections · Download. The "This Show"
+    // items + Choose Recording navigate to the playlist (their home), Download
+    // and Autoplay act in place.
     private var playerMenuSheet: some View {
-        NavigationStack {
-            List {
-                Section {
-                    Button {
-                        toggleAutoAdvance()
-                    } label: {
-                        HStack(alignment: .top) {
-                            Label("Autoplay Next Show", systemImage: "infinity")
-                            Spacer()
-                            if container.appPreferences.autoAdvanceEnabled {
-                                Image(systemName: "checkmark")
-                                    .foregroundStyle(DeadlyColors.primary)
-                            }
-                        }
-                    }
+        ShowActionsMenuSheet(
+            isAutoplayEnabled: container.appPreferences.autoAdvanceEnabled,
+            collectionsCount: showCollectionsCount,
+            onChooseRecording: {
+                showPlayerMenuSheet = false
+                if let sid = currentShowId { onViewShow?(sid, .recording) }
+            },
+            onAutoplay: { toggleAutoAdvance() },
+            onSetlist: {
+                showPlayerMenuSheet = false
+                if let sid = currentShowId { onViewShow?(sid, .setlist) }
+            },
+            onCollections: {
+                showPlayerMenuSheet = false
+                if let sid = currentShowId { onViewShow?(sid, .collections) }
+            },
+            onDownload: {
+                showPlayerMenuSheet = false
+                downloadCurrentShow()
+            },
+            onDone: { showPlayerMenuSheet = false }
+        )
+    }
 
-                    Button {
-                        toggleFavoriteSong()
-                        showPlayerMenuSheet = false
-                    } label: {
-                        Label(
-                            isCurrentTrackFavorite ? "Favorited" : "Favorite",
-                            systemImage: isCurrentTrackFavorite ? "heart.fill" : "heart"
-                        )
-                    }
-
-                    Button {
-                        showPlayerMenuSheet = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            showEqualizerSheet = true
-                        }
-                    } label: {
-                        Label("Equalizer", systemImage: "slider.vertical.3")
-                    }
-
-                    Button {
-                        showPlayerMenuSheet = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            showShareChooser = true
-                        }
-                    } label: {
-                        Label("Share", systemImage: "square.and.arrow.up")
-                    }
-                }
-            }
-            .tint(.primary)
-            .navigationTitle("Options")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Done") {
-                        showPlayerMenuSheet = false
-                    }
-                }
-            }
+    private func downloadCurrentShow() {
+        guard let showId = currentShowId else { return }
+        Task {
+            try? await container.downloadService.downloadShow(
+                showId,
+                recordingId: currentRecordingId
+            )
         }
-        .presentationDetents([.medium])
     }
 
     private func toggleAutoAdvance() {
         let newValue = !container.appPreferences.autoAdvanceEnabled
         container.appPreferences.autoAdvanceEnabled = newValue
+        container.toastPresenter.show(autoplayToastMessage(newValue))
         container.analyticsService.track("feature_use", props: [
             "feature": "toggle_auto_advance",
             "category": "playback",

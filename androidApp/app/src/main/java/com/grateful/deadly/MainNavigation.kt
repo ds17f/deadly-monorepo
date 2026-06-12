@@ -31,6 +31,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.grateful.deadly.navigation.BottomNavDestination
 import com.grateful.deadly.navigation.NavigationBarConfig
+import com.grateful.deadly.core.design.component.AppToast
 import com.grateful.deadly.core.design.component.ShowArtwork
 import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.design.scaffold.AppScaffold
@@ -46,6 +47,7 @@ import com.grateful.deadly.feature.settings.navigation.CONNECT_ROUTE
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
 import android.app.Activity
 import com.google.android.play.core.review.ReviewManagerFactory
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import com.grateful.deadly.feature.splash.navigation.splashGraph
@@ -129,6 +131,24 @@ fun MainNavigation(
                 notificationViewModel.onToastTap(arrival)
                 navController.navigate("notifications")
             }
+        }
+    }
+
+    // App-wide transient toast (e.g. the Autoplay toggle confirmation). Rendered
+    // as a top-of-z-stack overlay below (not via the scaffold SnackbarHost, which
+    // is occluded by the bottom bar + mini player on most screens).
+    var toastMessage by remember { mutableStateOf<String?>(null) }
+    val toastText = remember { mutableStateOf("") }
+    LaunchedEffect(Unit) {
+        appViewModel.toasts.collect { msg ->
+            toastText.value = msg
+            toastMessage = msg
+        }
+    }
+    LaunchedEffect(toastMessage) {
+        if (toastMessage != null) {
+            delay(2500)
+            toastMessage = null
         }
     }
 
@@ -311,8 +331,8 @@ fun MainNavigation(
                 // Player feature - playback interface
                 playerScreen(
                     onNavigateBack = { navController.popBackStack() },
-                    onNavigateToPlaylist = { showId, recordingId ->
-                        navController.navigateToPlaylist(showId, recordingId) {
+                    onNavigateToPlaylist = { showId, recordingId, openSheet ->
+                        navController.navigateToPlaylist(showId, recordingId, openSheet = openSheet) {
                             popUpTo("player") { inclusive = true }
                         }
                     }
@@ -362,6 +382,20 @@ fun MainNavigation(
                             .padding(bottom = paddingValues.calculateBottomPadding() + 8.dp),
                     )
                 }
+            }
+
+            // App-wide transient toast — last child = topmost z, visible above
+            // every screen and the mini player.
+            androidx.compose.animation.AnimatedVisibility(
+                visible = toastMessage != null,
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(horizontal = 24.dp)
+                    .padding(bottom = paddingValues.calculateBottomPadding() + 24.dp),
+                enter = slideInVertically(initialOffsetY = { it }) + fadeIn(),
+                exit = slideOutVertically(targetOffsetY = { it }) + fadeOut()
+            ) {
+                AppToast(message = toastText.value)
             }
         }
     }

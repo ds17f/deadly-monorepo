@@ -10,6 +10,9 @@ struct MainNavigation: View {
     @State private var favoritesStack = NavigationPath()
     @State private var collectionsStack = NavigationPath()
     @State private var pendingShowNavigation: String?
+    /// Sheet the player's "⋯" menu asked the show-detail screen to open
+    /// (ADR-0014). Consumed + cleared by ShowDetailScreen on appear.
+    @State private var pendingShowSheet: ShowDetailSheet?
     @State private var pendingDeepLink: DeepLink?
     @State private var selectedTab: AppTab = .home
     @State private var playerSourceTab: AppTab = .home
@@ -43,7 +46,7 @@ struct MainNavigation: View {
                             }
                         }
                         .navigationDestination(for: String.self) { showId in
-                            ShowDetailScreen(showId: showId)
+                            ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
                         }
                         .navigationDestination(for: CollectionRoute.self) { route in
                             switch route {
@@ -63,7 +66,7 @@ struct MainNavigation: View {
                     SearchScreen(resetToken: searchResetToken)
                         .settingsLogoButton($showingSettings, title: "Search")
                         .navigationDestination(for: String.self) { showId in
-                            ShowDetailScreen(showId: showId)
+                            ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
                         }
                 }
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
@@ -74,7 +77,7 @@ struct MainNavigation: View {
                     FavoritesScreen()
                         .settingsLogoButton($showingSettings, title: "Favorites")
                         .navigationDestination(for: String.self) { showId in
-                            ShowDetailScreen(showId: showId)
+                            ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
                         }
                         .navigationDestination(for: FavoritesRoute.self) { route in
                             switch route {
@@ -97,7 +100,7 @@ struct MainNavigation: View {
                             }
                         }
                         .navigationDestination(for: String.self) { showId in
-                            ShowDetailScreen(showId: showId)
+                            ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
                         }
                 }
                 .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
@@ -126,6 +129,15 @@ struct MainNavigation: View {
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
+        // App-wide transient toast (e.g. the Autoplay toggle confirmation).
+        .overlay(alignment: .bottom) {
+            if let message = container.toastPresenter.message {
+                ActionToastView(message: message)
+                    .padding(.bottom, 96)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .animation(.spring(duration: 0.3), value: container.toastPresenter.message)
         .onChange(of: container.notificationStore.lastArrival) { _, arrival in
             guard let arrival, arrival.key != lastToastKey else { return }
             lastToastKey = arrival.key
@@ -221,8 +233,9 @@ struct MainNavigation: View {
             PlayerScreen(
                 streamPlayer: container.streamPlayer,
                 isPresented: $showFullPlayer,
-                onViewShow: { showId in
+                onViewShow: { showId, sheet in
                     pendingShowNavigation = showId
+                    pendingShowSheet = sheet
                     Task {
                         await container.playlistService.loadShow(showId)
                         if let rid = container.streamPlayer.currentTrack?.metadata["recordingId"],
