@@ -7,6 +7,17 @@ import path from "node:path";
 // user-data responses (recents, favorites) with display fields.
 // See PLANS/web-profile.md (show-metadata source).
 
+// The compact per-recording fields the web recording menu renders. The browser
+// has no catalog of its own, so the API serves a show's recordings by showId
+// (e.g. to populate the picker for a Connect-hydrated / refreshed session).
+export interface RecordingMeta {
+  identifier: string;
+  source_type: string;
+  rating: number;
+  review_count: number;
+  runtime: string;
+}
+
 export interface ShowMeta {
   date: string | null;
   venue: string | null;
@@ -19,6 +30,9 @@ export interface ShowMeta {
   image: string | null;
   // Archive.org recording id, for the thumbnail fallback when image is null.
   bestRecordingId: string | null;
+  // Selectable recordings for this show, in catalog order. May be absent in an
+  // older index built before recordings were included.
+  recordings?: RecordingMeta[];
 }
 
 let catalog = new Map<string, ShowMeta>();

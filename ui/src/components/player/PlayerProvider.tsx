@@ -11,6 +11,7 @@ import { rememberArt, lookupArt, rememberReview, lookupReview } from "@/lib/artC
 import { getAutoAdvanceEnabled, setAutoAdvanceEnabled } from "@/lib/playbackPrefs";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
+import type { Recording } from "@/types/recording";
 import { useConnect } from "@/contexts/ConnectContext";
 
 const AUTO_ADVANCE_DELAY_MS = 15_000; // ADR-0010 chunk 2: end-of-show countdown
@@ -37,6 +38,53 @@ function metaToViewedShow(m: ShowMetaResponse): ViewedShow {
     review: null,
   };
 }
+// The compact recording shape /api/shows/:id returns. Mapped onto the full
+// Recording type (unused fields defaulted) so a Connect-hydrated show can show
+// its recording picker — the browser has no catalog, so the API serves it.
+interface ApiRecordingMeta {
+  identifier: string;
+  source_type: string;
+  rating: number;
+  review_count: number;
+  runtime: string;
+}
+function apiRecordingToRecording(
+  r: ApiRecordingMeta,
+  show: { date?: string | null; venue?: string | null; location?: string | null },
+): Recording {
+  return {
+    identifier: r.identifier,
+    title: "",
+    date: show.date ?? "",
+    venue: show.venue ?? "",
+    location: show.location ?? "",
+    source_type: r.source_type,
+    lineage: "",
+    taper: "",
+    source: "",
+    runtime: r.runtime,
+    rating: r.rating,
+    raw_rating: r.rating,
+    review_count: r.review_count,
+    confidence: 0,
+    high_ratings: 0,
+    low_ratings: 0,
+  };
+}
+
+// Fetch a show's selectable recordings by id (catalog lives only in the API).
+async function fetchShowRecordings(showId: string): Promise<Recording[]> {
+  try {
+    const res = await fetch(`/api/shows/${encodeURIComponent(showId)}`);
+    if (!res.ok) return [];
+    const meta = await res.json();
+    const list: ApiRecordingMeta[] = Array.isArray(meta?.recordings) ? meta.recordings : [];
+    return list.map((r) => apiRecordingToRecording(r, meta));
+  } catch {
+    return [];
+  }
+}
+
 const PREV_TRACK_THRESHOLD = 3; // seconds
 const AUDIO_RETRY_DELAYS = [0, 1000, 2000];
 const GAPLESS_PRELOAD_THRESHOLD = 2; // seconds before end to start preloading
@@ -743,6 +791,20 @@ export default function PlayerProvider({
           setCurrentTrackIndex(targetTrack < fetchedTracks.length ? targetTrack : 0);
         }
       });
+      // Backfill the selectable recordings so the picker works for this
+      // hydrated show (remote viewer, or after a refresh mid-playback). The
+      // server state carries only the active recordingId; the rest come from
+      // the API catalog by showId.
+      if (showId) {
+        fetchShowRecordings(showId).then((recs) => {
+          if (recs.length === 0) return;
+          setActiveShow((prev) =>
+            prev && prev.showId === showId && prev.recordings.length === 0
+              ? { ...prev, recordings: recs }
+              : prev,
+          );
+        });
+      }
       // Resolve real show metadata (date/venue/location) from Archive.org — the
       // session state may carry none (position-only hydrate). Client-resolve.
       fetchArchiveShowMeta(connectState.recordingId).then((meta) => {
@@ -1353,14 +1415,37 @@ export default function PlayerProvider({
   }, [close]);
 
   const selectRecording = useCallback(
-    (identifier: string) => {
+    async (identifier: string) => {
+      if (identifier === selectedRecordingRef.current) return;
       setSelectedRecording(identifier);
-      // If already playing, switch to the new recording
-      if (statusRef.current !== "idle") {
-        playRecording(identifier);
-      }
+      // Idle (parked / not started): just remember the choice — Play loads it.
+      if (statusRef.current === "idle") return;
+      // Switching while playing: load the new recording's tracks and claim the
+      // shared session with it. The `load` is what makes the switch stick — a
+      // bare local swap leaves the server on the old recordingId, and the next
+      // ConnectState broadcast reconciles us right back to it. It also moves any
+      // other devices in the session to the new recording.
+      nextPlaybackSourceRef.current = "browse";
+      const fetched = await playRecording(identifier);
+      if (fetched.length === 0) return;
+      const show = activeShowRef.current;
+      sendCommandRef.current("load", {
+        showId: show?.showId ?? connectState?.showId ?? "",
+        recordingId: identifier,
+        tracks: fetched.map((t) => ({
+          title: t.title,
+          durationMs: Math.round((t.duration || 0) * 1000),
+        })),
+        trackIndex: 0,
+        positionMs: 0,
+        durationMs: Math.round((fetched[0]?.duration ?? 0) * 1000),
+        date: show?.date,
+        venue: show?.venue,
+        location: show?.location,
+        autoplay: true,
+      });
     },
-    [playRecording]
+    [playRecording, connectState?.showId]
   );
 
   const retryAutoplay = useCallback(() => {
