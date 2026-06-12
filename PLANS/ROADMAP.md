@@ -102,6 +102,18 @@ easily — Matrix vs SBD vs AUD, label Charlie Miller boards, etc. *(ebash42.)*
 Schema supports it: many recordings *per* show is fine (the deferred PK limit is
 the reverse — one recording → two shows). This is a UI problem: where to put the
 source selector on the show/now-playing surface.
+- **Crowd-sourced "best recording" overrides** — when the algorithmic default
+  (`shows.bestRecordingId`) is wrong, let users **recommend** the right tape:
+  an explicit "Recommend this as the best recording" action in the playlist menu
+  (shown when they're off the default) plus a gentle, throttled post-switch
+  prompt after they've listened a while. Recommendations collect server-side; an
+  admin curates them into a committed `data/` overrides file that folds into the
+  catalog build (overrides `bestRecordingId` in the seed); stretch goal is a
+  **live incremental patch** so a correction lands without a full DB release,
+  always deferring to a user's local override. Most plumbing already exists —
+  the picker, the per-user `recording_preferences` override, and its server
+  sync — so this is mostly the *recommendation* signal + admin curation + the
+  data/build loop. Plan: [`recording-recommendations.md`](recording-recommendations.md).
 
 ### 4. "Hot track" highlights on the mobile setlist
 Flag standout tracks (e.g. 🔥) on the setlist / now-playing screen, derived from
