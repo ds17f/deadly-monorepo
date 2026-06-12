@@ -109,10 +109,10 @@ class AppPreferences @Inject constructor(
     }
 
     private val _autoAdvanceEnabled = MutableStateFlow(
-        prefs.getBoolean(KEY_AUTO_ADVANCE_ENABLED, true)
+        prefs.getBoolean(KEY_AUTO_ADVANCE_ENABLED, false)
     )
 
-    /** ADR-0010: roll into the next show when one ends. On by default. */
+    /** ADR-0010: roll into the next show when one ends ("Autoplay"). Off by default. */
     val autoAdvanceEnabled: StateFlow<Boolean> = _autoAdvanceEnabled.asStateFlow()
 
     fun setAutoAdvanceEnabled(value: Boolean) {

@@ -18,10 +18,12 @@ import com.grateful.deadly.core.design.resources.IconResources
 @Composable
 fun PlayerSecondaryControls(
     isFavorite: Boolean,
+    isAutoplayEnabled: Boolean,
     connectDeviceName: String?,
     onEqualizerClick: () -> Unit,
     onConnectClick: () -> Unit,
     onFavoriteClick: () -> Unit,
+    onAutoplayClick: () -> Unit,
     onShareClick: () -> Unit,
     onQueueClick: () -> Unit,
     modifier: Modifier = Modifier
@@ -61,6 +63,18 @@ fun PlayerSecondaryControls(
 
         // Right section
         Row {
+            // Autoplay (auto-advance to the next show when one ends)
+            IconButton(
+                onClick = onAutoplayClick,
+                modifier = Modifier.size(40.dp)
+            ) {
+                Icon(
+                    painter = IconResources.PlayerControls.Autoplay(),
+                    contentDescription = if (isAutoplayEnabled) "Autoplay (active)" else "Autoplay",
+                    tint = if (isAutoplayEnabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+
             // Equalizer
             IconButton(
                 onClick = onEqualizerClick,

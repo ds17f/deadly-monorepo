@@ -184,6 +184,17 @@ struct ShowDetailScreen: View {
                     }
                     .buttonStyle(.plain)
 
+                    // Autoplay (roll into the next show when this one ends)
+                    Button {
+                        toggleAutoAdvance()
+                    } label: {
+                        Image(systemName: "infinity")
+                            .font(.title2)
+                            .foregroundStyle(container.appPreferences.autoAdvanceEnabled ? DeadlyColors.primary : .secondary)
+                            .frame(width: 44, height: 44)
+                    }
+                    .buttonStyle(.plain)
+
                     // Menu button
                     Button {
                         showMenuSheet = true
@@ -419,10 +430,33 @@ struct ShowDetailScreen: View {
 
     // MARK: - Menu sheet
 
+    private func toggleAutoAdvance() {
+        let newValue = !container.appPreferences.autoAdvanceEnabled
+        container.appPreferences.autoAdvanceEnabled = newValue
+        container.analyticsService.track("feature_use", props: [
+            "feature": "toggle_auto_advance",
+            "category": "playback",
+            "enabled": newValue,
+        ])
+    }
+
     private func menuSheet(_ show: Show) -> some View {
         NavigationStack {
             List {
                 Section {
+                    Button {
+                        toggleAutoAdvance()
+                    } label: {
+                        HStack(alignment: .top) {
+                            Label("Autoplay Next Show", systemImage: "infinity")
+                            Spacer()
+                            if container.appPreferences.autoAdvanceEnabled {
+                                Image(systemName: "checkmark")
+                                    .foregroundStyle(DeadlyColors.primary)
+                            }
+                        }
+                    }
+
                     Button {
                         if isFavorite {
                             try? container.favoritesService.removeFromFavorites(showId: currentShowId)

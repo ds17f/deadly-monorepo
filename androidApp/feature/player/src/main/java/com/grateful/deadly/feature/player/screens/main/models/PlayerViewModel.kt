@@ -9,6 +9,7 @@ import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.player.PanelContentService
 import com.grateful.deadly.core.api.player.PlayerService
+import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import com.grateful.deadly.core.media.equalizer.EqualizerState
@@ -33,11 +34,25 @@ class PlayerViewModel @Inject constructor(
     private val equalizerRepository: EqualizerRepository,
     private val connectService: ConnectService,
     val appPreferences: AppPreferences,
+    private val analyticsService: AnalyticsService,
     @ApplicationContext private val appContext: Context
 ) : ViewModel() {
 
     companion object {
         private const val TAG = "PlayerViewModel"
+    }
+
+    /** Autoplay (auto-advance to the next show when one ends). */
+    val autoAdvanceEnabled: StateFlow<Boolean> = appPreferences.autoAdvanceEnabled
+
+    fun toggleAutoAdvance() {
+        val newValue = !appPreferences.autoAdvanceEnabled.value
+        appPreferences.setAutoAdvanceEnabled(newValue)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "toggle_auto_advance",
+            "category" to "playback",
+            "enabled" to newValue,
+        ))
     }
 
     val connectRemoteDeviceName: StateFlow<String?> = combine(

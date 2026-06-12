@@ -20,12 +20,14 @@ fun PlaylistMenuSheet(
     venue: String?,
     location: String?,
     isFavorite: Boolean,
+    isAutoplayEnabled: Boolean,
     onFavoritesClick: () -> Unit,
     onDownloadClick: () -> Unit,
     onSetlistClick: () -> Unit,
     onCollectionsClick: () -> Unit,
     onShareClick: () -> Unit,
     onChooseRecordingClick: () -> Unit,
+    onAutoplayClick: () -> Unit,
     onEqualizerClick: () -> Unit,
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier
@@ -177,6 +179,31 @@ fun PlaylistMenuSheet(
                     text = "Choose Recording",
                     style = MaterialTheme.typography.bodyLarge
                 )
+            }
+
+            // Autoplay option (auto-advance to the next show when one ends)
+            run {
+                val accent = if (isAutoplayEnabled) MaterialTheme.colorScheme.primary else LocalContentColor.current
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { onAutoplayClick() }
+                        .padding(vertical = 16.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        painter = IconResources.PlayerControls.Autoplay(),
+                        contentDescription = "Autoplay Next Show",
+                        tint = accent,
+                        modifier = Modifier.size(24.dp)
+                    )
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Text(
+                        text = "Autoplay Next Show",
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = accent
+                    )
+                }
             }
 
             // Equalizer option

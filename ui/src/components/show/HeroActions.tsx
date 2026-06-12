@@ -130,6 +130,15 @@ export default function HeroActions({
           {fav ? "Favorited" : "Favorite"}
         </PillButton>
 
+        <PillButton
+          active={player.autoAdvanceEnabled}
+          onClick={player.toggleAutoAdvance}
+          title="Roll into the next show when this one ends"
+        >
+          <Icon name="autoplay" />
+          Autoplay Next Show
+        </PillButton>
+
         <PillButton active={reviewOpen || !!existing} onClick={() => setReviewOpen((o) => !o)}>
           <Icon name="star" filled={!!existing} />
           {existing ? "Your review" : "Review"}
@@ -213,15 +222,18 @@ export default function HeroActions({
 function PillButton({
   active,
   onClick,
+  title,
   children,
 }: {
   active?: boolean;
   onClick: () => void;
+  title?: string;
   children: React.ReactNode;
 }) {
   return (
     <button
       onClick={onClick}
+      title={title}
       className={`inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-semibold transition hover:scale-105 ${
         active
           ? "border-deadly-accent text-deadly-accent"
@@ -233,9 +245,15 @@ function PillButton({
   );
 }
 
-function Icon({ name, filled }: { name: "play" | "pause" | "heart" | "star" | "share" | "qr"; filled?: boolean }) {
+function Icon({ name, filled }: { name: "play" | "pause" | "heart" | "star" | "share" | "qr" | "autoplay"; filled?: boolean }) {
   const common = { width: 18, height: 18, viewBox: "0 0 24 24" };
   if (name === "play") return <svg {...common} fill="currentColor"><path d="M8 5v14l11-7z" /></svg>;
+  if (name === "autoplay")
+    return (
+      <svg {...common} fill="currentColor">
+        <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L7.8 14.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.77-1.53l7.03-6.24c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.38-3.39 3.38c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.41 5.4-5.38s-2.42-5.37-5.4-5.37z" />
+      </svg>
+    );
   if (name === "pause") return <svg {...common} fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z" /></svg>;
   if (name === "share")
     return (

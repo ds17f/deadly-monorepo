@@ -27,11 +27,13 @@ fun PlayerTrackActionsSheet(
     showDate: String,
     venue: String,
     isFavorite: Boolean,
+    isAutoplayEnabled: Boolean,
     onDismiss: () -> Unit,
     onShare: () -> Unit,
     onAddToPlaylist: () -> Unit,
     onDownload: () -> Unit,
     onFavorite: () -> Unit,
+    onAutoplay: () -> Unit,
     onEqualizer: () -> Unit,
     onQueue: () -> Unit,
     modifier: Modifier = Modifier
@@ -135,6 +137,13 @@ fun PlayerTrackActionsSheet(
             HorizontalDivider()
 
             ActionMenuRow(
+                text = "Autoplay Next Show",
+                icon = IconResources.PlayerControls.Autoplay(),
+                active = isAutoplayEnabled,
+                onClick = { onAutoplay() }
+            )
+
+            ActionMenuRow(
                 text = "Equalizer",
                 icon = IconResources.PlayerControls.Equalizer(),
                 onClick = {
@@ -165,8 +174,11 @@ private fun ActionMenuRow(
     text: String,
     icon: androidx.compose.ui.graphics.painter.Painter,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    subtitle: String? = null,
+    active: Boolean = false
 ) {
+    val accent = if (active) MaterialTheme.colorScheme.primary else LocalContentColor.current
     Row(
         modifier = modifier
             .fillMaxWidth()
@@ -177,13 +189,24 @@ private fun ActionMenuRow(
         Icon(
             painter = icon,
             contentDescription = text,
+            tint = accent,
             modifier = Modifier.size(24.dp)
         )
         Spacer(modifier = Modifier.width(16.dp))
-        Text(
-            text = text,
-            style = MaterialTheme.typography.bodyLarge
-        )
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = text,
+                style = MaterialTheme.typography.bodyLarge,
+                color = accent
+            )
+            if (subtitle != null) {
+                Text(
+                    text = subtitle,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
     }
 }
 

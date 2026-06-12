@@ -54,6 +54,7 @@ fun PlayerScreen(
     val isCurrentTrackFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
+    val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
 
     val recordingId = uiState.navigationInfo.recordingId
 
@@ -155,10 +156,12 @@ fun PlayerScreen(
             item {
                 PlayerSecondaryControls(
                     isFavorite = isCurrentTrackFavorite,
+                    isAutoplayEnabled = autoAdvanceEnabled,
                     connectDeviceName = connectRemoteDeviceName,
                     onEqualizerClick = { showEqualizerBottomSheet = true },
                     onConnectClick = { showConnectSheet = true },
                     onFavoriteClick = { viewModel.toggleCurrentTrackFavorite() },
+                    onAutoplayClick = { viewModel.toggleAutoAdvance() },
                     onShareClick = { showShareChooser = true },
                     onQueueClick = { showQueueBottomSheet = true },
                     modifier = Modifier.padding(horizontal = 24.dp, vertical = 12.dp)
@@ -187,11 +190,13 @@ fun PlayerScreen(
                 showDate = uiState.trackDisplayInfo.showDate,
                 venue = uiState.trackDisplayInfo.venue,
                 isFavorite = isCurrentTrackFavorite,
+                isAutoplayEnabled = autoAdvanceEnabled,
                 onDismiss = { showTrackActionsBottomSheet = false },
                 onShare = { showShareChooser = true },
                 onAddToPlaylist = { Toast.makeText(context, "Playlists are coming soon", Toast.LENGTH_SHORT).show() },
                 onDownload = { viewModel.downloadCurrentShow() },
                 onFavorite = { viewModel.toggleCurrentTrackFavorite() },
+                onAutoplay = { viewModel.toggleAutoAdvance() },
                 onEqualizer = { showEqualizerBottomSheet = true },
                 onQueue = { showQueueBottomSheet = true },
             )
