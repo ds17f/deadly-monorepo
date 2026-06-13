@@ -265,6 +265,28 @@ struct UserSyncAPIClient {
         try ensureOK(data: data, response: response)
     }
 
+    /// Upsert the preferred recording for a show.
+    func putRecordingPref(showId: String, recordingId: String) async throws {
+        let body = try JSONEncoder().encode(["recordingId": recordingId])
+        let (data, response) = try await request(
+            method: "PUT",
+            path: "/api/user/recordings/\(showId)",
+            body: body
+        )
+        try ensureOK(data: data, response: response)
+    }
+
+    /// Clear the preferred recording for a show (tombstone).
+    func deleteRecordingPref(showId: String) async throws {
+        let (data, response) = try await request(
+            method: "DELETE",
+            path: "/api/user/recordings/\(showId)",
+            body: nil
+        )
+        if let http = response as? HTTPURLResponse, http.statusCode == 404 { return }
+        try ensureOK(data: data, response: response)
+    }
+
     // MARK: - Internals
 
     private func client() throws -> APIClient {

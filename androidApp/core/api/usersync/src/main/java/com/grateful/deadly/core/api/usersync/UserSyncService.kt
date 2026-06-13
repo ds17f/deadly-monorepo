@@ -16,4 +16,8 @@ interface UserSyncService {
     suspend fun putReview(review: SyncReviewV3): Result<Unit>
     /** Delete a review (and its player tags) by showId. */
     suspend fun deleteReview(showId: String): Result<Unit>
+    /** Upsert the preferred recording for a show. */
+    suspend fun putRecordingPref(showId: String, recordingId: String): Result<Unit>
+    /** Clear the preferred recording for a show (tombstone). */
+    suspend fun deleteRecordingPref(showId: String): Result<Unit>
 }

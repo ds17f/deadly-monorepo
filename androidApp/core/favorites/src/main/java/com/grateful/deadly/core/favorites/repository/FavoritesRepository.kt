@@ -218,17 +218,21 @@ class FavoritesRepository @Inject constructor(
      */
     suspend fun setPreferredRecording(showId: String, recordingId: String?) {
         Log.d(TAG, "setPreferredRecording('$showId', '$recordingId')")
+        val now = System.currentTimeMillis()
         if (recordingId != null) {
             recordingPreferenceDao.upsert(
                 RecordingPreferenceEntity(
                     showId = showId,
                     recordingId = recordingId,
-                    updatedAt = System.currentTimeMillis()
+                    updatedAt = now,
+                    deletedAt = null,
                 )
             )
         } else {
-            recordingPreferenceDao.delete(showId)
+            // Soft-delete so the clear syncs as a tombstone (last-write-wins).
+            recordingPreferenceDao.softDelete(showId, deletedAt = now, updatedAt = now)
         }
+        favoritesPushService.enqueueAndPushRecordingPref(showId)
     }
 
     /**

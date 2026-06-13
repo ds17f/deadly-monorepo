@@ -24,6 +24,9 @@ struct SyncOutboxRecord: Codable, Sendable, Equatable, FetchableRecord, MutableP
         /// refId is the showId. The flusher reads the review row + its player
         /// tags at push time; a tombstoned row becomes a DELETE.
         static let review = "review"
+        /// refId is the showId. The flusher reads the recording_preferences
+        /// row at push time; an absent row becomes a DELETE.
+        static let recordingPref = "recording_pref"
     }
 
     mutating func didInsert(_ inserted: InsertionSuccess) {

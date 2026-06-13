@@ -9,7 +9,7 @@ import {
   getFavoriteShows, upsertFavoriteShow, deleteFavoriteShow,
   getFavoriteSongs, upsertFavoriteSong, deleteFavoriteSongByKey,
   getReviews, upsertReview, deleteReview,
-  getRecordingPreferences, upsertRecordingPreference,
+  getRecordingPreferences, upsertRecordingPreference, deleteRecordingPreference,
   getRecentShows, upsertRecentShow,
   getPlaybackPosition, upsertPlaybackPosition,
   getSettings, upsertSettings,
@@ -181,6 +181,15 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
       const { recordingId } = request.body as { recordingId: string };
       upsertRecordingPreference(request.user!.id, request.params.showId, recordingId);
       return reply.code(200).send({ ok: true });
+    });
+
+  app.delete<{ Params: { showId: string } }>(
+    "/api/user/recordings/:showId", {
+      schema: { tags: ["user"], summary: "Clear recording preference" },
+      preHandler: requireAuth,
+    }, async (request, reply) => {
+      const deleted = deleteRecordingPreference(request.user!.id, request.params.showId);
+      return reply.code(deleted ? 200 : 404).send({ ok: deleted });
     });
 
   // ── Recent Shows ────────────────────────────────────────────────

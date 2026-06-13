@@ -36,5 +36,8 @@ data class SyncOutboxEntity(
         /** refId is the showId. The flusher reads the review row + its player
          *  tags at push time; a tombstoned row becomes a DELETE. */
         const val KIND_REVIEW = "review"
+        /** refId is the showId. The flusher reads the recording_preferences
+         *  row at push time; an absent/tombstoned row becomes a DELETE. */
+        const val KIND_RECORDING_PREF = "recording_pref"
     }
 }

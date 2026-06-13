@@ -5,6 +5,7 @@ final class AppPreferences {
     private static let includeShowsWithoutRecordingsKey = "include_shows_without_recordings"
     private static let forceOnlineKey = "force_online"
     private static let localBackfilledV1Key = "local_backfilled_v1"
+    private static let localBackfilledV2Key = "local_backfilled_v2"
     private static let favoritesDisplayModeKey = "favorites_display_mode"
     private static let legacyLibraryDisplayModeKey = "library_display_mode"
     private static let eqEnabledKey = "eq_enabled"
@@ -84,6 +85,12 @@ final class AppPreferences {
     /// server, so the one-time startup backfill doesn't re-run.
     var localBackfilledV1: Bool {
         didSet { UserDefaults.standard.set(localBackfilledV1, forKey: Self.localBackfilledV1Key) }
+    }
+
+    /// V2 re-runs the backfill once more to cover recording preferences, which
+    /// V1 predated. Existing users (V1 already set) need this extra pass.
+    var localBackfilledV2: Bool {
+        didSet { UserDefaults.standard.set(localBackfilledV2, forKey: Self.localBackfilledV2Key) }
     }
 
     var favoritesDisplayMode: String {
@@ -206,6 +213,7 @@ final class AppPreferences {
             Self.useBetaModeKey: false,
             Self.forceOnlineKey: false,
             Self.localBackfilledV1Key: false,
+            Self.localBackfilledV2Key: false,
             Self.favoritesDisplayModeKey: "LIST",
             Self.eqEnabledKey: false,
             Self.eqPresetKey: "flat",
@@ -237,6 +245,7 @@ final class AppPreferences {
         }
         forceOnline = UserDefaults.standard.bool(forKey: Self.forceOnlineKey)
         localBackfilledV1 = UserDefaults.standard.bool(forKey: Self.localBackfilledV1Key)
+        localBackfilledV2 = UserDefaults.standard.bool(forKey: Self.localBackfilledV2Key)
         // Read new key first, fall back to legacy key for migration
         favoritesDisplayMode = UserDefaults.standard.string(forKey: Self.favoritesDisplayModeKey)
             ?? UserDefaults.standard.string(forKey: Self.legacyLibraryDisplayModeKey)
