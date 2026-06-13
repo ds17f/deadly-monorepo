@@ -6,6 +6,16 @@ import Foundation
 ///
 /// All seen/dismissed state lives here and is never sent to the server. Faithful
 /// port of the merge/prune/mark logic in `ui/src/lib/notifications.ts`.
+/// A local read/dismiss mutation worth pushing to the server (ADR-0015). The
+/// store stays free of networking; AppContainer wires `onStateChange` to the
+/// NotificationService push.
+enum NotificationStateChange {
+    case seen(id: Int64)       // markRead
+    case dismissed(id: Int64)  // archive
+    case seenAll               // markAllRead (bulk, all active)
+    case dismissedAll          // archiveAll (bulk, all active)
+}
+
 @MainActor
 @Observable
 final class NotificationStore {
@@ -26,6 +36,11 @@ final class NotificationStore {
     /// Set when a non-cold delta brings new eligible unread messages, so the UI
     /// can show a transient toast. Observed via `.onChange` (decision C).
     private(set) var lastArrival: NewArrival?
+
+    /// Fired after a local read/dismiss mutation so the owner can eagerly push
+    /// it to the server (ADR-0015). Nil until wired; the store itself never
+    /// touches the network.
+    var onStateChange: ((NotificationStateChange) -> Void)?
 
     /// This app's version (CFBundleShortVersionString), for targeting (decision E).
     let appVersion: String = (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String) ?? "0"
@@ -64,7 +79,10 @@ final class NotificationStore {
     /// reason, including cold start) so the caller can emit per-message
     /// `notification_received` analytics. Empty when nothing new arrived.
     @discardableResult
-    func merge(_ result: NotificationFetchResult) -> [CachedNotification] {
+    func merge(
+        _ result: NotificationFetchResult,
+        serverState: [NotificationStateRow] = []
+    ) -> [CachedNotification] {
         let coldStart = cursor == 0
         let now = NotificationClock.now()
         let knownIds = Set(notifications.map { $0.id })
@@ -89,6 +107,17 @@ final class NotificationStore {
             )
         }
 
+        // ADR-0015: overlay the server's per-user read/dismiss state (unix
+        // seconds → ms) onto the cache BEFORE computing unread/toast, so a
+        // message handled on another device never flashes unread. Union =
+        // earliest non-null per column, matching the server's MIN(COALESCE).
+        for row in serverState {
+            guard var m = byId[row.notificationId] else { continue }
+            m.seenAt = Self.unionEarliest(m.seenAt, row.seenAt.map { $0 * 1000 })
+            m.dismissedAt = Self.unionEarliest(m.dismissedAt, row.dismissedAt.map { $0 * 1000 })
+            byId[row.notificationId] = m
+        }
+
         // Prune: expired messages and long-dismissed ones.
         let pruned = byId.values.filter { m in
             let expired = m.isExpired(now: now)
@@ -108,12 +137,43 @@ final class NotificationStore {
             .filter { $0.isEligible(appVersion: appVersion) && $0.dismissedAt == nil }
             .sorted { $0.createdAt > $1.createdAt }
 
-        // Toast signal: only on a delta (never the cold-start backlog).
-        if !coldStart, let newest = fresh.first {
-            lastArrival = NewArrival(title: newest.title, count: fresh.count, key: newest.id)
+        // Toast signal: only on a delta (never the cold-start backlog) and never
+        // a message already seen on another device (the overlay merge above).
+        let toastable = fresh.filter { $0.seenAt == nil }
+        if !coldStart, let newest = toastable.first {
+            lastArrival = NewArrival(title: newest.title, count: toastable.count, key: newest.id)
         }
 
         return fresh
+    }
+
+    /// Earliest non-null of two timestamps — the union comparator (ADR-0015).
+    private static func unionEarliest(_ a: Int64?, _ b: Int64?) -> Int64? {
+        guard let a else { return b }
+        guard let b else { return a }
+        return Swift.min(a, b)
+    }
+
+    /// Local state the server is missing (or has later than ours) — the offline
+    /// catch-up flush for an eager push that failed while offline. Timestamps
+    /// returned in unix seconds; empty in the common already-synced case.
+    func unsyncedState(against server: [NotificationStateRow]) -> [NotificationStateRow] {
+        let byServer = Dictionary(uniqueKeysWithValues: server.map { ($0.notificationId, $0) })
+        var out: [NotificationStateRow] = []
+        for m in notifications {
+            guard m.seenAt != nil || m.dismissedAt != nil else { continue }
+            let s = byServer[m.id]
+            let needSeen = m.seenAt != nil && (s?.seenAt == nil || s!.seenAt! * 1000 > m.seenAt!)
+            let needDismissed = m.dismissedAt != nil && (s?.dismissedAt == nil || s!.dismissedAt! * 1000 > m.dismissedAt!)
+            if needSeen || needDismissed {
+                out.append(NotificationStateRow(
+                    notificationId: m.id,
+                    seenAt: needSeen ? m.seenAt! / 1000 : nil,
+                    dismissedAt: needDismissed ? m.dismissedAt! / 1000 : nil
+                ))
+            }
+        }
+        return out
     }
 
     /// Record an inbox impression for `id`; returns true the first time per
@@ -132,6 +192,7 @@ final class NotificationStore {
             return m
         }
         persist()
+        onStateChange?(.seen(id: id))
     }
 
     /// Clear the unread badge: stamp every unseen message as seen.
@@ -144,6 +205,7 @@ final class NotificationStore {
             return m
         }
         persist()
+        onStateChange?(.seenAll)
     }
 
     /// Archive (remove from the active queue; stays in the archive).
@@ -156,6 +218,7 @@ final class NotificationStore {
             return m
         }
         persist()
+        onStateChange?(.dismissed(id: id))
     }
 
     /// Archive every active eligible message at once.
@@ -170,6 +233,9 @@ final class NotificationStore {
             }
             return m
         }
-        if changed { persist() }
+        if changed {
+            persist()
+            onStateChange?(.dismissedAll)
+        }
     }
 }

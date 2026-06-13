@@ -108,6 +108,15 @@ struct SyncPlaybackPositionV3: Codable {
     let updatedAt: Int64
 }
 
+/// Per-user notification read/dismiss overlay (ADR-0015). Wire timestamps are
+/// unix SECONDS (the user-data API convention); the local NotificationStore
+/// keeps milliseconds, so callers convert at the boundary.
+struct NotificationStateRow: Codable {
+    let notificationId: Int64
+    let seenAt: Int64?
+    let dismissedAt: Int64?
+}
+
 // MARK: - Errors
 
 enum UserSyncError: LocalizedError {
@@ -219,6 +228,40 @@ struct UserSyncAPIClient {
             body: nil
         )
         if let http = response as? HTTPURLResponse, http.statusCode == 404 { return }
+        try ensureOK(data: data, response: response)
+    }
+
+    // MARK: - Notification state (ADR-0015)
+
+    func pullNotificationState() async throws -> [NotificationStateRow] {
+        let (data, response) = try await get(path: "/api/user/notifications/state")
+        try ensureOK(data: data, response: response)
+        return try JSONDecoder().decode([NotificationStateRow].self, from: data)
+    }
+
+    /// Granular push — backs markRead (seenAt) / archive (dismissedAt).
+    func pushNotificationState(id: Int64, seenAt: Int64?, dismissedAt: Int64?) async throws {
+        struct Body: Codable { let seenAt: Int64?; let dismissedAt: Int64? }
+        let body = try JSONEncoder().encode(Body(seenAt: seenAt, dismissedAt: dismissedAt))
+        let (data, response) = try await request(
+            method: "POST",
+            path: "/api/user/notifications/\(id)/state",
+            body: body
+        )
+        try ensureOK(data: data, response: response)
+    }
+
+    /// Bulk push — backs markAllRead / archiveAll. `ids: nil` targets every
+    /// currently-active message server-side. Nil optionals are omitted by the
+    /// JSON encoder, so the server sees only the field(s) being set.
+    func pushNotificationStateBulk(seenAt: Int64?, dismissedAt: Int64?, ids: [Int64]?) async throws {
+        struct Body: Codable { let seenAt: Int64?; let dismissedAt: Int64?; let ids: [Int64]? }
+        let body = try JSONEncoder().encode(Body(seenAt: seenAt, dismissedAt: dismissedAt, ids: ids))
+        let (data, response) = try await request(
+            method: "POST",
+            path: "/api/user/notifications/state",
+            body: body
+        )
         try ensureOK(data: data, response: response)
     }
 

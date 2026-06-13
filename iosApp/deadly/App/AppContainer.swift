@@ -359,12 +359,17 @@ final class AppContainer {
             }
 
             // In-app messaging — public/global feed; store + fetch service.
-            // No auth, so it isn't wired into the sign-in flow; deadlyApp pulls
-            // it on cold start + foreground.
+            // The feed is public; per-user read/dismiss state (ADR-0015) rides
+            // the authed sync client. deadlyApp pulls on cold start + foreground.
             let notifStore = MainActor.assumeIsolated { NotificationStore() }
             notificationStore = notifStore
             notificationService = MainActor.assumeIsolated {
-                NotificationService(appPreferences: prefs, store: notifStore, analytics: analytics)
+                let svc = NotificationService(
+                    appPreferences: prefs, store: notifStore, analytics: analytics,
+                    authService: auth, userSync: userSync)
+                // Eager-push local read/dismiss mutations to the server.
+                notifStore.onStateChange = { [weak svc] change in svc?.pushStateChange(change) }
+                return svc
             }
 
             let coldStartMs = Int((CFAbsoluteTimeGetCurrent() - initStart) * 1000)
