@@ -187,35 +187,30 @@ blocks onboarding for affected users.
   retire: add Settings to `UserMenu`, surface Recent/Reviews in mobile nav, then
   drop the strip. Until that nav exists, leave it.
 
-### 11. UI decluttering — Settings + player/playlist controls (cross-platform) — NEXT UP
-The settings screens (iOS `SettingsScreen.swift`, Android `SettingsScreen.kt`,
-web `/me` SettingsTab) have grown overloaded and are increasingly hard to work in
-— findability is poor and adding a toggle means scanning a long flat list (the
-"When a show ends" / Playback section just landed into this sprawl). Regroup into
-clear sections with better findability; keep it a presentation/IA change, not new
-settings. Independent of any feature — the show-queue plan flags it as
-"Settings cleanup (independent, anytime)." Do it before the settings list grows
-again (shuffle, queue, and source-picker options are all coming).
+### 11. UI decluttering — Settings + player/playlist controls (cross-platform) — ✅ SHIPPED (2026-06-13)
+The settings screens, player, and playlist control surfaces had grown overloaded
+(scroll-forever flat Settings, `∞ Autoplay` crowding the player, playlist action
+rows duplicating into the overflow). Reframed via first principles ("control
+altitude = frequency × reversibility"; "one control, one home"; progressive
+disclosure) and shipped across all platforms.
 
-**Direction (maintainer, 2026-06-11):** master-detail, **all three platforms**.
-The current single complicated screen becomes a **left panel of one-line category
-rows** — `Autoplay >`, `Home Screen >`, etc. — each drilling into its own detail
-pane with only that category's controls. On web this is a literal left list +
-right detail pane; on mobile it's a category list that pushes to a detail screen.
-Collapses the long flat list into a scannable index. The section headers already
-exist (iOS/Android: Account, Playback, Preferences, Home Screen, Audio, Connect,
-Favorites & Data, Support, About) — the work is turning sections into drill-in
-categories, not inventing new groupings. Not started.
+**Delivered:**
+- **Player + playlist** (iOS + Android): unified `⋯`-menu taxonomy (Playback /
+  This Show / Share), Favorite moved to the track-info row, inline/overflow
+  duplication removed, dead stubs deleted. Reusable Autoplay confirmation toast. (#67)
+- **Web**: Autoplay given one home, Favorite + Share added to the expanded player,
+  categorized web Settings (Account · Playback · Community · About). (#67)
+- **Mobile Settings** (iOS + Android): flat list → a scannable landing of
+  categories (Account · Playback & Audio · Home Layout · Library & Data), each its
+  own screen, with all home-layout knobs consolidated onto the Home Layout screen;
+  About/Support + version footer on the root; leading icons + warmer typography. (#68)
 
-**Designed + scope expanded (2026-06-12):** the cleanup now also covers the
-**player and playlist control surfaces** (the `∞ Autoplay` clutter, inline/overflow
-duplication, iOS/Android stub drift), not just Settings. First principles, the
-locked per-surface layouts, the unified `⋯`-menu taxonomy (Playback / This Show /
-Share, mobile only), the web light-touch posture, and the Settings categorized-
-subscreens + consolidated Home Layout direction are all captured in
-**ADR-0014** ([`docs/adr/0014-ui-control-altitude-and-decluttering.md`](../docs/adr/0014-ui-control-altitude-and-decluttering.md));
-execution notes + current-state inventory in
-[`PLANS/ui-decluttering.md`](ui-decluttering.md). Nothing built yet.
+Design of record: **ADR-0014** ([`docs/adr/0014-…`](../docs/adr/0014-ui-control-altitude-and-decluttering.md));
+execution log in [`PLANS/ui-decluttering.md`](ui-decluttering.md).
+
+**Deliberately deferred** (tracked elsewhere, not regressions): `Queue` returns to
+the player inline cluster when the queue feature ships (ADR-0010 / `show-queue-v2`);
+`＋ Add to Playlist` when playlists exist.
 
 ## TECH DEBT
 
