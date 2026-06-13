@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.38.1] - 2026-06-13
+
+### Bug Fixes
+* rename 'Buy Me a Coffee' to 'Support TheDeadly' (c9e79c7a)
+
+
 ## [2.38.0] - 2026-06-12
 
 ### New Features
@@ -9,8 +15,6 @@
 
 ### Bug Fixes
 * stop iOS follower self-starting on reconnect + socket re-entrancy guard (#70) (9e360c18)
-
-
 ## [2.37.0] - 2026-06-11
 
 ### New Features
