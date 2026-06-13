@@ -118,6 +118,18 @@ export default function ConnectProvider({
   const connect = useCallback(() => {
     if (!shouldConnectRef.current) return;
 
+    // Re-entrancy guard: a reconnect timer and the auth effect (or a second
+    // trigger) can both call connect() before the in-flight socket settles,
+    // leaving two sockets for the same deviceId. The server then closes the
+    // older one with 4000 "replaced by new connection" — whose onclose
+    // reconnects and replaces again, a self-perpetuating churn. Bail if a
+    // socket is already opening or open; onclose nulls wsRef before reconnecting.
+    const existing = wsRef.current;
+    if (existing && (existing.readyState === WebSocket.CONNECTING || existing.readyState === WebSocket.OPEN)) {
+      log("connect: socket already opening/open, skipping");
+      return;
+    }
+
     const deviceId = getOrCreateDeviceId();
     const deviceName = getDeviceName();
     setMyDeviceId(deviceId);
@@ -235,8 +247,14 @@ export default function ConnectProvider({
       setConnected(false);
       wsRef.current = null;
 
-      // 4003 = Unauthorized (terminal), 4001 = heartbeat timeout (reconnect)
-      if (!shouldConnectRef.current || event.code === 4003) {
+      // 4003 = Unauthorized (terminal). 4001 = heartbeat timeout (reconnect).
+      // 4000 = "replaced by new connection": the server already has a newer
+      // socket for this deviceId (e.g. a second tab sharing the localStorage
+      // deviceId, or a stale reconnect). Reconnecting here would re-register
+      // and kick that newer socket, whose onclose reconnects and kicks us back
+      // — a self-perpetuating churn. The newer socket is the rightful owner, so
+      // treat 4000 as terminal and stay down.
+      if (!shouldConnectRef.current || event.code === 4003 || event.code === 4000) {
         log(`Not reconnecting: shouldConnect=${shouldConnectRef.current} code=${event.code}`);
         return;
       }
