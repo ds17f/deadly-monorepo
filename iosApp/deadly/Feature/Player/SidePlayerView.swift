@@ -4,10 +4,12 @@ import SwiftUI
 /// the "more than mini, less than full" player from the tablet/landscape
 /// design. Sized to fit a single landscape screen without scrolling.
 ///
-/// Layout (top → bottom): a mini-player-style header (thumbnail + track info +
-/// favorite), a seekable scrubber, then — pushed to the bottom — a secondary
-/// action row (Connect · Share · Equalizer · ⋯ overflow) above the primary
-/// transport controls, which stay pinned at the bottom.
+/// Layout (top → bottom): a header card — album art with the show date + venue
+/// stacked beside it — then the song title and a seekable scrubber. The art
+/// scales with the column height so the upper block fills the available space
+/// instead of leaving a gap. A secondary action row (Connect · Share ·
+/// Equalizer · ⋯ overflow) sits above the primary transport controls, which
+/// stay pinned at the bottom.
 ///
 /// Contextual: the caller (`MainNavigation.rootLayout`) only mounts this column
 /// while a track is loaded (`service.isVisible`), so the content pane reclaims
@@ -44,26 +46,36 @@ struct SidePlayerView: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
-            header
+        GeometryReader { geo in
+            // Art grows with the column height so the upper block fills the
+            // space (small on a short landscape phone, large on a tall iPad).
+            let coverSize = min(max(geo.size.height * 0.34, 96), 220)
 
-            Spacer().frame(height: 16)
+            VStack(spacing: 0) {
+                header(coverSize: coverSize)
 
-            scrubber
+                Spacer().frame(height: 16)
 
-            // Flexible space between the jog and the bottom-pinned controls.
-            Spacer(minLength: 12)
+                titleRow
 
-            secondaryActions
+                Spacer().frame(height: 18)
 
-            Spacer().frame(height: 16)
+                scrubber
 
-            transport
+                // Absorbs any residual height above the bottom-pinned controls.
+                Spacer(minLength: 12)
+
+                secondaryActions
+
+                Spacer().frame(height: 16)
+
+                transport
+            }
+            .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
+            .padding(.horizontal, 20)
+            .padding(.vertical, 20)
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 20)
         .frame(width: Self.panelWidth)
-        .frame(maxHeight: .infinity)
         .background(Color(.secondarySystemBackground))
         .sheet(isPresented: $showConnectSheet) {
             ConnectSheet()
@@ -118,39 +130,50 @@ struct SidePlayerView: View {
         }
     }
 
-    // MARK: - Header (mini-player style: thumbnail + info + favorite)
+    // MARK: - Header (album art + date / venue beside it)
 
-    private var header: some View {
-        HStack(spacing: 12) {
-            Button {
-                showFullPlayer = true
-            } label: {
-                HStack(spacing: 12) {
-                    ShowArtwork(
-                        recordingId: service.artworkRecordingId,
-                        imageUrl: service.artworkURL,
-                        size: 56,
-                        cornerRadius: DeadlySize.artworkCornerRadius
-                    )
+    private func header(coverSize: CGFloat) -> some View {
+        HStack(alignment: .top, spacing: 14) {
+            ShowArtwork(
+                recordingId: service.artworkRecordingId,
+                imageUrl: service.artworkURL,
+                size: coverSize,
+                cornerRadius: DeadlySize.carouselCornerRadius
+            )
+            .shadow(color: .black.opacity(0.25), radius: 8, y: 4)
+            .contentShape(Rectangle())
+            .onTapGesture { showFullPlayer = true }
 
-                    VStack(alignment: .leading, spacing: 3) {
-                        Text(service.trackTitle ?? "")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(.primary)
-                            .lineLimit(2)
-                            .multilineTextAlignment(.leading)
+            VStack(alignment: .leading, spacing: 6) {
+                Text(service.showDate ?? "")
+                    .font(.headline)
+                    .foregroundStyle(.primary)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
 
-                        Text(service.displaySubtitle ?? "")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                            .lineLimit(1)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .contentShape(Rectangle())
+                Text(service.venue ?? "")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(3)
+                    .multilineTextAlignment(.leading)
+
+                Spacer(minLength: 0)
             }
-            .buttonStyle(.plain)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+
+    // MARK: - Title + favorite
+
+    private var titleRow: some View {
+        HStack(alignment: .center, spacing: 8) {
+            Text(service.trackTitle ?? "")
+                .font(.title3)
+                .fontWeight(.semibold)
+                .foregroundStyle(.primary)
+                .lineLimit(2)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
 
             Button {
                 toggleFavoriteSong()
@@ -188,10 +211,6 @@ struct SidePlayerView: View {
                 let posSec = sliderValue.map { $0 * durSec }
                     ?? Double(service.positionMs) / 1000.0
                 Text(formatTime(posSec))
-                Spacer()
-                if service.trackCount > 0 {
-                    Text("Track \(service.trackIndex + 1) of \(service.trackCount)")
-                }
                 Spacer()
                 Text("-\(formatTime(max(0, durSec - posSec)))")
             }

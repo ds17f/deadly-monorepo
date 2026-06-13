@@ -2,10 +2,12 @@ package com.grateful.deadly.feature.player.screens.main
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -50,18 +52,19 @@ import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
  * right-column "more than mini, less than full" player from the tablet/landscape
  * design.
  *
- * Sized to fit a single landscape screen without scrolling. Layout (top →
- * bottom): a mini-player-style header (small thumbnail + track info + favorite),
- * a seekable scrubber, then — pushed to the bottom — a secondary action row
- * (Connect · Share · Equalizer · ⋯ overflow) above the primary transport
- * controls, which stay pinned at the bottom.
+ * Layout (top → bottom): a header card — album art with the show date + venue
+ * stacked beside it — then the song title and a seekable scrubber. The art
+ * scales with the column height so the upper block fills the available space
+ * instead of leaving a gap. A secondary action row (Connect · Share ·
+ * Equalizer · ⋯ overflow) sits above the primary transport controls, which
+ * stay pinned at the bottom.
  *
  * Contextual: renders nothing when no track is loaded, so the column collapses
  * and the content pane takes the full width when idle. Reuses [PlayerViewModel]
  * (which observes the shared playback service), so it stays in sync with the
  * mini and full players.
  *
- * @param onTapToExpand tapping the header opens the full player (Phase 3 will make
+ * @param onTapToExpand tapping the cover opens the full player (Phase 3 will make
  *   this the in-place "full-wide" expand instead of the full-screen route).
  * @param onNavigateToPlaylist target for the "⋯" menu's This Show / Choose
  *   Recording actions (the playlist is their home).
@@ -94,158 +97,171 @@ fun PlayerSidePanel(
         color = MaterialTheme.colorScheme.surface,
         shadowElevation = 8.dp
     ) {
-        Column(
-            modifier = Modifier
-                .width(320.dp)
-                .fillMaxHeight()
-                .systemBarsPadding()
-                .padding(horizontal = 20.dp, vertical = 20.dp)
-        ) {
-            // Mini-player-style header: thumbnail + title/subtitle + favorite.
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { onTapToExpand() },
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                Card(
-                    modifier = Modifier
-                        .size(56.dp)
-                        .clip(RoundedCornerShape(8.dp)),
-                    colors = CardDefaults.cardColors(
-                        containerColor = MaterialTheme.colorScheme.primaryContainer
-                    )
-                ) {
-                    ShowArtwork(
-                        recordingId = uiState.trackDisplayInfo.recordingId,
-                        imageUrl = uiState.trackDisplayInfo.coverImageUrl,
-                        contentDescription = "Album Art",
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                }
+        BoxWithConstraints {
+            // Art grows with the column height so the upper block fills the
+            // space (small on a short landscape phone, large on a tall tablet).
+            val coverSize = (this.maxHeight * 0.34f).coerceIn(96.dp, 220.dp)
 
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = uiState.trackDisplayInfo.title,
-                        style = MaterialTheme.typography.titleSmall,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface,
-                        maxLines = 2,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                    Text(
-                        text = uiState.trackDisplayInfo.showDate,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                    if (uiState.trackDisplayInfo.venue.isNotEmpty()) {
+            Column(
+                modifier = Modifier
+                    .width(320.dp)
+                    .fillMaxHeight()
+                    .systemBarsPadding()
+                    .padding(horizontal = 20.dp, vertical = 20.dp)
+            ) {
+                // Header card: album art + date / venue beside it.
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(14.dp)
+                ) {
+                    Card(
+                        modifier = Modifier
+                            .size(coverSize)
+                            .clip(RoundedCornerShape(12.dp))
+                            .clickable { onTapToExpand() },
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.primaryContainer
+                        )
+                    ) {
+                        ShowArtwork(
+                            recordingId = uiState.trackDisplayInfo.recordingId,
+                            imageUrl = uiState.trackDisplayInfo.coverImageUrl,
+                            contentDescription = "Album Art",
+                            modifier = Modifier.fillMaxSize()
+                        )
+                    }
+
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = uiState.trackDisplayInfo.showDate,
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.SemiBold,
+                            color = MaterialTheme.colorScheme.onSurface,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
                         Text(
                             text = uiState.trackDisplayInfo.venue,
-                            style = MaterialTheme.typography.bodySmall,
+                            style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            maxLines = 1,
+                            maxLines = 3,
                             overflow = TextOverflow.Ellipsis
                         )
                     }
                 }
 
-                IconButton(
-                    onClick = { viewModel.toggleCurrentTrackFavorite() },
-                    modifier = Modifier.size(40.dp)
-                ) {
-                    Icon(
-                        painter = if (isFavorite) IconResources.Content.Favorite() else IconResources.Content.FavoriteBorder(),
-                        contentDescription = if (isFavorite) "Remove from Favorites" else "Add to Favorites",
-                        tint = if (isFavorite) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(26.dp)
-                    )
-                }
-            }
+                Spacer(modifier = Modifier.height(16.dp))
 
-            Spacer(modifier = Modifier.height(20.dp))
-
-            PlayerProgressControl(
-                currentTime = uiState.progressDisplayInfo.currentPosition,
-                totalTime = uiState.progressDisplayInfo.totalDuration,
-                progress = uiState.progressDisplayInfo.progressPercentage,
-                onSeek = viewModel::onSeek
-            )
-
-            // Flexible space between the jog and the bottom-pinned controls.
-            Spacer(modifier = Modifier.weight(1f))
-
-            // Secondary actions: Connect (left) · Share · Equalizer · ⋯ (right).
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
+                // Song title + favorite.
                 Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .height(40.dp)
-                        .clip(RoundedCornerShape(20.dp))
-                        .clickable { showConnectSheet = true }
-                        .padding(horizontal = 8.dp)
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Icon(
-                        painter = IconResources.Content.Cast(),
-                        contentDescription = "Connect",
-                        tint = if (connectRemoteDeviceName != null) MaterialTheme.colorScheme.primary
-                               else MaterialTheme.colorScheme.onSurfaceVariant
+                    Text(
+                        text = uiState.trackDisplayInfo.title,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.weight(1f)
                     )
-                    if (connectRemoteDeviceName != null) {
-                        Spacer(Modifier.width(8.dp))
-                        Text(
-                            text = connectRemoteDeviceName!!,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.primary,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.widthIn(max = 80.dp)
+                    IconButton(
+                        onClick = { viewModel.toggleCurrentTrackFavorite() },
+                        modifier = Modifier.size(40.dp)
+                    ) {
+                        Icon(
+                            painter = if (isFavorite) IconResources.Content.Favorite() else IconResources.Content.FavoriteBorder(),
+                            contentDescription = if (isFavorite) "Remove from Favorites" else "Add to Favorites",
+                            tint = if (isFavorite) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.size(26.dp)
                         )
                     }
                 }
 
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    IconButton(onClick = { showShareChooser = true }, modifier = Modifier.size(40.dp)) {
+                Spacer(modifier = Modifier.height(18.dp))
+
+                PlayerProgressControl(
+                    currentTime = uiState.progressDisplayInfo.currentPosition,
+                    totalTime = uiState.progressDisplayInfo.totalDuration,
+                    progress = uiState.progressDisplayInfo.progressPercentage,
+                    onSeek = viewModel::onSeek
+                )
+
+                // Absorbs any residual height above the bottom-pinned controls.
+                Spacer(modifier = Modifier.weight(1f))
+
+                // Secondary actions: Connect (left) · Share · Equalizer · ⋯ (right).
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .height(40.dp)
+                            .clip(RoundedCornerShape(20.dp))
+                            .clickable { showConnectSheet = true }
+                            .padding(horizontal = 8.dp)
+                    ) {
                         Icon(
-                            painter = IconResources.Content.Share(),
-                            contentDescription = "Share",
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            painter = IconResources.Content.Cast(),
+                            contentDescription = "Connect",
+                            tint = if (connectRemoteDeviceName != null) MaterialTheme.colorScheme.primary
+                                   else MaterialTheme.colorScheme.onSurfaceVariant
                         )
+                        if (connectRemoteDeviceName != null) {
+                            Spacer(Modifier.width(8.dp))
+                            Text(
+                                text = connectRemoteDeviceName!!,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.primary,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                                modifier = Modifier.widthIn(max = 80.dp)
+                            )
+                        }
                     }
-                    IconButton(onClick = { showEqualizerBottomSheet = true }, modifier = Modifier.size(40.dp)) {
-                        Icon(
-                            painter = IconResources.PlayerControls.Equalizer(),
-                            contentDescription = "Equalizer",
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                    IconButton(onClick = { showTrackActionsBottomSheet = true }, modifier = Modifier.size(40.dp)) {
-                        Icon(
-                            painter = IconResources.Navigation.MoreVertical(),
-                            contentDescription = "More options",
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
+
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        IconButton(onClick = { showShareChooser = true }, modifier = Modifier.size(40.dp)) {
+                            Icon(
+                                painter = IconResources.Content.Share(),
+                                contentDescription = "Share",
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        IconButton(onClick = { showEqualizerBottomSheet = true }, modifier = Modifier.size(40.dp)) {
+                            Icon(
+                                painter = IconResources.PlayerControls.Equalizer(),
+                                contentDescription = "Equalizer",
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        IconButton(onClick = { showTrackActionsBottomSheet = true }, modifier = Modifier.size(40.dp)) {
+                            Icon(
+                                painter = IconResources.Navigation.MoreVertical(),
+                                contentDescription = "More options",
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
                     }
                 }
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                // Primary transport — pinned at the bottom.
+                PlayerEnhancedControls(
+                    isPlaying = uiState.isPlaying,
+                    isLoading = uiState.isLoading,
+                    hasNext = uiState.hasNext,
+                    onPlayPause = viewModel::onPlayPauseClicked,
+                    onPrevious = viewModel::onPreviousClicked,
+                    onNext = viewModel::onNextClicked
+                )
             }
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            // Primary transport — pinned at the bottom.
-            PlayerEnhancedControls(
-                isPlaying = uiState.isPlaying,
-                isLoading = uiState.isLoading,
-                hasNext = uiState.hasNext,
-                onPlayPause = viewModel::onPlayPauseClicked,
-                onPrevious = viewModel::onPreviousClicked,
-                onNext = viewModel::onNextClicked
-            )
         }
     }
 
