@@ -17,7 +17,7 @@
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
 .PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output web-deploy web-promote infra-logs infra-ssh images-build
 .PHONY: data-download data-generate data-package data-build-db data-download-stage01 data-upload-stage01 data-collect data-release data-clean
-.PHONY: db-backup-list db-restore db-pull-analytics
+.PHONY: db-backup-list db-restore db-pull-analytics db-pull-users db-pull
 
 # Load KEYCHAIN_PASSWORD from .env if not set in environment.
 # Exported so recipes that read $$KEYCHAIN_PASSWORD from the shell (rather than
@@ -289,6 +289,8 @@ help:
 	@echo "  db-backup-list   - List available database backups in B2"
 	@echo "  db-restore       - Download latest backup (or specific: make db-restore BACKUP=users-XXX.db)"
 	@echo "  db-pull-analytics - Pull analytics.db from prod into api-data/"
+	@echo "  db-pull-users    - Pull users.db (live state snapshot) from prod into api-data/"
+	@echo "  db-pull          - Pull both analytics.db + users.db from prod into api-data/"
 	@echo ""
 	@echo "DOCUMENTATION:"
 	@echo "  docs-help       - Show documentation-specific help"
@@ -976,3 +978,21 @@ db-pull-analytics:
 	@rsync -avz -e "ssh -i $(PROD_SSH_KEY)" deploy@$(PROD_IP):/tmp/analytics.db api-data/analytics.db
 	@rm -f api-data/analytics.db-shm api-data/analytics.db-wal
 	@echo "Done: api-data/analytics.db"
+
+# Pull users.db from prod into local api-data/
+# Live snapshot of the userdata state tables (favorites, reviews, recents,
+# playback_position, recording_preferences, user_settings, notifications…).
+# Unlike db-restore (which fetches a B2 backup), this is a current snapshot.
+# Uses sqlite3 .backup to produce a consistent snapshot (handles WAL correctly)
+db-pull-users:
+	@mkdir -p api-data
+	@echo "Creating consistent backup of users.db on prod..."
+	@ssh -i $(PROD_SSH_KEY) deploy@$(PROD_IP) \
+		"sqlite3 /opt/deadly/api-data/users.db '.backup /tmp/users.db'"
+	@rsync -avz -e "ssh -i $(PROD_SSH_KEY)" deploy@$(PROD_IP):/tmp/users.db api-data/users.db
+	@rm -f api-data/users.db-shm api-data/users.db-wal
+	@echo "Done: api-data/users.db"
+
+# Pull both prod databases (analytics.db + users.db) into local api-data/
+db-pull: db-pull-analytics db-pull-users
+	@echo "Done: pulled analytics.db + users.db"
