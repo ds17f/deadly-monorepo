@@ -38,6 +38,8 @@ android {
 
 dependencies {
     implementation(project(":core:database"))
+    // Per-user read/dismiss overlay (ADR-0015) rides the authed /api/user path.
+    implementation(project(":core:api:auth"))
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.56.1")

@@ -51,8 +51,8 @@ export default function RootLayout({
       <body className="min-h-screen bg-deadly-bg text-white antialiased">
         <ServiceWorkerRegistrar />
         <ToastProvider>
-        <NotificationsProvider>
         <AuthProvider>
+        <NotificationsProvider>
         <UserDataProvider>
         <ConnectProvider>
         <PlayerProvider>
@@ -61,8 +61,8 @@ export default function RootLayout({
         </PlayerProvider>
         </ConnectProvider>
         </UserDataProvider>
-        </AuthProvider>
         </NotificationsProvider>
+        </AuthProvider>
         </ToastProvider>
       </body>
     </html>

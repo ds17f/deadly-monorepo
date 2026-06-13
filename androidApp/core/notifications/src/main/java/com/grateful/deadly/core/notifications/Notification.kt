@@ -36,6 +36,25 @@ data class NotificationWire(
 data class NotificationFetchResult(
     val messages: List<NotificationWire> = emptyList(),
     val cursor: Long = 0,
+    /**
+     * Authoritative set of currently-active ids — clients prune any cached
+     * message not in it (the only signal of a server-side retire). Null for
+     * older servers (= don't prune on that basis). ADR-0015.
+     */
+    val activeIds: List<Long>? = null,
+)
+
+/**
+ * Per-user read/dismiss overlay row (ADR-0015). Wire timestamps are unix
+ * SECONDS (the user-data API convention); the local store keeps milliseconds,
+ * so the coordinator converts at the boundary. camelCase matches the server's
+ * authed `/api/user/notifications/state` payload.
+ */
+@Serializable
+data class NotificationStateRow(
+    val notificationId: Long,
+    val seenAt: Long? = null,
+    val dismissedAt: Long? = null,
 )
 
 /** A cached message plus local-only state. Never sent back to the server. */

@@ -73,6 +73,13 @@ sealed interface PendingDeepLink {
         val collectionId: String
     ) : PendingDeepLink
 }
+
+/** Content for the shared AppToast overlay. [onAction] non-null = a tappable pill. */
+private data class ToastUi(
+    val text: String,
+    val actionLabel: String? = null,
+    val onAction: (() -> Unit)? = null,
+)
 /**
  * MainNavigation - Scalable navigation architecture
  *
@@ -112,43 +119,50 @@ fun MainNavigation(
     val prevIsOffline = remember { mutableStateOf<Boolean?>(null) }
     var pendingDeepLink by remember { mutableStateOf<PendingDeepLink?>(null) }
 
-    // New-message toast: a snackbar with a "View" action that opens the inbox.
-    // Deduped by arrival key so rotation/recomposition can't re-toast (decision C).
+    // The new-message toast and the app-wide transient toast share one
+    // top-of-z-stack overlay (AppToast), which — unlike the scaffold
+    // SnackbarHost — renders above the bottom bar + mini player. `toastUi` is
+    // the retained content (kept through the exit animation), `toastVisible` is
+    // the show/hide trigger, and `toastNonce` re-arms the auto-dismiss timer on
+    // each new toast (so identical back-to-back messages still re-trigger it).
     val notificationViewModel: NotificationViewModel = hiltViewModel()
     val lastToastKey = remember { mutableStateOf<Long?>(null) }
+    val toastUi = remember { mutableStateOf<ToastUi?>(null) }
+    var toastVisible by remember { mutableStateOf(false) }
+    var toastNonce by remember { mutableStateOf(0) }
+
+    fun showToast(ui: ToastUi) {
+        toastUi.value = ui
+        toastVisible = true
+        toastNonce++
+    }
+
+    // New in-app messages: tap the pill to open the inbox. Deduped by arrival
+    // key so rotation/recomposition can't re-toast (decision C).
     LaunchedEffect(Unit) {
         notificationViewModel.newArrivals.collect { arrival ->
             if (lastToastKey.value == arrival.key) return@collect
             lastToastKey.value = arrival.key
             notificationViewModel.onToastShown(arrival)
             val msg = if (arrival.count > 1) "${arrival.count} new messages" else "New: ${arrival.title}"
-            val result = snackbarHostState.showSnackbar(
-                message = msg,
-                actionLabel = "View",
-                duration = SnackbarDuration.Short,
-            )
-            if (result == SnackbarResult.ActionPerformed) {
+            showToast(ToastUi(text = msg, actionLabel = "View", onAction = {
                 notificationViewModel.onToastTap(arrival)
                 navController.navigate("notifications")
-            }
+            }))
         }
     }
 
-    // App-wide transient toast (e.g. the Autoplay toggle confirmation). Rendered
-    // as a top-of-z-stack overlay below (not via the scaffold SnackbarHost, which
-    // is occluded by the bottom bar + mini player on most screens).
-    var toastMessage by remember { mutableStateOf<String?>(null) }
-    val toastText = remember { mutableStateOf("") }
+    // App-wide transient confirmations (e.g. the Autoplay toggle) — non-actionable.
     LaunchedEffect(Unit) {
         appViewModel.toasts.collect { msg ->
-            toastText.value = msg
-            toastMessage = msg
+            showToast(ToastUi(text = msg))
         }
     }
-    LaunchedEffect(toastMessage) {
-        if (toastMessage != null) {
+
+    LaunchedEffect(toastNonce) {
+        if (toastVisible) {
             delay(2500)
-            toastMessage = null
+            toastVisible = false
         }
     }
 
@@ -385,9 +399,10 @@ fun MainNavigation(
             }
 
             // App-wide transient toast — last child = topmost z, visible above
-            // every screen and the mini player.
+            // every screen and the mini player. Content is retained in `toastUi`
+            // so it stays rendered through the exit animation after hide.
             androidx.compose.animation.AnimatedVisibility(
-                visible = toastMessage != null,
+                visible = toastVisible,
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .padding(horizontal = 24.dp)
@@ -395,7 +410,9 @@ fun MainNavigation(
                 enter = slideInVertically(initialOffsetY = { it }) + fadeIn(),
                 exit = slideOutVertically(targetOffsetY = { it }) + fadeOut()
             ) {
-                AppToast(message = toastText.value)
+                toastUi.value?.let { t ->
+                    AppToast(message = t.text, actionLabel = t.actionLabel, onClick = t.onAction)
+                }
             }
         }
     }

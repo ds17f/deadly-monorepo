@@ -178,10 +178,11 @@ function initSchema(db: Database.Database): void {
     );
 
     -- In-app messaging: the server is a dumb publisher of a flat message list.
-    -- There is deliberately NO per-user state table — seen/dismissed lives on
-    -- each client (localStorage / Room / GRDB). A global broadcast is one row,
-    -- never one-per-account. The monotonic integer id doubles as the cursor
-    -- clients track (?since=<id>). See PLANS/in-app-messaging.md.
+    -- The MESSAGE feed carries no per-user state — a global broadcast is one
+    -- row, never one-per-account, and the monotonic integer id doubles as the
+    -- cursor clients track (?since=<id>). Per-user seen/dismissed lives on each
+    -- client AND, for signed-in users, in notification_state below (ADR-0015).
+    -- See PLANS/in-app-messaging.md.
     CREATE TABLE IF NOT EXISTS notifications (
       id             INTEGER PRIMARY KEY AUTOINCREMENT,
       author_id      TEXT NOT NULL REFERENCES accounts(id),
@@ -201,6 +202,20 @@ function initSchema(db: Database.Database): void {
 
     CREATE INDEX IF NOT EXISTS idx_notifications_scope_id
       ON notifications(scope, id);
+
+    -- Per-user notification read/dismiss overlay (ADR-0015). Synced through the
+    -- authed /api/user/sync path, NEVER the public consume feed. seen_at and
+    -- dismissed_at are monotonic (null -> timestamp, once) so merge is a
+    -- conflict-free union (earliest non-null wins) — no tombstones needed.
+    -- CASCADE on notification_id reaps the overlay when an admin unsends.
+    CREATE TABLE IF NOT EXISTS notification_state (
+      user_id         TEXT NOT NULL REFERENCES accounts(id) ON DELETE CASCADE,
+      notification_id INTEGER NOT NULL REFERENCES notifications(id) ON DELETE CASCADE,
+      seen_at         INTEGER,            -- unix seconds; null = unread
+      dismissed_at    INTEGER,            -- unix seconds; null = active (not archived)
+      updated_at      INTEGER NOT NULL DEFAULT (unixepoch()),
+      PRIMARY KEY (user_id, notification_id)
+    );
   `);
 
   db.exec(`

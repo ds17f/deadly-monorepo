@@ -16,6 +16,7 @@ export interface BackupV3 {
   settings: SettingsV3 | null;
   recentShows?: RecentShowV3[];
   playbackPosition?: PlaybackPositionV3 | null;
+  notificationState?: NotificationStateV3[];
 }
 
 // Every record carries `updatedAt` (the LWW comparator). Records that
@@ -108,6 +109,16 @@ export interface PlaybackPositionV3 {
   date?: string;
   venue?: string;
   location?: string;
+  updatedAt: number;
+}
+
+// Per-user notification read/dismiss overlay (ADR-0015). seen_at/dismissed_at
+// are monotonic, so this never tombstones — a row simply gains non-null
+// timestamps. Merge is a conflict-free union (earliest non-null wins).
+export interface NotificationStateV3 {
+  notificationId: number;
+  seenAt?: number | null;
+  dismissedAt?: number | null;
   updatedAt: number;
 }
 
@@ -585,6 +596,56 @@ export function upsertSettings(userId: string, settings: SettingsV3): void {
   );
 }
 
+// ── Notification State (ADR-0015) ───────────────────────────────────
+
+function rowToNotificationState(r: Record<string, unknown>): NotificationStateV3 {
+  return {
+    notificationId: r.notification_id as number,
+    seenAt: r.seen_at as number | null,
+    dismissedAt: r.dismissed_at as number | null,
+    updatedAt: r.updated_at as number,
+  };
+}
+
+export function getNotificationState(userId: string): NotificationStateV3[] {
+  const db = getUsersDb();
+  const rows = db.prepare(
+    `SELECT notification_id, seen_at, dismissed_at, updated_at
+     FROM notification_state WHERE user_id = ?`
+  ).all(userId) as Record<string, unknown>[];
+  return rows.map(rowToNotificationState);
+}
+
+/**
+ * Union-merge one overlay row. seen_at/dismissed_at are monotonic, so we keep
+ * the earliest non-null on each column independently: a message is seen if seen
+ * on any device, dismissed if dismissed on any device. SQLite's scalar MIN()
+ * returns NULL only when every argument is NULL; COALESCE strips nulls unless
+ * both sides are null — so the pair below is null iff neither side has a value.
+ */
+export function upsertNotificationState(userId: string, s: NotificationStateV3): void {
+  const db = getUsersDb();
+  db.prepare(
+    `INSERT INTO notification_state (user_id, notification_id, seen_at, dismissed_at, updated_at)
+     VALUES (?, ?, ?, ?, unixepoch())
+     ON CONFLICT(user_id, notification_id) DO UPDATE SET
+       seen_at      = MIN(COALESCE(notification_state.seen_at,      excluded.seen_at),
+                          COALESCE(excluded.seen_at,      notification_state.seen_at)),
+       dismissed_at = MIN(COALESCE(notification_state.dismissed_at, excluded.dismissed_at),
+                          COALESCE(excluded.dismissed_at, notification_state.dismissed_at)),
+       updated_at   = unixepoch()`
+  ).run(userId, s.notificationId, s.seenAt ?? null, s.dismissedAt ?? null);
+}
+
+/** Bulk union-merge — one transaction for the mark-all/archive-all path. */
+export function upsertNotificationStates(userId: string, rows: NotificationStateV3[]): void {
+  const db = getUsersDb();
+  const tx = db.transaction((items: NotificationStateV3[]) => {
+    for (const s of items) upsertNotificationState(userId, s);
+  });
+  tx(rows);
+}
+
 // ── Full Backup V3 ──────────────────────────────────────────────────
 
 /**
@@ -606,6 +667,7 @@ export function getFullBackupV3(userId: string): BackupV3 {
     settings: getSettings(userId),
     recentShows: getRecentShowsWithTombstones(userId),
     playbackPosition: getPlaybackPosition(userId),
+    notificationState: getNotificationState(userId),
   };
 }
 
@@ -653,6 +715,11 @@ export function importFullBackupV3(userId: string, data: BackupV3): void {
     // Playback position
     if (data.playbackPosition) {
       upsertPlaybackPosition(userId, data.playbackPosition);
+    }
+
+    // Notification state (ADR-0015) — union-merge each overlay row.
+    for (const s of data.notificationState ?? []) {
+      upsertNotificationState(userId, s);
     }
   });
 

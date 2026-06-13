@@ -295,7 +295,9 @@ of message *volume*, not user count × message count.
 > 2. **The real upgrade:** a server-side `(user_id, notification_id)` state join
 >    table, reconciled local ↔ server on the focus-refresh fetch. Eventually
 >    consistent, offline-safe, cheap. This is the design v1 deliberately rejects
->    (see the cross-device caveat below) — written down, not built.
+>    (see the cross-device caveat below) — written down, not built. **Now the
+>    decision of record: see [ADR-0015](../docs/adr/0015-cross-device-notification-read-state.md)
+>    for the concrete schema + cross-platform sync wiring.**
 > 3. **Luxury only:** push a dismiss live over the Connect-v2 WebSocket for
 >    *instant* cross-device clear. A WS is **transport, not a source of truth** —
 >    it only reaches devices that are online *now*, so it can't tell the device

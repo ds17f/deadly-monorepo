@@ -64,6 +64,13 @@ class NotificationStore @Inject constructor(
 
     val cursor: Long get() = persisted.cursor
 
+    /**
+     * Fired after a local read/dismiss mutation so the owner can eagerly push it
+     * to the server (ADR-0015). Null until wired; the store itself never touches
+     * the network.
+     */
+    var onStateChange: ((NotificationStateChange) -> Unit)? = null
+
     private fun load(): Persisted {
         val raw = prefs.getString(KEY_STORE, null) ?: return Persisted()
         return try {
@@ -91,7 +98,10 @@ class NotificationStore @Inject constructor(
      * reason, including cold start) so the caller can emit per-message
      * `notification_received` analytics. Empty when nothing new arrived.
      */
-    fun merge(result: NotificationFetchResult): List<CachedNotification> {
+    fun merge(
+        result: NotificationFetchResult,
+        serverState: List<NotificationStateRow> = emptyList(),
+    ): List<CachedNotification> {
         val coldStart = persisted.cursor == 0L
         val now = System.currentTimeMillis()
         val knownIds = persisted.messages.mapTo(HashSet()) { it.id }
@@ -116,11 +126,28 @@ class NotificationStore @Inject constructor(
             )
         }
 
-        // Prune: expired messages and long-dismissed ones.
+        // ADR-0015: overlay the server's per-user read/dismiss state (unix
+        // seconds -> ms) onto the cache BEFORE computing unread/toast, so a
+        // message handled on another device never flashes unread. Union =
+        // earliest non-null per column, matching the server's MIN(COALESCE).
+        for (row in serverState) {
+            val m = byId[row.notificationId] ?: continue
+            byId[row.notificationId] = m.copy(
+                seenAt = unionEarliest(m.seenAt, row.seenAt?.times(1000)),
+                dismissedAt = unionEarliest(m.dismissedAt, row.dismissedAt?.times(1000)),
+            )
+        }
+
+        // Prune: server-retired (not in the authoritative activeIds), expired,
+        // and long-dismissed messages. activeIds is the only signal that a
+        // cached message was retired server-side (ADR-0015); null = older
+        // server, so don't prune on that basis.
+        val activeIds = result.activeIds?.toHashSet()
         val pruned = byId.values.filterNot { m ->
+            val retired = activeIds != null && m.id !in activeIds
             val expired = m.expiresAt != null && m.expiresAt * 1000 < now
             val staleDismissed = m.dismissedAt != null && now - m.dismissedAt > DISMISSED_TTL_MS
-            expired || staleDismissed
+            retired || expired || staleDismissed
         }
 
         commit(Persisted(cursor = maxOf(persisted.cursor, result.cursor), messages = pruned))
@@ -133,14 +160,48 @@ class NotificationStore @Inject constructor(
             .filter { it.isEligible(appVersion) && it.dismissedAt == null }
             .sortedByDescending { it.createdAt }
 
-        // Toast signal: only on a delta (never the cold-start backlog).
-        if (!coldStart && fresh.isNotEmpty()) {
+        // Toast signal: only on a delta (never the cold-start backlog) and never
+        // a message already seen on another device (the overlay merge above).
+        val toastable = fresh.filter { it.seenAt == null }
+        if (!coldStart && toastable.isNotEmpty()) {
             _newArrivals.tryEmit(
-                NewArrival(title = fresh.first().title, count = fresh.size, key = fresh.first().id),
+                NewArrival(title = toastable.first().title, count = toastable.size, key = toastable.first().id),
             )
         }
 
         return fresh
+    }
+
+    /** Earliest non-null of two timestamps — the union comparator (ADR-0015). */
+    private fun unionEarliest(a: Long?, b: Long?): Long? = when {
+        a == null -> b
+        b == null -> a
+        else -> minOf(a, b)
+    }
+
+    /**
+     * Local state the server is missing (or has later than ours) — the offline
+     * catch-up flush for an eager push that failed while offline. Timestamps
+     * returned in unix seconds; empty in the common already-synced case.
+     */
+    fun unsyncedState(server: List<NotificationStateRow>): List<NotificationStateRow> {
+        val byServer = server.associateBy { it.notificationId }
+        return persisted.messages.mapNotNull { m ->
+            if (m.seenAt == null && m.dismissedAt == null) return@mapNotNull null
+            val s = byServer[m.id]
+            val needSeen = m.seenAt != null && (s?.seenAt == null || s.seenAt * 1000 > m.seenAt)
+            val needDismissed =
+                m.dismissedAt != null && (s?.dismissedAt == null || s.dismissedAt * 1000 > m.dismissedAt)
+            if (needSeen || needDismissed) {
+                NotificationStateRow(
+                    notificationId = m.id,
+                    seenAt = if (needSeen) m.seenAt!! / 1000 else null,
+                    dismissedAt = if (needDismissed) m.dismissedAt!! / 1000 else null,
+                )
+            } else {
+                null
+            }
+        }
     }
 
     /** Mark a single message read ("tap to read" — opening its detail). */
@@ -151,6 +212,7 @@ class NotificationStore @Inject constructor(
             if (it.id == id && it.seenAt == null) it.copy(seenAt = now) else it
         }
         commit(persisted.copy(messages = updated))
+        onStateChange?.invoke(NotificationStateChange.Seen(id))
     }
 
     /** Clear the unread badge: stamp every unseen message as seen. */
@@ -161,6 +223,7 @@ class NotificationStore @Inject constructor(
             if (it.seenAt == null) it.copy(seenAt = now) else it
         }
         commit(persisted.copy(messages = updated))
+        onStateChange?.invoke(NotificationStateChange.SeenAll)
     }
 
     /** Archive (remove from the active queue; stays in the archive). */
@@ -171,6 +234,7 @@ class NotificationStore @Inject constructor(
             if (it.id == id && it.dismissedAt == null) it.copy(dismissedAt = now) else it
         }
         commit(persisted.copy(messages = updated))
+        onStateChange?.invoke(NotificationStateChange.Dismissed(id))
     }
 
     /** Archive every active eligible message at once. */
@@ -181,7 +245,20 @@ class NotificationStore @Inject constructor(
         }
         if (updated == persisted.messages) return
         commit(persisted.copy(messages = updated))
+        onStateChange?.invoke(NotificationStateChange.DismissedAll)
     }
+}
+
+/**
+ * A local read/dismiss mutation worth pushing to the server (ADR-0015). The
+ * store stays free of networking; the coordinator wires [NotificationStore.onStateChange]
+ * to the push.
+ */
+sealed interface NotificationStateChange {
+    data class Seen(val id: Long) : NotificationStateChange       // markRead
+    data class Dismissed(val id: Long) : NotificationStateChange  // archive
+    data object SeenAll : NotificationStateChange                 // markAllRead (all active)
+    data object DismissedAll : NotificationStateChange            // archiveAll (all active)
 }
 
 /**

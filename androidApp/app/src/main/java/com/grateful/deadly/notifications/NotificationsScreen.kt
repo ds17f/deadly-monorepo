@@ -27,6 +27,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import com.grateful.deadly.core.notifications.CachedNotification
 import java.text.SimpleDateFormat
 import java.util.*
@@ -53,6 +54,10 @@ fun NotificationsScreen(
     val selected = remember(selectedId, active, archived) {
         (active + archived).firstOrNull { it.id == selectedId }
     }
+
+    // Sync whenever the inbox is opened, so it reflects cross-device state +
+    // retirements immediately (not just on cold start / foreground / pull).
+    LaunchedEffect(Unit) { viewModel.syncOnOpen() }
 
     // Detail open → back closes detail first, then leaves the screen.
     BackHandler(enabled = selected != null) { selectedId = null }
@@ -96,20 +101,33 @@ fun NotificationsScreen(
                     Column(Modifier.fillMaxSize()) {
                         if (!showArchive && active.isNotEmpty()) {
                             Row(
-                                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp),
-                                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = 20.dp, vertical = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically,
                             ) {
                                 TextButton(
                                     onClick = { viewModel.markAllSeen() },
                                     enabled = active.any { it.seenAt == null },
-                                ) { Text("Mark all read") }
-                                TextButton(onClick = { viewModel.archiveAll() }) { Text("Archive all") }
+                                    contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
+                                ) { Text("Mark all read", style = MaterialTheme.typography.labelLarge) }
+                                Spacer(Modifier.weight(1f))
+                                TextButton(
+                                    onClick = { viewModel.archiveAll() },
+                                    colors = ButtonDefaults.textButtonColors(
+                                        contentColor = MaterialTheme.colorScheme.error,
+                                    ),
+                                    contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
+                                ) { Text("Archive all", style = MaterialTheme.typography.labelLarge) }
                             }
                         }
 
                         // Always a LazyColumn so the pull-to-refresh nested scroll
                         // works even when the inbox is empty (pull to check for new).
-                        LazyColumn(Modifier.weight(1f)) {
+                        LazyColumn(
+                            modifier = Modifier.weight(1f),
+                            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                        ) {
                             if (list.isEmpty()) {
                                 item {
                                     Box(Modifier.fillParentMaxSize(), contentAlignment = Alignment.Center) {
@@ -120,18 +138,38 @@ fun NotificationsScreen(
                                     }
                                 }
                             } else {
-                                items(list, key = { it.id }) { m ->
-                                    // First time this row renders, count one impression.
-                                    LaunchedEffect(m.id) { viewModel.onImpression(m) }
-                                    NotificationRow(
-                                        message = m,
-                                        unread = !showArchive && m.seenAt == null,
-                                        onClick = {
-                                            viewModel.open(m)
-                                            selectedId = m.id
-                                        },
-                                    )
-                                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f))
+                                // One inset, rounded card holding all rows — matches
+                                // the iOS grouped List look (separators inset past
+                                // the leading icon).
+                                item {
+                                    Surface(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        shape = RoundedCornerShape(16.dp),
+                                        color = MaterialTheme.colorScheme.surfaceVariant,
+                                        tonalElevation = 2.dp,
+                                    ) {
+                                        Column {
+                                            list.forEachIndexed { index, m ->
+                                                // First time this row renders, count one impression.
+                                                LaunchedEffect(m.id) { viewModel.onImpression(m) }
+                                                NotificationRow(
+                                                    message = m,
+                                                    unread = !showArchive && m.seenAt == null,
+                                                    onClick = {
+                                                        viewModel.open(m)
+                                                        selectedId = m.id
+                                                    },
+                                                )
+                                                if (index < list.lastIndex) {
+                                                    HorizontalDivider(
+                                                        modifier = Modifier.padding(start = 44.dp),
+                                                        color = MaterialTheme.colorScheme.outlineVariant
+                                                            .copy(alpha = 0.4f),
+                                                    )
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -173,16 +211,20 @@ private fun NotificationRow(
                     .background(MaterialTheme.colorScheme.primary),
             )
         }
-        Column(Modifier.weight(1f)) {
+        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     text = message.title,
                     style = MaterialTheme.typography.titleSmall,
-                    fontWeight = if (unread) FontWeight.SemiBold else FontWeight.Normal,
+                    fontWeight = if (unread) FontWeight.SemiBold else FontWeight.Medium,
+                    // Explicit, since the card's surfaceVariant container would
+                    // otherwise mute the title to onSurfaceVariant.
+                    color = MaterialTheme.colorScheme.onSurface,
                     modifier = Modifier.weight(1f),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                 )
+                Spacer(Modifier.width(8.dp))
                 Text(
                     text = timeAgo(message.createdAt),
                     style = MaterialTheme.typography.labelSmall,
@@ -193,7 +235,7 @@ private fun NotificationRow(
                 text = preview(message.body),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
+                maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
             )
         }

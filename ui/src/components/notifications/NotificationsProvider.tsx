@@ -10,11 +10,14 @@ import {
 } from "react";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/ToastProvider";
+import { useAuth } from "@/contexts/AuthContext";
 import {
   loadStore,
   saveStore,
   fetchNotifications,
   mergeStore,
+  mergeSyncState,
+  unsyncedState,
   activeMessages,
   dismissedMessages,
   unreadCount,
@@ -25,6 +28,11 @@ import {
   isEligible,
   type CachedNotification,
 } from "@/lib/notifications";
+import {
+  fetchNotificationState,
+  pushNotificationState,
+  pushNotificationStateBulk,
+} from "@/lib/userDataApi";
 import {
   trackNotificationReceived,
   trackNotificationToastShown,
@@ -65,6 +73,8 @@ export default function NotificationsProvider({
   const [store, setStore] = useState(loadStore);
   const router = useRouter();
   const { showToast } = useToast();
+  const { user } = useAuth();
+  const userId = user?.id;
   const lastFetch = useRef(0);
   // Mirror the latest store for the async fetch (avoids stale closures).
   const storeRef = useRef(store);
@@ -80,10 +90,29 @@ export default function NotificationsProvider({
       lastFetch.current = Date.now();
       const prev = storeRef.current;
       try {
-        const res = await fetchNotifications(prev.cursor);
+        // For a signed-in user, pull the feed and the read/dismiss overlay
+        // together so the unread set is correct on first paint — a message
+        // already handled on another device never flashes unread (ADR-0015,
+        // "state-before-surface").
+        const [res, serverState] = await Promise.all([
+          fetchNotifications(prev.cursor),
+          userId ? fetchNotificationState().catch(() => null) : Promise.resolve(null),
+        ]);
         const existing = new Set(Object.keys(prev.messages).map(Number));
-        const next = mergeStore(prev, res);
+        let next = mergeStore(prev, res);
+        if (serverState) next = mergeSyncState(next, serverState);
         apply(next);
+
+        // Offline catch-up: flush any local state the server hasn't recorded
+        // (an eager push that failed while offline). No-op once converged.
+        if (userId && serverState) {
+          for (const row of unsyncedState(next, serverState)) {
+            pushNotificationState(row.notificationId, {
+              seenAt: row.seenAt ?? undefined,
+              dismissedAt: row.dismissedAt ?? undefined,
+            }).catch(() => {});
+          }
+        }
 
         // Genuinely new, eligible messages from this fetch (any reason, incl.
         // cold start) — the basis for `notification_received` analytics.
@@ -95,11 +124,14 @@ export default function NotificationsProvider({
         for (const m of fresh) trackNotificationReceived(m, reason);
 
         // Toast only for new arrivals on a delta — never the cold-start backlog
-        // (decision C). Surfaces the newest one; tap opens the inbox.
-        if (prev.cursor > 0 && fresh.length > 0) {
-          const newest = fresh[0];
-          const label = fresh.length === 1 ? newest.title : `${fresh.length} new messages`;
-          trackNotificationToastShown(newest.id, fresh.length);
+        // (decision C) and never a message already seen/dismissed elsewhere
+        // (the overlay merge above). Surfaces the newest one; tap opens inbox.
+        const toastable = fresh.filter((m) => m.seen_at == null && m.dismissed_at == null);
+        if (prev.cursor > 0 && toastable.length > 0) {
+          const newest = toastable[0];
+          const label =
+            toastable.length === 1 ? newest.title : `${toastable.length} new messages`;
+          trackNotificationToastShown(newest.id, toastable.length);
           showToast(`New: ${label}`, () => {
             trackNotificationToastTap(newest.id);
             router.push("/notifications");
@@ -109,7 +141,7 @@ export default function NotificationsProvider({
         /* offline — keep the cache */
       }
     },
-    [apply, router, showToast],
+    [apply, router, showToast, userId],
   );
 
   // Initial load + poll on focus/visibility only (decision H — no idle timer).
@@ -126,20 +158,31 @@ export default function NotificationsProvider({
     };
   }, [refresh]);
 
-  const markRead = useCallback((id: number) => apply(markReadStore(storeRef.current, id)), [apply]);
+  // Each mutation is optimistic-local-first, then eagerly pushed to the server
+  // for signed-in users (mirrors toggleFavorite) so other devices converge on
+  // their next focus-refresh. Failures are caught by the focus catch-up flush.
+  const nowSec = () => Math.floor(Date.now() / 1000);
+
+  const markRead = useCallback((id: number) => {
+    apply(markReadStore(storeRef.current, id));
+    if (userId) pushNotificationState(id, { seenAt: nowSec() }).catch(() => {});
+  }, [apply, userId]);
   const markAllRead = useCallback(() => {
     trackNotificationMarkAllRead(unreadCount(storeRef.current));
     apply(markAllSeen(storeRef.current));
-  }, [apply]);
+    if (userId) pushNotificationStateBulk({ seenAt: nowSec() }).catch(() => {});
+  }, [apply, userId]);
   const archive = useCallback((id: number) => {
     const m = storeRef.current.messages[id];
     if (m) trackNotificationArchive(m);
     apply(dismissStore(storeRef.current, id));
-  }, [apply]);
+    if (userId) pushNotificationState(id, { dismissedAt: nowSec() }).catch(() => {});
+  }, [apply, userId]);
   const archiveAll = useCallback(() => {
     trackNotificationArchiveAll(activeMessages(storeRef.current).length);
     apply(archiveAllStore(storeRef.current));
-  }, [apply]);
+    if (userId) pushNotificationStateBulk({ dismissedAt: nowSec() }).catch(() => {});
+  }, [apply, userId]);
 
   const value: NotificationsContextValue = {
     unread: unreadCount(store),

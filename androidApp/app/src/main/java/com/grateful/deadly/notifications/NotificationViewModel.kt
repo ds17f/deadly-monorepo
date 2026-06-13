@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.notifications.CachedNotification
 import com.grateful.deadly.core.notifications.NewArrival
-import com.grateful.deadly.core.notifications.NotificationApiService
+import com.grateful.deadly.core.notifications.NotificationCoordinator
 import com.grateful.deadly.core.notifications.NotificationStore
 import com.grateful.deadly.core.notifications.active
 import com.grateful.deadly.core.notifications.dismissed
@@ -38,7 +38,7 @@ import javax.inject.Inject
 @HiltViewModel
 class NotificationViewModel @Inject constructor(
     private val store: NotificationStore,
-    private val apiService: NotificationApiService,
+    private val coordinator: NotificationCoordinator,
     private val analytics: AnalyticsService,
 ) : ViewModel() {
 
@@ -69,16 +69,21 @@ class NotificationViewModel @Inject constructor(
     /** Emits when a delta brings new eligible unread messages — for the toast. */
     val newArrivals = store.newArrivals
 
-    /** Pull-to-refresh: fetch a `?since` delta and merge it. */
+    /** Pull-to-refresh: full sync (feed + overlay + flush) with the spinner. */
     fun refresh() {
         if (_refreshing.value) return
         viewModelScope.launch {
             _refreshing.value = true
-            apiService.fetch(store.cursor).onSuccess { result ->
-                store.merge(result).forEach { analytics.trackNotificationReceived(it, "refresh") }
-            }
+            coordinator.sync("refresh")
             _refreshing.value = false
         }
+    }
+
+    /** Opening the inbox triggers a full sync, silently (no pull spinner) — so
+     *  the list reflects cross-device read/dismiss state and retirements the
+     *  moment it's shown. */
+    fun syncOnOpen() {
+        viewModelScope.launch { coordinator.sync("inbox_open") }
     }
 
     /** A message row became visible in the inbox — count one impression per id. */
