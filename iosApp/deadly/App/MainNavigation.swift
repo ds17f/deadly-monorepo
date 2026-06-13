@@ -34,78 +34,14 @@ struct MainNavigation: View {
         return nil
     }
 
+    /// Width (pt) at/above which the bottom TabView becomes a left icon rail.
+    /// Gated on width (not `horizontalSizeClass`) so a regular iPhone in
+    /// landscape — which reports `.compact` — still gets the wide layout.
+    private static let wideBreakpoint: CGFloat = 600
+
     var body: some View {
-        TabView(selection: tabSelection) {
-            Tab("Home", systemImage: "house", value: .home) {
-                NavigationStack(path: $homeStack) {
-                    HomeScreen()
-                        .settingsLogoButton($showingSettings, title: "Home")
-                        .toolbar {
-                            ToolbarItem(placement: .topBarTrailing) {
-                                NotificationBell()
-                            }
-                        }
-                        .navigationDestination(for: String.self) { showId in
-                            ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
-                        }
-                        .navigationDestination(for: CollectionRoute.self) { route in
-                            switch route {
-                            case .detail(let id):
-                                CollectionDetailScreen(collectionId: id)
-                            }
-                        }
-                        .navigationDestination(for: NotificationRoute.self) { _ in
-                            NotificationsInboxScreen()
-                        }
-                }
-                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
-            }
-            Tab("Search", systemImage: "magnifyingglass", value: .search) {
-                NavigationStack(path: $searchStack) {
-                    SearchScreen(resetToken: searchResetToken)
-                        .settingsLogoButton($showingSettings, title: "Search")
-                        .navigationDestination(for: String.self) { showId in
-                            ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
-                        }
-                }
-                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
-            }
-            Tab("Favorites", systemImage: "heart.fill", value: .favorites) {
-                NavigationStack(path: $favoritesStack) {
-                    FavoritesScreen()
-                        .settingsLogoButton($showingSettings, title: "Favorites")
-                        .navigationDestination(for: String.self) { showId in
-                            ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
-                        }
-                        .navigationDestination(for: FavoritesRoute.self) { route in
-                            switch route {
-                            case .downloads:
-                                DownloadsScreen()
-                            }
-                        }
-                }
-                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
-            }
-            Tab("Collections", systemImage: "square.stack", value: .collections) {
-                NavigationStack(path: $collectionsStack) {
-                    CollectionsScreen()
-                        .settingsLogoButton($showingSettings, title: "Collections")
-                        .navigationDestination(for: CollectionRoute.self) { route in
-                            switch route {
-                            case .detail(let id):
-                                CollectionDetailScreen(collectionId: id)
-                            }
-                        }
-                        .navigationDestination(for: String.self) { showId in
-                            ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
-                        }
-                }
-                .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
-                .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
-            }
+        GeometryReader { geo in
+            rootLayout(isWide: geo.size.width >= Self.wideBreakpoint)
         }
         .overlay {
             SettingsDrawer(isOpen: $showingSettings, onNavigateToDownloads: {
@@ -250,6 +186,114 @@ struct MainNavigation: View {
         }
     }
 
+    // MARK: - Root layout (wide rail vs. compact TabView)
+
+    @ViewBuilder
+    private func rootLayout(isWide: Bool) -> some View {
+        if isWide {
+            // Wide (iPad, any phone in landscape): icon rail + selected section.
+            HStack(spacing: 0) {
+                NavSidebar(selectedTab: tabSelection)
+                Divider()
+                sectionContent(for: selectedTab)
+            }
+        } else {
+            // Compact (phone portrait): byte-for-byte today's TabView UX.
+            TabView(selection: tabSelection) {
+                Tab("Home", systemImage: "house", value: .home) { homeSection }
+                Tab("Search", systemImage: "magnifyingglass", value: .search) { searchSection }
+                Tab("Favorites", systemImage: "heart.fill", value: .favorites) { favoritesSection }
+                Tab("Collections", systemImage: "square.stack", value: .collections) { collectionsSection }
+            }
+        }
+    }
+
+    // MARK: - Section content (shared by the TabView and the wide rail layout)
+
+    @ViewBuilder
+    private func sectionContent(for tab: AppTab) -> some View {
+        switch tab {
+        case .home: homeSection
+        case .search: searchSection
+        case .favorites: favoritesSection
+        case .collections: collectionsSection
+        }
+    }
+
+    private var homeSection: some View {
+        NavigationStack(path: $homeStack) {
+            HomeScreen()
+                .settingsLogoButton($showingSettings, title: "Home")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        NotificationBell()
+                    }
+                }
+                .navigationDestination(for: String.self) { showId in
+                    ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
+                }
+                .navigationDestination(for: CollectionRoute.self) { route in
+                    switch route {
+                    case .detail(let id):
+                        CollectionDetailScreen(collectionId: id)
+                    }
+                }
+                .navigationDestination(for: NotificationRoute.self) { _ in
+                    NotificationsInboxScreen()
+                }
+        }
+        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+        .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
+    }
+
+    private var searchSection: some View {
+        NavigationStack(path: $searchStack) {
+            SearchScreen(resetToken: searchResetToken)
+                .settingsLogoButton($showingSettings, title: "Search")
+                .navigationDestination(for: String.self) { showId in
+                    ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
+                }
+        }
+        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+        .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
+    }
+
+    private var favoritesSection: some View {
+        NavigationStack(path: $favoritesStack) {
+            FavoritesScreen()
+                .settingsLogoButton($showingSettings, title: "Favorites")
+                .navigationDestination(for: String.self) { showId in
+                    ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
+                }
+                .navigationDestination(for: FavoritesRoute.self) { route in
+                    switch route {
+                    case .downloads:
+                        DownloadsScreen()
+                    }
+                }
+        }
+        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+        .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
+    }
+
+    private var collectionsSection: some View {
+        NavigationStack(path: $collectionsStack) {
+            CollectionsScreen()
+                .settingsLogoButton($showingSettings, title: "Collections")
+                .navigationDestination(for: CollectionRoute.self) { route in
+                    switch route {
+                    case .detail(let id):
+                        CollectionDetailScreen(collectionId: id)
+                    }
+                }
+                .navigationDestination(for: String.self) { showId in
+                    ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
+                }
+        }
+        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+        .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
+    }
+
     private var tabSelection: Binding<AppTab> {
         Binding(
             get: { selectedTab },
@@ -303,10 +347,53 @@ struct MainNavigation: View {
 
 // MARK: - Tab enum
 
-enum AppTab: String, Hashable {
+enum AppTab: String, Hashable, CaseIterable {
     case home, search, favorites, collections
 
     var title: String { rawValue.capitalized }
+
+    var systemImage: String {
+        switch self {
+        case .home: return "house"
+        case .search: return "magnifyingglass"
+        case .favorites: return "heart.fill"
+        case .collections: return "square.stack"
+        }
+    }
+}
+
+// MARK: - Navigation Sidebar (wide layout)
+
+/// Icon-only vertical rail shown at regular width in place of the bottom tab
+/// bar. Drives the same `selectedTab` the TabView uses.
+private struct NavSidebar: View {
+    @Binding var selectedTab: AppTab
+
+    var body: some View {
+        VStack(spacing: 8) {
+            ForEach(AppTab.allCases, id: \.self) { tab in
+                let isSelected = tab == selectedTab
+                Button {
+                    selectedTab = tab
+                } label: {
+                    Image(systemName: tab.systemImage)
+                        .font(.title2)
+                        .frame(width: 44, height: 44)
+                        .foregroundStyle(isSelected ? Color.accentColor : Color.secondary)
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .fill(isSelected ? Color.accentColor.opacity(0.15) : Color.clear)
+                        )
+                }
+                .accessibilityLabel(tab.title)
+            }
+            Spacer()
+        }
+        .padding(.vertical, 12)
+        .frame(width: 72)
+        .frame(maxHeight: .infinity)
+        .background(.bar)
+    }
 }
 
 // MARK: - Favorites Routes

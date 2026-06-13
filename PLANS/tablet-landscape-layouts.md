@@ -1,223 +1,167 @@
-# Tablet + Landscape Layouts (Responsive Native) — Full Master-Detail
+# Landscape & Tablet Layouts — Icon Rail + Contextual Side Player
 
-> **Status (2026-06-12): PROPOSED — NOT ACCEPTED. Needs review.** This is a
-> draft design captured as a starting point for discussion, **not** an approved
-> plan and **not** something to build or ship as-is. The scope here (full
-> master-detail on both platforms) is one option on the table, not a decision.
-> Treat every "Decision" / "user-confirmed" note below as a *proposal* to be
-> re-litigated, not settled. No code has been written; nothing in `iosApp/` or
-> `androidApp/` has changed. **Do not start implementation off this doc** until
-> the approach is reviewed and explicitly accepted.
->
-> Open questions to resolve before this is actionable:
-> - Is full master-detail the right ambition, or is adaptive chrome (bars→rail)
->   enough for a first pass?
-> - Is the effort justified vs. other roadmap items?
-> - Does the three-tier breakpoint model hold up on real devices?
->
-> - Roadmap item: [`ROADMAP.md`](ROADMAP.md) §6 "Tablet + landscape layouts"
-> - The original worktree/branch (`worktree-tablet-landscape-layouts`) has been
->   removed; this doc was rescued from it and committed to `main` for review.
+> **Status (2026-06-13): ACCEPTED — building.** Branch `tablet-landscape-layouts`.
+> This replaces the earlier "full master-detail" draft, which was discarded.
+> Roadmap: [`ROADMAP.md`](ROADMAP.md) §6.
 
-## Context
+## The problem
 
-Both native apps render a **stretched phone UI** when wide: iOS is **iPhone-only**
-(`TARGETED_DEVICE_FAMILY = 1`, iPad runs in compat scaling); Android has **zero**
-window-size-class adaptivity (it rotates, just stretched). The web shell already
-solved the shape — persistent left **nav rail** · **content (master list)** ·
-contextual **right rail**, collapsing to a bottom tab bar when narrow
-(`ui/src/components/shell/AppShell.tsx` + `RightRail.tsx`).
+Both apps render a **stretched phone UI** when wide. Rotate a phone today and it
+falls apart: the bottom tab bar eats ~1/5 of the (now short) height with 4 buttons
+spread across it; the mini-player sits on top of content and clips it (Home's
+second Recents row gets cut off); every list is one absurdly-wide column. iOS is
+iPhone-only (`TARGETED_DEVICE_FAMILY = 1`, iPad runs scaled); Android has no
+window-size-class adaptivity. Spotify dodges this by **locking to portrait** —
+that's the industry floor and our safety net, but we can do better.
 
-Decision (user-confirmed): **go the distance — full master-detail**, both
-platforms, in this worktree. Not just adaptive chrome (bars→rail): the **content
-itself becomes multi-pane** on wide screens. Tapping a show in a list opens it in
-a **detail pane beside the list** (not a full-screen push), with a **contextual
-right pane** (recordings / setlist / reviews) — the iPad Mail / web-shell model.
-Width-driven so it covers tablet portrait *and* landscape from one mechanism. The
-phone (compact) experience must stay **byte-for-byte today's**.
+## The design — one rule, three zones
 
-## Breakpoint model (THREE tiers — not width-binary)
-
-Triggering full master-detail on raw width is wrong: a **phone in landscape is
-wide but short**, so 3 panes would squish to ~300pt each with no height. Gate on
-*room for two real panes*, which is a three-tier model:
-
-| Tier | Devices | Layout |
-|---|---|---|
-| **Compact** | phones portrait; most phones landscape | **Today's UI** — bottom bar, full-width content, tap-to-push. Unchanged. |
-| **Medium** (~600–840dp) | big phones landscape, small tablets portrait, foldables | **Nav rail + single content pane.** Rail replaces bottom bar; content stays one column; selecting a show pushes/replaces full-width. **No side-by-side.** |
-| **Expanded** (≥840dp) | tablets landscape, large tablets | **Full master-detail** — rail · list · detail (· context). |
+**Rule:** key off **width**, never device model. Narrow → today's UI, byte-for-byte
+unchanged. Wide → a three-zone layout:
 
 ```
-Expanded (≥840dp)                         Medium (phone landscape / small tablet)
-┌────┬──────────┬──────────┬──────────┐   ┌────┬───────────────────────────────┐
-│nav │ master   │ detail   │ context  │   │nav │ single content pane           │
-│rail│ (list)   │(ShowDet/ │(recs/    │   │rail│ (list; show pushes full-width)│
-│    │          │ playlist)│ setlist) │   │    │                               │
-└────┴──────────┴──────────┴──────────┘   └────┴───────────────────────────────┘
-Compact (phone portrait / normal phone landscape): unchanged — bottom bar + push.
+WIDE (phone landscape, tablets)              NARROW (phone portrait) — unchanged
+┌──┬─────────────────────┬──────────┐        ┌─────────────────────┐
+│⌂ │  current screen      │  player  │        │  current screen     │
+│🔍│  (full height)       │  (side)  │        │                     │
+│♥ │                     │  ▶Ⅱ      │        ├─────────────────────┤
+│▦ │                     │          │        │ ▢ Title        ▶Ⅱ ⏭ │ mini
+└──┴─────────────────────┴──────────┘        ├──┬──┬──┬──┬─────────┤
+ icon rail   browse content   side player    │⌂ │🔍│♥ │▦ │         │ bottom bar
 ```
 
-**Why this avoids the squish.** *iOS:* key off `horizontalSizeClass`, NOT raw
-points — Apple reports a normal iPhone in landscape as **compact**, so it keeps
-the phone UI for free; only Plus/Max phones report `.regular` in landscape (they
-have the room), and iPads are always regular. *Android:* `ListDetailPaneScaffold`'s
-default adaptive directive shows **two panes only at Expanded** on its own, so
-Medium (phone landscape) stays single-pane automatically — the dual pane can't
-appear below ~840dp.
+- **Icon-only nav rail (left).** The bottom tab bar stood up vertically, labels
+  dropped → thin. Reclaims the wasted vertical height. **Global** — fixes every
+  screen at once. Cheapest, safest piece; ships alone.
+- **Center = the current screen, full height.** With the rail and player off to
+  the sides, content stops being clipped by the mini-player.
+- **Side player (right) — contextual.** Appears **only when something is playing**;
+  idle, the center takes full width (no empty column). See player sizes below.
 
----
+Because the trigger is **width**, this same layout covers **tablets for free** —
+a tablet is just a roomier wide screen. The only tablet-specific work is one line
+on iOS (`TARGETED_DEVICE_FAMILY = 1,2`) so iPad renders natively instead of
+pixel-doubling. Android tablets, foldables, and DeX get it with zero extra code.
+"Fix phone landscape" and "support tablets" are the **same work**.
 
-## iOS
+## The player has three sizes (not mini-vs-full)
 
-The big enabler: master rows **already** use `NavigationLink(value: show.id)`
-(`HomeScreen.swift:135…`, `SearchScreen`, `FavoritesScreen:462`). Inside a
-`NavigationSplitView`, a content-column `NavigationLink(value:)` **automatically
-populates the detail column** — so the section screens need minimal change.
+```
+MINI (narrow, today)       SIDE (wide, docked — NEW)   FULL-WIDE (wide expand)
+┌──────────────────┐       ┌──────┬────────┐           ┌──────────────┬──────┐
+│ list             │       │ list │ ▢ art  │           │   big cover  │ ▢art │
+├──────────────────┤       │      │ Title  │           │   ▢▢▢▢▢▢     │ Title│
+│ ▢ Title    ▶Ⅱ ⏭ │       │      │ ──●──  │           │   ▢▢▢▢▢▢     │ ──●─ │
+└──────────────────┘       │      │ ◀ ▶Ⅱ ▶ │           │              │ ◀▶Ⅱ▶ │
+                           └──────┴────────┘           └──────────────┴──────┘
+```
 
-### A. Adaptive root (`iosApp/deadly/App/MainNavigation.swift`)
-- iOS has effectively **two** size-class tiers (compact / regular); the Medium
-  tier is implicit — `NavigationSplitView` self-balances column count by
-  available width (shows the sidebar as an overlay / collapses to 2 columns when
-  cramped, e.g. Plus/Max landscape), so we don't hand-roll a Medium breakpoint.
-- Introduce an `AdaptiveRoot` that branches on `@Environment(\.horizontalSizeClass)`:
-  - **compact** → today's `TabView` (the entire current body), unchanged. (A
-    normal iPhone in landscape is compact → no squish.)
-  - **regular** → a `NavigationSplitView` (three columns):
-    - **sidebar**: nav list of `AppTab` cases + a Settings row, bound to
-      `selectedTab` (reuse the existing `AppTab` enum; the `settingsLogoButton`
-      affordance becomes a sidebar row).
-    - **content**: `switch selectedTab` → `HomeScreen` / `SearchScreen` /
-      `FavoritesScreen` / `CollectionsScreen` (the *same* screens).
-    - **detail**: a `NavigationStack(path:)` declaring
-      `.navigationDestination(for: String.self) { ShowDetailScreen(showId:) }`
-      (and `CollectionRoute`). Reuse the existing per-tab path state
-      (`homeStack`/`searchStack`/…) as the **detail** column's stack.
-- Keep `.miniPlayer(...)` + `.offlineBanner(...)` applied around the split view.
+1. **Mini** — today's bottom strip (narrow only). Art + title + play/pause.
+2. **Side** — a **rotated mini plus a scrubber**: art thumbnail, title, scrubber,
+   transport, stacked vertically in the right column. "More than mini, less than
+   full." **This is the keystone** — it's what makes landscape look designed.
+3. **Full-wide** — expanding the player in landscape does **not** go full-screen.
+   The **big cover + scrubber take over the center** (where the list was); the
+   **controls stay in the right column, identical to side mode**. Collapse →
+   list returns. It's a *mode swap of the center pane*, not a new screen — so
+   full-wide is nearly free once side exists. (No full-screen `fullScreenCover`
+   in landscape.)
 
-### B. Contextual right pane (inspector)
-- Add `.inspector(isPresented: $showInspector)` on the **detail** column showing
-  the show's recordings / setlist / reviews. **Reuse existing sheet bodies** —
-  `RecordingPicker.swift`, `SetlistSheet.swift`, `ReviewDetailsSheet.swift` — as
-  inspector panels instead of sheets when regular width. A detail-toolbar button
-  toggles it. (Compact keeps them as sheets.)
+## Behaviors
 
-### C. Player + content width
-- `PlayerScreen` (`fullScreenCover`): at regular width, present centered with a
-  max content width instead of a stretched full screen.
-- Add a `.readableContentFrame()` helper (`Core/Design`) capping master/detail
-  content width so rails/lists don't stretch; apply to the four section screens
-  and `ShowDetailScreen`.
+- **Tap a show while the side player is docked:** the show opens in the **center**
+  (list → detail, same as today's push). Player stays put on the right. Center =
+  "what I'm browsing," right = "what I'm hearing" — independent, like desktop apps.
+- **Narrow stays exactly today's UX** — bottom bar, mini-player, full-screen player,
+  push navigation. Regression gate: compact is byte-for-byte unchanged.
+- **Portrait-lock is the escape valve.** If a specific screen fights landscape, we
+  can lock just that screen to portrait rather than block the whole feature.
 
-### D. iPad target
-- `iosApp/deadly.xcodeproj/project.pbxproj`: `TARGETED_DEVICE_FAMILY = 1,2`
-  (Debug + Release).
-- `iosApp/Info.plist`: add `UISupportedInterfaceOrientations~ipad` (all four);
-  ensure no `UIRequiresFullScreen` force. iPhone orientations unchanged.
+## Phasing (smallest win first, ship incrementally)
 
----
+1. **Icon rail** when wide — global chrome change. Fixes the wasted-height eyesore
+   on every screen. *Shippable alone.* — **DONE (both platforms, compiles).**
+   Android width ≥600dp; iOS width ≥600pt + iPad target flipped
+   (`TARGETED_DEVICE_FAMILY = 1,2`). Device verification pending.
+2. **Side player** + center reclaiming full height. The real win; landscape now
+   looks intentional. *Shippable here.* — **NEXT.**
+3. **Full-wide expand** (big cover center + controls right). Pure polish; defer
+   until 1–2 feel right on a device.
+4. Per-screen landscape polish (Home rows → grid, artwork sizing, etc.).
 
-## Android
+## Phase 1 notes & follow-ups (device-verified 2026-06-13 — rail works)
 
-Multi-module (`core/design`, `feature/*`). Show detail is the
-`playlist/{showId}` destination (`feature/playlist/.../PlaylistNavigation.kt`),
-reached via `navController.navigateToPlaylist(...)`.
+Observations from the shipped rail, to revisit (most are Phase 2 fodder):
 
-### A. Dependency
-- Add `androidx.compose.material3.adaptive:adaptive`, `:adaptive-layout`,
-  `:adaptive-navigation` (versions matching the project's Compose BOM) to
-  `androidApp/gradle/libs.versions.toml` + the `:app` and `:core:design`
-  `build.gradle.kts`. Provides `currentWindowAdaptiveInfo()`,
-  `NavigableListDetailPaneScaffold`, and `rememberListDetailPaneScaffoldNavigator`.
+- **Toast / overlay positioning is inconsistent across platforms in wide mode.**
+  Android renders the offline banner, auto-advance card, and app toast *inside*
+  the content pane (right of the rail), so they're centered in the content, not
+  the window. iOS attaches those overlays to the full-window `GeometryReader`, so
+  they span the whole width *including over the rail*. Pick one (likely: confine
+  to the content pane on both) when polishing. Low priority — both are legible.
+- **Mini player is still a bottom strip** within the content pane in wide mode
+  (AppScaffold renders it at the bottom). This is exactly what Phase 2's side
+  player replaces — the docked right player supersedes the bottom mini when wide.
+- **Rail has no Settings entry**; Settings is still reached via the logo button in
+  each screen's top toolbar (unchanged from compact). Fine; revisit if the toolbar
+  logo feels out of place in the wide layout.
+- **Rail is visually plain** — icon + selected tint, no active-pill/indicator
+  animation. Cosmetic polish deferred.
+- **iOS rotation compact↔wide** preserves per-tab nav stacks (they're parent
+  `@State`, shared by both layouts) — verified smooth on device.
 
-### B. Nav rail (chrome) in the shared scaffold
-- `androidApp/core/design/.../scaffold/AppScaffold.kt` (the BarConfiguration
-  overload used by `MainNavigation`): add
-  `navigationRailContent: (@Composable () -> Unit)? = null` + `useSideNav: Boolean`.
-  When `useSideNav`, wrap the inner `Box` in
-  `Row { navigationRailContent(); Box { Scaffold … } }`; caller passes
-  `bottomNavigationContent = null`. The existing bottom mini-player `Column`
-  stays (mini-player remains a bottom bar).
-- `androidApp/.../MainNavigation.kt`: compute `useSideNav` from
-  `currentWindowAdaptiveInfo().windowSizeClass` width ≥ **MEDIUM** (~600dp) — so
-  the rail appears at Medium (phone landscape / small tablet) while the **panes
-  do not** (see C: the pane directive gates dual-pane to Expanded). Add a
-  `NavigationRailBar` mirroring the existing private `BottomNavigationBar` /
-  `BottomNavItem`, iterating `BottomNavDestination.destinations`, reusing
-  `onNavigateToDestination` + offline-redirect logic.
+## Platform mechanics
 
-### C. List-detail panes (content)
-- In `MainNavigation.kt`, host the show-browsing flow in
-  `NavigableListDetailPaneScaffold`:
-  - **listPane**: the current top-level NavHost destinations
-    (home/search/favorites/collections) — keep the NavHost for these.
-  - **detailPane**: the existing playlist/show screen composable, hosted in the
-    pane instead of a full-screen route.
-  - **extraPane**: recordings / setlist (contextual rail).
-- Selecting a show calls `scaffoldNavigator.navigateTo(Detail, showId)` instead
-  of `navigateToPlaylist`. Keep the **default** `calculatePaneScaffoldDirective`
-  so dual-pane appears **only at Expanded (≥840dp)**; at Compact/Medium the
-  scaffold is single-pane (selecting a show shows a full-width detail, back
-  returns to the list — today's behavior). The extra (context) pane is gated to
-  Expanded with sufficient room.
-- Keep the existing `playlist/{showId}` NavHost route for **compact** /
-  deep-link / back-compat; the pane scaffold path is the wide one. (Reuse the
-  same screen composable in both — no fork.)
-- The detail pane's recordings/setlist UI already exists in the playlist feature;
-  surface it in the extraPane when expanded.
+### iOS (builds on remote Mac — `make ios-remote-install`)
+- **Width signal:** `GeometryReader` width ≥ 600pt (NOT `horizontalSizeClass`).
+  Decided to gate on width so a **regular iPhone in landscape** — which reports
+  `.compact` — still gets the wide rail (it reads ~844–956pt wide). Portrait
+  phones (~390–430pt) stay below the threshold → today's TabView, unchanged.
+- **Root (`iosApp/deadly/App/MainNavigation.swift`):** branch the body —
+  compact → today's `TabView` unchanged; wide → an `HStack` of [icon rail bound to
+  `selectedTab`] · [the current section screen] · [side player when a track is
+  loaded]. Reuse the existing `AppTab` enum and per-tab `NavigationStack` paths.
+- **Side player:** a new compact player view (reuse `PlayerScreen` subviews /
+  view-model); not the `fullScreenCover`. Full-wide = swap the center for a hero
+  cover view while the side controls persist.
+- **iPad target:** `project.pbxproj` `TARGETED_DEVICE_FAMILY = 1,2` (all 6 configs);
+  `Info.plist` allow all iPad orientations, no `UIRequiresFullScreen` lock.
 
-### D. App already rotates (no manifest orientation lock found) — no change needed.
-
----
-
-## Sequencing (land + verify incrementally)
-1. **Chrome**: iOS sidebar branch + Android `NavigationRail` (the frame).
-2. **iPad target** enablement (iOS) so wide layouts render natively.
-3. **List-detail panes**: iOS `NavigationSplitView` detail column + Android
-   `ListDetailPaneScaffold` — wire one section first (**Search**), then
-   Favorites/Home/Collections.
-4. **Contextual right pane**: iOS `.inspector` + Android `extraPane`
-   (recordings/setlist/reviews — reuse existing UI).
-5. **Player + content width** adaptation.
-6. **Docs**: ADR-0011, this file, ROADMAP §6 status.
-
-## Docs / tracking
-- **ADR-0011** `docs/adr/0011-tablet-landscape-layouts.md` (0010 = unmerged
-  show-queue branch): width-driven master-detail; `NavigationSplitView` +
-  `.inspector` (iOS) and `ListDetailPaneScaffold` (Android); iPad-target
-  enablement; reuse of existing detail/sheet UI; compact path unchanged.
-- This file = handoff/status (mirrors the other `PLANS/*.md`).
-- Update `PLANS/ROADMAP.md` §6 status when phases land.
-
-## Commits (conventional, per repo scope rules)
-- `build(android): add material3-adaptive (window size class + list-detail)`
-- `feat(ios/layout): adaptive split-view master-detail + iPad target (ADR-0011)`
-- `feat(ios/layout): contextual inspector for recordings/setlist/reviews`
-- `feat(android/layout): nav rail + list-detail pane scaffold (ADR-0011)`
-- `feat(android/layout): contextual extra pane for recordings/setlist`
-- `docs(mobile/layout): ADR-0011 + roadmap for tablet/landscape master-detail`
+### Android (builds locally — `make android-install`)
+- **Width signal:** `currentWindowAdaptiveInfo().windowSizeClass` from
+  `androidx.compose.material3.adaptive:adaptive` (add to `libs.versions.toml` +
+  `:app`/`:core:design`). Wide = width ≥ MEDIUM (~600dp).
+- **Icon rail:** extend `core/design/.../scaffold/AppScaffold.kt` with a
+  `navigationRailContent` + `useSideNav` path: when wide, wrap the content in
+  `Row { rail(); content }` and pass `bottomNavigationContent = null`. Add a
+  `NavigationRailBar` mirroring the private `BottomNavigationBar`, iterating
+  `BottomNavDestination.destinations`, icons only.
+- **Side player:** in `MainNavigation.kt`, when wide and a track is loaded, render
+  the side player as the right element of the `Row`. Reuse player feature UI.
+- **Show nav stays the existing `playlist/{showId}` NavHost route** — don't thread
+  pane navigation through feature modules (Collections/Downloads navigate by raw
+  `navController.navigate("playlist/$showId")` strings). Center just hosts the
+  NavHost as today.
+- No manifest orientation lock exists — app already rotates.
 
 ## Verification
-- **Android**: `make android-install` (build locally per repo convention — the
-  remote agent is iOS-only). On a tablet AVD (Pixel Tablet) + phone landscape:
-  confirm rail replaces bottom bar; list+detail side-by-side at Expanded;
-  selecting a show fills the detail pane (not a full-screen push); extra pane
-  shows recordings/setlist; system back collapses panes correctly; mini-player +
-  offline redirect intact. Phone **portrait**: identical to today.
-- **iOS**: `make ios-remote-install` (remote Mac; keychain pw note in memory).
-  iPad simulator (portrait + landscape) + iPhone (portrait + landscape): sidebar
-  at regular width; tapping a show fills the detail column; inspector toggles
-  recordings/setlist/reviews; player centered not stretched. iPhone **portrait**:
-  today's TabView + push nav, unchanged.
-- Regression gate on both: **compact must be byte-for-byte the current UX.**
+- **Android:** `make android-install`; phone landscape + tablet AVD: icon rail
+  replaces bottom bar, content full height (Home second row not clipped), side
+  player appears on play and is gone when idle, tapping a show fills center. Phone
+  **portrait** identical to today.
+- **iOS:** `make ios-remote-install` (keychain pw in memory); iPhone landscape +
+  iPad sim: rail at regular width, side player docks right, no full-screen player
+  in landscape. iPhone **portrait** unchanged.
+- **Regression gate both:** narrow = byte-for-byte today's UX.
 
-## Risk / notes
-- Largest risk is the **content restructure** (panes), not the chrome. Mitigated
-  by keeping compact on the existing code paths and reusing the same screen
-  composables/views in both modes (no forks).
-- iOS: `NavigationLink(value:)` driving the split-view detail column is the
-  load-bearing assumption — **verify early on one section** before fanning out.
-- Android: hosting the playlist screen in both a NavHost route (compact) and a
-  pane (wide) — keep it one composable to avoid divergence.
-- Worktree build gotchas (per memory): copy gitignored `Secrets.swift` for iOS;
-  older Makefile may use bare `gradle` — run `./gradlew` directly if so.
+## Docs / tracking
+- ADR-0011 `docs/adr/0011-landscape-tablet-layouts.md`: width-driven icon rail +
+  contextual side player + three player sizes; iPad target enablement; compact
+  unchanged; portrait-lock fallback.
+- Update `PLANS/ROADMAP.md` §6 status as phases land.
+
+## Commits (conventional, per repo scope rules)
+- `feat(android/layout): icon nav rail when wide`
+- `feat(ios/layout): icon nav rail + iPad target when wide`
+- `feat(mobile/player): contextual side player in landscape`
+- `docs(mobile/layout): ADR-0011 landscape + tablet layouts`
