@@ -6,16 +6,19 @@ import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.api.usersync.ApplyResult
 import com.grateful.deadly.core.api.usersync.SyncFavoriteShowV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteTrackV3
+import com.grateful.deadly.core.api.usersync.SyncRecordingPrefV3
 import com.grateful.deadly.core.api.usersync.SyncReviewV3
 import com.grateful.deadly.core.api.usersync.UserSyncApplyService
 import com.grateful.deadly.core.api.usersync.UserSyncService
 import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.FavoritesDao
+import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.entities.FavoriteShowEntity
 import com.grateful.deadly.core.database.entities.FavoriteSongEntity
+import com.grateful.deadly.core.database.entities.RecordingPreferenceEntity
 import com.grateful.deadly.core.database.entities.ShowPlayerTagEntity
 import com.grateful.deadly.core.database.entities.ShowReviewEntity
 import com.grateful.deadly.core.model.AppDatabase
@@ -31,6 +34,7 @@ class UserSyncApplyServiceImpl @Inject constructor(
     @AppDatabase private val favoriteSongDao: FavoriteSongDao,
     @AppDatabase private val showReviewDao: ShowReviewDao,
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
+    @AppDatabase private val recordingPreferenceDao: RecordingPreferenceDao,
     @AppDatabase private val showDao: ShowDao,
     private val authService: AuthService,
 ) : UserSyncApplyService {
@@ -50,6 +54,7 @@ class UserSyncApplyServiceImpl @Inject constructor(
                 val shows = applyFavoriteShows(backup.favorites.shows)
                 val songs = applyFavoriteSongs(backup.favorites.tracks)
                 val reviews = applyReviews(backup.reviews)
+                applyRecordingPreferences(backup.recordingPreferences)
                 shows.copy(
                     favoriteSongsScanned = songs.favoriteSongsScanned,
                     favoriteSongsApplied = songs.favoriteSongsApplied,
@@ -262,6 +267,57 @@ class UserSyncApplyServiceImpl @Inject constructor(
             reviewsApplied = applied,
             reviewsSkippedLocalNewer = skippedLocalNewer,
             reviewsSkippedMissingShow = skippedMissingShow,
+        )
+    }
+
+    // Recording prefs are a singleton-per-show row keyed by showId. FK to shows,
+    // so skip prefs for shows not in the local catalog. Last-write-wins on
+    // updatedAt; a remote tombstone soft-deletes the local row.
+    private suspend fun applyRecordingPreferences(remote: List<SyncRecordingPrefV3>) {
+        var applied = 0
+        var skippedLocalNewer = 0
+        var skippedMissingShow = 0
+
+        for (dto in remote) {
+            if (showDao.getShowById(dto.showId) == null) {
+                skippedMissingShow++
+                continue
+            }
+
+            val local = try {
+                recordingPreferenceDao.get(dto.showId)
+            } catch (e: Exception) {
+                Log.w(TAG, "recording pref read failed for ${dto.showId}: ${e.message}")
+                continue
+            }
+
+            val remoteUpdatedMs = dto.updatedAt * 1000
+            if (local != null && local.updatedAt >= remoteUpdatedMs) {
+                skippedLocalNewer++
+                continue
+            }
+
+            try {
+                recordingPreferenceDao.upsert(
+                    RecordingPreferenceEntity(
+                        showId = dto.showId,
+                        recordingId = dto.recordingId,
+                        updatedAt = remoteUpdatedMs,
+                        deletedAt = dto.deletedAt?.let { it * 1000 },
+                    )
+                )
+                applied++
+            } catch (e: android.database.sqlite.SQLiteConstraintException) {
+                skippedMissingShow++
+            } catch (e: Exception) {
+                Log.w(TAG, "apply recording pref ${dto.showId} failed: ${e.message}")
+            }
+        }
+
+        Log.d(
+            TAG,
+            "recording_prefs: scanned=${remote.size} applied=$applied " +
+                "skippedLocalNewer=$skippedLocalNewer skippedMissingShow=$skippedMissingShow"
         )
     }
 

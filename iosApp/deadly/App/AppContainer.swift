@@ -106,6 +106,7 @@ final class AppContainer {
                     recentShowDAO: RecentShowDAO(database: db),
                     showReviewDAO: ShowReviewDAO(database: db),
                     showPlayerTagDAO: ShowPlayerTagDAO(database: db),
+                    recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
                     apiClient: userSync,
                     authService: auth
                 )
@@ -142,6 +143,7 @@ final class AppContainer {
                     favoriteSongDAO: FavoriteSongDAO(database: db),
                     showReviewDAO: ShowReviewDAO(database: db),
                     showPlayerTagDAO: ShowPlayerTagDAO(database: db),
+                    recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
                     showDAO: ShowDAO(database: db),
                     authService: auth
                 )
@@ -212,9 +214,13 @@ final class AppContainer {
             // top recents) so a freshly-synced web profile isn't empty.
             // Best-effort — enqueued rows flush once signed in; the flag stops
             // it re-running. The same routine backs a manual "Sync now".
+            // V2 re-runs the backfill for users who already cleared V1 before
+            // recording-pref sync existed (idempotent: outbox dedupes, server
+            // is last-write-wins).
             MainActor.assumeIsolated {
-                if !prefs.localBackfilledV1 {
+                if !prefs.localBackfilledV2 {
                     prefs.localBackfilledV1 = true
+                    prefs.localBackfilledV2 = true
                     Task { await pushSvc.enqueueAllLocalAndFlush() }
                 }
             }
@@ -270,6 +276,7 @@ final class AppContainer {
                 analyticsService: analytics
             )
             playlistService = playlistSvc
+            MainActor.assumeIsolated { playlistSvc.favoritesPushService = pushSvc }
 
             // PlaybackRestorationService — persists and restores playback position across kills
             let restorationSvc = MainActor.assumeIsolated {

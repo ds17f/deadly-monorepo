@@ -17,6 +17,7 @@ final class FavoritesPushService {
     private let recentShowDAO: RecentShowDAO
     private let showReviewDAO: ShowReviewDAO
     private let showPlayerTagDAO: ShowPlayerTagDAO
+    private let recordingPreferenceDAO: RecordingPreferenceDAO
     private let apiClient: UserSyncAPIClient
     private let authService: AuthService
     /// Set by AppContainer after both services are constructed. Used to fire
@@ -31,6 +32,7 @@ final class FavoritesPushService {
         recentShowDAO: RecentShowDAO,
         showReviewDAO: ShowReviewDAO,
         showPlayerTagDAO: ShowPlayerTagDAO,
+        recordingPreferenceDAO: RecordingPreferenceDAO,
         apiClient: UserSyncAPIClient,
         authService: AuthService
     ) {
@@ -40,6 +42,7 @@ final class FavoritesPushService {
         self.recentShowDAO = recentShowDAO
         self.showReviewDAO = showReviewDAO
         self.showPlayerTagDAO = showPlayerTagDAO
+        self.recordingPreferenceDAO = recordingPreferenceDAO
         self.apiClient = apiClient
         self.authService = authService
     }
@@ -68,6 +71,10 @@ final class FavoritesPushService {
         for review in reviews {
             enqueueRow(kind: SyncOutboxRecord.Kind.review, refId: review.showId)
         }
+        let recordingPrefs = (try? recordingPreferenceDAO.fetchAll()) ?? []
+        for pref in recordingPrefs {
+            enqueueRow(kind: SyncOutboxRecord.Kind.recordingPref, refId: pref.showId)
+        }
         return await flushPending()
     }
 
@@ -95,6 +102,13 @@ final class FavoritesPushService {
     /// becomes a DELETE.
     func enqueueAndPushReview(showId: String) {
         enqueue(kind: SyncOutboxRecord.Kind.review, refId: showId)
+    }
+
+    /// Enqueue a recording-preference change (refId is the showId).
+    /// Fire-and-forget. The flusher reads the row at push time; an absent row
+    /// becomes a DELETE.
+    func enqueueAndPushRecordingPref(showId: String) {
+        enqueue(kind: SyncOutboxRecord.Kind.recordingPref, refId: showId)
     }
 
     private func enqueueRow(kind: String, refId: String) {
@@ -126,6 +140,7 @@ final class FavoritesPushService {
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.favoriteSong))
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.recent))
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.review))
+        results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.recordingPref))
 
         // Reconcile after pushing — the server may have learned about changes
         // from other devices during our window. Only fire when something
@@ -167,7 +182,8 @@ final class FavoritesPushService {
         let songs = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.favoriteSong)) ?? 0
         let recents = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.recent)) ?? 0
         let reviews = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.review)) ?? 0
-        return shows + songs + recents + reviews
+        let recordingPrefs = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.recordingPref)) ?? 0
+        return shows + songs + recents + reviews + recordingPrefs
     }
 
     // MARK: - Internals
@@ -187,8 +203,37 @@ final class FavoritesPushService {
             return await pushRecent(refId: entry.refId)
         case SyncOutboxRecord.Kind.review:
             return await pushReview(refId: entry.refId)
+        case SyncOutboxRecord.Kind.recordingPref:
+            return await pushRecordingPref(refId: entry.refId)
         default:
             return .success(operation: "NOOP")
+        }
+    }
+
+    // Recording prefs push by showId. The flusher reads the current row at
+    // push time: a live row is a PUT, an absent row is a DELETE.
+    private func pushRecordingPref(refId: String) async -> FlushOutcome {
+        let row: RecordingPreferenceRecord?
+        do {
+            row = try recordingPreferenceDAO.fetch(refId)
+        } catch {
+            return .failure(operation: "?", error: "local read failed: \(error.localizedDescription)")
+        }
+
+        if let row {
+            do {
+                try await apiClient.putRecordingPref(showId: row.showId, recordingId: row.recordingId)
+                return .success(operation: "PUT")
+            } catch {
+                return .failure(operation: "PUT", error: error.localizedDescription)
+            }
+        } else {
+            do {
+                try await apiClient.deleteRecordingPref(showId: refId)
+                return .success(operation: "DELETE")
+            } catch {
+                return .failure(operation: "DELETE", error: error.localizedDescription)
+            }
         }
     }
 

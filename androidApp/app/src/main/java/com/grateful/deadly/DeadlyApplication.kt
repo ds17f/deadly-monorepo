@@ -49,10 +49,14 @@ class DeadlyApplication : Application(), DeadlyMediaDownloadServiceHost {
         userSyncCoordinator.start()
         notificationCoordinator.start()
 
-        // One-time: push all pre-existing local data (favorites + top recents)
-        // to the server so devices that predate granular push aren't stranded.
-        if (!appPreferences.getLocalBackfilledV1()) {
+        // One-time: push all pre-existing local data (favorites + top recents +
+        // recording prefs) to the server so devices that predate granular push
+        // aren't stranded. V2 re-runs the backfill for users who already cleared
+        // V1 before recording-pref sync existed (idempotent: outbox dedupes and
+        // the server is last-write-wins).
+        if (!appPreferences.getLocalBackfilledV2()) {
             appPreferences.setLocalBackfilledV1(true)
+            appPreferences.setLocalBackfilledV2(true)
             appScope.launch {
                 favoritesPushService.enqueueAllLocalAndFlush()
             }

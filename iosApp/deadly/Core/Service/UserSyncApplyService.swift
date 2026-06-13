@@ -17,6 +17,7 @@ final class UserSyncApplyService {
     private let favoriteSongDAO: FavoriteSongDAO
     private let showReviewDAO: ShowReviewDAO
     private let showPlayerTagDAO: ShowPlayerTagDAO
+    private let recordingPreferenceDAO: RecordingPreferenceDAO
     private let showDAO: ShowDAO
     private let authService: AuthService
 
@@ -49,6 +50,7 @@ final class UserSyncApplyService {
         favoriteSongDAO: FavoriteSongDAO,
         showReviewDAO: ShowReviewDAO,
         showPlayerTagDAO: ShowPlayerTagDAO,
+        recordingPreferenceDAO: RecordingPreferenceDAO,
         showDAO: ShowDAO,
         authService: AuthService
     ) {
@@ -57,6 +59,7 @@ final class UserSyncApplyService {
         self.favoriteSongDAO = favoriteSongDAO
         self.showReviewDAO = showReviewDAO
         self.showPlayerTagDAO = showPlayerTagDAO
+        self.recordingPreferenceDAO = recordingPreferenceDAO
         self.showDAO = showDAO
         self.authService = authService
     }
@@ -76,6 +79,7 @@ final class UserSyncApplyService {
             let shows = try applyFavoriteShows(backup.favorites.shows)
             let songs = try applyFavoriteSongs(backup.favorites.tracks)
             let reviews = try applyReviews(backup.reviews)
+            applyRecordingPreferences(backup.recordingPreferences)
             return ApplyResult(
                 favoriteShowsScanned: shows.scanned,
                 favoriteShowsApplied: shows.applied,
@@ -263,6 +267,44 @@ final class UserSyncApplyService {
             }
         }
         return c
+    }
+
+    // Recording prefs are one row per show keyed by showId, FK'd to shows.
+    // LWW on updatedAt; a remote tombstone deletes the local row. iOS keeps no
+    // local tombstone column, so a clear is a hard delete.
+    private func applyRecordingPreferences(_ remote: [SyncRecordingPrefV3]) {
+        var applied = 0, skippedLocalNewer = 0, skippedMissingShow = 0
+
+        for dto in remote {
+            if (try? showDAO.fetchById(dto.showId)) == nil {
+                skippedMissingShow += 1
+                continue
+            }
+
+            let local = try? recordingPreferenceDAO.fetch(dto.showId)
+            let remoteUpdatedMs = dto.updatedAt * 1000
+            if let local, local.updatedAt >= remoteUpdatedMs {
+                skippedLocalNewer += 1
+                continue
+            }
+
+            do {
+                if dto.deletedAt != nil {
+                    try recordingPreferenceDAO.delete(dto.showId)
+                } else {
+                    try recordingPreferenceDAO.upsert(RecordingPreferenceRecord(
+                        showId: dto.showId,
+                        recordingId: dto.recordingId,
+                        updatedAt: remoteUpdatedMs
+                    ))
+                }
+                applied += 1
+            } catch {
+                print("[UserSyncApply] apply recording pref \(dto.showId) failed: \(error.localizedDescription)")
+            }
+        }
+        print("[UserSyncApply] recording_prefs: scanned=\(remote.count) applied=\(applied) " +
+              "skippedLocalNewer=\(skippedLocalNewer) skippedMissingShow=\(skippedMissingShow)")
     }
 
     private func makeRecord(from dto: SyncFavoriteShowV3, existing: FavoriteShowRecord?) -> FavoriteShowRecord {

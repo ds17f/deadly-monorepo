@@ -53,6 +53,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_LAST_REVIEW_PROMPT_TIME = "last_review_prompt_time"
         private const val KEY_HAS_ADDED_FAVORITE = "has_added_favorite"
         private const val KEY_LOCAL_BACKFILLED_V1 = "local_backfilled_v1"
+        private const val KEY_LOCAL_BACKFILLED_V2 = "local_backfilled_v2"
         private const val KEY_DEVELOPER_MODE_UNLOCKED = "developer_mode_unlocked"
         private const val KEY_PLAYER_CONTROLS_STYLE = "player_controls_style"
         private const val KEY_HOME_TRENDING_WINDOW = "home_trending_window"
@@ -393,6 +394,15 @@ class AppPreferences @Inject constructor(
 
     fun setLocalBackfilledV1(value: Boolean) {
         prefs.edit().putBoolean(KEY_LOCAL_BACKFILLED_V1, value).apply()
+    }
+
+    /** One-time flag: re-run of the backfill that also covers recording
+     *  preferences (V1 predated recording-pref sync, so existing users need
+     *  one more pass to push their local prefs). */
+    fun getLocalBackfilledV2(): Boolean = prefs.getBoolean(KEY_LOCAL_BACKFILLED_V2, false)
+
+    fun setLocalBackfilledV2(value: Boolean) {
+        prefs.edit().putBoolean(KEY_LOCAL_BACKFILLED_V2, value).apply()
     }
 
     private val _developerModeUnlocked = MutableStateFlow(

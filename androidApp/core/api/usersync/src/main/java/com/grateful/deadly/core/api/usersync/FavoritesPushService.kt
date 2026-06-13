@@ -17,6 +17,10 @@ interface FavoritesPushService {
     /** Enqueue a review change (refId is the showId). The flusher reads the
      *  review row + its player tags at push time; a tombstone becomes DELETE. */
     fun enqueueAndPushReview(showId: String)
+    /** Enqueue a recording-preference change (refId is the showId). The flusher
+     *  reads the recording_preferences row at push time; an absent/tombstoned
+     *  row becomes a DELETE. */
+    fun enqueueAndPushRecordingPref(showId: String)
     /** Enqueue all local favorites (shows + songs) + top recents, then flush.
      *  Backs the one-time startup backfill and a manual "Sync now". */
     suspend fun enqueueAllLocalAndFlush(): List<PushResult>

@@ -13,6 +13,7 @@ import com.grateful.deadly.core.api.usersync.UserSyncService
 import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.RecentShowDao
+import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.dao.SyncOutboxDao
@@ -35,6 +36,7 @@ class FavoritesPushServiceImpl @Inject constructor(
     @AppDatabase private val recentShowDao: RecentShowDao,
     @AppDatabase private val showReviewDao: ShowReviewDao,
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
+    @AppDatabase private val recordingPreferenceDao: RecordingPreferenceDao,
     private val userSyncService: UserSyncService,
     private val authService: AuthService,
     private val syncCoordinator: UserSyncCoordinator,
@@ -63,6 +65,10 @@ class FavoritesPushServiceImpl @Inject constructor(
         enqueueAndFlush(SyncOutboxEntity.KIND_REVIEW, showId)
     }
 
+    override fun enqueueAndPushRecordingPref(showId: String) {
+        enqueueAndFlush(SyncOutboxEntity.KIND_RECORDING_PREF, showId)
+    }
+
     override suspend fun enqueueAllLocalAndFlush(): List<PushResult> {
         val shows = try { favoritesDao.getAllFavoriteShows() } catch (e: Exception) {
             Log.w(TAG, "getAllFavoriteShows failed", e); emptyList()
@@ -83,6 +89,11 @@ class FavoritesPushServiceImpl @Inject constructor(
             Log.w(TAG, "getAll reviews failed", e); emptyList()
         }
         for (review in reviews) enqueueRow(SyncOutboxEntity.KIND_REVIEW, review.showId)
+
+        val recordingPrefs = try { recordingPreferenceDao.getAll() } catch (e: Exception) {
+            Log.w(TAG, "getAll recording prefs failed", e); emptyList()
+        }
+        for (pref in recordingPrefs) enqueueRow(SyncOutboxEntity.KIND_RECORDING_PREF, pref.showId)
 
         return flushPending()
     }
@@ -128,6 +139,7 @@ class FavoritesPushServiceImpl @Inject constructor(
             results += flushKind(SyncOutboxEntity.KIND_FAVORITE_SONG)
             results += flushKind(SyncOutboxEntity.KIND_RECENT)
             results += flushKind(SyncOutboxEntity.KIND_REVIEW)
+            results += flushKind(SyncOutboxEntity.KIND_RECORDING_PREF)
             if (results.any { it.success && it.operation != "NOOP" }) {
                 syncCoordinator.triggerPull("after_push_flush")
             }
@@ -140,7 +152,8 @@ class FavoritesPushServiceImpl @Inject constructor(
             outbox.pendingCount(SyncOutboxEntity.KIND_FAVORITE_SHOW) +
                 outbox.pendingCount(SyncOutboxEntity.KIND_FAVORITE_SONG) +
                 outbox.pendingCount(SyncOutboxEntity.KIND_RECENT) +
-                outbox.pendingCount(SyncOutboxEntity.KIND_REVIEW)
+                outbox.pendingCount(SyncOutboxEntity.KIND_REVIEW) +
+                outbox.pendingCount(SyncOutboxEntity.KIND_RECORDING_PREF)
         } catch (_: Exception) { 0 }
 
     private suspend fun flushKind(kind: String): List<PushResult> {
@@ -163,6 +176,7 @@ class FavoritesPushServiceImpl @Inject constructor(
             SyncOutboxEntity.KIND_FAVORITE_SONG -> pushFavoriteSong(entry)
             SyncOutboxEntity.KIND_RECENT -> pushRecent(entry)
             SyncOutboxEntity.KIND_REVIEW -> pushReview(entry)
+            SyncOutboxEntity.KIND_RECORDING_PREF -> pushRecordingPref(entry)
             else -> {
                 // Unknown kind — drop it so the queue doesn't get stuck.
                 outbox.delete(entry.id)
@@ -288,6 +302,25 @@ class FavoritesPushServiceImpl @Inject constructor(
                 deletedAt = null,
             )
             userSyncService.putReview(dto)
+                .fold({ success(entry, "PUT") }, { failure(entry, "PUT", it.message ?: it::class.simpleName ?: "error") })
+        }
+    }
+
+    // Recording prefs push by showId. The flusher reads the current row at
+    // push time: a live row is a PUT, an absent or tombstoned row is a DELETE.
+    private suspend fun pushRecordingPref(entry: SyncOutboxEntity): PushResult {
+        val showId = entry.refId
+        val row = try {
+            recordingPreferenceDao.get(showId)
+        } catch (e: Exception) {
+            return failure(entry, "?", "local read failed: ${e.message}")
+        }
+
+        return if (row == null || row.deletedAt != null) {
+            userSyncService.deleteRecordingPref(showId)
+                .fold({ success(entry, "DELETE") }, { failure(entry, "DELETE", it.message ?: it::class.simpleName ?: "error") })
+        } else {
+            userSyncService.putRecordingPref(showId, row.recordingId)
                 .fold({ success(entry, "PUT") }, { failure(entry, "PUT", it.message ?: it::class.simpleName ?: "error") })
         }
     }

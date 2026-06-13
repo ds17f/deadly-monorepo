@@ -28,6 +28,9 @@ final class PlaylistServiceImpl: PlaylistService {
     private let analyticsService: AnalyticsService?
     let streamPlayer: StreamPlayer
     var connectService: ConnectService?
+    /// Set by AppContainer after construction. Pushes recording-preference
+    /// changes to the server via the sync outbox.
+    weak var favoritesPushService: FavoritesPushService?
     /// When true, playTrack() skips notifying Connect to avoid Connect→load→sendLoad loops.
     var suppressConnectNotify = false
 
@@ -250,6 +253,9 @@ final class PlaylistServiceImpl: PlaylistService {
         try? recordingPreferenceDAO.upsert(RecordingPreferenceRecord(
             showId: showId, recordingId: recording.identifier, updatedAt: now
         ))
+        Task { @MainActor [weak favoritesPushService] in
+            favoritesPushService?.enqueueAndPushRecordingPref(showId: showId)
+        }
         await selectRecording(recording)
     }
 
