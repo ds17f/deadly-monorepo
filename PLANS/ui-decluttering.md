@@ -1,15 +1,15 @@
 # UI Decluttering — Settings + Player/Playlist Controls
 
-**Status:** Design in progress (not yet an ADR, not yet built). 2026-06-12.
+**Status:** ✅ DONE — captured as **ADR-0014** (accepted 2026-06-12) and
+**implemented across all platforms** (2026-06-13). Shipped via **#67** (player +
+playlist + Autoplay toast + the full web pass) and **#68** (mobile Settings
+categorization + Home Layout + icons). This doc is retained as the design record /
+execution log; the decision of record is `docs/adr/0014-ui-control-altitude-and-decluttering.md`.
 **Goal:** Reduce UI clutter that's accreted as features shipped. Settings is a
 scroll-forever flat list (nightmare on mobile); the ∞ Autoplay addition crowded
 the player; playlist action rows duplicate everything into the overflow. Be
 deliberate — establish first principles, capture them as an **ADR**, then use it
 to guide implementation across iOS + Android (+ web for Settings parity).
-
-This doc is the recovery point. When the design is settled, it becomes
-**ADR-0014** (next free number in `docs/adr/`; ADR-0010 = auto-advance/queue is
-the relevant neighbor for Queue's eventual return).
 
 ---
 

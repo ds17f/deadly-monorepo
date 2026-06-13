@@ -2,12 +2,20 @@
 
 ## Status
 
-Accepted (2026-06-12). Design settled across all surfaces. **Phase 1 (player +
-playlist, iOS + Android in parity) implemented 2026-06-12** — see
-`PLANS/ui-decluttering.md` "Phase 1 — implemented" for the per-file change list.
-Still to do: Settings categorization + consolidated Home Layout (iOS + Android),
-the light-touch web pass, and web Settings parity. Working notes and current-state
-inventory (with file paths) live in `PLANS/ui-decluttering.md`.
+Accepted (2026-06-12) — **Implemented across all platforms (2026-06-13).**
+- **Player + playlist** (iOS + Android, unified `⋯` taxonomy + Favorite on the
+  track-info row) and the reusable Autoplay confirmation **toast** — shipped in #67.
+- **Web** (Autoplay given one home, Favorite + Share on the expanded player,
+  categorized web Settings) — shipped in #67.
+- **Mobile Settings** (categorized landing + the consolidated Home Layout screen,
+  iOS + Android, with leading icons) — shipped in #68.
+
+Per-file change list + execution notes live in `PLANS/ui-decluttering.md`.
+
+Deliberately deferred (not regressions, tracked elsewhere): `Queue` returns to the
+player inline cluster when the queue feature ships (ADR-0010 / `show-queue-v2`);
+`＋ Add to Playlist` when playlists exist; web home has no rails/decade concept so
+it intentionally has no "Home Layout" Settings screen.
 
 Related: [ADR-0010](0010-playback-auto-advance-and-show-queue.md) (auto-advance +
 queue — the `∞ Autoplay` toggle and the future `Queue` entry point this ADR
