@@ -1,11 +1,20 @@
 # Changelog
 
+## [2.39.0] - 2026-06-13
+
+### New Features
+* add Send Bug Report to share recent logs (#74) (8fb305ef)
+* cross-device read/dismiss sync (ADR-0015) (#72) (62fc67a7)
+
+### Bug Fixes
+* sync recording preferences to the server (#73) (838c55f1)
+* don't crash the process on a position-persist DB error (393d0cba)
+
+
 ## [2.38.1] - 2026-06-13
 
 ### Bug Fixes
 * rename 'Buy Me a Coffee' to 'Support TheDeadly' (c9e79c7a)
-
-
 ## [2.38.0] - 2026-06-12
 
 ### New Features
