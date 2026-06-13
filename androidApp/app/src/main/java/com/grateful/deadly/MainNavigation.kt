@@ -414,7 +414,8 @@ fun MainNavigation(
         if (useSideNav) {
             NavigationRailBar(
                 currentRoute = currentRoute,
-                onNavigateToDestination = onNavigateToDestination
+                onNavigateToDestination = onNavigateToDestination,
+                onOpenSettings = { scope.launch { drawerState.open() } }
             )
         }
     AppScaffold(
@@ -581,6 +582,7 @@ private const val WIDE_BREAKPOINT_DP = 600
 private fun NavigationRailBar(
     currentRoute: String?,
     onNavigateToDestination: (String) -> Unit,
+    onOpenSettings: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Surface(
@@ -594,13 +596,32 @@ private fun NavigationRailBar(
                 .systemBarsPadding()
                 .padding(vertical = 12.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterVertically)
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
+            // Tab icons pinned to the top of the rail.
             BottomNavDestination.destinations.forEach { destination ->
                 NavigationRailItem(
                     destination = destination,
                     isSelected = currentRoute == destination.route,
                     onClick = { onNavigateToDestination(destination.route) }
+                )
+            }
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            // Settings pinned to the bottom of the rail.
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(12.dp))
+                    .clickable { onOpenSettings() }
+                    .padding(12.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    painter = IconResources.Navigation.Settings(),
+                    contentDescription = "Settings",
+                    tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+                    modifier = Modifier.size(24.dp)
                 )
             }
         }

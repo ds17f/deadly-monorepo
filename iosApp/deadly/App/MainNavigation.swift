@@ -195,7 +195,7 @@ struct MainNavigation: View {
             // plus a contextual docked side player that replaces the bottom mini
             // bar whenever a track is loaded.
             HStack(spacing: 0) {
-                NavSidebar(selectedTab: tabSelection)
+                NavSidebar(selectedTab: tabSelection, onSettings: { showingSettings = true })
                 Divider()
                 sectionContent(for: selectedTab)
                 if container.miniPlayerService.isVisible {
@@ -391,6 +391,7 @@ enum AppTab: String, Hashable, CaseIterable {
 /// bar. Drives the same `selectedTab` the TabView uses.
 private struct NavSidebar: View {
     @Binding var selectedTab: AppTab
+    var onSettings: () -> Void
 
     var body: some View {
         VStack(spacing: 8) {
@@ -410,7 +411,21 @@ private struct NavSidebar: View {
                 }
                 .accessibilityLabel(tab.title)
             }
+
             Spacer()
+
+            // Settings pinned to the bottom of the rail (uses the otherwise
+            // empty vertical space the wide rail frees up).
+            Button {
+                onSettings()
+            } label: {
+                Image(systemName: "gearshape")
+                    .font(.title2)
+                    .frame(width: 44, height: 44)
+                    .foregroundStyle(Color.secondary)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Settings")
         }
         .padding(.vertical, 12)
         .frame(width: 72)
