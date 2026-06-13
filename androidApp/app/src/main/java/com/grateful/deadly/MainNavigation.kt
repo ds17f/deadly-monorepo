@@ -57,6 +57,7 @@ import com.grateful.deadly.feature.playlist.navigation.playlistGraph
 import com.grateful.deadly.feature.playlist.navigation.navigateToPlaylist
 import com.grateful.deadly.feature.player.navigation.playerScreen
 import com.grateful.deadly.feature.player.navigation.PLAYER_ROUTE
+import com.grateful.deadly.feature.player.screens.main.PlayerSidePanel
 import com.grateful.deadly.feature.miniplayer.screens.main.MiniPlayerScreen
 import com.grateful.deadly.feature.favorites.navigation.favoritesNavigation
 import com.grateful.deadly.feature.collections.navigation.collectionsGraph
@@ -246,6 +247,9 @@ fun MainNavigation(
     // tablets, foldables and DeX all get it. Narrow stays today's bottom bar.
     val isWide = LocalConfiguration.current.screenWidthDp >= WIDE_BREAKPOINT_DP
     val useSideNav = isWide && barConfig.bottomBar?.visible == true
+    // On wide tabbed screens the bottom mini player is replaced by a docked
+    // side player in the right column (contextual — only when a track plays).
+    val showSidePlayer = useSideNav && barConfig.miniPlayer?.visible == true
 
     // Shared tab-navigation action used by both the bottom bar and the rail.
     val onNavigateToDestination: (String) -> Unit = { route ->
@@ -426,13 +430,15 @@ fun MainNavigation(
             }
         } else null,
         miniPlayerConfig = barConfig.miniPlayer,
-        miniPlayerContent = {
-            MiniPlayerScreen(
-                onTapToExpand = { _ ->
-                    Log.d("MainNavigation", "MiniPlayer tapped - navigating to player")
-                    navController.navigate("player")
-                }
-            )
+        miniPlayerContent = if (showSidePlayer) null else {
+            {
+                MiniPlayerScreen(
+                    onTapToExpand = { _ ->
+                        Log.d("MainNavigation", "MiniPlayer tapped - navigating to player")
+                        navController.navigate("player")
+                    }
+                )
+            }
         },
         onNavigationClick = {
             navController.popBackStack()
@@ -441,6 +447,9 @@ fun MainNavigation(
     ) { paddingValues ->
         scaffoldContent(paddingValues)
     }
+        if (showSidePlayer) {
+            PlayerSidePanel(onTapToExpand = { navController.navigate("player") })
+        }
     } // Row
     } // ModalNavigationDrawer
 

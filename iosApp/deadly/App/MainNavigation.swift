@@ -191,19 +191,25 @@ struct MainNavigation: View {
     @ViewBuilder
     private func rootLayout(isWide: Bool) -> some View {
         if isWide {
-            // Wide (iPad, any phone in landscape): icon rail + selected section.
+            // Wide (iPad, any phone in landscape): icon rail + selected section,
+            // plus a contextual docked side player that replaces the bottom mini
+            // bar whenever a track is loaded.
             HStack(spacing: 0) {
                 NavSidebar(selectedTab: tabSelection)
                 Divider()
                 sectionContent(for: selectedTab)
+                if container.miniPlayerService.isVisible {
+                    Divider()
+                    SidePlayerView(service: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+                }
             }
         } else {
             // Compact (phone portrait): byte-for-byte today's TabView UX.
             TabView(selection: tabSelection) {
-                Tab("Home", systemImage: "house", value: .home) { homeSection }
-                Tab("Search", systemImage: "magnifyingglass", value: .search) { searchSection }
-                Tab("Favorites", systemImage: "heart.fill", value: .favorites) { favoritesSection }
-                Tab("Collections", systemImage: "square.stack", value: .collections) { collectionsSection }
+                Tab("Home", systemImage: "house", value: .home) { homeSection() }
+                Tab("Search", systemImage: "magnifyingglass", value: .search) { searchSection() }
+                Tab("Favorites", systemImage: "heart.fill", value: .favorites) { favoritesSection() }
+                Tab("Collections", systemImage: "square.stack", value: .collections) { collectionsSection() }
             }
         }
     }
@@ -212,15 +218,17 @@ struct MainNavigation: View {
 
     @ViewBuilder
     private func sectionContent(for tab: AppTab) -> some View {
+        // Wide layout: the bottom mini player is replaced by the docked side
+        // player, so suppress it inside each section.
         switch tab {
-        case .home: homeSection
-        case .search: searchSection
-        case .favorites: favoritesSection
-        case .collections: collectionsSection
+        case .home: homeSection(suppressMini: true)
+        case .search: searchSection(suppressMini: true)
+        case .favorites: favoritesSection(suppressMini: true)
+        case .collections: collectionsSection(suppressMini: true)
         }
     }
 
-    private var homeSection: some View {
+    private func homeSection(suppressMini: Bool = false) -> some View {
         NavigationStack(path: $homeStack) {
             HomeScreen()
                 .settingsLogoButton($showingSettings, title: "Home")
@@ -242,11 +250,11 @@ struct MainNavigation: View {
                     NotificationsInboxScreen()
                 }
         }
-        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer, enabled: !suppressMini)
         .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
     }
 
-    private var searchSection: some View {
+    private func searchSection(suppressMini: Bool = false) -> some View {
         NavigationStack(path: $searchStack) {
             SearchScreen(resetToken: searchResetToken)
                 .settingsLogoButton($showingSettings, title: "Search")
@@ -254,11 +262,11 @@ struct MainNavigation: View {
                     ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
                 }
         }
-        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer, enabled: !suppressMini)
         .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
     }
 
-    private var favoritesSection: some View {
+    private func favoritesSection(suppressMini: Bool = false) -> some View {
         NavigationStack(path: $favoritesStack) {
             FavoritesScreen()
                 .settingsLogoButton($showingSettings, title: "Favorites")
@@ -272,11 +280,11 @@ struct MainNavigation: View {
                     }
                 }
         }
-        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer, enabled: !suppressMini)
         .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
     }
 
-    private var collectionsSection: some View {
+    private func collectionsSection(suppressMini: Bool = false) -> some View {
         NavigationStack(path: $collectionsStack) {
             CollectionsScreen()
                 .settingsLogoButton($showingSettings, title: "Collections")
@@ -290,7 +298,7 @@ struct MainNavigation: View {
                     ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
                 }
         }
-        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+        .miniPlayer(miniPlayerService: container.miniPlayerService, showFullPlayer: $showFullPlayer, enabled: !suppressMini)
         .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
     }
 
