@@ -14,6 +14,7 @@ import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.BugReport
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -26,6 +27,7 @@ import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.PlayerControlsStyle
 import com.grateful.deadly.core.model.SourceBadgeStyle
 import com.grateful.deadly.feature.settings.BuildConfig
+import com.grateful.deadly.feature.settings.screens.bugreport.BugReportScreen
 
 // ADR-0014: Settings is a short landing of stable categories, each its own
 // screen — Account · Playback & Audio · Home Layout · Library & Data ·
@@ -51,7 +53,18 @@ fun SettingsScreen(
     onNavigateToConnect: () -> Unit = {}
 ) {
     var category by remember { mutableStateOf<SettingsCategory?>(null) }
-    BackHandler(enabled = category != null) { category = null }
+    var showBugReport by remember { mutableStateOf(false) }
+    BackHandler(enabled = category != null || showBugReport) {
+        if (showBugReport) showBugReport = false else category = null
+    }
+
+    if (showBugReport) {
+        BugReportScreen(
+            onBack = { showBugReport = false },
+            headerBar = { title, onBack -> SubscreenHeader(title, onBack) }
+        )
+        return
+    }
 
     when (category) {
         null -> SettingsLanding(
@@ -60,7 +73,8 @@ fun SettingsScreen(
             onNavigateToMission = onNavigateToMission,
             onNavigateToLegal = onNavigateToLegal,
             onNavigateToPrivacyData = onNavigateToPrivacyData,
-            onNavigateToDeveloper = onNavigateToDeveloper
+            onNavigateToDeveloper = onNavigateToDeveloper,
+            onShowBugReport = { showBugReport = true }
         )
         SettingsCategory.Account ->
             AccountSettingsScreen(viewModel, onBack = { category = null })
@@ -91,7 +105,8 @@ private fun SettingsLanding(
     onNavigateToMission: () -> Unit,
     onNavigateToLegal: () -> Unit,
     onNavigateToPrivacyData: () -> Unit,
-    onNavigateToDeveloper: () -> Unit
+    onNavigateToDeveloper: () -> Unit,
+    onShowBugReport: () -> Unit
 ) {
     val context = LocalContext.current
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
@@ -182,6 +197,20 @@ private fun SettingsLanding(
                         Intent(Intent.ACTION_VIEW, Uri.parse("https://buymeacoffee.com/dsilberg"))
                     )
                 },
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+        item {
+            PreferenceRow(
+                title = "Send Bug Report",
+                leading = { LeadingIcon(Icons.Filled.BugReport) },
+                onClick = onShowBugReport,
                 trailing = {
                     Icon(
                         painter = IconResources.Navigation.ChevronRight(),
@@ -335,21 +364,28 @@ private fun SubscreenScaffold(
     content: LazyListScope.() -> Unit
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 4.dp, vertical = 4.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            IconButton(onClick = onBack) {
-                Icon(
-                    painter = IconResources.Navigation.Back(),
-                    contentDescription = "Back"
-                )
-            }
-            Text(text = title, style = MaterialTheme.typography.titleLarge)
-        }
+        SubscreenHeader(title, onBack)
         LazyColumn(modifier = Modifier.fillMaxSize(), content = content)
+    }
+}
+
+// Just the back-bar row, reused by both [SubscreenScaffold] and screens that
+// manage their own (non-LazyColumn) body, like the bug report screen.
+@Composable
+private fun SubscreenHeader(title: String, onBack: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 4.dp, vertical = 4.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        IconButton(onClick = onBack) {
+            Icon(
+                painter = IconResources.Navigation.Back(),
+                contentDescription = "Back"
+            )
+        }
+        Text(text = title, style = MaterialTheme.typography.titleLarge)
     }
 }
 
