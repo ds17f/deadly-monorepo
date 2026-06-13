@@ -313,11 +313,16 @@ final class AppContainer {
                 playlistSvc.connectService = connect
                 miniPlayer.connectService = connect
                 restorationSvc.connectService = connect
-                connect.onLoadShow = { [weak playlistSvc, weak player] showId, trackIndex, positionMs, autoPlay in
+                connect.onLoadShow = { [weak playlistSvc, weak player] showId, recordingId, trackIndex, positionMs, autoPlay in
                     guard let svc = playlistSvc else { return }
                     svc.suppressConnectNotify = true
                     defer { svc.suppressConnectNotify = false }
-                    await svc.loadShow(showId)
+                    // Adopt the session's exact recording (mirrors Android passing
+                    // new.recordingId into its load) so localRecordingId converges to
+                    // the server's — otherwise reactToState sees a permanent mismatch
+                    // and re-fires NEW RECORDING on every reconnect. loadShow falls back
+                    // to the show's best recording if this id isn't in the local catalog.
+                    await svc.loadShow(showId, recordingId: recordingId)
                     guard !svc.tracks.isEmpty else { return }
                     let idx = min(trackIndex, svc.tracks.count - 1)
                     let seekPosition = TimeInterval(positionMs) / 1000.0
