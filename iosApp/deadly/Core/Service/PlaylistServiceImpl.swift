@@ -291,10 +291,11 @@ final class PlaylistServiceImpl: PlaylistService {
         // If the player already has this recording's queue loaded, skip directly to the index
         // instead of rebuilding the entire queue (avoids redundant network redirect resolution).
         // The observer will emit playback_start/_end via the debounced commit path.
-        // Note: skipTo always starts playback — autoPlay=false only applies when we build a
-        // fresh queue. Restore never hits this branch because nothing is loaded at launch.
+        // Honor autoPlay here too: a Connect reconnect re-issues the load with autoPlay=false
+        // while the queue is already loaded, so a hardcoded autoplay would silently start
+        // playback on a non-active follower (spurious "playing but not in app").
         if streamPlayer.currentTrack?.metadata["recordingId"] == recording.identifier {
-            streamPlayer.skipTo(index: index)
+            streamPlayer.skipTo(index: index, autoplay: autoPlay)
             if !suppressConnectNotify {
                 let durationMs = Int((tracks[index].durationInterval ?? 0) * 1000)
                 connectService?.sendSeek(trackIndex: index, positionMs: 0, durationMs: durationMs)

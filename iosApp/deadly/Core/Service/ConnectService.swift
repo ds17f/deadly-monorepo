@@ -42,8 +42,8 @@ final class ConnectService: NSObject {
     /// Callback to load a show into the local player. Set by PlaylistServiceImpl
     /// to avoid circular dependency. Called when Connect state has a recording
     /// that isn't loaded locally.
-    /// Parameters: (showId, trackIndex, positionMs, autoPlay)
-    var onLoadShow: ((String, Int, Int, Bool) async -> Void)?
+    /// Parameters: (showId, recordingId, trackIndex, positionMs, autoPlay)
+    var onLoadShow: ((String, String, Int, Int, Bool) async -> Void)?
 
     private let appPreferences: AppPreferences
     private let authService: AuthService
@@ -280,6 +280,14 @@ final class ConnectService: NSObject {
             logger.warning("connect: bailing — shouldConnect=\(self.shouldConnect, privacy: .public) token=\(self.authService.token != nil ? "present" : "null", privacy: .public)")
             return
         }
+        // Re-entrancy guard: two near-simultaneous triggers (foreground +
+        // network-restored) can both pass their !isConnected gates before
+        // didOpen flips isConnected, opening a second socket. Bail if one
+        // already exists; handleDisconnect nils webSocket before reconnecting.
+        guard webSocket == nil else {
+            logger.info("connect: socket already open/in-flight, skipping")
+            return
+        }
 
         let baseUrl = appPreferences.apiBaseUrl
         let wsBase = baseUrl
@@ -454,7 +462,7 @@ final class ConnectService: NSObject {
             logger.info("reactToState: NEW RECORDING — server=\(recId, privacy: .public) local=\(localRecordingId ?? "nil", privacy: .public) isActive=\(self.isActiveDevice, privacy: .public) autoPlay=\(autoPlay, privacy: .public) track=\(new.trackIndex, privacy: .public)")
             if let onLoadShow {
                 Task {
-                    await onLoadShow(showId, new.trackIndex, new.positionMs, autoPlay)
+                    await onLoadShow(showId, recId, new.trackIndex, new.positionMs, autoPlay)
                 }
             }
             stopPositionReporting()
