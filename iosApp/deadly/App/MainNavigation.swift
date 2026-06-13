@@ -509,7 +509,9 @@ private struct SettingsDrawer: View {
                             }
                         }
                 }
-                .frame(width: UIScreen.main.bounds.width * 0.82)
+                // Cap the width so the drawer reads as a left panel rather than
+                // (nearly) the whole screen on a wide landscape / tablet layout.
+                .frame(width: min(UIScreen.main.bounds.width * 0.82, 400))
                 .offset(x: min(0, dragOffset))
                 .gesture(
                     DragGesture()

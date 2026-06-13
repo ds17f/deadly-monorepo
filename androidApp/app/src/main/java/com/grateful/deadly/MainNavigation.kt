@@ -594,6 +594,9 @@ private fun NavigationRailBar(
             modifier = Modifier
                 .fillMaxHeight()
                 .systemBarsPadding()
+                // Keep the icons clear of the camera cutout — in landscape the
+                // notch sits on the side edge the rail occupies.
+                .displayCutoutPadding()
                 .padding(vertical = 12.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(8.dp)
