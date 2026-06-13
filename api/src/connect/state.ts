@@ -1,10 +1,26 @@
 import type { WebSocket } from "ws";
 import type { ConnectState, ConnectDevice, DeviceType, SessionTrack } from "./types.js";
 import { LEGACY_PROTOCOL_VERSION } from "./types.js";
-import { upsertPlaybackPosition, getPlaybackPosition } from "../db/userdata.js";
+import { upsertPlaybackPosition as dbUpsertPlaybackPosition, getPlaybackPosition } from "../db/userdata.js";
 
 const log = (msg: string) => console.log(`[Connect] ${msg}`);
 const warn = (msg: string) => console.warn(`[Connect] ${msg}`);
+
+// Persisting playback position from the Connect WS path is best-effort: a DB
+// error (e.g. an FK failure when the user/show isn't in this DB) must never
+// escape a socket message handler — an unhandled throw there crashes the whole
+// process. Swallow-and-log here; the REST route keeps the throwing version
+// (dbUpsertPlaybackPosition) so an HTTP write still surfaces a 500.
+function upsertPlaybackPosition(
+  userId: string,
+  pos: Parameters<typeof dbUpsertPlaybackPosition>[1],
+): void {
+  try {
+    dbUpsertPlaybackPosition(userId, pos);
+  } catch (err) {
+    warn(`persist position failed for ${userId}: ${(err as Error).message}`);
+  }
+}
 
 // Server boot id, fixed for the life of this process. Stamped into every
 // session's state; a change tells clients the server restarted (see ConnectState.epoch).
