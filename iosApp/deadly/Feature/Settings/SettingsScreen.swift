@@ -4,63 +4,18 @@ import SwiftUI
 import UIKit
 import UniformTypeIdentifiers
 
-// MARK: - SettingsScreen
+// MARK: - SettingsScreen (landing)
+//
+// ADR-0014: Settings is a short landing of stable categories, each its own
+// screen — Account · Playback & Audio · Home Layout · Library & Data ·
+// About & Support. The flat "scroll-forever" list is gone; every control now
+// lives behind the category it belongs to, with all home-layout knobs gathered
+// onto one dedicated screen.
 
 struct SettingsScreen: View {
     var onNavigateToDownloads: (() -> Void)? = nil
     var onNavigateToEqualizer: (() -> Void)? = nil
-    @Environment(\.appContainer) private var container
     @Environment(\.openURL) private var openURL
-    @State private var showingFilePicker = false
-    @State private var exportItem: ExportItem?
-    @State private var importResult: BackupImportResult?
-    @State private var importError: String?
-    @State private var showingImportAlert = false
-    @State private var authError: String?
-    @State private var showingAuthError = false
-    private func cardSizePicker(
-        title: String,
-        helper: String,
-        feature: String,
-        get: @escaping () -> String,
-        set: @escaping (String) -> Void
-    ) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(title)
-            Picker(title, selection: Binding(
-                get: { CarouselCardSize(preferenceKey: get()) },
-                set: { newSize in
-                    set(newSize.rawValue)
-                    container.analyticsService.track("feature_use", props: [
-                        "feature": feature,
-                        "category": "preference",
-                        "value": newSize.rawValue,
-                    ])
-                }
-            )) {
-                ForEach(CarouselCardSize.allCases) { size in
-                    Text(size.label).tag(size)
-                }
-            }
-            .pickerStyle(.segmented)
-            Text(helper)
-                .font(.callout)
-                .foregroundStyle(.secondary)
-        }
-    }
-
-    private func settingsRow(_ title: String, systemImage: String) -> some View {
-        HStack {
-            Image(systemName: systemImage)
-                .foregroundStyle(DeadlyColors.primary)
-            Text(title)
-                .foregroundStyle(.primary)
-            Spacer()
-            Image(systemName: "chevron.right")
-                .font(.caption)
-                .foregroundStyle(.secondary)
-        }
-    }
 
     private var appVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
@@ -68,8 +23,131 @@ struct SettingsScreen: View {
 
     var body: some View {
         List {
-            // MARK: - Account
-            Section("Account") {
+            NavigationLink {
+                AccountSettingsView()
+            } label: {
+                SettingsLandingRow("Account", systemImage: "person.crop.circle", subtitle: "Sign-in & profile")
+            }
+            NavigationLink {
+                PlaybackAudioSettingsView(onNavigateToEqualizer: onNavigateToEqualizer)
+            } label: {
+                SettingsLandingRow("Playback & Audio", systemImage: "speaker.wave.2", subtitle: "Controls, equalizer, devices")
+            }
+            NavigationLink {
+                HomeLayoutSettingsView()
+            } label: {
+                SettingsLandingRow("Home Layout", systemImage: "square.grid.2x2", subtitle: "Rails, card sizes, trending")
+            }
+            NavigationLink {
+                LibraryDataSettingsView(onNavigateToDownloads: onNavigateToDownloads)
+            } label: {
+                SettingsLandingRow("Library & Data", systemImage: "tray.full", subtitle: "Downloads, import & export")
+            }
+            // About & Support — informational links live right on the root
+            // (low-traffic, no need to bury them behind a category).
+            Section {
+                Link(destination: Community.subredditURL) {
+                    settingsRow("Community (\(Community.subredditHandle))", systemImage: "bubble.left.and.bubble.right")
+                }
+                .foregroundStyle(.primary)
+                Link(destination: URL(string: "https://archive.org/donate/")!) {
+                    settingsRow("Donate to Internet Archive", systemImage: "heart")
+                }
+                .foregroundStyle(.primary)
+                Link(destination: URL(string: "https://buymeacoffee.com/dsilberg")!) {
+                    settingsRow("Buy Me a Coffee", systemImage: "cup.and.saucer.fill")
+                }
+                .foregroundStyle(.primary)
+                NavigationLink {
+                    BugReportView()
+                } label: {
+                    Label("Send Bug Report", systemImage: "ladybug")
+                }
+                NavigationLink("Our Mission") {
+                    MissionView()
+                }
+                NavigationLink("Legal & Policies") {
+                    LegalView()
+                }
+                NavigationLink("Privacy & Data") {
+                    PrivacyDataView()
+                }
+                NavigationLink("Developer") {
+                    DeveloperView()
+                }
+            }
+
+            // Version footer — kept on the root so the build is always visible at
+            // a glance, with Release Notes one tap below it.
+            Section {
+                LabeledContent("Version", value: appVersion)
+                Button {
+                    let urlString = "https://github.com/ds17f/deadly-monorepo/releases/tag/ios%2Fv\(appVersion)"
+                    if let url = URL(string: urlString) { openURL(url) }
+                } label: {
+                    settingsRow("Release Notes", systemImage: "doc.text")
+                }
+                .foregroundStyle(.primary)
+            }
+        }
+        .navigationTitle("Settings")
+    }
+}
+
+// MARK: - Landing row
+
+private struct SettingsLandingRow: View {
+    let title: String
+    let systemImage: String
+    let subtitle: String
+
+    init(_ title: String, systemImage: String, subtitle: String) {
+        self.title = title
+        self.systemImage = systemImage
+        self.subtitle = subtitle
+    }
+
+    var body: some View {
+        Label {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                Text(subtitle)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        } icon: {
+            Image(systemName: systemImage)
+                .foregroundStyle(DeadlyColors.primary)
+        }
+        .padding(.vertical, 2)
+    }
+}
+
+// Shared row used for Button-style entries (manual chevron — NavigationLink
+// rows use a plain Label and get the chevron for free).
+private func settingsRow(_ title: String, systemImage: String) -> some View {
+    HStack {
+        Image(systemName: systemImage)
+            .foregroundStyle(DeadlyColors.primary)
+        Text(title)
+            .foregroundStyle(.primary)
+        Spacer()
+        Image(systemName: "chevron.right")
+            .font(.caption)
+            .foregroundStyle(.secondary)
+    }
+}
+
+// MARK: - Account
+
+struct AccountSettingsView: View {
+    @Environment(\.appContainer) private var container
+    @State private var authError: String?
+    @State private var showingAuthError = false
+
+    var body: some View {
+        List {
+            Section {
                 if container.authService.isSignedIn {
                     if let user = container.authService.currentUser {
                         VStack(alignment: .leading, spacing: 4) {
@@ -144,28 +222,26 @@ struct SettingsScreen: View {
                     .buttonStyle(.bordered)
                 }
             }
+        }
+        .navigationTitle("Account")
+        .navigationBarTitleDisplayMode(.inline)
+        .alert("Sign In Error", isPresented: $showingAuthError) {
+            Button("OK") {}
+        } message: {
+            Text(authError ?? "Unknown error.")
+        }
+    }
+}
 
-            // MARK: - Preferences
-            Section("Preferences") {
-                Toggle(isOn: Binding(
-                    get: { container.appPreferences.includeShowsWithoutRecordings },
-                    set: {
-                        container.appPreferences.includeShowsWithoutRecordings = $0
-                        container.analyticsService.track("feature_use", props: [
-                            "feature": "toggle_shows_without_recordings",
-                            "category": "preference",
-                            "enabled": $0,
-                        ])
-                    }
-                )) {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Include shows without recordings")
-                        Text("Show concerts even if they have no audio recordings available")
-                            .font(.callout)
-                            .foregroundStyle(.secondary)
-                    }
-                }
+// MARK: - Playback & Audio
 
+struct PlaybackAudioSettingsView: View {
+    var onNavigateToEqualizer: (() -> Void)? = nil
+    @Environment(\.appContainer) private var container
+
+    var body: some View {
+        List {
+            Section("Controls") {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Lock screen & CarPlay controls")
                     Picker("Lock screen & CarPlay controls", selection: Binding(
@@ -212,11 +288,85 @@ struct SettingsScreen: View {
                         .font(.callout)
                         .foregroundStyle(.secondary)
                 }
-
             }
 
-            // MARK: - Home Screen
-            Section("Home Screen") {
+            Section("Audio") {
+                if let onNavigateToEqualizer {
+                    Button { onNavigateToEqualizer() } label: {
+                        settingsRow("Equalizer", systemImage: "slider.vertical.3")
+                    }
+                    .foregroundStyle(.primary)
+                } else {
+                    NavigationLink {
+                        EqualizerView()
+                    } label: {
+                        Label("Equalizer", systemImage: "slider.vertical.3")
+                    }
+                }
+            }
+
+            if container.authService.isSignedIn {
+                Section("Connect") {
+                    NavigationLink {
+                        ConnectScreen()
+                    } label: {
+                        HStack {
+                            settingsRow("Connected Devices", systemImage: "iphone.and.arrow.forward")
+                            if container.connectService.isConnected && !container.connectService.devices.isEmpty {
+                                Text("\(container.connectService.devices.count)")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                    .foregroundStyle(.primary)
+                }
+            }
+        }
+        .navigationTitle("Playback & Audio")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+// MARK: - Home Layout
+
+struct HomeLayoutSettingsView: View {
+    @Environment(\.appContainer) private var container
+
+    private func cardSizePicker(
+        title: String,
+        helper: String,
+        feature: String,
+        get: @escaping () -> String,
+        set: @escaping (String) -> Void
+    ) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(title)
+            Picker(title, selection: Binding(
+                get: { CarouselCardSize(preferenceKey: get()) },
+                set: { newSize in
+                    set(newSize.rawValue)
+                    container.analyticsService.track("feature_use", props: [
+                        "feature": feature,
+                        "category": "preference",
+                        "value": newSize.rawValue,
+                    ])
+                }
+            )) {
+                ForEach(CarouselCardSize.allCases) { size in
+                    Text(size.label).tag(size)
+                }
+            }
+            .pickerStyle(.segmented)
+            Text(helper)
+                .font(.callout)
+                .foregroundStyle(.secondary)
+        }
+    }
+
+    var body: some View {
+        List {
+            Section("Trending") {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Trending window on home")
                     Picker("Trending window on home", selection: Binding(
@@ -278,6 +428,16 @@ struct SettingsScreen: View {
                     }
                 }
 
+                cardSizePicker(
+                    title: "Trending card size",
+                    helper: "Size of cards in the Trending carousel.",
+                    feature: "set_home_trending_card_size",
+                    get: { container.appPreferences.homeTrendingCardSize },
+                    set: { container.appPreferences.homeTrendingCardSize = $0 }
+                )
+            }
+
+            Section("Rails") {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Recently Played rows")
                     Picker("Recently Played rows", selection: Binding(
@@ -302,14 +462,6 @@ struct SettingsScreen: View {
                 }
 
                 cardSizePicker(
-                    title: "Trending card size",
-                    helper: "Size of cards in the Trending carousel.",
-                    feature: "set_home_trending_card_size",
-                    get: { container.appPreferences.homeTrendingCardSize },
-                    set: { container.appPreferences.homeTrendingCardSize = $0 }
-                )
-
-                cardSizePicker(
                     title: "Today in History card size",
                     helper: "Size of cards in the Today in Grateful Dead History carousel.",
                     feature: "set_home_today_card_size",
@@ -324,7 +476,9 @@ struct SettingsScreen: View {
                     get: { container.appPreferences.homeCollectionsCardSize },
                     set: { container.appPreferences.homeCollectionsCardSize = $0 }
                 )
+            }
 
+            Section("Fan Favorites") {
                 Toggle(isOn: Binding(
                     get: { container.appPreferences.homePopularEnabled },
                     set: { newValue in
@@ -374,7 +528,9 @@ struct SettingsScreen: View {
                     get: { container.appPreferences.homePopularCardSize },
                     set: { container.appPreferences.homePopularCardSize = $0 }
                 )
+            }
 
+            Section {
                 Button(role: .destructive) {
                     container.appPreferences.resetHomePreferences()
                     container.analyticsService.track("feature_use", props: [
@@ -385,44 +541,47 @@ struct SettingsScreen: View {
                     Text("Reset Home Screen to Defaults")
                 }
             }
+        }
+        .navigationTitle("Home Layout")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
 
-            // MARK: - Connect
-            if container.authService.isSignedIn {
-                Section("Connect") {
-                    NavigationLink {
-                        ConnectScreen()
-                    } label: {
-                        HStack {
-                            settingsRow("Connected Devices", systemImage: "iphone.and.arrow.forward")
-                            if container.connectService.isConnected && !container.connectService.devices.isEmpty {
-                                Text("\(container.connectService.devices.count)")
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
+// MARK: - Library & Data
+
+struct LibraryDataSettingsView: View {
+    var onNavigateToDownloads: (() -> Void)? = nil
+    @Environment(\.appContainer) private var container
+    @State private var showingFilePicker = false
+    @State private var exportItem: ExportItem?
+    @State private var importResult: BackupImportResult?
+    @State private var importError: String?
+    @State private var showingImportAlert = false
+
+    var body: some View {
+        List {
+            Section("Content") {
+                Toggle(isOn: Binding(
+                    get: { container.appPreferences.includeShowsWithoutRecordings },
+                    set: {
+                        container.appPreferences.includeShowsWithoutRecordings = $0
+                        container.analyticsService.track("feature_use", props: [
+                            "feature": "toggle_shows_without_recordings",
+                            "category": "preference",
+                            "enabled": $0,
+                        ])
                     }
-                    .foregroundStyle(.primary)
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Include shows without recordings")
+                        Text("Show concerts even if they have no audio recordings available")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
 
-            // MARK: - Audio
-            Section("Audio") {
-                if let onNavigateToEqualizer {
-                    Button { onNavigateToEqualizer() } label: {
-                        settingsRow("Equalizer", systemImage: "slider.vertical.3")
-                    }
-                    .foregroundStyle(.primary)
-                } else {
-                    NavigationLink {
-                        EqualizerView()
-                    } label: {
-                        Label("Equalizer", systemImage: "slider.vertical.3")
-                    }
-                }
-            }
-
-            // MARK: - Favorites & Data
-            Section("Favorites & Data") {
+            Section("Downloads") {
                 if let onNavigateToDownloads {
                     Button { onNavigateToDownloads() } label: {
                         settingsRow("Manage Downloads", systemImage: "arrow.down.circle")
@@ -433,6 +592,9 @@ struct SettingsScreen: View {
                         Label("Manage Downloads", systemImage: "arrow.down.circle")
                     }
                 }
+            }
+
+            Section("Favorites Backup") {
                 Button {
                     showingFilePicker = true
                 } label: {
@@ -448,55 +610,9 @@ struct SettingsScreen: View {
                 }
                 .foregroundStyle(.primary)
             }
-
-            // MARK: - Support
-            Section("Support") {
-                NavigationLink {
-                    BugReportView()
-                } label: {
-                    Label("Send Bug Report", systemImage: "ladybug")
-                }
-            }
-
-            // MARK: - About
-            Section("About") {
-                Button {
-                    let urlString = "https://github.com/ds17f/deadly-monorepo/releases/tag/ios%2Fv\(appVersion)"
-                    if let url = URL(string: urlString) { openURL(url) }
-                } label: {
-                    LabeledContent("Version", value: appVersion)
-                }
-                .foregroundStyle(.primary)
-            }
-
-            Section {
-                Link(destination: Community.subredditURL) {
-                    settingsRow("Community (\(Community.subredditHandle))", systemImage: "bubble.left.and.bubble.right")
-                }
-                .foregroundStyle(.primary)
-                Link(destination: URL(string: "https://archive.org/donate/")!) {
-                    settingsRow("Donate to Internet Archive", systemImage: "heart")
-                }
-                .foregroundStyle(.primary)
-                NavigationLink("Our Mission") {
-                    MissionView()
-                }
-                NavigationLink("Legal & Policies") {
-                    LegalView()
-                }
-                NavigationLink("Developer") {
-                    DeveloperView()
-                }
-            }
-
-            Section {
-                NavigationLink("Privacy & Data") {
-                    PrivacyDataView()
-                }
-            }
-
         }
-        .navigationTitle("Settings")
+        .navigationTitle("Library & Data")
+        .navigationBarTitleDisplayMode(.inline)
 
         // MARK: - Favorites File Picker
         .fileImporter(
@@ -543,18 +659,10 @@ struct SettingsScreen: View {
             }
         }
 
-        // MARK: - Auth Error Alert
-        .alert("Sign In Error", isPresented: $showingAuthError) {
-            Button("OK") {}
-        } message: {
-            Text(authError ?? "Unknown error.")
-        }
-
         // MARK: - Favorites Export Share Sheet
         .sheet(item: $exportItem) { item in
             FavoritesExportShareSheet(data: item.data, filename: item.filename)
         }
-
     }
 }
 

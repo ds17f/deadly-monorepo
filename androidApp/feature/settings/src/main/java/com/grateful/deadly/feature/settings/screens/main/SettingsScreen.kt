@@ -4,11 +4,16 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Message
+import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -22,6 +27,18 @@ import com.grateful.deadly.core.model.PlayerControlsStyle
 import com.grateful.deadly.core.model.SourceBadgeStyle
 import com.grateful.deadly.feature.settings.BuildConfig
 
+// ADR-0014: Settings is a short landing of stable categories, each its own
+// screen — Account · Playback & Audio · Home Layout · Library & Data ·
+// About & Support. The flat "scroll-forever" list is gone; every control now
+// lives behind the category it belongs to, with all home-layout knobs gathered
+// onto one dedicated screen.
+//
+// Android renders Settings inside the navigation drawer (not a nav destination),
+// so landing → subscreen is a local state drill-down with a back affordance.
+// The leaf screens (Equalizer, Connect, Legal, …) stay full-screen routes,
+// reached through the callbacks the host wires up.
+private enum class SettingsCategory { Account, PlaybackAudio, HomeLayout, LibraryData }
+
 @Composable
 fun SettingsScreen(
     viewModel: SettingsViewModel = hiltViewModel(),
@@ -33,31 +50,318 @@ fun SettingsScreen(
     onNavigateToPrivacyData: () -> Unit = {},
     onNavigateToConnect: () -> Unit = {}
 ) {
+    var category by remember { mutableStateOf<SettingsCategory?>(null) }
+    BackHandler(enabled = category != null) { category = null }
+
+    when (category) {
+        null -> SettingsLanding(
+            viewModel,
+            onSelect = { category = it },
+            onNavigateToMission = onNavigateToMission,
+            onNavigateToLegal = onNavigateToLegal,
+            onNavigateToPrivacyData = onNavigateToPrivacyData,
+            onNavigateToDeveloper = onNavigateToDeveloper
+        )
+        SettingsCategory.Account ->
+            AccountSettingsScreen(viewModel, onBack = { category = null })
+        SettingsCategory.PlaybackAudio ->
+            PlaybackAudioSettingsScreen(
+                viewModel,
+                onBack = { category = null },
+                onNavigateToEqualizer = onNavigateToEqualizer,
+                onNavigateToConnect = onNavigateToConnect
+            )
+        SettingsCategory.HomeLayout ->
+            HomeLayoutSettingsScreen(viewModel, onBack = { category = null })
+        SettingsCategory.LibraryData ->
+            LibraryDataSettingsScreen(
+                viewModel,
+                onBack = { category = null },
+                onNavigateToDownloads = onNavigateToDownloads
+            )
+    }
+}
+
+// ── Landing ─────────────────────────────────────────────────────────────────
+
+@Composable
+private fun SettingsLanding(
+    viewModel: SettingsViewModel,
+    onSelect: (SettingsCategory) -> Unit,
+    onNavigateToMission: () -> Unit,
+    onNavigateToLegal: () -> Unit,
+    onNavigateToPrivacyData: () -> Unit,
+    onNavigateToDeveloper: () -> Unit
+) {
     val context = LocalContext.current
-    val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
-    val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
-    val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
-    val homeTrendingWindow by viewModel.homeTrendingWindow.collectAsState()
-    val homeTrendingAboveToday by viewModel.homeTrendingAboveToday.collectAsState()
-    val homeTrendingIncludeAnniversaries by viewModel.homeTrendingIncludeAnniversaries.collectAsState()
-    val homeRecentRows by viewModel.homeRecentRows.collectAsState()
-    val homeTrendingCardSize by viewModel.homeTrendingCardSize.collectAsState()
-    val homeTodayCardSize by viewModel.homeTodayCardSize.collectAsState()
-    val homeCollectionsCardSize by viewModel.homeCollectionsCardSize.collectAsState()
-    val homePopularEnabled by viewModel.homePopularEnabled.collectAsState()
-    val homePopularCardSize by viewModel.homePopularCardSize.collectAsState()
-    val homePopularDecade by viewModel.homePopularDecade.collectAsState()
-    val authState by viewModel.authState.collectAsState()
-    val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val developerModeUnlocked by viewModel.developerModeUnlocked.collectAsState()
     val version = BuildConfig.VERSION_NAME
     var versionTapCount by remember(developerModeUnlocked) { mutableIntStateOf(0) }
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
+        item {
+            Text(
+                text = "Settings",
+                style = MaterialTheme.typography.titleLarge,
+                modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 20.dp, bottom = 8.dp)
+            )
+        }
+        item {
+            CategoryRow(
+                "Account", "Sign-in & profile",
+                leading = { LeadingIcon(Icons.Filled.AccountCircle) }
+            ) { onSelect(SettingsCategory.Account) }
+        }
+        item {
+            CategoryRow(
+                "Playback & Audio", "Controls, equalizer, devices",
+                leading = { LeadingIcon(IconResources.PlayerControls.VolumeUp()) }
+            ) { onSelect(SettingsCategory.PlaybackAudio) }
+        }
+        item {
+            CategoryRow(
+                "Home Layout", "Rails, card sizes, trending",
+                leading = { LeadingIcon(IconResources.Content.GridView()) }
+            ) { onSelect(SettingsCategory.HomeLayout) }
+        }
+        item {
+            CategoryRow(
+                "Library & Data", "Downloads, import & export",
+                leading = { LeadingIcon(IconResources.Content.Folder()) }
+            ) { onSelect(SettingsCategory.LibraryData) }
+        }
 
-        // ── ACCOUNT ───────────────────────────────────────────────────
-        item { SectionHeader("Account") }
+        item { HorizontalDivider() }
 
+        // About & Support — informational links live right on the root
+        // (low-traffic, no need to bury them behind a category).
+        item {
+            PreferenceRow(
+                title = "Community (r/thedeadlyapp)",
+                leading = { LeadingIcon(Icons.AutoMirrored.Filled.Message) },
+                onClick = {
+                    context.startActivity(
+                        Intent(Intent.ACTION_VIEW, Uri.parse("https://www.reddit.com/r/thedeadlyapp"))
+                    )
+                },
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+        item {
+            PreferenceRow(
+                title = "Donate to Internet Archive",
+                subtitle = "Help cover hosting and bandwidth costs",
+                leading = { LeadingIcon(IconResources.Content.Favorite()) },
+                onClick = {
+                    context.startActivity(
+                        Intent(Intent.ACTION_VIEW, Uri.parse("https://archive.org/donate/"))
+                    )
+                },
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+        item {
+            PreferenceRow(
+                title = "Buy Me a Coffee",
+                subtitle = "Support the project",
+                leading = { LeadingIcon(IconResources.Content.Coffee()) },
+                onClick = {
+                    context.startActivity(
+                        Intent(Intent.ACTION_VIEW, Uri.parse("https://buymeacoffee.com/dsilberg"))
+                    )
+                },
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+        item {
+            PreferenceRow(
+                title = "Our Mission",
+                onClick = onNavigateToMission,
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+        item {
+            PreferenceRow(
+                title = "Legal & Policies",
+                onClick = onNavigateToLegal,
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+        item {
+            PreferenceRow(
+                title = "Privacy & Data",
+                onClick = onNavigateToPrivacyData,
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+        if (developerModeUnlocked) {
+            item {
+                PreferenceRow(
+                    title = "Developer",
+                    onClick = onNavigateToDeveloper,
+                    trailing = {
+                        Icon(
+                            painter = IconResources.Navigation.ChevronRight(),
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                )
+            }
+        }
+
+        item { HorizontalDivider() }
+
+        // Version footer — kept on the root so the build is always visible at a
+        // glance (and the tap-to-unlock developer mode stays reachable), with
+        // Release Notes one row below it.
+        item {
+            PreferenceRow(
+                title = "Version $version",
+                onClick = {
+                    versionTapCount++
+                    val remaining = 7 - versionTapCount
+                    if (remaining <= 0 && !developerModeUnlocked) {
+                        viewModel.unlockDeveloperMode()
+                        Toast.makeText(context, "Developer mode enabled", Toast.LENGTH_SHORT).show()
+                    } else if (remaining in 1..3 && !developerModeUnlocked) {
+                        Toast.makeText(context, "$remaining taps to enable developer mode", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            )
+        }
+        item {
+            PreferenceRow(
+                title = "Release Notes",
+                leading = { LeadingIcon(IconResources.Content.FilePresent()) },
+                onClick = {
+                    val url = "https://github.com/ds17f/deadly-monorepo/releases/tag/android%2Fv$version"
+                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                },
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+    }
+}
+
+@Composable
+private fun CategoryRow(
+    title: String,
+    subtitle: String,
+    leading: @Composable () -> Unit,
+    onClick: () -> Unit
+) {
+    PreferenceRow(
+        title = title,
+        subtitle = subtitle,
+        leading = leading,
+        onClick = onClick,
+        trailing = {
+            Icon(
+                painter = IconResources.Navigation.ChevronRight(),
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+    )
+}
+
+// Leading icon for a settings row — tinted with the accent, matching iOS.
+@Composable
+private fun LeadingIcon(painter: androidx.compose.ui.graphics.painter.Painter) {
+    Icon(
+        painter = painter,
+        contentDescription = null,
+        tint = MaterialTheme.colorScheme.primary
+    )
+}
+
+@Composable
+private fun LeadingIcon(imageVector: androidx.compose.ui.graphics.vector.ImageVector) {
+    Icon(
+        imageVector = imageVector,
+        contentDescription = null,
+        tint = MaterialTheme.colorScheme.primary
+    )
+}
+
+// Header bar shown atop each subscreen so it can return to the landing list.
+@Composable
+private fun SubscreenScaffold(
+    title: String,
+    onBack: () -> Unit,
+    content: LazyListScope.() -> Unit
+) {
+    Column(modifier = Modifier.fillMaxSize()) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 4.dp, vertical = 4.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = onBack) {
+                Icon(
+                    painter = IconResources.Navigation.Back(),
+                    contentDescription = "Back"
+                )
+            }
+            Text(text = title, style = MaterialTheme.typography.titleLarge)
+        }
+        LazyColumn(modifier = Modifier.fillMaxSize(), content = content)
+    }
+}
+
+// ── Account ─────────────────────────────────────────────────────────────────
+
+@Composable
+private fun AccountSettingsScreen(viewModel: SettingsViewModel, onBack: () -> Unit) {
+    val context = LocalContext.current
+    val authState by viewModel.authState.collectAsState()
+    val serverEnvironment by viewModel.serverEnvironment.collectAsState()
+
+    SubscreenScaffold("Account", onBack) {
         when (val state = authState) {
             is AuthState.SignedIn -> {
                 item {
@@ -123,18 +427,28 @@ fun SettingsScreen(
                 }
             }
         }
+    }
+}
 
-        item { HorizontalDivider() }
+// ── Playback & Audio ────────────────────────────────────────────────────────
 
-        // ── PREFERENCES ──────────────────────────────────────────────
-        item { SectionHeader("Preferences") }
+@Composable
+private fun PlaybackAudioSettingsScreen(
+    viewModel: SettingsViewModel,
+    onBack: () -> Unit,
+    onNavigateToEqualizer: () -> Unit,
+    onNavigateToConnect: () -> Unit
+) {
+    val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
+    val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
+
+    SubscreenScaffold("Playback & Audio", onBack) {
+        item { SectionHeader("Controls") }
 
         item {
-            PreferenceToggleRow(
-                title = "Include shows without recordings",
-                subtitle = "Show concerts even if they have no audio recordings available",
-                checked = includeShowsWithoutRecordings,
-                onCheckedChange = { viewModel.toggleIncludeShowsWithoutRecordings() }
+            PlayerControlsStyleRow(
+                currentStyle = PlayerControlsStyle.fromString(playerControlsStyle),
+                onStyleSelected = { viewModel.setPlayerControlsStyle(it.name) }
             )
         }
 
@@ -145,17 +459,60 @@ fun SettingsScreen(
             )
         }
 
+        item { HorizontalDivider() }
+        item { SectionHeader("Audio") }
+
         item {
-            PlayerControlsStyleRow(
-                currentStyle = PlayerControlsStyle.fromString(playerControlsStyle),
-                onStyleSelected = { viewModel.setPlayerControlsStyle(it.name) }
+            PreferenceRow(
+                title = "Equalizer",
+                subtitle = "Adjust audio profile and presets",
+                leading = { LeadingIcon(IconResources.PlayerControls.Equalizer()) },
+                onClick = onNavigateToEqualizer,
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
             )
         }
 
-        item { HorizontalDivider() }
+        item {
+            PreferenceRow(
+                title = "Connected Devices",
+                subtitle = "View devices connected to your account",
+                leading = { LeadingIcon(IconResources.Content.Cast()) },
+                onClick = onNavigateToConnect,
+                trailing = {
+                    Icon(
+                        painter = IconResources.Navigation.ChevronRight(),
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            )
+        }
+    }
+}
 
-        // ── HOME SCREEN ──────────────────────────────────────────────
-        item { SectionHeader("Home Screen") }
+// ── Home Layout ─────────────────────────────────────────────────────────────
+
+@Composable
+private fun HomeLayoutSettingsScreen(viewModel: SettingsViewModel, onBack: () -> Unit) {
+    val homeTrendingWindow by viewModel.homeTrendingWindow.collectAsState()
+    val homeTrendingAboveToday by viewModel.homeTrendingAboveToday.collectAsState()
+    val homeTrendingIncludeAnniversaries by viewModel.homeTrendingIncludeAnniversaries.collectAsState()
+    val homeRecentRows by viewModel.homeRecentRows.collectAsState()
+    val homeTrendingCardSize by viewModel.homeTrendingCardSize.collectAsState()
+    val homeTodayCardSize by viewModel.homeTodayCardSize.collectAsState()
+    val homeCollectionsCardSize by viewModel.homeCollectionsCardSize.collectAsState()
+    val homePopularEnabled by viewModel.homePopularEnabled.collectAsState()
+    val homePopularCardSize by viewModel.homePopularCardSize.collectAsState()
+    val homePopularDecade by viewModel.homePopularDecade.collectAsState()
+
+    SubscreenScaffold("Home Layout", onBack) {
+        item { SectionHeader("Trending") }
 
         item {
             HomeTrendingWindowRow(
@@ -183,18 +540,21 @@ fun SettingsScreen(
         }
 
         item {
-            HomeRecentRowsRow(
-                currentRows = homeRecentRows,
-                onSelected = { viewModel.setHomeRecentRows(it) }
-            )
-        }
-
-        item {
             HomeCardSizeRow(
                 title = "Trending card size",
                 subtitle = "Size of cards in the Trending carousel.",
                 current = homeTrendingCardSize,
                 onSelected = { viewModel.setHomeTrendingCardSize(it) }
+            )
+        }
+
+        item { HorizontalDivider() }
+        item { SectionHeader("Rails") }
+
+        item {
+            HomeRecentRowsRow(
+                currentRows = homeRecentRows,
+                onSelected = { viewModel.setHomeRecentRows(it) }
             )
         }
 
@@ -215,6 +575,9 @@ fun SettingsScreen(
                 onSelected = { viewModel.setHomeCollectionsCardSize(it) }
             )
         }
+
+        item { HorizontalDivider() }
+        item { SectionHeader("Fan Favorites") }
 
         item {
             PreferenceToggleRow(
@@ -241,53 +604,43 @@ fun SettingsScreen(
             )
         }
 
+        item { HorizontalDivider() }
+
         item {
             HomeResetRow(onReset = { viewModel.resetHomePreferences() })
         }
+    }
+}
 
-        item { HorizontalDivider() }
+// ── Library & Data ──────────────────────────────────────────────────────────
 
-        // ── AUDIO ────────────────────────────────────────────────────
-        item { SectionHeader("Audio") }
+@Composable
+private fun LibraryDataSettingsScreen(
+    viewModel: SettingsViewModel,
+    onBack: () -> Unit,
+    onNavigateToDownloads: () -> Unit
+) {
+    val includeShowsWithoutRecordings by viewModel.includeShowsWithoutRecordings.collectAsState()
 
-        item {
-            PreferenceRow(
-                title = "Equalizer",
-                subtitle = "Adjust audio profile and presets",
-                onClick = onNavigateToEqualizer,
-                trailing = {
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            )
-        }
+    SubscreenScaffold("Library & Data", onBack) {
+        item { SectionHeader("Content") }
 
         item {
-            PreferenceRow(
-                title = "Connected Devices",
-                subtitle = "View devices connected to your account",
-                onClick = onNavigateToConnect,
-                trailing = {
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
+            PreferenceToggleRow(
+                title = "Include shows without recordings",
+                subtitle = "Show concerts even if they have no audio recordings available",
+                checked = includeShowsWithoutRecordings,
+                onCheckedChange = { viewModel.toggleIncludeShowsWithoutRecordings() }
             )
         }
 
         item { HorizontalDivider() }
-
-        // ── FAVORITES & DATA ────────────────────────────────────────
-        item { SectionHeader("Favorites & Data") }
+        item { SectionHeader("Downloads") }
 
         item {
             PreferenceRow(
                 title = "Manage Downloads",
+                leading = { LeadingIcon(IconResources.Content.FileDownload()) },
                 onClick = onNavigateToDownloads,
                 trailing = {
                     Icon(
@@ -299,6 +652,9 @@ fun SettingsScreen(
             )
         }
 
+        item { HorizontalDivider() }
+        item { SectionHeader("Favorites Backup") }
+
         item {
             BackupImportExportButtons(viewModel = viewModel)
         }
@@ -306,146 +662,7 @@ fun SettingsScreen(
         item {
             ImportMigrationButton(viewModel = viewModel)
         }
-
-        item { HorizontalDivider() }
-
-        // ── ABOUT ────────────────────────────────────────────────────
-        item { SectionHeader("About") }
-
-        item {
-            PreferenceRow(
-                title = "Version $version",
-                onClick = {
-                    versionTapCount++
-                    val remaining = 7 - versionTapCount
-                    if (remaining <= 0 && !developerModeUnlocked) {
-                        viewModel.unlockDeveloperMode()
-                        Toast.makeText(context, "Developer mode enabled", Toast.LENGTH_SHORT).show()
-                    } else if (remaining in 1..3 && !developerModeUnlocked) {
-                        Toast.makeText(context, "$remaining taps to enable developer mode", Toast.LENGTH_SHORT).show()
-                    }
-                }
-            )
-        }
-
-        item {
-            PreferenceRow(
-                title = "Release Notes",
-                onClick = {
-                    val url = "https://github.com/ds17f/deadly-monorepo/releases/tag/android%2Fv$version"
-                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-                },
-                trailing = {
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            )
-        }
-
-        item {
-            PreferenceRow(
-                title = "Donate to Internet Archive",
-                subtitle = "Help cover hosting and bandwidth costs",
-                onClick = {
-                    context.startActivity(
-                        Intent(Intent.ACTION_VIEW, Uri.parse("https://archive.org/donate/"))
-                    )
-                },
-                trailing = {
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            )
-        }
-
-        item {
-            PreferenceRow(
-                title = "Our Mission",
-                onClick = onNavigateToMission,
-                trailing = {
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            )
-        }
-
-        item {
-            PreferenceRow(
-                title = "Legal & Policies",
-                onClick = onNavigateToLegal,
-                trailing = {
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            )
-        }
-
-        // Community link (decision I). Canonical URL lives in
-        // com.grateful.deadly.notifications.Community; inlined here because
-        // feature:settings can't depend on the app module.
-        item {
-            PreferenceRow(
-                title = "Community (r/thedeadlyapp)",
-                onClick = {
-                    context.startActivity(
-                        Intent(Intent.ACTION_VIEW, Uri.parse("https://www.reddit.com/r/thedeadlyapp"))
-                    )
-                },
-                trailing = {
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            )
-        }
-
-        if (developerModeUnlocked) {
-            item {
-                PreferenceRow(
-                    title = "Developer",
-                    onClick = onNavigateToDeveloper,
-                    trailing = {
-                        Icon(
-                            painter = IconResources.Navigation.ChevronRight(),
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                )
-            }
-        }
-
-        item { HorizontalDivider() }
-
-        item {
-            PreferenceRow(
-                title = "Privacy & Data",
-                onClick = onNavigateToPrivacyData,
-                trailing = {
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            )
-        }
     }
-
 }
 
 // ── Section header ────────────────────────────────────────────────────────────
@@ -470,6 +687,7 @@ private fun PreferenceRow(
     title: String,
     subtitle: String? = null,
     titleColor: androidx.compose.ui.graphics.Color = MaterialTheme.colorScheme.onSurface,
+    leading: @Composable (() -> Unit)? = null,
     onClick: () -> Unit,
     trailing: @Composable (() -> Unit)? = null
 ) {
@@ -477,14 +695,18 @@ private fun PreferenceRow(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .padding(horizontal = 16.dp, vertical = 14.dp),
+            .padding(horizontal = 16.dp, vertical = 16.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
+        if (leading != null) {
+            leading()
+            Spacer(modifier = Modifier.width(16.dp))
+        }
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = title,
-                style = MaterialTheme.typography.bodyLarge,
+                style = MaterialTheme.typography.titleMedium,
                 color = titleColor
             )
             if (subtitle != null) {
@@ -515,12 +737,12 @@ private fun PreferenceToggleRow(
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onCheckedChange(!checked) }
-            .padding(horizontal = 16.dp, vertical = 12.dp),
+            .padding(horizontal = 16.dp, vertical = 14.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = title, style = MaterialTheme.typography.bodyLarge)
+            Text(text = title, style = MaterialTheme.typography.titleMedium)
             if (subtitle != null) {
                 Text(
                     text = subtitle,
@@ -558,11 +780,13 @@ private fun BackupImportExportButtons(viewModel: SettingsViewModel) {
         PreferenceRow(
             title = "Import Favorites",
             subtitle = "Import from a backup file",
+            leading = { LeadingIcon(IconResources.DataManagement.Restore()) },
             onClick = { safLauncher.launch(arrayOf("application/json")) }
         )
         PreferenceRow(
             title = "Export Favorites",
             subtitle = "Export to Downloads folder",
+            leading = { LeadingIcon(IconResources.DataManagement.Backup()) },
             onClick = {
                 viewModel.exportFavorites { result ->
                     result.onSuccess { filename ->
@@ -589,6 +813,7 @@ private fun ImportMigrationButton(viewModel: SettingsViewModel) {
     PreferenceRow(
         title = if (importState is SettingsViewModel.MigrationImportState.Importing) "Importing…" else "Import Favorites from Old App",
         subtitle = "Import your library and play history from the old Dead Archive app",
+        leading = { LeadingIcon(IconResources.DataManagement.SettingsBackupRestore()) },
         onClick = {
             if (importState !is SettingsViewModel.MigrationImportState.Importing) {
                 safLauncher.launch(arrayOf("application/json"))
