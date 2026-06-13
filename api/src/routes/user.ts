@@ -13,12 +13,14 @@ import {
   getRecentShows, upsertRecentShow,
   getPlaybackPosition, upsertPlaybackPosition,
   getSettings, upsertSettings,
+  getNotificationState, upsertNotificationState, upsertNotificationStates,
   getFullBackupV3, importFullBackupV3,
 } from "../db/userdata.js";
 import type {
   FavoriteShowV3, FavoriteTrackV3, ReviewV3,
-  PlaybackPositionV3, SettingsV3, BackupV3,
+  PlaybackPositionV3, SettingsV3, BackupV3, NotificationStateV3,
 } from "../db/userdata.js";
+import { getNotificationById, getAllActiveNotificationIds } from "../db/notifications.js";
 
 export async function userRoutes(app: FastifyInstance): Promise<void> {
   // ── Full Sync ───────────────────────────────────────────────────
@@ -238,6 +240,93 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     upsertSettings(request.user!.id, request.body as SettingsV3);
     return reply.code(200).send({ ok: true });
   });
+
+  // ── Notification State (ADR-0015) ───────────────────────────────
+  // Per-user read/dismiss overlay on the global message feed. Eager push:
+  // markRead/archive hit the granular route, markAllRead/archiveAll hit the
+  // bulk route. The feed itself stays public + cacheable; only this overlay is
+  // per-user, and it rides the authed path. Union-merge (earliest non-null) is
+  // handled in the db layer, so these are pure pass-throughs.
+
+  app.get("/api/user/notifications/state", {
+    schema: { tags: ["user"], summary: "List notification read/dismiss overlay" },
+    preHandler: requireAuth,
+  }, async (request) => {
+    return getNotificationState(request.user!.id);
+  });
+
+  // Bulk overlay write — backs markAllRead / archiveAll. Omitting `ids` targets
+  // every currently-active message (uncapped), so "mark all read" covers the
+  // whole active set, not just the latest few.
+  app.post<{ Body: { seenAt?: unknown; dismissedAt?: unknown; ids?: unknown } }>(
+    "/api/user/notifications/state", {
+      schema: {
+        tags: ["user"],
+        summary: "Bulk mark notifications seen/dismissed",
+        body: {
+          type: "object",
+          properties: {
+            seenAt: { type: "number", nullable: true },
+            dismissedAt: { type: "number", nullable: true },
+            ids: { type: "array", items: { type: "number" }, nullable: true },
+          },
+        },
+      },
+      preHandler: requireAuth,
+    }, async (request, reply) => {
+      const { seenAt, dismissedAt, ids } = request.body;
+      const seen = typeof seenAt === "number" && Number.isFinite(seenAt) ? seenAt : null;
+      const dismissed = typeof dismissedAt === "number" && Number.isFinite(dismissedAt) ? dismissedAt : null;
+      if (seen == null && dismissed == null) {
+        return reply.code(400).send({ error: "seenAt or dismissedAt is required" });
+      }
+      const targetIds = Array.isArray(ids)
+        ? ids.filter((n): n is number => typeof n === "number" && Number.isFinite(n))
+        : getAllActiveNotificationIds();
+      const rows: NotificationStateV3[] = targetIds.map((notificationId) => ({
+        notificationId, seenAt: seen, dismissedAt: dismissed, updatedAt: 0,
+      }));
+      upsertNotificationStates(request.user!.id, rows);
+      return reply.code(200).send({ count: rows.length });
+    });
+
+  // Granular overlay write — backs markRead (seenAt) / archive (dismissedAt).
+  app.post<{ Params: { id: string }; Body: { seenAt?: unknown; dismissedAt?: unknown } }>(
+    "/api/user/notifications/:id/state", {
+      schema: {
+        tags: ["user"],
+        summary: "Mark a notification seen/dismissed",
+        params: { type: "object", required: ["id"], properties: { id: { type: "string" } } },
+        body: {
+          type: "object",
+          properties: {
+            seenAt: { type: "number", nullable: true },
+            dismissedAt: { type: "number", nullable: true },
+          },
+        },
+      },
+      preHandler: requireAuth,
+    }, async (request, reply) => {
+      const id = Number(request.params.id);
+      if (!Number.isFinite(id)) {
+        return reply.code(400).send({ error: "invalid id" });
+      }
+      // FK requires the message row to exist (tombstoned rows still do); reject
+      // a truly-unknown id with a clean 404 rather than a constraint 500.
+      if (!getNotificationById(id)) {
+        return reply.code(404).send({ error: "not found" });
+      }
+      const { seenAt, dismissedAt } = request.body;
+      const seen = typeof seenAt === "number" && Number.isFinite(seenAt) ? seenAt : null;
+      const dismissed = typeof dismissedAt === "number" && Number.isFinite(dismissedAt) ? dismissedAt : null;
+      if (seen == null && dismissed == null) {
+        return reply.code(400).send({ error: "seenAt or dismissedAt is required" });
+      }
+      upsertNotificationState(request.user!.id, {
+        notificationId: id, seenAt: seen, dismissedAt: dismissed, updatedAt: 0,
+      });
+      return reply.code(200).send({ ok: true });
+    });
 
   // ── Account ─────────────────────────────────────────────────────
 

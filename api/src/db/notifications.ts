@@ -186,6 +186,23 @@ export function getActiveNotifications(limit = COLD_START_LIMIT): NotificationPu
   return rows.map(toPublic);
 }
 
+/**
+ * All currently-active global message ids (not deleted, not expired), uncapped.
+ * Backs the bulk mark-all/archive-all overlay write (ADR-0015) — distinct from
+ * the capped cold-start feed; "mark everything I can see read" must cover the
+ * whole active set, not just the latest few.
+ */
+export function getAllActiveNotificationIds(): number[] {
+  const db = getUsersDb();
+  const rows = db.prepare(
+    `SELECT id FROM notifications
+      WHERE scope = 'global'
+        AND deleted_at IS NULL
+        AND (expires_at IS NULL OR expires_at > unixepoch())`,
+  ).all() as { id: number }[];
+  return rows.map((r) => r.id);
+}
+
 // ── In-memory high-water id (polling short-circuit) ────────────────────────
 // The notifications table only changes when an admin publishes or retires, so
 // the latest id is cheap to cache. A `?since=<cursor>` poll with cursor >= this
