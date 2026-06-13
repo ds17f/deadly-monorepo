@@ -118,11 +118,16 @@ final class NotificationStore {
             byId[row.notificationId] = m
         }
 
-        // Prune: expired messages and long-dismissed ones.
+        // Prune: server-retired (not in the authoritative activeIds), expired,
+        // and long-dismissed messages. activeIds is the only signal that a
+        // cached message was retired server-side (ADR-0015); nil = older server,
+        // so don't prune on that basis.
+        let activeIds = result.activeIds.map { Set($0) }
         let pruned = byId.values.filter { m in
+            let retired = activeIds.map { !$0.contains(m.id) } ?? false
             let expired = m.isExpired(now: now)
             let staleDismissed = m.dismissedAt.map { now - $0 > Self.dismissedTTLms } ?? false
-            return !(expired || staleDismissed)
+            return !(retired || expired || staleDismissed)
         }
 
         cursor = Swift.max(cursor, result.cursor)

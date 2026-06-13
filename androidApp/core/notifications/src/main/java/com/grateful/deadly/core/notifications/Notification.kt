@@ -36,6 +36,12 @@ data class NotificationWire(
 data class NotificationFetchResult(
     val messages: List<NotificationWire> = emptyList(),
     val cursor: Long = 0,
+    /**
+     * Authoritative set of currently-active ids — clients prune any cached
+     * message not in it (the only signal of a server-side retire). Null for
+     * older servers (= don't prune on that basis). ADR-0015.
+     */
+    val activeIds: List<Long>? = null,
 )
 
 /**

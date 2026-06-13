@@ -11,6 +11,7 @@ const {
   createNotification,
   getNotificationsSince,
   getActiveNotifications,
+  getAllActiveNotificationIds,
   getLatestNotificationId,
   deleteNotification,
 } = await import("../notifications.js");
@@ -107,5 +108,26 @@ describe("latest-id polling short-circuit", () => {
     expect(a.id).toBe(getLatestNotificationId());
     // Nothing newer than the latest id.
     expect(getNotificationsSince(getLatestNotificationId())).toHaveLength(0);
+  });
+});
+
+describe("active-id set (retirement reconciliation, ADR-0015)", () => {
+  it("lists every live id, uncapped, and drops retired ones", () => {
+    const a = createNotification({ authorId: AUTHOR, title: "a", body: "a" });
+    const b = createNotification({ authorId: AUTHOR, title: "b", body: "b" });
+    const c = createNotification({ authorId: AUTHOR, title: "c", body: "c" });
+    expect(getAllActiveNotificationIds().sort()).toEqual([a.id, b.id, c.id].sort());
+
+    // Retiring b drops it from the set — this is what lets clients prune a
+    // cached message they'd otherwise never hear about again.
+    deleteNotification(b.id);
+    expect(getAllActiveNotificationIds().sort()).toEqual([a.id, c.id].sort());
+  });
+
+  it("excludes expired messages", () => {
+    const past = Math.floor(Date.now() / 1000) - 60;
+    createNotification({ authorId: AUTHOR, title: "gone", body: "x", expiresAt: past });
+    const live = createNotification({ authorId: AUTHOR, title: "here", body: "y" });
+    expect(getAllActiveNotificationIds()).toEqual([live.id]);
   });
 });

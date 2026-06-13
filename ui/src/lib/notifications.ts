@@ -78,7 +78,7 @@ export function saveStore(store: NotifStore): void {
 
 export async function fetchNotifications(
   cursor: number,
-): Promise<{ messages: NotificationWire[]; cursor: number }> {
+): Promise<{ messages: NotificationWire[]; cursor: number; activeIds?: number[] }> {
   const qs = cursor > 0 ? `?since=${cursor}` : "";
   const res = await fetch(`/api/notifications${qs}`, { credentials: "include" });
   if (!res.ok) throw new Error(`notifications fetch failed (${res.status})`);
@@ -94,7 +94,7 @@ export async function fetchNotifications(
  */
 export function mergeStore(
   store: NotifStore,
-  fetched: { messages: NotificationWire[]; cursor: number },
+  fetched: { messages: NotificationWire[]; cursor: number; activeIds?: number[] },
 ): NotifStore {
   const now = Date.now();
   const messages = { ...store.messages };
@@ -109,12 +109,19 @@ export function mergeStore(
     };
   }
 
-  // Prune: expired messages and long-dismissed ones.
+  // `activeIds` (when present) is the server's authoritative active set — drop
+  // any cached message no longer in it, the only signal that a message was
+  // retired server-side after we cached it (ADR-0015).
+  const activeIds = fetched.activeIds != null ? new Set(fetched.activeIds) : null;
+
+  // Prune: server-retired, expired, and long-dismissed messages.
   for (const idStr of Object.keys(messages)) {
-    const m = messages[Number(idStr)];
+    const id = Number(idStr);
+    const m = messages[id];
+    const retired = activeIds != null && !activeIds.has(id);
     const expired = m.expires_at != null && m.expires_at * 1000 < now;
     const staleDismissed = m.dismissed_at != null && now - m.dismissed_at > DISMISSED_TTL_MS;
-    if (expired || staleDismissed) delete messages[Number(idStr)];
+    if (retired || expired || staleDismissed) delete messages[id];
   }
 
   return { cursor: Math.max(store.cursor, fetched.cursor), messages };

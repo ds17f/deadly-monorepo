@@ -6,6 +6,7 @@ import {
   deleteNotification,
   getNotificationsSince,
   getActiveNotifications,
+  getAllActiveNotificationIds,
   getLatestNotificationId,
   TITLE_MAX,
   BODY_MAX,
@@ -50,11 +51,18 @@ export async function notificationRoutes(app: FastifyInstance): Promise<void> {
       // Short edge cache — the feed is the same for everyone.
       reply.header("Cache-Control", "public, max-age=30");
 
+      // `activeIds` is the authoritative set of currently-active message ids
+      // (global, so this stays cacheable). Clients prune any cached message NOT
+      // in this set — the only way they learn a message was retired, since a
+      // `?since` delta can't re-mention a row below the cursor (ADR-0015).
+      const activeIds = getAllActiveNotificationIds();
+
       // Polling short-circuit: a delta poll that's already caught up skips the
-      // DB entirely (decision H). The common "nothing new" poll is an int
-      // compare, not a query. Cold start (no cursor) always hits the DB.
+      // message query (decision H). It still returns activeIds so retirement
+      // reconciliation works even when nothing new arrived. Cold start (no
+      // cursor) always lists messages.
       if (cursor != null && Number.isFinite(cursor) && cursor >= getLatestNotificationId()) {
-        return { messages: [], cursor };
+        return { messages: [], cursor, activeIds };
       }
 
       const messages =
@@ -62,7 +70,7 @@ export async function notificationRoutes(app: FastifyInstance): Promise<void> {
           ? getNotificationsSince(cursor)
           : getActiveNotifications();
       const latest = messages.reduce((max, m) => Math.max(max, m.id), cursor ?? 0);
-      return { messages, cursor: latest };
+      return { messages, cursor: latest, activeIds };
     },
   );
 

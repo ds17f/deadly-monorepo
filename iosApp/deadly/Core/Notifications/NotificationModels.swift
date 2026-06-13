@@ -37,6 +37,10 @@ struct NotificationWire: Codable {
 struct NotificationFetchResult: Codable {
     let messages: [NotificationWire]
     let cursor: Int64
+    /// Authoritative set of currently-active ids — clients prune any cached
+    /// message not in it (the only signal of a server-side retire). Optional for
+    /// back-compat with older servers (absent = don't prune). ADR-0015.
+    let activeIds: [Int64]?
 }
 
 /// A cached message plus local-only state. Never sent back to the server.

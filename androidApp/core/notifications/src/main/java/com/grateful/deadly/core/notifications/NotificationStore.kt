@@ -138,11 +138,16 @@ class NotificationStore @Inject constructor(
             )
         }
 
-        // Prune: expired messages and long-dismissed ones.
+        // Prune: server-retired (not in the authoritative activeIds), expired,
+        // and long-dismissed messages. activeIds is the only signal that a
+        // cached message was retired server-side (ADR-0015); null = older
+        // server, so don't prune on that basis.
+        val activeIds = result.activeIds?.toHashSet()
         val pruned = byId.values.filterNot { m ->
+            val retired = activeIds != null && m.id !in activeIds
             val expired = m.expiresAt != null && m.expiresAt * 1000 < now
             val staleDismissed = m.dismissedAt != null && now - m.dismissedAt > DISMISSED_TTL_MS
-            expired || staleDismissed
+            retired || expired || staleDismissed
         }
 
         commit(Persisted(cursor = maxOf(persisted.cursor, result.cursor), messages = pruned))
