@@ -108,7 +108,7 @@ fun PlayerSidePanel(
 
             Column(
                 modifier = Modifier
-                    .width(320.dp)
+                    .width(360.dp)
                     .fillMaxHeight()
                     .systemBarsPadding()
                     .padding(horizontal = 20.dp)

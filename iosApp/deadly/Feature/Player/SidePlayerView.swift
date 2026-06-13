@@ -52,7 +52,7 @@ struct SidePlayerView: View {
             // Capped by the height left after reserving room for the title,
             // scrubber, and the bottom-pinned controls, so transport is never
             // pushed off-screen on short landscape phones.
-            let cap = min(220, geo.size.height - 280)
+            let cap = min(220, geo.size.height - 348)
             let coverSize = max(56, min(geo.size.height * 0.30, cap))
 
             VStack(spacing: 0) {
@@ -70,16 +70,16 @@ struct SidePlayerView: View {
                 Spacer(minLength: 12)
 
                 secondaryActions
-
-                Spacer().frame(height: 16)
+                    .padding(.vertical, 18)
 
                 transport
+                    .padding(.vertical, 18)
             }
             // Pad inside the full-height frame so the bottom controls stay
             // within bounds with clear spacing beneath them (padding applied
             // after the frame would spill the bottom row off-screen).
-            .padding(.horizontal, 20)
-            .padding(.top, 20)
+            .padding(.horizontal, 16)
+            .padding(.top, 30)
             .padding(.bottom, 24)
             .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
         }
