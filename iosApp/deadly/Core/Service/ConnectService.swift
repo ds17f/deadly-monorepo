@@ -280,6 +280,14 @@ final class ConnectService: NSObject {
             logger.warning("connect: bailing — shouldConnect=\(self.shouldConnect, privacy: .public) token=\(self.authService.token != nil ? "present" : "null", privacy: .public)")
             return
         }
+        // Re-entrancy guard: two near-simultaneous triggers (foreground +
+        // network-restored) can both pass their !isConnected gates before
+        // didOpen flips isConnected, opening a second socket. Bail if one
+        // already exists; handleDisconnect nils webSocket before reconnecting.
+        guard webSocket == nil else {
+            logger.info("connect: socket already open/in-flight, skipping")
+            return
+        }
 
         let baseUrl = appPreferences.apiBaseUrl
         let wsBase = baseUrl

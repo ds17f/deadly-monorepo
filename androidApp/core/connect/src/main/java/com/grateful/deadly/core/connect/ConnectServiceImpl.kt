@@ -278,6 +278,14 @@ class ConnectServiceImpl @Inject constructor(
     private fun connect() {
         val token = authService.getAuthToken() ?: return
         if (!shouldConnect) return
+        // Re-entrancy guard: two near-simultaneous triggers (foreground +
+        // network-restored) can both pass their !isConnected gates before
+        // onOpen flips isConnected, opening a second socket. Bail if one
+        // already exists; handleDisconnect nulls webSocket before reconnecting.
+        if (webSocket != null) {
+            Log.d(TAG, "connect: socket already open/in-flight, skipping")
+            return
+        }
 
         val baseUrl = appPreferences.apiBaseUrl
             .replace("https://", "wss://")
