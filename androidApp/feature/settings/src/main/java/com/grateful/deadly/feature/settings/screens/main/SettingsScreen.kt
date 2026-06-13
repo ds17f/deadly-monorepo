@@ -174,7 +174,7 @@ private fun SettingsLanding(
         }
         item {
             PreferenceRow(
-                title = "Buy Me a Coffee",
+                title = "Support TheDeadly",
                 subtitle = "Support the project",
                 leading = { LeadingIcon(IconResources.Content.Coffee()) },
                 onClick = {

@@ -55,7 +55,7 @@ struct SettingsScreen: View {
                 }
                 .foregroundStyle(.primary)
                 Link(destination: URL(string: "https://buymeacoffee.com/dsilberg")!) {
-                    settingsRow("Buy Me a Coffee", systemImage: "cup.and.saucer.fill")
+                    settingsRow("Support TheDeadly", systemImage: "cup.and.saucer.fill")
                 }
                 .foregroundStyle(.primary)
                 NavigationLink {
