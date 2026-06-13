@@ -1,12 +1,21 @@
 # Changelog
 
+## [2.38.0] - 2026-06-12
+
+### New Features
+* categorize Settings into a landing + subscreens, with icons (#68) (8035333e)
+* UI decluttering — unified menus + web Autoplay/Favorite/Share + categorized web Settings (#67) (317ac9ff)
+* surface auto-advance as "Autoplay Next Show" toggle (#65) (017daf71)
+
+### Bug Fixes
+* stop iOS follower self-starting on reconnect + socket re-entrancy guard (#70) (9e360c18)
+
+
 ## [2.37.0] - 2026-06-11
 
 ### New Features
 * session ownership lease + WS protocol versioning (ADR-0011) (#64) (a47843cd)
 * end-of-show auto-advance + cross-device countdown + Up Next takeover (ADR-0010) (#63) (6de25169)
-
-
 ## [2.36.1] - 2026-06-09
 
 ### Bug Fixes
