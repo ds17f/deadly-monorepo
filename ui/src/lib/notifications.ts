@@ -186,3 +186,72 @@ export function archiveAll(store: NotifStore): NotifStore {
   }
   return { ...store, messages };
 }
+
+// ── Cross-device sync overlay (ADR-0015) ────────────────────────────
+// The server stores a per-user `(notification_id, seen_at, dismissed_at)`
+// overlay in unix SECONDS; this local store keeps milliseconds. Merge is a
+// conflict-free union — earliest non-null wins per column — matching the
+// server's MIN(COALESCE(...)) upsert.
+
+/** Server overlay row (unix seconds), as returned by GET /notifications/state. */
+export interface NotificationStateRow {
+  notificationId: number;
+  seenAt?: number | null;
+  dismissedAt?: number | null;
+}
+
+const toSec = (ms: number): number => Math.floor(ms / 1000);
+const toMs = (s: number): number => s * 1000;
+
+/** Earliest non-null of two timestamps (the union comparator). */
+function unionEarliest(a: number | null, b: number | null): number | null {
+  if (a == null) return b;
+  if (b == null) return a;
+  return Math.min(a, b);
+}
+
+/**
+ * Union-merge server overlay rows into the local store. Only overlays onto
+ * messages already cached locally — a row for a not-yet-fetched message is
+ * ignored and re-applied on a later merge once the feed delivers it.
+ */
+export function mergeSyncState(store: NotifStore, rows: NotificationStateRow[]): NotifStore {
+  const messages = { ...store.messages };
+  let changed = false;
+  for (const r of rows) {
+    const m = messages[r.notificationId];
+    if (!m) continue;
+    const seen = unionEarliest(m.seen_at, r.seenAt != null ? toMs(r.seenAt) : null);
+    const dismissed = unionEarliest(m.dismissed_at, r.dismissedAt != null ? toMs(r.dismissedAt) : null);
+    if (seen !== m.seen_at || dismissed !== m.dismissed_at) {
+      messages[r.notificationId] = { ...m, seen_at: seen, dismissed_at: dismissed };
+      changed = true;
+    }
+  }
+  return changed ? { ...store, messages } : store;
+}
+
+/**
+ * Local state the server is missing (or has later than ours) — the offline
+ * catch-up flush for an eager push that failed while offline. Returns push
+ * payloads in unix seconds; empty in the common already-synced case.
+ */
+export function unsyncedState(store: NotifStore, rows: NotificationStateRow[]): NotificationStateRow[] {
+  const server = new Map(rows.map((r) => [r.notificationId, r]));
+  const out: NotificationStateRow[] = [];
+  for (const m of Object.values(store.messages)) {
+    if (m.seen_at == null && m.dismissed_at == null) continue;
+    const s = server.get(m.id);
+    const needSeen = m.seen_at != null && (s?.seenAt == null || toMs(s.seenAt) > m.seen_at);
+    const needDismissed =
+      m.dismissed_at != null && (s?.dismissedAt == null || toMs(s.dismissedAt) > m.dismissed_at);
+    if (needSeen || needDismissed) {
+      out.push({
+        notificationId: m.id,
+        ...(needSeen ? { seenAt: toSec(m.seen_at!) } : {}),
+        ...(needDismissed ? { dismissedAt: toSec(m.dismissed_at!) } : {}),
+      });
+    }
+  }
+  return out;
+}

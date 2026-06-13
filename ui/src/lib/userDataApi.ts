@@ -158,6 +158,43 @@ export function addRecentShow(showId: string): Promise<void> {
   return apiFetch(`/recent/${showId}`, { method: "PUT" });
 }
 
+// ── Notification read/dismiss overlay (ADR-0015) ──────────────────────
+// Per-user seen/dismissed state synced cross-device. Timestamps on the wire
+// are unix SECONDS (the rest of the user-data API's convention); the local
+// notifications store keeps milliseconds, so callers convert at this boundary.
+
+export interface NotificationStateRow {
+  notificationId: number;
+  seenAt?: number | null;
+  dismissedAt?: number | null;
+}
+
+export function fetchNotificationState(): Promise<NotificationStateRow[]> {
+  return apiFetch<NotificationStateRow[]>("/notifications/state");
+}
+
+// Granular push — backs markRead (seenAt) / archive (dismissedAt).
+export function pushNotificationState(
+  id: number,
+  body: { seenAt?: number; dismissedAt?: number },
+): Promise<void> {
+  return apiFetch(`/notifications/${id}/state`, {
+    method: "POST",
+    body: JSON.stringify(body),
+  });
+}
+
+// Bulk push — backs markAllRead / archiveAll. Omitting `ids` targets every
+// currently-active message server-side.
+export function pushNotificationStateBulk(
+  body: { seenAt?: number; dismissedAt?: number; ids?: number[] },
+): Promise<void> {
+  return apiFetch("/notifications/state", {
+    method: "POST",
+    body: JSON.stringify(body),
+  });
+}
+
 // Returns the user's recent shows, newest first. Bare records (showId +
 // timestamps + play count) — display metadata (venue/city) is derived
 // client-side for now; swap to an enriched endpoint when the API gains a
