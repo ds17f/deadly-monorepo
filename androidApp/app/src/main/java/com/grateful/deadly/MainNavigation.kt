@@ -448,7 +448,12 @@ fun MainNavigation(
         scaffoldContent(paddingValues)
     }
         if (showSidePlayer) {
-            PlayerSidePanel(onTapToExpand = { navController.navigate("player") })
+            PlayerSidePanel(
+                onTapToExpand = { navController.navigate("player") },
+                onNavigateToPlaylist = { showId, recordingId, openSheet ->
+                    navController.navigateToPlaylist(showId, recordingId, openSheet = openSheet)
+                }
+            )
         }
     } // Row
     } // ModalNavigationDrawer

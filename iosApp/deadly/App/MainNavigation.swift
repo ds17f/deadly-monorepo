@@ -200,7 +200,22 @@ struct MainNavigation: View {
                 sectionContent(for: selectedTab)
                 if container.miniPlayerService.isVisible {
                     Divider()
-                    SidePlayerView(service: container.miniPlayerService, showFullPlayer: $showFullPlayer)
+                    SidePlayerView(
+                        service: container.miniPlayerService,
+                        showFullPlayer: $showFullPlayer,
+                        onViewShow: { showId, sheet in
+                            pendingShowSheet = sheet
+                            Task {
+                                await container.playlistService.loadShow(showId)
+                                if let rid = container.streamPlayer.currentTrack?.metadata["recordingId"],
+                                   rid != container.playlistService.currentRecording?.identifier,
+                                   let rec = try? container.showRepository.getRecordingById(rid) {
+                                    await container.playlistService.selectRecording(rec)
+                                }
+                            }
+                            navigateToShow(showId: showId, on: selectedTab)
+                        }
+                    )
                 }
             }
         } else {
