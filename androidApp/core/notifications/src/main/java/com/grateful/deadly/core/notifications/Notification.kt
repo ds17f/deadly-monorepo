@@ -38,6 +38,19 @@ data class NotificationFetchResult(
     val cursor: Long = 0,
 )
 
+/**
+ * Per-user read/dismiss overlay row (ADR-0015). Wire timestamps are unix
+ * SECONDS (the user-data API convention); the local store keeps milliseconds,
+ * so the coordinator converts at the boundary. camelCase matches the server's
+ * authed `/api/user/notifications/state` payload.
+ */
+@Serializable
+data class NotificationStateRow(
+    val notificationId: Long,
+    val seenAt: Long? = null,
+    val dismissedAt: Long? = null,
+)
+
 /** A cached message plus local-only state. Never sent back to the server. */
 @Serializable
 data class CachedNotification(
