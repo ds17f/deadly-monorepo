@@ -73,9 +73,15 @@ function preview(body: string): string {
 }
 
 export default function NotificationsPage() {
-  const { active, archived, markRead, markAllRead, archive, archiveAll } = useNotifications();
+  const { active, archived, refresh, markRead, markAllRead, archive, archiveAll } = useNotifications();
   const [showArchive, setShowArchive] = useState(false);
   const [expanded, setExpanded] = useState<number | null>(null);
+
+  // Sync whenever the inbox opens, so it reflects cross-device read/dismiss
+  // state + retirements immediately (not just cold start / window focus).
+  useEffect(() => {
+    refresh();
+  }, [refresh]);
 
   const list = showArchive ? archived : active;
   const hasUnread = active.some((m) => m.seen_at == null);

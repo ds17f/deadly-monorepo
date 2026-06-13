@@ -55,6 +55,10 @@ fun NotificationsScreen(
         (active + archived).firstOrNull { it.id == selectedId }
     }
 
+    // Sync whenever the inbox is opened, so it reflects cross-device state +
+    // retirements immediately (not just on cold start / foreground / pull).
+    LaunchedEffect(Unit) { viewModel.syncOnOpen() }
+
     // Detail open → back closes detail first, then leaves the screen.
     BackHandler(enabled = selected != null) { selectedId = null }
 

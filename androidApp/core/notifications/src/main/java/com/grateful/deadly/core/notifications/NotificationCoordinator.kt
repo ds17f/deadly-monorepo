@@ -62,35 +62,44 @@ class NotificationCoordinator @Inject constructor(
     }
 
     private fun pull(reason: String) {
-        scope.launch {
-            apiService.fetch(store.cursor).fold(
-                onSuccess = { result ->
-                    // For a signed-in user, pull the read/dismiss overlay and merge
-                    // it atomically with the feed so already-handled messages never
-                    // flash unread (ADR-0015 state-before-surface).
-                    val signedIn = authService.getAuthToken() != null
-                    val serverState = if (signedIn) {
-                        apiService.pullState().getOrDefault(emptyList())
-                    } else {
-                        emptyList()
+        scope.launch { sync(reason) }
+    }
+
+    /**
+     * The full sync: fetch the feed delta, merge it with the per-user overlay
+     * (signed-in only), and flush any local state the server is missing. The
+     * single source of truth for syncing — cold start, foreground, inbox-open,
+     * and pull-to-refresh all route through here so they behave identically.
+     * Suspends until done so callers can drive a spinner.
+     */
+    suspend fun sync(reason: String) {
+        apiService.fetch(store.cursor).fold(
+            onSuccess = { result ->
+                // For a signed-in user, pull the read/dismiss overlay and merge
+                // it atomically with the feed so already-handled messages never
+                // flash unread (ADR-0015 state-before-surface).
+                val signedIn = authService.getAuthToken() != null
+                val serverState = if (signedIn) {
+                    apiService.pullState().getOrDefault(emptyList())
+                } else {
+                    emptyList()
+                }
+
+                val fresh = store.merge(result, serverState)
+                fresh.forEach { m -> analytics.trackNotificationReceived(m, reason) }
+
+                // Offline catch-up: flush any local state the server is missing
+                // (an eager push that failed while offline). No-op once converged.
+                if (signedIn) {
+                    for (row in store.unsyncedState(serverState)) {
+                        apiService.pushState(row.notificationId, row.seenAt, row.dismissedAt)
                     }
+                }
 
-                    val fresh = store.merge(result, serverState)
-                    fresh.forEach { m -> analytics.trackNotificationReceived(m, reason) }
-
-                    // Offline catch-up: flush any local state the server is missing
-                    // (an eager push that failed while offline). No-op once converged.
-                    if (signedIn) {
-                        for (row in store.unsyncedState(serverState)) {
-                            apiService.pushState(row.notificationId, row.seenAt, row.dismissedAt)
-                        }
-                    }
-
-                    Log.d(TAG, "pull[$reason] ok: +${result.messages.size} (cursor=${store.cursor})")
-                },
-                onFailure = { Log.w(TAG, "pull[$reason] failed: ${it.message}") },
-            )
-        }
+                Log.d(TAG, "sync[$reason] ok: +${result.messages.size} (cursor=${store.cursor})")
+            },
+            onFailure = { Log.w(TAG, "sync[$reason] failed: ${it.message}") },
+        )
     }
 
     /**

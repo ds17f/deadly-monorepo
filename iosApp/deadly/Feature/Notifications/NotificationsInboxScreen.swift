@@ -95,6 +95,11 @@ struct NotificationsInboxScreen: View {
         .refreshable {
             await container.notificationService.refresh(reason: "refresh")
         }
+        // Sync whenever the inbox opens, so it reflects cross-device read/dismiss
+        // state + retirements immediately (not just cold start / foreground).
+        .task {
+            await container.notificationService.refresh(reason: "inbox_open")
+        }
         .navigationTitle(showArchive ? "Archived" : "Notifications")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
