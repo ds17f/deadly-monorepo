@@ -49,16 +49,20 @@ struct SidePlayerView: View {
         GeometryReader { geo in
             // Art grows with the column height so the upper block fills the
             // space (small on a short landscape phone, large on a tall iPad).
-            let coverSize = min(max(geo.size.height * 0.34, 96), 220)
+            // Capped by the height left after reserving room for the title,
+            // scrubber, and the bottom-pinned controls, so transport is never
+            // pushed off-screen on short landscape phones.
+            let cap = min(220, geo.size.height - 280)
+            let coverSize = max(56, min(geo.size.height * 0.30, cap))
 
             VStack(spacing: 0) {
                 header(coverSize: coverSize)
 
-                Spacer().frame(height: 16)
+                Spacer().frame(height: 8)
 
                 titleRow
 
-                Spacer().frame(height: 18)
+                Spacer().frame(height: 12)
 
                 scrubber
 
@@ -71,9 +75,13 @@ struct SidePlayerView: View {
 
                 transport
             }
-            .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
+            // Pad inside the full-height frame so the bottom controls stay
+            // within bounds with clear spacing beneath them (padding applied
+            // after the frame would spill the bottom row off-screen).
             .padding(.horizontal, 20)
-            .padding(.vertical, 20)
+            .padding(.top, 20)
+            .padding(.bottom, 24)
+            .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
         }
         .frame(width: Self.panelWidth)
         .background(Color(.secondarySystemBackground))

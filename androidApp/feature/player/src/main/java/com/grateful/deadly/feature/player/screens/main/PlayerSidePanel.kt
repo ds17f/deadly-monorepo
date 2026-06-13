@@ -100,14 +100,19 @@ fun PlayerSidePanel(
         BoxWithConstraints {
             // Art grows with the column height so the upper block fills the
             // space (small on a short landscape phone, large on a tall tablet).
-            val coverSize = (this.maxHeight * 0.34f).coerceIn(96.dp, 220.dp)
+            // Capped by the height left after reserving room for the title,
+            // scrubber, and the bottom-pinned controls, so transport is never
+            // pushed off-screen on short landscape phones.
+            val cap = minOf(180.dp, this.maxHeight - 280.dp).coerceAtLeast(56.dp)
+            val coverSize = (this.maxHeight * 0.22f).coerceIn(56.dp, cap)
 
             Column(
                 modifier = Modifier
                     .width(320.dp)
                     .fillMaxHeight()
                     .systemBarsPadding()
-                    .padding(horizontal = 20.dp, vertical = 20.dp)
+                    .padding(horizontal = 20.dp)
+                    .padding(top = 20.dp, bottom = 12.dp)
             ) {
                 // Header card: album art + date / venue beside it.
                 Row(
