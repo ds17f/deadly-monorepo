@@ -37,6 +37,10 @@ private let decades: [Decade] = [
 
 struct FavoritesScreen: View {
     @Environment(\.appContainer) private var container
+    // .regular on iPad (both orientations) + large tablets; .compact on every
+    // iPhone incl. landscape. Drives the larger grid-card typography so the text
+    // keeps pace with the big covers on a tablet without inflating it on a phone.
+    @Environment(\.horizontalSizeClass) private var hSizeClass
     private var service: FavoritesServiceImpl { container.favoritesService }
 
     @State private var selectedTab: FavoritesTab = .shows
@@ -483,7 +487,12 @@ struct FavoritesScreen: View {
     private func gridCard(_ favoriteShow: FavoriteShow, size: CGFloat) -> some View {
         let show = favoriteShow.show
         let downloadStatus = container.downloadService.downloadStatus(for: show.id)
-        return VStack(alignment: .leading, spacing: 4) {
+        // On a tablet the 3-up cards are large, so step the metadata up from
+        // caption2 to keep it legible beneath them; phones stay as they were.
+        let isRegular = hSizeClass == .regular
+        let dateFont: Font = isRegular ? .headline : .caption2
+        let metaFont: Font = isRegular ? .subheadline : .caption2
+        return VStack(alignment: .leading, spacing: isRegular ? 6 : 4) {
             ShowArtwork(
                 recordingId: show.bestRecordingId,
                 imageUrl: show.coverImageUrl,
@@ -491,36 +500,36 @@ struct FavoritesScreen: View {
                 cornerRadius: DeadlySize.cardCornerRadius
             )
 
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 2) {
+            VStack(alignment: .leading, spacing: isRegular ? 3 : 2) {
+                HStack(spacing: isRegular ? 4 : 2) {
                     if favoriteShow.isPinned {
                         Image(systemName: "pin.fill")
-                            .font(.caption2)
+                            .font(dateFont)
                             .foregroundStyle(DeadlyColors.primary)
                     }
                     if downloadStatus == .completed {
                         Image(systemName: "checkmark.circle.fill")
-                            .font(.caption2)
+                            .font(dateFont)
                             .foregroundStyle(DeadlyColors.primary)
                     }
                     if favoriteShow.hasReview {
                         Image(systemName: "star.fill")
-                            .font(.caption2)
+                            .font(dateFont)
                             .foregroundStyle(DeadlyColors.secondary)
                     }
                     Text(DateFormatting.formatShowDate(show.date, style: .short))
-                        .font(.caption2)
+                        .font(dateFont)
                         .fontWeight(.semibold)
                         .lineLimit(1)
                 }
 
                 Text(show.venue.name)
-                    .font(.caption2)
+                    .font(metaFont)
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
 
                 Text(show.location.displayText)
-                    .font(.caption2)
+                    .font(metaFont)
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
             }

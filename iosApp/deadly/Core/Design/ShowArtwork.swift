@@ -49,6 +49,11 @@ struct ShowArtwork: View {
         }
         .overlay(alignment: .bottomTrailing) {
             if let resolvedSourceType, resolvedSourceType != .unknown {
+                // Badge metrics scale with the cover so it reads at the same
+                // visual weight on a tiny carousel thumb and a large iPad grid
+                // card alike. Clamped so it never shrinks below the old phone
+                // size or balloons on the full-screen player art.
+                let badgeFont = min(max(size * 0.095, 11), 22)
                 switch ShowArtworkService.shared.badgeStyle {
                 case .none:
                     EmptyView()
@@ -57,21 +62,20 @@ struct ShowArtwork: View {
                         ? resolvedSourceType.badgeLabel
                         : resolvedSourceType.displayName
                     Text(label)
-                        .font(.caption2)
-                        .fontWeight(.bold)
+                        .font(.system(size: badgeFont, weight: .bold))
                         .foregroundStyle(.white)
-                        .padding(.horizontal, 4)
-                        .padding(.vertical, 2)
-                        .background(.black.opacity(0.6), in: RoundedRectangle(cornerRadius: 4))
-                        .padding(3)
+                        .padding(.horizontal, badgeFont * 0.36)
+                        .padding(.vertical, badgeFont * 0.18)
+                        .background(.black.opacity(0.6), in: RoundedRectangle(cornerRadius: badgeFont * 0.36))
+                        .padding(badgeFont * 0.27)
                 case .icon:
                     if let sfSymbol = resolvedSourceType.sfSymbolName {
                         Image(systemName: sfSymbol)
-                            .font(.system(size: 8, weight: .bold))
+                            .font(.system(size: badgeFont * 0.72, weight: .bold))
                             .foregroundStyle(.white)
-                            .frame(width: 16, height: 16)
+                            .frame(width: badgeFont * 1.45, height: badgeFont * 1.45)
                             .background(.black.opacity(0.6), in: Circle())
-                            .padding(3)
+                            .padding(badgeFont * 0.27)
                     }
                 }
             }
