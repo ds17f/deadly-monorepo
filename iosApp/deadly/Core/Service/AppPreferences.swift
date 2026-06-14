@@ -243,13 +243,22 @@ final class AppPreferences {
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
         customDevEmail = UserDefaults.standard.string(forKey: Self.customDevEmailKey) ?? ""
         developerModeUnlocked = UserDefaults.standard.bool(forKey: Self.developerModeUnlockedKey)
-        // Migrate: read new key first, fall back to legacy beta mode keys
+        // Migrate: read new key first, fall back to legacy beta mode keys.
+        // Fresh installs with no explicit choice default to "custom" in DEBUG
+        // builds so dev devices never report to prod (analytics, etc.) until a
+        // server is picked in Developer settings; release builds default to prod.
         if let env = UserDefaults.standard.string(forKey: Self.serverEnvironmentKey) {
             serverEnvironment = env
         } else if UserDefaults.standard.object(forKey: Self.useBetaModeKey) != nil {
             serverEnvironment = UserDefaults.standard.bool(forKey: Self.useBetaModeKey) ? "beta" : "prod"
+        } else if UserDefaults.standard.bool(forKey: Self.useBetaShareLinksKey) {
+            serverEnvironment = "beta"
         } else {
-            serverEnvironment = UserDefaults.standard.bool(forKey: Self.useBetaShareLinksKey) ? "beta" : "prod"
+            #if DEBUG
+            serverEnvironment = "custom"
+            #else
+            serverEnvironment = "prod"
+            #endif
         }
         forceOnline = UserDefaults.standard.bool(forKey: Self.forceOnlineKey)
         localBackfilledV1 = UserDefaults.standard.bool(forKey: Self.localBackfilledV1Key)
