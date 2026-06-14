@@ -186,6 +186,7 @@ fun PlayerScreen(
                 onChooseRecording = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "recording") } },
                 onAutoplay = { viewModel.toggleAutoAdvance() },
                 // This Show — the player navigates to the playlist (their home).
+                onAddToUpNext = { viewModel.addToUpNext() },
                 onSetlist = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "setlist") } },
                 onCollections = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "collections") } },
                 onDownload = { viewModel.downloadCurrentShow() },

@@ -422,6 +422,10 @@ struct PlayerScreen: View {
                 if let sid = currentShowId { onViewShow?(sid, .recording) }
             },
             onAutoplay: { toggleAutoAdvance() },
+            onAddToUpNext: {
+                showPlayerMenuSheet = false
+                addToUpNext()
+            },
             onSetlist: {
                 showPlayerMenuSheet = false
                 if let sid = currentShowId { onViewShow?(sid, .setlist) }
@@ -445,6 +449,16 @@ struct PlayerScreen: View {
                 showId,
                 recordingId: currentRecordingId
             )
+        }
+    }
+
+    private func addToUpNext() {
+        guard let showId = currentShowId else { return }
+        if container.backlogService.contains(showId) {
+            container.toastPresenter.show("Already in Up Next")
+        } else {
+            container.backlogService.addToBottom(showId)
+            container.toastPresenter.show("Added to Up Next")
         }
     }
 

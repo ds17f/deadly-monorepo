@@ -13,6 +13,7 @@ import com.grateful.deadly.core.database.autoplayToastMessage
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.recent.RecentShowsService
+import com.grateful.deadly.core.domain.repository.BacklogRepository
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.ShowReview
 import com.grateful.deadly.core.connect.ConnectService
@@ -62,6 +63,7 @@ class PlaylistViewModel @Inject constructor(
     private val analyticsService: AnalyticsService,
     private val connectService: ConnectService,
     private val toastController: ToastController,
+    private val backlogRepository: BacklogRepository,
     networkMonitor: NetworkMonitor,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
@@ -93,6 +95,19 @@ class PlaylistViewModel @Inject constructor(
     val reviewLineup: StateFlow<List<String>> = _reviewLineup.asStateFlow()
     private val _showWriteReview = MutableStateFlow(false)
     val showWriteReview: StateFlow<Boolean> = _showWriteReview.asStateFlow()
+
+    /** Add the current show to the backlog ("Up Next"). */
+    fun addToUpNext() {
+        val showId = uiState.value.showData?.showId ?: return
+        viewModelScope.launch {
+            if (backlogRepository.contains(showId)) {
+                toastController.show("Already in Up Next")
+            } else {
+                backlogRepository.addToBottom(showId)
+                toastController.show("Added to Up Next")
+            }
+        }
+    }
 
     /** Autoplay (auto-advance to the next show when one ends). */
     val autoAdvanceEnabled: StateFlow<Boolean> = appPreferences.autoAdvanceEnabled

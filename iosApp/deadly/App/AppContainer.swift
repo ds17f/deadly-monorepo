@@ -26,6 +26,7 @@ final class AppContainer {
     let panelContentService: PanelContentService
     let networkMonitor: NetworkMonitor
     let recentShowsService: RecentShowsServiceImpl
+    let backlogService: BacklogService
     let miniPlayerService: MiniPlayerServiceImpl
     let archiveClient: URLSessionArchiveMetadataClient
     let downloadService: DownloadServiceImpl
@@ -209,6 +210,11 @@ final class AppContainer {
                 return svc
             }
             recentShowsService = recentService
+
+            // Backlog ("Up Next") — local-first play-next list (ADR-0010 Amendment).
+            backlogService = MainActor.assumeIsolated {
+                BacklogService(dao: BacklogDAO(database: db))
+            }
 
             // One-time startup backfill: push all local data (favorites +
             // top recents) so a freshly-synced web profile isn't empty.

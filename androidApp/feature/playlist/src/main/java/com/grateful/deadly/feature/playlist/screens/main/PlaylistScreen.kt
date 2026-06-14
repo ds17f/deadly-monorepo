@@ -320,6 +320,10 @@ fun PlaylistScreen(
                 venue = showData.venue,
                 isAutoplayEnabled = autoAdvanceEnabled,
                 collectionsCount = uiState.showCollections.size,
+                onAddToUpNext = {
+                    viewModel.hideMenu()
+                    viewModel.addToUpNext()
+                },
                 onChooseRecording = {
                     viewModel.hideMenu()
                     viewModel.chooseRecording()

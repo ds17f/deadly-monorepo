@@ -477,6 +477,10 @@ struct ShowDetailScreen: View {
                     showEqualizerSheet = true
                 }
             },
+            onAddToUpNext: {
+                showMenuSheet = false
+                addToUpNext()
+            },
             onCollections: {
                 showMenuSheet = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
@@ -491,6 +495,15 @@ struct ShowDetailScreen: View {
             } : nil,
             onDone: { showMenuSheet = false }
         )
+    }
+
+    private func addToUpNext() {
+        if container.backlogService.contains(currentShowId) {
+            container.toastPresenter.show("Already in Up Next")
+        } else {
+            container.backlogService.addToBottom(currentShowId)
+            container.toastPresenter.show("Added to Up Next")
+        }
     }
 
     // MARK: - Play button

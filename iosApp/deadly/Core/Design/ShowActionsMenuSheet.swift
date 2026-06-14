@@ -29,6 +29,7 @@ struct ShowActionsMenuSheet: View {
     var onEqualizer: (() -> Void)? = nil
     var onAutoplay: (() -> Void)? = nil
     // This Show
+    var onAddToUpNext: (() -> Void)? = nil
     var onSetlist: (() -> Void)? = nil
     var onCollections: (() -> Void)? = nil
     var onDownload: (() -> Void)? = nil
@@ -43,7 +44,7 @@ struct ShowActionsMenuSheet: View {
         [onChooseRecording, onEqualizer, onAutoplay].compactMap { $0 }.count
     }
     private var thisShowCount: Int {
-        [onSetlist, hasCollections ? onCollections : nil, onDownload].compactMap { $0 }.count
+        [onAddToUpNext, onSetlist, hasCollections ? onCollections : nil, onDownload].compactMap { $0 }.count
     }
     private var shareCount: Int {
         [onShare].compactMap { $0 }.count
@@ -113,6 +114,9 @@ struct ShowActionsMenuSheet: View {
 
     @ViewBuilder
     private var thisShowRows: some View {
+        if let onAddToUpNext {
+            row("Add to Up Next", systemImage: "text.badge.plus", action: onAddToUpNext)
+        }
         if let onSetlist {
             row("Setlist", systemImage: "list.bullet.rectangle", action: onSetlist)
         }

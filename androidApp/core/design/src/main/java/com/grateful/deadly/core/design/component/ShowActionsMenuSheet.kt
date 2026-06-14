@@ -41,6 +41,7 @@ fun ShowActionsMenuSheet(
     onEqualizer: (() -> Unit)? = null,
     onAutoplay: (() -> Unit)? = null,
     // This Show group
+    onAddToUpNext: (() -> Unit)? = null,
     onSetlist: (() -> Unit)? = null,
     onCollections: (() -> Unit)? = null,
     onDownload: (() -> Unit)? = null,
@@ -56,6 +57,7 @@ fun ShowActionsMenuSheet(
         onAutoplay?.let { add(MenuItem("Autoplay Next Show", IconResources.PlayerControls.Autoplay(), it, active = isAutoplayEnabled, dismissOnClick = false)) }
     }
     val thisShow = buildList {
+        onAddToUpNext?.let { add(MenuItem("Add to Up Next", IconResources.Content.PlaylistAdd(), it)) }
         onSetlist?.let { add(MenuItem("Setlist", IconResources.Content.FormatListBulleted(), it)) }
         // Collections appears only when the show is actually in a collection.
         if (collectionsCount > 0) {
