@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.40.0] - 2026-06-14
+
+### New Features
+* tablet & landscape three-pane layout with contextual side player (#78) (bc41a07f)
+* isolate dev builds from prod (gate Developer screen + default debug to custom server) (#75) (cd5df337)
+
+### Bug Fixes
+* fall back to version-safe catalog seed write on SQLite < 3.24 (#77) (8bd10da1)
+
+
 ## [2.39.0] - 2026-06-13
 
 ### New Features
@@ -9,8 +19,6 @@
 ### Bug Fixes
 * sync recording preferences to the server (#73) (838c55f1)
 * don't crash the process on a position-persist DB error (393d0cba)
-
-
 ## [2.38.1] - 2026-06-13
 
 ### Bug Fixes
