@@ -9,8 +9,10 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import android.content.res.Configuration
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import com.grateful.deadly.core.design.resources.IconResources
 import androidx.compose.ui.text.font.FontWeight
@@ -62,7 +64,27 @@ fun FavoritesScreen(
     var sortBy by remember { mutableStateOf(FavoritesSortOption.DATE_ADDED) }
     var songSortBy by remember { mutableStateOf(FavoritesSongSortOption.DATE_ADDED) }
     var sortDirection by remember { mutableStateOf(FavoritesSortDirection.DESCENDING) }
-    val displayMode by viewModel.displayMode.collectAsState()
+
+    // Landscape reclaims horizontal space, so default the shows tab to the grid
+    // there — but keep it a transient override (not the persisted preference) so
+    // a toggle sticks only until the next rotation, and portrait keeps the user's
+    // saved choice untouched.
+    val isLandscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
+    val persistedDisplayMode by viewModel.displayMode.collectAsState()
+    var landscapeDisplayOverride by remember { mutableStateOf<FavoritesDisplayMode?>(null) }
+    LaunchedEffect(isLandscape) {
+        if (!isLandscape) landscapeDisplayOverride = null
+    }
+    val displayMode = if (isLandscape) {
+        landscapeDisplayOverride ?: FavoritesDisplayMode.GRID
+    } else {
+        persistedDisplayMode
+    }
+    val onDisplayModeChanged: (FavoritesDisplayMode) -> Unit = { mode ->
+        if (isLandscape) landscapeDisplayOverride = mode else viewModel.setDisplayMode(mode)
+    }
+    // Tighter vertical rhythm in landscape where height is scarce.
+    val headerVPad = if (isLandscape) 4.dp else 8.dp
     var showAddBottomSheet by remember { mutableStateOf(false) }
     var showSortBottomSheet by remember { mutableStateOf(false) }
     var showSongSortBottomSheet by remember { mutableStateOf(false) }
@@ -82,14 +104,14 @@ fun FavoritesScreen(
                 onSelectionChanged = { filterPath = it },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 8.dp, vertical = 8.dp)
+                    .padding(horizontal = 8.dp, vertical = headerVPad)
             )
 
             // Tab Picker
             SingleChoiceSegmentedButtonRow(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 8.dp, vertical = 4.dp)
+                    .padding(horizontal = 8.dp, vertical = if (isLandscape) 2.dp else 4.dp)
             ) {
                 FavoritesTab.entries.forEachIndexed { index, tab ->
                     SegmentedButton(
@@ -128,9 +150,9 @@ fun FavoritesScreen(
                     sortDirection = sortDirection,
                     displayMode = displayMode,
                     onSortSelectorClick = { showSortBottomSheet = true },
-                    onDisplayModeChanged = { viewModel.setDisplayMode(it) },
+                    onDisplayModeChanged = onDisplayModeChanged,
                     count = showsCount,
-                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = headerVPad)
                 )
             } else {
                 SongSortControls(
@@ -138,7 +160,7 @@ fun FavoritesScreen(
                     sortDirection = sortDirection,
                     onSortSelectorClick = { showSongSortBottomSheet = true },
                     count = songsCount,
-                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = headerVPad)
                 )
             }
 

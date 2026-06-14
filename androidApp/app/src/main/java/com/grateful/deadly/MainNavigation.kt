@@ -16,6 +16,7 @@ import androidx.compose.material.icons.filled.WifiOff
 import androidx.activity.compose.BackHandler
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -56,6 +57,7 @@ import com.grateful.deadly.feature.playlist.navigation.playlistGraph
 import com.grateful.deadly.feature.playlist.navigation.navigateToPlaylist
 import com.grateful.deadly.feature.player.navigation.playerScreen
 import com.grateful.deadly.feature.player.navigation.PLAYER_ROUTE
+import com.grateful.deadly.feature.player.screens.main.PlayerSidePanel
 import com.grateful.deadly.feature.miniplayer.screens.main.MiniPlayerScreen
 import com.grateful.deadly.feature.favorites.navigation.favoritesNavigation
 import com.grateful.deadly.feature.collections.navigation.collectionsGraph
@@ -239,80 +241,29 @@ fun MainNavigation(
         }
     )
 
-    BackHandler(enabled = drawerState.isOpen) {
-        scope.launch { drawerState.close() }
+    // Landscape/tablet: when the window is wide, the bottom tab bar (which eats
+    // ~1/5 of the short landscape height) is replaced by a vertical icon-only
+    // nav rail on the left. Keyed off width, not device — so phone landscape,
+    // tablets, foldables and DeX all get it. Narrow stays today's bottom bar.
+    val isWide = LocalConfiguration.current.screenWidthDp >= WIDE_BREAKPOINT_DP
+    val useSideNav = isWide && barConfig.bottomBar?.visible == true
+    // On wide tabbed screens the bottom mini player is replaced by a docked
+    // side player in the right column (contextual — only when a track plays).
+    val showSidePlayer = useSideNav && barConfig.miniPlayer?.visible == true
+
+    // Shared tab-navigation action used by both the bottom bar and the rail.
+    val onNavigateToDestination: (String) -> Unit = { route ->
+        val target = if (isOffline && route != "downloads") "downloads" else route
+        navController.navigate(target) {
+            popUpTo(navController.graph.startDestinationId) { saveState = true }
+            launchSingleTop = true
+            restoreState = true
+        }
     }
 
-    ModalNavigationDrawer(
-        drawerState = drawerState,
-        gesturesEnabled = drawerState.isOpen,
-        drawerContent = {
-            ModalDrawerSheet {
-                SettingsScreen(
-                    onNavigateToDownloads = {
-                        scope.launch { drawerState.close() }
-                        navController.navigate("downloads")
-                    },
-                    onNavigateToEqualizer = {
-                        scope.launch { drawerState.close() }
-                        navController.navigate("equalizer")
-                    },
-                    onNavigateToLegal = {
-                        scope.launch { drawerState.close() }
-                        navController.navigate("legal")
-                    },
-                    onNavigateToMission = {
-                        scope.launch { drawerState.close() }
-                        navController.navigate("mission")
-                    },
-                    onNavigateToDeveloper = {
-                        scope.launch { drawerState.close() }
-                        navController.navigate("developer")
-                    },
-                    onNavigateToPrivacyData = {
-                        scope.launch { drawerState.close() }
-                        navController.navigate("privacy_data")
-                    },
-                    onNavigateToConnect = {
-                        scope.launch { drawerState.close() }
-                        navController.navigate(CONNECT_ROUTE)
-                    }
-                )
-            }
-        }
-    ) {
-    AppScaffold(
-        topBarConfig = augmentedTopBar,
-        bottomBarConfig = barConfig.bottomBar,
-        bottomNavigationContent = if (barConfig.bottomBar?.visible == true) {
-            {
-                BottomNavigationBar(
-                    currentRoute = currentRoute,
-                    onNavigateToDestination = { route ->
-                        val target = if (isOffline && route != "downloads") "downloads" else route
-                        navController.navigate(target) {
-                            popUpTo(navController.graph.startDestinationId) { saveState = true }
-                            launchSingleTop = true
-                            restoreState = true
-                        }
-                    }
-                )
-            }
-        } else null,
-        miniPlayerConfig = barConfig.miniPlayer,
-        miniPlayerContent = {
-            MiniPlayerScreen(
-                onTapToExpand = { _ ->
-                    Log.d("MainNavigation", "MiniPlayer tapped - navigating to player")
-                    navController.navigate("player")
-                }
-            )
-        },
-        onNavigationClick = {
-            navController.popBackStack()
-        },
-        snackbarHostState = snackbarHostState
-    ) { paddingValues ->
+    // Defined outside the wide-layout Row below so RowScope doesn't leak into
+    // the overlay AnimatedVisibility calls (which need the top-level overload).
+    val scaffoldContent: @Composable (PaddingValues) -> Unit = { paddingValues ->
         Box(modifier = Modifier.fillMaxSize()) {
             val autoAdvanceCountdown by appViewModel.autoAdvanceCountdown.collectAsState()
 
@@ -416,6 +367,101 @@ fun MainNavigation(
             }
         }
     }
+
+    BackHandler(enabled = drawerState.isOpen) {
+        scope.launch { drawerState.close() }
+    }
+
+    ModalNavigationDrawer(
+        drawerState = drawerState,
+        gesturesEnabled = drawerState.isOpen,
+        drawerContent = {
+            ModalDrawerSheet {
+                SettingsScreen(
+                    onNavigateToDownloads = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("downloads")
+                    },
+                    onNavigateToEqualizer = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("equalizer")
+                    },
+                    onNavigateToLegal = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("legal")
+                    },
+                    onNavigateToMission = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("mission")
+                    },
+                    onNavigateToDeveloper = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("developer")
+                    },
+                    onNavigateToPrivacyData = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate("privacy_data")
+                    },
+                    onNavigateToConnect = {
+                        scope.launch { drawerState.close() }
+                        navController.navigate(CONNECT_ROUTE)
+                    }
+                )
+            }
+        }
+    ) {
+    Row(modifier = Modifier.fillMaxSize()) {
+        if (useSideNav) {
+            NavigationRailBar(
+                currentRoute = currentRoute,
+                onNavigateToDestination = onNavigateToDestination,
+                onOpenNotifications = { navController.navigate("notifications") },
+                onOpenSettings = { scope.launch { drawerState.open() } }
+            )
+        }
+    AppScaffold(
+        modifier = Modifier.weight(1f),
+        // Wide layout: drop the top bar entirely. Its title ("Home"/"Search"/…)
+        // is redundant next to the selected rail icon, and removing it reclaims
+        // the scarce vertical height in landscape. The bell + settings it carried
+        // live on the rail instead.
+        topBarConfig = if (useSideNav) null else augmentedTopBar,
+        bottomBarConfig = barConfig.bottomBar,
+        bottomNavigationContent = if (!useSideNav && barConfig.bottomBar?.visible == true) {
+            {
+                BottomNavigationBar(
+                    currentRoute = currentRoute,
+                    onNavigateToDestination = onNavigateToDestination
+                )
+            }
+        } else null,
+        miniPlayerConfig = barConfig.miniPlayer,
+        miniPlayerContent = if (showSidePlayer) null else {
+            {
+                MiniPlayerScreen(
+                    onTapToExpand = { _ ->
+                        Log.d("MainNavigation", "MiniPlayer tapped - navigating to player")
+                        navController.navigate("player")
+                    }
+                )
+            }
+        },
+        onNavigationClick = {
+            navController.popBackStack()
+        },
+        snackbarHostState = snackbarHostState
+    ) { paddingValues ->
+        scaffoldContent(paddingValues)
+    }
+        if (showSidePlayer) {
+            PlayerSidePanel(
+                onTapToExpand = { navController.navigate("player") },
+                onNavigateToPlaylist = { showId, recordingId, openSheet ->
+                    navController.navigateToPlaylist(showId, recordingId, openSheet = openSheet)
+                }
+            )
+        }
+    } // Row
     } // ModalNavigationDrawer
 
     // ── In-App Review ────────────────────────────────────────────────
@@ -524,6 +570,102 @@ private fun OfflineBanner() {
             text = "Offline mode",
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+    }
+}
+
+/** Width (dp) at/above which the bottom tab bar becomes a left icon rail. */
+private const val WIDE_BREAKPOINT_DP = 600
+
+/**
+ * Vertical icon-only navigation rail — the wide-layout replacement for the
+ * bottom bar (phone landscape, tablets). Mirrors [BottomNavigationBar]'s
+ * destinations and selection logic; drops the labels to stay thin and to
+ * reclaim the vertical height the bottom bar wastes in landscape.
+ */
+@Composable
+private fun NavigationRailBar(
+    currentRoute: String?,
+    onNavigateToDestination: (String) -> Unit,
+    onOpenNotifications: () -> Unit,
+    onOpenSettings: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Surface(
+        modifier = modifier.fillMaxHeight(),
+        color = MaterialTheme.colorScheme.surface,
+        shadowElevation = 8.dp
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxHeight()
+                .systemBarsPadding()
+                // Keep the icons clear of the camera cutout — in landscape the
+                // notch sits on the side edge the rail occupies.
+                .displayCutoutPadding()
+                .padding(vertical = 12.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            // Tab icons pinned to the top of the rail.
+            BottomNavDestination.destinations.forEach { destination ->
+                NavigationRailItem(
+                    destination = destination,
+                    isSelected = currentRoute == destination.route,
+                    onClick = { onNavigateToDestination(destination.route) }
+                )
+            }
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            // Notifications bell pinned just above settings — the wide layout's
+            // home for the bell that lives in the top bar on narrow screens.
+            NotificationBell(onClick = onOpenNotifications)
+
+            // Settings pinned to the bottom of the rail.
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(12.dp))
+                    .clickable { onOpenSettings() }
+                    .padding(12.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    painter = IconResources.Navigation.Settings(),
+                    contentDescription = "Settings",
+                    tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+                    modifier = Modifier.size(24.dp)
+                )
+            }
+        }
+    }
+}
+
+/** Individual icon-only rail item. */
+@Composable
+private fun NavigationRailItem(
+    destination: BottomNavDestination,
+    isSelected: Boolean,
+    onClick: () -> Unit
+) {
+    val contentColor = if (isSelected) {
+        MaterialTheme.colorScheme.primary
+    } else {
+        MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
+    }
+
+    Box(
+        modifier = Modifier
+            .clip(RoundedCornerShape(12.dp))
+            .clickable { onClick() }
+            .padding(12.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(
+            painter = if (isSelected) destination.selectedIcon() else destination.unselectedIcon(),
+            contentDescription = destination.title,
+            tint = contentColor,
+            modifier = Modifier.size(24.dp)
         )
     }
 }

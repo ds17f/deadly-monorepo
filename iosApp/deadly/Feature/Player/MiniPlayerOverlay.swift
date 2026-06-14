@@ -1,16 +1,24 @@
 import SwiftUI
 
 extension View {
-    func miniPlayer(miniPlayerService: MiniPlayerServiceImpl, showFullPlayer: Binding<Bool>) -> some View {
-        self
-            .contentMargins(.bottom, miniPlayerService.isVisible ? 80 : 0, for: .scrollContent)
-            .overlay(alignment: .bottom) {
-                VStack(spacing: 8) {
-                    // ADR-0010: end-of-show countdown card, above the mini player.
-                    AutoAdvanceOverlay()
-                    MiniPlayerOverlay(service: miniPlayerService, showFullPlayer: showFullPlayer)
+    /// - Parameter enabled: when `false` (wide layout, where a docked side
+    ///   player replaces the bottom bar) the overlay and its scroll inset are
+    ///   omitted entirely.
+    @ViewBuilder
+    func miniPlayer(miniPlayerService: MiniPlayerServiceImpl, showFullPlayer: Binding<Bool>, enabled: Bool = true) -> some View {
+        if enabled {
+            self
+                .contentMargins(.bottom, miniPlayerService.isVisible ? 80 : 0, for: .scrollContent)
+                .overlay(alignment: .bottom) {
+                    VStack(spacing: 8) {
+                        // ADR-0010: end-of-show countdown card, above the mini player.
+                        AutoAdvanceOverlay()
+                        MiniPlayerOverlay(service: miniPlayerService, showFullPlayer: showFullPlayer)
+                    }
                 }
-            }
+        } else {
+            self
+        }
     }
 }
 
