@@ -104,13 +104,38 @@ fun PlayerSidePanel(
         shadowElevation = 8.dp
     ) {
         BoxWithConstraints {
-            // Art grows with the column height so the upper block fills the
-            // space (small on a short landscape phone, large on a tall tablet).
-            // Capped by the height left after reserving room for the title,
-            // scrubber, and the bottom-pinned controls, so transport is never
-            // pushed off-screen on short landscape phones.
-            val cap = minOf(180.dp, this.maxHeight - 280.dp).coerceAtLeast(56.dp)
-            val coverSize = (this.maxHeight * 0.22f).coerceIn(56.dp, cap)
+            // Branch on available HEIGHT: a tall column (tablet, any
+            // orientation) stacks the show text under the cover like the full
+            // player; a short column (landscape phone) keeps cover + text
+            // side-by-side so the title, scrubber, and bottom-pinned transport
+            // still fit without scrolling.
+            val isTall = this.maxHeight >= 620.dp
+            val coverSize = if (isTall) {
+                (this.maxHeight * 0.28f).coerceIn(120.dp, 280.dp)
+            } else {
+                val cap = minOf(180.dp, this.maxHeight - 280.dp).coerceAtLeast(56.dp)
+                (this.maxHeight * 0.22f).coerceIn(56.dp, cap)
+            }
+
+            // Cover art — shared by both header arrangements.
+            val cover: @Composable () -> Unit = {
+                Card(
+                    modifier = Modifier
+                        .size(coverSize)
+                        .clip(RoundedCornerShape(12.dp))
+                        .clickable { onTapToExpand() },
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.primaryContainer
+                    )
+                ) {
+                    ShowArtwork(
+                        recordingId = uiState.trackDisplayInfo.recordingId,
+                        imageUrl = uiState.trackDisplayInfo.coverImageUrl,
+                        contentDescription = "Album Art",
+                        modifier = Modifier.fillMaxSize()
+                    )
+                }
+            }
 
             Column(
                 modifier = Modifier
@@ -120,45 +145,60 @@ fun PlayerSidePanel(
                     .padding(horizontal = 20.dp)
                     .padding(top = 20.dp, bottom = 12.dp)
             ) {
-                // Header card: album art + date / venue beside it.
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(14.dp)
-                ) {
-                    Card(
-                        modifier = Modifier
-                            .size(coverSize)
-                            .clip(RoundedCornerShape(12.dp))
-                            .clickable { onTapToExpand() },
-                        colors = CardDefaults.cardColors(
-                            containerColor = MaterialTheme.colorScheme.primaryContainer
-                        )
+                if (isTall) {
+                    // Tablet: cover on top, show date + venue centered beneath it.
+                    Column(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        ShowArtwork(
-                            recordingId = uiState.trackDisplayInfo.recordingId,
-                            imageUrl = uiState.trackDisplayInfo.coverImageUrl,
-                            contentDescription = "Album Art",
-                            modifier = Modifier.fillMaxSize()
-                        )
-                    }
-
-                    Column(modifier = Modifier.weight(1f)) {
+                        cover()
+                        Spacer(modifier = Modifier.height(16.dp))
                         Text(
                             text = uiState.trackDisplayInfo.showDate,
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.SemiBold,
                             color = MaterialTheme.colorScheme.onSurface,
                             maxLines = 2,
-                            overflow = TextOverflow.Ellipsis
+                            overflow = TextOverflow.Ellipsis,
+                            textAlign = TextAlign.Center
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
                             text = uiState.trackDisplayInfo.venue,
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            maxLines = 3,
-                            overflow = TextOverflow.Ellipsis
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                            textAlign = TextAlign.Center
                         )
+                    }
+                } else {
+                    // Landscape phone: cover + date / venue side-by-side to stay
+                    // compact against the short height.
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(14.dp)
+                    ) {
+                        cover()
+
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = uiState.trackDisplayInfo.showDate,
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.SemiBold,
+                                color = MaterialTheme.colorScheme.onSurface,
+                                maxLines = 2,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                            Spacer(modifier = Modifier.height(4.dp))
+                            Text(
+                                text = uiState.trackDisplayInfo.venue,
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                maxLines = 3,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                        }
                     }
                 }
 

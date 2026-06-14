@@ -22,6 +22,9 @@ struct SidePlayerView: View {
     /// Choose Recording from the "⋯" menu). Mirrors `PlayerScreen.onViewShow`.
     var onViewShow: ((String, ShowDetailSheet?) -> Void)? = nil
     @Environment(\.appContainer) private var container
+    /// Wider on iPad/large tablets (more room, keeps the date on one line beside
+    /// the big cover); stays tight on landscape phones where width is scarce.
+    @Environment(\.horizontalSizeClass) private var hSizeClass
 
     @State private var sliderValue: Double?
     @State private var isCurrentTrackFavorite = false
@@ -33,7 +36,7 @@ struct SidePlayerView: View {
     @State private var showMessageShare = false
     @State private var showQRShare = false
 
-    private static let panelWidth: CGFloat = 320
+    private var panelWidth: CGFloat { hSizeClass == .regular ? 400 : 320 }
 
     private var currentShowId: String? {
         container.streamPlayer.currentTrack?.metadata["showId"]
@@ -47,16 +50,23 @@ struct SidePlayerView: View {
 
     var body: some View {
         GeometryReader { geo in
-            // Art grows with the column height so the upper block fills the
-            // space (small on a short landscape phone, large on a tall iPad).
-            // Capped by the height left after reserving room for the title,
-            // scrubber, and the bottom-pinned controls, so transport is never
-            // pushed off-screen on short landscape phones.
-            let cap = min(220, geo.size.height - 348)
-            let coverSize = max(56, min(geo.size.height * 0.30, cap))
+            // Branch on available HEIGHT, not horizontalSizeClass (which is
+            // unreliable here — an iPad can report .compact). Tall columns
+            // (tablet, any orientation) stack the show text under the cover
+            // like the full player; short columns (landscape phone) keep the
+            // cover + text side-by-side so the title, scrubber, and bottom-
+            // pinned transport still fit without scrolling.
+            let isTall = geo.size.height >= 620
+            let coverSize: CGFloat = {
+                if isTall {
+                    return max(120, min(geo.size.width - 48, geo.size.height * 0.40, 360))
+                }
+                let cap = min(220, geo.size.height - 348)
+                return max(56, min(geo.size.height * 0.30, cap))
+            }()
 
             VStack(spacing: 0) {
-                header(coverSize: coverSize)
+                header(coverSize: coverSize, isTall: isTall)
 
                 Spacer().frame(height: 8)
 
@@ -83,7 +93,7 @@ struct SidePlayerView: View {
             .padding(.bottom, 24)
             .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
         }
-        .frame(width: Self.panelWidth)
+        .frame(width: panelWidth)
         .background(Color(.secondarySystemBackground))
         .sheet(isPresented: $showConnectSheet) {
             ConnectSheet()
@@ -140,34 +150,63 @@ struct SidePlayerView: View {
 
     // MARK: - Header (album art + date / venue beside it)
 
-    private func header(coverSize: CGFloat) -> some View {
-        HStack(alignment: .top, spacing: 14) {
-            ShowArtwork(
-                recordingId: service.artworkRecordingId,
-                imageUrl: service.artworkURL,
-                size: coverSize,
-                cornerRadius: DeadlySize.carouselCornerRadius
-            )
-            .shadow(color: .black.opacity(0.25), radius: 8, y: 4)
-            .contentShape(Rectangle())
-            .onTapGesture { showFullPlayer = true }
+    @ViewBuilder
+    private func header(coverSize: CGFloat, isTall: Bool) -> some View {
+        let cover = ShowArtwork(
+            recordingId: service.artworkRecordingId,
+            imageUrl: service.artworkURL,
+            size: coverSize,
+            cornerRadius: DeadlySize.carouselCornerRadius
+        )
+        .shadow(color: .black.opacity(0.25), radius: 8, y: 4)
+        .contentShape(Rectangle())
+        .onTapGesture { showFullPlayer = true }
 
-            VStack(alignment: .leading, spacing: 6) {
-                Text(service.showDate ?? "")
-                    .font(.headline)
-                    .foregroundStyle(.primary)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
+        if isTall {
+            // Tablet: cover on top, show date + venue centered beneath it —
+            // mirrors the full mobile player, filling the room under the art.
+            VStack(spacing: 16) {
+                cover
 
-                Text(service.venue ?? "")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(3)
-                    .multilineTextAlignment(.leading)
+                VStack(spacing: 6) {
+                    Text(service.showDate ?? "")
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(.primary)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
 
-                Spacer(minLength: 0)
+                    Text(service.venue ?? "")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
+                }
+                .frame(maxWidth: .infinity)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity)
+        } else {
+            // Landscape phone: side-by-side to stay compact against the short height.
+            HStack(alignment: .top, spacing: 14) {
+                cover
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(service.showDate ?? "")
+                        .font(.headline)
+                        .foregroundStyle(.primary)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+
+                    Text(service.venue ?? "")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(3)
+                        .multilineTextAlignment(.leading)
+
+                    Spacer(minLength: 0)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
     }
 
@@ -419,6 +458,11 @@ struct SidePlayerView: View {
 /// the screen doesn't look lopsided on first launch. Matches `SidePlayerView`'s
 /// width and background so the live player drops straight in once a track loads.
 struct SidePlayerPlaceholder: View {
+    // Keep in lockstep with SidePlayerView.panelWidth so the column width
+    // doesn't jump when the live player swaps in.
+    @Environment(\.horizontalSizeClass) private var hSizeClass
+    private var panelWidth: CGFloat { hSizeClass == .regular ? 400 : 320 }
+
     var body: some View {
         VStack(spacing: 12) {
             Image(systemName: "play.circle")
@@ -433,7 +477,7 @@ struct SidePlayerPlaceholder: View {
                 .multilineTextAlignment(.center)
         }
         .padding(.horizontal, 24)
-        .frame(width: 320)
+        .frame(width: panelWidth)
         .frame(maxHeight: .infinity)
         .background(Color(.secondarySystemBackground))
     }
