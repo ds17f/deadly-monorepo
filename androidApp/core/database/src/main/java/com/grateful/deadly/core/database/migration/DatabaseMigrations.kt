@@ -342,4 +342,23 @@ object DatabaseMigrations {
             db.execSQL("DROP TABLE IF EXISTS track_reviews")
         }
     }
+
+    /**
+     * v25 → v26: Add the backlog ("Up Next") table — the local-first play-next
+     * list (ADR-0010 Amendment). showId PK (a show appears once), position for
+     * ordering, deletedAt tombstone for per-action sync. See PLANS/show-queue-v2.md.
+     */
+    val MIGRATION_25_26 = object : Migration(25, 26) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("""
+                CREATE TABLE IF NOT EXISTS backlog (
+                    showId TEXT NOT NULL PRIMARY KEY,
+                    position INTEGER NOT NULL,
+                    addedAt INTEGER NOT NULL,
+                    deletedAt INTEGER
+                )
+            """.trimIndent())
+            db.execSQL("CREATE INDEX IF NOT EXISTS index_backlog_position ON backlog(position)")
+        }
+    }
 }

@@ -146,7 +146,24 @@ struct AppDatabase: @unchecked Sendable {
         migrator.registerMigration("v14-favorite-songs-natural-key") { db in
             try AppDatabase.relaxFavoriteSongsNaturalKey(db)
         }
+        migrator.registerMigration("v15-backlog") { db in
+            try AppDatabase.createBacklogTable(db)
+        }
         try migrator.migrate(dbWriter)
+    }
+
+    /// Backlog ("Up Next") table — the user's local-first play-next list
+    /// (ADR-0010 Amendment). showId PK (a show appears once), position for
+    /// ordering, deletedAt tombstone for per-action sync. Mirrors Android Room
+    /// migration v25→26. See PLANS/show-queue-v2.md.
+    private static func createBacklogTable(_ db: Database) throws {
+        try db.create(table: "backlog", ifNotExists: true) { t in
+            t.column("showId", .text).notNull().primaryKey()
+            t.column("position", .integer).notNull()
+            t.column("addedAt", .integer).notNull()
+            t.column("deletedAt", .integer)
+        }
+        try db.create(index: "idx_backlog_position", on: "backlog", columns: ["position"], ifNotExists: true)
     }
 
     /// Outbox of pending server pushes. One row per (kind, refId) — re-enqueue
