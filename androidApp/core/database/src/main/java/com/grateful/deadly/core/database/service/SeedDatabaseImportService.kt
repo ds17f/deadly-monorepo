@@ -1,5 +1,6 @@
 package com.grateful.deadly.core.database.service
 
+import android.database.sqlite.SQLiteException
 import android.util.Log
 import com.grateful.deadly.core.model.AppDatabase
 import com.grateful.deadly.core.database.DeadlyDatabase
@@ -40,6 +41,18 @@ import javax.inject.Singleton
  * FTS is rebuilt rather than shipped: `show_search.searchText` is a computed blob
  * (multi-format dates, member/song lists, source tags) — see [ShowSearchText],
  * shared with the JSON import path so search is identical regardless of source.
+ *
+ * **SQLite version fallback.** The fast `shows` write uses `INSERT…SELECT…ON CONFLICT
+ * DO UPDATE` (UPSERT), which needs SQLite ≥ 3.24.0 — first bundled in Android API 30.
+ * On older devices (and OEM forks like Fire OS that may ship an older engine regardless
+ * of API level) that statement fails to compile (`near "ON": syntax error`). Rather than
+ * gate on `Build.VERSION.SDK_INT` — a leaky proxy for the actual engine version — we try
+ * the fast path and, on [SQLiteException], retry the whole catalog transaction with a
+ * version-safe `shows` write (correlated `UPDATE` of existing rows + `INSERT…SELECT` of
+ * new ones). Both writes are generated from [SHOW_CATALOG_COLS] so they cannot drift from
+ * each other or from the schema. Modern devices never enter the fallback and are
+ * unaffected; the failed first attempt rolls back cleanly before the retry. If the
+ * fallback also fails the caller drops to the slower JSON `data.zip` import.
  */
 @Singleton
 class SeedDatabaseImportService @Inject constructor(
@@ -71,14 +84,25 @@ class SeedDatabaseImportService @Inject constructor(
             "id,dataVersion,packageName,versionType,description,importedAt,gitCommit,gitTag," +
             "buildTimestamp,totalShows,totalVenues,totalFiles,totalSizeBytes"
 
+        // Catalog columns minus the conflict key — the columns both the fast UPSERT
+        // and the version-safe fallback refresh. Derived from SHOW_CATALOG_COLS so the
+        // two write paths can't drift from each other.
+        private val SHOW_CATALOG_COLS_NO_KEY =
+            SHOW_CATALOG_COLS.split(",").map { it.trim() }.filter { it != "showId" }
+
         // `col=excluded.col` for every catalog column except the conflict key
         // (showId) and the device-local favorite columns, which the upsert must
-        // not touch. Derived from SHOW_CATALOG_COLS so it can't drift.
+        // not touch.
         private val SHOW_UPSERT_ASSIGNMENTS =
-            SHOW_CATALOG_COLS.split(",")
-                .map { it.trim() }
-                .filter { it != "showId" }
-                .joinToString(", ") { col -> "$col=excluded.$col" }
+            SHOW_CATALOG_COLS_NO_KEY.joinToString(", ") { col -> "$col=excluded.$col" }
+
+        // Version-safe fallback for SQLite < 3.24.0 (no UPSERT): per-column correlated
+        // UPDATE of the catalog columns on rows that exist in the seed. Leaves
+        // isFavorite/favoritedAt untouched, exactly like the upsert's DO UPDATE.
+        private val SHOW_COMPAT_UPDATE_ASSIGNMENTS =
+            SHOW_CATALOG_COLS_NO_KEY.joinToString(", ") { col ->
+                "$col=(SELECT s.$col FROM seed.shows s WHERE s.showId = shows.showId)"
+            }
     }
 
     suspend fun importFromSeed(
@@ -104,39 +128,16 @@ class SeedDatabaseImportService @Inject constructor(
                 Log.i(TAG, "Seed validated: $seedShowCount shows")
 
                 progressCallback?.invoke(SeedImportProgress("COPYING", "Loading catalog..."))
-                db.beginTransaction()
                 try {
-                    // Clear the childless catalog/derived tables (no user data hangs off
-                    // these). `shows` is NOT deleted — it has CASCADE children holding
-                    // user data (favorites, reviews, prefs, …); we upsert it instead.
-                    // See docs/adr/0009-non-destructive-catalog-refresh.md.
-                    db.execSQL("DELETE FROM show_search")
-                    db.execSQL("DELETE FROM recordings")
-                    db.execSQL("DELETE FROM dead_collections")
-                    db.execSQL("DELETE FROM data_version")
-
-                    // Shows: upsert catalog columns by showId. On insert, default the
-                    // device-local favorite state; on conflict, update catalog columns
-                    // only and leave isFavorite/favoritedAt alone (reconciled below).
-                    // `WHERE true` disambiguates the INSERT…SELECT…ON CONFLICT parse.
-                    db.execSQL(
-                        "INSERT INTO shows ($SHOW_CATALOG_COLS,isFavorite,favoritedAt) " +
-                        "SELECT $SHOW_CATALOG_COLS,0,NULL FROM seed.shows WHERE true " +
-                        "ON CONFLICT(showId) DO UPDATE SET $SHOW_UPSERT_ASSIGNMENTS"
-                    )
-                    db.execSQL("INSERT INTO recordings ($RECORDING_COLS) SELECT $RECORDING_COLS FROM seed.recordings")
-                    db.execSQL("INSERT INTO dead_collections ($COLLECTION_COLS) SELECT $COLLECTION_COLS FROM seed.dead_collections")
-
-                    progressCallback?.invoke(SeedImportProgress("INDEXING", "Building search index..."))
-                    rebuildSearchIndex(db)
-
-                    // data_version LAST: the health gate keys on this committed row, so it must
-                    // only appear once everything else is in place.
-                    db.execSQL("INSERT INTO data_version ($DATA_VERSION_COLS) SELECT $DATA_VERSION_COLS FROM seed.data_version")
-
-                    db.setTransactionSuccessful()
-                } finally {
-                    db.endTransaction()
+                    // Fast path: UPSERT the shows table (SQLite ≥ 3.24.0 / API 30+).
+                    runCatalogTransaction(db, progressCallback, ::writeShowsUpsert)
+                } catch (e: SQLiteException) {
+                    // Older SQLite (or an OEM build like Fire OS) doesn't know the UPSERT
+                    // grammar — the failed attempt already rolled back, so retry the whole
+                    // transaction with a version-safe shows write. Only the failing devices
+                    // pay this cost; modern devices never reach here.
+                    Log.w(TAG, "UPSERT shows write failed (likely SQLite < 3.24); retrying with version-safe write", e)
+                    runCatalogTransaction(db, progressCallback, ::writeShowsCompat)
                 }
             } finally {
                 runCatching { db.execSQL("DETACH DATABASE seed") }
@@ -156,6 +157,82 @@ class SeedDatabaseImportService @Inject constructor(
             Log.e(TAG, "Seed import failed", e)
             SeedImportResult.Error(e.message ?: "Seed import failed")
         }
+    }
+
+    /**
+     * Copy the catalog into the live Room DB in one transaction so the health gate (a
+     * committed `data_version` row) only flips on full success. [writeShows] is the one
+     * step that differs between the fast UPSERT and the version-safe fallback; everything
+     * else here is plain `INSERT…SELECT`, supported on every SQLite version. `shows` is
+     * written first so the FK-referencing `recordings` and the FTS rebuild see its rows.
+     */
+    private fun runCatalogTransaction(
+        db: androidx.sqlite.db.SupportSQLiteDatabase,
+        progressCallback: ((SeedImportProgress) -> Unit)?,
+        writeShows: (androidx.sqlite.db.SupportSQLiteDatabase) -> Unit
+    ) {
+        db.beginTransaction()
+        try {
+            // Clear the childless catalog/derived tables (no user data hangs off these).
+            // `shows` is NOT deleted — it has CASCADE children holding user data
+            // (favorites, reviews, prefs, …); we refresh it in place instead.
+            // See docs/adr/0009-non-destructive-catalog-refresh.md.
+            db.execSQL("DELETE FROM show_search")
+            db.execSQL("DELETE FROM recordings")
+            db.execSQL("DELETE FROM dead_collections")
+            db.execSQL("DELETE FROM data_version")
+
+            writeShows(db)
+
+            db.execSQL("INSERT INTO recordings ($RECORDING_COLS) SELECT $RECORDING_COLS FROM seed.recordings")
+            db.execSQL("INSERT INTO dead_collections ($COLLECTION_COLS) SELECT $COLLECTION_COLS FROM seed.dead_collections")
+
+            progressCallback?.invoke(SeedImportProgress("INDEXING", "Building search index..."))
+            rebuildSearchIndex(db)
+
+            // data_version LAST: the health gate keys on this committed row, so it must
+            // only appear once everything else is in place.
+            db.execSQL("INSERT INTO data_version ($DATA_VERSION_COLS) SELECT $DATA_VERSION_COLS FROM seed.data_version")
+
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+    }
+
+    /**
+     * Fast `shows` write: UPSERT catalog columns by showId. On insert, default the
+     * device-local favorite state; on conflict, update catalog columns only and leave
+     * isFavorite/favoritedAt alone (reconciled after import). `WHERE true` disambiguates
+     * the INSERT…SELECT…ON CONFLICT parse. Requires SQLite ≥ 3.24.0 (Android API 30+).
+     */
+    private fun writeShowsUpsert(db: androidx.sqlite.db.SupportSQLiteDatabase) {
+        db.execSQL(
+            "INSERT INTO shows ($SHOW_CATALOG_COLS,isFavorite,favoritedAt) " +
+            "SELECT $SHOW_CATALOG_COLS,0,NULL FROM seed.shows WHERE true " +
+            "ON CONFLICT(showId) DO UPDATE SET $SHOW_UPSERT_ASSIGNMENTS"
+        )
+    }
+
+    /**
+     * Version-safe `shows` write for SQLite < 3.24.0 (no UPSERT). Same end state as
+     * [writeShowsUpsert] using only ancient SQL: refresh catalog columns on existing rows
+     * (favorites untouched), then insert the rows the device doesn't have yet with default
+     * favorite state. Both statements derive their columns from SHOW_CATALOG_COLS, so they
+     * stay in lockstep with the fast path.
+     */
+    private fun writeShowsCompat(db: androidx.sqlite.db.SupportSQLiteDatabase) {
+        // Refresh existing shows in place — never delete, so CASCADE children survive.
+        db.execSQL(
+            "UPDATE shows SET $SHOW_COMPAT_UPDATE_ASSIGNMENTS " +
+            "WHERE showId IN (SELECT showId FROM seed.shows)"
+        )
+        // Insert shows new to this device, defaulting the device-local favorite state.
+        db.execSQL(
+            "INSERT INTO shows ($SHOW_CATALOG_COLS,isFavorite,favoritedAt) " +
+            "SELECT $SHOW_CATALOG_COLS,0,NULL FROM seed.shows " +
+            "WHERE showId NOT IN (SELECT showId FROM shows)"
+        )
     }
 
     /**
