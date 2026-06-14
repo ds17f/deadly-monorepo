@@ -195,7 +195,14 @@ struct MainNavigation: View {
             // plus a contextual docked side player that replaces the bottom mini
             // bar whenever a track is loaded.
             HStack(spacing: 0) {
-                NavSidebar(selectedTab: tabSelection, onSettings: { showingSettings = true })
+                NavSidebar(
+                    selectedTab: tabSelection,
+                    onSettings: { showingSettings = true },
+                    onNotifications: {
+                        selectedTab = .home
+                        homeStack.append(NotificationRoute.inbox)
+                    }
+                )
                 Divider()
                 sectionContent(for: selectedTab)
                 if container.miniPlayerService.isVisible {
@@ -236,20 +243,24 @@ struct MainNavigation: View {
         // Wide layout: the bottom mini player is replaced by the docked side
         // player, so suppress it inside each section.
         switch tab {
-        case .home: homeSection(suppressMini: true)
-        case .search: searchSection(suppressMini: true)
-        case .favorites: favoritesSection(suppressMini: true)
-        case .collections: collectionsSection(suppressMini: true)
+        case .home: homeSection(suppressMini: true, wide: true)
+        case .search: searchSection(suppressMini: true, wide: true)
+        case .favorites: favoritesSection(suppressMini: true, wide: true)
+        case .collections: collectionsSection(suppressMini: true, wide: true)
         }
     }
 
-    private func homeSection(suppressMini: Bool = false) -> some View {
+    private func homeSection(suppressMini: Bool = false, wide: Bool = false) -> some View {
         NavigationStack(path: $homeStack) {
             HomeScreen()
-                .settingsLogoButton($showingSettings, title: "Home")
+                .settingsLogoButton($showingSettings, title: "Home", wide: wide)
                 .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
-                        NotificationBell()
+                    // Bell lives on the rail in the wide layout, so drop it from
+                    // the (now hidden) nav bar there to avoid a duplicate.
+                    if !wide {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            NotificationBell()
+                        }
                     }
                 }
                 .navigationDestination(for: String.self) { showId in
@@ -269,10 +280,10 @@ struct MainNavigation: View {
         .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
     }
 
-    private func searchSection(suppressMini: Bool = false) -> some View {
+    private func searchSection(suppressMini: Bool = false, wide: Bool = false) -> some View {
         NavigationStack(path: $searchStack) {
             SearchScreen(resetToken: searchResetToken)
-                .settingsLogoButton($showingSettings, title: "Search")
+                .settingsLogoButton($showingSettings, title: "Search", wide: wide)
                 .navigationDestination(for: String.self) { showId in
                     ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
                 }
@@ -281,10 +292,10 @@ struct MainNavigation: View {
         .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
     }
 
-    private func favoritesSection(suppressMini: Bool = false) -> some View {
+    private func favoritesSection(suppressMini: Bool = false, wide: Bool = false) -> some View {
         NavigationStack(path: $favoritesStack) {
             FavoritesScreen()
-                .settingsLogoButton($showingSettings, title: "Favorites")
+                .settingsLogoButton($showingSettings, title: "Favorites", wide: wide)
                 .navigationDestination(for: String.self) { showId in
                     ShowDetailScreen(showId: showId, pendingSheet: $pendingShowSheet)
                 }
@@ -299,10 +310,10 @@ struct MainNavigation: View {
         .offlineBanner(isConnected: container.networkMonitor.isConnected, isRetrying: container.streamPlayer.isRetrying, errorMessage: playbackBannerError)
     }
 
-    private func collectionsSection(suppressMini: Bool = false) -> some View {
+    private func collectionsSection(suppressMini: Bool = false, wide: Bool = false) -> some View {
         NavigationStack(path: $collectionsStack) {
             CollectionsScreen()
-                .settingsLogoButton($showingSettings, title: "Collections")
+                .settingsLogoButton($showingSettings, title: "Collections", wide: wide)
                 .navigationDestination(for: CollectionRoute.self) { route in
                     switch route {
                     case .detail(let id):
@@ -390,8 +401,10 @@ enum AppTab: String, Hashable, CaseIterable {
 /// Icon-only vertical rail shown at regular width in place of the bottom tab
 /// bar. Drives the same `selectedTab` the TabView uses.
 private struct NavSidebar: View {
+    @Environment(\.appContainer) private var container
     @Binding var selectedTab: AppTab
     var onSettings: () -> Void
+    var onNotifications: () -> Void
 
     var body: some View {
         VStack(spacing: 8) {
@@ -414,6 +427,10 @@ private struct NavSidebar: View {
 
             Spacer()
 
+            // Notifications bell just above settings — the wide layout's home for
+            // the bell that sits in the nav bar on narrow screens.
+            notificationsButton
+
             // Settings pinned to the bottom of the rail (uses the otherwise
             // empty vertical space the wide rail frees up).
             Button {
@@ -431,6 +448,35 @@ private struct NavSidebar: View {
         .frame(width: 72)
         .frame(maxHeight: .infinity)
         .background(.bar)
+    }
+
+    /// Rail bell with the unread badge. Unlike the nav-bar `NotificationBell`
+    /// (a NavigationLink), the rail has no NavigationStack, so this drives the
+    /// home stack via the `onNotifications` closure instead.
+    private var notificationsButton: some View {
+        let store = container.notificationStore
+        let unread = store.notifications.unreadCount(appVersion: store.appVersion)
+        return Button {
+            onNotifications()
+        } label: {
+            ZStack(alignment: .topTrailing) {
+                Image(systemName: "bell")
+                    .font(.title2)
+                    .frame(width: 44, height: 44)
+                    .foregroundStyle(Color.secondary)
+                if unread > 0 {
+                    Text(unread > 99 ? "99+" : "\(unread)")
+                        .font(.system(size: 10, weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 4)
+                        .padding(.vertical, 1)
+                        .background(Color.red, in: Capsule())
+                        .offset(x: -4, y: 4)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(unread > 0 ? "Notifications, \(unread) unread" : "Notifications")
     }
 }
 
@@ -464,24 +510,32 @@ struct PlaceholderScreen: View {
 // MARK: - Settings Logo Button
 
 private extension View {
-    func settingsLogoButton(_ showingSettings: Binding<Bool>, title: String) -> some View {
-        self.navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button { showingSettings.wrappedValue = true } label: {
-                        HStack(spacing: 8) {
-                            Image("deadly_logo")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 28, height: 28)
-                            Text(title)
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
+    @ViewBuilder
+    func settingsLogoButton(_ showingSettings: Binding<Bool>, title: String, wide: Bool = false) -> some View {
+        if wide {
+            // Wide layout: the rail carries settings + the bell and the selected
+            // icon already names the section, so the nav bar (with its "Home"/
+            // "Search"/… title) is pure overhead. Hide it to reclaim the height.
+            self.toolbar(.hidden, for: .navigationBar)
+        } else {
+            self.navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button { showingSettings.wrappedValue = true } label: {
+                            HStack(spacing: 8) {
+                                Image("deadly_logo")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 28, height: 28)
+                                Text(title)
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                            }
                         }
                     }
                 }
-            }
+        }
     }
 }
 

@@ -415,12 +415,17 @@ fun MainNavigation(
             NavigationRailBar(
                 currentRoute = currentRoute,
                 onNavigateToDestination = onNavigateToDestination,
+                onOpenNotifications = { navController.navigate("notifications") },
                 onOpenSettings = { scope.launch { drawerState.open() } }
             )
         }
     AppScaffold(
         modifier = Modifier.weight(1f),
-        topBarConfig = augmentedTopBar,
+        // Wide layout: drop the top bar entirely. Its title ("Home"/"Search"/…)
+        // is redundant next to the selected rail icon, and removing it reclaims
+        // the scarce vertical height in landscape. The bell + settings it carried
+        // live on the rail instead.
+        topBarConfig = if (useSideNav) null else augmentedTopBar,
         bottomBarConfig = barConfig.bottomBar,
         bottomNavigationContent = if (!useSideNav && barConfig.bottomBar?.visible == true) {
             {
@@ -582,6 +587,7 @@ private const val WIDE_BREAKPOINT_DP = 600
 private fun NavigationRailBar(
     currentRoute: String?,
     onNavigateToDestination: (String) -> Unit,
+    onOpenNotifications: () -> Unit,
     onOpenSettings: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -611,6 +617,10 @@ private fun NavigationRailBar(
             }
 
             Spacer(modifier = Modifier.weight(1f))
+
+            // Notifications bell pinned just above settings — the wide layout's
+            // home for the bell that lives in the top bar on narrow screens.
+            NotificationBell(onClick = onOpenNotifications)
 
             // Settings pinned to the bottom of the rail.
             Box(
