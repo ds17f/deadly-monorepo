@@ -423,13 +423,19 @@ class AppPreferences @Inject constructor(
     private val _customDevEmail: MutableStateFlow<String>
 
     init {
+        // Fresh installs with no explicit choice default to "custom" in debug
+        // builds so dev devices never report to prod (analytics, etc.) until a
+        // server is picked in Developer settings; release builds default to prod.
+        val isDebuggable =
+            (context.applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0
+        val freshDefault = if (isDebuggable) "custom" else "prod"
         // Migrate: read new key first, fall back to legacy beta mode keys
         val env = if (prefs.contains(KEY_SERVER_ENVIRONMENT)) {
             prefs.getString(KEY_SERVER_ENVIRONMENT, "prod")!!
         } else if (prefs.contains(KEY_USE_BETA_MODE)) {
             if (prefs.getBoolean(KEY_USE_BETA_MODE, false)) "beta" else "prod"
         } else {
-            if (prefs.getBoolean(KEY_USE_BETA_SHARE_LINKS, false)) "beta" else "prod"
+            if (prefs.getBoolean(KEY_USE_BETA_SHARE_LINKS, false)) "beta" else freshDefault
         }
         _serverEnvironment = MutableStateFlow(env)
         _customServerUrl = MutableStateFlow(prefs.getString(KEY_CUSTOM_SERVER_URL, "") ?: "")

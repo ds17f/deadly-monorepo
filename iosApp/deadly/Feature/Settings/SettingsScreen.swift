@@ -16,9 +16,26 @@ struct SettingsScreen: View {
     var onNavigateToDownloads: (() -> Void)? = nil
     var onNavigateToEqualizer: (() -> Void)? = nil
     @Environment(\.openURL) private var openURL
+    @Environment(\.appContainer) private var container
+    // Reset to 0 whenever the unlock state flips, mirroring Android.
+    @State private var versionTapCount = 0
 
     private var appVersion: String {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
+    }
+
+    /// Tap the version footer 7× to reveal the Developer screen, matching
+    /// Android. Shows a toast countdown over the last few taps.
+    private func tapVersion() {
+        guard !container.appPreferences.developerModeUnlocked else { return }
+        versionTapCount += 1
+        let remaining = 7 - versionTapCount
+        if remaining <= 0 {
+            container.appPreferences.developerModeUnlocked = true
+            container.toastPresenter.show("Developer mode enabled")
+        } else if remaining <= 3 {
+            container.toastPresenter.show("\(remaining) tap\(remaining == 1 ? "" : "s") to enable developer mode")
+        }
     }
 
     var body: some View {
@@ -72,15 +89,23 @@ struct SettingsScreen: View {
                 NavigationLink("Privacy & Data") {
                     PrivacyDataView()
                 }
-                NavigationLink("Developer") {
-                    DeveloperView()
+                if container.appPreferences.developerModeUnlocked {
+                    NavigationLink("Developer") {
+                        DeveloperView()
+                    }
                 }
             }
 
             // Version footer — kept on the root so the build is always visible at
-            // a glance, with Release Notes one tap below it.
+            // a glance (and the tap-to-unlock developer mode stays reachable),
+            // with Release Notes one tap below it.
             Section {
-                LabeledContent("Version", value: appVersion)
+                Button {
+                    tapVersion()
+                } label: {
+                    LabeledContent("Version", value: appVersion)
+                }
+                .buttonStyle(.plain)
                 Button {
                     let urlString = "https://github.com/ds17f/deadly-monorepo/releases/tag/ios%2Fv\(appVersion)"
                     if let url = URL(string: urlString) { openURL(url) }
