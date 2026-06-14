@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { useAuth } from "@/contexts/AuthContext";
 import { ConnectContext } from "@/contexts/ConnectContext";
 import type { LocalPlaybackSnapshot } from "@/contexts/ConnectContext";
@@ -55,6 +56,12 @@ export default function ConnectProvider({
   children: React.ReactNode;
 }) {
   const { user, isLoading } = useAuth();
+  // Admin pages are a back-office dashboard, not a playback surface — keep the
+  // Connect WS (heartbeat, ownership lease, reconnect loop) out of them so an
+  // admin session never registers as a device. Pathname-gated, so navigating
+  // in tears the socket down and navigating back out re-opens it.
+  const pathname = usePathname();
+  const onAdmin = pathname?.startsWith("/admin") ?? false;
   const [devices, setDevices] = useState<ConnectDevice[]>([]);
   const [connectState, setConnectState] = useState<ConnectState | null>(null);
   const [myDeviceId, setMyDeviceId] = useState<string | null>(null);
@@ -328,13 +335,13 @@ export default function ConnectProvider({
   useEffect(() => {
     if (isLoading) return;
 
-    if (user) {
+    if (user && !onAdmin) {
       log(`User authenticated, starting connect`);
       shouldConnectRef.current = true;
       reconnectAttemptRef.current = 0;
       connect();
     } else {
-      log(`No user, disconnecting`);
+      log(onAdmin ? `On admin route, disconnecting` : `No user, disconnecting`);
       disconnect();
     }
 
@@ -342,7 +349,7 @@ export default function ConnectProvider({
       disconnect();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, isLoading]);
+  }, [user, isLoading, onAdmin]);
 
   return (
     <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, setLocalPlaybackSource, serverTimeOffsetMs }}>
