@@ -19,6 +19,7 @@ final class AppPreferences {
     private static let serverEnvironmentKey = "server_environment"
     private static let customServerUrlKey = "custom_server_url"
     private static let customDevEmailKey = "custom_dev_email"
+    private static let developerModeUnlockedKey = "developer_mode_unlocked"
     private static let analyticsEnabledKey = "analytics_enabled"
     private static let installIdKey = "install_id"
     private static let playerControlsStyleKey = "player_controls_style"
@@ -52,6 +53,12 @@ final class AppPreferences {
     /// Email for dev token endpoint on custom server.
     var customDevEmail: String {
         didSet { UserDefaults.standard.set(customDevEmail, forKey: Self.customDevEmailKey) }
+    }
+
+    /// Gates the Developer settings screen behind 7 taps on the version footer,
+    /// matching Android. Persisted so it survives relaunch once unlocked.
+    var developerModeUnlocked: Bool {
+        didSet { UserDefaults.standard.set(developerModeUnlocked, forKey: Self.developerModeUnlockedKey) }
     }
 
     /// Backward-compatible computed property for auth key namespacing.
@@ -235,6 +242,7 @@ final class AppPreferences {
         includeShowsWithoutRecordings = UserDefaults.standard.bool(forKey: Self.includeShowsWithoutRecordingsKey)
         customServerUrl = UserDefaults.standard.string(forKey: Self.customServerUrlKey) ?? ""
         customDevEmail = UserDefaults.standard.string(forKey: Self.customDevEmailKey) ?? ""
+        developerModeUnlocked = UserDefaults.standard.bool(forKey: Self.developerModeUnlockedKey)
         // Migrate: read new key first, fall back to legacy beta mode keys
         if let env = UserDefaults.standard.string(forKey: Self.serverEnvironmentKey) {
             serverEnvironment = env
