@@ -491,7 +491,7 @@ remote-sync:
 # Build debug on Mac
 ios-remote-build: remote-sync
 	@echo "Building on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS Simulator' build 2>&1 | tail -20"
+	@ssh $(REMOTE_HOST) "set -o pipefail; cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS Simulator' build 2>&1 | tail -20"
 
 # Unlock the Mac's login keychain (required once per reboot for SSH code signing)
 ios-remote-unlock:
@@ -507,7 +507,7 @@ ios-remote-unlock:
 ios-remote-install: remote-sync
 	@if [ -z "$$KEYCHAIN_PASSWORD" ]; then echo "KEYCHAIN_PASSWORD env var must be set." >&2; exit 1; fi
 	@echo "Building on $(REMOTE_HOST)..."
-	@printf '%s\n' "$$KEYCHAIN_PASSWORD" | ssh $(REMOTE_HOST) "IFS= read -r PASS; \
+	@printf '%s\n' "$$KEYCHAIN_PASSWORD" | ssh $(REMOTE_HOST) "set -o pipefail; IFS= read -r PASS; \
 		security unlock-keychain -p \"\$$PASS\" ~/Library/Keychains/login.keychain-db && \
 		unset PASS && \
 		cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS' -allowProvisioningUpdates build 2>&1 | tail -20"
@@ -516,8 +516,12 @@ ios-remote-install: remote-sync
 
 # Build + launch on iPhone 17 simulator
 ios-remote-sim: remote-sync
-	@echo "Building for simulator ($(IOS_SIM)) on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'platform=iOS Simulator,name=$(IOS_SIM)' build 2>&1 | tail -20"
+	@echo "Building for simulator on $(REMOTE_HOST)..."
+	@# Build with a GENERIC simulator destination, not `name=$(IOS_SIM)`: the
+	@# named form fails to resolve on this Mac (errors to a visionOS placeholder
+	@# and produces no .app). `set -o pipefail` so a build failure piped through
+	@# `tail` actually fails the recipe instead of masking as exit 0.
+	@ssh $(REMOTE_HOST) "set -o pipefail; cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS Simulator' build 2>&1 | tail -20"
 	@echo "Launching on simulator ($(IOS_SIM))..."
 	@# Resolve the device's UDID and target it explicitly — "booted" is ambiguous
 	@# when more than one simulator is running (e.g. a stale iPhone), which would
@@ -529,6 +533,7 @@ ios-remote-sim: remote-sync
 		DEV_ID=$$(xcrun simctl list devices available | grep -F "$(IOS_SIM) (" | head -1 | grep -oiE "[0-9A-F]{8}-([0-9A-F]{4}-){3}[0-9A-F]{12}"); \
 		if [ -z "$$DEV_ID" ]; then echo "No available simulator named: $(IOS_SIM)"; exit 1; fi; \
 		APP_PATH=$$(ls -dt ~/Library/Developer/Xcode/DerivedData/deadly-*/Build/Products/Debug-iphonesimulator/deadly.app 2>/dev/null | head -1); \
+		if [ -z "$$APP_PATH" ] || [ ! -d "$$APP_PATH" ]; then echo "No deadly.app found — build did not produce output; refusing to install a stale app."; exit 1; fi; \
 		xcrun simctl boot "$$DEV_ID" 2>/dev/null || true; \
 		xcrun simctl install "$$DEV_ID" "$$APP_PATH"; \
 		xcrun simctl launch "$$DEV_ID" com.grateful.deadly; \
