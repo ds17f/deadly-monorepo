@@ -217,7 +217,11 @@ final class AppPreferences {
     init() {
         UserDefaults.standard.register(defaults: [
             Self.includeShowsWithoutRecordingsKey: false,
-            Self.useBetaModeKey: false,
+            // NB: use_beta_mode is intentionally NOT registered. The server-env
+            // migration below checks `object(forKey:) != nil` to detect a legacy
+            // user who explicitly chose beta; a registered default would make
+            // that check always non-nil, defeating the DEBUG→"custom" fresh
+            // default (mirrors Android's prefs.contains() semantics).
             Self.forceOnlineKey: false,
             Self.localBackfilledV1Key: false,
             Self.localBackfilledV2Key: false,
