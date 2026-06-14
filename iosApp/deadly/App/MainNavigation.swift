@@ -205,8 +205,12 @@ struct MainNavigation: View {
                 )
                 Divider()
                 sectionContent(for: selectedTab)
+                Divider()
+                // The side player column is always present in the wide layout so
+                // the three-pane balance holds even before anything is playing —
+                // it shows a quiet placeholder when idle and the live player once
+                // a track loads.
                 if container.miniPlayerService.isVisible {
-                    Divider()
                     SidePlayerView(
                         service: container.miniPlayerService,
                         showFullPlayer: $showFullPlayer,
@@ -223,6 +227,8 @@ struct MainNavigation: View {
                             navigateToShow(showId: showId, on: selectedTab)
                         }
                     )
+                } else {
+                    SidePlayerPlaceholder()
                 }
             }
         } else {

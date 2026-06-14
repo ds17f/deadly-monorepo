@@ -33,6 +33,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -89,8 +90,13 @@ fun PlayerSidePanel(
     var showEqualizerBottomSheet by remember { mutableStateOf(false) }
     var showConnectSheet by remember { mutableStateOf(false) }
 
-    // No track loaded → emit nothing so the content pane is full width.
-    if (uiState.navigationInfo.showId == null) return
+    // No track loaded → keep the column present with a quiet placeholder so the
+    // wide layout's three-pane balance holds on first launch (instead of the
+    // content pane snapping to full width).
+    if (uiState.navigationInfo.showId == null) {
+        SidePlayerEmpty(modifier)
+        return
+    }
 
     Surface(
         modifier = modifier.fillMaxHeight(),
@@ -345,5 +351,49 @@ fun PlayerSidePanel(
         ConnectSheet(
             onDismiss = { showConnectSheet = false }
         )
+    }
+}
+
+/**
+ * Idle placeholder for the side player column. Keeps the wide layout's three-pane
+ * balance (rail · content · player) before anything is playing, matching the live
+ * panel's width and surface so the player drops straight in once a track loads.
+ */
+@Composable
+private fun SidePlayerEmpty(modifier: Modifier = Modifier) {
+    Surface(
+        modifier = modifier.fillMaxHeight(),
+        color = MaterialTheme.colorScheme.surface,
+        shadowElevation = 8.dp
+    ) {
+        Column(
+            modifier = Modifier
+                .width(360.dp)
+                .fillMaxHeight()
+                .systemBarsPadding()
+                .padding(horizontal = 24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Icon(
+                painter = IconResources.PlayerControls.Play(),
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f),
+                modifier = Modifier.size(48.dp)
+            )
+            Spacer(modifier = Modifier.height(12.dp))
+            Text(
+                text = "Nothing playing",
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = "Pick a show to start listening",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center
+            )
+        }
     }
 }

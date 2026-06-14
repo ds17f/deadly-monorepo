@@ -9,7 +9,7 @@
 .PHONY: android-build-release android-build-bundle android-deploy-testing
 .PHONY: android-promote-alpha android-promote-beta android-promote-production
 .PHONY: ios-build-release ios-deploy-testflight ios-promote
-.PHONY: remote-sync ios-remote-unlock ios-remote-build ios-remote-install ios-remote-sim ios-remote-test ios-remote-resolve
+.PHONY: remote-sync ios-remote-unlock ios-remote-build ios-remote-install ios-remote-sim ios-remote-sim-ipad ios-remote-test ios-remote-resolve
 .PHONY: android-remote-build android-remote-install
 .PHONY: android-remote-emulator android-remote-emu-list android-remote-emu-stop android-remote-run-emulator
 .PHONY: android-auto-dhu android-remote-auto-dhu
@@ -256,7 +256,8 @@ help:
 	@echo "  ios-remote-unlock    - Unlock Mac keychain for SSH code signing (once per reboot)"
 	@echo "  ios-remote-build     - Build debug on Mac simulator"
 	@echo "  ios-remote-install   - Build + install to connected device"
-	@echo "  ios-remote-sim       - Build + run on iPhone 17 simulator"
+	@echo "  ios-remote-sim       - Build + run on simulator (default iPhone 17; override IOS_SIM=\"iPad Pro 11-inch (M4)\")"
+	@echo "  ios-remote-sim-ipad  - Build + run on the iPad simulator (override IPAD_SIM=...)"
 	@echo "  ios-remote-test      - Run tests on Mac simulator"
 	@echo "  ios-remote-resolve   - Resolve SPM package dependencies"
 	@echo ""
@@ -457,6 +458,10 @@ REMOTE_PATH    ?= ~/Developer/ai/claude-personal/container-home/workspace/Develo
 REMOTE_IOS     ?= $(REMOTE_PATH)/iosApp
 REMOTE_ANDROID ?= $(REMOTE_PATH)/androidApp
 
+# Simulator device for the *-sim targets. Override to run on an iPad, e.g.
+#   make ios-remote-sim IOS_SIM="iPad Pro 11-inch (M4)"
+IOS_SIM        ?= iPhone 17
+
 # Sync working tree to Mac (rsync, excludes build artifacts).
 # Chained from every Linux→Mac build target so edits land on the Mac before
 # xcodebuild/gradle runs there.
@@ -511,10 +516,29 @@ ios-remote-install: remote-sync
 
 # Build + launch on iPhone 17 simulator
 ios-remote-sim: remote-sync
-	@echo "Building for simulator on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 17' build 2>&1 | tail -20"
-	@echo "Launching on simulator..."
-	@ssh $(REMOTE_HOST) 'APP_PATH=$$(cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination "platform=iOS Simulator,name=iPhone 17" -showBuildSettings 2>/dev/null | grep " BUILT_PRODUCTS_DIR" | head -1 | awk "{print \$$3}")/deadly.app && xcrun simctl boot "iPhone 17" 2>/dev/null; xcrun simctl install booted "$$APP_PATH" && xcrun simctl launch booted com.grateful.deadly && open -a Simulator'
+	@echo "Building for simulator ($(IOS_SIM)) on $(REMOTE_HOST)..."
+	@ssh $(REMOTE_HOST) "cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'platform=iOS Simulator,name=$(IOS_SIM)' build 2>&1 | tail -20"
+	@echo "Launching on simulator ($(IOS_SIM))..."
+	@# Resolve the device's UDID and target it explicitly — "booted" is ambiguous
+	@# when more than one simulator is running (e.g. a stale iPhone), which would
+	@# install/launch on the wrong device. BUILT_PRODUCTS_DIR is identical for every
+	@# simulator device (Debug-iphonesimulator), so grab the most recently built .app
+	@# rather than asking -showBuildSettings, which emits nothing on stdout for a
+	@# -destination name= it has to resolve.
+	@ssh $(REMOTE_HOST) 'set -e; \
+		DEV_ID=$$(xcrun simctl list devices available | grep -F "$(IOS_SIM) (" | head -1 | grep -oiE "[0-9A-F]{8}-([0-9A-F]{4}-){3}[0-9A-F]{12}"); \
+		if [ -z "$$DEV_ID" ]; then echo "No available simulator named: $(IOS_SIM)"; exit 1; fi; \
+		APP_PATH=$$(ls -dt ~/Library/Developer/Xcode/DerivedData/deadly-*/Build/Products/Debug-iphonesimulator/deadly.app 2>/dev/null | head -1); \
+		xcrun simctl boot "$$DEV_ID" 2>/dev/null || true; \
+		xcrun simctl install "$$DEV_ID" "$$APP_PATH"; \
+		xcrun simctl launch "$$DEV_ID" com.grateful.deadly; \
+		open -a Simulator'
+
+# Build + run on the iPad simulator (wide/tablet layout). Thin wrapper over
+# ios-remote-sim with an iPad device. Override IPAD_SIM for a different iPad.
+IPAD_SIM ?= iPad Pro 11-inch (M4)
+ios-remote-sim-ipad:
+	@$(MAKE) ios-remote-sim IOS_SIM="$(IPAD_SIM)"
 
 # Run tests on Mac simulator
 ios-remote-test: remote-sync

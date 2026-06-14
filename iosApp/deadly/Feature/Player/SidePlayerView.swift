@@ -413,3 +413,28 @@ struct SidePlayerView: View {
         return String(format: "%d:%02d", mins, secs)
     }
 }
+
+/// Idle-state stand-in for the wide layout's side player column. Keeps the
+/// three-pane balance (rail · content · player) before anything is playing so
+/// the screen doesn't look lopsided on first launch. Matches `SidePlayerView`'s
+/// width and background so the live player drops straight in once a track loads.
+struct SidePlayerPlaceholder: View {
+    var body: some View {
+        VStack(spacing: 12) {
+            Image(systemName: "play.circle")
+                .font(.system(size: 48))
+                .foregroundStyle(.tertiary)
+            Text("Nothing playing")
+                .font(.headline)
+                .foregroundStyle(.secondary)
+            Text("Pick a show to start listening")
+                .font(.subheadline)
+                .foregroundStyle(.tertiary)
+                .multilineTextAlignment(.center)
+        }
+        .padding(.horizontal, 24)
+        .frame(width: 320)
+        .frame(maxHeight: .infinity)
+        .background(Color(.secondarySystemBackground))
+    }
+}
