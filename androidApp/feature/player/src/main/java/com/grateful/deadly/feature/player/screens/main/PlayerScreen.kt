@@ -39,6 +39,7 @@ import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
 fun PlayerScreen(
     onNavigateBack: () -> Unit,
     onNavigateToPlaylist: (showId: String, recordingId: String?, openSheet: String?) -> Unit,
+    onNavigateToUpNext: () -> Unit,
     viewModel: PlayerViewModel = hiltViewModel()
 ) {
     Log.d("PlayerScreen", "=== PLAYER SCREEN LOADED ===")
@@ -92,6 +93,7 @@ fun PlayerScreen(
                             contextText = "Playing from Show", // TODO: Make dynamic
                             onNavigateBack = onNavigateBack,
                             onMoreOptionsClick = { showTrackActionsBottomSheet = true },
+                            onQueueClick = onNavigateToUpNext,
                             onContextClick = {
                                 // Navigate to playlist with current show and recording
                                 val showId = uiState.navigationInfo.showId

@@ -18,6 +18,7 @@ fun PlayerTopBar(
     contextText: String,
     onNavigateBack: () -> Unit,
     onMoreOptionsClick: () -> Unit,
+    onQueueClick: () -> Unit,
     onContextClick: () -> Unit,
     recordingId: String?,
     modifier: Modifier = Modifier
@@ -48,14 +49,24 @@ fun PlayerTopBar(
                 modifier = Modifier.clickable { onContextClick() }
             )
             
-            // 3-dot menu
-            IconButton(onClick = onMoreOptionsClick) {
-                Icon(
-                    painter = IconResources.Navigation.MoreVertical(),
-                    contentDescription = "More options",
-                    modifier = Modifier.size(28.dp),
-                    tint = MaterialTheme.colorScheme.onSurface
-                )
+            // Queue ("Up Next") + 3-dot menu, grouped on the right
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                IconButton(onClick = onQueueClick) {
+                    Icon(
+                        painter = IconResources.PlayerControls.Queue(),
+                        contentDescription = "Up Next",
+                        modifier = Modifier.size(26.dp),
+                        tint = MaterialTheme.colorScheme.onSurface
+                    )
+                }
+                IconButton(onClick = onMoreOptionsClick) {
+                    Icon(
+                        painter = IconResources.Navigation.MoreVertical(),
+                        contentDescription = "More options",
+                        modifier = Modifier.size(28.dp),
+                        tint = MaterialTheme.colorScheme.onSurface
+                    )
+                }
             }
     }
 }

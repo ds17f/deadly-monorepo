@@ -43,6 +43,7 @@ import com.grateful.deadly.feature.home.navigation.homeGraph
 import com.grateful.deadly.notifications.NotificationBell
 import com.grateful.deadly.notifications.NotificationViewModel
 import com.grateful.deadly.notifications.NotificationsScreen
+import com.grateful.deadly.upnext.UpNextScreen
 import com.grateful.deadly.feature.settings.SettingsScreen
 import com.grateful.deadly.feature.settings.navigation.CONNECT_ROUTE
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
@@ -300,7 +301,8 @@ fun MainNavigation(
                         navController.navigateToPlaylist(showId, recordingId, openSheet = openSheet) {
                             popUpTo("player") { inclusive = true }
                         }
-                    }
+                    },
+                    onNavigateToUpNext = { navController.navigate("upnext") }
                 )
 
                 // Settings feature - app configuration and about page
@@ -309,6 +311,11 @@ fun MainNavigation(
                 // Notifications inbox (in-app messaging)
                 composable("notifications") {
                     NotificationsScreen(onNavigateBack = { navController.popBackStack() })
+                }
+
+                // Up Next (the backlog) — ADR-0010 Amendment
+                composable("upnext") {
+                    UpNextScreen(onNavigateBack = { navController.popBackStack() })
                 }
             }
 
