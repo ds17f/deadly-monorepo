@@ -276,7 +276,17 @@ fun MainNavigation(
                 splashGraph(navController)
 
                 // Home feature - main hub screen
-                homeGraph(navController)
+                homeGraph(
+                    navController,
+                    onNavigateToShowQueue = {
+                        appViewModel.requestShowQueueTab()
+                        navController.navigate("library") {
+                            popUpTo(navController.graph.startDestinationId) { saveState = true }
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                    }
+                )
 
                 // Favorites feature - user's saved content
                 favoritesNavigation(navController)
