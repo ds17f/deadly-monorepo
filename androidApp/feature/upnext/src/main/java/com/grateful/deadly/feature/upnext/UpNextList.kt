@@ -222,6 +222,10 @@ private fun UpNextRow(
                         recordingId = show.bestRecordingId,
                         contentDescription = "Cover",
                         modifier = Modifier.fillMaxSize(),
+                        // Use the pre-resolved ticket/photo cover like every other
+                        // show card; recordingId alone falls back to the archive.org
+                        // thumbnail, which is a waveform (→ logo) for most recordings.
+                        imageUrl = show.coverImageUrl,
                     )
                 }
                 Column(modifier = Modifier.weight(1f)) {
