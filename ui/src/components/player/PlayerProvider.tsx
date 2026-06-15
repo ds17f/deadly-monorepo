@@ -8,11 +8,12 @@ import { updatePlaybackPosition, addRecentShow } from "@/lib/userDataApi";
 import { notifyUserDataChanged } from "@/lib/userDataEvents";
 import { useAuth } from "@/contexts/AuthContext";
 import { rememberArt, lookupArt, rememberReview, lookupReview } from "@/lib/artCache";
-import { getAutoAdvanceEnabled, setAutoAdvanceEnabled } from "@/lib/playbackPrefs";
+import { getAdvanceMode, setAdvanceMode as setAdvanceModePref, cycleAdvanceMode as cycleAdvanceModePref, type AdvanceMode } from "@/lib/playbackPrefs";
 import { PlayerContext } from "@/contexts/PlayerContext";
 import type { ViewedShow } from "@/contexts/PlayerContext";
 import type { Recording } from "@/types/recording";
 import { useConnect } from "@/contexts/ConnectContext";
+import { useUserData } from "@/contexts/UserDataContext";
 
 const AUTO_ADVANCE_DELAY_MS = 15_000; // ADR-0010 chunk 2: end-of-show countdown
 
@@ -127,19 +128,43 @@ export default function PlayerProvider({
     secondsRemaining: number;
     nextShow: ViewedShow;
   } | null>(null);
-  // "Autoplay" preference (roll into the next show when one ends). Off by
-  // default; persisted in localStorage. Read fresh from storage at end-of-show.
-  const [autoAdvanceEnabled, setAutoAdvanceEnabledState] = useState(false);
-  useEffect(() => setAutoAdvanceEnabledState(getAutoAdvanceEnabled()), []);
-  const toggleAutoAdvance = useCallback(() => {
-    const next = !getAutoAdvanceEnabled();
-    setAutoAdvanceEnabled(next);
-    setAutoAdvanceEnabledState(next);
+  // "Autoplay" preference: what happens when a show ends — None / Show Queue /
+  // Chronological (ADR-0010 Amendment, parity with mobile). Persisted in
+  // localStorage; read fresh from storage at end-of-show. The ∞ control cycles.
+  const [advanceMode, setAdvanceModeState] = useState<AdvanceMode>("none");
+  useEffect(() => setAdvanceModeState(getAdvanceMode()), []);
+  const autoAdvanceEnabled = advanceMode !== "none";
+  const cycleAdvanceMode = useCallback(() => {
+    const next = cycleAdvanceModePref();
+    setAdvanceModeState(next);
     analytics.track("feature_use", {
-      feature: "toggle_auto_advance",
+      feature: "cycle_advance_mode",
       category: "playback",
-      enabled: next,
+      mode: next,
     });
+  }, []);
+  const toggleAutoAdvance = cycleAdvanceMode;
+  const setAdvanceMode = useCallback((m: AdvanceMode) => {
+    setAdvanceModePref(m);
+    setAdvanceModeState(m);
+    analytics.track("feature_use", { feature: "set_advance_mode", category: "playback", mode: m });
+  }, []);
+
+  // The Show Queue (backlog), kept in refs so the non-React `ended` handler can
+  // read the current head / pop it. Peek-at-announce, pop-at-commit (cancel-safe).
+  const { backlog, removeFromQueue } = useUserData();
+  const backlogRef = useRef(backlog);
+  backlogRef.current = backlog;
+  const removeFromQueueRef = useRef(removeFromQueue);
+  removeFromQueueRef.current = removeFromQueue;
+  // Head peeked when a Show-Queue advance is initiated; popped only when it
+  // commits, so cancelling the countdown doesn't consume the show.
+  const queueAdvanceHeadRef = useRef<string | null>(null);
+  const commitQueuePop = useCallback((showId: string) => {
+    if (queueAdvanceHeadRef.current && queueAdvanceHeadRef.current === showId) {
+      removeFromQueueRef.current(showId);
+      queueAdvanceHeadRef.current = null;
+    }
   }, []);
   const [elapsed, setElapsed] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -1080,22 +1105,42 @@ export default function PlayerProvider({
   // to decide whether to advance.
   const onShowComplete = useCallback(
     async (completedShowId: string) => {
-      // ADR-0010 ship gate: per-device opt-out. Gates whether THIS device
+      // ADR-0010 ship gate: per-device opt-out + mode. Gates whether THIS device
       // initiates an advance when it's the one playing (announce/countdown/advance).
-      if (!getAutoAdvanceEnabled()) {
+      const mode = getAdvanceMode();
+      if (mode === "none") {
         console.info("[auto-advance] disabled by preference — not advancing");
         return;
       }
-      // Resolve the next chronological show. The browser has no catalog (shows
-      // are static SSG), so ask the API, which holds it in memory.
+      // Resolve the next show by mode. Show Queue peeks the head (popped only
+      // when the advance commits, so cancelling doesn't consume it) and stops
+      // when drained; Chronological asks the API for the next show by date (the
+      // browser has no catalog — shows are static SSG). Either way `next` is a
+      // playable ShowMetaResponse.
+      queueAdvanceHeadRef.current = null;
       let next: ShowMetaResponse;
       try {
-        const res = await fetch(`/api/shows/${encodeURIComponent(completedShowId)}/next`);
-        if (!res.ok) {
-          console.info("[auto-advance] no next show after", completedShowId);
-          return;
+        if (mode === "showQueue") {
+          const head = backlogRef.current[0]?.showId;
+          if (!head) {
+            console.info("[auto-advance] Show Queue drained — stopping");
+            return;
+          }
+          const res = await fetch(`/api/shows/${encodeURIComponent(head)}`);
+          if (!res.ok) {
+            console.info("[auto-advance] queue head not resolvable:", head);
+            return;
+          }
+          next = await res.json();
+          queueAdvanceHeadRef.current = head;
+        } else {
+          const res = await fetch(`/api/shows/${encodeURIComponent(completedShowId)}/next`);
+          if (!res.ok) {
+            console.info("[auto-advance] no next show after", completedShowId);
+            return;
+          }
+          next = await res.json();
         }
-        next = await res.json();
       } catch {
         return;
       }
@@ -1126,9 +1171,10 @@ export default function PlayerProvider({
         autoAdvanceTimerRef.current = null;
         setAutoAdvance(null);
         playShow(viewed);
+        commitQueuePop(viewed.showId);
       }, 1000);
     },
-    [playShow, connected, serverTimeOffsetMs]
+    [playShow, connected, serverTimeOffsetMs, commitQueuePop]
   );
 
   // ADR-0010 §7: in a Connect session, the shared `pendingAdvance` note is the
@@ -1170,7 +1216,10 @@ export default function PlayerProvider({
         if (remaining <= 0) {
           if (interval) clearInterval(interval);
           setAutoAdvance(null);
-          if (isActiveDeviceRef.current) playShow(viewed); // load clears the note
+          if (isActiveDeviceRef.current) {
+            playShow(viewed); // load clears the note
+            commitQueuePop(viewed.showId);
+          }
           return;
         }
         setAutoAdvance({ secondsRemaining: remaining, nextShow: viewed });
@@ -1189,15 +1238,18 @@ export default function PlayerProvider({
     connectState?.pendingAdvance?.deadline,
     serverTimeOffsetMs,
     playShow,
+    commitQueuePop,
   ]);
 
   // Cancel the pending advance. In a session, tell everyone (server clears the
-  // note); offline, just stop the local countdown.
+  // note); offline, just stop the local countdown. Cancelling does NOT consume
+  // the peeked Show-Queue head.
   const cancelAutoAdvance = useCallback(() => {
     if (autoAdvanceTimerRef.current) {
       clearInterval(autoAdvanceTimerRef.current);
       autoAdvanceTimerRef.current = null;
     }
+    queueAdvanceHeadRef.current = null;
     setAutoAdvance(null);
     if (connected) sendCommandRef.current("cancel_advance");
   }, [connected]);
@@ -1217,7 +1269,8 @@ export default function PlayerProvider({
     }
     setAutoAdvance(null);
     playShow(next);
-  }, [autoAdvance, connected, isActiveDevice, playShow]);
+    commitQueuePop(next.showId);
+  }, [autoAdvance, connected, isActiveDevice, playShow, commitQueuePop]);
 
   useEffect(() => {
     onShowCompleteRef.current = onShowComplete;
@@ -1513,6 +1566,9 @@ export default function PlayerProvider({
       playNextNow,
       autoAdvanceEnabled,
       toggleAutoAdvance,
+      advanceMode,
+      cycleAdvanceMode,
+      setAdvanceMode,
     }),
     [
       activeShow,
@@ -1554,6 +1610,9 @@ export default function PlayerProvider({
       playNextNow,
       autoAdvanceEnabled,
       toggleAutoAdvance,
+      advanceMode,
+      cycleAdvanceMode,
+      setAdvanceMode,
     ]
   );
 

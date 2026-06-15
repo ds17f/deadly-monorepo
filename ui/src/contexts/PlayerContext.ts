@@ -4,6 +4,7 @@ import { createContext, useContext } from "react";
 import type { Recording } from "@/types/recording";
 import type { AiShowReview } from "@/types/show";
 import type { ArchiveTrack, PlaybackStatus } from "@/types/player";
+import type { AdvanceMode } from "@/lib/playbackPrefs";
 
 export interface ViewedShow {
   showId: string;
@@ -84,9 +85,13 @@ export interface PlayerContextValue {
   playNextNow: () => void;
 
   // "Autoplay" toggle (ADR-0010): whether to roll into the next show when one
-  // ends. Persisted in localStorage; off by default.
+  // ends. Persisted in localStorage; off by default. `toggleAutoAdvance` cycles
+  // the mode (None → Show Queue → Chronological), so the ∞ control matches mobile.
   autoAdvanceEnabled: boolean;
   toggleAutoAdvance: () => void;
+  advanceMode: AdvanceMode;
+  cycleAdvanceMode: () => void;
+  setAdvanceMode: (mode: AdvanceMode) => void;
 }
 
 export const PlayerContext = createContext<PlayerContextValue | null>(null);

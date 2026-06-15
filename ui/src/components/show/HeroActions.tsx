@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useUserData } from "@/contexts/UserDataContext";
 import { usePlayer } from "@/contexts/PlayerContext";
+import { ADVANCE_MODE_LABEL } from "@/lib/playbackPrefs";
 import QrButton from "@/components/share/QrButton";
 import RecordingMenu from "@/components/player/RecordingMenu";
 import { useShareLink } from "@/components/share/useShareLink";
@@ -196,8 +197,12 @@ export default function HeroActions({
 
         <IconButton
           active={player.autoAdvanceEnabled}
-          onClick={player.toggleAutoAdvance}
-          label="Autoplay Next Show — roll into the next show when this one ends"
+          onClick={player.cycleAdvanceMode}
+          label={
+            player.advanceMode === "none"
+              ? "Autoplay: Off — tap to cycle (Show Queue · Chronological)"
+              : `Autoplay: ${ADVANCE_MODE_LABEL[player.advanceMode]} — tap to cycle`
+          }
         >
           <Icon name="autoplay" />
         </IconButton>
