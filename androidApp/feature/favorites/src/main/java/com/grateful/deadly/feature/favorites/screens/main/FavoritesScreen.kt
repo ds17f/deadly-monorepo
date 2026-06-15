@@ -177,7 +177,7 @@ fun FavoritesScreen(
 
             // Main Content
             if (selectedTab == FavoritesTab.UP_NEXT) {
-                UpNextList(modifier = Modifier.weight(1f))
+                UpNextList(modifier = Modifier.weight(1f), onNavigateToShow = onNavigateToShow)
             } else if (selectedTab == FavoritesTab.SHOWS) {
                 ShowsTabContent(
                     uiState = uiState,

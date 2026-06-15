@@ -82,7 +82,7 @@ fun PlayerSidePanel(
     val isFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
-    val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
+    val advanceMode by viewModel.advanceMode.collectAsState()
     val showCollectionsCount by viewModel.showCollectionsCount.collectAsState()
 
     var showTrackActionsBottomSheet by remember { mutableStateOf(false) }
@@ -326,7 +326,7 @@ fun PlayerSidePanel(
             title = uiState.trackDisplayInfo.title,
             showDate = uiState.trackDisplayInfo.showDate,
             venue = uiState.trackDisplayInfo.venue,
-            isAutoplayEnabled = autoAdvanceEnabled,
+            advanceMode = advanceMode,
             collectionsCount = showCollectionsCount,
             onChooseRecording = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "recording") } },
             onAutoplay = { viewModel.cycleAdvanceMode() },

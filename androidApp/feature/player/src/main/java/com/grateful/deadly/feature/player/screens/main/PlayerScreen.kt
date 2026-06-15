@@ -50,7 +50,7 @@ fun PlayerScreen(
     val isCurrentTrackFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
-    val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
+    val advanceMode by viewModel.advanceMode.collectAsState()
     val showCollectionsCount by viewModel.showCollectionsCount.collectAsState()
 
     val recordingId = uiState.navigationInfo.recordingId
@@ -181,7 +181,7 @@ fun PlayerScreen(
                 title = uiState.trackDisplayInfo.title,
                 showDate = uiState.trackDisplayInfo.showDate,
                 venue = uiState.trackDisplayInfo.venue,
-                isAutoplayEnabled = autoAdvanceEnabled,
+                advanceMode = advanceMode,
                 collectionsCount = showCollectionsCount,
                 // Playback — Equalizer + Share are inline on the player, so hidden here.
                 onChooseRecording = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "recording") } },

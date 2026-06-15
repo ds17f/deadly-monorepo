@@ -115,6 +115,9 @@ class PlaylistViewModel @Inject constructor(
         .map { it != AdvanceMode.NONE }
         .stateIn(viewModelScope, SharingStarted.Eagerly, appPreferences.advanceMode.value != AdvanceMode.NONE)
 
+    /** The active advance mode — drives the ∞ badge (None/Show Queue/Chronological). */
+    val advanceMode: StateFlow<AdvanceMode> = appPreferences.advanceMode
+
     /** The ∞ control cycles None → Show Queue → Chronological → None, with a toast. */
     fun cycleAdvanceMode() {
         val next = appPreferences.cycleAdvanceMode()
@@ -124,6 +127,19 @@ class PlaylistViewModel @Inject constructor(
             "category" to "playback",
             "mode" to next.name,
         ))
+    }
+
+    /** Tap the Show Queue toggle when not queued — add the current show (+toast). */
+    fun addToQueue() = addToUpNext()
+
+    /** Remove the current show from the Show Queue. Silent for the Play & Remove
+     *  path (which has its own context); toasts otherwise. */
+    fun removeFromQueue(silent: Boolean = false) {
+        val showId = uiState.value.showData?.showId ?: return
+        viewModelScope.launch {
+            backlogRepository.remove(showId)
+            if (!silent) toastController.show("Removed from Show Queue")
+        }
     }
 
     init {
@@ -341,7 +357,14 @@ class PlaylistViewModel @Inject constructor(
         started = SharingStarted.WhileSubscribed(5000),
         initialValue = PlaylistUiState()
     )
-    
+
+    /** Whether the current show is in the Show Queue (drives the toggle highlight). */
+    val isInQueue: StateFlow<Boolean> = combine(
+        uiState.map { it.showData?.showId }.distinctUntilChanged(),
+        backlogRepository.observeShowIds()
+    ) { showId, ids -> showId != null && ids.contains(showId) }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
+
     // Track current track loading job for cancellation
     private var trackLoadingJob: Job? = null
     

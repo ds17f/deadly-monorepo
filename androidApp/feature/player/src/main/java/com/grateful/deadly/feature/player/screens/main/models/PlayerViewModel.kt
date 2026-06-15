@@ -56,6 +56,9 @@ class PlayerViewModel @Inject constructor(
         .map { it != AdvanceMode.NONE }
         .stateIn(viewModelScope, SharingStarted.Eagerly, appPreferences.advanceMode.value != AdvanceMode.NONE)
 
+    /** The active advance mode — drives the ∞ badge (None/Show Queue/Chronological). */
+    val advanceMode: StateFlow<AdvanceMode> = appPreferences.advanceMode
+
     /** The ∞ control cycles None → Show Queue → Chronological → None, with a toast. */
     fun cycleAdvanceMode() {
         val next = appPreferences.cycleAdvanceMode()

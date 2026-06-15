@@ -12,6 +12,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -35,6 +36,7 @@ import sh.calvin.reorderable.rememberReorderableLazyListState
 @Composable
 fun UpNextList(
     modifier: Modifier = Modifier,
+    onNavigateToShow: (String) -> Unit = {},
     viewModel: UpNextViewModel = hiltViewModel(),
 ) {
     val shows by viewModel.shows.collectAsState()
@@ -51,6 +53,7 @@ fun UpNextList(
 
     var showClearConfirm by remember { mutableStateOf(false) }
     var pendingRemove by remember { mutableStateOf<Show?>(null) }
+    var selectedShow by remember { mutableStateOf<Show?>(null) }
 
     val lazyListState = rememberLazyListState()
     val reorderState = rememberReorderableLazyListState(lazyListState) { from, to ->
@@ -85,7 +88,7 @@ fun UpNextList(
                     UpNextRow(
                         show = show,
                         elevation = elevation,
-                        onPlay = { viewModel.play(show) },
+                        onPlay = { selectedShow = show },
                         onRequestRemove = { pendingRemove = show },
                         dragHandle = {
                             IconButton(
@@ -100,6 +103,30 @@ fun UpNextList(
                             }
                         },
                     )
+                }
+            }
+        }
+    }
+
+    selectedShow?.let { show ->
+        ModalBottomSheet(onDismissRequest = { selectedShow = null }) {
+            Column(modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)) {
+                Text(
+                    text = "${show.date} — ${show.venue.name}",
+                    style = MaterialTheme.typography.titleSmall,
+                    modifier = Modifier.padding(horizontal = 24.dp, vertical = 8.dp),
+                )
+                QueueActionRow("Play Now", IconResources.PlayerControls.Play()) {
+                    selectedShow = null; viewModel.playNow(show)
+                }
+                QueueActionRow("Move to Top", IconResources.Navigation.KeyboardArrowUp()) {
+                    selectedShow = null; viewModel.moveToTop(show)
+                }
+                QueueActionRow("Go to Show", IconResources.Navigation.Forward()) {
+                    selectedShow = null; onNavigateToShow(show.id)
+                }
+                QueueActionRow("Remove from Queue", IconResources.Navigation.Close(), destructive = true) {
+                    selectedShow = null; pendingRemove = show
                 }
             }
         }
@@ -226,6 +253,27 @@ private fun UpNextRow(
 }
 
 @Composable
+private fun QueueActionRow(
+    label: String,
+    icon: Painter,
+    destructive: Boolean = false,
+    onClick: () -> Unit,
+) {
+    val color = if (destructive) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurface
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(horizontal = 24.dp, vertical = 16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(16.dp),
+    ) {
+        Icon(painter = icon, contentDescription = null, tint = color, modifier = Modifier.size(24.dp))
+        Text(text = label, style = MaterialTheme.typography.bodyLarge, color = color)
+    }
+}
+
+@Composable
 private fun EmptyShowQueue(modifier: Modifier = Modifier) {
     Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(
@@ -234,7 +282,7 @@ private fun EmptyShowQueue(modifier: Modifier = Modifier) {
             modifier = Modifier.padding(32.dp),
         ) {
             Icon(
-                IconResources.PlayerControls.Queue(),
+                IconResources.PlayerControls.ShowQueueMark(),
                 contentDescription = null,
                 modifier = Modifier.size(48.dp),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,

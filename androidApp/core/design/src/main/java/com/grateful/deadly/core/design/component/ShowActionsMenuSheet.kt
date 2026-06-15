@@ -12,6 +12,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.grateful.deadly.core.design.resources.IconResources
+import com.grateful.deadly.core.model.AdvanceMode
 
 /**
  * ShowActionsMenuSheet — the single unified "⋯" overflow shared by the full
@@ -34,7 +35,7 @@ fun ShowActionsMenuSheet(
     title: String,
     showDate: String,
     venue: String,
-    isAutoplayEnabled: Boolean,
+    advanceMode: AdvanceMode,
     collectionsCount: Int,
     // Playback group — pass null to hide (shown inline on this surface)
     onChooseRecording: (() -> Unit)? = null,
@@ -56,7 +57,10 @@ fun ShowActionsMenuSheet(
     val playback = buildList {
         onChooseRecording?.let { add(MenuItem("Choose Recording", IconResources.PlayerControls.AlbumArt(), it)) }
         onEqualizer?.let { add(MenuItem("Equalizer", IconResources.PlayerControls.Equalizer(), it)) }
-        onAutoplay?.let { add(MenuItem("Autoplay Next Show", IconResources.PlayerControls.Autoplay(), it, active = isAutoplayEnabled, dismissOnClick = false)) }
+        onAutoplay?.let {
+            val label = if (advanceMode == AdvanceMode.NONE) "Autoplay" else "Autoplay: ${advanceMode.displayName}"
+            add(MenuItem(label, IconResources.PlayerControls.Autoplay(), it, active = advanceMode != AdvanceMode.NONE, dismissOnClick = false))
+        }
     }
     val upNext = buildList {
         onViewUpNext?.let { add(MenuItem("View Show Queue", IconResources.PlayerControls.Queue(), it)) }
@@ -171,10 +175,11 @@ private data class MenuItem(
 )
 
 /** Resolve the bold header for a multi-item group by its first member. */
-private fun groupLabel(group: List<MenuItem>): String = when (group.first().label) {
-    "Choose Recording", "Equalizer", "Autoplay Next Show" -> "Playback"
-    "View Show Queue", "Add to Show Queue" -> "Show Queue"
-    "Setlist", "Collections", "Download" -> "This Show"
+private fun groupLabel(group: List<MenuItem>): String = when {
+    group.first().label.startsWith("Autoplay") -> "Playback"
+    group.first().label in listOf("Choose Recording", "Equalizer") -> "Playback"
+    group.first().label in listOf("View Show Queue", "Add to Show Queue") -> "Show Queue"
+    group.first().label in listOf("Setlist", "Collections", "Download") -> "This Show"
     else -> "Share"
 }
 

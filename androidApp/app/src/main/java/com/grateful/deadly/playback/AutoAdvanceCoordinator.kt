@@ -141,7 +141,15 @@ class AutoAdvanceCoordinator @Inject constructor(
             // when the advance commits, so a cancel doesn't consume it); a drained
             // queue stops. Chronological goes by date, ignoring the queue.
             val next = when (mode) {
-                AdvanceMode.SHOW_QUEUE -> backlogRepository.peekHeadId()?.let { showRepository.getShowById(it) }
+                AdvanceMode.SHOW_QUEUE -> {
+                    // Skip a head that's the show we just finished — it was played
+                    // manually and left in the queue (e.g. "Just Play"), so consume
+                    // it rather than replay it on a loop.
+                    if (backlogRepository.peekHeadId() == completedShowId) {
+                        backlogRepository.popHead()
+                    }
+                    backlogRepository.peekHeadId()?.let { showRepository.getShowById(it) }
+                }
                 AdvanceMode.CHRONOLOGICAL ->
                     showRepository.getShowById(completedShowId)?.let { showRepository.getNextShowByDate(it.date) }
                 AdvanceMode.NONE -> null
