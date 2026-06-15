@@ -81,6 +81,16 @@ class FavoritesPushServiceImpl @Inject constructor(
         enqueueAndFlush(SyncOutboxEntity.KIND_BACKLOG_REORDER, BACKLOG_REORDER_REF)
     }
 
+    override suspend fun reconcileBacklog(showIds: List<String>): List<PushResult> {
+        if (showIds.isEmpty()) return emptyList()
+        Log.d(TAG, "reconcileBacklog: re-pushing ${showIds.size} diverged backlog rows")
+        for (showId in showIds) enqueueRow(SyncOutboxEntity.KIND_BACKLOG_ITEM, showId)
+        // Positions can have diverged too; coalesce a single reorder push so the
+        // server order matches local after the rows land.
+        enqueueRow(SyncOutboxEntity.KIND_BACKLOG_REORDER, BACKLOG_REORDER_REF)
+        return flushPending()
+    }
+
     override suspend fun enqueueAllLocalAndFlush(): List<PushResult> {
         val shows = try { favoritesDao.getAllFavoriteShows() } catch (e: Exception) {
             Log.w(TAG, "getAllFavoriteShows failed", e); emptyList()

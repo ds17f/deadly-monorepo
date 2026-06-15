@@ -31,6 +31,11 @@ interface BacklogDao {
     @Query("SELECT * FROM backlog WHERE showId = :showId")
     suspend fun getById(showId: String): BacklogEntity?
 
+    /** Every local row including tombstones — used by sync reconcile to find
+     *  local rows the server is missing or has an older copy of. */
+    @Query("SELECT * FROM backlog ORDER BY position ASC")
+    suspend fun getAllIncludingTombstones(): List<BacklogEntity>
+
     @Query("SELECT EXISTS(SELECT 1 FROM backlog WHERE showId = :showId AND deletedAt IS NULL)")
     suspend fun contains(showId: String): Boolean
 

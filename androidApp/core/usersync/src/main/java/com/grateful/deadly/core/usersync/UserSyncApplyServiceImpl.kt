@@ -59,8 +59,9 @@ class UserSyncApplyServiceImpl @Inject constructor(
                 val songs = applyFavoriteSongs(backup.favorites.tracks)
                 val reviews = applyReviews(backup.reviews)
                 applyRecordingPreferences(backup.recordingPreferences)
-                applyBacklog(backup.backlog ?: emptyList())
+                val backlogPushIds = applyBacklog(backup.backlog ?: emptyList())
                 shows.copy(
+                    backlogPushIds = backlogPushIds,
                     favoriteSongsScanned = songs.favoriteSongsScanned,
                     favoriteSongsApplied = songs.favoriteSongsApplied,
                     favoriteSongsSkippedLocalNewer = songs.favoriteSongsSkippedLocalNewer,
@@ -281,7 +282,11 @@ class UserSyncApplyServiceImpl @Inject constructor(
     // Backlog (Show Queue). One row per show keyed by showId; LWW on updatedAt,
     // a remote tombstone tombstones locally. No FK to shows, so unknown shows
     // are stored and simply ignored by the UI until the catalog knows them.
-    private suspend fun applyBacklog(remote: List<SyncBacklogItemV3>) {
+    // Returns showIds the coordinator should re-push: local rows the server is
+    // missing or has an older copy of (incl. tombstones). This is the reverse
+    // half of the merge — the pull already carries server→local; here we detect
+    // local→server divergence so a dropped add/remove event heals on next pull.
+    private suspend fun applyBacklog(remote: List<SyncBacklogItemV3>): List<String> {
         var applied = 0
         var skippedLocalNewer = 0
         for (dto in remote) {
@@ -311,7 +316,34 @@ class UserSyncApplyServiceImpl @Inject constructor(
                 Log.w(TAG, "apply backlog ${dto.showId} failed: ${e.message}")
             }
         }
-        Log.d(TAG, "backlog: scanned=${remote.size} applied=$applied skippedLocalNewer=$skippedLocalNewer")
+
+        // Reverse delta: compare local rows (incl. tombstones) against the server
+        // list. Compare at SECOND granularity — the wire format truncates ms, so a
+        // strict ms comparison would flag every row as "local newer" forever and
+        // re-push on every pull (an infinite loop). A row needs pushing when the
+        // server lacks it or its second-precision updatedAt is older than local's.
+        val serverSecByShow = remote.associate { it.showId to it.updatedAt }
+        val pushIds = try {
+            backlogDao.getAllIncludingTombstones().filter { localRow ->
+                val serverSec = serverSecByShow[localRow.showId]
+                if (serverSec == null) {
+                    // Server has no row. Only a LIVE local row is a real add it
+                    // missed — a local tombstone the server never had is already
+                    // converged (server-absent == not in queue), so don't re-push
+                    // a DELETE that would just 404 on every foreground.
+                    localRow.deletedAt == null
+                } else {
+                    // Server has the row: push when local is strictly newer
+                    // (covers live edits and a remove the server hasn't seen).
+                    (localRow.updatedAt / 1000) > serverSec
+                }
+            }.map { it.showId }
+        } catch (e: Exception) {
+            Log.w(TAG, "backlog reconcile scan failed: ${e.message}"); emptyList()
+        }
+
+        Log.d(TAG, "backlog: scanned=${remote.size} applied=$applied skippedLocalNewer=$skippedLocalNewer toPush=${pushIds.size}")
+        return pushIds
     }
 
     private suspend fun applyRecordingPreferences(remote: List<SyncRecordingPrefV3>) {

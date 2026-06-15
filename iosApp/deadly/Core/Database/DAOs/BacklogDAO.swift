@@ -36,6 +36,14 @@ struct BacklogDAO: Sendable {
         }
     }
 
+    /// Every local row including tombstones — used by sync reconcile to find
+    /// local rows the server is missing or has an older copy of.
+    func fetchAllIncludingTombstones() throws -> [BacklogRecord] {
+        try database.read { db in
+            try BacklogRecord.order(Column("position").asc).fetchAll(db)
+        }
+    }
+
     func contains(_ showId: String) throws -> Bool {
         try database.read { db in
             try BacklogRecord

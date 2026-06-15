@@ -63,6 +63,22 @@ final class FavoritesPushService {
         enqueue(kind: SyncOutboxRecord.Kind.backlogReorder, refId: Self.backlogReorderRef)
     }
 
+    /// Re-push a set of backlog rows the pull found diverged (local newer or
+    /// missing on the server), then flush once. The anti-entropy backstop that
+    /// heals dropped add/remove events. No-op when the set is empty.
+    @discardableResult
+    func reconcileBacklog(showIds: [String]) async -> [PushResult] {
+        guard !showIds.isEmpty else { return [] }
+        print("[FavoritesPush] reconcileBacklog: re-pushing \(showIds.count) diverged backlog rows")
+        for showId in showIds {
+            enqueueRow(kind: SyncOutboxRecord.Kind.backlogItem, refId: showId)
+        }
+        // Positions can have diverged too; coalesce a single reorder push so the
+        // server order matches local after the rows land.
+        enqueueRow(kind: SyncOutboxRecord.Kind.backlogReorder, refId: Self.backlogReorderRef)
+        return await flushPending()
+    }
+
     /// Enqueue every local favorite (shows + songs) plus the top recents,
     /// then flush. Backs both the one-time startup backfill and a manual
     /// "Sync now". Idempotent for favorites (server upserts by natural key);

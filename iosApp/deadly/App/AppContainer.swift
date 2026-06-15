@@ -59,6 +59,19 @@ final class AppContainer {
     var pendingShowDetailRequest: String?
     func requestShowDetail(_ showId: String) { pendingShowDetailRequest = showId }
 
+    /// Foreground / sign-in / cold-start sync: flush the outbox, pull, then
+    /// re-push any backlog rows the pull found diverged. The reconcile is the
+    /// anti-entropy backstop — a Show Queue add/remove whose per-action event was
+    /// dropped is detected during the pull and healed here, so devices converge
+    /// even when individual events never deliver.
+    func syncFlushPullThenReconcile(reason: String) async {
+        _ = await favoritesPushService.flushPending()
+        let result = await userSyncApplyService.pullAndApply(reason: reason)
+        if case .success(let applied) = result, !applied.backlogPushIds.isEmpty {
+            await favoritesPushService.reconcileBacklog(showIds: applied.backlogPushIds)
+        }
+    }
+
     init() {
         let initStart = CFAbsoluteTimeGetCurrent()
         // Configure audio session for background playback at app launch
