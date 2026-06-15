@@ -93,7 +93,6 @@ fun PlayerScreen(
                             contextText = "Playing from Show", // TODO: Make dynamic
                             onNavigateBack = onNavigateBack,
                             onMoreOptionsClick = { showTrackActionsBottomSheet = true },
-                            onQueueClick = onNavigateToUpNext,
                             onContextClick = {
                                 // Navigate to playlist with current show and recording
                                 val showId = uiState.navigationInfo.showId
@@ -187,8 +186,10 @@ fun PlayerScreen(
                 // Playback — Equalizer + Share are inline on the player, so hidden here.
                 onChooseRecording = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "recording") } },
                 onAutoplay = { viewModel.toggleAutoAdvance() },
+                // Up Next — the player only *views* the list (adding the playing
+                // show to its own queue is confusing); add lives on the playlist.
+                onViewUpNext = onNavigateToUpNext,
                 // This Show — the player navigates to the playlist (their home).
-                onAddToUpNext = { viewModel.addToUpNext() },
                 onSetlist = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "setlist") } },
                 onCollections = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "collections") } },
                 onDownload = { viewModel.downloadCurrentShow() },

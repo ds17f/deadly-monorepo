@@ -8,6 +8,8 @@ import com.grateful.deadly.core.api.home.HomeContent
 import com.grateful.deadly.core.api.home.TrendingService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.database.ToastController
+import com.grateful.deadly.core.domain.repository.BacklogRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -30,7 +32,21 @@ class HomeViewModel @Inject constructor(
     private val trendingService: TrendingService,
     private val appPreferences: AppPreferences,
     private val analyticsService: AnalyticsService,
+    private val backlogRepository: BacklogRepository,
+    private val toastController: ToastController,
 ) : ViewModel() {
+
+    /** Add a show to the backlog ("Up Next") from the long-press sheet. */
+    fun addToUpNext(showId: String) {
+        viewModelScope.launch {
+            if (backlogRepository.contains(showId)) {
+                toastController.show("Already in Up Next")
+            } else {
+                backlogRepository.addToBottom(showId)
+                toastController.show("Added to Up Next")
+            }
+        }
+    }
 
     companion object {
         private const val TAG = "HomeViewModel"

@@ -1,4 +1,4 @@
-package com.grateful.deadly.upnext
+package com.grateful.deadly.feature.upnext
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,9 +16,10 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 /**
- * Up Next (the backlog) screen. Observes the local-first backlog and resolves
- * show ids to [Show] for display. Tap plays a show, with reorder / remove / clear
- * acting on the [BacklogRepository]. No advance wiring (slice 3) or sync (slice 4).
+ * Up Next (the backlog). Single source of truth for the list UI, hosted by both
+ * the standalone [UpNextScreen] (menu push) and the Favorites "Up Next" tab via
+ * [UpNextList]. Observes the local-first backlog and resolves show ids to [Show].
+ * No advance wiring (slice 3) or sync (slice 4).
  */
 @HiltViewModel
 class UpNextViewModel @Inject constructor(

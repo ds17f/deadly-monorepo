@@ -40,8 +40,10 @@ fun ShowActionsMenuSheet(
     onChooseRecording: (() -> Unit)? = null,
     onEqualizer: (() -> Unit)? = null,
     onAutoplay: (() -> Unit)? = null,
-    // This Show group
+    // Up Next group
+    onViewUpNext: (() -> Unit)? = null,
     onAddToUpNext: (() -> Unit)? = null,
+    // This Show group
     onSetlist: (() -> Unit)? = null,
     onCollections: (() -> Unit)? = null,
     onDownload: (() -> Unit)? = null,
@@ -56,8 +58,11 @@ fun ShowActionsMenuSheet(
         onEqualizer?.let { add(MenuItem("Equalizer", IconResources.PlayerControls.Equalizer(), it)) }
         onAutoplay?.let { add(MenuItem("Autoplay Next Show", IconResources.PlayerControls.Autoplay(), it, active = isAutoplayEnabled, dismissOnClick = false)) }
     }
-    val thisShow = buildList {
+    val upNext = buildList {
+        onViewUpNext?.let { add(MenuItem("View Up Next", IconResources.PlayerControls.Queue(), it)) }
         onAddToUpNext?.let { add(MenuItem("Add to Up Next", IconResources.Content.PlaylistAdd(), it)) }
+    }
+    val thisShow = buildList {
         onSetlist?.let { add(MenuItem("Setlist", IconResources.Content.FormatListBulleted(), it)) }
         // Collections appears only when the show is actually in a collection.
         if (collectionsCount > 0) {
@@ -68,7 +73,7 @@ fun ShowActionsMenuSheet(
     val share = buildList {
         onShare?.let { add(MenuItem("Share", IconResources.Content.Share(), it)) }
     }
-    val groups = listOf(playback, thisShow, share).filter { it.isNotEmpty() }
+    val groups = listOf(playback, upNext, thisShow, share).filter { it.isNotEmpty() }
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
@@ -168,6 +173,7 @@ private data class MenuItem(
 /** Resolve the bold header for a multi-item group by its first member. */
 private fun groupLabel(group: List<MenuItem>): String = when (group.first().label) {
     "Choose Recording", "Equalizer", "Autoplay Next Show" -> "Playback"
+    "View Up Next", "Add to Up Next" -> "Up Next"
     "Setlist", "Collections", "Download" -> "This Show"
     else -> "Share"
 }

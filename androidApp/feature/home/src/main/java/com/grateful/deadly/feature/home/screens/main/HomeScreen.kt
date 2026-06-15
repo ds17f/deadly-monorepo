@@ -45,7 +45,11 @@ fun HomeScreen(
             venue = show.venue.name,
             location = show.location.displayText,
             rating = if (show.hasRating) show.displayRating else null,
-            onDismiss = { detailShow = null }
+            onDismiss = { detailShow = null },
+            onAddToUpNext = {
+                viewModel.addToUpNext(show.id)
+                detailShow = null
+            }
         )
     }
 

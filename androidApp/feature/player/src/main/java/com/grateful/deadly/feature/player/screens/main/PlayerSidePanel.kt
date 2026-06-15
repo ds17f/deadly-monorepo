@@ -74,6 +74,7 @@ import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
 fun PlayerSidePanel(
     onTapToExpand: () -> Unit,
     onNavigateToPlaylist: (showId: String, recordingId: String?, openSheet: String?) -> Unit,
+    onNavigateToUpNext: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: PlayerViewModel = hiltViewModel()
 ) {
@@ -329,7 +330,7 @@ fun PlayerSidePanel(
             collectionsCount = showCollectionsCount,
             onChooseRecording = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "recording") } },
             onAutoplay = { viewModel.toggleAutoAdvance() },
-            onAddToUpNext = { viewModel.addToUpNext() },
+            onViewUpNext = onNavigateToUpNext,
             onSetlist = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "setlist") } },
             onCollections = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "collections") } },
             onDownload = { viewModel.downloadCurrentShow() },

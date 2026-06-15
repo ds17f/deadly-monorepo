@@ -43,6 +43,21 @@ fun SearchShowActionsSheet(
 
             Spacer(modifier = Modifier.height(16.dp))
 
+            // Add to Up Next
+            ListItem(
+                headlineContent = { Text("Add to Up Next") },
+                leadingContent = {
+                    Icon(
+                        painter = IconResources.Content.PlaylistAdd(),
+                        contentDescription = null
+                    )
+                },
+                modifier = Modifier.clickable {
+                    viewModel.addToUpNext(show.id)
+                    onDismiss()
+                }
+            )
+
             // Add/Remove from Favorites
             if (isFavorite) {
                 ListItem(

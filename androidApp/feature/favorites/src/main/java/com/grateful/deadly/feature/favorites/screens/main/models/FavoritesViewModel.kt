@@ -12,6 +12,8 @@ import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.service.BackupImportExportService
+import com.grateful.deadly.core.database.ToastController
+import com.grateful.deadly.core.domain.repository.BacklogRepository
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.FavoriteTrack
 import com.grateful.deadly.core.model.ShowReview
@@ -45,8 +47,22 @@ class FavoritesViewModel @Inject constructor(
     val appPreferences: AppPreferences,
     private val backupImportExportService: BackupImportExportService,
     private val analyticsService: AnalyticsService,
+    private val backlogRepository: BacklogRepository,
+    private val toastController: ToastController,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
+
+    /** Add a show to the backlog ("Up Next") from the long-press sheet. */
+    fun addToUpNext(showId: String) {
+        viewModelScope.launch {
+            if (backlogRepository.contains(showId)) {
+                toastController.show("Already in Up Next")
+            } else {
+                backlogRepository.addToBottom(showId)
+                toastController.show("Added to Up Next")
+            }
+        }
+    }
 
     companion object {
         private const val TAG = "FavoritesViewModel"

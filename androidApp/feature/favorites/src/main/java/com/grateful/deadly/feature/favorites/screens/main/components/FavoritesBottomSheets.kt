@@ -141,6 +141,7 @@ fun SortOptionsBottomSheet(
 fun ShowActionsBottomSheet(
     show: FavoriteShowViewModel,
     onDismiss: () -> Unit,
+    onAddToUpNext: () -> Unit,
     onShowQrCode: () -> Unit,
     onReviewShow: () -> Unit,
     onRemoveFromFavorites: () -> Unit,
@@ -178,6 +179,18 @@ fun ShowActionsBottomSheet(
 
             // Actions
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+
+                // Add to Up Next
+                ListItem(
+                    headlineContent = { Text("Add to Up Next") },
+                    leadingContent = {
+                        Icon(
+                            painter = IconResources.Content.PlaylistAdd(),
+                            contentDescription = null
+                        )
+                    },
+                    modifier = Modifier.clickable { onAddToUpNext() }
+                )
 
                 // Review
                 ListItem(

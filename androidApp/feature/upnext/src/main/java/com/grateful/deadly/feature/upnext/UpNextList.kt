@@ -1,4 +1,4 @@
-package com.grateful.deadly.upnext
+package com.grateful.deadly.feature.upnext
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -20,59 +20,55 @@ import com.grateful.deadly.core.design.resources.IconResources
 import com.grateful.deadly.core.model.Show
 
 /**
- * Up Next — the backlog screen (ADR-0010 Amendment). Shows the local-first
- * play-next list (head first); tap to play, reorder via up/down, remove, clear.
- * Local-only: no advance wiring (slice 3) or sync (slice 4).
+ * Up Next list body — the single source of truth for the backlog UI. Hosted by
+ * the standalone [UpNextScreen] (menu push) and the Favorites "Up Next" tab.
  *
- * The row component is deliberately generic (no "now playing" marker pinned to a
- * fixed row) so Part 2's collection view can reuse it with a mid-list marker.
+ * Tap to play, reorder via up/down, remove, clear. The row is deliberately
+ * marker-agnostic (no "now playing" row pinned to a fixed index) so Part 2's
+ * collection view can reuse it with a mid-list pointer marker.
  */
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun UpNextScreen(
-    onNavigateBack: () -> Unit,
+fun UpNextList(
+    modifier: Modifier = Modifier,
     viewModel: UpNextViewModel = hiltViewModel(),
 ) {
     val shows by viewModel.shows.collectAsState()
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Up Next") },
-                navigationIcon = {
-                    IconButton(onClick = onNavigateBack) {
-                        Icon(IconResources.Navigation.Back(), contentDescription = "Back")
-                    }
-                },
-                actions = {
-                    if (shows.isNotEmpty()) {
-                        TextButton(onClick = viewModel::clear) { Text("Clear") }
-                    }
-                }
+    if (shows.isEmpty()) {
+        EmptyUpNext(modifier)
+        return
+    }
+
+    Column(modifier = modifier.fillMaxSize()) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = if (shows.size == 1) "1 show" else "${shows.size} shows",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+            Spacer(Modifier.weight(1f))
+            TextButton(onClick = viewModel::clear) { Text("Clear") }
         }
-    ) { padding ->
-        if (shows.isEmpty()) {
-            EmptyUpNext(Modifier.padding(padding))
-        } else {
-            LazyColumn(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(padding),
-                contentPadding = PaddingValues(vertical = 8.dp),
-            ) {
-                items(shows, key = { it.id }) { show ->
-                    val index = shows.indexOfFirst { it.id == show.id }
-                    UpNextRow(
-                        show = show,
-                        canMoveUp = index > 0,
-                        canMoveDown = index < shows.lastIndex,
-                        onPlay = { viewModel.play(show) },
-                        onRemove = { viewModel.remove(show.id) },
-                        onMoveUp = { viewModel.reorder(shows.swapped(index, index - 1).map { it.id }) },
-                        onMoveDown = { viewModel.reorder(shows.swapped(index, index + 1).map { it.id }) },
-                    )
-                }
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(bottom = 8.dp),
+        ) {
+            items(shows, key = { it.id }) { show ->
+                val index = shows.indexOfFirst { it.id == show.id }
+                UpNextRow(
+                    show = show,
+                    canMoveUp = index > 0,
+                    canMoveDown = index < shows.lastIndex,
+                    onPlay = { viewModel.play(show) },
+                    onRemove = { viewModel.remove(show.id) },
+                    onMoveUp = { viewModel.reorder(shows.swapped(index, index - 1).map { it.id }) },
+                    onMoveDown = { viewModel.reorder(shows.swapped(index, index + 1).map { it.id }) },
+                )
             }
         }
     }
@@ -149,12 +145,9 @@ private fun EmptyUpNext(modifier: Modifier = Modifier) {
                 modifier = Modifier.size(48.dp),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+            Text(text = "Nothing in Up Next", style = MaterialTheme.typography.titleMedium)
             Text(
-                text = "Nothing in Up Next",
-                style = MaterialTheme.typography.titleMedium,
-            )
-            Text(
-                text = "Add a show with \"Add to Up Next\" from the ⋯ menu and it plays after the current one.",
+                text = "Long-press a show or use \"Add to Up Next\" and it plays after the current one.",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

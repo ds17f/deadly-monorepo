@@ -42,6 +42,7 @@ fun PlaylistScreen(
     onNavigateToPlayer: () -> Unit = {},
     onNavigateToShow: (String, String) -> Unit = { _, _ -> },
     onNavigateToCollection: (String, String) -> Unit = { _, _ -> }, // collectionId, showId
+    onNavigateToUpNext: () -> Unit = {},
     recordingId: String? = null,
     showId: String? = null,
     trackNumber: Int? = null,
@@ -320,6 +321,10 @@ fun PlaylistScreen(
                 venue = showData.venue,
                 isAutoplayEnabled = autoAdvanceEnabled,
                 collectionsCount = uiState.showCollections.size,
+                onViewUpNext = {
+                    viewModel.hideMenu()
+                    onNavigateToUpNext()
+                },
                 onAddToUpNext = {
                     viewModel.hideMenu()
                     viewModel.addToUpNext()
