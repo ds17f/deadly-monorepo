@@ -115,6 +115,13 @@ struct MainNavigation: View {
             // Favorites tab; FavoritesScreen selects its Show Queue sub-tab.
             if requested { selectedTab = .favorites }
         }
+        .onChange(of: container.pendingShowDetailRequest) { _, showId in
+            // "Go to Show" from a Show Queue row — push detail on the current tab.
+            if let showId {
+                container.pendingShowDetailRequest = nil
+                navigateToShow(showId: showId, on: selectedTab)
+            }
+        }
         .onOpenURL { url in
             handleDeepLink(url)
         }

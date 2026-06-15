@@ -20,6 +20,16 @@ enum AdvanceMode: String, CaseIterable, Sendable {
         }
     }
 
+    /// SF Symbol for the corner badge on the ∞ Autoplay control naming the
+    /// active flavor. `none` has no badge — the dimmed ∞ alone reads as idle.
+    var badgeSystemName: String? {
+        switch self {
+        case .none: return nil
+        case .showQueue: return "square.stack"
+        case .chronological: return "calendar"
+        }
+    }
+
     /// The ∞ control cycles None → Show Queue → Chronological → None.
     func next() -> AdvanceMode {
         let all = Self.allCases

@@ -140,6 +140,12 @@ final class AutoAdvanceCoordinator {
             let next: Show?
             switch mode {
             case .showQueue:
+                // Skip a head that's the show we just finished — it was played
+                // manually and left in the queue (e.g. "Just Play"), so consume
+                // it rather than replay it on a loop.
+                if self.backlogService.peekHeadId() == completedShowId {
+                    _ = self.backlogService.popHead()
+                }
                 next = self.backlogService.peekHeadId().flatMap { try? self.showRepository.getShowById($0) }
             case .chronological:
                 next = (try? self.showRepository.getShowById(completedShowId))

@@ -1,14 +1,16 @@
 import SwiftUI
 
 /// Show Queue — the backlog list (ADR-0010 Amendment). Embedded as the third
-/// Favorites tab (single home — no standalone screen). Tap to play, Reorder to
-/// drag, swipe to remove (confirmed), Clear (confirmed). Local-only: no advance
-/// wiring (slice 3) or sync (slice 4).
+/// Favorites tab (single home — no standalone screen). Tap a row for the action
+/// menu (Play Now · Move to Top · Go to Show · Remove); Reorder to drag, swipe
+/// to remove (confirmed), Clear (confirmed). Play Now consumes the show and
+/// flips Autoplay to Show Queue mode. Sync (slice 4) ships the add/pop/move event.
 struct ShowQueueList: View {
     @Environment(\.appContainer) private var container
 
     @State private var shows: [Show] = []
     @State private var editMode: EditMode = .inactive
+    @State private var selectedShow: Show?
     @State private var pendingRemove: Show?
     @State private var showClearConfirm = false
 
@@ -31,6 +33,16 @@ struct ShowQueueList: View {
             } catch {
                 // Observation ended/cancelled — nothing to recover.
             }
+        }
+        .sheet(item: $selectedShow) { show in
+            QueueRowActionsSheet(
+                show: show,
+                onPlayNow: { selectedShow = nil; playNow(show) },
+                onMoveToTop: { selectedShow = nil; moveToTop(show) },
+                onGoToShow: { selectedShow = nil; goToShow(show) },
+                onRemove: { selectedShow = nil; pendingRemove = show },
+                onDone: { selectedShow = nil }
+            )
         }
         .alert("Remove from queue?", isPresented: removeAlertBinding, presenting: pendingRemove) { show in
             Button("Remove", role: .destructive) { container.backlogService.remove(show.id) }
@@ -66,13 +78,15 @@ struct ShowQueueList: View {
     private var list: some View {
         List {
             ForEach(shows) { show in
-                Button { play(show) } label: { row(show) }
-                    .buttonStyle(.plain)
+                row(show)
+                    .contentShape(Rectangle())
+                    .onTapGesture { selectedShow = show }
                     .swipeActions(edge: .trailing) {
                         Button(role: .destructive) { pendingRemove = show } label: {
                             Label("Remove", systemImage: "trash")
                         }
                     }
+                    .deleteDisabled(true)
             }
             .onMove(perform: move)
         }
@@ -107,7 +121,7 @@ struct ShowQueueList: View {
 
     private var emptyState: some View {
         VStack(spacing: 8) {
-            Image(systemName: "list.bullet")
+            Image(systemName: "square.stack")
                 .font(.largeTitle)
                 .foregroundStyle(.secondary)
             Text("Your show queue is empty")
@@ -125,12 +139,75 @@ struct ShowQueueList: View {
         Binding(get: { pendingRemove != nil }, set: { if !$0 { pendingRemove = nil } })
     }
 
-    private func play(_ show: Show) {
+    /// Play this show now, consume it from the queue, and switch Autoplay to
+    /// Show Queue mode (playing *from* the queue means you want it to keep
+    /// feeding). Toast only when the mode actually flips, to avoid noise.
+    private func playNow(_ show: Show) {
+        if container.appPreferences.advanceMode != .showQueue {
+            container.appPreferences.advanceMode = .showQueue
+            container.toastPresenter.show(advanceModeToastMessage(.showQueue))
+        }
+        container.backlogService.remove(show.id)
         Task { await container.playlistService.playShow(show) }
+    }
+
+    /// Reorder so this show is the head — the "play out of order" answer that
+    /// keeps the queue's intent intact (vs. silently consuming a mid-list show).
+    private func moveToTop(_ show: Show) {
+        let reordered = [show.id] + shows.filter { $0.id != show.id }.map { $0.id }
+        container.backlogService.reorder(reordered)
+    }
+
+    private func goToShow(_ show: Show) {
+        container.requestShowDetail(show.id)
     }
 
     private func move(from source: IndexSet, to destination: Int) {
         shows.move(fromOffsets: source, toOffset: destination)
         container.backlogService.reorder(shows.map { $0.id })
+    }
+}
+
+/// Action menu for a tapped queue row. Mirrors `ShowActionsMenuSheet`'s style —
+/// NavigationStack + List of Label rows, primary tint, medium detent — so the
+/// queue's pop-up matches every other menu in the app.
+private struct QueueRowActionsSheet: View {
+    let show: Show
+    let onPlayNow: () -> Void
+    let onMoveToTop: () -> Void
+    let onGoToShow: () -> Void
+    let onRemove: () -> Void
+    let onDone: () -> Void
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section {
+                    row("Play Now", systemImage: "play.circle", action: onPlayNow)
+                    row("Move to Top", systemImage: "arrow.up.to.line", action: onMoveToTop)
+                    row("Go to Show", systemImage: "info.circle", action: onGoToShow)
+                }
+                Section {
+                    Button(role: .destructive, action: onRemove) {
+                        Label("Remove from Queue", systemImage: "trash")
+                    }
+                }
+            }
+            .tint(.primary)
+            .navigationTitle(DateFormatting.formatShowDate(show.date))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Done", action: onDone)
+                }
+            }
+        }
+        .presentationDetents([.medium])
+    }
+
+    private func row(_ title: String, systemImage: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Label(title, systemImage: systemImage)
+        }
     }
 }

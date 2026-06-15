@@ -372,7 +372,7 @@ struct SidePlayerView: View {
 
     private var menuSheet: some View {
         ShowActionsMenuSheet(
-            isAutoplayEnabled: container.appPreferences.autoAdvanceEnabled,
+            autoplayMode: container.appPreferences.advanceMode,
             collectionsCount: showCollectionsCount,
             onChooseRecording: {
                 showMenuSheet = false

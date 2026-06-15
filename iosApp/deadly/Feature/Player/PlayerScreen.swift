@@ -415,7 +415,7 @@ struct PlayerScreen: View {
     // and Autoplay act in place.
     private var playerMenuSheet: some View {
         ShowActionsMenuSheet(
-            isAutoplayEnabled: container.appPreferences.autoAdvanceEnabled,
+            autoplayMode: container.appPreferences.advanceMode,
             collectionsCount: showCollectionsCount,
             onChooseRecording: {
                 showPlayerMenuSheet = false

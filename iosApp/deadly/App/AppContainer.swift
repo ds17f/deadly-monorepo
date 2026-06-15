@@ -54,6 +54,11 @@ final class AppContainer {
     var showQueueTabRequested = false
     func requestShowQueueTab() { showQueueTabRequested = true }
 
+    /// One-shot: a Show Queue row's "Go to Show" asks MainNavigation to push
+    /// that show's detail on the current tab.
+    var pendingShowDetailRequest: String?
+    func requestShowDetail(_ showId: String) { pendingShowDetailRequest = showId }
+
     init() {
         let initStart = CFAbsoluteTimeGetCurrent()
         // Configure audio session for background playback at app launch

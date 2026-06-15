@@ -21,7 +21,7 @@ enum ShowDetailSheet {
 /// a single item on a surface, the group header is dropped (a lone item under a
 /// bold header reads heavier than it is); SwiftUI's section divider remains.
 struct ShowActionsMenuSheet: View {
-    let isAutoplayEnabled: Bool
+    let autoplayMode: AdvanceMode
     let collectionsCount: Int
 
     // Playback — pass nil to hide (shown inline on this surface)
@@ -110,13 +110,12 @@ struct ShowActionsMenuSheet: View {
         }
         if let onAutoplay {
             Button(action: onAutoplay) {
-                HStack {
-                    Label("Autoplay Next Show", systemImage: "infinity")
+                HStack(spacing: 12) {
+                    AutoplayModeIcon(mode: autoplayMode, font: .body)
+                        .frame(width: 24)
+                    Text(autoplayMode == .none ? "Autoplay" : "Autoplay: \(autoplayMode.displayName)")
+                        .foregroundStyle(.primary)
                     Spacer()
-                    if isAutoplayEnabled {
-                        Image(systemName: "checkmark")
-                            .foregroundStyle(DeadlyColors.primary)
-                    }
                 }
             }
         }
