@@ -375,6 +375,7 @@ class ConnectServiceImpl @Inject constructor(
             put("type", "heartbeat")
             put("playing", mediaControllerRepository.isPlaying.value)
             put("recordingId", recordingId)
+            put("trackIndex", mediaControllerRepository.currentTrackIndex.value)
             put("positionMs", mediaControllerRepository.currentPosition.value.toInt())
         }.toString()
     }
@@ -701,16 +702,35 @@ class ConnectServiceImpl @Inject constructor(
             val currentVolume = mediaControllerRepository.getVolume()
             _activeDeviceVolume.value = currentVolume
             sendVolumeReport(currentVolume)
-            val targetPositionMs = interpolatedPositionMs(new)
-            val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
-            if (localTrackIndex != new.trackIndex) {
-                Log.d(TAG, "reactToState: became active, syncing track $localTrackIndex -> ${new.trackIndex} pos=${targetPositionMs}ms (interpolated from ${new.positionMs}ms)")
-                mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, targetPositionMs.toLong())
+
+            // The device producing audio is the transport authority. When we're
+            // already playing this recording and the lease promotes us to active,
+            // do NOT seek the local player down to the server's stored track/pos:
+            // that snaps the user backward (the server's trackIndex goes stale after
+            // a natural auto-advance, and its position can lag behind ours). Keep
+            // playing — our heartbeat lease (which carries trackIndex+pos) and our
+            // position reports push our real state UP to the server instead.
+            // Breaking live audio to match the server is never the right trade.
+            //
+            // We still sync DOWN when we became active some other way (e.g. a
+            // transfer in while paused or on a different recording): there the
+            // server state is the genuine intent, not a stale echo of ours.
+            val alreadyPlayingThisRecording =
+                locallyPlaying && localRecordingId == new.recordingId
+            if (alreadyPlayingThisRecording) {
+                Log.d(TAG, "reactToState: became active while already playing ${new.recordingId} — keeping local track/pos, asserting up to server (not seeking down)")
             } else {
-                val localPositionMs = mediaControllerRepository.currentPosition.value
-                if (abs(localPositionMs - targetPositionMs.toLong()) > ACTIVATE_POSITION_SYNC_THRESHOLD_MS) {
-                    Log.d(TAG, "reactToState: became active, syncing position to ${targetPositionMs}ms (interpolated from ${new.positionMs}ms)")
-                    mediaControllerRepository.seekToPosition(targetPositionMs.toLong())
+                val targetPositionMs = interpolatedPositionMs(new)
+                val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
+                if (localTrackIndex != new.trackIndex) {
+                    Log.d(TAG, "reactToState: became active, syncing track $localTrackIndex -> ${new.trackIndex} pos=${targetPositionMs}ms (interpolated from ${new.positionMs}ms)")
+                    mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, targetPositionMs.toLong())
+                } else {
+                    val localPositionMs = mediaControllerRepository.currentPosition.value
+                    if (abs(localPositionMs - targetPositionMs.toLong()) > ACTIVATE_POSITION_SYNC_THRESHOLD_MS) {
+                        Log.d(TAG, "reactToState: became active, syncing position to ${targetPositionMs}ms (interpolated from ${new.positionMs}ms)")
+                        mediaControllerRepository.seekToPosition(targetPositionMs.toLong())
+                    }
                 }
             }
         }

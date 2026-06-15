@@ -536,25 +536,44 @@ final class ConnectService: NSObject {
             let currentVolume = Int(streamPlayer.volume * 100)
             activeDeviceVolume = currentVolume
             sendVolumeReport(volume: currentVolume)
-            let targetPositionMs = interpolatedPositionMs(new)
-            if self.streamPlayer.queueState.currentIndex != new.trackIndex {
-                logger.info("reactToState: became active, syncing track \(self.streamPlayer.queueState.currentIndex, privacy: .public) -> \(new.trackIndex, privacy: .public)")
-                streamPlayer.skipTo(index: new.trackIndex, autoplay: new.playing)
-            }
-            let serverPosition = Double(targetPositionMs) / 1000.0
-            if streamPlayer.playbackState.isPlaying {
-                // Already playing the track — a direct seek is honored.
-                if abs(streamPlayer.progress.currentTime - serverPosition) > 1 {
-                    logger.info("reactToState: became active (playing), seeking to \(targetPositionMs, privacy: .public)ms (interpolated from \(new.positionMs, privacy: .public)ms)")
-                    streamPlayer.seek(to: serverPosition)
-                }
+
+            // The device producing audio is the transport authority. When we're
+            // already playing this recording and the lease promotes us to active,
+            // do NOT seek the local player down to the server's stored track/pos:
+            // that snaps the user backward (the server's trackIndex goes stale after
+            // a natural auto-advance, and its position can lag behind ours). Keep
+            // playing — our heartbeat lease (which carries trackIndex+pos) and our
+            // position reports push our real state UP to the server instead.
+            // Breaking live audio to match the server is never the right trade.
+            //
+            // We still sync DOWN when we became active some other way (e.g. a
+            // transfer in while paused or on a different recording): there the
+            // server state is the genuine intent, not a stale echo of ours.
+            let alreadyPlayingThisRecording =
+                streamPlayer.playbackState.isPlaying && localRecordingId == new.recordingId
+            if alreadyPlayingThisRecording {
+                logger.info("reactToState: became active while already playing \(new.recordingId ?? "nil", privacy: .public) — keeping local track/pos, asserting up to server (not seeking down)")
             } else {
-                // Paused (e.g. this show was freshly hydrated): the engine drops
-                // seeks while not playing, then play() would start from 0. Stash
-                // the position as the first-play seek so the play() in the
-                // playback-reconciliation step below lands at the right spot.
-                logger.info("reactToState: became active (paused), pendingSeekOnFirstPlay=\(targetPositionMs, privacy: .public)ms (interpolated from \(new.positionMs, privacy: .public)ms)")
-                streamPlayer.pendingSeekOnFirstPlay = serverPosition
+                let targetPositionMs = interpolatedPositionMs(new)
+                if self.streamPlayer.queueState.currentIndex != new.trackIndex {
+                    logger.info("reactToState: became active, syncing track \(self.streamPlayer.queueState.currentIndex, privacy: .public) -> \(new.trackIndex, privacy: .public)")
+                    streamPlayer.skipTo(index: new.trackIndex, autoplay: new.playing)
+                }
+                let serverPosition = Double(targetPositionMs) / 1000.0
+                if streamPlayer.playbackState.isPlaying {
+                    // Already playing the track — a direct seek is honored.
+                    if abs(streamPlayer.progress.currentTime - serverPosition) > 1 {
+                        logger.info("reactToState: became active (playing), seeking to \(targetPositionMs, privacy: .public)ms (interpolated from \(new.positionMs, privacy: .public)ms)")
+                        streamPlayer.seek(to: serverPosition)
+                    }
+                } else {
+                    // Paused (e.g. this show was freshly hydrated): the engine drops
+                    // seeks while not playing, then play() would start from 0. Stash
+                    // the position as the first-play seek so the play() in the
+                    // playback-reconciliation step below lands at the right spot.
+                    logger.info("reactToState: became active (paused), pendingSeekOnFirstPlay=\(targetPositionMs, privacy: .public)ms (interpolated from \(new.positionMs, privacy: .public)ms)")
+                    streamPlayer.pendingSeekOnFirstPlay = serverPosition
+                }
             }
         }
 
@@ -784,6 +803,7 @@ final class ConnectService: NSObject {
             "type": "heartbeat",
             "playing": streamPlayer.playbackState.isPlaying,
             "recordingId": recordingId,
+            "trackIndex": streamPlayer.queueState.currentIndex,
             "positionMs": Int(streamPlayer.progress.currentTime * 1000),
         ]
         guard let data = try? JSONSerialization.data(withJSONObject: lease),

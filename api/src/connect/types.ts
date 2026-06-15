@@ -72,6 +72,7 @@ export interface HeartbeatMessage {
   // optional — legacy clients omit them. Server gates on protocolVersion >= 1.
   playing?: boolean;
   recordingId?: string;
+  trackIndex?: number;
   positionMs?: number;
 }
 

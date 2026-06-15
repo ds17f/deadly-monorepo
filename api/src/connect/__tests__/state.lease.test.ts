@@ -51,27 +51,30 @@ function ownerlessSession(proto = 1) {
 describe("handleHeartbeat ownership lease (ADR-0011 Chunk B)", () => {
   beforeEach(() => vi.clearAllMocks());
 
-  it("claims an ownerless session when the heartbeat is playing + recording matches", () => {
-    const { userId, deviceId } = ownerlessSession();
+  it("claims an ownerless session when the heartbeat is playing + recording matches, healing to the device's own track/pos", () => {
+    const { userId, deviceId } = ownerlessSession(); // loaded at trackIndex 0
     expect(getOrCreateState(userId).activeDeviceId).toBeNull();
 
-    handleHeartbeat(userId, deviceId, { playing: true, recordingId: "rec1", positionMs: 5_000 });
+    // Device has since auto-advanced to track 1 — the server never learned that
+    // (auto-advance emits no command), so its stored trackIndex is a stale 0.
+    handleHeartbeat(userId, deviceId, { playing: true, recordingId: "rec1", trackIndex: 1, positionMs: 5_000 });
 
     const s = getOrCreateState(userId);
     expect(s.activeDeviceId).toBe(deviceId);
     expect(s.playing).toBe(true);
+    expect(s.trackIndex).toBe(1); // healed to the device's real track, not the stale 0
     expect(s.positionMs).toBe(5_000); // position taken from the lease
   });
 
   it("does NOT claim when the lease is paused (parked/transferred-away device)", () => {
     const { userId, deviceId } = ownerlessSession();
-    handleHeartbeat(userId, deviceId, { playing: false, recordingId: "rec1", positionMs: 5_000 });
+    handleHeartbeat(userId, deviceId, { playing: false, recordingId: "rec1", trackIndex: 0, positionMs: 5_000 });
     expect(getOrCreateState(userId).activeDeviceId).toBeNull();
   });
 
   it("does NOT claim when the lease recording differs from the session", () => {
     const { userId, deviceId } = ownerlessSession();
-    handleHeartbeat(userId, deviceId, { playing: true, recordingId: "OTHER", positionMs: 5_000 });
+    handleHeartbeat(userId, deviceId, { playing: true, recordingId: "OTHER", trackIndex: 0, positionMs: 5_000 });
     expect(getOrCreateState(userId).activeDeviceId).toBeNull();
   });
 
@@ -83,7 +86,7 @@ describe("handleHeartbeat ownership lease (ADR-0011 Chunk B)", () => {
 
   it("does NOT claim from a protocolVersion 0 (legacy) connection even with a lease", () => {
     const { userId, deviceId } = ownerlessSession(0);
-    handleHeartbeat(userId, deviceId, { playing: true, recordingId: "rec1", positionMs: 5_000 });
+    handleHeartbeat(userId, deviceId, { playing: true, recordingId: "rec1", trackIndex: 0, positionMs: 5_000 });
     expect(getOrCreateState(userId).activeDeviceId).toBeNull();
   });
 
@@ -106,7 +109,7 @@ describe("handleHeartbeat ownership lease (ADR-0011 Chunk B)", () => {
     // B connects and leases the same recording while playing — must back off.
     const b = `${a}-b`;
     registerDevice(userId, b, "ios", "Phone B", fakeSocket(), 1, "1.0.0");
-    handleHeartbeat(userId, b, { playing: true, recordingId: "rec1", positionMs: 9_999 });
+    handleHeartbeat(userId, b, { playing: true, recordingId: "rec1", trackIndex: 0, positionMs: 9_999 });
 
     const s = getOrCreateState(userId);
     expect(s.activeDeviceId).toBe(a); // unchanged — never preempted
@@ -116,10 +119,10 @@ describe("handleHeartbeat ownership lease (ADR-0011 Chunk B)", () => {
   it("refreshing as the existing owner leaves ownership intact", () => {
     const { userId, deviceId } = ownerlessSession();
     // First heartbeat claims the vacuum.
-    handleHeartbeat(userId, deviceId, { playing: true, recordingId: "rec1", positionMs: 5_000 });
+    handleHeartbeat(userId, deviceId, { playing: true, recordingId: "rec1", trackIndex: 0, positionMs: 5_000 });
     const versionAfterClaim = getOrCreateState(userId).version;
     // Owner re-heartbeats → no ownership change, no extra broadcast/mutate.
-    handleHeartbeat(userId, deviceId, { playing: true, recordingId: "rec1", positionMs: 6_000 });
+    handleHeartbeat(userId, deviceId, { playing: true, recordingId: "rec1", trackIndex: 0, positionMs: 6_000 });
     const s = getOrCreateState(userId);
     expect(s.activeDeviceId).toBe(deviceId);
     expect(s.version).toBe(versionAfterClaim); // refresh didn't mutate/broadcast
