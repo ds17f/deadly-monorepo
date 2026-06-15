@@ -278,6 +278,7 @@ export function unregisterDevice(userId: string, deviceId: string): void {
 export interface LeaseRenewal {
   playing: boolean;
   recordingId: string;
+  trackIndex: number;
   positionMs: number;
 }
 
@@ -314,12 +315,18 @@ export function handleHeartbeat(userId: string, deviceId: string, lease?: LeaseR
   // loaded device (playing=false, e.g. transferred away) from the real source,
   // so it can't steal ownership back after a restart.
   if (state.activeDeviceId === null && lease.playing) {
-    log(`handleHeartbeat: lease claim — ${entry.device.name}[${entry.device.type}] heals ownerless session rec=${lease.recordingId} pos=${lease.positionMs}`);
+    log(`handleHeartbeat: lease claim — ${entry.device.name}[${entry.device.type}] heals ownerless session rec=${lease.recordingId} track=${lease.trackIndex} pos=${lease.positionMs}`);
     mutate(userId, {
       activeDeviceId: deviceId,
       activeDeviceName: entry.device.name,
       activeDeviceType: entry.device.type,
       playing: true,
+      // Heal to the device's OWN track/pos, not the server's stored pointer. The
+      // server only learns trackIndex from explicit commands, so after a natural
+      // auto-advance (which doesn't emit one) its trackIndex is stale. Trusting it
+      // here would snap the still-playing device backward. The producing device is
+      // the transport authority — follow it.
+      trackIndex: lease.trackIndex,
       positionMs: lease.positionMs,
       positionTs: Date.now(),
     });

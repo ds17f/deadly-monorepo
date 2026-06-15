@@ -74,6 +74,7 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             ? {
                 playing: msg.playing === true,
                 recordingId: msg.recordingId,
+                trackIndex: typeof msg.trackIndex === "number" ? msg.trackIndex : 0,
                 positionMs: typeof msg.positionMs === "number" ? msg.positionMs : 0,
               }
             : undefined;
