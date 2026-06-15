@@ -329,7 +329,7 @@ fun PlayerSidePanel(
             isAutoplayEnabled = autoAdvanceEnabled,
             collectionsCount = showCollectionsCount,
             onChooseRecording = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "recording") } },
-            onAutoplay = { viewModel.toggleAutoAdvance() },
+            onAutoplay = { viewModel.cycleAdvanceMode() },
             onViewUpNext = onNavigateToUpNext,
             onSetlist = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "setlist") } },
             onCollections = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "collections") } },

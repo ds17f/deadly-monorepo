@@ -177,7 +177,7 @@ fun PlaylistScreen(
                                 onFavoritesAction = viewModel::handleFavoritesAction,
                                 onDownload = { viewModel.downloadShow() },
                                 onShowSetlist = viewModel::showSetlist,
-                                onToggleAutoplay = viewModel::toggleAutoAdvance,
+                                onToggleAutoplay = viewModel::cycleAdvanceMode,
                                 onShowMenu = viewModel::showMenu,
                                 onTogglePlayback = viewModel::togglePlayback
                             )

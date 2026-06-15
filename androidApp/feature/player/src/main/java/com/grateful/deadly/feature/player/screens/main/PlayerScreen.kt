@@ -185,7 +185,7 @@ fun PlayerScreen(
                 collectionsCount = showCollectionsCount,
                 // Playback — Equalizer + Share are inline on the player, so hidden here.
                 onChooseRecording = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "recording") } },
-                onAutoplay = { viewModel.toggleAutoAdvance() },
+                onAutoplay = { viewModel.cycleAdvanceMode() },
                 // Up Next — the player only *views* the list (adding the playing
                 // show to its own queue is confusing); add lives on the playlist.
                 onViewUpNext = onNavigateToUpNext,
