@@ -58,6 +58,9 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material:material-icons-core")
 
+    // Drag-to-reorder for the show queue list
+    implementation("sh.calvin.reorderable:reorderable:2.4.3")
+
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 }

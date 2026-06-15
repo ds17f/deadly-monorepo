@@ -13,6 +13,7 @@ import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.service.BackupImportExportService
 import com.grateful.deadly.core.database.ToastController
+import com.grateful.deadly.core.database.ShowQueueTabRequest
 import com.grateful.deadly.core.domain.repository.BacklogRepository
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.FavoriteTrack
@@ -49,8 +50,13 @@ class FavoritesViewModel @Inject constructor(
     private val analyticsService: AnalyticsService,
     private val backlogRepository: BacklogRepository,
     private val toastController: ToastController,
+    private val showQueueTabRequest: ShowQueueTabRequest,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
+
+    /** True when a "View Show Queue" link asked to open this screen's Show Queue tab. */
+    val showQueueTabPending: StateFlow<Boolean> = showQueueTabRequest.pending
+    fun consumeShowQueueTab() = showQueueTabRequest.consume()
 
     /** Add a show to the backlog ("Up Next") from the long-press sheet. */
     fun addToUpNext(showId: String) {

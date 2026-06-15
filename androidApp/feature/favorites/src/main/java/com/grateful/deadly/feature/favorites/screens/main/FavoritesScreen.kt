@@ -61,6 +61,16 @@ fun FavoritesScreen(
 
     // UI State
     var selectedTab by remember { mutableStateOf(FavoritesTab.SHOWS) }
+
+    // "View Show Queue" from a player/playlist menu opens this screen on its
+    // Show Queue tab (single home — no separate standalone screen).
+    val showQueueTabPending by viewModel.showQueueTabPending.collectAsState()
+    LaunchedEffect(showQueueTabPending) {
+        if (showQueueTabPending) {
+            selectedTab = FavoritesTab.UP_NEXT
+            viewModel.consumeShowQueueTab()
+        }
+    }
     var filterPath by remember { mutableStateOf(FilterPath()) }
     var sortBy by remember { mutableStateOf(FavoritesSortOption.DATE_ADDED) }
     var songSortBy by remember { mutableStateOf(FavoritesSongSortOption.DATE_ADDED) }

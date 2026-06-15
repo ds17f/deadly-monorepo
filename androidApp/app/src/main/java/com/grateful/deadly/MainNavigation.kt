@@ -43,7 +43,6 @@ import com.grateful.deadly.feature.home.navigation.homeGraph
 import com.grateful.deadly.notifications.NotificationBell
 import com.grateful.deadly.notifications.NotificationViewModel
 import com.grateful.deadly.notifications.NotificationsScreen
-import com.grateful.deadly.feature.upnext.UpNextScreen
 import com.grateful.deadly.feature.settings.SettingsScreen
 import com.grateful.deadly.feature.settings.navigation.CONNECT_ROUTE
 import com.grateful.deadly.feature.settings.navigation.settingsGraph
@@ -292,7 +291,17 @@ fun MainNavigation(
                 searchGraph(navController)
 
                 // Playlist feature - show and recording details
-                playlistGraph(navController)
+                playlistGraph(
+                    navController,
+                    onNavigateToShowQueue = {
+                        appViewModel.requestShowQueueTab()
+                        navController.navigate("library") {
+                            popUpTo(navController.graph.startDestinationId) { saveState = true }
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                    }
+                )
 
                 // Player feature - playback interface
                 playerScreen(
@@ -302,7 +311,15 @@ fun MainNavigation(
                             popUpTo("player") { inclusive = true }
                         }
                     },
-                    onNavigateToUpNext = { navController.navigate("upnext") }
+                    onNavigateToUpNext = {
+                        // Single home: open Favorites on its Show Queue tab.
+                        appViewModel.requestShowQueueTab()
+                        navController.navigate("library") {
+                            popUpTo(navController.graph.startDestinationId) { saveState = true }
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                    }
                 )
 
                 // Settings feature - app configuration and about page
@@ -314,9 +331,6 @@ fun MainNavigation(
                 }
 
                 // Up Next (the backlog) — ADR-0010 Amendment
-                composable("upnext") {
-                    UpNextScreen(onNavigateBack = { navController.popBackStack() })
-                }
             }
 
             AnimatedVisibility(
