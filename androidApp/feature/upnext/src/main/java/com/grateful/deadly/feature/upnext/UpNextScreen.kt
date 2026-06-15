@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import com.grateful.deadly.core.design.resources.IconResources
 
 /**
- * Standalone Up Next screen — what the player/playlist "View Up Next" menu link
+ * Standalone Up Next screen — what the player/playlist "View Show Queue" menu link
  * pushes. Just a top bar around the shared [UpNextList] (the single source of
  * truth, also embedded in the Favorites "Up Next" tab).
  */

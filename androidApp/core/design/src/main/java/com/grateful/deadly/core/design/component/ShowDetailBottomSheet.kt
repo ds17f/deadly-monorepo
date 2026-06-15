@@ -63,7 +63,7 @@ fun ShowDetailBottomSheet(
                 Spacer(modifier = Modifier.height(16.dp))
                 HorizontalDivider()
                 ListItem(
-                    headlineContent = { Text("Add to Up Next") },
+                    headlineContent = { Text("Add to Show Queue") },
                     leadingContent = {
                         Icon(
                             painter = IconResources.Content.PlaylistAdd(),

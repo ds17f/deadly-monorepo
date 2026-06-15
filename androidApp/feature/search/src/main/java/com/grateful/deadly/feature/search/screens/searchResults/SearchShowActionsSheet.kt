@@ -45,7 +45,7 @@ fun SearchShowActionsSheet(
 
             // Add to Up Next
             ListItem(
-                headlineContent = { Text("Add to Up Next") },
+                headlineContent = { Text("Add to Show Queue") },
                 leadingContent = {
                     Icon(
                         painter = IconResources.Content.PlaylistAdd(),

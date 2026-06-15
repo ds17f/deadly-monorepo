@@ -145,9 +145,9 @@ private fun EmptyUpNext(modifier: Modifier = Modifier) {
                 modifier = Modifier.size(48.dp),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
             )
-            Text(text = "Nothing in Up Next", style = MaterialTheme.typography.titleMedium)
+            Text(text = "Your show queue is empty", style = MaterialTheme.typography.titleMedium)
             Text(
-                text = "Long-press a show or use \"Add to Up Next\" and it plays after the current one.",
+                text = "Long-press a show or use \"Add to Show Queue\" and it plays after the current one.",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

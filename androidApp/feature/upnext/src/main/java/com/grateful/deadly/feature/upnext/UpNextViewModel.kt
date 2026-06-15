@@ -51,7 +51,7 @@ class UpNextViewModel @Inject constructor(
     fun clear() {
         viewModelScope.launch {
             backlogRepository.clear()
-            toastController.show("Up Next cleared")
+            toastController.show("Show Queue cleared")
         }
     }
 }

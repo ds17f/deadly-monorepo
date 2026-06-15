@@ -341,10 +341,10 @@ class PlayerViewModel @Inject constructor(
         val showId = uiState.value.navigationInfo.showId ?: return
         viewModelScope.launch {
             if (backlogRepository.contains(showId)) {
-                toastController.show("Already in Up Next")
+                toastController.show("Already in Show Queue")
             } else {
                 backlogRepository.addToBottom(showId)
-                toastController.show("Added to Up Next")
+                toastController.show("Added to Show Queue")
             }
         }
     }

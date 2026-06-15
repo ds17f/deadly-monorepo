@@ -59,8 +59,8 @@ fun ShowActionsMenuSheet(
         onAutoplay?.let { add(MenuItem("Autoplay Next Show", IconResources.PlayerControls.Autoplay(), it, active = isAutoplayEnabled, dismissOnClick = false)) }
     }
     val upNext = buildList {
-        onViewUpNext?.let { add(MenuItem("View Up Next", IconResources.PlayerControls.Queue(), it)) }
-        onAddToUpNext?.let { add(MenuItem("Add to Up Next", IconResources.Content.PlaylistAdd(), it)) }
+        onViewUpNext?.let { add(MenuItem("View Show Queue", IconResources.PlayerControls.Queue(), it)) }
+        onAddToUpNext?.let { add(MenuItem("Add to Show Queue", IconResources.Content.PlaylistAdd(), it)) }
     }
     val thisShow = buildList {
         onSetlist?.let { add(MenuItem("Setlist", IconResources.Content.FormatListBulleted(), it)) }
@@ -173,7 +173,7 @@ private data class MenuItem(
 /** Resolve the bold header for a multi-item group by its first member. */
 private fun groupLabel(group: List<MenuItem>): String = when (group.first().label) {
     "Choose Recording", "Equalizer", "Autoplay Next Show" -> "Playback"
-    "View Up Next", "Add to Up Next" -> "Up Next"
+    "View Show Queue", "Add to Show Queue" -> "Show Queue"
     "Setlist", "Collections", "Download" -> "This Show"
     else -> "Share"
 }
