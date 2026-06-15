@@ -16,6 +16,7 @@ import Link from "next/link";
 import type { ShowIndexEntry, CollectionSummary } from "@/types/homepage";
 import type { RecentShow } from "@/types/userdata";
 import { useAuth } from "@/contexts/AuthContext";
+import { useUserData } from "@/contexts/UserDataContext";
 import { fetchRecentShows } from "@/lib/userDataApi";
 import { formatShowDate, formatLocation } from "@/components/show/showFormat";
 import { fetchTrending, fetchPopular, type PopularShow } from "@/lib/discoveryApi";
@@ -38,6 +39,17 @@ export default function HomeDiscovery({
   collections: CollectionSummary[];
 }) {
   const { user } = useAuth();
+  const { backlog } = useUserData();
+  const queueItems = useMemo<CarouselItem[]>(
+    () => backlog.map((b) => ({
+      showId: b.showId,
+      date: formatShowDate(b),
+      venue: b.venue,
+      location: formatLocation(b),
+      image: b.image,
+    })),
+    [backlog],
+  );
   const byId = useMemo(() => {
     const m = new Map<string, ShowIndexEntry>();
     for (const e of showIndex) m.set(e.id, e);
@@ -123,6 +135,10 @@ export default function HomeDiscovery({
       <ShowCarousel title="Today in Grateful Dead History" items={tigdh} />
       <ShowCarousel title="Trending" items={trending} />
       <ShowCarousel title="Fan Favorites" items={popular} />
+
+      {/* Your Show Queue — above Collections, near the end of the discovery
+          rails. Renders only when the user has queued shows. */}
+      <ShowCarousel title="Your Show Queue" items={queueItems} />
 
       {/* Collections are hidden for now: bare chips read as "lost" without a
           proper card (want a box-set icon) and there's no collection landing

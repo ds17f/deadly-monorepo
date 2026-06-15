@@ -92,7 +92,13 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
     schema: { tags: ["user"], summary: "List Show Queue (backlog)" },
     preHandler: requireAuth,
   }, async (request) => {
-    return getBacklog(request.user!.id);
+    // Enrich with show display metadata (venue/city/date) from the catalog, like
+    // favorites/recents, so the web client can render the queue without a local
+    // catalog. Additive — mobile consumers ignore the extra fields.
+    return getBacklog(request.user!.id).map((b) => {
+      const meta = getShowMeta(b.showId);
+      return meta ? { ...b, ...meta } : b;
+    });
   });
 
   // Bulk reorder — rewrite positions to match the given order. Declared before

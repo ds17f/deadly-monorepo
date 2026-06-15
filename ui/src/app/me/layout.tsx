@@ -10,6 +10,7 @@ const TABS = [
   { href: "/me", label: "Profile" },
   { href: "/me/recent", label: "Recent" },
   { href: "/me/favorites", label: "Favorites" },
+  { href: "/me/queue", label: "Show Queue" },
   { href: "/me/reviews", label: "Reviews" },
   { href: "/me/settings", label: "Settings" },
 ];
