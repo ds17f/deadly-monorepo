@@ -30,6 +30,7 @@ final class AutoAdvanceCoordinator {
     private let showRepository: any ShowRepository
     private let connectService: ConnectService
     private let appPreferences: AppPreferences
+    private let backlogService: BacklogService
 
     private var localTask: Task<Void, Never>?
     private var noteWatcher: Task<Void, Never>?
@@ -45,12 +46,14 @@ final class AutoAdvanceCoordinator {
         playlistService: PlaylistServiceImpl,
         showRepository: any ShowRepository,
         connectService: ConnectService,
-        appPreferences: AppPreferences
+        appPreferences: AppPreferences,
+        backlogService: BacklogService
     ) {
         self.playlistService = playlistService
         self.showRepository = showRepository
         self.connectService = connectService
         self.appPreferences = appPreferences
+        self.backlogService = backlogService
         playlistService.onShowCompleted = { [weak self] completedShowId in
             self?.onShowCompleted(completedShowId)
         }
@@ -76,7 +79,7 @@ final class AutoAdvanceCoordinator {
         localTask?.cancel()
         localTask = nil
         countdown = nil
-        Task { await playlistService.playShow(show) }
+        Task { await playlistService.playShow(show); popIfShowQueue() }
     }
 
     // ADR-0010 §7: poll the shared note (1s) — drives the countdown + advance on
@@ -114,7 +117,7 @@ final class AutoAdvanceCoordinator {
             if connectService.isActiveDevice && !advanceTriggered {
                 advanceTriggered = true
                 logger.notice("auto-advance: advancing to \(show.displayTitle, privacy: .public)")
-                Task { await playlistService.playShow(show) } // load clears the note
+                Task { await playlistService.playShow(show); popIfShowQueue() } // load clears the note
             }
             return
         }
@@ -123,18 +126,29 @@ final class AutoAdvanceCoordinator {
 
     private func onShowCompleted(_ completedShowId: String) {
         logger.notice("auto-advance: show completed = \(completedShowId, privacy: .public)")
-        guard appPreferences.autoAdvanceEnabled else {
-            logger.notice("auto-advance: disabled by preference — not advancing")
+        let mode = appPreferences.advanceMode
+        guard mode != .none else {
+            logger.notice("auto-advance: mode = none — not advancing")
             return
         }
         localTask?.cancel()
         localTask = Task { @MainActor [weak self] in
             guard let self else { return }
-            guard
-                let completed = try? self.showRepository.getShowById(completedShowId),
-                let next = try? self.showRepository.getNextShow(afterDate: completed.date)
-            else {
-                logger.notice("auto-advance: no next show after \(completedShowId, privacy: .public)")
+            // Resolve the next show by mode. Show Queue peeks the head (popped only
+            // when the advance commits, so a cancel doesn't consume it) and stops
+            // when drained; Chronological goes by date, ignoring the queue.
+            let next: Show?
+            switch mode {
+            case .showQueue:
+                next = self.backlogService.peekHeadId().flatMap { try? self.showRepository.getShowById($0) }
+            case .chronological:
+                next = (try? self.showRepository.getShowById(completedShowId))
+                    .flatMap { try? self.showRepository.getNextShow(afterDate: $0.date) }
+            case .none:
+                next = nil
+            }
+            guard let next else {
+                logger.notice("auto-advance: no next show after \(completedShowId, privacy: .public) (mode=\(mode.rawValue, privacy: .public))")
                 return
             }
 
@@ -160,6 +174,15 @@ final class AutoAdvanceCoordinator {
             self.countdown = nil
             logger.notice("auto-advance: advancing to \(next.displayTitle, privacy: .public)")
             await self.playlistService.playShow(next)
+            self.popIfShowQueue()
+        }
+    }
+
+    /// Consume the Show Queue head once an advance commits (Show Queue mode only).
+    /// Peek-at-announce / pop-at-commit keeps a cancel from eating a show.
+    private func popIfShowQueue() {
+        if appPreferences.advanceMode == .showQueue {
+            _ = backlogService.popHead()
         }
     }
 }

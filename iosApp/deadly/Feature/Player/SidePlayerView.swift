@@ -425,13 +425,12 @@ struct SidePlayerView: View {
     }
 
     private func toggleAutoAdvance() {
-        let newValue = !container.appPreferences.autoAdvanceEnabled
-        container.appPreferences.autoAdvanceEnabled = newValue
-        container.toastPresenter.show(autoplayToastMessage(newValue))
+        let next = container.appPreferences.cycleAdvanceMode()
+        container.toastPresenter.show(advanceModeToastMessage(next))
         container.analyticsService.track("feature_use", props: [
-            "feature": "toggle_auto_advance",
+            "feature": "cycle_advance_mode",
             "category": "playback",
-            "enabled": newValue,
+            "mode": next.rawValue,
         ])
     }
 

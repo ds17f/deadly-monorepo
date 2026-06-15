@@ -35,6 +35,16 @@ func autoplayToastMessage(_ enabled: Bool) -> String {
     enabled ? "Autoplay on — the next show plays when this one ends" : "Autoplay off"
 }
 
+/// Shared copy for the ∞ Autoplay control cycling through advance modes
+/// (ADR-0010 Amendment). Names the mode the user just landed on. Matches Android.
+func advanceModeToastMessage(_ mode: AdvanceMode) -> String {
+    switch mode {
+    case .none: return "Autoplay off"
+    case .showQueue: return "Autoplay: Show Queue — plays your queue, then stops"
+    case .chronological: return "Autoplay: Chronological — plays the next show by date"
+    }
+}
+
 /// Transient pill used by the root view to render the current toast message.
 struct ActionToastView: View {
     let message: String

@@ -266,6 +266,31 @@ struct PlaybackAudioSettingsView: View {
 
     var body: some View {
         List {
+            Section("When a show ends") {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Autoplay")
+                    Picker("Autoplay", selection: Binding(
+                        get: { container.appPreferences.advanceMode },
+                        set: {
+                            container.appPreferences.advanceMode = $0
+                            container.analyticsService.track("feature_use", props: [
+                                "feature": "set_advance_mode",
+                                "category": "playback",
+                                "mode": $0.rawValue,
+                            ])
+                        }
+                    )) {
+                        ForEach(AdvanceMode.allCases, id: \.self) { mode in
+                            Text(mode.displayName).tag(mode)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    Text("Off · play from your Show Queue (then stop) · keep playing chronologically.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
             Section("Controls") {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Lock screen & CarPlay controls")

@@ -218,9 +218,10 @@ final class AppContainer {
             recentShowsService = recentService
 
             // Backlog ("Up Next") — local-first play-next list (ADR-0010 Amendment).
-            backlogService = MainActor.assumeIsolated {
+            let backlogSvc = MainActor.assumeIsolated {
                 BacklogService(dao: BacklogDAO(database: db))
             }
+            backlogService = backlogSvc
 
             // One-time startup backfill: push all local data (favorites +
             // top recents) so a freshly-synced web profile isn't empty.
@@ -373,7 +374,8 @@ final class AppContainer {
                     playlistService: playlistSvc,
                     showRepository: showRepo,
                     connectService: connect,
-                    appPreferences: prefs
+                    appPreferences: prefs,
+                    backlogService: backlogSvc
                 )
             }
 
