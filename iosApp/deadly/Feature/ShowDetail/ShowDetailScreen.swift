@@ -477,6 +477,10 @@ struct ShowDetailScreen: View {
                     showEqualizerSheet = true
                 }
             },
+            onViewUpNext: {
+                showMenuSheet = false
+                container.requestShowQueueTab()
+            },
             onAddToUpNext: {
                 showMenuSheet = false
                 addToUpNext()
@@ -499,10 +503,10 @@ struct ShowDetailScreen: View {
 
     private func addToUpNext() {
         if container.backlogService.contains(currentShowId) {
-            container.toastPresenter.show("Already in Up Next")
+            container.toastPresenter.show("Already in Show Queue")
         } else {
             container.backlogService.addToBottom(currentShowId)
-            container.toastPresenter.show("Added to Up Next")
+            container.toastPresenter.show("Added to Show Queue")
         }
     }
 

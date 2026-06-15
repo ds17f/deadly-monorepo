@@ -28,8 +28,10 @@ struct ShowActionsMenuSheet: View {
     var onChooseRecording: (() -> Void)? = nil
     var onEqualizer: (() -> Void)? = nil
     var onAutoplay: (() -> Void)? = nil
-    // This Show
+    // Show Queue
+    var onViewUpNext: (() -> Void)? = nil
     var onAddToUpNext: (() -> Void)? = nil
+    // This Show
     var onSetlist: (() -> Void)? = nil
     var onCollections: (() -> Void)? = nil
     var onDownload: (() -> Void)? = nil
@@ -43,8 +45,11 @@ struct ShowActionsMenuSheet: View {
     private var playbackCount: Int {
         [onChooseRecording, onEqualizer, onAutoplay].compactMap { $0 }.count
     }
+    private var showQueueCount: Int {
+        [onViewUpNext, onAddToUpNext].compactMap { $0 }.count
+    }
     private var thisShowCount: Int {
-        [onAddToUpNext, onSetlist, hasCollections ? onCollections : nil, onDownload].compactMap { $0 }.count
+        [onSetlist, hasCollections ? onCollections : nil, onDownload].compactMap { $0 }.count
     }
     private var shareCount: Int {
         [onShare].compactMap { $0 }.count
@@ -56,6 +61,11 @@ struct ShowActionsMenuSheet: View {
                 if playbackCount > 0 {
                     section(header: playbackCount >= 2 ? "Playback" : nil) {
                         playbackRows
+                    }
+                }
+                if showQueueCount > 0 {
+                    section(header: showQueueCount >= 2 ? "Show Queue" : nil) {
+                        showQueueRows
                     }
                 }
                 if thisShowCount > 0 {
@@ -113,10 +123,17 @@ struct ShowActionsMenuSheet: View {
     }
 
     @ViewBuilder
-    private var thisShowRows: some View {
-        if let onAddToUpNext {
-            row("Add to Up Next", systemImage: "text.badge.plus", action: onAddToUpNext)
+    private var showQueueRows: some View {
+        if let onViewUpNext {
+            row("View Show Queue", systemImage: "list.bullet", action: onViewUpNext)
         }
+        if let onAddToUpNext {
+            row("Add to Show Queue", systemImage: "text.badge.plus", action: onAddToUpNext)
+        }
+    }
+
+    @ViewBuilder
+    private var thisShowRows: some View {
         if let onSetlist {
             row("Setlist", systemImage: "list.bullet.rectangle", action: onSetlist)
         }

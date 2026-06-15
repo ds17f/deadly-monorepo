@@ -50,6 +50,7 @@ fun UpNextList(
     LaunchedEffect(shows) { ordered = shows }
 
     var showClearConfirm by remember { mutableStateOf(false) }
+    var pendingRemove by remember { mutableStateOf<Show?>(null) }
 
     val lazyListState = rememberLazyListState()
     val reorderState = rememberReorderableLazyListState(lazyListState) { from, to ->
@@ -85,7 +86,7 @@ fun UpNextList(
                         show = show,
                         elevation = elevation,
                         onPlay = { viewModel.play(show) },
-                        onRemove = { viewModel.remove(show.id) },
+                        onRequestRemove = { pendingRemove = show },
                         dragHandle = {
                             IconButton(
                                 onClick = {},
@@ -120,6 +121,23 @@ fun UpNextList(
             },
         )
     }
+
+    pendingRemove?.let { show ->
+        AlertDialog(
+            onDismissRequest = { pendingRemove = null },
+            title = { Text("Remove from queue?") },
+            text = { Text("${show.date} — ${show.venue.name}") },
+            confirmButton = {
+                TextButton(onClick = {
+                    pendingRemove = null
+                    viewModel.remove(show.id)
+                }) { Text("Remove") }
+            },
+            dismissButton = {
+                TextButton(onClick = { pendingRemove = null }) { Text("Cancel") }
+            },
+        )
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -128,12 +146,15 @@ private fun UpNextRow(
     show: Show,
     elevation: androidx.compose.ui.unit.Dp,
     onPlay: () -> Unit,
-    onRemove: () -> Unit,
+    onRequestRemove: () -> Unit,
     dragHandle: @Composable () -> Unit,
 ) {
+    // Swipe asks for removal; the row snaps back (return false) and a confirm
+    // dialog decides — so a swipe never deletes without confirmation.
     val dismissState = rememberSwipeToDismissBoxState(
         confirmValueChange = { value ->
-            if (value == SwipeToDismissBoxValue.EndToStart) { onRemove(); true } else false
+            if (value == SwipeToDismissBoxValue.EndToStart) { onRequestRemove() }
+            false
         }
     )
 

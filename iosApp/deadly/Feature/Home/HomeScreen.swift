@@ -38,6 +38,15 @@ struct HomeScreen: View {
         CarouselCardSize(preferenceKey: appPreferences.homeCollectionsCardSize)
     }
 
+    private func addToShowQueue(_ showId: String) {
+        if container.backlogService.contains(showId) {
+            container.toastPresenter.show("Already in Show Queue")
+        } else {
+            container.backlogService.addToBottom(showId)
+            container.toastPresenter.show("Added to Show Queue")
+        }
+    }
+
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: DeadlySpacing.sectionSpacing) {
@@ -143,6 +152,11 @@ struct HomeScreen: View {
                         }
                         .buttonStyle(.plain)
                         .contextMenu {
+                            Button {
+                                addToShowQueue(show.id)
+                            } label: {
+                                Label("Add to Show Queue", systemImage: "text.badge.plus")
+                            }
                             NavigationLink(value: show.id) {
                                 Label("View Show", systemImage: "eye")
                             }
@@ -216,6 +230,11 @@ struct HomeScreen: View {
                             }
                             .buttonStyle(.plain)
                             .contextMenu {
+                                Button {
+                                    addToShowQueue(show.id)
+                                } label: {
+                                    Label("Add to Show Queue", systemImage: "text.badge.plus")
+                                }
                                 NavigationLink(value: show.id) {
                                     Label("View Show", systemImage: "eye")
                                 }
@@ -259,6 +278,11 @@ struct HomeScreen: View {
                     }
                     .buttonStyle(.plain)
                     .contextMenu {
+                        Button {
+                            addToShowQueue(show.id)
+                        } label: {
+                            Label("Add to Show Queue", systemImage: "text.badge.plus")
+                        }
                         NavigationLink(value: show.id) {
                             Label("View Show", systemImage: "eye")
                         }
@@ -295,6 +319,11 @@ struct HomeScreen: View {
                         }
                         .buttonStyle(.plain)
                         .contextMenu {
+                            Button {
+                                addToShowQueue(show.id)
+                            } label: {
+                                Label("Add to Show Queue", systemImage: "text.badge.plus")
+                            }
                             NavigationLink(value: show.id) {
                                 Label("View Show", systemImage: "eye")
                             }

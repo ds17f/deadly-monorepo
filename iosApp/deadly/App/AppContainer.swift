@@ -48,6 +48,12 @@ final class AppContainer {
     /// True only during the first launch of the process. Cleared after Connect + restore complete.
     var isColdLaunch = true
 
+    /// One-shot: a "View Show Queue" menu link asks MainNavigation to switch to
+    /// the Favorites tab and FavoritesScreen to select its Show Queue sub-tab.
+    /// Single home — there is no standalone Show Queue screen.
+    var showQueueTabRequested = false
+    func requestShowQueueTab() { showQueueTabRequested = true }
+
     init() {
         let initStart = CFAbsoluteTimeGetCurrent()
         // Configure audio session for background playback at app launch

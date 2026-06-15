@@ -110,6 +110,11 @@ struct MainNavigation: View {
                 }
             }
         }
+        .onChange(of: container.showQueueTabRequested) { _, requested in
+            // "View Show Queue" from a player/playlist menu — switch to the
+            // Favorites tab; FavoritesScreen selects its Show Queue sub-tab.
+            if requested { selectedTab = .favorites }
+        }
         .onOpenURL { url in
             handleDeepLink(url)
         }

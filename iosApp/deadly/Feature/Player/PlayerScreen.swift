@@ -13,7 +13,6 @@ struct PlayerScreen: View {
     @State private var showMessageShare = false
     @State private var showEqualizerSheet = false
     @State private var showPlayerMenuSheet = false
-    @State private var showUpNextSheet = false
     @State private var showConnectSheet = false
     @State private var isCurrentTrackFavorite = false
     @State private var showCollectionsCount = 0
@@ -246,16 +245,6 @@ struct PlayerScreen: View {
         .sheet(isPresented: $showPlayerMenuSheet) {
             playerMenuSheet
         }
-        .sheet(isPresented: $showUpNextSheet) {
-            UpNextScreen(
-                backlog: container.backlogService,
-                showRepository: container.showRepository,
-                onPlay: { show in
-                    showUpNextSheet = false
-                    Task { await container.playlistService.playShow(show) }
-                }
-            )
-        }
         .sheet(isPresented: $showShareChooser) {
             ShareChooserSheet(
                 onMessageShare: {
@@ -348,26 +337,14 @@ struct PlayerScreen: View {
 
             Spacer()
 
-            HStack(spacing: 18) {
-                Button {
-                    showUpNextSheet = true
-                } label: {
-                    Image(systemName: "list.bullet")
-                        .font(.title2)
-                        .foregroundStyle(.primary)
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Up Next")
-
-                Button {
-                    showPlayerMenuSheet = true
-                } label: {
-                    Image(systemName: "ellipsis")
-                        .font(.title2)
-                        .foregroundStyle(.primary)
-                }
-                .buttonStyle(.plain)
+            Button {
+                showPlayerMenuSheet = true
+            } label: {
+                Image(systemName: "ellipsis")
+                    .font(.title2)
+                    .foregroundStyle(.primary)
             }
+            .buttonStyle(.plain)
         }
         .padding(.horizontal, 20)
         .padding(.top, 16)
@@ -445,9 +422,9 @@ struct PlayerScreen: View {
                 if let sid = currentShowId { onViewShow?(sid, .recording) }
             },
             onAutoplay: { toggleAutoAdvance() },
-            onAddToUpNext: {
+            onViewUpNext: {
                 showPlayerMenuSheet = false
-                addToUpNext()
+                viewShowQueue()
             },
             onSetlist: {
                 showPlayerMenuSheet = false
@@ -475,14 +452,10 @@ struct PlayerScreen: View {
         }
     }
 
-    private func addToUpNext() {
-        guard let showId = currentShowId else { return }
-        if container.backlogService.contains(showId) {
-            container.toastPresenter.show("Already in Up Next")
-        } else {
-            container.backlogService.addToBottom(showId)
-            container.toastPresenter.show("Added to Up Next")
-        }
+    /// Open the Show Queue (Favorites tab) and dismiss the full player.
+    private func viewShowQueue() {
+        container.requestShowQueueTab()
+        isPresented = false
     }
 
     private func toggleAutoAdvance() {

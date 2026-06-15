@@ -379,9 +379,9 @@ struct SidePlayerView: View {
                 if let sid = currentShowId { onViewShow?(sid, .recording) }
             },
             onAutoplay: { toggleAutoAdvance() },
-            onAddToUpNext: {
+            onViewUpNext: {
                 showMenuSheet = false
-                addToUpNext()
+                container.requestShowQueueTab()
             },
             onSetlist: {
                 showMenuSheet = false
@@ -400,16 +400,6 @@ struct SidePlayerView: View {
     }
 
     // MARK: - Actions
-
-    private func addToUpNext() {
-        guard let showId = currentShowId else { return }
-        if container.backlogService.contains(showId) {
-            container.toastPresenter.show("Already in Up Next")
-        } else {
-            container.backlogService.addToBottom(showId)
-            container.toastPresenter.show("Added to Up Next")
-        }
-    }
 
     private func toggleFavoriteSong() {
         guard let showId = currentShowId,
