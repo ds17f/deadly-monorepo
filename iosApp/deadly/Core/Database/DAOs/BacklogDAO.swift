@@ -28,6 +28,14 @@ struct BacklogDAO: Sendable {
         }
     }
 
+    /// A single row including tombstones — the push flusher reads this at push
+    /// time to decide PUT (live) vs DELETE (tombstoned/absent).
+    func fetchByIdIncludingTombstones(_ showId: String) throws -> BacklogRecord? {
+        try database.read { db in
+            try BacklogRecord.filter(Column("showId") == showId).fetchOne(db)
+        }
+    }
+
     func contains(_ showId: String) throws -> Bool {
         try database.read { db in
             try BacklogRecord
@@ -51,14 +59,15 @@ struct BacklogDAO: Sendable {
             let maxPos = try Int64.fetchOne(db, sql: "SELECT MAX(position) FROM backlog") ?? 0
             try db.execute(
                 sql: """
-                    INSERT INTO backlog (showId, position, addedAt, deletedAt)
-                    VALUES (?, ?, ?, NULL)
+                    INSERT INTO backlog (showId, position, addedAt, updatedAt, deletedAt)
+                    VALUES (?, ?, ?, ?, NULL)
                     ON CONFLICT(showId) DO UPDATE SET
                         position = excluded.position,
                         addedAt = excluded.addedAt,
+                        updatedAt = excluded.updatedAt,
                         deletedAt = NULL
                     """,
-                arguments: [showId, maxPos + 1, now]
+                arguments: [showId, maxPos + 1, now, now]
             )
         }
     }
@@ -71,8 +80,8 @@ struct BacklogDAO: Sendable {
                 .order(Column("position").asc)
                 .fetchOne(db) else { return nil }
             try db.execute(
-                sql: "UPDATE backlog SET deletedAt = ? WHERE showId = ?",
-                arguments: [now, head.showId]
+                sql: "UPDATE backlog SET deletedAt = ?, updatedAt = ? WHERE showId = ?",
+                arguments: [now, now, head.showId]
             )
             return head.showId
         }
@@ -82,19 +91,19 @@ struct BacklogDAO: Sendable {
     func remove(_ showId: String, now: Int64) throws {
         try database.write { db in
             try db.execute(
-                sql: "UPDATE backlog SET deletedAt = ? WHERE showId = ?",
-                arguments: [now, showId]
+                sql: "UPDATE backlog SET deletedAt = ?, updatedAt = ? WHERE showId = ?",
+                arguments: [now, now, showId]
             )
         }
     }
 
     /// Rewrite the order to exactly `orderedShowIds` (drag-to-reorder).
-    func reorder(_ orderedShowIds: [String]) throws {
+    func reorder(_ orderedShowIds: [String], now: Int64) throws {
         try database.write { db in
             for (index, showId) in orderedShowIds.enumerated() {
                 try db.execute(
-                    sql: "UPDATE backlog SET position = ? WHERE showId = ?",
-                    arguments: [Int64(index), showId]
+                    sql: "UPDATE backlog SET position = ?, updatedAt = ? WHERE showId = ?",
+                    arguments: [Int64(index), now, showId]
                 )
             }
         }
@@ -104,8 +113,27 @@ struct BacklogDAO: Sendable {
     func clear(now: Int64) throws {
         try database.write { db in
             try db.execute(
-                sql: "UPDATE backlog SET deletedAt = ? WHERE deletedAt IS NULL",
-                arguments: [now]
+                sql: "UPDATE backlog SET deletedAt = ?, updatedAt = ? WHERE deletedAt IS NULL",
+                arguments: [now, now]
+            )
+        }
+    }
+
+    /// Write a row from a server pull verbatim (no push side effects). The LWW
+    /// decision is made by the apply service before calling this.
+    func applyFromSync(_ record: BacklogRecord) throws {
+        try database.write { db in
+            try db.execute(
+                sql: """
+                    INSERT INTO backlog (showId, position, addedAt, updatedAt, deletedAt)
+                    VALUES (?, ?, ?, ?, ?)
+                    ON CONFLICT(showId) DO UPDATE SET
+                        position = excluded.position,
+                        addedAt = excluded.addedAt,
+                        updatedAt = excluded.updatedAt,
+                        deletedAt = excluded.deletedAt
+                    """,
+                arguments: [record.showId, record.position, record.addedAt, record.updatedAt, record.deletedAt]
             )
         }
     }

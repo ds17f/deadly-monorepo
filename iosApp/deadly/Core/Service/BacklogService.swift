@@ -13,6 +13,10 @@ final class BacklogService {
     private let logger = Logger(subsystem: "com.grateful.deadly", category: "BacklogService")
     private let dao: BacklogDAO
 
+    /// Set by AppContainer after both are built. Each mutation enqueues a
+    /// per-action push (slice 4); nil when signed out / before wiring.
+    weak var pushService: FavoritesPushService?
+
     init(dao: BacklogDAO) {
         self.dao = dao
     }
@@ -31,7 +35,9 @@ final class BacklogService {
 
     /// Consume and return the head (advance *commit*); nil when empty.
     func popHead() -> String? {
-        (try? dao.popHead(now: now)) ?? nil
+        let popped = (try? dao.popHead(now: now)) ?? nil
+        if let popped { pushService?.enqueueAndPushBacklog(showId: popped) }
+        return popped
     }
 
     func contains(_ showId: String) -> Bool {
@@ -40,23 +46,36 @@ final class BacklogService {
 
     /// Append a show to the bottom (clearing any tombstone).
     func addToBottom(_ showId: String) {
-        do { try dao.addToBottom(showId, now: now) }
+        do {
+            try dao.addToBottom(showId, now: now)
+            pushService?.enqueueAndPushBacklog(showId: showId)
+        }
         catch { logger.error("addToBottom failed: \(error)") }
     }
 
     func remove(_ showId: String) {
-        do { try dao.remove(showId, now: now) }
+        do {
+            try dao.remove(showId, now: now)
+            pushService?.enqueueAndPushBacklog(showId: showId)
+        }
         catch { logger.error("remove failed: \(error)") }
     }
 
     /// Rewrite the order to exactly `orderedShowIds` (drag-to-reorder).
     func reorder(_ orderedShowIds: [String]) {
-        do { try dao.reorder(orderedShowIds) }
+        do {
+            try dao.reorder(orderedShowIds, now: now)
+            pushService?.enqueueAndPushBacklogReorder()
+        }
         catch { logger.error("reorder failed: \(error)") }
     }
 
     func clear() {
-        do { try dao.clear(now: now) }
+        let cleared = showIds()
+        do {
+            try dao.clear(now: now)
+            cleared.forEach { pushService?.enqueueAndPushBacklog(showId: $0) }
+        }
         catch { logger.error("clear failed: \(error)") }
     }
 

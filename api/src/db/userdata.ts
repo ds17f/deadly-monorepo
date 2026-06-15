@@ -17,6 +17,7 @@ export interface BackupV3 {
   recentShows?: RecentShowV3[];
   playbackPosition?: PlaybackPositionV3 | null;
   notificationState?: NotificationStateV3[];
+  backlog?: BacklogItemV3[];
 }
 
 // Every record carries `updatedAt` (the LWW comparator). Records that
@@ -41,6 +42,19 @@ export interface FavoriteShowV3 {
   recordingQuality?: number | null;
   playingQuality?: number | null;
   customRating?: number | null;
+  updatedAt: number;
+  deletedAt?: number | null;
+}
+
+// The Show Queue (backlog) — an ordered list of show ids the user wants to
+// play. Synced per-action (add/pop/move/remove) like favorites, NOT as a
+// whole-list snapshot (the queue auto-pops during playback). `position`
+// orders the live rows; `deletedAt` tombstones a popped/removed show so the
+// removal propagates instead of resurrecting from another device.
+export interface BacklogItemV3 {
+  showId: string;
+  position: number;
+  addedAt: number;
   updatedAt: number;
   deletedAt?: number | null;
 }
@@ -199,6 +213,85 @@ export function deleteFavoriteShow(userId: string, showId: string): boolean {
       WHERE user_id = ? AND show_id = ? AND deleted_at IS NULL`
   ).run(now, now, userId, showId);
   return result.changes > 0;
+}
+
+// ── Backlog (Show Queue) ────────────────────────────────────────────
+
+const BACKLOG_COLS = `show_id, position, added_at, updated_at, deleted_at`;
+
+function rowToBacklogItem(r: Record<string, unknown>): BacklogItemV3 {
+  return {
+    showId: r.show_id as string,
+    position: r.position as number,
+    addedAt: r.added_at as number,
+    updatedAt: r.updated_at as number,
+    deletedAt: (r.deleted_at as number | null) ?? null,
+  };
+}
+
+/** Live backlog in play order (head first), tombstones excluded. */
+export function getBacklog(userId: string): BacklogItemV3[] {
+  const db = getUsersDb();
+  const rows = db.prepare(
+    `SELECT ${BACKLOG_COLS} FROM backlog
+     WHERE user_id = ? AND deleted_at IS NULL
+     ORDER BY position ASC`
+  ).all(userId) as Record<string, unknown>[];
+  return rows.map(rowToBacklogItem);
+}
+
+/** All backlog rows including tombstones — used by /api/user/sync. */
+function getBacklogWithTombstones(userId: string): BacklogItemV3[] {
+  const db = getUsersDb();
+  const rows = db.prepare(
+    `SELECT ${BACKLOG_COLS} FROM backlog WHERE user_id = ? ORDER BY position ASC`
+  ).all(userId) as Record<string, unknown>[];
+  return rows.map(rowToBacklogItem);
+}
+
+// Upsert one backlog row. LWW-guarded on updated_at so an out-of-order push
+// (the auto-popping queue makes these likely) can't clobber newer state; a
+// live upsert that wins resurrects any tombstone (re-add after pop/remove).
+export function upsertBacklogItem(userId: string, item: BacklogItemV3): void {
+  const db = getUsersDb();
+  const now = Math.floor(Date.now() / 1000);
+  db.prepare(
+    `INSERT INTO backlog (user_id, show_id, position, added_at, updated_at, deleted_at)
+     VALUES (?, ?, ?, ?, ?, ?)
+     ON CONFLICT(user_id, show_id) DO UPDATE SET
+       position = excluded.position,
+       updated_at = excluded.updated_at,
+       deleted_at = excluded.deleted_at
+     WHERE excluded.updated_at >= backlog.updated_at`
+  ).run(
+    userId, item.showId, item.position,
+    item.addedAt ?? now, item.updatedAt ?? now, item.deletedAt ?? null,
+  );
+}
+
+/** Soft-delete (pop or remove): row stays as a tombstone so other devices learn of it. */
+export function deleteBacklogItem(userId: string, showId: string): boolean {
+  const db = getUsersDb();
+  const now = Math.floor(Date.now() / 1000);
+  const result = db.prepare(
+    `UPDATE backlog SET deleted_at = ?, updated_at = ?
+      WHERE user_id = ? AND show_id = ? AND deleted_at IS NULL`
+  ).run(now, now, userId, showId);
+  return result.changes > 0;
+}
+
+/** Rewrite positions to match `orderedShowIds` (drag-to-reorder). */
+export function reorderBacklog(userId: string, orderedShowIds: string[]): void {
+  const db = getUsersDb();
+  const now = Math.floor(Date.now() / 1000);
+  const stmt = db.prepare(
+    `UPDATE backlog SET position = ?, updated_at = ?
+      WHERE user_id = ? AND show_id = ?`
+  );
+  const tx = db.transaction(() => {
+    orderedShowIds.forEach((showId, i) => stmt.run(i, now, userId, showId));
+  });
+  tx();
 }
 
 // ── Favorite Songs ──────────────────────────────────────────────────
@@ -668,6 +761,7 @@ export function getFullBackupV3(userId: string): BackupV3 {
     recentShows: getRecentShowsWithTombstones(userId),
     playbackPosition: getPlaybackPosition(userId),
     notificationState: getNotificationState(userId),
+    backlog: getBacklogWithTombstones(userId),
   };
 }
 
@@ -720,6 +814,11 @@ export function importFullBackupV3(userId: string, data: BackupV3): void {
     // Notification state (ADR-0015) — union-merge each overlay row.
     for (const s of data.notificationState ?? []) {
       upsertNotificationState(userId, s);
+    }
+
+    // Backlog (Show Queue) — LWW-guarded upsert; tombstones carry through.
+    for (const item of data.backlog ?? []) {
+      upsertBacklogItem(userId, item);
     }
   });
 

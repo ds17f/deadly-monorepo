@@ -18,6 +18,7 @@ final class UserSyncApplyService {
     private let showReviewDAO: ShowReviewDAO
     private let showPlayerTagDAO: ShowPlayerTagDAO
     private let recordingPreferenceDAO: RecordingPreferenceDAO
+    private let backlogDAO: BacklogDAO
     private let showDAO: ShowDAO
     private let authService: AuthService
 
@@ -51,6 +52,7 @@ final class UserSyncApplyService {
         showReviewDAO: ShowReviewDAO,
         showPlayerTagDAO: ShowPlayerTagDAO,
         recordingPreferenceDAO: RecordingPreferenceDAO,
+        backlogDAO: BacklogDAO,
         showDAO: ShowDAO,
         authService: AuthService
     ) {
@@ -60,6 +62,7 @@ final class UserSyncApplyService {
         self.showReviewDAO = showReviewDAO
         self.showPlayerTagDAO = showPlayerTagDAO
         self.recordingPreferenceDAO = recordingPreferenceDAO
+        self.backlogDAO = backlogDAO
         self.showDAO = showDAO
         self.authService = authService
     }
@@ -80,6 +83,7 @@ final class UserSyncApplyService {
             let songs = try applyFavoriteSongs(backup.favorites.tracks)
             let reviews = try applyReviews(backup.reviews)
             applyRecordingPreferences(backup.recordingPreferences)
+            applyBacklog(backup.backlog ?? [])
             return ApplyResult(
                 favoriteShowsScanned: shows.scanned,
                 favoriteShowsApplied: shows.applied,
@@ -305,6 +309,35 @@ final class UserSyncApplyService {
         }
         print("[UserSyncApply] recording_prefs: scanned=\(remote.count) applied=\(applied) " +
               "skippedLocalNewer=\(skippedLocalNewer) skippedMissingShow=\(skippedMissingShow)")
+    }
+
+    // Backlog (Show Queue). One row per show keyed by showId; LWW on updatedAt,
+    // a remote tombstone tombstones locally. No FK to shows, so unknown shows
+    // are stored and simply ignored by the UI until the catalog knows them.
+    private func applyBacklog(_ remote: [SyncBacklogItemV3]) {
+        var applied = 0, skippedLocalNewer = 0
+        for dto in remote {
+            let local = (try? backlogDAO.fetchByIdIncludingTombstones(dto.showId)) ?? nil
+            let remoteUpdatedMs = dto.updatedAt * 1000
+            if let local, local.updatedAt >= remoteUpdatedMs {
+                skippedLocalNewer += 1
+                continue
+            }
+            let record = BacklogRecord(
+                showId: dto.showId,
+                position: Int64(dto.position),
+                addedAt: dto.addedAt * 1000,
+                updatedAt: remoteUpdatedMs,
+                deletedAt: dto.deletedAt.map { $0 * 1000 }
+            )
+            do {
+                try backlogDAO.applyFromSync(record)
+                applied += 1
+            } catch {
+                print("[UserSyncApply] apply backlog \(dto.showId) failed: \(error.localizedDescription)")
+            }
+        }
+        print("[UserSyncApply] backlog: scanned=\(remote.count) applied=\(applied) skippedLocalNewer=\(skippedLocalNewer)")
     }
 
     private func makeRecord(from dto: SyncFavoriteShowV3, existing: FavoriteShowRecord?) -> FavoriteShowRecord {

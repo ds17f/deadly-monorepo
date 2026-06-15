@@ -361,4 +361,13 @@ object DatabaseMigrations {
             db.execSQL("CREATE INDEX IF NOT EXISTS index_backlog_position ON backlog(position)")
         }
     }
+
+    /** Add backlog.updatedAt — the LWW comparator for per-action sync (slice 4).
+     *  Backfill existing rows to their addedAt. */
+    val MIGRATION_26_27 = object : Migration(26, 27) {
+        override fun migrate(db: SupportSQLiteDatabase) {
+            db.execSQL("ALTER TABLE backlog ADD COLUMN updatedAt INTEGER NOT NULL DEFAULT 0")
+            db.execSQL("UPDATE backlog SET updatedAt = addedAt")
+        }
+    }
 }

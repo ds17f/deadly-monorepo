@@ -20,4 +20,10 @@ interface UserSyncService {
     suspend fun putRecordingPref(showId: String, recordingId: String): Result<Unit>
     /** Clear the preferred recording for a show (tombstone). */
     suspend fun deleteRecordingPref(showId: String): Result<Unit>
+    /** Add / update a Show Queue (backlog) entry. */
+    suspend fun putBacklogItem(item: SyncBacklogItemV3): Result<Unit>
+    /** Remove (pop) a Show Queue entry (tombstone). */
+    suspend fun deleteBacklogItem(showId: String): Result<Unit>
+    /** Rewrite the Show Queue order. */
+    suspend fun reorderBacklog(showIds: List<String>): Result<Unit>
 }

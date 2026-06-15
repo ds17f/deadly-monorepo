@@ -46,15 +46,15 @@ interface BacklogDao {
     suspend fun upsert(entity: BacklogEntity)
 
     /** Tombstone a show (sync-friendly remove). */
-    @Query("UPDATE backlog SET deletedAt = :deletedAt WHERE showId = :showId")
-    suspend fun tombstone(showId: String, deletedAt: Long)
+    @Query("UPDATE backlog SET deletedAt = :now, updatedAt = :now WHERE showId = :showId")
+    suspend fun tombstone(showId: String, now: Long)
 
-    @Query("UPDATE backlog SET position = :position WHERE showId = :showId")
-    suspend fun setPosition(showId: String, position: Long)
+    @Query("UPDATE backlog SET position = :position, updatedAt = :now WHERE showId = :showId")
+    suspend fun setPosition(showId: String, position: Long, now: Long)
 
     /** Tombstone every live row (Clear). */
-    @Query("UPDATE backlog SET deletedAt = :deletedAt WHERE deletedAt IS NULL")
-    suspend fun tombstoneAll(deletedAt: Long)
+    @Query("UPDATE backlog SET deletedAt = :now, updatedAt = :now WHERE deletedAt IS NULL")
+    suspend fun tombstoneAll(now: Long)
 
     /** Hard delete — used by tests/cleanup, not the user-facing remove. */
     @Query("DELETE FROM backlog WHERE showId = :showId")

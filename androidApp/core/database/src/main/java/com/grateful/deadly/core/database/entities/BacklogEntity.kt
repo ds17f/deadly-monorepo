@@ -1,5 +1,6 @@
 package com.grateful.deadly.core.database.entities
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
@@ -34,6 +35,10 @@ data class BacklogEntity(
 
     /** When this show was added to the backlog (epoch millis). */
     val addedAt: Long,
+
+    /** LWW comparator for per-action sync (slice 4); bumped on every mutation. */
+    @ColumnInfo(defaultValue = "0")
+    val updatedAt: Long = 0,
 
     // Sync support (see PLANS/mobile-server-sync.md); set on remove for tombstoning.
     val deletedAt: Long? = null

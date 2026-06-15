@@ -119,6 +119,7 @@ final class AppContainer {
                     showReviewDAO: ShowReviewDAO(database: db),
                     showPlayerTagDAO: ShowPlayerTagDAO(database: db),
                     recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
+                    backlogDAO: BacklogDAO(database: db),
                     apiClient: userSync,
                     authService: auth
                 )
@@ -156,6 +157,7 @@ final class AppContainer {
                     showReviewDAO: ShowReviewDAO(database: db),
                     showPlayerTagDAO: ShowPlayerTagDAO(database: db),
                     recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
+                    backlogDAO: BacklogDAO(database: db),
                     showDAO: ShowDAO(database: db),
                     authService: auth
                 )
@@ -227,6 +229,7 @@ final class AppContainer {
                 BacklogService(dao: BacklogDAO(database: db))
             }
             backlogService = backlogSvc
+            MainActor.assumeIsolated { backlogSvc.pushService = pushSvc }
 
             // One-time startup backfill: push all local data (favorites +
             // top recents) so a freshly-synced web profile isn't empty.

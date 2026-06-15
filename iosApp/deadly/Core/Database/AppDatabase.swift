@@ -149,6 +149,15 @@ struct AppDatabase: @unchecked Sendable {
         migrator.registerMigration("v15-backlog") { db in
             try AppDatabase.createBacklogTable(db)
         }
+        migrator.registerMigration("v16-backlog-updatedAt") { db in
+            // Per-row LWW comparator for backlog sync (slice 4). Constant default
+            // then backfill existing rows to their addedAt.
+            let cols = try Row.fetchAll(db, sql: "PRAGMA table_info(backlog)")
+            if !cols.contains(where: { ($0["name"] as? String) == "updatedAt" }) {
+                try db.execute(sql: "ALTER TABLE backlog ADD COLUMN updatedAt INTEGER NOT NULL DEFAULT 0")
+                try db.execute(sql: "UPDATE backlog SET updatedAt = addedAt WHERE updatedAt = 0")
+            }
+        }
         try migrator.migrate(dbWriter)
     }
 

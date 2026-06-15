@@ -10,5 +10,7 @@ struct BacklogRecord: Codable, Sendable, Equatable, FetchableRecord, MutablePers
     var showId: String
     var position: Int64
     var addedAt: Int64
+    /// LWW comparator for per-action sync (slice 4); bumped on every mutation.
+    var updatedAt: Int64 = 0
     var deletedAt: Int64?
 }

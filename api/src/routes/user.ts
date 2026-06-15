@@ -14,11 +14,13 @@ import {
   getPlaybackPosition, upsertPlaybackPosition,
   getSettings, upsertSettings,
   getNotificationState, upsertNotificationState, upsertNotificationStates,
+  getBacklog, upsertBacklogItem, deleteBacklogItem, reorderBacklog,
   getFullBackupV3, importFullBackupV3,
 } from "../db/userdata.js";
 import type {
   FavoriteShowV3, FavoriteTrackV3, ReviewV3,
   PlaybackPositionV3, SettingsV3, BackupV3, NotificationStateV3,
+  BacklogItemV3,
 } from "../db/userdata.js";
 import { getNotificationById, getAllActiveNotificationIds } from "../db/notifications.js";
 
@@ -78,6 +80,67 @@ export async function userRoutes(app: FastifyInstance): Promise<void> {
       preHandler: requireAuth,
     }, async (request, reply) => {
       const deleted = deleteFavoriteShow(request.user!.id, request.params.showId);
+      return reply.code(deleted ? 200 : 404).send({ ok: deleted });
+    });
+
+  // ── Backlog (Show Queue) ────────────────────────────────────────
+  // Per-action sync mirroring favorites: PUT a row (add / position), DELETE
+  // tombstones (pop or remove), bulk PUT rewrites order. Clients pull on
+  // foreground and union-merge into the local store.
+
+  app.get("/api/user/backlog", {
+    schema: { tags: ["user"], summary: "List Show Queue (backlog)" },
+    preHandler: requireAuth,
+  }, async (request) => {
+    return getBacklog(request.user!.id);
+  });
+
+  // Bulk reorder — rewrite positions to match the given order. Declared before
+  // the :showId routes so "backlog" isn't captured as a show id.
+  app.put<{ Body: { showIds?: unknown } }>(
+    "/api/user/backlog", {
+      schema: {
+        tags: ["user"],
+        summary: "Reorder the Show Queue",
+        body: {
+          type: "object",
+          required: ["showIds"],
+          properties: { showIds: { type: "array", items: { type: "string" } } },
+        },
+      },
+      preHandler: requireAuth,
+    }, async (request, reply) => {
+      const showIds = Array.isArray(request.body?.showIds)
+        ? request.body.showIds.filter((s): s is string => typeof s === "string")
+        : [];
+      reorderBacklog(request.user!.id, showIds);
+      return reply.code(200).send({ ok: true });
+    });
+
+  app.put<{ Params: { showId: string }; Body: Partial<BacklogItemV3> }>(
+    "/api/user/backlog/:showId", {
+      schema: { tags: ["user"], summary: "Add / update a Show Queue entry" },
+      preHandler: requireAuth,
+    }, async (request, reply) => {
+      const now = Math.floor(Date.now() / 1000);
+      const body = request.body as Partial<BacklogItemV3>;
+      const item: BacklogItemV3 = {
+        showId: request.params.showId,
+        position: body.position ?? 0,
+        addedAt: body.addedAt ?? now,
+        updatedAt: body.updatedAt ?? now,
+        deletedAt: body.deletedAt ?? null,
+      };
+      upsertBacklogItem(request.user!.id, item);
+      return reply.code(200).send({ ok: true });
+    });
+
+  app.delete<{ Params: { showId: string } }>(
+    "/api/user/backlog/:showId", {
+      schema: { tags: ["user"], summary: "Remove (pop) a Show Queue entry" },
+      preHandler: requireAuth,
+    }, async (request, reply) => {
+      const deleted = deleteBacklogItem(request.user!.id, request.params.showId);
       return reply.code(deleted ? 200 : 404).send({ ok: deleted });
     });
 
