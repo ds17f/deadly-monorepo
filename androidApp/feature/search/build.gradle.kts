@@ -49,6 +49,8 @@ dependencies {
     implementation(project(":core:search"))
     implementation(project(":core:model"))
     implementation(project(":core:design"))
+    implementation(project(":core:domain"))
+    implementation(project(":core:database"))
     implementation(project(":core:network:archive"))
 
 

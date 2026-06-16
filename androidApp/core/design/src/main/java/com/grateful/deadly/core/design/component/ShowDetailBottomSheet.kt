@@ -1,11 +1,13 @@
 package com.grateful.deadly.core.design.component
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.grateful.deadly.core.design.resources.IconResources
 
 /**
  * Bottom sheet showing full show details (date, venue, location, rating)
@@ -18,7 +20,8 @@ fun ShowDetailBottomSheet(
     venue: String,
     location: String,
     rating: String?,
-    onDismiss: () -> Unit
+    onDismiss: () -> Unit,
+    onAddToUpNext: (() -> Unit)? = null
 ) {
     ModalBottomSheet(onDismissRequest = onDismiss) {
         Column(
@@ -53,6 +56,21 @@ fun ShowDetailBottomSheet(
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.secondary
+                )
+            }
+
+            if (onAddToUpNext != null) {
+                Spacer(modifier = Modifier.height(16.dp))
+                HorizontalDivider()
+                ListItem(
+                    headlineContent = { Text("Add to Show Queue") },
+                    leadingContent = {
+                        Icon(
+                            painter = IconResources.Content.PlaylistAdd(),
+                            contentDescription = null
+                        )
+                    },
+                    modifier = Modifier.clickable { onAddToUpNext() }
                 )
             }
 

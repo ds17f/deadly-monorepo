@@ -2,7 +2,9 @@ package com.grateful.deadly.core.usersync
 
 import android.util.Log
 import com.grateful.deadly.core.api.auth.AuthService
+import com.grateful.deadly.core.api.usersync.BacklogReorderBody
 import com.grateful.deadly.core.api.usersync.SyncBackupV3
+import com.grateful.deadly.core.api.usersync.SyncBacklogItemV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteShowV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteTrackV3
 import com.grateful.deadly.core.api.usersync.SyncReviewV3
@@ -304,6 +306,86 @@ class UserSyncServiceImpl @Inject constructor(
             Result.success(Unit)
         } catch (e: Exception) {
             Log.w(TAG, "deleteRecordingPref failed for $showId", e)
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun putBacklogItem(item: SyncBacklogItemV3): Result<Unit> {
+        val token = authService.getAuthToken()
+            ?: return Result.failure(IllegalStateException("Not signed in"))
+        val baseUrl = appPreferences.apiBaseUrl
+        val bodyJson = json.encodeToString(SyncBacklogItemV3.serializer(), item)
+
+        return try {
+            withContext(Dispatchers.IO) {
+                val request = Request.Builder()
+                    .url("$baseUrl/api/user/backlog/${item.showId}")
+                    .addHeader("Authorization", "Bearer $token")
+                    .put(bodyJson.toRequestBody("application/json".toMediaType()))
+                    .build()
+                httpClient.newCall(request).execute().use { response ->
+                    if (!response.isSuccessful) {
+                        val bodyText = response.body?.string().orEmpty()
+                        throw RuntimeException("HTTP ${response.code}: $bodyText")
+                    }
+                }
+            }
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Log.w(TAG, "putBacklogItem failed for ${item.showId}", e)
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun deleteBacklogItem(showId: String): Result<Unit> {
+        val token = authService.getAuthToken()
+            ?: return Result.failure(IllegalStateException("Not signed in"))
+        val baseUrl = appPreferences.apiBaseUrl
+
+        return try {
+            withContext(Dispatchers.IO) {
+                val request = Request.Builder()
+                    .url("$baseUrl/api/user/backlog/$showId")
+                    .addHeader("Authorization", "Bearer $token")
+                    .delete()
+                    .build()
+                httpClient.newCall(request).execute().use { response ->
+                    if (!response.isSuccessful && response.code != 404) {
+                        val bodyText = response.body?.string().orEmpty()
+                        throw RuntimeException("HTTP ${response.code}: $bodyText")
+                    }
+                }
+            }
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Log.w(TAG, "deleteBacklogItem failed for $showId", e)
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun reorderBacklog(showIds: List<String>): Result<Unit> {
+        val token = authService.getAuthToken()
+            ?: return Result.failure(IllegalStateException("Not signed in"))
+        val baseUrl = appPreferences.apiBaseUrl
+        val bodyJson = json.encodeToString(BacklogReorderBody.serializer(), BacklogReorderBody(showIds))
+
+        return try {
+            withContext(Dispatchers.IO) {
+                val request = Request.Builder()
+                    .url("$baseUrl/api/user/backlog")
+                    .addHeader("Authorization", "Bearer $token")
+                    .put(bodyJson.toRequestBody("application/json".toMediaType()))
+                    .build()
+                httpClient.newCall(request).execute().use { response ->
+                    if (!response.isSuccessful) {
+                        val bodyText = response.body?.string().orEmpty()
+                        throw RuntimeException("HTTP ${response.code}: $bodyText")
+                    }
+                }
+            }
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Log.w(TAG, "reorderBacklog failed", e)
             Result.failure(e)
         }
     }

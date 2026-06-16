@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.design.resources.IconResources
+import com.grateful.deadly.core.model.AdvanceMode
 import com.grateful.deadly.core.model.PlayerControlsStyle
 import com.grateful.deadly.core.model.SourceBadgeStyle
 import com.grateful.deadly.feature.settings.BuildConfig
@@ -477,8 +478,19 @@ private fun PlaybackAudioSettingsScreen(
 ) {
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
+    val advanceMode by viewModel.advanceMode.collectAsState()
 
     SubscreenScaffold("Playback & Audio", onBack) {
+        item { SectionHeader("When a show ends") }
+
+        item {
+            AdvanceModeRow(
+                current = advanceMode,
+                onSelected = { viewModel.setAdvanceMode(it) }
+            )
+        }
+
+        item { HorizontalDivider() }
         item { SectionHeader("Controls") }
 
         item {
@@ -890,6 +902,40 @@ private fun ImportMigrationButton(viewModel: SettingsViewModel) {
 }
 
 // ── Player controls style selector ───────────────────────────────────────────
+
+@Composable
+private fun AdvanceModeRow(
+    current: AdvanceMode,
+    onSelected: (AdvanceMode) -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Autoplay", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "Off · play from your Show Queue (then stop) · keep playing chronologically.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            AdvanceMode.entries.forEachIndexed { index, mode ->
+                SegmentedButton(
+                    selected = current == mode,
+                    onClick = { onSelected(mode) },
+                    shape = SegmentedButtonDefaults.itemShape(
+                        index = index,
+                        count = AdvanceMode.entries.size
+                    )
+                ) {
+                    Text(mode.displayName)
+                }
+            }
+        }
+    }
+}
 
 @Composable
 private fun PlayerControlsStyleRow(

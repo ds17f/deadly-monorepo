@@ -49,7 +49,10 @@ fun NavController.navigateToPlaylist(
  * - playlist/{showId} - Let show logic decide which recording to display
  * - playlist/{showId}/{recordingId} - Display specific recording, with optional trackNumber query param
  */
-fun NavGraphBuilder.playlistGraph(navController: NavController) {
+fun NavGraphBuilder.playlistGraph(
+    navController: NavController,
+    onNavigateToShowQueue: () -> Unit
+) {
     // Specific recording route - playlist/{showId}/{recordingId}?trackNumber={trackNumber}&autoPlay={autoPlay}&openSheet={openSheet}
     composable(
         route = PLAYLIST_RECORDING_ROUTE,
@@ -88,6 +91,7 @@ fun NavGraphBuilder.playlistGraph(navController: NavController) {
             onNavigateToCollection = { collectionId, showId ->
                 navController.navigate("collectionDetail/$collectionId/$showId")
             },
+            onNavigateToUpNext = onNavigateToShowQueue,
             showId = showId,
             recordingId = recordingId,
             trackNumber = trackNumber,
@@ -128,6 +132,7 @@ fun NavGraphBuilder.playlistGraph(navController: NavController) {
             onNavigateToCollection = { collectionId, showId ->
                 navController.navigate("collectionDetail/$collectionId/$showId")
             },
+            onNavigateToUpNext = onNavigateToShowQueue,
             showId = showId,
             recordingId = null, // Let show logic decide
             autoPlay = autoPlay,

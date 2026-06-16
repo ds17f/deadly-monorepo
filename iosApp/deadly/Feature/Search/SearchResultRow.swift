@@ -79,6 +79,18 @@ struct SearchResultRow: View {
     @ViewBuilder
     private var favoriteContextMenu: some View {
         Button {
+            let showId = result.show.id
+            if container.backlogService.contains(showId) {
+                container.toastPresenter.show("Already in Show Queue")
+            } else {
+                container.backlogService.addToBottom(showId)
+                container.toastPresenter.show("Added to Show Queue")
+            }
+        } label: {
+            Label("Add to Show Queue", systemImage: "text.badge.plus")
+        }
+
+        Button {
             Task {
                 if isFavorite {
                     try? container.favoritesService.removeFromFavorites(showId: result.show.id)

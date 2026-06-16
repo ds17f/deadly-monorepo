@@ -93,11 +93,32 @@ class UserSyncCoordinator @Inject constructor(
             } catch (e: Exception) {
                 Log.w(TAG, "flush[$reason] failed: ${e.message}")
             }
-            triggerPull(reason)
+            // Inline (not via triggerPull) so we can read the reconcile delta the
+            // pull found and re-push it. Anti-entropy: a backlog add/remove whose
+            // event was dropped is detected here and healed on this foreground.
+            val result = applyService.pullAndApply()
+            result.fold(
+                onSuccess = { applied ->
+                    Log.d(TAG, "pull[$reason] ok: $applied")
+                    if (applied.backlogPushIds.isNotEmpty()) {
+                        try {
+                            favoritesPushService.get().reconcileBacklog(applied.backlogPushIds)
+                        } catch (e: Exception) {
+                            Log.w(TAG, "backlog reconcile[$reason] failed: ${e.message}")
+                        }
+                    }
+                },
+                onFailure = { Log.w(TAG, "pull[$reason] failed: ${it.message}") },
+            )
         }
     }
 
-    /** Public hook so FavoritesPushServiceImpl can fire a pull after a flush. */
+    /**
+     * Public hook so FavoritesPushServiceImpl can fire a pull after a flush.
+     * Deliberately does NOT run the backlog reconcile — only the foreground /
+     * sign-in [flushThenPull] does — so a reconcile push (which itself flushes
+     * and re-pulls here) can't recurse into another reconcile.
+     */
     fun triggerPull(reason: String) {
         scope.launch {
             val result = applyService.pullAndApply()

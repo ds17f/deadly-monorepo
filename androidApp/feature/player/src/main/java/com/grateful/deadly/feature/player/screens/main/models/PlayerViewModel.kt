@@ -14,6 +14,9 @@ import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.ToastController
 import com.grateful.deadly.core.database.autoplayToastMessage
+import com.grateful.deadly.core.database.advanceModeToastMessage
+import com.grateful.deadly.core.domain.repository.BacklogRepository
+import com.grateful.deadly.core.model.AdvanceMode
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
 import com.grateful.deadly.core.media.equalizer.EqualizerState
 import com.grateful.deadly.core.model.CurrentTrackInfo
@@ -40,6 +43,7 @@ class PlayerViewModel @Inject constructor(
     val appPreferences: AppPreferences,
     private val analyticsService: AnalyticsService,
     private val toastController: ToastController,
+    private val backlogRepository: BacklogRepository,
     @ApplicationContext private val appContext: Context
 ) : ViewModel() {
 
@@ -47,17 +51,22 @@ class PlayerViewModel @Inject constructor(
         private const val TAG = "PlayerViewModel"
     }
 
-    /** Autoplay (auto-advance to the next show when one ends). */
-    val autoAdvanceEnabled: StateFlow<Boolean> = appPreferences.autoAdvanceEnabled
+    /** Autoplay on = advance mode is not Off (drives the ∞ menu highlight). */
+    val autoAdvanceEnabled: StateFlow<Boolean> = appPreferences.advanceMode
+        .map { it != AdvanceMode.NONE }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, appPreferences.advanceMode.value != AdvanceMode.NONE)
 
-    fun toggleAutoAdvance() {
-        val newValue = !appPreferences.autoAdvanceEnabled.value
-        appPreferences.setAutoAdvanceEnabled(newValue)
-        toastController.show(autoplayToastMessage(newValue))
+    /** The active advance mode — drives the ∞ badge (None/Show Queue/Chronological). */
+    val advanceMode: StateFlow<AdvanceMode> = appPreferences.advanceMode
+
+    /** The ∞ control cycles None → Show Queue → Chronological → None, with a toast. */
+    fun cycleAdvanceMode() {
+        val next = appPreferences.cycleAdvanceMode()
+        toastController.show(advanceModeToastMessage(next))
         analyticsService.track("feature_use", mapOf(
-            "feature" to "toggle_auto_advance",
+            "feature" to "cycle_advance_mode",
             "category" to "playback",
-            "enabled" to newValue,
+            "mode" to next.name,
         ))
     }
 
@@ -330,6 +339,19 @@ class PlayerViewModel @Inject constructor(
                 favoritesService.downloadShow(showId)
             } catch (e: Exception) {
                 Log.e(TAG, "Error downloading show $showId", e)
+            }
+        }
+    }
+
+    /** Add the currently playing show to the backlog ("Up Next"). */
+    fun addToUpNext() {
+        val showId = uiState.value.navigationInfo.showId ?: return
+        viewModelScope.launch {
+            if (backlogRepository.contains(showId)) {
+                toastController.show("Already in Show Queue")
+            } else {
+                backlogRepository.addToBottom(showId)
+                toastController.show("Added to Show Queue")
             }
         }
     }

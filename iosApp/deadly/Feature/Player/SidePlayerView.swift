@@ -372,13 +372,17 @@ struct SidePlayerView: View {
 
     private var menuSheet: some View {
         ShowActionsMenuSheet(
-            isAutoplayEnabled: container.appPreferences.autoAdvanceEnabled,
+            autoplayMode: container.appPreferences.advanceMode,
             collectionsCount: showCollectionsCount,
             onChooseRecording: {
                 showMenuSheet = false
                 if let sid = currentShowId { onViewShow?(sid, .recording) }
             },
             onAutoplay: { toggleAutoAdvance() },
+            onViewUpNext: {
+                showMenuSheet = false
+                container.requestShowQueueTab()
+            },
             onSetlist: {
                 showMenuSheet = false
                 if let sid = currentShowId { onViewShow?(sid, .setlist) }
@@ -421,13 +425,12 @@ struct SidePlayerView: View {
     }
 
     private func toggleAutoAdvance() {
-        let newValue = !container.appPreferences.autoAdvanceEnabled
-        container.appPreferences.autoAdvanceEnabled = newValue
-        container.toastPresenter.show(autoplayToastMessage(newValue))
+        let next = container.appPreferences.cycleAdvanceMode()
+        container.toastPresenter.show(advanceModeToastMessage(next))
         container.analyticsService.track("feature_use", props: [
-            "feature": "toggle_auto_advance",
+            "feature": "cycle_advance_mode",
             "category": "playback",
-            "enabled": newValue,
+            "mode": next.rawValue,
         ])
     }
 

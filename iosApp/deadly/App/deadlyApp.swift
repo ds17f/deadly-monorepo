@@ -133,8 +133,7 @@ struct deadlyApp: App {
                     // Cold-start sync: if the user is already signed in when the
                     // app launches, flush any queued local changes, then pull.
                     if container.authService.isSignedIn {
-                        _ = await container.favoritesPushService.flushPending()
-                        _ = await container.userSyncApplyService.pullAndApply(reason: "cold_start")
+                        await container.syncFlushPullThenReconcile(reason: "cold_start")
                     }
                     // In-app messages: public feed, pulled unconditionally.
                     await container.notificationService.refresh(reason: "cold_start")
@@ -147,8 +146,7 @@ struct deadlyApp: App {
                             // startup backfill consumes its flag while still
                             // signed out — so sign-in is the only moment those
                             // rows get pushed. Pull-only would strand them.
-                            _ = await container.favoritesPushService.flushPending()
-                            _ = await container.userSyncApplyService.pullAndApply(reason: "sign_in")
+                            await container.syncFlushPullThenReconcile(reason: "sign_in")
                         }
                     }
                 }
@@ -163,8 +161,7 @@ struct deadlyApp: App {
                     container.connectService.startIfAuthenticated()
                     if container.authService.isSignedIn {
                         Task {
-                            _ = await container.favoritesPushService.flushPending()
-                            _ = await container.userSyncApplyService.pullAndApply(reason: "foreground")
+                            await container.syncFlushPullThenReconcile(reason: "foreground")
                         }
                     }
                     // In-app messages: public feed, pulled unconditionally.

@@ -18,8 +18,12 @@ final class FavoritesPushService {
     private let showReviewDAO: ShowReviewDAO
     private let showPlayerTagDAO: ShowPlayerTagDAO
     private let recordingPreferenceDAO: RecordingPreferenceDAO
+    private let backlogDAO: BacklogDAO
     private let apiClient: UserSyncAPIClient
     private let authService: AuthService
+
+    /// Constant refId for the coalesced reorder push (only one is ever pending).
+    private static let backlogReorderRef = "_order"
     /// Set by AppContainer after both services are constructed. Used to fire
     /// a pull after a successful flush so we reconcile changes other devices
     /// made during our window.
@@ -33,6 +37,7 @@ final class FavoritesPushService {
         showReviewDAO: ShowReviewDAO,
         showPlayerTagDAO: ShowPlayerTagDAO,
         recordingPreferenceDAO: RecordingPreferenceDAO,
+        backlogDAO: BacklogDAO,
         apiClient: UserSyncAPIClient,
         authService: AuthService
     ) {
@@ -43,8 +48,35 @@ final class FavoritesPushService {
         self.showReviewDAO = showReviewDAO
         self.showPlayerTagDAO = showPlayerTagDAO
         self.recordingPreferenceDAO = recordingPreferenceDAO
+        self.backlogDAO = backlogDAO
         self.apiClient = apiClient
         self.authService = authService
+    }
+
+    /// Enqueue a backlog add/remove/pop (refId = showId) and flush.
+    func enqueueAndPushBacklog(showId: String) {
+        enqueue(kind: SyncOutboxRecord.Kind.backlogItem, refId: showId)
+    }
+
+    /// Enqueue a backlog reorder (single coalesced entry) and flush.
+    func enqueueAndPushBacklogReorder() {
+        enqueue(kind: SyncOutboxRecord.Kind.backlogReorder, refId: Self.backlogReorderRef)
+    }
+
+    /// Re-push a set of backlog rows the pull found diverged (local newer or
+    /// missing on the server), then flush once. The anti-entropy backstop that
+    /// heals dropped add/remove events. No-op when the set is empty.
+    @discardableResult
+    func reconcileBacklog(showIds: [String]) async -> [PushResult] {
+        guard !showIds.isEmpty else { return [] }
+        print("[FavoritesPush] reconcileBacklog: re-pushing \(showIds.count) diverged backlog rows")
+        for showId in showIds {
+            enqueueRow(kind: SyncOutboxRecord.Kind.backlogItem, refId: showId)
+        }
+        // Positions can have diverged too; coalesce a single reorder push so the
+        // server order matches local after the rows land.
+        enqueueRow(kind: SyncOutboxRecord.Kind.backlogReorder, refId: Self.backlogReorderRef)
+        return await flushPending()
     }
 
     /// Enqueue every local favorite (shows + songs) plus the top recents,
@@ -74,6 +106,13 @@ final class FavoritesPushService {
         let recordingPrefs = (try? recordingPreferenceDAO.fetchAll()) ?? []
         for pref in recordingPrefs {
             enqueueRow(kind: SyncOutboxRecord.Kind.recordingPref, refId: pref.showId)
+        }
+        let backlog = (try? backlogDAO.fetchAll()) ?? []
+        for item in backlog {
+            enqueueRow(kind: SyncOutboxRecord.Kind.backlogItem, refId: item.showId)
+        }
+        if !backlog.isEmpty {
+            enqueueRow(kind: SyncOutboxRecord.Kind.backlogReorder, refId: Self.backlogReorderRef)
         }
         return await flushPending()
     }
@@ -141,6 +180,8 @@ final class FavoritesPushService {
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.recent))
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.review))
         results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.recordingPref))
+        results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.backlogItem))
+        results.append(contentsOf: await flushKind(SyncOutboxRecord.Kind.backlogReorder))
 
         // Reconcile after pushing — the server may have learned about changes
         // from other devices during our window. Only fire when something
@@ -183,7 +224,9 @@ final class FavoritesPushService {
         let recents = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.recent)) ?? 0
         let reviews = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.review)) ?? 0
         let recordingPrefs = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.recordingPref)) ?? 0
-        return shows + songs + recents + reviews + recordingPrefs
+        let backlogItems = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.backlogItem)) ?? 0
+        let backlogReorders = (try? outbox.pendingCount(kind: SyncOutboxRecord.Kind.backlogReorder)) ?? 0
+        return shows + songs + recents + reviews + recordingPrefs + backlogItems + backlogReorders
     }
 
     // MARK: - Internals
@@ -205,8 +248,62 @@ final class FavoritesPushService {
             return await pushReview(refId: entry.refId)
         case SyncOutboxRecord.Kind.recordingPref:
             return await pushRecordingPref(refId: entry.refId)
+        case SyncOutboxRecord.Kind.backlogItem:
+            return await pushBacklogItem(refId: entry.refId)
+        case SyncOutboxRecord.Kind.backlogReorder:
+            return await pushBacklogReorder()
         default:
             return .success(operation: "NOOP")
+        }
+    }
+
+    // Backlog item push by showId. Read the row (incl. tombstones) at push
+    // time: a live row is a PUT, a tombstoned or absent row is a DELETE.
+    private func pushBacklogItem(refId: String) async -> FlushOutcome {
+        let row: BacklogRecord?
+        do {
+            row = try backlogDAO.fetchByIdIncludingTombstones(refId)
+        } catch {
+            return .failure(operation: "?", error: "local read failed: \(error.localizedDescription)")
+        }
+
+        if let row, row.deletedAt == nil {
+            let item = SyncBacklogItemV3(
+                showId: row.showId,
+                position: Int(row.position),
+                addedAt: row.addedAt / 1000,
+                updatedAt: row.updatedAt / 1000,
+                deletedAt: nil
+            )
+            do {
+                try await apiClient.putBacklogItem(item)
+                return .success(operation: "PUT")
+            } catch {
+                return .failure(operation: "PUT", error: error.localizedDescription)
+            }
+        } else {
+            do {
+                try await apiClient.deleteBacklogItem(showId: refId)
+                return .success(operation: "DELETE")
+            } catch {
+                return .failure(operation: "DELETE", error: error.localizedDescription)
+            }
+        }
+    }
+
+    // Reorder push: read the current live order and PUT the whole list.
+    private func pushBacklogReorder() async -> FlushOutcome {
+        let showIds: [String]
+        do {
+            showIds = try backlogDAO.fetchAll().map { $0.showId }
+        } catch {
+            return .failure(operation: "?", error: "local read failed: \(error.localizedDescription)")
+        }
+        do {
+            try await apiClient.reorderBacklog(showIds: showIds)
+            return .success(operation: "PUT")
+        } catch {
+            return .failure(operation: "PUT", error: error.localizedDescription)
         }
     }
 

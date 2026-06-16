@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useUserData } from "@/contexts/UserDataContext";
 import { usePlayer } from "@/contexts/PlayerContext";
+import { ADVANCE_MODE_LABEL } from "@/lib/playbackPrefs";
 import QrButton from "@/components/share/QrButton";
 import RecordingMenu from "@/components/player/RecordingMenu";
 import { useShareLink } from "@/components/share/useShareLink";
@@ -35,10 +36,19 @@ export default function HeroActions({
   review?: AiShowReview | null;
 }) {
   const player = usePlayer();
-  const { isFavorite, toggleFavorite, getReview, saveReview, removeReview } =
+  const { isFavorite, toggleFavorite, getReview, saveReview, removeReview, isInQueue, addToQueue, removeFromQueue } =
     useUserData();
 
   const fav = isFavorite(showId);
+  const inQueue = isInQueue(showId);
+
+  function handleToggleQueue() {
+    if (inQueue) {
+      removeFromQueue(showId);
+    } else {
+      addToQueue({ showId, position: 0, addedAt: Math.floor(Date.now() / 1000), date, venue, image, bestRecordingId });
+    }
+  }
   const existing = getReview(showId);
 
   // Which recording Play will load (and what QR/Share point at). Seeded from the
@@ -178,9 +188,21 @@ export default function HeroActions({
         </IconButton>
 
         <IconButton
+          active={inQueue}
+          onClick={handleToggleQueue}
+          label={inQueue ? "In your Show Queue — tap to remove" : "Add to Show Queue"}
+        >
+          <Icon name="queue" filled={inQueue} />
+        </IconButton>
+
+        <IconButton
           active={player.autoAdvanceEnabled}
-          onClick={player.toggleAutoAdvance}
-          label="Autoplay Next Show — roll into the next show when this one ends"
+          onClick={player.cycleAdvanceMode}
+          label={
+            player.advanceMode === "none"
+              ? "Autoplay: Off — tap to cycle (Show Queue · Chronological)"
+              : `Autoplay: ${ADVANCE_MODE_LABEL[player.advanceMode]} — tap to cycle`
+          }
         >
           <Icon name="autoplay" />
         </IconButton>
@@ -288,9 +310,17 @@ function IconButton({
   );
 }
 
-function Icon({ name, filled }: { name: "play" | "pause" | "heart" | "star" | "share" | "qr" | "autoplay"; filled?: boolean }) {
+function Icon({ name, filled }: { name: "play" | "pause" | "heart" | "star" | "share" | "qr" | "autoplay" | "queue"; filled?: boolean }) {
   const common = { width: 18, height: 18, viewBox: "0 0 24 24" };
   if (name === "play") return <svg {...common} fill="currentColor"><path d="M8 5v14l11-7z" /></svg>;
+  if (name === "queue")
+    // Stacked cards — the Show Queue mark, matching the mobile square.stack glyph.
+    return (
+      <svg {...common} fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
+        <rect x="7" y="3" width="14" height="14" rx="2" />
+        <path d="M3 7v12a2 2 0 0 0 2 2h12" />
+      </svg>
+    );
   if (name === "autoplay")
     return (
       <svg {...common} fill="currentColor">

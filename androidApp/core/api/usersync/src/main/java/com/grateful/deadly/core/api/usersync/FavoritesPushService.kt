@@ -21,6 +21,16 @@ interface FavoritesPushService {
      *  reads the recording_preferences row at push time; an absent/tombstoned
      *  row becomes a DELETE. */
     fun enqueueAndPushRecordingPref(showId: String)
+    /** Enqueue a backlog add/remove/pop (refId is the showId). The flusher
+     *  reads the backlog row at push time; a tombstone/absent row becomes a
+     *  DELETE. */
+    fun enqueueAndPushBacklog(showId: String)
+    /** Enqueue a backlog reorder (single coalesced entry). */
+    fun enqueueAndPushBacklogReorder()
+    /** Re-push a set of backlog rows the pull found diverged (local newer or
+     *  missing on the server), then flush once. The anti-entropy backstop that
+     *  heals dropped add/remove events. No-op when the set is empty. */
+    suspend fun reconcileBacklog(showIds: List<String>): List<PushResult>
     /** Enqueue all local favorites (shows + songs) + top recents, then flush.
      *  Backs the one-time startup backfill and a manual "Sync now". */
     suspend fun enqueueAllLocalAndFlush(): List<PushResult>

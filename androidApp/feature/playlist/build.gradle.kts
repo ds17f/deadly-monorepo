@@ -50,6 +50,7 @@ dependencies {
     implementation(project(":core:api:playlist"))
     implementation(project(":core:api:favorites"))
     implementation(project(":core:api:recent"))
+    implementation(project(":core:domain"))
     implementation(project(":core:playlist"))
     implementation(project(":core:model"))
     implementation(project(":core:design"))

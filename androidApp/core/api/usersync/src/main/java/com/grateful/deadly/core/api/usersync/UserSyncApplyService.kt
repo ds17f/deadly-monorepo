@@ -29,4 +29,8 @@ data class ApplyResult(
     val reviewsApplied: Int = 0,
     val reviewsSkippedLocalNewer: Int = 0,
     val reviewsSkippedMissingShow: Int = 0,
+    // Show-queue rows the server is missing or has an older copy of, found while
+    // applying the pull. The coordinator re-pushes these so a dropped add/remove
+    // event self-heals on the next foreground (anti-entropy backstop).
+    val backlogPushIds: List<String> = emptyList(),
 )

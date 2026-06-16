@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.search.SearchService
+import com.grateful.deadly.core.database.ToastController
+import com.grateful.deadly.core.domain.repository.BacklogRepository
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.network.archive.service.ArchiveService
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -41,8 +43,22 @@ sealed interface ReviewsState {
 class SearchViewModel @Inject constructor(
     private val searchService: SearchService,
     private val favoritesService: FavoritesService,
-    private val archiveService: ArchiveService
+    private val archiveService: ArchiveService,
+    private val backlogRepository: BacklogRepository,
+    private val toastController: ToastController
 ) : ViewModel() {
+
+    /** Add a show to the backlog ("Up Next") from the long-press sheet. */
+    fun addToUpNext(showId: String) {
+        viewModelScope.launch {
+            if (backlogRepository.contains(showId)) {
+                toastController.show("Already in Show Queue")
+            } else {
+                backlogRepository.addToBottom(showId)
+                toastController.show("Added to Show Queue")
+            }
+        }
+    }
     
     companion object {
         private const val TAG = "SearchViewModel"

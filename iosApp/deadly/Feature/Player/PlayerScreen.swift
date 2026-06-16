@@ -415,13 +415,17 @@ struct PlayerScreen: View {
     // and Autoplay act in place.
     private var playerMenuSheet: some View {
         ShowActionsMenuSheet(
-            isAutoplayEnabled: container.appPreferences.autoAdvanceEnabled,
+            autoplayMode: container.appPreferences.advanceMode,
             collectionsCount: showCollectionsCount,
             onChooseRecording: {
                 showPlayerMenuSheet = false
                 if let sid = currentShowId { onViewShow?(sid, .recording) }
             },
             onAutoplay: { toggleAutoAdvance() },
+            onViewUpNext: {
+                showPlayerMenuSheet = false
+                viewShowQueue()
+            },
             onSetlist: {
                 showPlayerMenuSheet = false
                 if let sid = currentShowId { onViewShow?(sid, .setlist) }
@@ -448,14 +452,20 @@ struct PlayerScreen: View {
         }
     }
 
+    /// Open the Show Queue (Favorites tab) and dismiss the full player.
+    private func viewShowQueue() {
+        container.requestShowQueueTab()
+        isPresented = false
+    }
+
     private func toggleAutoAdvance() {
-        let newValue = !container.appPreferences.autoAdvanceEnabled
-        container.appPreferences.autoAdvanceEnabled = newValue
-        container.toastPresenter.show(autoplayToastMessage(newValue))
+        // The ∞ control cycles None → Show Queue → Chronological → None, with a toast.
+        let next = container.appPreferences.cycleAdvanceMode()
+        container.toastPresenter.show(advanceModeToastMessage(next))
         container.analyticsService.track("feature_use", props: [
-            "feature": "toggle_auto_advance",
+            "feature": "cycle_advance_mode",
             "category": "playback",
-            "enabled": newValue,
+            "mode": next.rawValue,
         ])
     }
 

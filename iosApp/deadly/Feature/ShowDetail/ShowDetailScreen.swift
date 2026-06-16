@@ -27,6 +27,9 @@ struct ShowDetailScreen: View {
     @State private var showRecordingPicker = false
     @State private var showEqualizerSheet = false
     @State private var isFavorite = false
+    @State private var isInQueue = false
+    @State private var showQueueRemoveAlert = false
+    @State private var showQueuePlayConfirm = false
     @State private var isDownloading = false
     @State private var showRemoveDownloadAlert = false
     @State private var showCancelDownloadAlert = false
@@ -78,6 +81,16 @@ struct ShowDetailScreen: View {
             do {
                 for try await review in container.reviewService.observeShowReview(showId: activeShowId) {
                     userReview = review.hasContent ? review : nil
+                }
+            } catch {}
+        }
+        .task(id: playlistService.currentShow?.id ?? showId) {
+            // Keep the Show Queue toggle in sync — flips live when a row is
+            // added/removed (here, the queue list, or a synced event).
+            let activeShowId = playlistService.currentShow?.id ?? showId
+            do {
+                for try await records in container.backlogService.observe() {
+                    isInQueue = records.contains { $0.showId == activeShowId }
                 }
             } catch {}
         }
@@ -198,6 +211,24 @@ struct ShowDetailScreen: View {
 
                     downloadButton
 
+                    // Show Queue toggle — tap to add/remove (remove confirms),
+                    // long-press to jump to the queue. ExclusiveGesture gives the
+                    // long-press priority so a hold doesn't also fire the tap.
+                    // `square.stack` = the Show-Queue mark (matches the ∞ badge).
+                    Image(systemName: isInQueue ? "square.stack.fill" : "square.stack")
+                        .font(.title2)
+                        .foregroundStyle(isInQueue ? DeadlyColors.primary : .secondary)
+                        .frame(width: 44, height: 44)
+                        .contentShape(Rectangle())
+                        .gesture(
+                            ExclusiveGesture(
+                                LongPressGesture(minimumDuration: 0.4)
+                                    .onEnded { _ in container.requestShowQueueTab() },
+                                TapGesture()
+                                    .onEnded { toggleQueue() }
+                            )
+                        )
+
                     // Menu button
                     Button {
                         showMenuSheet = true
@@ -215,9 +246,7 @@ struct ShowDetailScreen: View {
                     Button {
                         toggleAutoAdvance()
                     } label: {
-                        Image(systemName: "infinity")
-                            .font(.title2)
-                            .foregroundStyle(container.appPreferences.autoAdvanceEnabled ? DeadlyColors.primary : .secondary)
+                        AutoplayModeIcon(mode: container.appPreferences.advanceMode)
                             .frame(width: 44, height: 44)
                     }
                     .buttonStyle(.plain)
@@ -387,6 +416,25 @@ struct ShowDetailScreen: View {
         } message: {
             Text("This will stop the download and remove any partially downloaded files.")
         }
+        .alert("Remove from Show Queue?", isPresented: $showQueueRemoveAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("Remove", role: .destructive) {
+                container.backlogService.remove(currentShowId)
+                container.toastPresenter.show("Removed from Show Queue")
+            }
+        }
+        .confirmationDialog(
+            "This show is in your Show Queue",
+            isPresented: $showQueuePlayConfirm,
+            titleVisibility: .visible
+        ) {
+            Button("Play & Remove") {
+                container.backlogService.remove(currentShowId)
+                startNewShowPlayback()
+            }
+            Button("Just Play") { startNewShowPlayback() }
+            Button("Cancel", role: .cancel) { }
+        }
     }
 
     // MARK: - Error state
@@ -448,13 +496,12 @@ struct ShowDetailScreen: View {
     // MARK: - Menu sheet
 
     private func toggleAutoAdvance() {
-        let newValue = !container.appPreferences.autoAdvanceEnabled
-        container.appPreferences.autoAdvanceEnabled = newValue
-        container.toastPresenter.show(autoplayToastMessage(newValue))
+        let next = container.appPreferences.cycleAdvanceMode()
+        container.toastPresenter.show(advanceModeToastMessage(next))
         container.analyticsService.track("feature_use", props: [
-            "feature": "toggle_auto_advance",
+            "feature": "cycle_advance_mode",
             "category": "playback",
-            "enabled": newValue,
+            "mode": next.rawValue,
         ])
     }
 
@@ -463,7 +510,7 @@ struct ShowDetailScreen: View {
     // surfaces Choose Recording · Equalizer | Collections | Share.
     private func menuSheet(_ show: Show) -> some View {
         ShowActionsMenuSheet(
-            isAutoplayEnabled: container.appPreferences.autoAdvanceEnabled,
+            autoplayMode: container.appPreferences.advanceMode,
             collectionsCount: showCollections.count,
             onChooseRecording: show.hasMultipleRecordings ? {
                 showMenuSheet = false
@@ -476,6 +523,14 @@ struct ShowDetailScreen: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     showEqualizerSheet = true
                 }
+            },
+            onViewUpNext: {
+                showMenuSheet = false
+                container.requestShowQueueTab()
+            },
+            onAddToUpNext: {
+                showMenuSheet = false
+                addToUpNext()
             },
             onCollections: {
                 showMenuSheet = false
@@ -491,6 +546,15 @@ struct ShowDetailScreen: View {
             } : nil,
             onDone: { showMenuSheet = false }
         )
+    }
+
+    private func addToUpNext() {
+        if container.backlogService.contains(currentShowId) {
+            container.toastPresenter.show("Already in Show Queue")
+        } else {
+            container.backlogService.addToBottom(currentShowId)
+            container.toastPresenter.show("Added to Show Queue")
+        }
     }
 
     // MARK: - Play button
@@ -567,8 +631,7 @@ struct ShowDetailScreen: View {
                 }
             } else {
                 // Different show — playTrack already sends sendLoad with autoplay.
-                playlistService.playTrack(at: 0, source: "browse")
-                playlistService.recordRecentPlay()
+                requestPlayNewShow()
             }
         } else if isCurrentShowActive {
             // Local/active device: toggle local + send connect command optimistically.
@@ -581,8 +644,35 @@ struct ShowDetailScreen: View {
             }
         } else {
             // New show — playTrack handles local audio + sendLoad.
-            playlistService.playTrack(at: 0, source: "browse")
-            playlistService.recordRecentPlay()
+            requestPlayNewShow()
+        }
+    }
+
+    /// Start playing this show fresh. If it's in the Show Queue, ask first
+    /// (Play & Remove · Just Play) so playing doesn't silently leave a played
+    /// show sitting in the queue. Only on the playlist screen — the miniplayer
+    /// already made that call when the show got there.
+    private func requestPlayNewShow() {
+        if container.backlogService.contains(currentShowId) {
+            showQueuePlayConfirm = true
+        } else {
+            startNewShowPlayback()
+        }
+    }
+
+    private func startNewShowPlayback() {
+        playlistService.playTrack(at: 0, source: "browse")
+        playlistService.recordRecentPlay()
+    }
+
+    /// Tap the Show Queue toggle: add instantly (with a toast), or confirm
+    /// before removing — removing is the destructive direction.
+    private func toggleQueue() {
+        if container.backlogService.contains(currentShowId) {
+            showQueueRemoveAlert = true
+        } else {
+            container.backlogService.addToBottom(currentShowId)
+            container.toastPresenter.show("Added to Show Queue")
         }
     }
 

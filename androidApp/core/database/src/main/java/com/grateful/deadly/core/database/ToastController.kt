@@ -35,3 +35,14 @@ class ToastController @Inject constructor() {
  */
 fun autoplayToastMessage(enabled: Boolean): String =
     if (enabled) "Autoplay on — the next show plays when this one ends" else "Autoplay off"
+
+/**
+ * Shared copy for the ∞ Autoplay control cycling through advance modes
+ * (ADR-0010 Amendment). Names the mode the user just landed on.
+ */
+fun advanceModeToastMessage(mode: com.grateful.deadly.core.model.AdvanceMode): String =
+    when (mode) {
+        com.grateful.deadly.core.model.AdvanceMode.NONE -> "Autoplay off"
+        com.grateful.deadly.core.model.AdvanceMode.SHOW_QUEUE -> "Autoplay: Show Queue — plays your queue, then stops"
+        com.grateful.deadly.core.model.AdvanceMode.CHRONOLOGICAL -> "Autoplay: Chronological — plays the next show by date"
+    }

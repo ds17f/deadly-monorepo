@@ -10,9 +10,11 @@ import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.ToastController
 import com.grateful.deadly.core.database.autoplayToastMessage
+import com.grateful.deadly.core.database.advanceModeToastMessage
 import com.grateful.deadly.core.api.favorites.FavoritesService
 import com.grateful.deadly.core.api.favorites.ReviewService
 import com.grateful.deadly.core.api.recent.RecentShowsService
+import com.grateful.deadly.core.domain.repository.BacklogRepository
 import com.grateful.deadly.core.model.*
 import com.grateful.deadly.core.model.ShowReview
 import com.grateful.deadly.core.connect.ConnectService
@@ -62,6 +64,7 @@ class PlaylistViewModel @Inject constructor(
     private val analyticsService: AnalyticsService,
     private val connectService: ConnectService,
     private val toastController: ToastController,
+    private val backlogRepository: BacklogRepository,
     networkMonitor: NetworkMonitor,
     val appPreferences: AppPreferences,
     @ApplicationContext private val appContext: Context
@@ -94,18 +97,49 @@ class PlaylistViewModel @Inject constructor(
     private val _showWriteReview = MutableStateFlow(false)
     val showWriteReview: StateFlow<Boolean> = _showWriteReview.asStateFlow()
 
-    /** Autoplay (auto-advance to the next show when one ends). */
-    val autoAdvanceEnabled: StateFlow<Boolean> = appPreferences.autoAdvanceEnabled
+    /** Add the current show to the backlog ("Up Next"). */
+    fun addToUpNext() {
+        val showId = uiState.value.showData?.showId ?: return
+        viewModelScope.launch {
+            if (backlogRepository.contains(showId)) {
+                toastController.show("Already in Show Queue")
+            } else {
+                backlogRepository.addToBottom(showId)
+                toastController.show("Added to Show Queue")
+            }
+        }
+    }
 
-    fun toggleAutoAdvance() {
-        val newValue = !appPreferences.autoAdvanceEnabled.value
-        appPreferences.setAutoAdvanceEnabled(newValue)
-        toastController.show(autoplayToastMessage(newValue))
+    /** Autoplay on = advance mode is not Off (drives the ∞ menu highlight). */
+    val autoAdvanceEnabled: StateFlow<Boolean> = appPreferences.advanceMode
+        .map { it != AdvanceMode.NONE }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, appPreferences.advanceMode.value != AdvanceMode.NONE)
+
+    /** The active advance mode — drives the ∞ badge (None/Show Queue/Chronological). */
+    val advanceMode: StateFlow<AdvanceMode> = appPreferences.advanceMode
+
+    /** The ∞ control cycles None → Show Queue → Chronological → None, with a toast. */
+    fun cycleAdvanceMode() {
+        val next = appPreferences.cycleAdvanceMode()
+        toastController.show(advanceModeToastMessage(next))
         analyticsService.track("feature_use", mapOf(
-            "feature" to "toggle_auto_advance",
+            "feature" to "cycle_advance_mode",
             "category" to "playback",
-            "enabled" to newValue,
+            "mode" to next.name,
         ))
+    }
+
+    /** Tap the Show Queue toggle when not queued — add the current show (+toast). */
+    fun addToQueue() = addToUpNext()
+
+    /** Remove the current show from the Show Queue. Silent for the Play & Remove
+     *  path (which has its own context); toasts otherwise. */
+    fun removeFromQueue(silent: Boolean = false) {
+        val showId = uiState.value.showData?.showId ?: return
+        viewModelScope.launch {
+            backlogRepository.remove(showId)
+            if (!silent) toastController.show("Removed from Show Queue")
+        }
     }
 
     init {
@@ -323,7 +357,14 @@ class PlaylistViewModel @Inject constructor(
         started = SharingStarted.WhileSubscribed(5000),
         initialValue = PlaylistUiState()
     )
-    
+
+    /** Whether the current show is in the Show Queue (drives the toggle highlight). */
+    val isInQueue: StateFlow<Boolean> = combine(
+        uiState.map { it.showData?.showId }.distinctUntilChanged(),
+        backlogRepository.observeShowIds()
+    ) { showId, ids -> showId != null && ids.contains(showId) }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
+
     // Track current track loading job for cancellation
     private var trackLoadingJob: Job? = null
     
