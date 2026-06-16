@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.40.1] - 2026-06-15
+
+### Bug Fixes
+* trust the playing device over stale server track state (#79) (3cd2e8c1)
+
+
 ## [2.40.0] - 2026-06-14
 
 ### New Features
@@ -8,8 +14,6 @@
 
 ### Bug Fixes
 * fall back to version-safe catalog seed write on SQLite < 3.24 (#77) (8bd10da1)
-
-
 ## [2.39.0] - 2026-06-13
 
 ### New Features
