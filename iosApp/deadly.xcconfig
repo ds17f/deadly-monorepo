@@ -1,0 +1,12 @@
+// Base build configuration for the deadly app target.
+//
+// GIT_COMMIT_HASH is substituted into Info.plist (key `GitCommitHash`) and shown
+// in the Developer screen, linking to the commit on GitHub.
+//
+// It defaults to empty here and is overridden by a generated GitHash.xcconfig
+// (gitignored) written by `make remote-sync` for dev builds and by the iOS CI
+// workflow for releases. The optional include is silently skipped when that file
+// is absent (e.g. a plain Xcode GUI build), in which case the hash shows as
+// "unknown" rather than failing the build.
+GIT_COMMIT_HASH =
+#include? "GitHash.xcconfig"

@@ -32,6 +32,10 @@ tmp-data/
 # iOS secrets — never commit the live file; use Secrets.swift.example as template
 iosApp/deadly/App/Secrets.swift
 
+# Generated commit-hash xcconfig (written by `make remote-sync` and iOS CI);
+# overrides GIT_COMMIT_HASH in iosApp/deadly.xcconfig. The base xcconfig IS committed.
+iosApp/GitHash.xcconfig
+
 # Claude Code local config
 .claude/
 # Pi local config
