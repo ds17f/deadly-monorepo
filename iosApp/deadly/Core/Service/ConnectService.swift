@@ -52,6 +52,7 @@ final class ConnectService: NSObject {
     private var webSocket: URLSessionWebSocketTask?
     private var urlSession: URLSession?
     private var heartbeatTask: Task<Void, Never>?
+    private var pingTask: Task<Void, Never>?
     private var positionReportTask: Task<Void, Never>?
     private var reconnectTask: Task<Void, Never>?
     private var timeSyncRefreshTask: Task<Void, Never>?
@@ -82,6 +83,16 @@ final class ConnectService: NSObject {
     private static let protocolVersion = 1
     private static let reconnectDelays: [Double] = [1, 2, 4, 8, 30]
     private static let heartbeatInterval: UInt64 = 15_000_000_000 // 15s in nanoseconds
+    // WS keep-alive ping. URLSessionWebSocketTask has no built-in keep-alive: a
+    // half-open socket only errors on the OS TCP timeout (~minutes), during which
+    // this device is a ghost that keeps playing while the server hands the session
+    // to another device (double-play). We ping every interval and force a reconnect
+    // if no pong returns within pingTimeout — so detection (~ping+timeout = 30s) lands
+    // inside the server's 45s heartbeat-sweep eviction (api/src/connect/state.ts),
+    // letting us reassert before the session is handed away. One coupled budget with
+    // the sweep; see ADR-0016. (Android gets this free via OkHttp pingInterval.)
+    private static let pingInterval: UInt64 = 20_000_000_000 // 20s in nanoseconds
+    private static let pingTimeout: TimeInterval = 10 // seconds to wait for a pong
     private static let timeSyncRefreshInterval: UInt64 = 5 * 60 * 1_000_000_000 // 5 min
     private static let timeSyncSamples = 3
     private static let timeSyncSampleSpacing: UInt64 = 200_000_000 // 200ms
@@ -788,6 +799,67 @@ final class ConnectService: NSObject {
                 webSocket?.send(.string(buildHeartbeat())) { _ in }
             }
         }
+        startPing()
+    }
+
+    // Active liveness probe (see pingInterval doc above). Sends a WS ping and, if no
+    // pong returns within pingTimeout, declares the socket dead and reconnects —
+    // URLSession won't surface a half-open socket on its own.
+    private func startPing() {
+        stopPing()
+        pingTask = Task {
+            while !Task.isCancelled {
+                try? await Task.sleep(nanoseconds: Self.pingInterval)
+                guard !Task.isCancelled, let ws = webSocket else { continue }
+                let alive = await Self.awaitPong(ws, timeout: Self.pingTimeout)
+                guard !Task.isCancelled else { break }
+                if !alive {
+                    logger.warning("ping: no pong within \(Self.pingTimeout, privacy: .public)s — socket dead, reconnecting")
+                    ws.cancel(with: .goingAway, reason: nil)
+                    handleDisconnect(closeCode: nil)
+                    break
+                }
+            }
+        }
+    }
+
+    private func stopPing() {
+        pingTask?.cancel()
+        pingTask = nil
+    }
+
+    // Returns true if a pong arrives before the timeout, false otherwise.
+    //
+    // Resumes the continuation exactly once — from whichever of {pong handler,
+    // timeout} fires first. Deliberately NOT a task group: URLSession's sendPing
+    // handler never fires on a frozen/half-open peer, and withCheckedContinuation
+    // is not cancellation-aware, so a task group would implicitly await that hung
+    // child forever and never surface the timeout — the socket then limps on until
+    // the OS TCP timeout (the very bug this is meant to catch; observed on-device as
+    // the ping never firing and the server's 4001 heartbeat-timeout doing the work
+    // instead). The lock-guarded gate lets the timeout win cleanly and abandons the
+    // dead ping handler. nonisolated/static so it runs off the main actor.
+    private nonisolated static func awaitPong(_ ws: URLSessionWebSocketTask, timeout: TimeInterval) async -> Bool {
+        // Single-resume gate: the first of {pong, timeout} to arrive wins.
+        final class Gate: @unchecked Sendable {
+            private let lock = NSLock()
+            private var done = false
+            func claim() -> Bool {
+                lock.lock(); defer { lock.unlock() }
+                if done { return false }
+                done = true
+                return true
+            }
+        }
+        return await withCheckedContinuation { cont in
+            let gate = Gate()
+            ws.sendPing { error in
+                if gate.claim() { cont.resume(returning: error == nil) }
+            }
+            DispatchQueue.global().asyncAfter(deadline: .now() + timeout) {
+                if gate.claim() { cont.resume(returning: false) }
+            }
+        }
     }
 
     // ADR-0011 Chunk B: renew the ownership lease. When audio is loaded locally,
@@ -814,6 +886,7 @@ final class ConnectService: NSObject {
     private func stopHeartbeat() {
         heartbeatTask?.cancel()
         heartbeatTask = nil
+        stopPing()
     }
 
     // MARK: - Disconnect / Reconnect
@@ -828,6 +901,10 @@ final class ConnectService: NSObject {
     }
 
     private func handleDisconnect(closeCode: Int?) {
+        // Idempotent: a ping-initiated teardown and the cancelled task's delegate
+        // callback (didCloseWith / didCompleteWithError) can both land here for the
+        // same socket. First one wins; the duplicate must not schedule a 2nd reconnect.
+        guard isConnected || webSocket != nil else { return }
         stopHeartbeat()
         stopTimeSyncRefresh()
         stopPositionReporting()
