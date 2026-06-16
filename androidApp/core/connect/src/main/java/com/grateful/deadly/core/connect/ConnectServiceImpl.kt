@@ -60,6 +60,16 @@ class ConnectServiceImpl @Inject constructor(
         private const val CONNECT_PROTOCOL_VERSION = 1
         private val RECONNECT_DELAYS_S = listOf(1L, 2L, 4L, 8L, 30L)
         private const val HEARTBEAT_INTERVAL_MS = 15_000L
+        // WS keep-alive ping. readTimeout(0) keeps the read side open forever but
+        // gives NO liveness check; without pings a half-open socket is only caught
+        // by the OS TCP timeout (~4.5 min observed), during which this device is a
+        // ghost that keeps playing while the server frees the session to another
+        // device (double-play). OkHttp fails the socket after ~ping..2*ping with no
+        // pong, so 20s ⇒ 20–40s detection — inside the server's 45s heartbeat-sweep
+        // eviction (api/src/connect/state.ts), so we reconnect/reassert before the
+        // session is handed away. This is one coupled budget with the sweep; see
+        // ADR-0016. Keep it < ~22s (2*ping < 45s) if either constant changes.
+        private const val PING_INTERVAL_MS = 20_000L
         private const val CLOSE_CODE_UNAUTHORIZED = 4003
         private const val DEFAULT_FORMAT = "VBR MP3"
         private const val HARDWARE_VOLUME_DEBOUNCE_MS = 300L
@@ -84,6 +94,7 @@ class ConnectServiceImpl @Inject constructor(
     private val json = Json { ignoreUnknownKeys = true }
     private val okHttpClient = OkHttpClient.Builder()
         .readTimeout(0, TimeUnit.MILLISECONDS) // required for WebSocket keep-alive
+        .pingInterval(PING_INTERVAL_MS, TimeUnit.MILLISECONDS) // detect dead peer → fail fast → reconnect
         .build()
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
