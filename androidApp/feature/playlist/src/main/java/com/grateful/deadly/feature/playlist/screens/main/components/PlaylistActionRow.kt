@@ -1,17 +1,12 @@
 package com.grateful.deadly.feature.playlist.screens.main.components
 
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.grateful.deadly.core.design.component.AutoplayModeIcon
 import com.grateful.deadly.core.design.resources.IconResources
-import com.grateful.deadly.core.model.AdvanceMode
 import com.grateful.deadly.core.model.FavoritesAction
 import com.grateful.deadly.core.model.FavoritesDownloadStatus
 import com.grateful.deadly.core.model.PlaylistShowViewModel
@@ -27,21 +22,17 @@ import com.grateful.deadly.core.model.PlaylistShowViewModel
  * Collections left the inline row for the "⋯" menu (shown only when the show is
  * in ≥1 collection).
  */
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun PlaylistActionRow(
     showData: PlaylistShowViewModel,
     isPlaying: Boolean,
     isLoading: Boolean,
     isCurrentShowAndRecording: Boolean,
-    advanceMode: AdvanceMode,
-    isInQueue: Boolean,
+    isAutoplayEnabled: Boolean,
     onFavoritesAction: (FavoritesAction) -> Unit,
     onDownload: () -> Unit,
     onShowSetlist: () -> Unit,
     onToggleAutoplay: () -> Unit,
-    onToggleQueue: () -> Unit,
-    onOpenQueue: () -> Unit,
     onShowMenu: () -> Unit,
     onTogglePlayback: () -> Unit,
     modifier: Modifier = Modifier
@@ -167,32 +158,6 @@ fun PlaylistActionRow(
                 }
             }
 
-            // Show Queue toggle — tap to add/remove (remove confirms upstream),
-            // long-press to jump to the queue. The list glyph matches the ∞
-            // Show-Queue badge so the mark reads the same everywhere.
-            Box(
-                modifier = Modifier
-                    .size(40.dp)
-                    .combinedClickable(
-                        interactionSource = remember { MutableInteractionSource() },
-                        indication = null,
-                        onClick = onToggleQueue,
-                        onLongClick = onOpenQueue,
-                    ),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    painter = IconResources.PlayerControls.ShowQueueMark(),
-                    contentDescription = if (isInQueue) "In Show Queue" else "Add to Show Queue",
-                    tint = if (isInQueue) {
-                        MaterialTheme.colorScheme.primary
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    },
-                    modifier = Modifier.size(24.dp)
-                )
-            }
-
             // Menu button
             IconButton(
                 onClick = onShowMenu,
@@ -212,13 +177,21 @@ fun PlaylistActionRow(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Autoplay button (auto-advance to the next show when one ends).
-            // The ∞ carries a mode badge: list = Show Queue, calendar = Chrono.
+            // Autoplay button (auto-advance to the next show when one ends)
             IconButton(
                 onClick = onToggleAutoplay,
                 modifier = Modifier.size(40.dp)
             ) {
-                AutoplayModeIcon(mode = advanceMode)
+                Icon(
+                    painter = IconResources.PlayerControls.Autoplay(),
+                    contentDescription = if (isAutoplayEnabled) "Autoplay (active)" else "Autoplay",
+                    tint = if (isAutoplayEnabled) {
+                        MaterialTheme.colorScheme.primary
+                    } else {
+                        MaterialTheme.colorScheme.onSurfaceVariant
+                    },
+                    modifier = Modifier.size(24.dp)
+                )
             }
 
             // Play/Pause button (large) with loading state

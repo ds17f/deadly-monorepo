@@ -3,10 +3,10 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { UserDataContext } from "@/contexts/UserDataContext";
-import { fetchUserSync, updateFavoriteShow, deleteFavoriteShow, updateFavoriteSong, deleteFavoriteSong, updateReview, deleteReview, fetchBacklog, updateBacklogItem, deleteBacklogItem, reorderBacklog } from "@/lib/userDataApi";
+import { fetchUserSync, updateFavoriteShow, deleteFavoriteShow, updateFavoriteSong, deleteFavoriteSong, updateReview, deleteReview } from "@/lib/userDataApi";
 import * as analytics from "@/lib/analytics";
 import { notifyUserDataChanged } from "@/lib/userDataEvents";
-import type { UserDataBackupV3, FavoriteShow, FavoriteTrack, ShowReview, BacklogItem } from "@/types/userdata";
+import type { UserDataBackupV3, FavoriteShow, FavoriteTrack, ShowReview } from "@/types/userdata";
 
 const STORAGE_KEY = "deadly_userdata";
 
@@ -60,9 +60,6 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
   const { user } = useAuth();
   const [data, setData] = useState<UserDataBackupV3 | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  // Show Queue (backlog) — server-backed, fetched separately from /sync because
-  // its GET is enriched with show display metadata. Head first.
-  const [backlog, setBacklog] = useState<BacklogItem[]>([]);
 
   // Load from localStorage immediately, then fetch from API if authed
   useEffect(() => {
@@ -91,9 +88,6 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
         .catch((err) => {
           console.error("[UserData] Sync fetch failed:", err);
         });
-      fetchBacklog()
-        .then((rows) => { if (!cancelled) setBacklog(rows); })
-        .catch((err) => { console.error("[UserData] Backlog fetch failed:", err); });
     };
 
     refetch("mount");
@@ -243,41 +237,6 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
     if (user?.id) deleteReview(showId).then(notifyUserDataChanged).catch(() => {});
   }, [user?.id, updateData]);
 
-  const isInQueue = useCallback((showId: string): boolean => {
-    return backlog.some((b) => b.showId === showId);
-  }, [backlog]);
-
-  // Append to the bottom (optimistic + PUT). The caller passes display meta so
-  // the queue renders immediately; the next focus-refetch reconciles.
-  const addToQueue = useCallback((item: BacklogItem) => {
-    if (backlog.some((b) => b.showId === item.showId)) return;
-    const now = Math.floor(Date.now() / 1000);
-    const maxPos = backlog.reduce((m, b) => Math.max(m, b.position), -1);
-    const row: BacklogItem = { ...item, position: maxPos + 1, addedAt: item.addedAt || now, updatedAt: now };
-    setBacklog((prev) => [...prev, row]);
-    analytics.track("feature_use", {
-      feature: "add_to_show_queue", category: "action", target_type: "show", target_id: item.showId,
-    });
-    if (user?.id) updateBacklogItem(item.showId, { position: row.position, addedAt: row.addedAt, updatedAt: now }).then(notifyUserDataChanged).catch(() => {});
-  }, [backlog, user?.id]);
-
-  const removeFromQueue = useCallback((showId: string) => {
-    setBacklog((prev) => prev.filter((b) => b.showId !== showId));
-    if (user?.id) deleteBacklogItem(showId).then(notifyUserDataChanged).catch(() => {});
-  }, [user?.id]);
-
-  // Rewrite order to exactly `showIds` (drag-to-reorder). Reindex positions to
-  // match, then PUT the bulk order.
-  const reorderQueue = useCallback((showIds: string[]) => {
-    setBacklog((prev) => {
-      const byId = new Map(prev.map((b) => [b.showId, b]));
-      return showIds
-        .map((id, i) => { const b = byId.get(id); return b ? { ...b, position: i } : undefined; })
-        .filter((b): b is BacklogItem => b != null);
-    });
-    if (user?.id) reorderBacklog(showIds).then(notifyUserDataChanged).catch(() => {});
-  }, [user?.id]);
-
   const value = useMemo(() => ({
     data,
     isLoading,
@@ -289,12 +248,7 @@ export default function UserDataProvider({ children }: { children: React.ReactNo
     removeReview,
     isFavoriteTrack,
     toggleFavoriteTrack,
-    backlog,
-    isInQueue,
-    addToQueue,
-    removeFromQueue,
-    reorderQueue,
-  }), [data, isLoading, isFavorite, getReview, toggleFavorite, upsertFavorite, saveReview, removeReview, isFavoriteTrack, toggleFavoriteTrack, backlog, isInQueue, addToQueue, removeFromQueue, reorderQueue]);
+  }), [data, isLoading, isFavorite, getReview, toggleFavorite, upsertFavorite, saveReview, removeReview, isFavoriteTrack, toggleFavoriteTrack]);
 
   return (
     <UserDataContext.Provider value={value}>

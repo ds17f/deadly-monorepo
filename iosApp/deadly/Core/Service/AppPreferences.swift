@@ -13,7 +13,6 @@ final class AppPreferences {
     private static let eqBandGainsKey = "eq_band_gains"
     private static let shareAttachImageKey = "share_attach_image"
     private static let autoAdvanceEnabledKey = "auto_advance_enabled"
-    private static let advanceModeKey = "advance_mode"
     private static let sourceBadgeStyleKey = "source_badge_style"
     private static let useBetaShareLinksKey = "use_beta_share_links"
     private static let useBetaModeKey = "use_beta_mode"
@@ -121,20 +120,9 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(sourceBadgeStyle, forKey: Self.sourceBadgeStyleKey) }
     }
 
-    /// ADR-0010 Amendment: what happens when a show ends — Off / Show Queue /
-    /// Chronological. The "Autoplay" ∞ control cycles through these. Off by default.
-    var advanceMode: AdvanceMode {
-        didSet { UserDefaults.standard.set(advanceMode.rawValue, forKey: Self.advanceModeKey) }
-    }
-
-    /// Autoplay on = advance mode is not Off (drives the ∞ menu highlight).
-    var autoAdvanceEnabled: Bool { advanceMode != .none }
-
-    /// Cycle None → Show Queue → Chronological → None (the ∞ menu control).
-    @discardableResult
-    func cycleAdvanceMode() -> AdvanceMode {
-        advanceMode = advanceMode.next()
-        return advanceMode
+    /// ADR-0010: roll into the next show when one ends ("Autoplay"). Off by default.
+    var autoAdvanceEnabled: Bool {
+        didSet { UserDefaults.standard.set(autoAdvanceEnabled, forKey: Self.autoAdvanceEnabledKey) }
     }
 
     var analyticsEnabled: Bool {
@@ -242,8 +230,6 @@ final class AppPreferences {
             Self.eqPresetKey: "flat",
             Self.shareAttachImageKey: false,
             Self.autoAdvanceEnabledKey: false,
-            // NB: advanceModeKey is intentionally NOT registered — a registered
-            // default would defeat the "explicitly set?" check the migration relies on.
             Self.sourceBadgeStyleKey: "LONG",
             Self.playerControlsStyleKey: "skipTrack",
             Self.homeTrendingWindowKey: "now",
@@ -286,16 +272,7 @@ final class AppPreferences {
             ?? UserDefaults.standard.string(forKey: Self.legacyLibraryDisplayModeKey)
             ?? "LIST"
         shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
-        // Migrate the old on/off flag: previously-on → Chronological (else read
-        // the new key, default Off).
-        if let raw = UserDefaults.standard.string(forKey: Self.advanceModeKey),
-           let mode = AdvanceMode(rawValue: raw) {
-            advanceMode = mode
-        } else if UserDefaults.standard.bool(forKey: Self.autoAdvanceEnabledKey) {
-            advanceMode = .chronological
-        } else {
-            advanceMode = .none
-        }
+        autoAdvanceEnabled = UserDefaults.standard.bool(forKey: Self.autoAdvanceEnabledKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
         playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
         homeTrendingWindow = UserDefaults.standard.string(forKey: Self.homeTrendingWindowKey) ?? "now"

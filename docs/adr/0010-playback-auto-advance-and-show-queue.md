@@ -5,14 +5,6 @@
 Accepted (2026-06-10). Implementation on `show-queue-v2`, built and verified
 chunk-by-chunk across iOS, Android, and web simultaneously.
 
-**Update (2026-06-14) — advance mechanism shipped; queue/sync half revised.** The
-*auto-advance mechanism* (Decisions #1–#3, #6, #7) shipped on all three platforms
-(#63) and is unchanged. The *queue* half — **Decision #4 (sync) and Decision #5
-(advance target)** — was re-examined and **revised**; see **Amendment 2026-06-14**
-at the end of this document. Those two sections below are kept as the historical
-record but are **superseded** by the amendment. The queue/backlog itself is not yet
-built; the active build plan is [`PLANS/show-queue-v2.md`](../../PLANS/show-queue-v2.md).
-
 **Supersedes an earlier, abandoned design** (the `show-queue` branch, never
 merged). That branch shipped the queue and auto-advance as one entangled change
 and accreted a layer of patches around Connect — the "advance immediately, no
@@ -115,10 +107,6 @@ device can hold a countdown and advance without being dragged back.
 
 ### 4. The queue is local-first; the server is a synced mirror, never an authority
 
-> ⚠️ **SUPERSEDED by Amendment 2026-06-14.** Local-first still holds, but the
-> *whole-list snapshot* sync below is replaced by **per-action event sync** (the
-> auto-popping backlog makes a snapshot a clobber hazard). Kept for history.
-
 **You can build a queue without an account, so the queue must live locally.**
 Connect-v2 is per-user — no account means no Connect session, so a signed-out
 user is always single-device and never has the fight or a transfer.
@@ -141,10 +129,6 @@ live-session coordination), so it is compatible with ADR-0008's deferral of
 durable *session* state — it is the "server-mostly easy half" that ADR named.
 
 ### 5. Advance target resolution
-
-> ⚠️ **SUPERSEDED by Amendment 2026-06-14.** "Queue head, else next-by-date" is
-> generalized to **"follow the current context"** with an explicit advance *mode*;
-> chronological becomes the degenerate whole-catalog context. Kept for history.
 
 The advance coordinator computes the next show as: **queue head if present, else
 the next show chronologically** (later date), resolved client-side from the
@@ -295,47 +279,4 @@ self-gate is needed.
 
 **Per-op delta sync (outbox) for the queue.** Rejected in favor of whole-list
 snapshot (Decision #4): the list is tiny and reorder/remove/pop deltas need
-ordering and conflict resolution that a snapshot makes moot. *(Reversed by
-Amendment 2026-06-14 — see below.)*
-
-## Amendment 2026-06-14 — the queue is a list + pointer; sync events, not snapshots
-
-The advance *mechanism* (Decisions #1–#3, #6, #7) shipped (#63) and stands. While
-designing the queue itself (still unbuilt), Decisions #4 and #5 were re-examined and
-revised. Active build plan: [`PLANS/show-queue-v2.md`](../../PLANS/show-queue-v2.md).
-
-**Unifying model.** There is one structure — an **ordered list of shows + a per-user
-pointer**. The **backlog** is just *my default, always-mutable list*; a **collection**
-is another list, **mine** (full edit rights) or **published** (the list is read-only
-to me, but I still own my pointer into it: where I am, when I last played it).
-"Pop / clear / rewind" are pointer operations — **the model never destroys data**; the
-backlog *view* hides the already-played head. Editorial collections
-(`data/.../collections.json`, parked behind `COLLECTIONS_ENABLED`) are the read-only
-case. **Import** a published collection = copy it into a new mine-owned list.
-
-**Revises Decision #5 (advance target).** "Queue head, else next-by-date" generalizes
-to **follow the current context** via an advance *mode*:
-`none | backlog | chronological | collection`. Chronological is the **degenerate
-context** — the whole catalog ordered by date — so a single show advancing by date is
-just "context = catalog." A **drained collection stops** rather than spilling into
-uncurated territory; that was the hidden wart in "else next-by-date."
-
-**Revises Decision #4 (sync) — and reverses the "per-op delta rejected" alternative.**
-Sync the **add / pop / move event** (the proven Favorites per-action path), **not** a
-whole-list LWW snapshot. The reason the original snapshot argument was wrong: the
-backlog **auto-pops during playback**, so the active device continuously writes
-snapshots as a side effect of playing — racing another device's add and silently
-clobbering it (and resurfacing a played show). The list that auto-mutates is exactly
-the one a snapshot can't sync safely. Per-action events are idempotent and dodge it;
-the seam is clean because the lists we *do* snapshot-or-publish (collections) are
-edited deliberately, never by the playback engine. Local-first and
-transport-decoupling (the rest of #4) are unchanged.
-
-**UI corollary.** One reusable "Up Next" screen renders any list; the only variable is
-where the now-playing marker sits (top for the backlog, mid-list for a collection
-pointer). Don't hardcode "marker = row 0."
-
-**Build order.** Part 1 = the backlog (local list+pointer, add/pop entry points, the
-mode setting, per-action sync, the Up Next screen) behind the shipped coordinator.
-Part 2 = collections (the `collection` mode + pointer, mine-vs-published, authoring,
-publishing, import) drops in behind the same coordinator and screen.
+ordering and conflict resolution that a snapshot makes moot.

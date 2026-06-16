@@ -52,7 +52,6 @@ dependencies {
     implementation(project(":core:api:player"))
     implementation(project(":core:api:favorites"))
     implementation(project(":core:api:playlist"))
-    implementation(project(":core:domain"))
     implementation(project(":core:database"))
     implementation(project(":core:connect"))
     implementation(project(":feature:settings"))

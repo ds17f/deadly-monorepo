@@ -180,7 +180,6 @@ dependencies {
     implementation(project(":feature:player"))
     implementation(project(":feature:miniplayer"))
     implementation(project(":feature:favorites"))
-    implementation(project(":feature:upnext"))
     implementation(project(":feature:collections"))
     implementation(project(":feature:settings"))
     implementation(project(":feature:downloads"))

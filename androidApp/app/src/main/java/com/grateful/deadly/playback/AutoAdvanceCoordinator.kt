@@ -4,9 +4,7 @@ import android.util.Log
 import com.grateful.deadly.core.api.playlist.PlaylistService
 import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.database.AppPreferences
-import com.grateful.deadly.core.domain.repository.BacklogRepository
 import com.grateful.deadly.core.domain.repository.ShowRepository
-import com.grateful.deadly.core.model.AdvanceMode
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.model.Show
 import kotlinx.coroutines.CoroutineScope
@@ -46,7 +44,6 @@ class AutoAdvanceCoordinator @Inject constructor(
     private val playlistService: PlaylistService,
     private val connectService: ConnectService,
     private val appPreferences: AppPreferences,
-    private val backlogRepository: BacklogRepository,
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
 
@@ -92,7 +89,6 @@ class AutoAdvanceCoordinator @Inject constructor(
                             if (connectService.isActiveDevice.value) {
                                 Log.d(TAG, "auto-advance: advancing to ${show.displayTitle}")
                                 playlistService.playShow(show, autoPlay = true) // load clears the note
-                                popIfShowQueue()
                             }
                             break
                         }
@@ -122,40 +118,21 @@ class AutoAdvanceCoordinator @Inject constructor(
         localJob?.cancel()
         localJob = null
         _countdown.value = null
-        scope.launch {
-            playlistService.playShow(show, autoPlay = true)
-            popIfShowQueue()
-        }
+        scope.launch { playlistService.playShow(show, autoPlay = true) }
     }
 
     private fun onShowCompleted(completedShowId: String) {
         Log.d(TAG, "auto-advance: show completed = $completedShowId")
-        val mode = appPreferences.advanceMode.value
-        if (mode == AdvanceMode.NONE) {
-            Log.d(TAG, "auto-advance: mode = NONE — not advancing")
+        if (!appPreferences.autoAdvanceEnabled.value) {
+            Log.d(TAG, "auto-advance: disabled by preference — not advancing")
             return
         }
         localJob?.cancel()
         localJob = scope.launch {
-            // Resolve the next show by mode. Show Queue peeks the head (popped only
-            // when the advance commits, so a cancel doesn't consume it); a drained
-            // queue stops. Chronological goes by date, ignoring the queue.
-            val next = when (mode) {
-                AdvanceMode.SHOW_QUEUE -> {
-                    // Skip a head that's the show we just finished — it was played
-                    // manually and left in the queue (e.g. "Just Play"), so consume
-                    // it rather than replay it on a loop.
-                    if (backlogRepository.peekHeadId() == completedShowId) {
-                        backlogRepository.popHead()
-                    }
-                    backlogRepository.peekHeadId()?.let { showRepository.getShowById(it) }
-                }
-                AdvanceMode.CHRONOLOGICAL ->
-                    showRepository.getShowById(completedShowId)?.let { showRepository.getNextShowByDate(it.date) }
-                AdvanceMode.NONE -> null
-            }
+            val completed = showRepository.getShowById(completedShowId)
+            val next = completed?.let { showRepository.getNextShowByDate(it.date) }
             if (next == null) {
-                Log.d(TAG, "auto-advance: no next show after $completedShowId (mode=$mode)")
+                Log.d(TAG, "auto-advance: no next show after $completedShowId")
                 _countdown.value = null
                 return@launch
             }
@@ -176,15 +153,6 @@ class AutoAdvanceCoordinator @Inject constructor(
             }
             _countdown.value = null
             playlistService.playShow(next, autoPlay = true)
-            popIfShowQueue()
-        }
-    }
-
-    /** Consume the Show Queue head once an advance commits (Show Queue mode only).
-     * Peek-at-announce / pop-at-commit keeps a cancel from eating a show. */
-    private suspend fun popIfShowQueue() {
-        if (appPreferences.advanceMode.value == AdvanceMode.SHOW_QUEUE) {
-            backlogRepository.popHead()
         }
     }
 

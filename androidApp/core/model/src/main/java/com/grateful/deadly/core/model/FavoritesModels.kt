@@ -213,8 +213,7 @@ enum class FavoritesDisplayMode {
  */
 enum class FavoritesTab(val displayName: String) {
     SHOWS("Shows"),
-    SONGS("Songs"),
-    UP_NEXT("Show Queue")
+    SONGS("Songs")
 }
 
 /**

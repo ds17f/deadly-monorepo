@@ -4,21 +4,18 @@ import android.util.Log
 import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.api.usersync.ApplyResult
-import com.grateful.deadly.core.api.usersync.SyncBacklogItemV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteShowV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteTrackV3
 import com.grateful.deadly.core.api.usersync.SyncRecordingPrefV3
 import com.grateful.deadly.core.api.usersync.SyncReviewV3
 import com.grateful.deadly.core.api.usersync.UserSyncApplyService
 import com.grateful.deadly.core.api.usersync.UserSyncService
-import com.grateful.deadly.core.database.dao.BacklogDao
 import com.grateful.deadly.core.database.dao.FavoriteSongDao
 import com.grateful.deadly.core.database.dao.FavoritesDao
 import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
 import com.grateful.deadly.core.database.dao.ShowDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
-import com.grateful.deadly.core.database.entities.BacklogEntity
 import com.grateful.deadly.core.database.entities.FavoriteShowEntity
 import com.grateful.deadly.core.database.entities.FavoriteSongEntity
 import com.grateful.deadly.core.database.entities.RecordingPreferenceEntity
@@ -38,7 +35,6 @@ class UserSyncApplyServiceImpl @Inject constructor(
     @AppDatabase private val showReviewDao: ShowReviewDao,
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
     @AppDatabase private val recordingPreferenceDao: RecordingPreferenceDao,
-    @AppDatabase private val backlogDao: BacklogDao,
     @AppDatabase private val showDao: ShowDao,
     private val authService: AuthService,
 ) : UserSyncApplyService {
@@ -59,9 +55,7 @@ class UserSyncApplyServiceImpl @Inject constructor(
                 val songs = applyFavoriteSongs(backup.favorites.tracks)
                 val reviews = applyReviews(backup.reviews)
                 applyRecordingPreferences(backup.recordingPreferences)
-                val backlogPushIds = applyBacklog(backup.backlog ?: emptyList())
                 shows.copy(
-                    backlogPushIds = backlogPushIds,
                     favoriteSongsScanned = songs.favoriteSongsScanned,
                     favoriteSongsApplied = songs.favoriteSongsApplied,
                     favoriteSongsSkippedLocalNewer = songs.favoriteSongsSkippedLocalNewer,
@@ -279,73 +273,6 @@ class UserSyncApplyServiceImpl @Inject constructor(
     // Recording prefs are a singleton-per-show row keyed by showId. FK to shows,
     // so skip prefs for shows not in the local catalog. Last-write-wins on
     // updatedAt; a remote tombstone soft-deletes the local row.
-    // Backlog (Show Queue). One row per show keyed by showId; LWW on updatedAt,
-    // a remote tombstone tombstones locally. No FK to shows, so unknown shows
-    // are stored and simply ignored by the UI until the catalog knows them.
-    // Returns showIds the coordinator should re-push: local rows the server is
-    // missing or has an older copy of (incl. tombstones). This is the reverse
-    // half of the merge — the pull already carries server→local; here we detect
-    // local→server divergence so a dropped add/remove event heals on next pull.
-    private suspend fun applyBacklog(remote: List<SyncBacklogItemV3>): List<String> {
-        var applied = 0
-        var skippedLocalNewer = 0
-        for (dto in remote) {
-            val local = try {
-                backlogDao.getById(dto.showId)
-            } catch (e: Exception) {
-                Log.w(TAG, "backlog read failed for ${dto.showId}: ${e.message}")
-                continue
-            }
-            val remoteUpdatedMs = dto.updatedAt * 1000
-            if (local != null && local.updatedAt >= remoteUpdatedMs) {
-                skippedLocalNewer++
-                continue
-            }
-            try {
-                backlogDao.upsert(
-                    BacklogEntity(
-                        showId = dto.showId,
-                        position = dto.position.toLong(),
-                        addedAt = dto.addedAt * 1000,
-                        updatedAt = remoteUpdatedMs,
-                        deletedAt = dto.deletedAt?.let { it * 1000 },
-                    )
-                )
-                applied++
-            } catch (e: Exception) {
-                Log.w(TAG, "apply backlog ${dto.showId} failed: ${e.message}")
-            }
-        }
-
-        // Reverse delta: compare local rows (incl. tombstones) against the server
-        // list. Compare at SECOND granularity — the wire format truncates ms, so a
-        // strict ms comparison would flag every row as "local newer" forever and
-        // re-push on every pull (an infinite loop). A row needs pushing when the
-        // server lacks it or its second-precision updatedAt is older than local's.
-        val serverSecByShow = remote.associate { it.showId to it.updatedAt }
-        val pushIds = try {
-            backlogDao.getAllIncludingTombstones().filter { localRow ->
-                val serverSec = serverSecByShow[localRow.showId]
-                if (serverSec == null) {
-                    // Server has no row. Only a LIVE local row is a real add it
-                    // missed — a local tombstone the server never had is already
-                    // converged (server-absent == not in queue), so don't re-push
-                    // a DELETE that would just 404 on every foreground.
-                    localRow.deletedAt == null
-                } else {
-                    // Server has the row: push when local is strictly newer
-                    // (covers live edits and a remove the server hasn't seen).
-                    (localRow.updatedAt / 1000) > serverSec
-                }
-            }.map { it.showId }
-        } catch (e: Exception) {
-            Log.w(TAG, "backlog reconcile scan failed: ${e.message}"); emptyList()
-        }
-
-        Log.d(TAG, "backlog: scanned=${remote.size} applied=$applied skippedLocalNewer=$skippedLocalNewer toPush=${pushIds.size}")
-        return pushIds
-    }
-
     private suspend fun applyRecordingPreferences(remote: List<SyncRecordingPrefV3>) {
         var applied = 0
         var skippedLocalNewer = 0

@@ -128,16 +128,6 @@ function initSchema(db: Database.Database): void {
       PRIMARY KEY (user_id, show_id)
     );
 
-    CREATE TABLE IF NOT EXISTS backlog (
-      user_id TEXT NOT NULL REFERENCES accounts(id) ON DELETE CASCADE,
-      show_id TEXT NOT NULL,
-      position INTEGER NOT NULL,
-      added_at INTEGER NOT NULL DEFAULT (unixepoch()),
-      updated_at INTEGER NOT NULL DEFAULT (unixepoch()),
-      deleted_at INTEGER,
-      PRIMARY KEY (user_id, show_id)
-    );
-
     CREATE TABLE IF NOT EXISTS playback_position (
       user_id TEXT NOT NULL REFERENCES accounts(id) ON DELETE CASCADE,
       show_id TEXT NOT NULL,

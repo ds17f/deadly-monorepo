@@ -10,7 +10,6 @@ import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import com.grateful.deadly.core.model.AdvanceMode
 import com.grateful.deadly.core.model.ShowArtworkService
 import com.grateful.deadly.core.model.SourceBadgeStyle
 import javax.inject.Inject
@@ -41,7 +40,6 @@ class AppPreferences @Inject constructor(
         private const val KEY_EQ_BAND_LEVELS = "eq_band_levels"
         private const val KEY_SHARE_ATTACH_IMAGE = "share_attach_image"
         private const val KEY_AUTO_ADVANCE_ENABLED = "auto_advance_enabled"
-        private const val KEY_ADVANCE_MODE = "advance_mode"
         private const val KEY_SOURCE_BADGE_STYLE = "source_badge_style"
         private const val KEY_USE_BETA_SHARE_LINKS = "use_beta_share_links"
         private const val KEY_USE_BETA_MODE = "use_beta_mode"
@@ -111,29 +109,16 @@ class AppPreferences @Inject constructor(
         setHomePopularDecade("all")
     }
 
-    private val _advanceMode = MutableStateFlow(
-        // Migrate the old on/off flag: previously-on → Chronological, else read the
-        // new key (default Off).
-        if (!prefs.contains(KEY_ADVANCE_MODE) && prefs.getBoolean(KEY_AUTO_ADVANCE_ENABLED, false))
-            AdvanceMode.CHRONOLOGICAL
-        else
-            AdvanceMode.fromName(prefs.getString(KEY_ADVANCE_MODE, null))
+    private val _autoAdvanceEnabled = MutableStateFlow(
+        prefs.getBoolean(KEY_AUTO_ADVANCE_ENABLED, false)
     )
 
-    /** ADR-0010 Amendment: what happens when a show ends — Off / Show Queue /
-     * Chronological. The "Autoplay" ∞ control cycles through these. Off by default. */
-    val advanceMode: StateFlow<AdvanceMode> = _advanceMode.asStateFlow()
+    /** ADR-0010: roll into the next show when one ends ("Autoplay"). Off by default. */
+    val autoAdvanceEnabled: StateFlow<Boolean> = _autoAdvanceEnabled.asStateFlow()
 
-    fun setAdvanceMode(mode: AdvanceMode) {
-        prefs.edit().putString(KEY_ADVANCE_MODE, mode.name).apply()
-        _advanceMode.value = mode
-    }
-
-    /** Cycle None → Show Queue → Chronological → None (the ∞ menu control). */
-    fun cycleAdvanceMode(): AdvanceMode {
-        val next = _advanceMode.value.next()
-        setAdvanceMode(next)
-        return next
+    fun setAutoAdvanceEnabled(value: Boolean) {
+        prefs.edit().putBoolean(KEY_AUTO_ADVANCE_ENABLED, value).apply()
+        _autoAdvanceEnabled.value = value
     }
 
     private val _homePopularEnabled = MutableStateFlow(

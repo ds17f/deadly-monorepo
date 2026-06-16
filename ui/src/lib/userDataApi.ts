@@ -6,7 +6,6 @@ import type {
   PlaybackPosition,
   UserSettings,
   RecentShow,
-  BacklogItem,
 } from "@/types/userdata";
 
 const API_BASE = "/api/user";
@@ -157,32 +156,6 @@ export function updateSettings(settings: UserSettings): Promise<void> {
 
 export function addRecentShow(showId: string): Promise<void> {
   return apiFetch(`/recent/${showId}`, { method: "PUT" });
-}
-
-// ── Show Queue (backlog) ──────────────────────────────────────────────
-// Server-backed directly (web has no local store): per-action PUT/DELETE +
-// bulk reorder, refetched on focus. GET is enriched with show display metadata.
-
-export function fetchBacklog(): Promise<BacklogItem[]> {
-  return apiFetch<BacklogItem[]>("/backlog");
-}
-
-export function updateBacklogItem(showId: string, data: Partial<BacklogItem> = {}): Promise<void> {
-  return apiFetch(`/backlog/${showId}`, {
-    method: "PUT",
-    body: JSON.stringify(data),
-  });
-}
-
-export function deleteBacklogItem(showId: string): Promise<void> {
-  return apiFetch(`/backlog/${showId}`, { method: "DELETE" });
-}
-
-export function reorderBacklog(showIds: string[]): Promise<void> {
-  return apiFetch("/backlog", {
-    method: "PUT",
-    body: JSON.stringify({ showIds }),
-  });
 }
 
 // ── Notification read/dismiss overlay (ADR-0015) ──────────────────────

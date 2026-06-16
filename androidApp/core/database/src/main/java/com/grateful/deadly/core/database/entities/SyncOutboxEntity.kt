@@ -39,11 +39,5 @@ data class SyncOutboxEntity(
         /** refId is the showId. The flusher reads the recording_preferences
          *  row at push time; an absent/tombstoned row becomes a DELETE. */
         const val KIND_RECORDING_PREF = "recording_pref"
-        /** refId is the showId. The flusher reads the backlog row (incl.
-         *  tombstones) at push time: live → PUT, tombstoned/absent → DELETE. */
-        const val KIND_BACKLOG_ITEM = "backlog_item"
-        /** refId is a constant sentinel; the flusher reads the current live
-         *  backlog order and PUTs it (coalesces rapid reorders). */
-        const val KIND_BACKLOG_REORDER = "backlog_reorder"
     }
 }

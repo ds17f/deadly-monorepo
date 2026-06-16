@@ -42,7 +42,6 @@ fun PlaylistScreen(
     onNavigateToPlayer: () -> Unit = {},
     onNavigateToShow: (String, String) -> Unit = { _, _ -> },
     onNavigateToCollection: (String, String) -> Unit = { _, _ -> }, // collectionId, showId
-    onNavigateToUpNext: () -> Unit = {},
     recordingId: String? = null,
     showId: String? = null,
     trackNumber: Int? = null,
@@ -62,10 +61,6 @@ fun PlaylistScreen(
     val userReview by viewModel.userReview.collectAsState()
     val reviewLineup by viewModel.reviewLineup.collectAsState()
     val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
-    val advanceMode by viewModel.advanceMode.collectAsState()
-    val isInQueue by viewModel.isInQueue.collectAsState()
-    var showQueueRemoveConfirm by remember { mutableStateOf(false) }
-    var showQueuePlayConfirm by remember { mutableStateOf(false) }
 
     // Load show data when screen opens - include recordingId for Player→Playlist navigation
     LaunchedEffect(showId, recordingId) {
@@ -177,26 +172,13 @@ fun PlaylistScreen(
                                 isPlaying = uiState.isPlaying,
                                 isLoading = uiState.mediaLoading,
                                 isCurrentShowAndRecording = uiState.isCurrentShowAndRecording,
-                                advanceMode = advanceMode,
-                                isInQueue = isInQueue,
+                                isAutoplayEnabled = autoAdvanceEnabled,
                                 onFavoritesAction = viewModel::handleFavoritesAction,
                                 onDownload = { viewModel.downloadShow() },
                                 onShowSetlist = viewModel::showSetlist,
-                                onToggleAutoplay = viewModel::cycleAdvanceMode,
-                                onToggleQueue = {
-                                    if (isInQueue) showQueueRemoveConfirm = true else viewModel.addToQueue()
-                                },
-                                onOpenQueue = onNavigateToUpNext,
+                                onToggleAutoplay = viewModel::toggleAutoAdvance,
                                 onShowMenu = viewModel::showMenu,
-                                onTogglePlayback = {
-                                    // Starting a fresh show that's queued? Ask first, so playing
-                                    // doesn't silently leave a played show in the queue.
-                                    if (!uiState.isCurrentShowAndRecording && isInQueue) {
-                                        showQueuePlayConfirm = true
-                                    } else {
-                                        viewModel.togglePlayback()
-                                    }
-                                }
+                                onTogglePlayback = viewModel::togglePlayback
                             )
                         }
                     }
@@ -336,16 +318,8 @@ fun PlaylistScreen(
                 title = showData.displayDate,
                 showDate = showData.displayDate,
                 venue = showData.venue,
-                advanceMode = advanceMode,
+                isAutoplayEnabled = autoAdvanceEnabled,
                 collectionsCount = uiState.showCollections.size,
-                onViewUpNext = {
-                    viewModel.hideMenu()
-                    onNavigateToUpNext()
-                },
-                onAddToUpNext = {
-                    viewModel.hideMenu()
-                    viewModel.addToUpNext()
-                },
                 onChooseRecording = {
                     viewModel.hideMenu()
                     viewModel.chooseRecording()
@@ -365,45 +339,6 @@ fun PlaylistScreen(
                 onDismiss = viewModel::hideMenu
             )
         }
-    }
-
-    // Confirm before removing the current show from the Show Queue (removing
-    // curation is the destructive direction).
-    if (showQueueRemoveConfirm) {
-        AlertDialog(
-            onDismissRequest = { showQueueRemoveConfirm = false },
-            title = { Text("Remove from Show Queue?") },
-            confirmButton = {
-                TextButton(onClick = {
-                    showQueueRemoveConfirm = false
-                    viewModel.removeFromQueue()
-                }) { Text("Remove") }
-            },
-            dismissButton = {
-                TextButton(onClick = { showQueueRemoveConfirm = false }) { Text("Cancel") }
-            },
-        )
-    }
-
-    // Playing a show that's already queued: ask whether to consume it.
-    if (showQueuePlayConfirm) {
-        AlertDialog(
-            onDismissRequest = { showQueuePlayConfirm = false },
-            title = { Text("This show is in your Show Queue") },
-            confirmButton = {
-                TextButton(onClick = {
-                    showQueuePlayConfirm = false
-                    viewModel.removeFromQueue(silent = true)
-                    viewModel.togglePlayback()
-                }) { Text("Play & Remove") }
-            },
-            dismissButton = {
-                TextButton(onClick = {
-                    showQueuePlayConfirm = false
-                    viewModel.togglePlayback()
-                }) { Text("Just Play") }
-            },
-        )
     }
 
     // Share Chooser

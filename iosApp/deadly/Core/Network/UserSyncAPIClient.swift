@@ -17,15 +17,6 @@ struct SyncBackupV3: Codable {
     let settings: SyncSettingsV3?
     let recentShows: [SyncRecentShowV3]?
     let playbackPosition: SyncPlaybackPositionV3?
-    let backlog: [SyncBacklogItemV3]?
-}
-
-struct SyncBacklogItemV3: Codable {
-    let showId: String
-    let position: Int
-    let addedAt: Int64
-    let updatedAt: Int64
-    let deletedAt: Int64?
 }
 
 struct SyncFavorites: Codable {
@@ -237,38 +228,6 @@ struct UserSyncAPIClient {
             body: nil
         )
         if let http = response as? HTTPURLResponse, http.statusCode == 404 { return }
-        try ensureOK(data: data, response: response)
-    }
-
-    // MARK: - Backlog (Show Queue)
-
-    func putBacklogItem(_ item: SyncBacklogItemV3) async throws {
-        let body = try JSONEncoder().encode(item)
-        let (data, response) = try await request(
-            method: "PUT",
-            path: "/api/user/backlog/\(item.showId)",
-            body: body
-        )
-        try ensureOK(data: data, response: response)
-    }
-
-    func deleteBacklogItem(showId: String) async throws {
-        let (data, response) = try await request(
-            method: "DELETE",
-            path: "/api/user/backlog/\(showId)",
-            body: nil
-        )
-        if let http = response as? HTTPURLResponse, http.statusCode == 404 { return }
-        try ensureOK(data: data, response: response)
-    }
-
-    func reorderBacklog(showIds: [String]) async throws {
-        let body = try JSONEncoder().encode(["showIds": showIds])
-        let (data, response) = try await request(
-            method: "PUT",
-            path: "/api/user/backlog",
-            body: body
-        )
         try ensureOK(data: data, response: response)
     }
 

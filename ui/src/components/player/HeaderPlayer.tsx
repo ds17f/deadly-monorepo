@@ -15,7 +15,6 @@ import AutoplayPrompt from "./AutoplayPrompt";
 import RecordingSelector from "./RecordingSelector";
 import RecordingMenu from "./RecordingMenu";
 import { useShareLink } from "@/components/share/useShareLink";
-import { ADVANCE_MODE_LABEL, type AdvanceMode } from "@/lib/playbackPrefs";
 import TrackList from "./TrackList";
 import PlayerRailPanel from "./PlayerRailPanel";
 import DeviceList from "@/components/connect/DeviceList";
@@ -428,16 +427,7 @@ export default function HeaderPlayer() {
     playNextNow,
     autoAdvanceEnabled,
     toggleAutoAdvance,
-    advanceMode,
   } = usePlayer();
-
-  // The autoplay control cycles Off → Show Queue → Chronological. aria-label
-  // names the current mode (the icon alone can't convey three states), matching
-  // the show-page action's wording.
-  const advanceLabel =
-    advanceMode === "none"
-      ? "Autoplay: Off — tap to cycle (Show Queue · Chronological)"
-      : `Autoplay: ${ADVANCE_MODE_LABEL[advanceMode]} — tap to cycle`;
 
   const { connected: isConnected, state: connectState, serverTimeOffsetMs } = useConnect();
   const { getReview } = useUserData();
@@ -888,13 +878,15 @@ export default function HeaderPlayer() {
         {showLoaded && (
           <button
             onClick={toggleAutoAdvance}
+            role="switch"
+            aria-checked={autoAdvanceEnabled}
             className={`rounded-full p-2 transition-colors ${
               autoAdvanceEnabled ? "text-deadly-highlight" : "text-white/50 hover:text-white/80"
             }`}
-            aria-label={advanceLabel}
-            title={advanceLabel}
+            aria-label={autoAdvanceEnabled ? "Autoplay Next Show on" : "Autoplay Next Show off"}
+            title="Autoplay Next Show — roll into the next show when this one ends"
           >
-            <AdvanceModeIcon mode={advanceMode} size={18} />
+            <AutoplayIcon size={18} />
           </button>
         )}
         {activeShow && activeShow.recordings.length > 1 && (
@@ -1133,14 +1125,15 @@ export default function HeaderPlayer() {
             {activeShow && <FavoriteAction showId={activeShow.showId} />}
             <button
               onClick={toggleAutoAdvance}
+              role="switch"
+              aria-checked={autoAdvanceEnabled}
               className={`flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${
                 autoAdvanceEnabled ? "text-deadly-highlight" : "text-white/45 hover:text-white/70"
               }`}
-              aria-label={advanceLabel}
               title="Roll into the next show when this one ends"
             >
-              <AdvanceModeIcon mode={advanceMode} />
-              Autoplay: {advanceMode === "none" ? "Off" : ADVANCE_MODE_LABEL[advanceMode]}
+              <AutoplayIcon />
+              Autoplay Next Show {autoAdvanceEnabled ? "on" : "off"}
             </button>
             {activeShow && (
               <ShareAction showId={activeShow.showId} recordingId={selectedRecording} />
@@ -1254,13 +1247,15 @@ export default function HeaderPlayer() {
             {showLoaded && (
               <button
                 onClick={toggleAutoAdvance}
+                role="switch"
+                aria-checked={autoAdvanceEnabled}
                 className={`rounded-full p-2 transition-colors ${
                   autoAdvanceEnabled ? "text-deadly-highlight" : "text-white/50 hover:text-white/80"
                 }`}
-                aria-label={advanceLabel}
-                title={advanceLabel}
+                aria-label={autoAdvanceEnabled ? "Autoplay Next Show on" : "Autoplay Next Show off"}
+                title="Autoplay Next Show — roll into the next show when this one ends"
               >
-                <AdvanceModeIcon mode={advanceMode} />
+                <AutoplayIcon />
               </button>
             )}
             {activeShow && (
@@ -1363,19 +1358,4 @@ function AutoplayIcon({ size = 16 }: { size?: number }) {
       <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L7.8 14.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.77-1.53l7.03-6.24c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.38-3.39 3.38c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.41 5.4-5.38s-2.42-5.37-5.4-5.37z" />
     </svg>
   );
-}
-
-// The autoplay control's glyph by advance mode: the stacked-cards Show Queue
-// mark (matching the show page) when feeding from the queue, otherwise the ∞
-// autoplay glyph for Off/Chronological. The parent's text color conveys on/off.
-function AdvanceModeIcon({ mode, size = 16 }: { mode: AdvanceMode; size?: number }) {
-  if (mode === "showQueue") {
-    return (
-      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
-        <rect x="7" y="3" width="14" height="14" rx="2" />
-        <path d="M3 7v12a2 2 0 0 0 2 2h12" />
-      </svg>
-    );
-  }
-  return <AutoplayIcon size={size} />;
 }

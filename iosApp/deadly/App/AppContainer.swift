@@ -26,7 +26,6 @@ final class AppContainer {
     let panelContentService: PanelContentService
     let networkMonitor: NetworkMonitor
     let recentShowsService: RecentShowsServiceImpl
-    let backlogService: BacklogService
     let miniPlayerService: MiniPlayerServiceImpl
     let archiveClient: URLSessionArchiveMetadataClient
     let downloadService: DownloadServiceImpl
@@ -47,30 +46,6 @@ final class AppContainer {
 
     /// True only during the first launch of the process. Cleared after Connect + restore complete.
     var isColdLaunch = true
-
-    /// One-shot: a "View Show Queue" menu link asks MainNavigation to switch to
-    /// the Favorites tab and FavoritesScreen to select its Show Queue sub-tab.
-    /// Single home — there is no standalone Show Queue screen.
-    var showQueueTabRequested = false
-    func requestShowQueueTab() { showQueueTabRequested = true }
-
-    /// One-shot: a Show Queue row's "Go to Show" asks MainNavigation to push
-    /// that show's detail on the current tab.
-    var pendingShowDetailRequest: String?
-    func requestShowDetail(_ showId: String) { pendingShowDetailRequest = showId }
-
-    /// Foreground / sign-in / cold-start sync: flush the outbox, pull, then
-    /// re-push any backlog rows the pull found diverged. The reconcile is the
-    /// anti-entropy backstop — a Show Queue add/remove whose per-action event was
-    /// dropped is detected during the pull and healed here, so devices converge
-    /// even when individual events never deliver.
-    func syncFlushPullThenReconcile(reason: String) async {
-        _ = await favoritesPushService.flushPending()
-        let result = await userSyncApplyService.pullAndApply(reason: reason)
-        if case .success(let applied) = result, !applied.backlogPushIds.isEmpty {
-            await favoritesPushService.reconcileBacklog(showIds: applied.backlogPushIds)
-        }
-    }
 
     init() {
         let initStart = CFAbsoluteTimeGetCurrent()
@@ -132,7 +107,6 @@ final class AppContainer {
                     showReviewDAO: ShowReviewDAO(database: db),
                     showPlayerTagDAO: ShowPlayerTagDAO(database: db),
                     recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
-                    backlogDAO: BacklogDAO(database: db),
                     apiClient: userSync,
                     authService: auth
                 )
@@ -170,7 +144,6 @@ final class AppContainer {
                     showReviewDAO: ShowReviewDAO(database: db),
                     showPlayerTagDAO: ShowPlayerTagDAO(database: db),
                     recordingPreferenceDAO: RecordingPreferenceDAO(database: db),
-                    backlogDAO: BacklogDAO(database: db),
                     showDAO: ShowDAO(database: db),
                     authService: auth
                 )
@@ -236,13 +209,6 @@ final class AppContainer {
                 return svc
             }
             recentShowsService = recentService
-
-            // Backlog ("Up Next") — local-first play-next list (ADR-0010 Amendment).
-            let backlogSvc = MainActor.assumeIsolated {
-                BacklogService(dao: BacklogDAO(database: db))
-            }
-            backlogService = backlogSvc
-            MainActor.assumeIsolated { backlogSvc.pushService = pushSvc }
 
             // One-time startup backfill: push all local data (favorites +
             // top recents) so a freshly-synced web profile isn't empty.
@@ -395,8 +361,7 @@ final class AppContainer {
                     playlistService: playlistSvc,
                     showRepository: showRepo,
                     connectService: connect,
-                    appPreferences: prefs,
-                    backlogService: backlogSvc
+                    appPreferences: prefs
                 )
             }
 

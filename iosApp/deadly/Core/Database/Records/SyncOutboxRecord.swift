@@ -27,12 +27,6 @@ struct SyncOutboxRecord: Codable, Sendable, Equatable, FetchableRecord, MutableP
         /// refId is the showId. The flusher reads the recording_preferences
         /// row at push time; an absent row becomes a DELETE.
         static let recordingPref = "recording_pref"
-        /// refId is the showId. The flusher reads the backlog row (incl.
-        /// tombstones) at push time: live → PUT, tombstoned/absent → DELETE.
-        static let backlogItem = "backlog_item"
-        /// refId is a constant sentinel; the flusher reads the current live
-        /// backlog order and PUTs it (coalesces rapid reorders).
-        static let backlogReorder = "backlog_reorder"
     }
 
     mutating func didInsert(_ inserted: InsertionSuccess) {

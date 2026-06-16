@@ -276,17 +276,7 @@ fun MainNavigation(
                 splashGraph(navController)
 
                 // Home feature - main hub screen
-                homeGraph(
-                    navController,
-                    onNavigateToShowQueue = {
-                        appViewModel.requestShowQueueTab()
-                        navController.navigate("library") {
-                            popUpTo(navController.graph.startDestinationId) { saveState = true }
-                            launchSingleTop = true
-                            restoreState = true
-                        }
-                    }
-                )
+                homeGraph(navController)
 
                 // Favorites feature - user's saved content
                 favoritesNavigation(navController)
@@ -301,17 +291,7 @@ fun MainNavigation(
                 searchGraph(navController)
 
                 // Playlist feature - show and recording details
-                playlistGraph(
-                    navController,
-                    onNavigateToShowQueue = {
-                        appViewModel.requestShowQueueTab()
-                        navController.navigate("library") {
-                            popUpTo(navController.graph.startDestinationId) { saveState = true }
-                            launchSingleTop = true
-                            restoreState = true
-                        }
-                    }
-                )
+                playlistGraph(navController)
 
                 // Player feature - playback interface
                 playerScreen(
@@ -319,15 +299,6 @@ fun MainNavigation(
                     onNavigateToPlaylist = { showId, recordingId, openSheet ->
                         navController.navigateToPlaylist(showId, recordingId, openSheet = openSheet) {
                             popUpTo("player") { inclusive = true }
-                        }
-                    },
-                    onNavigateToUpNext = {
-                        // Single home: open Favorites on its Show Queue tab.
-                        appViewModel.requestShowQueueTab()
-                        navController.navigate("library") {
-                            popUpTo(navController.graph.startDestinationId) { saveState = true }
-                            launchSingleTop = true
-                            restoreState = true
                         }
                     }
                 )
@@ -339,8 +310,6 @@ fun MainNavigation(
                 composable("notifications") {
                     NotificationsScreen(onNavigateBack = { navController.popBackStack() })
                 }
-
-                // Up Next (the backlog) — ADR-0010 Amendment
             }
 
             AnimatedVisibility(
@@ -489,8 +458,7 @@ fun MainNavigation(
                 onTapToExpand = { navController.navigate("player") },
                 onNavigateToPlaylist = { showId, recordingId, openSheet ->
                     navController.navigateToPlaylist(showId, recordingId, openSheet = openSheet)
-                },
-                onNavigateToUpNext = { navController.navigate("upnext") }
+                }
             )
         }
     } // Row

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/contexts/AuthContext";
 import { usePlayer } from "@/contexts/PlayerContext";
-import { ADVANCE_MODE_LABEL, type AdvanceMode } from "@/lib/playbackPrefs";
 import { deleteAccount } from "@/lib/userDataApi";
 import { SUBREDDIT_HANDLE, SUBREDDIT_URL } from "@/lib/community";
 
@@ -13,7 +12,7 @@ const DATA_VERSION = process.env.NEXT_PUBLIC_DATA_VERSION ?? "dev";
 
 export default function SettingsTab() {
   const { user, signOut } = useAuth();
-  const { advanceMode, setAdvanceMode: setMode } = usePlayer();
+  const { autoAdvanceEnabled, toggleAutoAdvance } = usePlayer();
   const router = useRouter();
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [confirmText, setConfirmText] = useState("");
@@ -63,27 +62,28 @@ export default function SettingsTab() {
       {/* Playback */}
       <section className="rounded-lg border border-white/10 bg-deadly-surface p-5">
         <h3 className="mb-3 font-medium text-white">Playback</h3>
-        <div className="min-w-0">
-          <p className="text-sm text-white/80">When a show ends</p>
-          <p className="mt-0.5 text-xs text-white/40">
-            What Autoplay does when the current show finishes.
-          </p>
-          <div className="mt-3 inline-flex rounded-lg border border-white/10 p-0.5">
-            {(["none", "showQueue", "chronological"] as AdvanceMode[]).map((m) => (
-              <button
-                key={m}
-                onClick={() => setMode(m)}
-                aria-pressed={advanceMode === m}
-                className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${
-                  advanceMode === m
-                    ? "bg-deadly-highlight text-white"
-                    : "text-white/55 hover:text-white"
-                }`}
-              >
-                {ADVANCE_MODE_LABEL[m]}
-              </button>
-            ))}
+        <div className="flex items-center justify-between gap-4">
+          <div className="min-w-0">
+            <p className="text-sm text-white/80">Autoplay Next Show</p>
+            <p className="mt-0.5 text-xs text-white/40">
+              Roll into the next show automatically when the current one ends.
+            </p>
           </div>
+          <button
+            role="switch"
+            aria-checked={autoAdvanceEnabled}
+            aria-label="Autoplay Next Show"
+            onClick={toggleAutoAdvance}
+            className={`inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full transition-colors ${
+              autoAdvanceEnabled ? "bg-deadly-highlight" : "bg-white/15"
+            }`}
+          >
+            <span
+              className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform ${
+                autoAdvanceEnabled ? "translate-x-[1.375rem]" : "translate-x-0.5"
+              }`}
+            />
+          </button>
         </div>
       </section>
 

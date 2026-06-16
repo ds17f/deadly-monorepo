@@ -34,11 +34,9 @@ fun HomeScreen(
     onNavigateToShow: (String) -> Unit,
     onNavigateToSearch: () -> Unit,
     onNavigateToCollection: (String) -> Unit,
-    onNavigateToShowQueue: () -> Unit = {},
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val showQueue by viewModel.showQueue.collectAsState()
     var detailShow by remember { mutableStateOf<Show?>(null) }
 
     detailShow?.let { show ->
@@ -47,11 +45,7 @@ fun HomeScreen(
             venue = show.venue.name,
             location = show.location.displayText,
             rating = if (show.hasRating) show.displayRating else null,
-            onDismiss = { detailShow = null },
-            onAddToUpNext = {
-                viewModel.addToUpNext(show.id)
-                detailShow = null
-            }
+            onDismiss = { detailShow = null }
         )
     }
 
@@ -138,30 +132,6 @@ fun HomeScreen(
                     onShowClick = { show -> onNavigateToShow(show.id) },
                     onShowLongPress = { show -> detailShow = show },
                     onShowMore = { viewModel.trackPopularShowMore() },
-                )
-            }
-        }
-
-        // Your Show Queue — above Collections, near the end of home. Small
-        // covers; "See all" opens the Favorites Show Queue tab.
-        if (showQueue.isNotEmpty()) {
-            item {
-                val queueItems = showQueue.map { show ->
-                    HorizontalCollectionItem(
-                        id = show.id,
-                        displayText = "${show.date}\n${show.venue.name}",
-                        type = CollectionItemType.SHOW,
-                        recordingId = show.bestRecordingId,
-                        imageUrl = show.coverImageUrl
-                    )
-                }
-                HorizontalCollection(
-                    title = "Your Show Queue",
-                    items = queueItems,
-                    cardWidth = cardWidthFor("small"),
-                    onItemClick = { item -> onNavigateToShow(item.id) },
-                    actionLabel = "See all",
-                    onActionClick = onNavigateToShowQueue,
                 )
             }
         }

@@ -21,16 +21,13 @@ enum ShowDetailSheet {
 /// a single item on a surface, the group header is dropped (a lone item under a
 /// bold header reads heavier than it is); SwiftUI's section divider remains.
 struct ShowActionsMenuSheet: View {
-    let autoplayMode: AdvanceMode
+    let isAutoplayEnabled: Bool
     let collectionsCount: Int
 
     // Playback — pass nil to hide (shown inline on this surface)
     var onChooseRecording: (() -> Void)? = nil
     var onEqualizer: (() -> Void)? = nil
     var onAutoplay: (() -> Void)? = nil
-    // Show Queue
-    var onViewUpNext: (() -> Void)? = nil
-    var onAddToUpNext: (() -> Void)? = nil
     // This Show
     var onSetlist: (() -> Void)? = nil
     var onCollections: (() -> Void)? = nil
@@ -45,9 +42,6 @@ struct ShowActionsMenuSheet: View {
     private var playbackCount: Int {
         [onChooseRecording, onEqualizer, onAutoplay].compactMap { $0 }.count
     }
-    private var showQueueCount: Int {
-        [onViewUpNext, onAddToUpNext].compactMap { $0 }.count
-    }
     private var thisShowCount: Int {
         [onSetlist, hasCollections ? onCollections : nil, onDownload].compactMap { $0 }.count
     }
@@ -61,11 +55,6 @@ struct ShowActionsMenuSheet: View {
                 if playbackCount > 0 {
                     section(header: playbackCount >= 2 ? "Playback" : nil) {
                         playbackRows
-                    }
-                }
-                if showQueueCount > 0 {
-                    section(header: showQueueCount >= 2 ? "Show Queue" : nil) {
-                        showQueueRows
                     }
                 }
                 if thisShowCount > 0 {
@@ -110,24 +99,15 @@ struct ShowActionsMenuSheet: View {
         }
         if let onAutoplay {
             Button(action: onAutoplay) {
-                HStack(spacing: 12) {
-                    AutoplayModeIcon(mode: autoplayMode, font: .body)
-                        .frame(width: 24)
-                    Text(autoplayMode == .none ? "Autoplay" : "Autoplay: \(autoplayMode.displayName)")
-                        .foregroundStyle(.primary)
+                HStack {
+                    Label("Autoplay Next Show", systemImage: "infinity")
                     Spacer()
+                    if isAutoplayEnabled {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(DeadlyColors.primary)
+                    }
                 }
             }
-        }
-    }
-
-    @ViewBuilder
-    private var showQueueRows: some View {
-        if let onViewUpNext {
-            row("View Show Queue", systemImage: "list.bullet", action: onViewUpNext)
-        }
-        if let onAddToUpNext {
-            row("Add to Show Queue", systemImage: "text.badge.plus", action: onAddToUpNext)
         }
     }
 

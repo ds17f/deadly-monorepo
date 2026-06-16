@@ -18,7 +18,6 @@ final class UserSyncApplyService {
     private let showReviewDAO: ShowReviewDAO
     private let showPlayerTagDAO: ShowPlayerTagDAO
     private let recordingPreferenceDAO: RecordingPreferenceDAO
-    private let backlogDAO: BacklogDAO
     private let showDAO: ShowDAO
     private let authService: AuthService
 
@@ -39,10 +38,6 @@ final class UserSyncApplyService {
         let reviewsApplied: Int
         let reviewsSkippedLocalNewer: Int
         let reviewsSkippedMissingShow: Int
-        // Show-queue rows the server is missing or has an older copy of, found
-        // while applying the pull. The app re-pushes these so a dropped
-        // add/remove event self-heals on the next foreground (anti-entropy).
-        var backlogPushIds: [String] = []
     }
 
     enum ApplyError: Error {
@@ -56,7 +51,6 @@ final class UserSyncApplyService {
         showReviewDAO: ShowReviewDAO,
         showPlayerTagDAO: ShowPlayerTagDAO,
         recordingPreferenceDAO: RecordingPreferenceDAO,
-        backlogDAO: BacklogDAO,
         showDAO: ShowDAO,
         authService: AuthService
     ) {
@@ -66,7 +60,6 @@ final class UserSyncApplyService {
         self.showReviewDAO = showReviewDAO
         self.showPlayerTagDAO = showPlayerTagDAO
         self.recordingPreferenceDAO = recordingPreferenceDAO
-        self.backlogDAO = backlogDAO
         self.showDAO = showDAO
         self.authService = authService
     }
@@ -87,7 +80,6 @@ final class UserSyncApplyService {
             let songs = try applyFavoriteSongs(backup.favorites.tracks)
             let reviews = try applyReviews(backup.reviews)
             applyRecordingPreferences(backup.recordingPreferences)
-            let backlogPushIds = applyBacklog(backup.backlog ?? [])
             return ApplyResult(
                 favoriteShowsScanned: shows.scanned,
                 favoriteShowsApplied: shows.applied,
@@ -100,8 +92,7 @@ final class UserSyncApplyService {
                 reviewsScanned: reviews.scanned,
                 reviewsApplied: reviews.applied,
                 reviewsSkippedLocalNewer: reviews.skippedLocalNewer,
-                reviewsSkippedMissingShow: reviews.skippedMissingShow,
-                backlogPushIds: backlogPushIds
+                reviewsSkippedMissingShow: reviews.skippedMissingShow
             )
         }
         inFlight = task
@@ -314,63 +305,6 @@ final class UserSyncApplyService {
         }
         print("[UserSyncApply] recording_prefs: scanned=\(remote.count) applied=\(applied) " +
               "skippedLocalNewer=\(skippedLocalNewer) skippedMissingShow=\(skippedMissingShow)")
-    }
-
-    // Backlog (Show Queue). One row per show keyed by showId; LWW on updatedAt,
-    // a remote tombstone tombstones locally. No FK to shows, so unknown shows
-    // are stored and simply ignored by the UI until the catalog knows them.
-    /// Returns showIds the app should re-push: local rows the server is missing
-    /// or has an older copy of (incl. tombstones). The reverse half of the merge
-    /// — the pull carries server→local; this detects local→server divergence so a
-    /// dropped add/remove event heals on the next pull.
-    private func applyBacklog(_ remote: [SyncBacklogItemV3]) -> [String] {
-        var applied = 0, skippedLocalNewer = 0
-        for dto in remote {
-            let local = (try? backlogDAO.fetchByIdIncludingTombstones(dto.showId)) ?? nil
-            let remoteUpdatedMs = dto.updatedAt * 1000
-            if let local, local.updatedAt >= remoteUpdatedMs {
-                skippedLocalNewer += 1
-                continue
-            }
-            let record = BacklogRecord(
-                showId: dto.showId,
-                position: Int64(dto.position),
-                addedAt: dto.addedAt * 1000,
-                updatedAt: remoteUpdatedMs,
-                deletedAt: dto.deletedAt.map { $0 * 1000 }
-            )
-            do {
-                try backlogDAO.applyFromSync(record)
-                applied += 1
-            } catch {
-                print("[UserSyncApply] apply backlog \(dto.showId) failed: \(error.localizedDescription)")
-            }
-        }
-
-        // Reverse delta: compare local rows (incl. tombstones) against the server
-        // list at SECOND granularity. The wire format truncates ms, so a strict ms
-        // comparison would flag every row as "local newer" forever and re-push on
-        // every pull. A row needs pushing when the server lacks it or its
-        // second-precision updatedAt is older than local's.
-        let serverSecByShow = Dictionary(remote.map { ($0.showId, $0.updatedAt) },
-                                         uniquingKeysWith: { a, _ in a })
-        let pushIds: [String] = ((try? backlogDAO.fetchAllIncludingTombstones()) ?? [])
-            .filter { row in
-                guard let serverSec = serverSecByShow[row.showId] else {
-                    // Server has no row. Only a LIVE local row is a real add it
-                    // missed — a local tombstone the server never had is already
-                    // converged (server-absent == not in queue), so don't re-push
-                    // a DELETE that would just 404 on every foreground.
-                    return row.deletedAt == nil
-                }
-                // Server has the row: push when local is strictly newer (covers
-                // live edits and a remove the server hasn't seen).
-                return (row.updatedAt / 1000) > serverSec
-            }
-            .map { $0.showId }
-
-        print("[UserSyncApply] backlog: scanned=\(remote.count) applied=\(applied) skippedLocalNewer=\(skippedLocalNewer) toPush=\(pushIds.count)")
-        return pushIds
     }
 
     private func makeRecord(from dto: SyncFavoriteShowV3, existing: FavoriteShowRecord?) -> FavoriteShowRecord {

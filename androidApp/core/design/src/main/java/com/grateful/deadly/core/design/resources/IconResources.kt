@@ -166,15 +166,6 @@ object IconResources {
         /** Autoplay / auto-advance to the next show (infinity glyph). */
         @Composable
         fun Autoplay() = customIcon(R.drawable.ic_all_inclusive)
-
-        /** Show-Queue mark (stacked-cards glyph) — the ∞ badge + show-page
-         *  queue toggle. Matches iOS `square.stack`. */
-        @Composable
-        fun ShowQueueMark() = customIcon(R.drawable.ic_square_stack)
-
-        /** Chronological mark (calendar glyph) — the ∞ badge for date order. */
-        @Composable
-        fun Calendar() = vectorIcon(Icons.Filled.DateRange)
     }
     
     // Status icons are in the Status object category

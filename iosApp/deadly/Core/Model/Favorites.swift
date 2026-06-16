@@ -140,7 +140,6 @@ enum FavoritesDisplayMode: String, Codable, Sendable, Equatable, CaseIterable {
 enum FavoritesTab: String, CaseIterable {
     case shows = "Shows"
     case songs = "Songs"
-    case showQueue = "Show Queue"
 }
 
 enum FavoritesSongSortOption: String, CaseIterable {

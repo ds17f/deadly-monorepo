@@ -8,25 +8,21 @@ import com.grateful.deadly.feature.home.screens.main.HomeScreen
 /**
  * Navigation graph for home feature
  */
-fun NavGraphBuilder.homeGraph(
-    navController: NavController,
-    onNavigateToShowQueue: () -> Unit = {},
-) {
+fun NavGraphBuilder.homeGraph(navController: NavController) {
     composable("home") {
         HomeScreen(
             onNavigateToPlayer = { recordingId ->
                 navController.navigate("player")
             },
             onNavigateToShow = { showId ->
-                navController.navigate("playlist/$showId")
+                navController.navigate("playlist/$showId")  
             },
             onNavigateToSearch = {
                 navController.navigate("search")
             },
             onNavigateToCollection = { collectionId ->
                 navController.navigate("collection/$collectionId")
-            },
-            onNavigateToShowQueue = onNavigateToShowQueue,
+            }
         )
     }
 }

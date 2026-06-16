@@ -4,7 +4,6 @@ struct HomeScreen: View {
     @Environment(\.appContainer) private var container
     @State private var popularShuffleSeed: Int = 0
     @State private var collectionsShuffleSeed: Int = 0
-    @State private var showQueue: [Show] = []
 
     private var homeService: HomeServiceImpl { container.homeService }
     private var trendingService: TrendingServiceImpl { container.trendingService }
@@ -39,15 +38,6 @@ struct HomeScreen: View {
         CarouselCardSize(preferenceKey: appPreferences.homeCollectionsCardSize)
     }
 
-    private func addToShowQueue(_ showId: String) {
-        if container.backlogService.contains(showId) {
-            container.toastPresenter.show("Already in Show Queue")
-        } else {
-            container.backlogService.addToBottom(showId)
-            container.toastPresenter.show("Added to Show Queue")
-        }
-    }
-
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: DeadlySpacing.sectionSpacing) {
@@ -77,16 +67,11 @@ struct HomeScreen: View {
                     fanFavoritesSection
                 }
 
-                // Your Show Queue — above Collections, near the end of home.
-                if !showQueue.isEmpty {
-                    showQueueSection
-                }
-
                 if !content.featuredCollections.isEmpty {
                     collectionsSection
                 }
 
-                if content.recentShows.isEmpty && content.todayInHistory.isEmpty && content.featuredCollections.isEmpty && showQueue.isEmpty && !homeService.isLoading {
+                if content.recentShows.isEmpty && content.todayInHistory.isEmpty && content.featuredCollections.isEmpty && !homeService.isLoading {
                     emptyState
                 }
             }
@@ -97,14 +82,6 @@ struct HomeScreen: View {
             await homeService.refresh()
             await trendingService.refresh()
             await popularService.refresh()
-        }
-        .task {
-            // Keep the home "Your Show Queue" rail live as the queue changes.
-            do {
-                for try await records in container.backlogService.observe() {
-                    showQueue = records.compactMap { try? container.showRepository.getShowById($0.showId) }
-                }
-            } catch {}
         }
         // The trending response depends on the include-anniversaries pref —
         // SwiftUI .task only fires on appearance, so flip-the-toggle-and-stay
@@ -166,11 +143,6 @@ struct HomeScreen: View {
                         }
                         .buttonStyle(.plain)
                         .contextMenu {
-                            Button {
-                                addToShowQueue(show.id)
-                            } label: {
-                                Label("Add to Show Queue", systemImage: "text.badge.plus")
-                            }
                             NavigationLink(value: show.id) {
                                 Label("View Show", systemImage: "eye")
                             }
@@ -244,11 +216,6 @@ struct HomeScreen: View {
                             }
                             .buttonStyle(.plain)
                             .contextMenu {
-                                Button {
-                                    addToShowQueue(show.id)
-                                } label: {
-                                    Label("Add to Show Queue", systemImage: "text.badge.plus")
-                                }
                                 NavigationLink(value: show.id) {
                                     Label("View Show", systemImage: "eye")
                                 }
@@ -292,11 +259,6 @@ struct HomeScreen: View {
                     }
                     .buttonStyle(.plain)
                     .contextMenu {
-                        Button {
-                            addToShowQueue(show.id)
-                        } label: {
-                            Label("Add to Show Queue", systemImage: "text.badge.plus")
-                        }
                         NavigationLink(value: show.id) {
                             Label("View Show", systemImage: "eye")
                         }
@@ -333,11 +295,6 @@ struct HomeScreen: View {
                         }
                         .buttonStyle(.plain)
                         .contextMenu {
-                            Button {
-                                addToShowQueue(show.id)
-                            } label: {
-                                Label("Add to Show Queue", systemImage: "text.badge.plus")
-                            }
                             NavigationLink(value: show.id) {
                                 Label("View Show", systemImage: "eye")
                             }
@@ -348,57 +305,6 @@ struct HomeScreen: View {
                                 location: show.location.displayText,
                                 rating: show.hasRating ? show.displayRating : nil
                             )
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private var showQueueSection: some View {
-        VStack(alignment: .leading, spacing: DeadlySpacing.itemSpacing) {
-            HStack(spacing: 12) {
-                Text("Your Show Queue")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.8)
-
-                Spacer(minLength: 8)
-
-                Button { container.requestShowQueueTab() } label: {
-                    Text("See all")
-                        .font(.subheadline)
-                        .fontWeight(.medium)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(1)
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("See all of your Show Queue")
-            }
-
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(spacing: DeadlySpacing.itemSpacing) {
-                    ForEach(showQueue) { show in
-                        NavigationLink(value: show.id) {
-                            ShowCarouselCard(
-                                imageRecordingId: show.bestRecordingId,
-                                imageUrl: show.coverImageUrl,
-                                lines: [show.date, show.venue.name],
-                                recordingCount: show.recordingCount,
-                                size: CarouselCardSize.small.width
-                            )
-                        }
-                        .buttonStyle(.plain)
-                        .contextMenu {
-                            Button(role: .destructive) {
-                                container.backlogService.remove(show.id)
-                            } label: {
-                                Label("Remove from Show Queue", systemImage: "trash")
-                            }
-                            NavigationLink(value: show.id) {
-                                Label("View Show", systemImage: "eye")
-                            }
                         }
                     }
                 }

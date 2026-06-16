@@ -74,7 +74,6 @@ import com.grateful.deadly.feature.settings.screens.connect.ConnectSheet
 fun PlayerSidePanel(
     onTapToExpand: () -> Unit,
     onNavigateToPlaylist: (showId: String, recordingId: String?, openSheet: String?) -> Unit,
-    onNavigateToUpNext: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: PlayerViewModel = hiltViewModel()
 ) {
@@ -82,7 +81,7 @@ fun PlayerSidePanel(
     val isFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
-    val advanceMode by viewModel.advanceMode.collectAsState()
+    val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
     val showCollectionsCount by viewModel.showCollectionsCount.collectAsState()
 
     var showTrackActionsBottomSheet by remember { mutableStateOf(false) }
@@ -326,11 +325,10 @@ fun PlayerSidePanel(
             title = uiState.trackDisplayInfo.title,
             showDate = uiState.trackDisplayInfo.showDate,
             venue = uiState.trackDisplayInfo.venue,
-            advanceMode = advanceMode,
+            isAutoplayEnabled = autoAdvanceEnabled,
             collectionsCount = showCollectionsCount,
             onChooseRecording = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "recording") } },
-            onAutoplay = { viewModel.cycleAdvanceMode() },
-            onViewUpNext = onNavigateToUpNext,
+            onAutoplay = { viewModel.toggleAutoAdvance() },
             onSetlist = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "setlist") } },
             onCollections = navShowId?.let { sid -> { onNavigateToPlaylist(sid, navRecordingId, "collections") } },
             onDownload = { viewModel.downloadCurrentShow() },

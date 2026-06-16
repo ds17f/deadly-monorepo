@@ -52,8 +52,6 @@ dependencies {
     implementation(project(":core:favorites"))
     implementation(project(":core:model"))
     implementation(project(":core:design"))
-    implementation(project(":core:domain"))
-    implementation(project(":feature:upnext"))
 
     // Compose BOM
     implementation(platform("androidx.compose:compose-bom:2025.08.00"))

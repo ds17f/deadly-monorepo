@@ -21,11 +21,8 @@ import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
 import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
 import com.grateful.deadly.core.database.dao.SyncOutboxDao
-import com.grateful.deadly.core.database.dao.BacklogDao
 import com.grateful.deadly.core.database.repository.ShowRepositoryImpl
-import com.grateful.deadly.core.database.repository.BacklogRepositoryImpl
 import com.grateful.deadly.core.domain.repository.ShowRepository
-import com.grateful.deadly.core.domain.repository.BacklogRepository
 import kotlinx.serialization.json.Json
 import javax.inject.Singleton
 
@@ -111,12 +108,6 @@ object DatabaseModule {
         return database.syncOutboxDao()
     }
 
-    @Provides
-    @AppDatabase
-    fun provideBacklogDao(database: DeadlyDatabase): BacklogDao {
-        return database.backlogDao()
-    }
-
     // Services are automatically provided by @Singleton @Inject constructor:
     // - DataImportService
     // - ShowMappers (uses Json from core:network module)
@@ -130,9 +121,4 @@ abstract class DatabaseBindsModule {
     abstract fun bindShowRepository(
         impl: ShowRepositoryImpl
     ): ShowRepository
-
-    @Binds
-    abstract fun bindBacklogRepository(
-        impl: BacklogRepositoryImpl
-    ): BacklogRepository
 }

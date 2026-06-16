@@ -21,14 +21,12 @@ const val PLAYER_ROUTE = "player"
  */
 fun NavGraphBuilder.playerScreen(
     onNavigateBack: () -> Unit,
-    onNavigateToPlaylist: (showId: String, recordingId: String?, openSheet: String?) -> Unit,
-    onNavigateToUpNext: () -> Unit
+    onNavigateToPlaylist: (showId: String, recordingId: String?, openSheet: String?) -> Unit
 ) {
     composable(route = PLAYER_ROUTE) {
         PlayerScreen(
             onNavigateBack = onNavigateBack,
-            onNavigateToPlaylist = onNavigateToPlaylist,
-            onNavigateToUpNext = onNavigateToUpNext
+            onNavigateToPlaylist = onNavigateToPlaylist
         )
     }
 }

@@ -5,7 +5,6 @@ import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.api.usersync.FavoritesPushService
 import com.grateful.deadly.core.api.usersync.PushResult
-import com.grateful.deadly.core.api.usersync.SyncBacklogItemV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteShowV3
 import com.grateful.deadly.core.api.usersync.SyncFavoriteTrackV3
 import com.grateful.deadly.core.api.usersync.SyncPlayerTagV3
@@ -17,7 +16,6 @@ import com.grateful.deadly.core.database.dao.RecentShowDao
 import com.grateful.deadly.core.database.dao.RecordingPreferenceDao
 import com.grateful.deadly.core.database.dao.ShowPlayerTagDao
 import com.grateful.deadly.core.database.dao.ShowReviewDao
-import com.grateful.deadly.core.database.dao.BacklogDao
 import com.grateful.deadly.core.database.dao.SyncOutboxDao
 import com.grateful.deadly.core.database.entities.SyncOutboxEntity
 import com.grateful.deadly.core.model.AppDatabase
@@ -39,7 +37,6 @@ class FavoritesPushServiceImpl @Inject constructor(
     @AppDatabase private val showReviewDao: ShowReviewDao,
     @AppDatabase private val showPlayerTagDao: ShowPlayerTagDao,
     @AppDatabase private val recordingPreferenceDao: RecordingPreferenceDao,
-    @AppDatabase private val backlogDao: BacklogDao,
     private val userSyncService: UserSyncService,
     private val authService: AuthService,
     private val syncCoordinator: UserSyncCoordinator,
@@ -47,7 +44,6 @@ class FavoritesPushServiceImpl @Inject constructor(
 
     companion object {
         private const val TAG = "FavoritesPushService"
-        private const val BACKLOG_REORDER_REF = "_order"
     }
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -71,24 +67,6 @@ class FavoritesPushServiceImpl @Inject constructor(
 
     override fun enqueueAndPushRecordingPref(showId: String) {
         enqueueAndFlush(SyncOutboxEntity.KIND_RECORDING_PREF, showId)
-    }
-
-    override fun enqueueAndPushBacklog(showId: String) {
-        enqueueAndFlush(SyncOutboxEntity.KIND_BACKLOG_ITEM, showId)
-    }
-
-    override fun enqueueAndPushBacklogReorder() {
-        enqueueAndFlush(SyncOutboxEntity.KIND_BACKLOG_REORDER, BACKLOG_REORDER_REF)
-    }
-
-    override suspend fun reconcileBacklog(showIds: List<String>): List<PushResult> {
-        if (showIds.isEmpty()) return emptyList()
-        Log.d(TAG, "reconcileBacklog: re-pushing ${showIds.size} diverged backlog rows")
-        for (showId in showIds) enqueueRow(SyncOutboxEntity.KIND_BACKLOG_ITEM, showId)
-        // Positions can have diverged too; coalesce a single reorder push so the
-        // server order matches local after the rows land.
-        enqueueRow(SyncOutboxEntity.KIND_BACKLOG_REORDER, BACKLOG_REORDER_REF)
-        return flushPending()
     }
 
     override suspend fun enqueueAllLocalAndFlush(): List<PushResult> {
@@ -116,12 +94,6 @@ class FavoritesPushServiceImpl @Inject constructor(
             Log.w(TAG, "getAll recording prefs failed", e); emptyList()
         }
         for (pref in recordingPrefs) enqueueRow(SyncOutboxEntity.KIND_RECORDING_PREF, pref.showId)
-
-        val backlog = try { backlogDao.getBacklog() } catch (e: Exception) {
-            Log.w(TAG, "getBacklog failed", e); emptyList()
-        }
-        for (item in backlog) enqueueRow(SyncOutboxEntity.KIND_BACKLOG_ITEM, item.showId)
-        if (backlog.isNotEmpty()) enqueueRow(SyncOutboxEntity.KIND_BACKLOG_REORDER, BACKLOG_REORDER_REF)
 
         return flushPending()
     }
@@ -168,8 +140,6 @@ class FavoritesPushServiceImpl @Inject constructor(
             results += flushKind(SyncOutboxEntity.KIND_RECENT)
             results += flushKind(SyncOutboxEntity.KIND_REVIEW)
             results += flushKind(SyncOutboxEntity.KIND_RECORDING_PREF)
-            results += flushKind(SyncOutboxEntity.KIND_BACKLOG_ITEM)
-            results += flushKind(SyncOutboxEntity.KIND_BACKLOG_REORDER)
             if (results.any { it.success && it.operation != "NOOP" }) {
                 syncCoordinator.triggerPull("after_push_flush")
             }
@@ -183,9 +153,7 @@ class FavoritesPushServiceImpl @Inject constructor(
                 outbox.pendingCount(SyncOutboxEntity.KIND_FAVORITE_SONG) +
                 outbox.pendingCount(SyncOutboxEntity.KIND_RECENT) +
                 outbox.pendingCount(SyncOutboxEntity.KIND_REVIEW) +
-                outbox.pendingCount(SyncOutboxEntity.KIND_RECORDING_PREF) +
-                outbox.pendingCount(SyncOutboxEntity.KIND_BACKLOG_ITEM) +
-                outbox.pendingCount(SyncOutboxEntity.KIND_BACKLOG_REORDER)
+                outbox.pendingCount(SyncOutboxEntity.KIND_RECORDING_PREF)
         } catch (_: Exception) { 0 }
 
     private suspend fun flushKind(kind: String): List<PushResult> {
@@ -209,8 +177,6 @@ class FavoritesPushServiceImpl @Inject constructor(
             SyncOutboxEntity.KIND_RECENT -> pushRecent(entry)
             SyncOutboxEntity.KIND_REVIEW -> pushReview(entry)
             SyncOutboxEntity.KIND_RECORDING_PREF -> pushRecordingPref(entry)
-            SyncOutboxEntity.KIND_BACKLOG_ITEM -> pushBacklogItem(entry)
-            SyncOutboxEntity.KIND_BACKLOG_REORDER -> pushBacklogReorder(entry)
             else -> {
                 // Unknown kind — drop it so the queue doesn't get stuck.
                 outbox.delete(entry.id)
@@ -357,43 +323,6 @@ class FavoritesPushServiceImpl @Inject constructor(
             userSyncService.putRecordingPref(showId, row.recordingId)
                 .fold({ success(entry, "PUT") }, { failure(entry, "PUT", it.message ?: it::class.simpleName ?: "error") })
         }
-    }
-
-    // Backlog item push by showId. Read the row (incl. tombstones) at push
-    // time: a live row is a PUT, a tombstoned or absent row is a DELETE.
-    private suspend fun pushBacklogItem(entry: SyncOutboxEntity): PushResult {
-        val showId = entry.refId
-        val row = try {
-            backlogDao.getById(showId)
-        } catch (e: Exception) {
-            return failure(entry, "?", "local read failed: ${e.message}")
-        }
-
-        return if (row == null || row.deletedAt != null) {
-            userSyncService.deleteBacklogItem(showId)
-                .fold({ success(entry, "DELETE") }, { failure(entry, "DELETE", it.message ?: it::class.simpleName ?: "error") })
-        } else {
-            val dto = SyncBacklogItemV3(
-                showId = row.showId,
-                position = row.position.toInt(),
-                addedAt = row.addedAt / 1000,
-                updatedAt = row.updatedAt / 1000,
-                deletedAt = null,
-            )
-            userSyncService.putBacklogItem(dto)
-                .fold({ success(entry, "PUT") }, { failure(entry, "PUT", it.message ?: it::class.simpleName ?: "error") })
-        }
-    }
-
-    // Reorder push: read the current live order and PUT the whole list.
-    private suspend fun pushBacklogReorder(entry: SyncOutboxEntity): PushResult {
-        val showIds = try {
-            backlogDao.getBacklog().map { it.showId }
-        } catch (e: Exception) {
-            return failure(entry, "?", "local read failed: ${e.message}")
-        }
-        return userSyncService.reorderBacklog(showIds)
-            .fold({ success(entry, "PUT") }, { failure(entry, "PUT", it.message ?: it::class.simpleName ?: "error") })
     }
 
     private suspend fun success(entry: SyncOutboxEntity, op: String): PushResult {

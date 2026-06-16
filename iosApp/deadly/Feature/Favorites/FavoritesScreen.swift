@@ -89,38 +89,22 @@ struct FavoritesScreen: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            if selectedTab != .showQueue {
-                filterChips
-            }
+            filterChips
             tabPicker
-            if selectedTab != .showQueue {
-                sortAndDisplayControls
-                    .padding(.bottom, 8)
-            }
+            sortAndDisplayControls
+                .padding(.bottom, 8)
             Divider()
 
-            switch selectedTab {
-            case .shows: showsContent
-            case .songs: songsContent
-            case .showQueue: ShowQueueList()
+            if selectedTab == .shows {
+                showsContent
+            } else {
+                songsContent
             }
         }
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             if let mode = FavoritesDisplayMode(rawValue: container.appPreferences.favoritesDisplayMode) {
                 displayMode = mode
-            }
-            // A "View Show Queue" menu link may have requested this tab before
-            // the screen appeared.
-            if container.showQueueTabRequested {
-                selectedTab = .showQueue
-                container.showQueueTabRequested = false
-            }
-        }
-        .onChange(of: container.showQueueTabRequested) { _, requested in
-            if requested {
-                selectedTab = .showQueue
-                container.showQueueTabRequested = false
             }
         }
         .task {
@@ -573,26 +557,10 @@ struct FavoritesScreen: View {
 
     // MARK: - Context menu
 
-    private func addToShowQueue(_ showId: String) {
-        if container.backlogService.contains(showId) {
-            container.toastPresenter.show("Already in Show Queue")
-        } else {
-            container.backlogService.addToBottom(showId)
-            container.toastPresenter.show("Added to Show Queue")
-        }
-    }
-
     @ViewBuilder
     private func contextMenu(for favoriteShow: FavoriteShow) -> some View {
         let showId = favoriteShow.show.id
         let show = favoriteShow.show
-
-        // Add to Show Queue
-        Button {
-            addToShowQueue(showId)
-        } label: {
-            Label("Add to Show Queue", systemImage: "text.badge.plus")
-        }
 
         // Review
         Button {

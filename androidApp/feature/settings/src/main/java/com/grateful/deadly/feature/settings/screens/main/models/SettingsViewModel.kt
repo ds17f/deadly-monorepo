@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.auth.AuthService
 import com.grateful.deadly.core.api.auth.AuthState
-import com.grateful.deadly.core.model.AdvanceMode
 import com.grateful.deadly.core.api.usersync.FavoritesPushService
 import com.grateful.deadly.core.api.usersync.UserSyncService
 import com.grateful.deadly.core.database.AnalyticsService
@@ -80,18 +79,6 @@ class SettingsViewModel @Inject constructor(
         analyticsService.track("feature_use", mapOf("feature" to event, "category" to "account"))
         analyticsService.flush()
         appPreferences.setAnalyticsEnabled(newValue)
-    }
-
-    /** ADR-0010 Amendment: what auto-advance does when a show ends. */
-    val advanceMode: StateFlow<AdvanceMode> = appPreferences.advanceMode
-
-    fun setAdvanceMode(mode: AdvanceMode) {
-        appPreferences.setAdvanceMode(mode)
-        analyticsService.track("feature_use", mapOf(
-            "feature" to "set_advance_mode",
-            "category" to "playback",
-            "mode" to mode.name,
-        ))
     }
 
     val sourceBadgeStyle: StateFlow<String> = appPreferences.sourceBadgeStyle

@@ -18,21 +18,7 @@ data class SyncBackupV3(
     val settings: SyncSettingsV3? = null,
     val recentShows: List<SyncRecentShowV3>? = null,
     val playbackPosition: SyncPlaybackPositionV3? = null,
-    val backlog: List<SyncBacklogItemV3>? = null,
 )
-
-@Serializable
-data class SyncBacklogItemV3(
-    val showId: String,
-    val position: Int,
-    val addedAt: Long,
-    val updatedAt: Long,
-    val deletedAt: Long? = null,
-)
-
-/** Request body for the bulk Show Queue reorder endpoint. */
-@Serializable
-data class BacklogReorderBody(val showIds: List<String>)
 
 @Serializable
 data class SyncFavorites(

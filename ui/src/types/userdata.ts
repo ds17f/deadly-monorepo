@@ -105,27 +105,6 @@ export interface RecentShow {
   bestRecordingId?: string | null;
 }
 
-// The Show Queue (backlog) — an ordered list of shows to play next. Enriched
-// with display metadata by GET /api/user/backlog so the queue renders without
-// a local catalog. `position` orders the live rows (head first).
-export interface BacklogItem {
-  showId: string;
-  position: number;
-  addedAt: number;
-  updatedAt?: number;
-  // Display metadata merged in by the API show catalog. Absent for shows not
-  // in the index.
-  date?: string | null;
-  venue?: string | null;
-  city?: string | null;
-  state?: string | null;
-  country?: string | null;
-  rating?: number;
-  recordingCount?: number;
-  image?: string | null;
-  bestRecordingId?: string | null;
-}
-
 export interface UserDataBackupV3 {
   version: 3;
   exportedAt: number;

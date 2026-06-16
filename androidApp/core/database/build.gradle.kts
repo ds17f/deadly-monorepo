@@ -47,9 +47,6 @@ dependencies {
     implementation(project(":core:model"))
     implementation(project(":core:domain"))
     implementation(project(":core:network"))
-    // Interfaces/DTOs only (no project deps), so no cycle: BacklogRepositoryImpl
-    // enqueues per-action backlog pushes via FavoritesPushService.
-    implementation(project(":core:api:usersync"))
     
     implementation("androidx.core:core-ktx:1.12.0")
     

@@ -7,7 +7,6 @@ import com.grateful.deadly.core.database.AnalyticsService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.AppReviewManager
 import com.grateful.deadly.core.database.ToastController
-import com.grateful.deadly.core.database.ShowQueueTabRequest
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.miniplayer.LastPlayedTrackService
 import com.grateful.deadly.core.model.Show
@@ -32,12 +31,8 @@ class AppViewModel @Inject constructor(
     private val favoritesService: FavoritesService,
     private val appReviewManager: AppReviewManager,
     private val autoAdvanceCoordinator: AutoAdvanceCoordinator,
-    private val showQueueTabRequest: ShowQueueTabRequest,
     toastController: ToastController,
 ) : ViewModel() {
-
-    /** Ask Favorites to open on its Show Queue tab (player/playlist "View Show Queue"). */
-    fun requestShowQueueTab() = showQueueTabRequest.request()
 
     /** App-wide transient toast messages, surfaced by the root SnackbarHost. */
     val toasts: SharedFlow<String> = toastController.messages
