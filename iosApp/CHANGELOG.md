@@ -1,12 +1,16 @@
 # Changelog
 
+## [2.40.1] - 2026-06-15
+
+### Bug Fixes
+* trust the playing device over stale server track state (#79) (3cd2e8c1)
+
+
 ## [2.40.0] - 2026-06-14
 
 ### New Features
 * tablet & landscape three-pane layout with contextual side player (#78) (bc41a07f)
 * isolate dev builds from prod (gate Developer screen + default debug to custom server) (#75) (cd5df337)
-
-
 ## [2.39.0] - 2026-06-13
 
 ### New Features
