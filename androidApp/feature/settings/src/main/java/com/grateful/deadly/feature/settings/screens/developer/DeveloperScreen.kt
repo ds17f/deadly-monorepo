@@ -9,11 +9,13 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.text.KeyboardOptions
 import java.io.File
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.grateful.deadly.feature.settings.BuildConfig
 import com.grateful.deadly.feature.settings.SettingsViewModel
 
 @Composable
@@ -30,6 +32,10 @@ fun DeveloperScreen(
     val environments = listOf("prod" to "Production", "beta" to "Beta", "custom" to "Custom")
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
+
+        item { CommitHashRow() }
+
+        item { HorizontalDivider() }
 
         item {
             Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)) {
@@ -252,6 +258,47 @@ private fun DevRow(
             text = title,
             style = MaterialTheme.typography.bodyLarge,
             color = titleColor
+        )
+    }
+}
+
+@Composable
+private fun CommitHashRow() {
+    val uriHandler = LocalUriHandler.current
+    val hash = BuildConfig.GIT_COMMIT_HASH
+    val hasHash = hash.isNotBlank() && hash != "worktree-build"
+    val displayHash = if (hash.isBlank()) "unknown" else hash
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .let { base ->
+                if (hasHash) {
+                    base.clickable {
+                        uriHandler.openUri("https://github.com/ds17f/deadly-monorepo/commit/$hash")
+                    }
+                } else {
+                    base
+                }
+            }
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(text = "Commit", style = MaterialTheme.typography.bodyLarge)
+            Text(
+                text = if (hasHash) "Tap to view on GitHub" else "No commit hash available",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+        Spacer(modifier = Modifier.width(8.dp))
+        Text(
+            text = displayHash,
+            style = MaterialTheme.typography.bodyLarge,
+            fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
+            color = if (hasHash) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
         )
     }
 }

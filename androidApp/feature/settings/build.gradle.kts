@@ -18,6 +18,20 @@ val versionProps = Properties().apply {
     }
 }
 
+// Resolve the current git commit hash at build time (configuration cache friendly).
+// Baked into BuildConfig for all build types so the Developer screen can show it
+// and link to the exact commit on GitHub.
+fun getGitCommitHash(): Provider<String> {
+    return try {
+        providers.exec {
+            commandLine("git", "rev-parse", "--short", "HEAD")
+            isIgnoreExitValue = true
+        }.standardOutput.asText.map { it.trim() }.orElse("worktree-build")
+    } catch (e: Exception) {
+        providers.provider { "worktree-build" }
+    }
+}
+
 android {
     namespace = "com.grateful.deadly.feature.settings"
     compileSdk = 36
@@ -32,6 +46,7 @@ android {
     buildTypes {
         debug {
             buildConfigField("String", "VERSION_NAME", "\"${versionProps.getProperty("VERSION_NAME", "1.0.0")}\"")
+            buildConfigField("String", "GIT_COMMIT_HASH", "\"${getGitCommitHash().get()}\"")
         }
         release {
             isMinifyEnabled = false
@@ -40,6 +55,7 @@ android {
                 "proguard-rules.pro"
             )
             buildConfigField("String", "VERSION_NAME", "\"${versionProps.getProperty("VERSION_NAME", "1.0.0")}\"")
+            buildConfigField("String", "GIT_COMMIT_HASH", "\"${getGitCommitHash().get()}\"")
         }
     }
 

@@ -114,9 +114,9 @@ android {
                 signingConfigs.getByName("debug")
             }
 
-            // Add build type and no commit hash for release builds
+            // Add build type and git commit hash for release builds
             buildConfigField("String", "BUILD_TYPE", "\"release\"")
-            buildConfigField("String", "GIT_COMMIT_HASH", "\"\"")
+            buildConfigField("String", "GIT_COMMIT_HASH", "\"${getGitCommitHash().get()}\"")
         }
 
         create("benchmark") {

@@ -16,8 +16,33 @@ struct DeveloperView: View {
     @State private var syncInFlight = false
     @State private var syncLog: [String] = []
 
+    /// Git commit hash embedded into Info.plist at build time by the
+    /// "Embed Git Commit Hash" build phase. Nil when unavailable.
+    private var gitCommitHash: String? {
+        let value = Bundle.main.infoDictionary?["GitCommitHash"] as? String
+        guard let value, !value.isEmpty else { return nil }
+        return value
+    }
+
     var body: some View {
         List {
+            Section("Build") {
+                if let hash = gitCommitHash {
+                    Link(destination: URL(string: "https://github.com/ds17f/deadly-monorepo/commit/\(hash)")!) {
+                        LabeledContent("Commit") {
+                            HStack(spacing: 4) {
+                                Text(hash)
+                                    .font(.system(.body, design: .monospaced))
+                                Image(systemName: "arrow.up.right")
+                                    .font(.caption)
+                            }
+                        }
+                    }
+                } else {
+                    LabeledContent("Commit", value: "unknown")
+                }
+            }
+
             Section {
                 Picker("Server", selection: Binding(
                     get: { container.appPreferences.serverEnvironment },

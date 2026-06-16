@@ -467,6 +467,10 @@ IOS_SIM        ?= iPhone 17
 # xcodebuild/gradle runs there.
 remote-sync:
 	@echo "Syncing to $(REMOTE_HOST):$(REMOTE_PATH)..."
+	@# The remote Mac has no .git (excluded below), so capture the commit hash
+	@# here on Linux and ship it as an xcconfig the iOS build inherits via
+	@# iosApp/deadly.xcconfig. An empty value falls back to "unknown" in-app.
+	@printf 'GIT_COMMIT_HASH = %s\n' "$$(git rev-parse --short HEAD 2>/dev/null)" > iosApp/GitHash.xcconfig
 	@rsync -avz --delete \
 		--exclude='.git' \
 		--exclude='.claude' \
@@ -482,10 +486,7 @@ remote-sync:
 		--exclude='ui/out' \
 		--exclude='ui/dist' \
 		--exclude='.secrets' \
-		--exclude='data/stage01-collected-data' \
-		--exclude='data/stage02-generated-data' \
-		--exclude='data/data.zip' \
-		--exclude='data/scripts/.venv' \
+		--exclude='data' \
 		./ $(REMOTE_HOST):$(REMOTE_PATH)/
 
 # Build debug on Mac
