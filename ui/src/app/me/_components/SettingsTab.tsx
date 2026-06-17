@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/contexts/AuthContext";
 import { usePlayer } from "@/contexts/PlayerContext";
+import { useConnect } from "@/contexts/ConnectContext";
 import { deleteAccount } from "@/lib/userDataApi";
 import { SUBREDDIT_HANDLE, SUBREDDIT_URL } from "@/lib/community";
 
@@ -13,6 +14,7 @@ const DATA_VERSION = process.env.NEXT_PUBLIC_DATA_VERSION ?? "dev";
 export default function SettingsTab() {
   const { user, signOut } = useAuth();
   const { autoAdvanceEnabled, toggleAutoAdvance } = usePlayer();
+  const { connectEnabled, setConnectEnabled } = useConnect();
   const router = useRouter();
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [confirmText, setConfirmText] = useState("");
@@ -81,6 +83,30 @@ export default function SettingsTab() {
             <span
               className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform ${
                 autoAdvanceEnabled ? "translate-x-[1.375rem]" : "translate-x-0.5"
+              }`}
+            />
+          </button>
+        </div>
+
+        <div className="mt-4 flex items-center justify-between gap-4 border-t border-white/10 pt-4">
+          <div className="min-w-0">
+            <p className="text-sm text-white/80">Enable Connect (Beta)</p>
+            <p className="mt-0.5 text-xs text-white/40">
+              Play in sync across your devices. Turn off to keep this browser out of Connect.
+            </p>
+          </div>
+          <button
+            role="switch"
+            aria-checked={connectEnabled}
+            aria-label="Enable Connect"
+            onClick={() => setConnectEnabled(!connectEnabled)}
+            className={`inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full transition-colors ${
+              connectEnabled ? "bg-deadly-highlight" : "bg-white/15"
+            }`}
+          >
+            <span
+              className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform ${
+                connectEnabled ? "translate-x-[1.375rem]" : "translate-x-0.5"
               }`}
             />
           </button>

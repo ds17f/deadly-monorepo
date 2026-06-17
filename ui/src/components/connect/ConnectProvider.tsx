@@ -17,6 +17,10 @@ const APP_VERSION = (process.env.NEXT_PUBLIC_DATA_VERSION ?? "web").slice(0, 20)
 const HEARTBEAT_INTERVAL_MS = 15_000;
 const RECONNECT_DELAYS_MS = [1_000, 2_000, 4_000, 8_000, 30_000];
 const DEVICE_ID_KEY = "deadly-device-id";
+const CONNECT_ENABLED_KEY = "deadly-connect-enabled";
+// Default for the per-device Connect toggle. Flip to false to disable
+// cross-device Connect by default across all browsers (see Settings).
+const CONNECT_ENABLED_DEFAULT = true;
 const TIME_SYNC_REFRESH_MS = 5 * 60 * 1000;
 const TIME_SYNC_SAMPLES = 3;
 const TIME_SYNC_SAMPLE_SPACING_MS = 200;
@@ -69,6 +73,13 @@ export default function ConnectProvider({
 
   const [activeDeviceVolume, setActiveDeviceVolume] = useState<number | null>(null);
   const [serverTimeOffsetMs, setServerTimeOffsetMs] = useState(0);
+  // Per-device kill switch for cross-device Connect (Beta). On by default; when
+  // off, this browser never opens the Connect WebSocket. Persisted to localStorage.
+  const [connectEnabled, setConnectEnabledState] = useState<boolean>(() => {
+    if (typeof window === "undefined") return CONNECT_ENABLED_DEFAULT;
+    const stored = localStorage.getItem(CONNECT_ENABLED_KEY);
+    return stored === null ? CONNECT_ENABLED_DEFAULT : stored === "1";
+  });
 
   const wsRef = useRef<WebSocket | null>(null);
   const heartbeatRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -332,16 +343,44 @@ export default function ConnectProvider({
     currentVersionRef.current = 0;
   }, [clearHeartbeat, clearReconnectTimer, clearTimeSyncRefresh]);
 
+  // Toggle the per-device Connect kill switch (Settings). When turning off
+  // while this browser is the active player, send an explicit `stop` first so
+  // followers pause cleanly before the socket closes (the gate effect below
+  // tears it down on the resulting re-render).
+  const setConnectEnabled = useCallback(
+    (enabled: boolean) => {
+      log(`setConnectEnabled(${enabled})`);
+      if (
+        !enabled &&
+        connectState?.activeDeviceId === myDeviceId &&
+        wsRef.current?.readyState === WebSocket.OPEN
+      ) {
+        sendCommand("stop");
+      }
+      if (typeof window !== "undefined") {
+        localStorage.setItem(CONNECT_ENABLED_KEY, enabled ? "1" : "0");
+      }
+      setConnectEnabledState(enabled);
+    },
+    [connectState, myDeviceId, sendCommand],
+  );
+
   useEffect(() => {
     if (isLoading) return;
 
-    if (user && !onAdmin) {
+    if (user && !onAdmin && connectEnabled) {
       log(`User authenticated, starting connect`);
       shouldConnectRef.current = true;
       reconnectAttemptRef.current = 0;
       connect();
     } else {
-      log(onAdmin ? `On admin route, disconnecting` : `No user, disconnecting`);
+      log(
+        !connectEnabled
+          ? `Connect disabled, disconnecting`
+          : onAdmin
+            ? `On admin route, disconnecting`
+            : `No user, disconnecting`,
+      );
       disconnect();
     }
 
@@ -349,10 +388,10 @@ export default function ConnectProvider({
       disconnect();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, isLoading, onAdmin]);
+  }, [user, isLoading, onAdmin, connectEnabled]);
 
   return (
-    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, setLocalPlaybackSource, serverTimeOffsetMs }}>
+    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, setLocalPlaybackSource, serverTimeOffsetMs, connectEnabled, setConnectEnabled }}>
       {children}
     </ConnectContext.Provider>
   );

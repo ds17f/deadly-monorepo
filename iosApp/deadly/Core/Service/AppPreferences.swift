@@ -13,7 +13,12 @@ final class AppPreferences {
     private static let eqBandGainsKey = "eq_band_gains"
     private static let shareAttachImageKey = "share_attach_image"
     private static let autoAdvanceEnabledKey = "auto_advance_enabled"
+    private static let connectEnabledKey = "connect_enabled"
     private static let sourceBadgeStyleKey = "source_badge_style"
+
+    /// Default for the per-device Connect toggle. Flip to `false` to disable
+    /// cross-device Connect by default across all installs (see settings toggle).
+    static let connectEnabledDefault = true
     private static let useBetaShareLinksKey = "use_beta_share_links"
     private static let useBetaModeKey = "use_beta_mode"
     private static let serverEnvironmentKey = "server_environment"
@@ -123,6 +128,12 @@ final class AppPreferences {
     /// ADR-0010: roll into the next show when one ends ("Autoplay"). Off by default.
     var autoAdvanceEnabled: Bool {
         didSet { UserDefaults.standard.set(autoAdvanceEnabled, forKey: Self.autoAdvanceEnabledKey) }
+    }
+
+    /// Per-device kill switch for cross-device Connect (Beta). On by default;
+    /// when off, this device never opens the Connect WebSocket. See ConnectService.
+    var connectEnabled: Bool {
+        didSet { UserDefaults.standard.set(connectEnabled, forKey: Self.connectEnabledKey) }
     }
 
     var analyticsEnabled: Bool {
@@ -273,6 +284,9 @@ final class AppPreferences {
             ?? "LIST"
         shareAttachImage = UserDefaults.standard.bool(forKey: Self.shareAttachImageKey)
         autoAdvanceEnabled = UserDefaults.standard.bool(forKey: Self.autoAdvanceEnabledKey)
+        connectEnabled = UserDefaults.standard.object(forKey: Self.connectEnabledKey) == nil
+            ? Self.connectEnabledDefault
+            : UserDefaults.standard.bool(forKey: Self.connectEnabledKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
         playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
         homeTrendingWindow = UserDefaults.standard.string(forKey: Self.homeTrendingWindowKey) ?? "now"

@@ -236,7 +236,10 @@ class ConnectServiceImpl @Inject constructor(
 
     override fun startIfAuthenticated() {
         val token = authService.getAuthToken()
-        Log.d(TAG, "startIfAuthenticated: token=${if (token != null) "present" else "null"}, shouldConnect=$shouldConnect")
+        Log.d(TAG, "startIfAuthenticated: token=${if (token != null) "present" else "null"}, shouldConnect=$shouldConnect, enabled=${appPreferences.connectEnabled.value}")
+        // Per-device kill switch (Settings → Playback & Audio → Connect). When
+        // off, this device never joins a session.
+        if (!appPreferences.connectEnabled.value) return
         if (token == null) return
         if (shouldConnect) {
             // Already meant to be connected. Since we no longer stop() on
@@ -250,6 +253,23 @@ class ConnectServiceImpl @Inject constructor(
         shouldConnect = true
         reconnectAttempt = 0
         connect()
+    }
+
+    override fun setEnabled(enabled: Boolean) {
+        Log.d(TAG, "setEnabled($enabled)")
+        appPreferences.setConnectEnabled(enabled)
+        if (enabled) {
+            // Pause local audio before joining: this device is opting into
+            // cross-device control, so we don't want it playing on its own while
+            // it adopts the shared session state. Avoids a local-vs-shared clash.
+            scope.launch { mediaControllerRepository.pause() }
+            startIfAuthenticated()
+        } else {
+            if (_isActiveDevice.value && _isConnected.value) {
+                sendStop()
+            }
+            stop()
+        }
     }
 
     override fun stop() {

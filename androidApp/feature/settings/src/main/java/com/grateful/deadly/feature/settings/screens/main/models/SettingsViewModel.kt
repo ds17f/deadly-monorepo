@@ -10,6 +10,7 @@ import com.grateful.deadly.core.api.auth.AuthState
 import com.grateful.deadly.core.api.usersync.FavoritesPushService
 import com.grateful.deadly.core.api.usersync.UserSyncService
 import com.grateful.deadly.core.database.AnalyticsService
+import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.AppReviewManager
 import com.grateful.deadly.core.database.migration.MigrationImportService
@@ -41,6 +42,7 @@ class SettingsViewModel @Inject constructor(
     private val favoritesPushService: FavoritesPushService,
     private val analyticsService: AnalyticsService,
     private val appReviewManager: AppReviewManager,
+    private val connectService: ConnectService,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
@@ -79,6 +81,18 @@ class SettingsViewModel @Inject constructor(
         analyticsService.track("feature_use", mapOf("feature" to event, "category" to "account"))
         analyticsService.flush()
         appPreferences.setAnalyticsEnabled(newValue)
+    }
+
+    val connectEnabled: StateFlow<Boolean> = appPreferences.connectEnabled
+
+    fun toggleConnectEnabled() {
+        val newValue = !appPreferences.connectEnabled.value
+        connectService.setEnabled(newValue)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_connect_enabled",
+            "category" to "preference",
+            "value" to if (newValue) "on" else "off",
+        ))
     }
 
     val sourceBadgeStyle: StateFlow<String> = appPreferences.sourceBadgeStyle

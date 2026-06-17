@@ -137,7 +137,10 @@ final class ConnectService: NSObject {
 
     func startIfAuthenticated() {
         let hasToken = authService.token != nil
-        logger.info("startIfAuthenticated: token=\(hasToken ? "present" : "null", privacy: .public) shouldConnect=\(self.shouldConnect, privacy: .public)")
+        logger.info("startIfAuthenticated: token=\(hasToken ? "present" : "null", privacy: .public) shouldConnect=\(self.shouldConnect, privacy: .public) enabled=\(self.appPreferences.connectEnabled, privacy: .public)")
+        // Per-device kill switch (Settings → Playback & Audio → Connect). When
+        // off, this device never joins a session.
+        guard appPreferences.connectEnabled else { return }
         guard hasToken else { return }
         if shouldConnect {
             // Already meant to be connected. Since we no longer stop() on
@@ -150,6 +153,27 @@ final class ConnectService: NSObject {
         shouldConnect = true
         reconnectAttempt = 0
         Task { await connect() }
+    }
+
+    /// Toggle the per-device Connect kill switch (Settings). Persists the choice
+    /// and either tears down or (re)starts the session. When turning off while
+    /// this device is the active player, send an explicit `stop` first so
+    /// followers pause cleanly before the socket closes.
+    func setEnabled(_ enabled: Bool) {
+        logger.info("setEnabled(\(enabled, privacy: .public))")
+        appPreferences.connectEnabled = enabled
+        if enabled {
+            // Pause local audio before joining: this device is opting into
+            // cross-device control, so we don't want it playing on its own while
+            // it adopts the shared session state. Avoids a local-vs-shared clash.
+            streamPlayer.pause()
+            startIfAuthenticated()
+        } else {
+            if isActiveDevice && isConnected {
+                sendStop()
+            }
+            stop()
+        }
     }
 
     func stop() {
