@@ -94,6 +94,7 @@ function initialState(): ConnectState {
     positionMs: 0,
     positionTs: Date.now(),
     durationMs: 0,
+    seekNonce: 0,
     playing: false,
     activeDeviceId: null,
     activeDeviceName: null,
@@ -135,6 +136,14 @@ function sendJson(socket: WebSocket, payload: unknown): void {
   }
 }
 
+// ADR-0017 test affordance: artificially delay state delivery to inflate the
+// position-echo round-trip past the old 2s seek threshold, so the self-skip bug can
+// be reproduced on a SINGLE device against a local server (no flaky network needed).
+// Keep the delay under the ~6s pending-command timeout so self-seek suppression still
+// holds. Unset in prod → zero delay, normal synchronous send.
+const BROADCAST_DELAY_MS = Number(process.env.CONNECT_BROADCAST_DELAY_MS) || 0;
+const BROADCAST_JITTER_MS = Number(process.env.CONNECT_BROADCAST_JITTER_MS) || 0;
+
 export function broadcastState(userId: string, state: ConnectState): void {
   const msg = JSON.stringify({ type: "state", state });
   let sent = 0;
@@ -142,7 +151,15 @@ export function broadcastState(userId: string, state: ConnectState): void {
   for (const [key, entry] of liveDevices) {
     if (key.startsWith(`${userId}:`)) {
       if (entry.socket.readyState === entry.socket.OPEN) {
-        entry.socket.send(msg);
+        const delay = BROADCAST_DELAY_MS + Math.random() * BROADCAST_JITTER_MS;
+        if (delay > 0) {
+          const socket = entry.socket;
+          setTimeout(() => {
+            if (socket.readyState === socket.OPEN) socket.send(msg);
+          }, delay);
+        } else {
+          entry.socket.send(msg);
+        }
         sent++;
       } else {
         warn(`broadcastState: skipping ${entry.device.name}[${entry.device.type}] — readyState=${entry.socket.readyState}`);
@@ -590,12 +607,15 @@ export function handleSeek(userId: string, params: { trackIndex: number; positio
     trackIndex: params.trackIndex,
     positionMs: params.positionMs,
     positionTs: Date.now(),
+    // Mark this as a genuine seek INTENT so the active client honors it (vs a
+    // routine position report, which leaves seekNonce untouched). See ADR-0017.
+    seekNonce: state.seekNonce + 1,
   };
   if (typeof params.durationMs === "number") {
     patch.durationMs = params.durationMs;
   }
 
-  log(`handleSeek: track=${params.trackIndex} pos=${params.positionMs} dur=${params.durationMs ?? "unchanged"}`);
+  log(`handleSeek: track=${params.trackIndex} pos=${params.positionMs} dur=${params.durationMs ?? "unchanged"} seekNonce=${state.seekNonce + 1}`);
   mutate(userId, patch);
 
   if (state.showId && state.recordingId) {
@@ -757,7 +777,7 @@ export function handleTransfer(
   });
 }
 
-export function handlePosition(userId: string, deviceId: string, positionMs: number): void {
+export function handlePosition(userId: string, deviceId: string, positionMs: number, durationMs?: number): void {
   const state = userStates.get(userId);
   if (!state) return;
 
@@ -774,7 +794,16 @@ export function handlePosition(userId: string, deviceId: string, positionMs: num
   // Normal position report — only accept from active device
   if (state.activeDeviceId !== deviceId) return;
 
-  mutate(userId, { positionMs, positionTs: Date.now() });
+  const patch: Partial<ConnectState> = { positionMs, positionTs: Date.now() };
+  // Carry the active device's real track duration so CONTROLLERS have a valid scale
+  // for the scrubber + seek math. A hydrated/restored session has durationMs=0, and
+  // load/seek are the only other writers — without this a controller computes
+  // `fraction * 0 = 0` and every drag seeks to track start. Only overwrite with a
+  // real (>0) value, and only when it actually changed (avoid pointless broadcasts).
+  if (typeof durationMs === "number" && durationMs > 0 && durationMs !== state.durationMs) {
+    patch.durationMs = durationMs;
+  }
+  mutate(userId, patch);
 }
 
 export function handleVolume(userId: string, deviceId: string, socket: WebSocket, volume: number): void {

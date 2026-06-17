@@ -169,9 +169,9 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
               break;
             }
             case "position": {
-              const { positionMs } = msg as Record<string, unknown>;
+              const { positionMs, durationMs } = msg as Record<string, unknown>;
               if (typeof positionMs !== "number") return;
-              handlePosition(userId!, registeredDeviceId, positionMs);
+              handlePosition(userId!, registeredDeviceId, positionMs, typeof durationMs === "number" ? durationMs : undefined);
               break;
             }
             case "volume": {

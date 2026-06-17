@@ -33,6 +33,16 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     private var interpolationTick: Date = Date()
     @ObservationIgnored private var interpolationTimer: Timer?
 
+    /// Optimistic scrubber hold (ADR-0017): after a remote seek we show the requested
+    /// position immediately — instead of letting the thumb snap back to the old server
+    /// position until the echo round-trips — so the bar feels responsive and the user
+    /// doesn't re-drag (which fired duplicate seeks). Released when the server echoes a
+    /// new seek (seekNonce advances past `optimisticSeekNonce`) or the deadline passes.
+    /// Gated functionally in `interpolatedRemotePositionMs`; never mutated during render.
+    private var optimisticSeekMs: Int?
+    private var optimisticSeekNonce: Int = 0
+    private var optimisticSeekDeadline: Date = .distantPast
+
     nonisolated init(streamPlayer: StreamPlayer) {
         self.streamPlayer = streamPlayer
         Task { @MainActor [weak self] in
@@ -82,6 +92,13 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
     /// subtracting — without it, clock-skewed devices scroll the progress bar
     /// at the wrong position.
     private func interpolatedRemotePositionMs(_ r: ConnectState) -> Int {
+        // Optimistic hold: show the just-seeked position until our seek echoes back
+        // (seekNonce advances) or the hold expires — purely a read, no mutation here.
+        if let optimistic = optimisticSeekMs,
+           (r.seekNonce ?? 0) <= optimisticSeekNonce,
+           interpolationTick < optimisticSeekDeadline {
+            return optimistic
+        }
         let localMs = interpolationTick.timeIntervalSince1970 * 1000
         let offset = connectService?.serverTimeOffsetMs ?? 0
         let serverNowMs = localMs + offset
@@ -386,10 +403,17 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
         }
 
         if connect.isRemoteControlling {
-            guard let state = connect.connectState else { return }
-            let posMs = Int(fraction * Double(state.durationMs))
-            logger.info("seek: remote -> sendSeek(pos=\(posMs, privacy: .public))")
-            connect.sendSeek(trackIndex: state.trackIndex, positionMs: posMs, durationMs: state.durationMs)
+            guard let state = connect.connectState, durationMs > 0 else { return }
+            // Compute against the resolved `durationMs` (locally-loaded track, with a
+            // state.durationMs fallback) — NOT raw state.durationMs, which is 0 on a
+            // hydrated session and would collapse every drag to 0 (ADR-0017).
+            let posMs = Int(fraction * Double(durationMs))
+            // Optimistic hold so the thumb stays where dropped until the echo lands.
+            optimisticSeekMs = posMs
+            optimisticSeekNonce = state.seekNonce ?? 0
+            optimisticSeekDeadline = Date().addingTimeInterval(6)
+            logger.info("seek: remote -> sendSeek(pos=\(posMs, privacy: .public)) optimistic hold")
+            connect.sendSeek(trackIndex: state.trackIndex, positionMs: posMs, durationMs: durationMs)
         } else {
             guard !isSkeleton else { return }
             let target = fraction * streamPlayer.progress.duration

@@ -701,7 +701,9 @@ export default function PlayerProvider({
     const id = setInterval(() => {
       const audio = getActiveAudio();
       if (audio && !audio.paused) {
-        sendCommandRef.current("position", { positionMs: Math.round(audio.currentTime * 1000) });
+        // Carry our real duration so controllers get a valid scrubber scale (ADR-0017).
+        const durationMs = Number.isFinite(audio.duration) ? Math.round(audio.duration * 1000) : 0;
+        sendCommandRef.current("position", { positionMs: Math.round(audio.currentTime * 1000), durationMs });
       }
     }, 5000);
     return () => clearInterval(id);
@@ -850,8 +852,9 @@ export default function PlayerProvider({
       reassertingTracksRef.current = false;
       if (audio && !audio.paused) {
         const positionMs = Math.round(audio.currentTime * 1000);
+        const durationMs = Number.isFinite(audio.duration) ? Math.round(audio.duration * 1000) : 0;
         audio.pause();
-        sendCommand("position", { positionMs });
+        sendCommand("position", { positionMs, durationMs });
       }
       return;
     }

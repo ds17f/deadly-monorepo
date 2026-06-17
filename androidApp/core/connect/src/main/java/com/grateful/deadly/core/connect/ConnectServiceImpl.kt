@@ -83,9 +83,6 @@ class ConnectServiceImpl @Inject constructor(
         // On becoming active, only re-seek if the local position differs from the
         // interpolated server position by more than this (avoids a pointless seek).
         private const val ACTIVATE_POSITION_SYNC_THRESHOLD_MS = 1_000L
-        // While active, only honor a remote seek if it moves the position by more
-        // than this (filters our own ~5s position reports echoing back).
-        private const val REMOTE_SEEK_THRESHOLD_MS = 2_000L
         // A pending transport command auto-clears after this long if the server
         // never confirms it, so the UI spinner can never get permanently stuck.
         private const val PENDING_COMMAND_TIMEOUT_MS = 6_000L
@@ -752,16 +749,19 @@ class ConnectServiceImpl @Inject constructor(
             mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, 0L)
         }
 
-        // React to seek from remote controllers (while already active).
-        // Compare against local position (not old server state) so our own position
-        // reports echoing back don't cause unnecessary seeks.
-        if (!justBecameActive && old != null && new.trackIndex == old.trackIndex && new.positionMs != old.positionMs) {
-            val localPositionMs = mediaControllerRepository.currentPosition.value
-            val delta = abs(new.positionMs.toLong() - localPositionMs)
-            if (delta > REMOTE_SEEK_THRESHOLD_MS) {
-                Log.d(TAG, "reactToState: seek from remote, jumping to ${new.positionMs}ms (delta=$delta)")
-                mediaControllerRepository.seekToPosition(new.positionMs.toLong())
-            }
+        // React to a seek from a remote controller (while already active). Key on
+        // seekNonce — which the server bumps ONLY for an explicit `seek` command,
+        // never for routine position reports — not on positionMs magnitude. Our own
+        // ~5s position reports echo back with an unchanged nonce, so a stale/jittery
+        // echo can never trigger a self-seek (the "skips" bug); and a deliberate seek
+        // of ANY size, including a small backward skip from another device, is honored
+        // because intent — not distance — is the signal. `cmd == "seek"` means WE
+        // issued this seek and already moved the local player, so the echoed nonce
+        // bump is our own — don't re-seek. See ADR-0017.
+        if (!justBecameActive && old != null && new.trackIndex == old.trackIndex &&
+            new.seekNonce != old.seekNonce && cmd != "seek") {
+            Log.d(TAG, "reactToState: seek from remote (nonce ${old.seekNonce} -> ${new.seekNonce}), jumping to ${new.positionMs}ms")
+            mediaControllerRepository.seekToPosition(new.positionMs.toLong())
         }
 
         // Active device, same recording — handle play/pause
@@ -877,8 +877,15 @@ class ConnectServiceImpl @Inject constructor(
     }
 
     override fun sendPosition(positionMs: Int) {
-        Log.d(TAG, "sendPosition: pos=$positionMs")
-        sendCommand("position", mapOf("positionMs" to positionMs))
+        // Carry our real track duration so controllers have a valid scrubber scale.
+        // Only the active/parked device reports position, so the local duration is the
+        // authoritative one; the server ignores a 0 (unknown) value. See ADR-0017.
+        val durationMs = mediaControllerRepository.duration.value.toInt()
+        Log.d(TAG, "sendPosition: pos=$positionMs dur=$durationMs")
+        sendCommand("position", mapOf(
+            "positionMs" to positionMs,
+            "durationMs" to durationMs,
+        ))
     }
 
     override fun sendSeek(trackIndex: Int, positionMs: Int, durationMs: Int) {

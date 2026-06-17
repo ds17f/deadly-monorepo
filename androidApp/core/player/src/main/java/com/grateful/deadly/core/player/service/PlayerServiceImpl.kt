@@ -14,6 +14,7 @@ import com.grateful.deadly.core.model.Track
 import com.grateful.deadly.core.model.CurrentTrackInfo
 import com.grateful.deadly.core.model.PlaybackStatus
 import com.grateful.deadly.core.model.QueueInfo
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -71,6 +72,14 @@ class PlayerServiceImpl @Inject constructor(
     // When remote controlling, interpolate position from Connect state so the UI
     // progress bar and clock advance smoothly between position broadcasts.
     // Otherwise delegate to the local media controller.
+    // Optimistic scrubber hold (ADR-0017): after a remote seek, show the requested
+    // position until the server echoes a new seek (seekNonce advances past the captured
+    // value) or the deadline passes — so the bar doesn't snap back to the old server
+    // position while the seek round-trips, and the user doesn't re-drag (which fired
+    // duplicate seeks). Woven into playbackStatus below; cleared by nonce/deadline.
+    private data class OptimisticSeek(val positionMs: Long, val nonce: Int, val deadlineMs: Long)
+    private val optimisticSeek = MutableStateFlow<OptimisticSeek?>(null)
+
     private val interpolationTicker = flow {
         while (true) {
             emit(Unit)
@@ -83,14 +92,22 @@ class PlayerServiceImpl @Inject constructor(
         connectService.connectState,
         connectService.isActiveDevice,
         interpolationTicker,
-    ) { localStatus, state, isActive, _ ->
+        optimisticSeek,
+    ) { localStatus, state, isActive, _, optimistic ->
         val isRemoteControlling = state != null && state.activeDeviceId != null && !isActive
         if (isRemoteControlling && state != null) {
-            val positionMs = if (state.playing) {
-                val serverNow = System.currentTimeMillis() + connectService.serverTimeOffsetMs.value
-                state.positionMs.toLong() + (serverNow - state.positionTs.toLong())
-            } else {
-                state.positionMs.toLong()
+            // Honor the optimistic hold until our seek echoes back (nonce advances) or
+            // it expires — otherwise interpolate from the latest server position.
+            val held = optimistic?.takeIf {
+                state.seekNonce <= it.nonce && System.currentTimeMillis() < it.deadlineMs
+            }
+            val positionMs = when {
+                held != null -> held.positionMs
+                state.playing -> {
+                    val serverNow = System.currentTimeMillis() + connectService.serverTimeOffsetMs.value
+                    state.positionMs.toLong() + (serverNow - state.positionTs.toLong())
+                }
+                else -> state.positionMs.toLong()
             }
             PlaybackStatus(
                 currentPosition = positionMs,
@@ -268,7 +285,9 @@ class PlayerServiceImpl @Inject constructor(
             val isRemoteControlling = state != null && state.activeDeviceId != null && !isActive
 
             if (isRemoteControlling && state != null) {
-                Log.d(TAG, "seekToPosition: remote -> sendSeek(track=${state.trackIndex} pos=$positionMs dur=${state.durationMs})")
+                // Hold the scrubber at the requested position until the echo lands.
+                optimisticSeek.value = OptimisticSeek(positionMs, state.seekNonce, System.currentTimeMillis() + 6000)
+                Log.d(TAG, "seekToPosition: remote -> sendSeek(track=${state.trackIndex} pos=$positionMs dur=${state.durationMs}) optimistic hold")
                 connectService.sendSeek(state.trackIndex, positionMs.toInt(), state.durationMs)
             } else {
                 Log.d(TAG, "seekToPosition: local -> seek + sendSeek")
