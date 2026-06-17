@@ -19,6 +19,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -477,6 +478,7 @@ private fun PlaybackAudioSettingsScreen(
 ) {
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
+    val connectEnabled by viewModel.connectEnabled.collectAsState()
 
     SubscreenScaffold("Playback & Audio", onBack) {
         item { SectionHeader("Controls") }
@@ -514,20 +516,34 @@ private fun PlaybackAudioSettingsScreen(
             )
         }
 
+        item { HorizontalDivider() }
+        item { SectionHeader("Connect") }
+
         item {
-            PreferenceRow(
-                title = "Connected Devices",
-                subtitle = "View devices connected to your account",
-                leading = { LeadingIcon(IconResources.Content.Cast()) },
-                onClick = onNavigateToConnect,
-                trailing = {
-                    Icon(
-                        painter = IconResources.Navigation.ChevronRight(),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
+            PreferenceToggleRow(
+                title = "Enable Connect (Beta)",
+                subtitle = "Play in sync across your devices. Turn off to keep this device out of Connect.",
+                checked = connectEnabled,
+                onCheckedChange = { viewModel.toggleConnectEnabled() }
             )
+        }
+
+        item {
+            Box(modifier = Modifier.alpha(if (connectEnabled) 1f else 0.38f)) {
+                PreferenceRow(
+                    title = "Connected Devices",
+                    subtitle = "View devices connected to your account",
+                    leading = { LeadingIcon(IconResources.Content.Cast()) },
+                    onClick = { if (connectEnabled) onNavigateToConnect() },
+                    trailing = {
+                        Icon(
+                            painter = IconResources.Navigation.ChevronRight(),
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                )
+            }
         }
     }
 }

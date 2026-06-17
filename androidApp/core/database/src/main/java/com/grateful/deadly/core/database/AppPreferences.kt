@@ -66,6 +66,25 @@ class AppPreferences @Inject constructor(
         private const val KEY_HOME_POPULAR_ENABLED = "home_popular_enabled"
         private const val KEY_HOME_POPULAR_CARD_SIZE = "home_popular_card_size"
         private const val KEY_HOME_POPULAR_DECADE = "home_popular_decade"
+        private const val KEY_CONNECT_ENABLED = "connect_enabled"
+
+        /**
+         * Default for the per-device Connect toggle. Flip to `false` to disable
+         * cross-device Connect by default across all installs (see settings).
+         */
+        const val CONNECT_ENABLED_DEFAULT = true
+    }
+
+    private val _connectEnabled = MutableStateFlow(
+        prefs.getBoolean(KEY_CONNECT_ENABLED, CONNECT_ENABLED_DEFAULT)
+    )
+
+    /** Per-device kill switch for cross-device Connect (Beta). On by default. */
+    val connectEnabled: StateFlow<Boolean> = _connectEnabled.asStateFlow()
+
+    fun setConnectEnabled(value: Boolean) {
+        prefs.edit().putBoolean(KEY_CONNECT_ENABLED, value).apply()
+        _connectEnabled.value = value
     }
 
     private val _homeTrendingCardSize = MutableStateFlow(

@@ -26,6 +26,14 @@ interface ConnectService {
 
     fun startIfAuthenticated()
     fun stop()
+
+    /**
+     * Toggle the per-device Connect kill switch (Settings). Persists the choice
+     * and either tears down or (re)starts the session. When turning off while
+     * this device is the active player, sends an explicit `stop` first so
+     * followers pause cleanly before the socket closes.
+     */
+    fun setEnabled(enabled: Boolean)
     fun handleNetworkRestored()
 
     fun sendStop()
