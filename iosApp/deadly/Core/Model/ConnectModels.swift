@@ -57,6 +57,12 @@ struct ConnectState: Codable {
     let positionMs: Int
     let positionTs: Double
     let durationMs: Int
+    // Bumped only by an explicit server-side seek (never by routine position
+    // reports). The active device seeks when this advances, not on positionMs
+    // deltas — so our own position echoes can't cause skips and small remote seeks
+    // still land. Optional/additive (decodeIfPresent → nil against a server that
+    // doesn't send it; treated as 0). See ADR-0017.
+    let seekNonce: Int?
     let playing: Bool
     let activeDeviceId: String?
     let activeDeviceName: String?

@@ -26,6 +26,14 @@ export interface ConnectState {
   positionMs: number;
   positionTs: number;
   durationMs: number;
+  // Monotonic counter bumped ONLY by handleSeek (an explicit `seek` command),
+  // never by routine `position` reports. The active client honors a remote seek
+  // when this advances — keying on intent, not positionMs magnitude. A stale or
+  // jittery self-echo of a position report therefore can't trigger a self-seek
+  // (the "skips" bug), and a small backward seek from another device is still
+  // honored. Additive/optional like pendingAdvance (ADR-0006 §8): old clients
+  // ignore it. See ADR-0017.
+  seekNonce: number;
   playing: boolean;
   activeDeviceId: string | null;
   activeDeviceName: string | null;

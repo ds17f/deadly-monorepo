@@ -35,3 +35,8 @@ services:
       - LOG_LEVEL=debug
       - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
       - ENABLE_DEV_SIGNIN=${ENABLE_DEV_SIGNIN:-}
+      # ADR-0017 test affordance: delay/jitter (ms) on Connect state broadcasts so the
+      # position-echo round-trip exceeds the old 2s seek threshold — reproduces the
+      # self-skip bug on one device. Default 0 (no effect). e.g. CONNECT_BROADCAST_DELAY_MS=3000
+      - CONNECT_BROADCAST_DELAY_MS=${CONNECT_BROADCAST_DELAY_MS:-0}
+      - CONNECT_BROADCAST_JITTER_MS=${CONNECT_BROADCAST_JITTER_MS:-0}

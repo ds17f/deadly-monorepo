@@ -40,6 +40,11 @@ data class ConnectState(
     val positionMs: Int = 0,
     val positionTs: Double = 0.0,
     val durationMs: Int = 0,
+    // Bumped only by an explicit server-side seek (never by position reports).
+    // The active device seeks when this advances, not on positionMs deltas — so
+    // self-echoes can't cause skips and small remote seeks still land. Additive/
+    // optional; defaults to 0 against a server that doesn't send it. See ADR-0017.
+    val seekNonce: Int = 0,
     val playing: Boolean = false,
     val activeDeviceId: String? = null,
     val activeDeviceName: String? = null,

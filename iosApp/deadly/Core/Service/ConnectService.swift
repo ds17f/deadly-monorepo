@@ -249,8 +249,12 @@ final class ConnectService: NSObject {
     }
 
     func sendPosition(positionMs: Int) {
-        logger.info("sendPosition: pos=\(positionMs, privacy: .public)")
-        sendCommand("position", extra: ["positionMs": positionMs])
+        // Carry our real track duration so controllers have a valid scrubber scale.
+        // Only the active/parked device reports position, so the local duration is the
+        // authoritative one; the server ignores a 0 (unknown) value. See ADR-0017.
+        let durationMs = Int(streamPlayer.progress.duration * 1000)
+        logger.info("sendPosition: pos=\(positionMs, privacy: .public) dur=\(durationMs, privacy: .public)")
+        sendCommand("position", extra: ["positionMs": positionMs, "durationMs": durationMs])
     }
 
     func sendStop() {
@@ -414,6 +418,11 @@ final class ConnectService: NSObject {
     // MARK: - State Reaction
 
     private func reactToState(old: ConnectState?, new: ConnectState) {
+        // Capture the in-flight command BEFORE the clearing block below nils it out,
+        // so the seek-from-remote step further down can still tell a remote seek from
+        // the echo of our own (mirrors Android's `cmd` snapshot). See ADR-0017.
+        let cmdAtEntry = pendingCommand
+
         // Clear pending command if the server confirmed the expected transition
         if let cmd = pendingCommand {
             if cmd == "play" && new.playing {
@@ -425,8 +434,8 @@ final class ConnectService: NSObject {
             } else if (cmd == "next" || cmd == "prev") && new.trackIndex != (old?.trackIndex ?? -1) {
                 logger.info("reactToState: pending '\(cmd, privacy: .public)' confirmed (track \(old?.trackIndex ?? -1, privacy: .public) -> \(new.trackIndex, privacy: .public)), clearing")
                 pendingCommand = nil
-            } else if cmd == "seek" && new.positionMs != (old?.positionMs ?? -1) {
-                logger.info("reactToState: pending 'seek' confirmed, clearing")
+            } else if cmd == "seek" && (new.seekNonce ?? 0) != (old?.seekNonce ?? 0) {
+                logger.info("reactToState: pending 'seek' confirmed (nonce \(old?.seekNonce ?? 0, privacy: .public) -> \(new.seekNonce ?? 0, privacy: .public)), clearing")
                 pendingCommand = nil
             }
         }
@@ -598,17 +607,20 @@ final class ConnectService: NSObject {
             streamPlayer.skipTo(index: new.trackIndex, autoplay: new.playing)
         }
 
-        // React to seek from remote controllers (while already active).
-        // Compare against local position (not old server state) so our own position
-        // reports echoing back don't cause unnecessary seeks.
-        if !justBecameActive, let oldState = old, new.trackIndex == oldState.trackIndex, new.positionMs != oldState.positionMs {
-            let localPositionMs = Int(streamPlayer.progress.currentTime * 1000)
-            let delta = abs(new.positionMs - localPositionMs)
-            if delta > 2000 {
-                let targetTime = Double(new.positionMs) / 1000.0
-                logger.info("reactToState: seek from remote, jumping to \(new.positionMs, privacy: .public)ms (delta=\(delta, privacy: .public))")
-                streamPlayer.seek(to: targetTime)
-            }
+        // React to a seek from a remote controller (while already active). Key on
+        // seekNonce — which the server bumps ONLY for an explicit `seek` command,
+        // never for routine position reports — not on positionMs magnitude. Our own
+        // ~5s position reports echo back with an unchanged nonce, so a stale/jittery
+        // echo can never trigger a self-seek (the "skips" bug); and a deliberate seek
+        // of ANY size, including a small backward skip from another device, is honored
+        // because intent — not distance — is the signal. cmdAtEntry == "seek" means WE
+        // issued this seek and already moved the local player, so the echoed nonce bump
+        // is our own — don't re-seek. See ADR-0017.
+        if !justBecameActive, let oldState = old, new.trackIndex == oldState.trackIndex,
+           (new.seekNonce ?? 0) != (oldState.seekNonce ?? 0), cmdAtEntry != "seek" {
+            let targetTime = Double(new.positionMs) / 1000.0
+            logger.info("reactToState: seek from remote (nonce \(oldState.seekNonce ?? 0, privacy: .public) -> \(new.seekNonce ?? 0, privacy: .public)), jumping to \(new.positionMs, privacy: .public)ms")
+            streamPlayer.seek(to: targetTime)
         }
 
         let localPlaying = streamPlayer.playbackState.isPlaying
