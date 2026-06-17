@@ -254,6 +254,13 @@ extract_commits() {
     commits=$(echo "$commits" | grep -v "$extra_exclude" || true)
   fi
 
+  # Drop commits that were reverted within this same range. The change isn't in
+  # the build, so it must not appear in the changelog. Matches the original
+  # subject (substring) against the list of reverted subjects.
+  if [ -n "$REVERTED_SUBJECTS" ] && [ -n "$commits" ]; then
+    commits=$(echo "$commits" | grep -vFf <(printf '%s\n' "$REVERTED_SUBJECTS") || true)
+  fi
+
   if [ -n "$commits" ]; then
     echo "### $title" >> "$TEMP_CHANGELOG"
 
@@ -267,6 +274,16 @@ extract_commits() {
     echo "" >> "$TEMP_CHANGELOG"
   fi
 }
+
+# Subjects of commits reverted within this range (from `Revert "<subject>"`
+# messages), so extract_commits can drop the originals — a reverted change
+# isn't in the build and must not show up in the release notes.
+REVERTED_SUBJECTS=$(git log ${FROM_REVISION} --pretty=format:"%s" \
+  | sed -n 's/^Revert "\(.*\)"$/\1/p' || true)
+if [ -n "$REVERTED_SUBJECTS" ]; then
+  echo -e "${BLUE}ℹ️ Excluding reverted commits from changelog:${NC}"
+  echo "$REVERTED_SUBJECTS" | sed 's/^/  - /'
+fi
 
 # User-facing changelog: only feat/fix/perf are included. CI-scoped feat/fix
 # (e.g. fix(ios/ci): ...) are internal plumbing and excluded.
