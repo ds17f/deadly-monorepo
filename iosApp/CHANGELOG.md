@@ -1,11 +1,20 @@
 # Changelog
 
+## [2.40.2] - 2026-06-16
+
+### New Features
+* show git commit hash linked to repo in Developer menu (#81) (107a05f5)
+
+### Bug Fixes
+* add per-device "Enable Connect (Beta)" toggle in Settings (#84) (643b1e96)
+* seek by intent nonce, propagate duration, optimistic scrubber (#83) (b8fddc16)
+* detect dead WS keep-alive socket via ping (#82) (9239c90d)
+
+
 ## [2.40.1] - 2026-06-15
 
 ### Bug Fixes
 * trust the playing device over stale server track state (#79) (3cd2e8c1)
-
-
 ## [2.40.0] - 2026-06-14
 
 ### New Features
