@@ -763,10 +763,23 @@ class ConnectServiceImpl @Inject constructor(
             }
         }
 
-        // React to track changes from remote controllers (while already active)
+        // React to track changes from remote controllers (while already active).
+        // Guard on the LOCAL index, not just old/new server indices: when WE
+        // auto-advanced locally and sent `next`, the server lags and only later
+        // echoes the new trackIndex back. By then the local player is already on
+        // that track (often seconds in), so re-seeking to pos=0 restarts the song
+        // — an audible skip a few seconds into the new track. If the local player
+        // is already on new.trackIndex there is nothing to do, whether the change
+        // came from a remote controller or from our own echoed auto-advance. Same
+        // self-echo race the seekNonce guard below handles (ADR-0017).
         if (!justBecameActive && old != null && new.trackIndex != old.trackIndex) {
-            Log.d(TAG, "reactToState: track changed ${old.trackIndex} -> ${new.trackIndex}, skipping to index")
-            mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, 0L)
+            val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
+            if (localTrackIndex == new.trackIndex) {
+                Log.d(TAG, "reactToState: track changed ${old.trackIndex} -> ${new.trackIndex}, but local already at ${new.trackIndex} (own auto-advance echo) — not seeking")
+            } else {
+                Log.d(TAG, "reactToState: track changed ${old.trackIndex} -> ${new.trackIndex}, skipping to index")
+                mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, 0L)
+            }
         }
 
         // React to a seek from a remote controller (while already active). Key on
