@@ -177,6 +177,14 @@ function initSchema(db: Database.Database): void {
       value TEXT NOT NULL
     );
 
+    -- Global feature flags / runtime config, admin-controlled. Persists across
+    -- restarts. A missing key falls back to the code-side default, so the table
+    -- only holds keys an admin has explicitly set. See db/appSettings.ts.
+    CREATE TABLE IF NOT EXISTS app_settings (
+      key TEXT PRIMARY KEY,
+      value TEXT NOT NULL
+    );
+
     -- In-app messaging: the server is a dumb publisher of a flat message list.
     -- The MESSAGE feed carries no per-user state — a global broadcast is one
     -- row, never one-per-account, and the monotonic integer id doubles as the

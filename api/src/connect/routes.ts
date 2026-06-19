@@ -21,6 +21,16 @@ import {
   startHeartbeatSweep,
 } from "./state.js";
 import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
+import { getConnectEnabled } from "../db/appSettings.js";
+import { connectDisabledCloseCode } from "./protocol.js";
+
+// Terminal close codes the client must NOT reconnect after (see protocol.ts):
+//   4003 — what every shipped client already treats as terminal. Sent to
+//          legacy clients (protocolVersion < 2) when Connect is disabled so
+//          they go quiet instead of retry-storming an endpoint that refuses
+//          them. This is the fleet-wide kill: today every client is proto 1.
+//   4005 — "Connect disabled". Sent to clients new enough to understand it
+//          (protocolVersion >= 2). Distinct from 4003 (Unauthorized) in logs.
 
 export async function connectRoutes(app: FastifyInstance): Promise<void> {
   startHeartbeatSweep();
@@ -58,10 +68,42 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
       switch (msg.type) {
         case "register": {
           if (!msg.deviceId || !msg.deviceType || !msg.deviceName) return;
-          registeredDeviceId = msg.deviceId;
           // ADR-0011 §3: additive, optional. Absent ⇒ legacy ⇒ 0.
           const protocolVersion = typeof msg.protocolVersion === "number" ? msg.protocolVersion : 0;
           const appVersion = typeof msg.appVersion === "string" ? msg.appVersion : null;
+
+          // Global kill switch (admin-controlled, persisted, default OFF). When
+          // Connect is disabled we refuse the device at register time and close.
+          // Leave registeredDeviceId null: nothing registered, nothing for the
+          // close handler to unregister.
+          //
+          // CLIENT BEHAVIOR ON THIS CLOSE — both verified on device 2026-06-18:
+          //   - iOS (iPhone 13 Pro, iOS 26.5, proto 1): CORRECT. didCloseWith
+          //     delivers code=4003, handleDisconnect hits the 4003 guard and
+          //     logs "not reconnecting" — clean terminal, no churn. (Custom
+          //     4000-range close codes ARE delivered intact on iOS, contrary to
+          //     an earlier guess about URLSessionWebSocketTask.CloseCode.)
+          //   - Android (Pixel 6, proto 1): CHURNS. Its WebSocketListener
+          //     overrides onClosed but NOT onClosing, so OkHttp's server-
+          //     initiated close lands in onClosing (a no-op) and the 4003 guard
+          //     in onClosed never runs. Half-dead socket → ~20s ping-pong
+          //     timeout → onFailure → handleDisconnect(null) → reconnect
+          //     (~21s loop; onOpen resets the backoff).
+          // The close stops a Connect session from forming on BOTH (no double-
+          // play/desync — the real bug). The only residual issue is Android's
+          // background reconnect churn, which is unavoidable on already-shipped
+          // builds (no server close reaches its terminal path). PHASE 3 fix is
+          // Android-only: add an onClosing override that reads the code and goes
+          // terminal. Close codes work fine for iOS, so proto-2's 4005 needs no
+          // app-message workaround. See ADR-0016 for the dead-socket pattern.
+          if (!getConnectEnabled()) {
+            const code = connectDisabledCloseCode(protocolVersion);
+            request.log.info({ userId, deviceId: msg.deviceId, protocolVersion, code }, "ws/connect: Connect disabled — closing");
+            socket.close(code, "Connect disabled");
+            return;
+          }
+
+          registeredDeviceId = msg.deviceId;
           registerDevice(userId!, msg.deviceId, msg.deviceType as DeviceType, msg.deviceName, socket, protocolVersion, appVersion);
           break;
         }
