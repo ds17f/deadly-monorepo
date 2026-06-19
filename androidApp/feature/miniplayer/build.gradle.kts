@@ -46,6 +46,7 @@ dependencies {
     implementation(project(":core:model"))
     implementation(project(":core:design"))
     implementation(project(":core:connect"))
+    implementation(project(":core:database"))
     implementation(project(":feature:settings"))
     
     // Hilt

@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.grateful.deadly.core.api.miniplayer.MiniPlayerService
 import com.grateful.deadly.core.connect.ConnectService
+import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.model.MiniPlayerUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import com.grateful.deadly.core.model.AppLaunchState
@@ -28,8 +29,12 @@ import javax.inject.Inject
 @HiltViewModel
 class MiniPlayerViewModel @Inject constructor(
     private val miniPlayerService: MiniPlayerService,
-    private val connectService: ConnectService
+    private val connectService: ConnectService,
+    appPreferences: AppPreferences
 ) : ViewModel() {
+
+    /** Per-device Connect kill switch (off by default). Gates the Connect icon. */
+    val connectEnabled: StateFlow<Boolean> = appPreferences.connectEnabled
     
     companion object {
         private const val TAG = "MiniPlayerViewModel"

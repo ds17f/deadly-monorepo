@@ -49,6 +49,7 @@ fun MiniPlayerScreen(
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
     val showConnectTooltip by viewModel.shouldShowConnectTooltip.collectAsState()
     val showVolumeUI by viewModel.showVolumeUI.collectAsState()
+    val connectEnabled by viewModel.connectEnabled.collectAsState()
     var showConnectSheet by remember { mutableStateOf(false) }
 
     // Hardware volume button pressed during a Connect session — surface the sheet.
@@ -195,18 +196,20 @@ fun MiniPlayerScreen(
                     }
                 }
                 
-                // Connect button
-                IconButton(
-                    onClick = { showConnectSheet = true },
-                    modifier = Modifier.size(40.dp)
-                ) {
-                    Icon(
-                        painter = IconResources.Content.Cast(),
-                        contentDescription = "Connect",
-                        tint = if (connectRemoteDeviceName != null) MaterialTheme.colorScheme.primary
-                               else MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(20.dp)
-                    )
+                // Connect button — hidden when Connect is disabled on this device (off by default)
+                if (connectEnabled) {
+                    IconButton(
+                        onClick = { showConnectSheet = true },
+                        modifier = Modifier.size(40.dp)
+                    ) {
+                        Icon(
+                            painter = IconResources.Content.Cast(),
+                            contentDescription = "Connect",
+                            tint = if (connectRemoteDeviceName != null) MaterialTheme.colorScheme.primary
+                                   else MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.size(20.dp)
+                        )
+                    }
                 }
 
                 // Play/pause button with loading state
