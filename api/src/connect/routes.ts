@@ -73,10 +73,34 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
           const appVersion = typeof msg.appVersion === "string" ? msg.appVersion : null;
 
           // Global kill switch (admin-controlled, persisted, default OFF). When
-          // Connect is disabled we refuse the device at register time — close
-          // with a code the client treats as terminal so it stops reconnecting.
+          // Connect is disabled we refuse the device at register time and close.
           // Leave registeredDeviceId null: nothing registered, nothing for the
           // close handler to unregister.
+          //
+          // CAVEAT — shipped clients do NOT go quiet on this close; both
+          // platforms fall through to their liveness-timeout reconnect path
+          // instead of honoring the code. The close still prevents a Connect
+          // session from forming (no double-play/desync — the real bug), but
+          // expect ~20s background reconnect churn from old clients until they
+          // update. There is NO server-initiated close a shipped client treats
+          // as terminal, so this churn is unavoidable. Details:
+          //   - Android (verified on Pixel 6, proto 1, 2026-06-18): the
+          //     WebSocketListener overrides onClosed but not onClosing, so
+          //     OkHttp's server-initiated close lands in onClosing (a no-op);
+          //     the 4003 guard in onClosed never runs. Half-dead socket → ~20s
+          //     ping-pong timeout → onFailure → handleDisconnect(null) →
+          //     reconnect (~21s loop; onOpen resets the backoff).
+          //   - iOS (code analysis): URLSessionWebSocketTask.CloseCode is an
+          //     enum with cases only for 1000–1015 (+invalid=0). It cannot
+          //     carry a 4000-range code, so didCloseWith delivers .invalid/0
+          //     (or the close arrives via didCompleteWithError as nil). Either
+          //     way the `closeCode == 4003` guard can't match → reconnect; its
+          //     own 20s+10s ping probe reconnects regardless.
+          // IMPLICATION FOR PHASE 3: the 4005 code is unrepresentable on iOS
+          // too, so the proto-2 "Connect disabled" terminal signal must ride on
+          // an application message (e.g. {"type":"connect_disabled"}) or the
+          // close reason string — NOT the numeric close code. See ADR-0016 for
+          // the same dead-socket pattern.
           if (!getConnectEnabled()) {
             const code = connectDisabledCloseCode(protocolVersion);
             request.log.info({ userId, deviceId: msg.deviceId, protocolVersion, code }, "ws/connect: Connect disabled — closing");
