@@ -28,10 +28,6 @@ export interface ConnectContextValue {
   // server's current wall-clock. 0 until the first time_sync round-trip
   // completes. See docs/connect-v2-architecture.md "Clock Sync".
   serverTimeOffsetMs: number;
-  // Per-device kill switch for cross-device Connect (Beta). When false, this
-  // browser never opens the Connect WebSocket. Persisted to localStorage.
-  connectEnabled: boolean;
-  setConnectEnabled: (enabled: boolean) => void;
 }
 
 export const ConnectContext = createContext<ConnectContextValue | null>(null);

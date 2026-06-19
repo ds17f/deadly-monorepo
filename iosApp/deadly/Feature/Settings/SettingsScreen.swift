@@ -330,42 +330,8 @@ struct PlaybackAudioSettingsView: View {
                 }
             }
 
-            if container.authService.isSignedIn {
-                Section {
-                    Toggle(isOn: Binding(
-                        get: { container.appPreferences.connectEnabled },
-                        set: { newValue in
-                            container.connectService.setEnabled(newValue)
-                            container.analyticsService.track("feature_use", props: [
-                                "feature": "set_connect_enabled",
-                                "category": "preference",
-                                "value": newValue ? "on" : "off",
-                            ])
-                        }
-                    )) {
-                        Label("Enable Connect (Beta)", systemImage: "iphone.and.arrow.forward")
-                    }
-
-                    NavigationLink {
-                        ConnectScreen()
-                    } label: {
-                        HStack {
-                            settingsRow("Connected Devices", systemImage: "rectangle.connected.to.line.below")
-                            if container.connectService.isConnected && !container.connectService.devices.isEmpty {
-                                Text("\(container.connectService.devices.count)")
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    }
-                    .foregroundStyle(.primary)
-                    .disabled(!container.appPreferences.connectEnabled)
-                } header: {
-                    Text("Connect")
-                } footer: {
-                    Text("Play in sync across your devices. Turn off to keep this device out of Connect.")
-                }
-            }
+            // Connect (cross-device sync) moved to Developer settings — it's a
+            // dev/beta opt-in, off by default, gated globally by the server.
         }
         .navigationTitle("Playback & Audio")
         .navigationBarTitleDisplayMode(.inline)

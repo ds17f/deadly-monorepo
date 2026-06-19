@@ -25,39 +25,46 @@ fun PlayerSecondaryControls(
     onEqualizerClick: () -> Unit,
     onConnectClick: () -> Unit,
     onShareClick: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    showConnect: Boolean = true
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Left section - Connect (icon + device label share one tap target)
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier
-                .height(40.dp)
-                .clip(RoundedCornerShape(20.dp))
-                .clickable(onClick = onConnectClick)
-                .padding(horizontal = 8.dp)
-        ) {
-            Icon(
-                painter = IconResources.Content.Cast(),
-                contentDescription = "Connect",
-                tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
-                       else MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            if (connectDeviceName != null) {
-                Spacer(Modifier.width(8.dp))
-                Text(
-                    text = connectDeviceName,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.primary,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.widthIn(max = 100.dp)
+        // Left section - Connect (icon + device label share one tap target).
+        // Hidden when Connect is disabled on this device (off by default); an
+        // empty placeholder keeps the right cluster right-aligned (SpaceBetween).
+        if (showConnect) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .height(40.dp)
+                    .clip(RoundedCornerShape(20.dp))
+                    .clickable(onClick = onConnectClick)
+                    .padding(horizontal = 8.dp)
+            ) {
+                Icon(
+                    painter = IconResources.Content.Cast(),
+                    contentDescription = "Connect",
+                    tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
+                           else MaterialTheme.colorScheme.onSurfaceVariant
                 )
+                if (connectDeviceName != null) {
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        text = connectDeviceName,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.primary,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.widthIn(max = 100.dp)
+                    )
+                }
             }
+        } else {
+            Spacer(Modifier)
         }
 
         // Right section — inline per-show actions

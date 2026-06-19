@@ -83,8 +83,7 @@ fun SettingsScreen(
             PlaybackAudioSettingsScreen(
                 viewModel,
                 onBack = { category = null },
-                onNavigateToEqualizer = onNavigateToEqualizer,
-                onNavigateToConnect = onNavigateToConnect
+                onNavigateToEqualizer = onNavigateToEqualizer
             )
         SettingsCategory.HomeLayout ->
             HomeLayoutSettingsScreen(viewModel, onBack = { category = null })
@@ -473,12 +472,10 @@ private fun AccountSettingsScreen(viewModel: SettingsViewModel, onBack: () -> Un
 private fun PlaybackAudioSettingsScreen(
     viewModel: SettingsViewModel,
     onBack: () -> Unit,
-    onNavigateToEqualizer: () -> Unit,
-    onNavigateToConnect: () -> Unit
+    onNavigateToEqualizer: () -> Unit
 ) {
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
-    val connectEnabled by viewModel.connectEnabled.collectAsState()
 
     SubscreenScaffold("Playback & Audio", onBack) {
         item { SectionHeader("Controls") }
@@ -516,35 +513,8 @@ private fun PlaybackAudioSettingsScreen(
             )
         }
 
-        item { HorizontalDivider() }
-        item { SectionHeader("Connect") }
-
-        item {
-            PreferenceToggleRow(
-                title = "Enable Connect (Beta)",
-                subtitle = "Play in sync across your devices. Turn off to keep this device out of Connect.",
-                checked = connectEnabled,
-                onCheckedChange = { viewModel.toggleConnectEnabled() }
-            )
-        }
-
-        item {
-            Box(modifier = Modifier.alpha(if (connectEnabled) 1f else 0.38f)) {
-                PreferenceRow(
-                    title = "Connected Devices",
-                    subtitle = "View devices connected to your account",
-                    leading = { LeadingIcon(IconResources.Content.Cast()) },
-                    onClick = { if (connectEnabled) onNavigateToConnect() },
-                    trailing = {
-                        Icon(
-                            painter = IconResources.Navigation.ChevronRight(),
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                )
-            }
-        }
+        // Connect (cross-device sync) moved to Developer settings — it's a
+        // dev/beta opt-in, off by default, gated globally by the server.
     }
 }
 

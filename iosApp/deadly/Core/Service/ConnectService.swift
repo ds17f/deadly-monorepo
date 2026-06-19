@@ -80,7 +80,8 @@ final class ConnectService: NSObject {
 
     // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
     // Bump in lockstep with the documented protocol; the server may branch on it.
-    private static let protocolVersion = 1
+    // v2: understands the 4005 "Connect disabled" terminal close code.
+    private static let protocolVersion = 2
     private static let reconnectDelays: [Double] = [1, 2, 4, 8, 30]
     private static let heartbeatInterval: UInt64 = 15_000_000_000 // 15s in nanoseconds
     // WS keep-alive ping. URLSessionWebSocketTask has no built-in keep-alive: a
@@ -950,8 +951,10 @@ final class ConnectService: NSObject {
         timeSyncBestRttMs = .infinity
         webSocket = nil
 
-        // 4003 = Unauthorized (terminal — token invalid)
-        if !shouldConnect || closeCode == 4003 {
+        // Terminal closes (don't reconnect): 4003 = Unauthorized (token invalid),
+        // 4005 = Connect globally disabled by the server. iOS delivers custom
+        // close codes intact via didCloseWith, so this guard is reached.
+        if !shouldConnect || closeCode == 4003 || closeCode == 4005 {
             logger.info("handleDisconnect: not reconnecting (shouldConnect=\(self.shouldConnect, privacy: .public) code=\(closeCode ?? -1, privacy: .public))")
             return
         }

@@ -57,7 +57,8 @@ class ConnectServiceImpl @Inject constructor(
         private const val TAG = "ConnectService"
         // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
         // Bump in lockstep with the documented protocol; the server may branch on it.
-        private const val CONNECT_PROTOCOL_VERSION = 1
+        // v2: understands the 4005 "Connect disabled" terminal close code.
+        private const val CONNECT_PROTOCOL_VERSION = 2
         private val RECONNECT_DELAYS_S = listOf(1L, 2L, 4L, 8L, 30L)
         private const val HEARTBEAT_INTERVAL_MS = 15_000L
         // WS keep-alive ping. readTimeout(0) keeps the read side open forever but
@@ -70,7 +71,14 @@ class ConnectServiceImpl @Inject constructor(
         // session is handed away. This is one coupled budget with the sweep; see
         // ADR-0016. Keep it < ~22s (2*ping < 45s) if either constant changes.
         private const val PING_INTERVAL_MS = 20_000L
+        // Server replaced this socket with a newer one for the same deviceId.
+        // Terminal: reconnecting would re-register and kick the newer socket,
+        // a self-perpetuating churn (see web ConnectProvider).
+        private const val CLOSE_CODE_REPLACED = 4000
         private const val CLOSE_CODE_UNAUTHORIZED = 4003
+        // Connect globally disabled by the server (admin kill switch). Terminal:
+        // don't reconnect. Only sent to proto>=2 clients.
+        private const val CLOSE_CODE_DISABLED = 4005
         private const val DEFAULT_FORMAT = "VBR MP3"
         private const val HARDWARE_VOLUME_DEBOUNCE_MS = 300L
         private const val VOLUME_ECHO_SUPPRESS_MS = 1_500L
@@ -354,6 +362,20 @@ class ConnectServiceImpl @Inject constructor(
         override fun onMessage(webSocket: WebSocket, text: String) {
             Log.d(TAG, "onMessage: ${text.take(200)}")
             handleMessage(text)
+        }
+
+        // A server-initiated close lands HERE, not onClosed. Without this
+        // override OkHttp's default onClosing is a no-op, the closing handshake
+        // never completes, onClosed never fires, and the half-dead socket only
+        // dies via the ping-pong timeout → onFailure → reconnect (~40s churn).
+        // So: complete the handshake AND route the server's real close code to
+        // handleDisconnect so terminal codes (4000/4003/4005) suppress reconnect.
+        // handleDisconnect is idempotent, so the onClosed(1000) that follows our
+        // close() is a no-op.
+        override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
+            Log.d(TAG, "Closing: code=$code reason=$reason")
+            webSocket.close(1000, null)
+            handleDisconnect(code)
         }
 
         override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
@@ -1034,6 +1056,12 @@ class ConnectServiceImpl @Inject constructor(
     }
 
     private fun handleDisconnect(closeCode: Int?) {
+        // Idempotent: onClosing + the onClosed(1000) that follows our handshake
+        // ack (or onFailure) can both land here for one socket. First wins; a
+        // duplicate must not schedule a second reconnect. The close completes
+        // synchronously inside onClosing, well before any reconnect backoff, so
+        // a stale onClosed can't tear down a freshly reconnected socket.
+        if (webSocket == null && !_isConnected.value) return
         stopHeartbeat()
         stopTimeSyncRefresh()
         stopPositionReporting()
@@ -1047,7 +1075,15 @@ class ConnectServiceImpl @Inject constructor(
         setPendingCommand(null)
         _pendingTransfer.value = null
 
-        if (!shouldConnect || closeCode == CLOSE_CODE_UNAUTHORIZED) return
+        // Terminal closes (don't reconnect): 4000 replaced-by-newer-connection,
+        // 4003 unauthorized, 4005 Connect disabled. 4001 (heartbeat timeout) and
+        // null (network/ping failure) fall through to reconnect. Mirrors the web
+        // client's terminal set.
+        if (!shouldConnect ||
+            closeCode == CLOSE_CODE_REPLACED ||
+            closeCode == CLOSE_CODE_UNAUTHORIZED ||
+            closeCode == CLOSE_CODE_DISABLED
+        ) return
 
         val delaySecs = RECONNECT_DELAYS_S[minOf(reconnectAttempt, RECONNECT_DELAYS_S.size - 1)]
         reconnectAttempt++

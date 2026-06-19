@@ -16,9 +16,10 @@ final class AppPreferences {
     private static let connectEnabledKey = "connect_enabled"
     private static let sourceBadgeStyleKey = "source_badge_style"
 
-    /// Default for the per-device Connect toggle. Flip to `false` to disable
-    /// cross-device Connect by default across all installs (see settings toggle).
-    static let connectEnabledDefault = true
+    /// Default for the per-device Connect toggle. OFF by default: Connect is a
+    /// dev/beta opt-in living under Developer settings, and the server gates it
+    /// globally too. A user must explicitly turn it on to participate.
+    static let connectEnabledDefault = false
     private static let useBetaShareLinksKey = "use_beta_share_links"
     private static let useBetaModeKey = "use_beta_mode"
     private static let serverEnvironmentKey = "server_environment"

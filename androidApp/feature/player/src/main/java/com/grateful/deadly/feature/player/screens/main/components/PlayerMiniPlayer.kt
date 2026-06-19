@@ -26,7 +26,8 @@ fun PlayerMiniPlayer(
     onPlayPause: () -> Unit,
     onConnectClick: () -> Unit,
     onTapToExpand: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    showConnect: Boolean = true
 ) {
     Card(
         modifier = modifier
@@ -90,18 +91,20 @@ fun PlayerMiniPlayer(
                     )
                 }
 
-                // Connect button
-                IconButton(
-                    onClick = onConnectClick,
-                    modifier = Modifier.size(40.dp)
-                ) {
-                    Icon(
-                        painter = IconResources.Content.Cast(),
-                        contentDescription = "Connect",
-                        tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
-                               else MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(20.dp)
-                    )
+                // Connect button — hidden when Connect is disabled (off by default)
+                if (showConnect) {
+                    IconButton(
+                        onClick = onConnectClick,
+                        modifier = Modifier.size(40.dp)
+                    ) {
+                        Icon(
+                            painter = IconResources.Content.Cast(),
+                            contentDescription = "Connect",
+                            tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
+                                   else MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.size(20.dp)
+                        )
+                    }
                 }
 
                 // Play/Pause button (NOT clickable for expansion)

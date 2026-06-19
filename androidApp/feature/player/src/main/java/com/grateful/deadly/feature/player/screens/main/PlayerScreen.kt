@@ -49,6 +49,7 @@ fun PlayerScreen(
     val isCurrentTrackFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
+    val connectEnabled by viewModel.appPreferences.connectEnabled.collectAsState()
     val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
     val showCollectionsCount by viewModel.showCollectionsCount.collectAsState()
 
@@ -149,6 +150,7 @@ fun PlayerScreen(
             // Secondary controls row (updated for queue sheet)
             item {
                 PlayerSecondaryControls(
+                    showConnect = connectEnabled,
                     connectDeviceName = connectRemoteDeviceName,
                     onEqualizerClick = { showEqualizerBottomSheet = true },
                     onConnectClick = { showConnectSheet = true },
@@ -254,6 +256,7 @@ fun PlayerScreen(
         if (showMiniPlayer) {
             PlayerMiniPlayer(
                 uiState = uiState,
+                showConnect = connectEnabled,
                 connectDeviceName = connectRemoteDeviceName,
                 onPlayPause = viewModel::onPlayPauseClicked,
                 onConnectClick = { showConnectSheet = true },

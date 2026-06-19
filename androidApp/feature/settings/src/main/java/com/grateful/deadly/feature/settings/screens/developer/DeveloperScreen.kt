@@ -21,9 +21,11 @@ import com.grateful.deadly.feature.settings.SettingsViewModel
 @Composable
 fun DeveloperScreen(
     viewModel: SettingsViewModel = hiltViewModel(),
-    onNavigateBack: () -> Unit = {}
+    onNavigateBack: () -> Unit = {},
+    onNavigateToConnect: () -> Unit = {}
 ) {
     val forceOnline by viewModel.forceOnline.collectAsState()
+    val connectEnabled by viewModel.connectEnabled.collectAsState()
 
     val serverEnvironment by viewModel.serverEnvironment.collectAsState()
     val customServerUrl by viewModel.customServerUrl.collectAsState()
@@ -95,6 +97,26 @@ fun DeveloperScreen(
                 checked = forceOnline,
                 onCheckedChange = { viewModel.toggleForceOnline() }
             )
+        }
+
+        item { HorizontalDivider() }
+
+        item {
+            DevToggleRow(
+                title = "Enable Connect (Beta)",
+                subtitle = "Play in sync across your devices. Off by default; the server may also disable it globally.",
+                checked = connectEnabled,
+                onCheckedChange = { viewModel.toggleConnectEnabled() }
+            )
+        }
+
+        if (connectEnabled) {
+            item {
+                DevRow(
+                    title = "Connected Devices",
+                    onClick = onNavigateToConnect
+                )
+            }
         }
 
         item { HorizontalDivider() }

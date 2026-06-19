@@ -69,17 +69,18 @@ class AppPreferences @Inject constructor(
         private const val KEY_CONNECT_ENABLED = "connect_enabled"
 
         /**
-         * Default for the per-device Connect toggle. Flip to `false` to disable
-         * cross-device Connect by default across all installs (see settings).
+         * Default for the per-device Connect toggle. OFF by default: Connect is
+         * a dev/beta opt-in living under Developer settings, and the server gates
+         * it globally too. A user must explicitly turn it on to participate.
          */
-        const val CONNECT_ENABLED_DEFAULT = true
+        const val CONNECT_ENABLED_DEFAULT = false
     }
 
     private val _connectEnabled = MutableStateFlow(
         prefs.getBoolean(KEY_CONNECT_ENABLED, CONNECT_ENABLED_DEFAULT)
     )
 
-    /** Per-device kill switch for cross-device Connect (Beta). On by default. */
+    /** Per-device kill switch for cross-device Connect (Beta). Off by default. */
     val connectEnabled: StateFlow<Boolean> = _connectEnabled.asStateFlow()
 
     fun setConnectEnabled(value: Boolean) {
