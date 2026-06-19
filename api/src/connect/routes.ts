@@ -21,6 +21,16 @@ import {
   startHeartbeatSweep,
 } from "./state.js";
 import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
+import { getConnectEnabled } from "../db/appSettings.js";
+import { connectDisabledCloseCode } from "./protocol.js";
+
+// Terminal close codes the client must NOT reconnect after (see protocol.ts):
+//   4003 — what every shipped client already treats as terminal. Sent to
+//          legacy clients (protocolVersion < 2) when Connect is disabled so
+//          they go quiet instead of retry-storming an endpoint that refuses
+//          them. This is the fleet-wide kill: today every client is proto 1.
+//   4005 — "Connect disabled". Sent to clients new enough to understand it
+//          (protocolVersion >= 2). Distinct from 4003 (Unauthorized) in logs.
 
 export async function connectRoutes(app: FastifyInstance): Promise<void> {
   startHeartbeatSweep();
@@ -58,10 +68,23 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
       switch (msg.type) {
         case "register": {
           if (!msg.deviceId || !msg.deviceType || !msg.deviceName) return;
-          registeredDeviceId = msg.deviceId;
           // ADR-0011 §3: additive, optional. Absent ⇒ legacy ⇒ 0.
           const protocolVersion = typeof msg.protocolVersion === "number" ? msg.protocolVersion : 0;
           const appVersion = typeof msg.appVersion === "string" ? msg.appVersion : null;
+
+          // Global kill switch (admin-controlled, persisted, default OFF). When
+          // Connect is disabled we refuse the device at register time — close
+          // with a code the client treats as terminal so it stops reconnecting.
+          // Leave registeredDeviceId null: nothing registered, nothing for the
+          // close handler to unregister.
+          if (!getConnectEnabled()) {
+            const code = connectDisabledCloseCode(protocolVersion);
+            request.log.info({ userId, deviceId: msg.deviceId, protocolVersion, code }, "ws/connect: Connect disabled — closing");
+            socket.close(code, "Connect disabled");
+            return;
+          }
+
+          registeredDeviceId = msg.deviceId;
           registerDevice(userId!, msg.deviceId, msg.deviceType as DeviceType, msg.deviceName, socket, protocolVersion, appVersion);
           break;
         }
