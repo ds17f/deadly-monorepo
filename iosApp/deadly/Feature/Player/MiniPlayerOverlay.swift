@@ -123,19 +123,20 @@ struct MiniPlayerOverlay: View {
                         .font(.title3)
                         .foregroundStyle(.red)
                 } else {
-                    // Connect / AirPlay device picker. Hidden when Connect is
-                    // disabled on this device (off by default).
-                    if container.appPreferences.connectEnabled {
-                        Button {
-                            showConnectSheet = true
-                        } label: {
-                            Image(systemName: "airplayaudio")
-                                .font(.title3)
-                                .foregroundStyle(container.connectService.isRemoteControlling ? DeadlyColors.primary : .secondary)
-                                .frame(width: 32, height: 32)
-                        }
-                        .buttonStyle(.plain)
+                    // Connect / AirPlay device picker. Always shown (ADR-0018);
+                    // greyed when the server kill switch is off.
+                    Button {
+                        showConnectSheet = true
+                    } label: {
+                        Image(systemName: "airplayaudio")
+                            .font(.title3)
+                            .foregroundStyle(
+                                !container.connectService.serverConnectEnabled ? Color.secondary.opacity(0.4) :
+                                container.connectService.isRemoteControlling ? DeadlyColors.primary : Color.secondary
+                            )
+                            .frame(width: 32, height: 32)
                     }
+                    .buttonStyle(.plain)
 
                     if service.isPendingCommand
                         || service.isSkeleton || service.isPreparing || service.isRetrying

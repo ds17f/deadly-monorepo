@@ -27,7 +27,7 @@ fun PlayerMiniPlayer(
     onConnectClick: () -> Unit,
     onTapToExpand: () -> Unit,
     modifier: Modifier = Modifier,
-    showConnect: Boolean = true
+    connectAvailable: Boolean = true
 ) {
     Card(
         modifier = modifier
@@ -91,20 +91,22 @@ fun PlayerMiniPlayer(
                     )
                 }
 
-                // Connect button — hidden when Connect is disabled (off by default)
-                if (showConnect) {
-                    IconButton(
-                        onClick = onConnectClick,
-                        modifier = Modifier.size(40.dp)
-                    ) {
-                        Icon(
-                            painter = IconResources.Content.Cast(),
-                            contentDescription = "Connect",
-                            tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
-                                   else MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.size(20.dp)
-                        )
-                    }
+                // Connect button — always shown; greyed when the server kill
+                // switch is off (ADR-0018).
+                IconButton(
+                    onClick = onConnectClick,
+                    modifier = Modifier.size(40.dp)
+                ) {
+                    Icon(
+                        painter = IconResources.Content.Cast(),
+                        contentDescription = "Connect",
+                        tint = when {
+                            !connectAvailable -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f)
+                            connectDeviceName != null -> MaterialTheme.colorScheme.primary
+                            else -> MaterialTheme.colorScheme.onSurfaceVariant
+                        },
+                        modifier = Modifier.size(20.dp)
+                    )
                 }
 
                 // Play/Pause button (NOT clickable for expansion)

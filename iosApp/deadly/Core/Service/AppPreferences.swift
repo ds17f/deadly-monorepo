@@ -14,11 +14,12 @@ final class AppPreferences {
     private static let shareAttachImageKey = "share_attach_image"
     private static let autoAdvanceEnabledKey = "auto_advance_enabled"
     private static let connectEnabledKey = "connect_enabled"
+    private static let serverConnectEnabledKey = "server_connect_enabled_cached"
     private static let sourceBadgeStyleKey = "source_badge_style"
 
     /// Default for the per-device Connect toggle. OFF by default: Connect is a
-    /// dev/beta opt-in living under Developer settings, and the server gates it
-    /// globally too. A user must explicitly turn it on to participate.
+    /// beta opt-in the user explicitly turns on, and the server gates it globally
+    /// too. See ADR-0018.
     static let connectEnabledDefault = false
     private static let useBetaShareLinksKey = "use_beta_share_links"
     private static let useBetaModeKey = "use_beta_mode"
@@ -135,6 +136,13 @@ final class AppPreferences {
     /// when off, this device never opens the Connect WebSocket. See ConnectService.
     var connectEnabled: Bool {
         didSet { UserDefaults.standard.set(connectEnabled, forKey: Self.connectEnabledKey) }
+    }
+
+    /// Last-known value of the server's global Connect flag, cached so the UI can
+    /// render the correct icon state on launch before the network read resolves.
+    /// The live source of truth is ConnectService.serverConnectEnabled (ADR-0018).
+    var serverConnectEnabledCached: Bool {
+        didSet { UserDefaults.standard.set(serverConnectEnabledCached, forKey: Self.serverConnectEnabledKey) }
     }
 
     var analyticsEnabled: Bool {
@@ -288,6 +296,9 @@ final class AppPreferences {
         connectEnabled = UserDefaults.standard.object(forKey: Self.connectEnabledKey) == nil
             ? Self.connectEnabledDefault
             : UserDefaults.standard.bool(forKey: Self.connectEnabledKey)
+        // Default false: a fresh install fails safe to "not offered" (icon greyed)
+        // until the first GET /api/connect/enabled resolves. ADR-0018.
+        serverConnectEnabledCached = UserDefaults.standard.bool(forKey: Self.serverConnectEnabledKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
         playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
         homeTrendingWindow = UserDefaults.standard.string(forKey: Self.homeTrendingWindowKey) ?? "now"

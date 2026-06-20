@@ -26,7 +26,7 @@ fun PlayerSecondaryControls(
     onConnectClick: () -> Unit,
     onShareClick: () -> Unit,
     modifier: Modifier = Modifier,
-    showConnect: Boolean = true
+    connectAvailable: Boolean = true
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
@@ -34,9 +34,9 @@ fun PlayerSecondaryControls(
         verticalAlignment = Alignment.CenterVertically
     ) {
         // Left section - Connect (icon + device label share one tap target).
-        // Hidden when Connect is disabled on this device (off by default); an
-        // empty placeholder keeps the right cluster right-aligned (SpaceBetween).
-        if (showConnect) {
+        // Always shown (ADR-0018): greyed when the server kill switch is off, but
+        // still tappable so the sheet can explain it's unavailable.
+        run {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
@@ -48,8 +48,11 @@ fun PlayerSecondaryControls(
                 Icon(
                     painter = IconResources.Content.Cast(),
                     contentDescription = "Connect",
-                    tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
-                           else MaterialTheme.colorScheme.onSurfaceVariant
+                    tint = when {
+                        !connectAvailable -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f)
+                        connectDeviceName != null -> MaterialTheme.colorScheme.primary
+                        else -> MaterialTheme.colorScheme.onSurfaceVariant
+                    }
                 )
                 if (connectDeviceName != null) {
                     Spacer(Modifier.width(8.dp))
@@ -63,8 +66,6 @@ fun PlayerSecondaryControls(
                     )
                 }
             }
-        } else {
-            Spacer(Modifier)
         }
 
         // Right section — inline per-show actions

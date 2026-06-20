@@ -94,12 +94,20 @@ class ConnectServiceImpl @Inject constructor(
         // A pending transport command auto-clears after this long if the server
         // never confirms it, so the UI spinner can never get permanently stuck.
         private const val PENDING_COMMAND_TIMEOUT_MS = 6_000L
+        // Short timeout for the public Connect-flag read so it never blocks the
+        // foreground path; on failure we keep the last cached value. ADR-0018.
+        private const val SERVER_FLAG_TIMEOUT_MS = 3_000L
     }
 
     private val json = Json { ignoreUnknownKeys = true }
     private val okHttpClient = OkHttpClient.Builder()
         .readTimeout(0, TimeUnit.MILLISECONDS) // required for WebSocket keep-alive
         .pingInterval(PING_INTERVAL_MS, TimeUnit.MILLISECONDS) // detect dead peer → fail fast → reconnect
+        .build()
+    // Separate short-timeout client for the public flag read — the WS client's
+    // readTimeout(0) would let a hung GET block forever. ADR-0018.
+    private val restClient = OkHttpClient.Builder()
+        .callTimeout(SERVER_FLAG_TIMEOUT_MS, TimeUnit.MILLISECONDS)
         .build()
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
@@ -142,6 +150,11 @@ class ConnectServiceImpl @Inject constructor(
 
     private val _serverTimeOffsetMs = MutableStateFlow(0L)
     override val serverTimeOffsetMs: StateFlow<Long> = _serverTimeOffsetMs.asStateFlow()
+
+    // Seeded from the last cached value so the UI renders correctly before the
+    // first network read resolves (default false ⇒ greyed on a fresh install).
+    private val _serverConnectEnabled = MutableStateFlow(appPreferences.getServerConnectEnabledCached())
+    override val serverConnectEnabled: StateFlow<Boolean> = _serverConnectEnabled.asStateFlow()
 
     @Volatile private var currentVersion = 0L
     // Best (lowest) RTT seen in the current time_sync batch. Replies with
@@ -261,6 +274,40 @@ class ConnectServiceImpl @Inject constructor(
         shouldConnect = true
         reconnectAttempt = 0
         connect()
+    }
+
+    override fun refreshServerConnectEnabled() {
+        scope.launch {
+            val baseUrl = appPreferences.apiBaseUrl
+            if (baseUrl.isBlank()) return@launch
+            val url = "$baseUrl/api/connect/enabled"
+            try {
+                val request = Request.Builder().url(url).get().build()
+                restClient.newCall(request).execute().use { response ->
+                    if (!response.isSuccessful) {
+                        Log.d(TAG, "refreshServerConnectEnabled: HTTP ${response.code}, keeping cached=${_serverConnectEnabled.value}")
+                        return@launch
+                    }
+                    val body = response.body?.string() ?: return@launch
+                    val enabled = json.parseToJsonElement(body)
+                        .jsonObject["connectEnabled"]?.jsonPrimitive?.content?.toBooleanStrictOrNull()
+                        ?: return@launch
+                    setServerConnectEnabled(enabled)
+                    Log.d(TAG, "refreshServerConnectEnabled: serverConnectEnabled=$enabled")
+                    // If the server just turned Connect off, tear down any live
+                    // session locally too (mirrors the 4005 runtime path for a
+                    // client that is currently connected).
+                    if (!enabled && shouldConnect) stop()
+                }
+            } catch (e: Exception) {
+                Log.d(TAG, "refreshServerConnectEnabled failed (keeping cached=${_serverConnectEnabled.value}): ${e.message}")
+            }
+        }
+    }
+
+    private fun setServerConnectEnabled(enabled: Boolean) {
+        _serverConnectEnabled.value = enabled
+        appPreferences.setServerConnectEnabledCached(enabled)
     }
 
     override fun setEnabled(enabled: Boolean) {
@@ -1074,6 +1121,12 @@ class ConnectServiceImpl @Inject constructor(
         // the fresh state snapshot after reconnect.
         setPendingCommand(null)
         _pendingTransfer.value = null
+
+        // The server refused us because Connect is globally disabled — flip the
+        // cached flag so every Connect icon greys out immediately, without waiting
+        // for the next refresh. This is the runtime enforcement half of ADR-0018
+        // (the REST read is the discovery half).
+        if (closeCode == CLOSE_CODE_DISABLED) setServerConnectEnabled(false)
 
         // Terminal closes (don't reconnect): 4000 replaced-by-newer-connection,
         // 4003 unauthorized, 4005 Connect disabled. 4001 (heartbeat timeout) and

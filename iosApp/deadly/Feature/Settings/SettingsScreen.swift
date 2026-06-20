@@ -330,8 +330,31 @@ struct PlaybackAudioSettingsView: View {
                 }
             }
 
-            // Connect (cross-device sync) moved to Developer settings — it's a
-            // dev/beta opt-in, off by default, gated globally by the server.
+            // Per-device Connect opt-in (ADR-0018). Off by default; the server
+            // can also disable Connect globally, in which case the footer says so.
+            Section {
+                Toggle(isOn: Binding(
+                    get: { container.appPreferences.connectEnabled },
+                    set: { newValue in
+                        container.connectService.setEnabled(newValue)
+                        container.analyticsService.track("feature_use", props: [
+                            "feature": "set_connect_enabled",
+                            "category": "preference",
+                            "value": newValue ? "on" : "off",
+                        ])
+                    }
+                )) {
+                    Label("Enable Connect", systemImage: "airplayaudio")
+                }
+            } header: {
+                Text("Connect (Beta)")
+            } footer: {
+                if container.connectService.serverConnectEnabled {
+                    Text("Play in sync across your devices. Enable it on each device you want to use together.")
+                } else {
+                    Text("Cross-device playback sync. Currently unavailable — it's been turned off on the server.")
+                }
+            }
         }
         .navigationTitle("Playback & Audio")
         .navigationBarTitleDisplayMode(.inline)

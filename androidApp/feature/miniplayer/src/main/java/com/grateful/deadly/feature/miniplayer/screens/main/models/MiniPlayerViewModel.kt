@@ -33,8 +33,8 @@ class MiniPlayerViewModel @Inject constructor(
     appPreferences: AppPreferences
 ) : ViewModel() {
 
-    /** Per-device Connect kill switch (off by default). Gates the Connect icon. */
-    val connectEnabled: StateFlow<Boolean> = appPreferences.connectEnabled
+    /** Server global Connect flag — greys the Connect icon when off (ADR-0018). */
+    val serverConnectEnabled: StateFlow<Boolean> = connectService.serverConnectEnabled
     
     companion object {
         private const val TAG = "MiniPlayerViewModel"

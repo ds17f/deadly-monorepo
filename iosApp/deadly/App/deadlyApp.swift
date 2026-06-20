@@ -122,6 +122,9 @@ struct deadlyApp: App {
                             ShowArtworkService.shared.populate(sourceTypes)
                         }
                         ShowArtworkService.shared.badgeStyle = SourceBadgeStyle.fromString(container.appPreferences.sourceBadgeStyle)
+                        // Refresh the global Connect flag so the Connect UI renders
+                        // in the right state from launch (ADR-0018).
+                        container.connectService.refreshServerConnectEnabled()
                         // Start Connect first so it can receive shared state before local restore.
                         container.connectService.startIfAuthenticated()
                         // Brief wait for the WebSocket to connect and receive state.
@@ -160,6 +163,9 @@ struct deadlyApp: App {
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
                     // Reconnect Connect on foreground (scenePhase .active is
                     // unreliable with the delegate adaptor in use, see above).
+                    // Also re-check the server kill switch so the UI reflects an
+                    // admin flipping it without a relaunch (ADR-0018).
+                    container.connectService.refreshServerConnectEnabled()
                     container.connectService.startIfAuthenticated()
                     if container.authService.isSignedIn {
                         Task {

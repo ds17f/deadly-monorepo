@@ -351,32 +351,39 @@ struct PlayerScreen: View {
         .padding(.bottom, 8)
     }
 
+    // Connect icon tint (ADR-0018): greyed when the server kill switch is off,
+    // primary when controlling a remote device, secondary otherwise.
+    private var connectIconColor: Color {
+        if !container.connectService.serverConnectEnabled { return Color.secondary.opacity(0.4) }
+        return container.connectService.isRemoteControlling ? DeadlyColors.primary : Color.secondary
+    }
+
     @ViewBuilder
     private var actionButtons: some View {
         HStack {
-            // Left section — Connect / AirPlay device picker. Hidden entirely
-            // when Connect is disabled on this device (off by default).
-            if container.appPreferences.connectEnabled {
-                Button {
-                    showConnectSheet = true
-                } label: {
-                    HStack(spacing: 4) {
-                        Image(systemName: "airplayaudio")
-                            .font(.title2)
-                            .foregroundStyle(container.connectService.isRemoteControlling ? DeadlyColors.primary : .secondary)
-                            .frame(width: 44, height: 44)
-                        if container.connectService.isRemoteControlling,
-                           let name = container.connectService.connectState?.activeDeviceName {
-                            Text(name)
-                                .font(.caption2)
-                                .foregroundStyle(DeadlyColors.primary)
-                                .lineLimit(1)
-                                .frame(maxWidth: 100, alignment: .leading)
-                        }
+            // Left section — Connect / AirPlay device picker. Always shown
+            // (ADR-0018); greyed when the server kill switch is off. The sheet
+            // itself handles unavailable / enable / full modes.
+            Button {
+                showConnectSheet = true
+            } label: {
+                HStack(spacing: 4) {
+                    Image(systemName: "airplayaudio")
+                        .font(.title2)
+                        .foregroundStyle(connectIconColor)
+                        .frame(width: 44, height: 44)
+                    if container.connectService.serverConnectEnabled,
+                       container.connectService.isRemoteControlling,
+                       let name = container.connectService.connectState?.activeDeviceName {
+                        Text(name)
+                            .font(.caption2)
+                            .foregroundStyle(DeadlyColors.primary)
+                            .lineLimit(1)
+                            .frame(maxWidth: 100, alignment: .leading)
                     }
                 }
-                .buttonStyle(.plain)
             }
+            .buttonStyle(.plain)
 
             Spacer()
 

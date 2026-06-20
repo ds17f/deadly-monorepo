@@ -85,6 +85,9 @@ class SettingsViewModel @Inject constructor(
 
     val connectEnabled: StateFlow<Boolean> = appPreferences.connectEnabled
 
+    /** Server global Connect flag (ADR-0018) — informs the Playback toggle's copy. */
+    val serverConnectEnabled: StateFlow<Boolean> = connectService.serverConnectEnabled
+
     fun toggleConnectEnabled() {
         val newValue = !appPreferences.connectEnabled.value
         connectService.setEnabled(newValue)

@@ -67,13 +67,21 @@ class AppPreferences @Inject constructor(
         private const val KEY_HOME_POPULAR_CARD_SIZE = "home_popular_card_size"
         private const val KEY_HOME_POPULAR_DECADE = "home_popular_decade"
         private const val KEY_CONNECT_ENABLED = "connect_enabled"
+        private const val KEY_SERVER_CONNECT_ENABLED = "server_connect_enabled_cached"
 
         /**
          * Default for the per-device Connect toggle. OFF by default: Connect is
-         * a dev/beta opt-in living under Developer settings, and the server gates
-         * it globally too. A user must explicitly turn it on to participate.
+         * a beta opt-in the user explicitly turns on, and the server gates it
+         * globally too. See ADR-0018.
          */
         const val CONNECT_ENABLED_DEFAULT = false
+
+        /**
+         * Default for the cached server Connect flag (ADR-0018). False so a fresh
+         * install fails safe to "not offered" (icon greyed) until the first
+         * `GET /api/connect/enabled` resolves.
+         */
+        const val SERVER_CONNECT_ENABLED_DEFAULT = false
     }
 
     private val _connectEnabled = MutableStateFlow(
@@ -86,6 +94,18 @@ class AppPreferences @Inject constructor(
     fun setConnectEnabled(value: Boolean) {
         prefs.edit().putBoolean(KEY_CONNECT_ENABLED, value).apply()
         _connectEnabled.value = value
+    }
+
+    /**
+     * Last-known value of the server's global Connect flag, cached so the UI can
+     * render the correct icon state on launch before the network read resolves.
+     * The live source of truth is ConnectService.serverConnectEnabled (ADR-0018).
+     */
+    fun getServerConnectEnabledCached(): Boolean =
+        prefs.getBoolean(KEY_SERVER_CONNECT_ENABLED, SERVER_CONNECT_ENABLED_DEFAULT)
+
+    fun setServerConnectEnabledCached(value: Boolean) {
+        prefs.edit().putBoolean(KEY_SERVER_CONNECT_ENABLED, value).apply()
     }
 
     private val _homeTrendingCardSize = MutableStateFlow(

@@ -24,7 +24,25 @@ interface ConnectService {
      */
     val serverTimeOffsetMs: StateFlow<Long>
 
+    /**
+     * Whether the server's global Connect kill switch is ON (ADR-0018). Drives
+     * UI discovery: when false the Connect icon renders greyed/"unavailable" and
+     * no session can form. Seeded from the last cached value (default false on a
+     * fresh install — fail safe to "not offered"), refreshed by
+     * [refreshServerConnectEnabled], and forced false when a live session is
+     * closed with code 4005.
+     */
+    val serverConnectEnabled: StateFlow<Boolean>
+
     fun startIfAuthenticated()
+
+    /**
+     * Fetch the global Connect flag (`GET /api/connect/enabled`) and update
+     * [serverConnectEnabled]. Short-timeout, best-effort: on failure the last
+     * cached value is kept. Call on startup and on foreground (ADR-0018).
+     */
+    fun refreshServerConnectEnabled()
+
     fun stop()
 
     /**

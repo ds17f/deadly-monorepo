@@ -476,6 +476,8 @@ private fun PlaybackAudioSettingsScreen(
 ) {
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
+    val connectEnabled by viewModel.connectEnabled.collectAsState()
+    val serverConnectEnabled by viewModel.serverConnectEnabled.collectAsState()
 
     SubscreenScaffold("Playback & Audio", onBack) {
         item { SectionHeader("Controls") }
@@ -513,8 +515,23 @@ private fun PlaybackAudioSettingsScreen(
             )
         }
 
-        // Connect (cross-device sync) moved to Developer settings — it's a
-        // dev/beta opt-in, off by default, gated globally by the server.
+        item { HorizontalDivider() }
+        item { SectionHeader("Connect (Beta)") }
+
+        // Per-device Connect opt-in (ADR-0018). Off by default; the server can
+        // also disable Connect globally, in which case the copy says so.
+        item {
+            PreferenceToggleRow(
+                title = "Enable Connect",
+                subtitle = if (serverConnectEnabled) {
+                    "Play in sync across your devices. Enable it on each device you want to use together."
+                } else {
+                    "Cross-device playback sync. Currently unavailable — it's been turned off on the server."
+                },
+                checked = connectEnabled,
+                onCheckedChange = { viewModel.toggleConnectEnabled() }
+            )
+        }
     }
 }
 

@@ -270,27 +270,29 @@ struct SidePlayerView: View {
 
     private var secondaryActions: some View {
         HStack(spacing: 0) {
-            // Connect / AirPlay — left, with optional active-device label.
-            // Hidden when Connect is disabled on this device (off by default).
-            if container.appPreferences.connectEnabled {
-                Button {
-                    showConnectSheet = true
-                } label: {
-                    HStack(spacing: 6) {
-                        Image(systemName: "airplayaudio")
-                            .font(.title3)
-                        if let name = container.connectService.connectState?.activeDeviceName,
-                           container.connectService.isRemoteControlling {
-                            Text(name)
-                                .font(.caption2)
-                                .lineLimit(1)
-                                .frame(maxWidth: 80, alignment: .leading)
-                        }
+            // Connect / AirPlay — left, with optional active-device label. Always
+            // shown (ADR-0018); greyed when the server kill switch is off.
+            Button {
+                showConnectSheet = true
+            } label: {
+                HStack(spacing: 6) {
+                    Image(systemName: "airplayaudio")
+                        .font(.title3)
+                    if container.connectService.serverConnectEnabled,
+                       let name = container.connectService.connectState?.activeDeviceName,
+                       container.connectService.isRemoteControlling {
+                        Text(name)
+                            .font(.caption2)
+                            .lineLimit(1)
+                            .frame(maxWidth: 80, alignment: .leading)
                     }
-                    .foregroundStyle(container.connectService.isRemoteControlling ? DeadlyColors.primary : .secondary)
                 }
-                .buttonStyle(.plain)
+                .foregroundStyle(
+                    !container.connectService.serverConnectEnabled ? Color.secondary.opacity(0.4) :
+                    container.connectService.isRemoteControlling ? DeadlyColors.primary : Color.secondary
+                )
             }
+            .buttonStyle(.plain)
 
             Spacer()
 

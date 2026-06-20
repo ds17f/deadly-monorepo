@@ -12,6 +12,7 @@ import { userRoutes } from "./routes/user.js";
 import { authMiddleware } from "./auth/middleware.js";
 import { connectRoutes } from "./connect/routes.js";
 import { connectAdminRoutes } from "./routes/connectAdmin.js";
+import { connectPublicRoutes } from "./routes/connectPublic.js";
 import { analyticsRoutes } from "./routes/analytics.js";
 import { trendingRoutes } from "./routes/trending.js";
 import { popularRoutes } from "./routes/popular.js";
@@ -68,6 +69,7 @@ export function buildApp() {
   app.register(userRoutes);
   app.register(connectRoutes);
   app.register(connectAdminRoutes);
+  app.register(connectPublicRoutes);
   app.register(analyticsRoutes);
   app.register(trendingRoutes);
   app.register(popularRoutes);

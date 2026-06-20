@@ -81,7 +81,8 @@ fun PlayerSidePanel(
     val isFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
-    val connectEnabled by viewModel.appPreferences.connectEnabled.collectAsState()
+    // ADR-0018: always show the Connect icon; greyed when the server kill switch is off.
+    val connectAvailable by viewModel.serverConnectEnabled.collectAsState()
     val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
     val showCollectionsCount by viewModel.showCollectionsCount.collectAsState()
 
@@ -250,10 +251,9 @@ fun PlayerSidePanel(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Connect (left). Hidden when Connect is disabled on this
-                    // device (off by default); empty placeholder keeps the right
-                    // cluster right-aligned (SpaceBetween).
-                    if (connectEnabled) {
+                    // Connect (left). Always shown (ADR-0018); greyed when the
+                    // server kill switch is off, tappable to explain via the sheet.
+                    run {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier
@@ -265,8 +265,11 @@ fun PlayerSidePanel(
                             Icon(
                                 painter = IconResources.Content.Cast(),
                                 contentDescription = "Connect",
-                                tint = if (connectRemoteDeviceName != null) MaterialTheme.colorScheme.primary
-                                       else MaterialTheme.colorScheme.onSurfaceVariant
+                                tint = when {
+                                    !connectAvailable -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f)
+                                    connectRemoteDeviceName != null -> MaterialTheme.colorScheme.primary
+                                    else -> MaterialTheme.colorScheme.onSurfaceVariant
+                                }
                             )
                             if (connectRemoteDeviceName != null) {
                                 Spacer(Modifier.width(8.dp))
@@ -280,8 +283,6 @@ fun PlayerSidePanel(
                                 )
                             }
                         }
-                    } else {
-                        Spacer(Modifier)
                     }
 
                     Row(verticalAlignment = Alignment.CenterVertically) {

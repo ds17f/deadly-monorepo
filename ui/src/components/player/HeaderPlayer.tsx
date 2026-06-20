@@ -429,7 +429,10 @@ export default function HeaderPlayer() {
     toggleAutoAdvance,
   } = usePlayer();
 
-  const { connected: isConnected, state: connectState, serverTimeOffsetMs } = useConnect();
+  const { connected: isConnected, state: connectState, serverTimeOffsetMs, serverConnectEnabled, connectOptedIn } = useConnect();
+  // ADR-0018: always offer the Connect control once the user has opted in OR the
+  // server has it enabled; greyed when the server kill switch is off.
+  const connectVisible = serverConnectEnabled || connectOptedIn;
   const { getReview } = useUserData();
 
   // Factoid cards for the fullscreen ambient view: the AI review + the user's
@@ -913,15 +916,17 @@ export default function HeaderPlayer() {
             </svg>
           </button>
         )}
-        {isConnected && (
+        {connectVisible && (
           <button
             onClick={() => setRailMode((m) => (m === "devices" ? null : "devices"))}
             className={`rounded-full p-2 transition-colors ${
-              railMode === "devices"
-                ? "text-deadly-highlight"
-                : isRemoteActive
-                  ? "text-deadly-highlight/70 hover:text-deadly-highlight"
-                  : "text-white/50 hover:text-white/80"
+              !serverConnectEnabled
+                ? "text-white/25 hover:text-white/40"
+                : railMode === "devices"
+                  ? "text-deadly-highlight"
+                  : isRemoteActive
+                    ? "text-deadly-highlight/70 hover:text-deadly-highlight"
+                    : "text-white/50 hover:text-white/80"
             }`}
             aria-label="Devices"
             title="Connect to a device"
@@ -998,12 +1003,14 @@ export default function HeaderPlayer() {
             )}
           </div>
           <div className="relative">
-            {isConnected ? (
+            {connectVisible ? (
               <button
                 onClick={() => setDevicePickerOpen((o) => !o)}
                 aria-label="Connect to device"
                 className={`rounded-full p-2 transition-colors ${
-                  isRemoteActive ? "text-deadly-highlight" : "text-white/60 hover:text-white"
+                  !serverConnectEnabled
+                    ? "text-white/25 hover:text-white/40"
+                    : isRemoteActive ? "text-deadly-highlight" : "text-white/60 hover:text-white"
                 }`}
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
