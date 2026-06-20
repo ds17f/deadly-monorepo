@@ -19,6 +19,7 @@ import { popularRoutes } from "./routes/popular.js";
 import { showRoutes } from "./routes/shows.js";
 import { betaRoutes } from "./routes/beta.js";
 import { notificationRoutes } from "./routes/notifications.js";
+import { bugReportRoutes } from "./routes/bugReports.js";
 import { devTokenRoutes } from "./auth/dev-token.js";
 import { isDev } from "./env.js";
 
@@ -51,6 +52,7 @@ export function buildApp() {
         { name: "analytics", description: "Anonymous usage analytics" },
         { name: "beta", description: "Beta applicant management" },
         { name: "notifications", description: "In-app messaging / admin notifications" },
+        { name: "bug-reports", description: "User-submitted bug reports" },
       ],
     },
   });
@@ -76,6 +78,7 @@ export function buildApp() {
   app.register(showRoutes);
   app.register(betaRoutes);
   app.register(notificationRoutes);
+  app.register(bugReportRoutes);
 
   if (isDev) {
     app.register(devTokenRoutes);
