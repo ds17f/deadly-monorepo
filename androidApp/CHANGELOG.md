@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.41.0] - 2026-06-20
+
+### New Features
+* one-tap server bug reports + admin viewer (#88) (ea32fca8)
+* server-gated Connect beta — admin kill switch + min-protocol gate (#87) (869cb410)
+
+### Bug Fixes
+* add server kill switch to globally disable Connect (default off) (#86) (b2eebd4c)
+* don't restart track on echoed auto-advance (#85) (83625535)
+
+
 ## [2.40.2] - 2026-06-16
 
 ### New Features
@@ -9,8 +20,6 @@
 * add per-device "Enable Connect (Beta)" toggle in Settings (#84) (643b1e96)
 * seek by intent nonce, propagate duration, optimistic scrubber (#83) (b8fddc16)
 * detect dead WS keep-alive socket via ping (#82) (9239c90d)
-
-
 ## [2.40.1] - 2026-06-15
 
 ### Bug Fixes
