@@ -62,6 +62,9 @@ class MainActivity : ComponentActivity() {
 
     override fun onStart() {
         super.onStart()
+        // Refresh the global Connect flag on every foreground so the Connect UI
+        // reflects an admin flipping the kill switch without a relaunch (ADR-0018).
+        connectService.refreshServerConnectEnabled()
         connectService.startIfAuthenticated()
     }
 

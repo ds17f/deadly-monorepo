@@ -26,7 +26,8 @@ fun PlayerMiniPlayer(
     onPlayPause: () -> Unit,
     onConnectClick: () -> Unit,
     onTapToExpand: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    connectAvailable: Boolean = true
 ) {
     Card(
         modifier = modifier
@@ -90,7 +91,8 @@ fun PlayerMiniPlayer(
                     )
                 }
 
-                // Connect button
+                // Connect button — always shown; greyed when the server kill
+                // switch is off (ADR-0018).
                 IconButton(
                     onClick = onConnectClick,
                     modifier = Modifier.size(40.dp)
@@ -98,8 +100,11 @@ fun PlayerMiniPlayer(
                     Icon(
                         painter = IconResources.Content.Cast(),
                         contentDescription = "Connect",
-                        tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
-                               else MaterialTheme.colorScheme.onSurfaceVariant,
+                        tint = when {
+                            !connectAvailable -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f)
+                            connectDeviceName != null -> MaterialTheme.colorScheme.primary
+                            else -> MaterialTheme.colorScheme.onSurfaceVariant
+                        },
                         modifier = Modifier.size(20.dp)
                     )
                 }

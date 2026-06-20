@@ -29,6 +29,12 @@ final class ConnectService: NSObject {
     /// docs/connect-v2-architecture.md "Clock Sync".
     private(set) var serverTimeOffsetMs: Double = 0
 
+    /// Whether the server's global Connect kill switch is ON (ADR-0018). Drives
+    /// UI discovery: when false the Connect icon renders greyed/"unavailable" and
+    /// no session can form. Seeded from the last cached value, refreshed by
+    /// `refreshServerConnectEnabled()`, and forced false on a 4005 close.
+    private(set) var serverConnectEnabled: Bool
+
     var isActiveDevice: Bool {
         guard let state = connectState else { return false }
         return state.activeDeviceId == appPreferences.installId
@@ -80,7 +86,8 @@ final class ConnectService: NSObject {
 
     // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
     // Bump in lockstep with the documented protocol; the server may branch on it.
-    private static let protocolVersion = 1
+    // v2: understands the 4005 "Connect disabled" terminal close code.
+    private static let protocolVersion = 2
     private static let reconnectDelays: [Double] = [1, 2, 4, 8, 30]
     private static let heartbeatInterval: UInt64 = 15_000_000_000 // 15s in nanoseconds
     // WS keep-alive ping. URLSessionWebSocketTask has no built-in keep-alive: a
@@ -101,6 +108,7 @@ final class ConnectService: NSObject {
         self.appPreferences = appPreferences
         self.authService = authService
         self.streamPlayer = streamPlayer
+        self.serverConnectEnabled = appPreferences.serverConnectEnabledCached
         super.init()
 
         // Forward LOCAL play/pause that bypassed the in-app buttons — the lock
@@ -153,6 +161,36 @@ final class ConnectService: NSObject {
         shouldConnect = true
         reconnectAttempt = 0
         Task { await connect() }
+    }
+
+    /// Fetch the global Connect flag (`GET /api/connect/enabled`) and update
+    /// `serverConnectEnabled`. Short-timeout, best-effort: on failure the last
+    /// cached value is kept. Call on startup and on foreground (ADR-0018).
+    func refreshServerConnectEnabled() {
+        let base = appPreferences.apiBaseUrl
+        guard !base.isEmpty, let url = URL(string: "\(base)/api/connect/enabled") else { return }
+        Task { [weak self] in
+            var request = URLRequest(url: url)
+            request.timeoutInterval = 3
+            request.httpMethod = "GET"
+            do {
+                let (data, response) = try await URLSession.shared.data(for: request)
+                guard let http = response as? HTTPURLResponse, http.statusCode == 200,
+                      let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+                      let enabled = json["connectEnabled"] as? Bool else { return }
+                await MainActor.run { self?.setServerConnectEnabled(enabled) }
+            } catch {
+                logger.debug("refreshServerConnectEnabled failed (keeping cached): \(error.localizedDescription, privacy: .public)")
+            }
+        }
+    }
+
+    private func setServerConnectEnabled(_ enabled: Bool) {
+        serverConnectEnabled = enabled
+        appPreferences.serverConnectEnabledCached = enabled
+        // If the server just turned Connect off, tear down any live session too
+        // (mirrors the 4005 runtime path for a currently-connected client).
+        if !enabled && shouldConnect { stop() }
     }
 
     /// Toggle the per-device Connect kill switch (Settings). Persists the choice
@@ -950,8 +988,15 @@ final class ConnectService: NSObject {
         timeSyncBestRttMs = .infinity
         webSocket = nil
 
-        // 4003 = Unauthorized (terminal — token invalid)
-        if !shouldConnect || closeCode == 4003 {
+        // The server refused us because Connect is globally disabled — flip the
+        // cached flag so every Connect icon greys out immediately, without waiting
+        // for the next refresh (the runtime-enforcement half of ADR-0018).
+        if closeCode == 4005 { setServerConnectEnabled(false) }
+
+        // Terminal closes (don't reconnect): 4003 = Unauthorized (token invalid),
+        // 4005 = Connect globally disabled by the server. iOS delivers custom
+        // close codes intact via didCloseWith, so this guard is reached.
+        if !shouldConnect || closeCode == 4003 || closeCode == 4005 {
             logger.info("handleDisconnect: not reconnecting (shouldConnect=\(self.shouldConnect, privacy: .public) code=\(closeCode ?? -1, privacy: .public))")
             return
         }

@@ -49,6 +49,7 @@ fun MiniPlayerScreen(
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
     val showConnectTooltip by viewModel.shouldShowConnectTooltip.collectAsState()
     val showVolumeUI by viewModel.showVolumeUI.collectAsState()
+    val connectAvailable by viewModel.serverConnectEnabled.collectAsState()
     var showConnectSheet by remember { mutableStateOf(false) }
 
     // Hardware volume button pressed during a Connect session — surface the sheet.
@@ -195,7 +196,8 @@ fun MiniPlayerScreen(
                     }
                 }
                 
-                // Connect button
+                // Connect button — always shown; greyed when the server kill
+                // switch is off (ADR-0018).
                 IconButton(
                     onClick = { showConnectSheet = true },
                     modifier = Modifier.size(40.dp)
@@ -203,8 +205,11 @@ fun MiniPlayerScreen(
                     Icon(
                         painter = IconResources.Content.Cast(),
                         contentDescription = "Connect",
-                        tint = if (connectRemoteDeviceName != null) MaterialTheme.colorScheme.primary
-                               else MaterialTheme.colorScheme.onSurfaceVariant,
+                        tint = when {
+                            !connectAvailable -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f)
+                            connectRemoteDeviceName != null -> MaterialTheme.colorScheme.primary
+                            else -> MaterialTheme.colorScheme.onSurfaceVariant
+                        },
                         modifier = Modifier.size(20.dp)
                     )
                 }

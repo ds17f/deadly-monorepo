@@ -1,6 +1,7 @@
 import type { WebSocket } from "ws";
 import type { ConnectState, ConnectDevice, DeviceType, SessionTrack } from "./types.js";
 import { LEGACY_PROTOCOL_VERSION } from "./types.js";
+import { connectDisabledCloseCode } from "./protocol.js";
 import { upsertPlaybackPosition as dbUpsertPlaybackPosition, getPlaybackPosition } from "../db/userdata.js";
 
 const log = (msg: string) => console.log(`[Connect] ${msg}`);
@@ -238,6 +239,27 @@ export function registerDevice(
   logProtocolDistribution(userId);
   sendJson(socket, { type: "state", state });
   broadcastDevices(userId);
+}
+
+// Apply the global Connect gate to already-connected devices so an admin change
+// takes effect immediately, not on the next client poll. Closes every live
+// socket that the current settings would no longer admit: all of them when
+// Connect is disabled, or those below `minProtocol` when it's enabled. Closing
+// fires the socket's `close` handler, which unregisters the device and cascades
+// broadcasts. Returns the number of sockets closed. See ADR-0018.
+export function reconcileLiveDevices(enabled: boolean, minProtocol: number): number {
+  let closed = 0;
+  // Snapshot first: closing mutates liveDevices via the close handler.
+  for (const entry of [...liveDevices.values()]) {
+    const inadmissible = !enabled || entry.protocolVersion < minProtocol;
+    if (!inadmissible) continue;
+    const code = connectDisabledCloseCode(entry.protocolVersion);
+    const reason = enabled ? "Connect minimum protocol raised" : "Connect disabled";
+    log(`reconcileLiveDevices: closing ${entry.device.name}[${entry.device.type}] proto=${entry.protocolVersion} code=${code} (${reason})`);
+    entry.socket.close(code, reason);
+    closed++;
+  }
+  return closed;
 }
 
 // Telemetry (ADR-0011 §3, Chunk A): per-session distribution of the connected

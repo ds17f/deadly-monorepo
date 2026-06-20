@@ -64,10 +64,11 @@ fun NavGraphBuilder.equalizerScreen(
 }
 
 fun NavGraphBuilder.developerScreen(
-    onNavigateBack: () -> Unit
+    onNavigateBack: () -> Unit,
+    onNavigateToConnect: () -> Unit
 ) {
     composable(route = DEVELOPER_ROUTE) {
-        DeveloperScreen(onNavigateBack = onNavigateBack)
+        DeveloperScreen(onNavigateBack = onNavigateBack, onNavigateToConnect = onNavigateToConnect)
     }
 }
 
@@ -129,7 +130,8 @@ fun NavGraphBuilder.settingsGraph(navController: NavController) {
     )
 
     developerScreen(
-        onNavigateBack = { navController.popBackStack() }
+        onNavigateBack = { navController.popBackStack() },
+        onNavigateToConnect = { navController.navigate(CONNECT_ROUTE) }
     )
 
     privacyDataScreen(

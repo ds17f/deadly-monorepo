@@ -14,7 +14,7 @@ const DATA_VERSION = process.env.NEXT_PUBLIC_DATA_VERSION ?? "dev";
 export default function SettingsTab() {
   const { user, signOut } = useAuth();
   const { autoAdvanceEnabled, toggleAutoAdvance } = usePlayer();
-  const { connectEnabled, setConnectEnabled } = useConnect();
+  const { serverConnectEnabled, connectOptedIn, setConnectOptedIn } = useConnect();
   const router = useRouter();
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [confirmText, setConfirmText] = useState("");
@@ -88,25 +88,32 @@ export default function SettingsTab() {
           </button>
         </div>
 
-        <div className="mt-4 flex items-center justify-between gap-4 border-t border-white/10 pt-4">
+      </section>
+
+      {/* Connect (Beta) — per-install opt-in (ADR-0018) */}
+      <section className="rounded-lg border border-white/10 bg-deadly-surface p-5">
+        <h3 className="mb-3 font-medium text-white">Connect (Beta)</h3>
+        <div className="flex items-center justify-between gap-4">
           <div className="min-w-0">
-            <p className="text-sm text-white/80">Enable Connect (Beta)</p>
+            <p className="text-sm text-white/80">Enable Connect</p>
             <p className="mt-0.5 text-xs text-white/40">
-              Play in sync across your devices. Turn off to keep this browser out of Connect.
+              {serverConnectEnabled
+                ? "Play in sync across your devices. This is a per-browser setting — enable it on each device you want to use together."
+                : "Cross-device playback sync. Currently unavailable — it's been turned off on the server."}
             </p>
           </div>
           <button
             role="switch"
-            aria-checked={connectEnabled}
+            aria-checked={connectOptedIn}
             aria-label="Enable Connect"
-            onClick={() => setConnectEnabled(!connectEnabled)}
+            onClick={() => setConnectOptedIn(!connectOptedIn)}
             className={`inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full transition-colors ${
-              connectEnabled ? "bg-deadly-highlight" : "bg-white/15"
+              connectOptedIn ? "bg-deadly-highlight" : "bg-white/15"
             }`}
           >
             <span
               className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform ${
-                connectEnabled ? "translate-x-[1.375rem]" : "translate-x-0.5"
+                connectOptedIn ? "translate-x-[1.375rem]" : "translate-x-0.5"
               }`}
             />
           </button>

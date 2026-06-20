@@ -155,10 +155,48 @@ function deviceTypeLabel(type: DeviceType): string {
 }
 
 export default function DeviceList() {
-  const { devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume } = useConnect();
+  const {
+    devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume,
+    serverConnectEnabled, refreshServerConnectEnabled, connectOptedIn, setConnectOptedIn,
+  } = useConnect();
   const { pendingTransfer, transferTo, isActiveDevice, isRemoteControlling } = usePlayer();
 
-  if (devices.length === 0) return null;
+  // Re-check the global kill switch whenever the Connect UI is opened, so the
+  // correct mode is shown at this critical moment even if the value went stale.
+  useEffect(() => {
+    refreshServerConnectEnabled();
+  }, [refreshServerConnectEnabled]);
+
+  // ADR-0018 three modes: server off → unavailable; server on + opted out →
+  // beta promo; opted in → the device picker below.
+  if (!serverConnectEnabled && !connectOptedIn) {
+    return (
+      <div className="px-2.5 py-3">
+        <p className="text-sm font-medium text-white/80">Connect is unavailable</p>
+        <p className="mt-1 text-xs text-white/40">
+          Cross-device playback is temporarily turned off. Check back later.
+        </p>
+      </div>
+    );
+  }
+
+  if (!connectOptedIn) {
+    return (
+      <div className="px-2.5 py-3">
+        <p className="text-sm font-semibold text-white">Enable Connect (Beta)</p>
+        <p className="mt-2 text-xs text-white/50">
+          Keep playback in sync across your devices. It&apos;s a beta feature and may occasionally
+          skip or fall out of sync. Enable it on each device (and browser) you want to use together.
+        </p>
+        <button
+          onClick={() => setConnectOptedIn(true)}
+          className="mt-3 w-full rounded-lg bg-deadly-highlight px-3 py-2 text-sm font-medium text-black transition-opacity hover:opacity-90"
+        >
+          Enable Connect
+        </button>
+      </div>
+    );
+  }
 
   const hasSession = connectState?.showId != null;
   const myDevice = devices.find((d) => d.deviceId === myDeviceId);
@@ -225,6 +263,13 @@ export default function DeviceList() {
         </div>
       )}
 
+      {/* No other devices hint */}
+      {devices.length === 0 && (
+        <p className="px-2.5 py-2 text-xs text-white/30">
+          {connected ? "Looking for devices…" : "Connecting…"} Other devices that have enabled Connect will appear here.
+        </p>
+      )}
+
       {/* Stop session */}
       {hasSession && (
         <div className="mt-1.5 pt-1.5 border-t border-white/10">
@@ -237,6 +282,17 @@ export default function DeviceList() {
           </button>
         </div>
       )}
+
+      {/* Turn off Connect (per-install opt-out, ADR-0018) */}
+      <div className="mt-1.5 pt-1.5 border-t border-white/10">
+        <button
+          onClick={() => setConnectOptedIn(false)}
+          className="w-full rounded-lg px-2.5 py-2 text-left text-xs text-white/30 hover:bg-white/5 hover:text-white/60 transition-colors"
+          title="Turn Connect off on this browser only"
+        >
+          Turn off Connect on this device
+        </button>
+      </div>
     </div>
   );
 }

@@ -81,6 +81,8 @@ fun PlayerSidePanel(
     val isFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
+    // ADR-0018: always show the Connect icon; greyed when the server kill switch is off.
+    val connectAvailable by viewModel.serverConnectEnabled.collectAsState()
     val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
     val showCollectionsCount by viewModel.showCollectionsCount.collectAsState()
 
@@ -249,30 +251,37 @@ fun PlayerSidePanel(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier
-                            .height(40.dp)
-                            .clip(RoundedCornerShape(20.dp))
-                            .clickable { showConnectSheet = true }
-                            .padding(horizontal = 8.dp)
-                    ) {
-                        Icon(
-                            painter = IconResources.Content.Cast(),
-                            contentDescription = "Connect",
-                            tint = if (connectRemoteDeviceName != null) MaterialTheme.colorScheme.primary
-                                   else MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                        if (connectRemoteDeviceName != null) {
-                            Spacer(Modifier.width(8.dp))
-                            Text(
-                                text = connectRemoteDeviceName!!,
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.primary,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis,
-                                modifier = Modifier.widthIn(max = 80.dp)
+                    // Connect (left). Always shown (ADR-0018); greyed when the
+                    // server kill switch is off, tappable to explain via the sheet.
+                    run {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier
+                                .height(40.dp)
+                                .clip(RoundedCornerShape(20.dp))
+                                .clickable { showConnectSheet = true }
+                                .padding(horizontal = 8.dp)
+                        ) {
+                            Icon(
+                                painter = IconResources.Content.Cast(),
+                                contentDescription = "Connect",
+                                tint = when {
+                                    !connectAvailable -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f)
+                                    connectRemoteDeviceName != null -> MaterialTheme.colorScheme.primary
+                                    else -> MaterialTheme.colorScheme.onSurfaceVariant
+                                }
                             )
+                            if (connectRemoteDeviceName != null) {
+                                Spacer(Modifier.width(8.dp))
+                                Text(
+                                    text = connectRemoteDeviceName!!,
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.primary,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                    modifier = Modifier.widthIn(max = 80.dp)
+                                )
+                            }
                         }
                     }
 

@@ -28,10 +28,14 @@ export interface ConnectContextValue {
   // server's current wall-clock. 0 until the first time_sync round-trip
   // completes. See docs/connect-v2-architecture.md "Clock Sync".
   serverTimeOffsetMs: number;
-  // Per-device kill switch for cross-device Connect (Beta). When false, this
-  // browser never opens the Connect WebSocket. Persisted to localStorage.
-  connectEnabled: boolean;
-  setConnectEnabled: (enabled: boolean) => void;
+  // ADR-0018: global server kill switch (greys the Connect UI when off) and the
+  // per-install beta opt-in + its setter.
+  serverConnectEnabled: boolean;
+  // Re-fetch the global kill switch. Called when the Connect UI is opened so the
+  // correct mode is shown at that critical moment even if the value went stale.
+  refreshServerConnectEnabled: () => void;
+  connectOptedIn: boolean;
+  setConnectOptedIn: (value: boolean) => void;
 }
 
 export const ConnectContext = createContext<ConnectContextValue | null>(null);

@@ -76,6 +76,9 @@ class PlayerViewModel @Inject constructor(
         }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0)
 
+    /** Server global Connect flag — greys the Connect icon when off (ADR-0018). */
+    val serverConnectEnabled: StateFlow<Boolean> = connectService.serverConnectEnabled
+
     val connectRemoteDeviceName: StateFlow<String?> = combine(
         connectService.connectState,
         connectService.isActiveDevice

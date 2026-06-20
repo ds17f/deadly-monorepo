@@ -12,6 +12,41 @@ struct ConnectSheet: View {
 
     var body: some View {
         NavigationStack {
+            content
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("Cancel") { dismiss() }
+                    }
+                }
+        }
+        .presentationDetents([.medium, .large])
+        // Re-check the global kill switch every time the sheet opens, so the
+        // correct mode (unavailable / promo / devices) is shown at this critical
+        // moment even if the cached value is stale (ADR-0018).
+        .onAppear { service.refreshServerConnectEnabled() }
+    }
+
+    // Three modes (ADR-0018): server off → unavailable; server on + opted out →
+    // beta promo; both on → the full device picker.
+    @ViewBuilder
+    private var content: some View {
+        if !service.serverConnectEnabled {
+            ConnectUnavailableView()
+                .navigationTitle("Connect")
+        } else if !container.appPreferences.connectEnabled {
+            ConnectEnablePromoView(
+                onEnable: { service.setEnabled(true) },
+                onNotNow: { dismiss() }
+            )
+            .navigationTitle("Connect")
+        } else {
+            fullDeviceList
+                .navigationTitle("Devices")
+        }
+    }
+
+    private var fullDeviceList: some View {
             List {
                 if !container.authService.isSignedIn {
                     ContentUnavailableView(
@@ -119,17 +154,20 @@ struct ConnectSheet: View {
                             }
                         }
                     }
+
+                    // Per-device beta opt-out (ADR-0018). Affects this device only.
+                    Section {
+                        Button("Turn off Connect", role: .destructive) {
+                            service.setEnabled(false)
+                            dismiss()
+                        }
+                    } footer: {
+                        Text("Stops Connect on this device only. Your other devices stay connected — turn it off there too to fully stop syncing.")
+                    }
                 }
             }
-            .navigationTitle("Devices")
-            .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 localVolume = Double(service.activeDeviceVolume)
-            }
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { dismiss() }
-                }
             }
             .confirmationDialog("Stop Session?", isPresented: $showingStopConfirm, titleVisibility: .visible) {
                 Button("Stop Session", role: .destructive) {
@@ -137,8 +175,60 @@ struct ConnectSheet: View {
                 }
                 Button("Cancel", role: .cancel) {}
             }
+    }
+}
+
+// MARK: - Unavailable / Promo modes
+
+/// Server kill switch is OFF — Connect can't be used right now (ADR-0018).
+private struct ConnectUnavailableView: View {
+    var body: some View {
+        ContentUnavailableView(
+            "Connect is unavailable",
+            systemImage: "airplayaudio",
+            description: Text("Connect (cross-device playback) is temporarily turned off. Check back later.")
+        )
+    }
+}
+
+/// Server is ON but this device hasn't opted in — the "Enable Connect (Beta)"
+/// promo with the confirmation gate (ADR-0018).
+private struct ConnectEnablePromoView: View {
+    let onEnable: () -> Void
+    let onNotNow: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(spacing: 12) {
+                Image(systemName: "airplayaudio")
+                    .font(.title)
+                    .foregroundStyle(DeadlyColors.primary)
+                Text("Enable Connect (Beta)")
+                    .font(.title2.bold())
+            }
+
+            Text("Connect keeps playback in sync across your devices — start a show on your phone, pick it up on another device.")
+                .foregroundStyle(.secondary)
+
+            Text("It's a beta feature and may occasionally skip, pause, or fall out of sync. You'll need to enable Connect on your other devices too for them to appear here.")
+                .foregroundStyle(.secondary)
+
+            Spacer()
+
+            Button(action: onEnable) {
+                Text("Enable Connect")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+
+            Button(action: onNotNow) {
+                Text("Not now")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.plain)
         }
-        .presentationDetents([.medium, .large])
+        .padding(24)
     }
 }
 

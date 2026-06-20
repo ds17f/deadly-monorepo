@@ -83,8 +83,7 @@ fun SettingsScreen(
             PlaybackAudioSettingsScreen(
                 viewModel,
                 onBack = { category = null },
-                onNavigateToEqualizer = onNavigateToEqualizer,
-                onNavigateToConnect = onNavigateToConnect
+                onNavigateToEqualizer = onNavigateToEqualizer
             )
         SettingsCategory.HomeLayout ->
             HomeLayoutSettingsScreen(viewModel, onBack = { category = null })
@@ -473,12 +472,12 @@ private fun AccountSettingsScreen(viewModel: SettingsViewModel, onBack: () -> Un
 private fun PlaybackAudioSettingsScreen(
     viewModel: SettingsViewModel,
     onBack: () -> Unit,
-    onNavigateToEqualizer: () -> Unit,
-    onNavigateToConnect: () -> Unit
+    onNavigateToEqualizer: () -> Unit
 ) {
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
     val connectEnabled by viewModel.connectEnabled.collectAsState()
+    val serverConnectEnabled by viewModel.serverConnectEnabled.collectAsState()
 
     SubscreenScaffold("Playback & Audio", onBack) {
         item { SectionHeader("Controls") }
@@ -517,33 +516,21 @@ private fun PlaybackAudioSettingsScreen(
         }
 
         item { HorizontalDivider() }
-        item { SectionHeader("Connect") }
+        item { SectionHeader("Connect (Beta)") }
 
+        // Per-device Connect opt-in (ADR-0018). Off by default; the server can
+        // also disable Connect globally, in which case the copy says so.
         item {
             PreferenceToggleRow(
-                title = "Enable Connect (Beta)",
-                subtitle = "Play in sync across your devices. Turn off to keep this device out of Connect.",
+                title = "Enable Connect",
+                subtitle = if (serverConnectEnabled) {
+                    "Play in sync across your devices. Enable it on each device you want to use together."
+                } else {
+                    "Cross-device playback sync. Currently unavailable — it's been turned off on the server."
+                },
                 checked = connectEnabled,
                 onCheckedChange = { viewModel.toggleConnectEnabled() }
             )
-        }
-
-        item {
-            Box(modifier = Modifier.alpha(if (connectEnabled) 1f else 0.38f)) {
-                PreferenceRow(
-                    title = "Connected Devices",
-                    subtitle = "View devices connected to your account",
-                    leading = { LeadingIcon(IconResources.Content.Cast()) },
-                    onClick = { if (connectEnabled) onNavigateToConnect() },
-                    trailing = {
-                        Icon(
-                            painter = IconResources.Navigation.ChevronRight(),
-                            contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                )
-            }
         }
     }
 }

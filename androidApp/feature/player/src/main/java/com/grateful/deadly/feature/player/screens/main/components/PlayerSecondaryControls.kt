@@ -25,38 +25,46 @@ fun PlayerSecondaryControls(
     onEqualizerClick: () -> Unit,
     onConnectClick: () -> Unit,
     onShareClick: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    connectAvailable: Boolean = true
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Left section - Connect (icon + device label share one tap target)
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier
-                .height(40.dp)
-                .clip(RoundedCornerShape(20.dp))
-                .clickable(onClick = onConnectClick)
-                .padding(horizontal = 8.dp)
-        ) {
-            Icon(
-                painter = IconResources.Content.Cast(),
-                contentDescription = "Connect",
-                tint = if (connectDeviceName != null) MaterialTheme.colorScheme.primary
-                       else MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            if (connectDeviceName != null) {
-                Spacer(Modifier.width(8.dp))
-                Text(
-                    text = connectDeviceName,
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.primary,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.widthIn(max = 100.dp)
+        // Left section - Connect (icon + device label share one tap target).
+        // Always shown (ADR-0018): greyed when the server kill switch is off, but
+        // still tappable so the sheet can explain it's unavailable.
+        run {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .height(40.dp)
+                    .clip(RoundedCornerShape(20.dp))
+                    .clickable(onClick = onConnectClick)
+                    .padding(horizontal = 8.dp)
+            ) {
+                Icon(
+                    painter = IconResources.Content.Cast(),
+                    contentDescription = "Connect",
+                    tint = when {
+                        !connectAvailable -> MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f)
+                        connectDeviceName != null -> MaterialTheme.colorScheme.primary
+                        else -> MaterialTheme.colorScheme.onSurfaceVariant
+                    }
                 )
+                if (connectDeviceName != null) {
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        text = connectDeviceName,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.primary,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.widthIn(max = 100.dp)
+                    )
+                }
             }
         }
 

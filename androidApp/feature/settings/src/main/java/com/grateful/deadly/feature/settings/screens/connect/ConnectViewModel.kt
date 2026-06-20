@@ -23,6 +23,22 @@ class ConnectViewModel @Inject constructor(
     val activeDeviceVolume: StateFlow<Int> = connectService.activeDeviceVolume
     val installId: String = appPreferences.installId
 
+    // ADR-0018: the three Connect-sheet modes are derived from these two flags —
+    // server off ⇒ unavailable; server on + opted out ⇒ beta promo; both on ⇒
+    // full device picker.
+    val serverConnectEnabled: StateFlow<Boolean> = connectService.serverConnectEnabled
+    val connectEnabled: StateFlow<Boolean> = appPreferences.connectEnabled
+
+    /** Opt this device in/out of Connect (the per-device beta toggle). */
+    fun setConnectEnabled(enabled: Boolean) {
+        connectService.setEnabled(enabled)
+    }
+
+    /** Re-check the global kill switch (called when the Connect sheet opens). */
+    fun refreshServerConnectEnabled() {
+        connectService.refreshServerConnectEnabled()
+    }
+
     fun sendVolume(volume: Int) {
         connectService.sendVolume(volume)
     }

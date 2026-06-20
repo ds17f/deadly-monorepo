@@ -330,40 +330,29 @@ struct PlaybackAudioSettingsView: View {
                 }
             }
 
-            if container.authService.isSignedIn {
-                Section {
-                    Toggle(isOn: Binding(
-                        get: { container.appPreferences.connectEnabled },
-                        set: { newValue in
-                            container.connectService.setEnabled(newValue)
-                            container.analyticsService.track("feature_use", props: [
-                                "feature": "set_connect_enabled",
-                                "category": "preference",
-                                "value": newValue ? "on" : "off",
-                            ])
-                        }
-                    )) {
-                        Label("Enable Connect (Beta)", systemImage: "iphone.and.arrow.forward")
+            // Per-device Connect opt-in (ADR-0018). Off by default; the server
+            // can also disable Connect globally, in which case the footer says so.
+            Section {
+                Toggle(isOn: Binding(
+                    get: { container.appPreferences.connectEnabled },
+                    set: { newValue in
+                        container.connectService.setEnabled(newValue)
+                        container.analyticsService.track("feature_use", props: [
+                            "feature": "set_connect_enabled",
+                            "category": "preference",
+                            "value": newValue ? "on" : "off",
+                        ])
                     }
-
-                    NavigationLink {
-                        ConnectScreen()
-                    } label: {
-                        HStack {
-                            settingsRow("Connected Devices", systemImage: "rectangle.connected.to.line.below")
-                            if container.connectService.isConnected && !container.connectService.devices.isEmpty {
-                                Text("\(container.connectService.devices.count)")
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    }
-                    .foregroundStyle(.primary)
-                    .disabled(!container.appPreferences.connectEnabled)
-                } header: {
-                    Text("Connect")
-                } footer: {
-                    Text("Play in sync across your devices. Turn off to keep this device out of Connect.")
+                )) {
+                    Label("Enable Connect", systemImage: "airplayaudio")
+                }
+            } header: {
+                Text("Connect (Beta)")
+            } footer: {
+                if container.connectService.serverConnectEnabled {
+                    Text("Play in sync across your devices. Enable it on each device you want to use together.")
+                } else {
+                    Text("Cross-device playback sync. Currently unavailable — it's been turned off on the server.")
                 }
             }
         }

@@ -57,7 +57,8 @@ class ConnectServiceImpl @Inject constructor(
         private const val TAG = "ConnectService"
         // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
         // Bump in lockstep with the documented protocol; the server may branch on it.
-        private const val CONNECT_PROTOCOL_VERSION = 1
+        // v2: understands the 4005 "Connect disabled" terminal close code.
+        private const val CONNECT_PROTOCOL_VERSION = 2
         private val RECONNECT_DELAYS_S = listOf(1L, 2L, 4L, 8L, 30L)
         private const val HEARTBEAT_INTERVAL_MS = 15_000L
         // WS keep-alive ping. readTimeout(0) keeps the read side open forever but
@@ -70,7 +71,14 @@ class ConnectServiceImpl @Inject constructor(
         // session is handed away. This is one coupled budget with the sweep; see
         // ADR-0016. Keep it < ~22s (2*ping < 45s) if either constant changes.
         private const val PING_INTERVAL_MS = 20_000L
+        // Server replaced this socket with a newer one for the same deviceId.
+        // Terminal: reconnecting would re-register and kick the newer socket,
+        // a self-perpetuating churn (see web ConnectProvider).
+        private const val CLOSE_CODE_REPLACED = 4000
         private const val CLOSE_CODE_UNAUTHORIZED = 4003
+        // Connect globally disabled by the server (admin kill switch). Terminal:
+        // don't reconnect. Only sent to proto>=2 clients.
+        private const val CLOSE_CODE_DISABLED = 4005
         private const val DEFAULT_FORMAT = "VBR MP3"
         private const val HARDWARE_VOLUME_DEBOUNCE_MS = 300L
         private const val VOLUME_ECHO_SUPPRESS_MS = 1_500L
@@ -86,12 +94,20 @@ class ConnectServiceImpl @Inject constructor(
         // A pending transport command auto-clears after this long if the server
         // never confirms it, so the UI spinner can never get permanently stuck.
         private const val PENDING_COMMAND_TIMEOUT_MS = 6_000L
+        // Short timeout for the public Connect-flag read so it never blocks the
+        // foreground path; on failure we keep the last cached value. ADR-0018.
+        private const val SERVER_FLAG_TIMEOUT_MS = 3_000L
     }
 
     private val json = Json { ignoreUnknownKeys = true }
     private val okHttpClient = OkHttpClient.Builder()
         .readTimeout(0, TimeUnit.MILLISECONDS) // required for WebSocket keep-alive
         .pingInterval(PING_INTERVAL_MS, TimeUnit.MILLISECONDS) // detect dead peer → fail fast → reconnect
+        .build()
+    // Separate short-timeout client for the public flag read — the WS client's
+    // readTimeout(0) would let a hung GET block forever. ADR-0018.
+    private val restClient = OkHttpClient.Builder()
+        .callTimeout(SERVER_FLAG_TIMEOUT_MS, TimeUnit.MILLISECONDS)
         .build()
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
@@ -134,6 +150,11 @@ class ConnectServiceImpl @Inject constructor(
 
     private val _serverTimeOffsetMs = MutableStateFlow(0L)
     override val serverTimeOffsetMs: StateFlow<Long> = _serverTimeOffsetMs.asStateFlow()
+
+    // Seeded from the last cached value so the UI renders correctly before the
+    // first network read resolves (default false ⇒ greyed on a fresh install).
+    private val _serverConnectEnabled = MutableStateFlow(appPreferences.getServerConnectEnabledCached())
+    override val serverConnectEnabled: StateFlow<Boolean> = _serverConnectEnabled.asStateFlow()
 
     @Volatile private var currentVersion = 0L
     // Best (lowest) RTT seen in the current time_sync batch. Replies with
@@ -255,6 +276,40 @@ class ConnectServiceImpl @Inject constructor(
         connect()
     }
 
+    override fun refreshServerConnectEnabled() {
+        scope.launch {
+            val baseUrl = appPreferences.apiBaseUrl
+            if (baseUrl.isBlank()) return@launch
+            val url = "$baseUrl/api/connect/enabled"
+            try {
+                val request = Request.Builder().url(url).get().build()
+                restClient.newCall(request).execute().use { response ->
+                    if (!response.isSuccessful) {
+                        Log.d(TAG, "refreshServerConnectEnabled: HTTP ${response.code}, keeping cached=${_serverConnectEnabled.value}")
+                        return@launch
+                    }
+                    val body = response.body?.string() ?: return@launch
+                    val enabled = json.parseToJsonElement(body)
+                        .jsonObject["connectEnabled"]?.jsonPrimitive?.content?.toBooleanStrictOrNull()
+                        ?: return@launch
+                    setServerConnectEnabled(enabled)
+                    Log.d(TAG, "refreshServerConnectEnabled: serverConnectEnabled=$enabled")
+                    // If the server just turned Connect off, tear down any live
+                    // session locally too (mirrors the 4005 runtime path for a
+                    // client that is currently connected).
+                    if (!enabled && shouldConnect) stop()
+                }
+            } catch (e: Exception) {
+                Log.d(TAG, "refreshServerConnectEnabled failed (keeping cached=${_serverConnectEnabled.value}): ${e.message}")
+            }
+        }
+    }
+
+    private fun setServerConnectEnabled(enabled: Boolean) {
+        _serverConnectEnabled.value = enabled
+        appPreferences.setServerConnectEnabledCached(enabled)
+    }
+
     override fun setEnabled(enabled: Boolean) {
         Log.d(TAG, "setEnabled($enabled)")
         appPreferences.setConnectEnabled(enabled)
@@ -354,6 +409,20 @@ class ConnectServiceImpl @Inject constructor(
         override fun onMessage(webSocket: WebSocket, text: String) {
             Log.d(TAG, "onMessage: ${text.take(200)}")
             handleMessage(text)
+        }
+
+        // A server-initiated close lands HERE, not onClosed. Without this
+        // override OkHttp's default onClosing is a no-op, the closing handshake
+        // never completes, onClosed never fires, and the half-dead socket only
+        // dies via the ping-pong timeout → onFailure → reconnect (~40s churn).
+        // So: complete the handshake AND route the server's real close code to
+        // handleDisconnect so terminal codes (4000/4003/4005) suppress reconnect.
+        // handleDisconnect is idempotent, so the onClosed(1000) that follows our
+        // close() is a no-op.
+        override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
+            Log.d(TAG, "Closing: code=$code reason=$reason")
+            webSocket.close(1000, null)
+            handleDisconnect(code)
         }
 
         override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
@@ -1034,6 +1103,12 @@ class ConnectServiceImpl @Inject constructor(
     }
 
     private fun handleDisconnect(closeCode: Int?) {
+        // Idempotent: onClosing + the onClosed(1000) that follows our handshake
+        // ack (or onFailure) can both land here for one socket. First wins; a
+        // duplicate must not schedule a second reconnect. The close completes
+        // synchronously inside onClosing, well before any reconnect backoff, so
+        // a stale onClosed can't tear down a freshly reconnected socket.
+        if (webSocket == null && !_isConnected.value) return
         stopHeartbeat()
         stopTimeSyncRefresh()
         stopPositionReporting()
@@ -1047,7 +1122,21 @@ class ConnectServiceImpl @Inject constructor(
         setPendingCommand(null)
         _pendingTransfer.value = null
 
-        if (!shouldConnect || closeCode == CLOSE_CODE_UNAUTHORIZED) return
+        // The server refused us because Connect is globally disabled — flip the
+        // cached flag so every Connect icon greys out immediately, without waiting
+        // for the next refresh. This is the runtime enforcement half of ADR-0018
+        // (the REST read is the discovery half).
+        if (closeCode == CLOSE_CODE_DISABLED) setServerConnectEnabled(false)
+
+        // Terminal closes (don't reconnect): 4000 replaced-by-newer-connection,
+        // 4003 unauthorized, 4005 Connect disabled. 4001 (heartbeat timeout) and
+        // null (network/ping failure) fall through to reconnect. Mirrors the web
+        // client's terminal set.
+        if (!shouldConnect ||
+            closeCode == CLOSE_CODE_REPLACED ||
+            closeCode == CLOSE_CODE_UNAUTHORIZED ||
+            closeCode == CLOSE_CODE_DISABLED
+        ) return
 
         val delaySecs = RECONNECT_DELAYS_S[minOf(reconnectAttempt, RECONNECT_DELAYS_S.size - 1)]
         reconnectAttempt++

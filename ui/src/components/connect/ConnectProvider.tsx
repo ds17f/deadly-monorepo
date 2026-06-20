@@ -10,17 +10,23 @@ import { randomUUID } from "@/lib/uuid";
 
 // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
 // Bump in lockstep with the documented protocol; the server may branch on it.
-const CONNECT_PROTOCOL_VERSION = 1;
+// v2: understands the 4005 "Connect disabled" terminal close code.
+const CONNECT_PROTOCOL_VERSION = 2;
 // Build identity for telemetry only — never branched on. Mirrors analytics.ts.
 const APP_VERSION = (process.env.NEXT_PUBLIC_DATA_VERSION ?? "web").slice(0, 20);
 
 const HEARTBEAT_INTERVAL_MS = 15_000;
 const RECONNECT_DELAYS_MS = [1_000, 2_000, 4_000, 8_000, 30_000];
 const DEVICE_ID_KEY = "deadly-device-id";
-const CONNECT_ENABLED_KEY = "deadly-connect-enabled";
-// Default for the per-device Connect toggle. Flip to false to disable
-// cross-device Connect by default across all browsers (see Settings).
-const CONNECT_ENABLED_DEFAULT = true;
+// Per-web-install Connect opt-in (ADR-0018). A user may run several browsers/
+// installs, each a distinct Connect device, so this is local — NOT an account
+// setting. Default OFF: a fresh install must explicitly opt into the beta.
+const OPTED_IN_KEY = "deadly-connect-opted-in";
+// Connect close codes the client must NOT reconnect after. 4003 Unauthorized,
+// 4000 replaced-by-newer-connection, 4005 Connect globally disabled (server
+// kill switch). The browser surfaces server-initiated close codes to onclose
+// directly, so unlike Android no special handshake handling is needed.
+const TERMINAL_CLOSE_CODES = new Set([4000, 4003, 4005]);
 const TIME_SYNC_REFRESH_MS = 5 * 60 * 1000;
 const TIME_SYNC_SAMPLES = 3;
 const TIME_SYNC_SAMPLE_SPACING_MS = 200;
@@ -73,13 +79,11 @@ export default function ConnectProvider({
 
   const [activeDeviceVolume, setActiveDeviceVolume] = useState<number | null>(null);
   const [serverTimeOffsetMs, setServerTimeOffsetMs] = useState(0);
-  // Per-device kill switch for cross-device Connect (Beta). On by default; when
-  // off, this browser never opens the Connect WebSocket. Persisted to localStorage.
-  const [connectEnabled, setConnectEnabledState] = useState<boolean>(() => {
-    if (typeof window === "undefined") return CONNECT_ENABLED_DEFAULT;
-    const stored = localStorage.getItem(CONNECT_ENABLED_KEY);
-    return stored === null ? CONNECT_ENABLED_DEFAULT : stored === "1";
-  });
+
+  // ADR-0018: server global flag (greys/hides the Connect UI) + per-install
+  // beta opt-in. Both must be true to attempt the socket.
+  const [serverConnectEnabled, setServerConnectEnabled] = useState(false);
+  const [connectOptedIn, setConnectOptedInState] = useState(false);
 
   const wsRef = useRef<WebSocket | null>(null);
   const heartbeatRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -265,14 +269,15 @@ export default function ConnectProvider({
       setConnected(false);
       wsRef.current = null;
 
-      // 4003 = Unauthorized (terminal). 4001 = heartbeat timeout (reconnect).
-      // 4000 = "replaced by new connection": the server already has a newer
-      // socket for this deviceId (e.g. a second tab sharing the localStorage
-      // deviceId, or a stale reconnect). Reconnecting here would re-register
-      // and kick that newer socket, whose onclose reconnects and kicks us back
-      // — a self-perpetuating churn. The newer socket is the rightful owner, so
-      // treat 4000 as terminal and stay down.
-      if (!shouldConnectRef.current || event.code === 4003 || event.code === 4000) {
+      // The server refused us because Connect is globally disabled — flip the
+      // flag so the Connect UI greys out immediately (ADR-0018 runtime path).
+      if (event.code === 4005) setServerConnectEnabled(false);
+
+      // Terminal codes (don't reconnect): 4003 Unauthorized, 4000 replaced-by-
+      // newer-connection (reconnecting would kick the rightful newer socket and
+      // self-perpetuate churn), 4005 Connect globally disabled by the server.
+      // 4001 (heartbeat timeout) and clean drops fall through to reconnect.
+      if (!shouldConnectRef.current || TERMINAL_CLOSE_CODES.has(event.code)) {
         log(`Not reconnecting: shouldConnect=${shouldConnectRef.current} code=${event.code}`);
         return;
       }
@@ -316,6 +321,29 @@ export default function ConnectProvider({
     }
   }, []);
 
+  // ADR-0018: best-effort read of the global Connect flag. Short, no-store, and
+  // failures keep the current value. Called on mount and on focus/visibility so
+  // an admin flip is reflected without a reload.
+  const refreshServerConnectEnabled = useCallback(async () => {
+    try {
+      const res = await fetch("/api/connect/enabled", { cache: "no-store" });
+      if (!res.ok) return;
+      const json = (await res.json()) as { connectEnabled?: unknown };
+      if (typeof json.connectEnabled === "boolean") setServerConnectEnabled(json.connectEnabled);
+    } catch {
+      // keep the current value
+    }
+  }, []);
+
+  const setConnectOptedIn = useCallback((value: boolean) => {
+    try {
+      localStorage.setItem(OPTED_IN_KEY, value ? "1" : "0");
+    } catch {
+      // ignore storage failures (private mode); state still updates
+    }
+    setConnectOptedInState(value);
+  }, []);
+
   const setLocalPlaybackSource = useCallback(
     (source: (() => LocalPlaybackSnapshot | null) | null) => {
       localPlaybackRef.current = source ?? (() => null);
@@ -343,44 +371,42 @@ export default function ConnectProvider({
     currentVersionRef.current = 0;
   }, [clearHeartbeat, clearReconnectTimer, clearTimeSyncRefresh]);
 
-  // Toggle the per-device Connect kill switch (Settings). When turning off
-  // while this browser is the active player, send an explicit `stop` first so
-  // followers pause cleanly before the socket closes (the gate effect below
-  // tears it down on the resulting re-render).
-  const setConnectEnabled = useCallback(
-    (enabled: boolean) => {
-      log(`setConnectEnabled(${enabled})`);
-      if (
-        !enabled &&
-        connectState?.activeDeviceId === myDeviceId &&
-        wsRef.current?.readyState === WebSocket.OPEN
-      ) {
-        sendCommand("stop");
-      }
-      if (typeof window !== "undefined") {
-        localStorage.setItem(CONNECT_ENABLED_KEY, enabled ? "1" : "0");
-      }
-      setConnectEnabledState(enabled);
-    },
-    [connectState, myDeviceId, sendCommand],
-  );
+
+  // Seed the per-install opt-in from localStorage, then refresh the server flag
+  // on mount and whenever the tab regains focus/visibility (ADR-0018).
+  useEffect(() => {
+    try {
+      setConnectOptedInState(localStorage.getItem(OPTED_IN_KEY) === "1");
+    } catch {
+      // ignore
+    }
+    void refreshServerConnectEnabled();
+    const onFocus = () => void refreshServerConnectEnabled();
+    const onVisible = () => {
+      if (document.visibilityState === "visible") void refreshServerConnectEnabled();
+    };
+    window.addEventListener("focus", onFocus);
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      window.removeEventListener("focus", onFocus);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, [refreshServerConnectEnabled]);
 
   useEffect(() => {
     if (isLoading) return;
 
-    if (user && !onAdmin && connectEnabled) {
-      log(`User authenticated, starting connect`);
+    // ADR-0018: attempt the socket only when signed in, opted into the beta on
+    // this install, AND the server kill switch is on. Any of these going false
+    // re-runs the effect and tears the socket down — so an admin disabling
+    // Connect (flag refresh flips serverConnectEnabled) disconnects every tab.
+    if (user && !onAdmin && connectOptedIn && serverConnectEnabled) {
+      log(`User authenticated + opted in + server enabled, starting connect`);
       shouldConnectRef.current = true;
       reconnectAttemptRef.current = 0;
       connect();
     } else {
-      log(
-        !connectEnabled
-          ? `Connect disabled, disconnecting`
-          : onAdmin
-            ? `On admin route, disconnecting`
-            : `No user, disconnecting`,
-      );
+      log(`Not connecting (user=${!!user} admin=${onAdmin} optedIn=${connectOptedIn} serverEnabled=${serverConnectEnabled})`);
       disconnect();
     }
 
@@ -388,10 +414,10 @@ export default function ConnectProvider({
       disconnect();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, isLoading, onAdmin, connectEnabled]);
+  }, [user, isLoading, onAdmin, connectOptedIn, serverConnectEnabled]);
 
   return (
-    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, setLocalPlaybackSource, serverTimeOffsetMs, connectEnabled, setConnectEnabled }}>
+    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, setLocalPlaybackSource, serverTimeOffsetMs, serverConnectEnabled, refreshServerConnectEnabled, connectOptedIn, setConnectOptedIn }}>
       {children}
     </ConnectContext.Provider>
   );

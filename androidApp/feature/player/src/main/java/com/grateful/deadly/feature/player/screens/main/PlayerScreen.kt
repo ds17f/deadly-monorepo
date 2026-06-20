@@ -49,6 +49,9 @@ fun PlayerScreen(
     val isCurrentTrackFavorite by viewModel.isCurrentTrackFavorite.collectAsState()
     val equalizerState by viewModel.equalizerState.collectAsState()
     val connectRemoteDeviceName by viewModel.connectRemoteDeviceName.collectAsState()
+    // ADR-0018: the Connect icon is always shown; greyed when the server kill
+    // switch is off, and the sheet itself handles enable/full/unavailable modes.
+    val connectAvailable by viewModel.serverConnectEnabled.collectAsState()
     val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
     val showCollectionsCount by viewModel.showCollectionsCount.collectAsState()
 
@@ -149,6 +152,7 @@ fun PlayerScreen(
             // Secondary controls row (updated for queue sheet)
             item {
                 PlayerSecondaryControls(
+                    connectAvailable = connectAvailable,
                     connectDeviceName = connectRemoteDeviceName,
                     onEqualizerClick = { showEqualizerBottomSheet = true },
                     onConnectClick = { showConnectSheet = true },
@@ -254,6 +258,7 @@ fun PlayerScreen(
         if (showMiniPlayer) {
             PlayerMiniPlayer(
                 uiState = uiState,
+                connectAvailable = connectAvailable,
                 connectDeviceName = connectRemoteDeviceName,
                 onPlayPause = viewModel::onPlayPauseClicked,
                 onConnectClick = { showConnectSheet = true },

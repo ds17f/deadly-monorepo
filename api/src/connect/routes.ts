@@ -21,7 +21,7 @@ import {
   startHeartbeatSweep,
 } from "./state.js";
 import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
-import { getConnectEnabled } from "../db/appSettings.js";
+import { getConnectEnabled, getConnectMinProtocol } from "../db/appSettings.js";
 import { connectDisabledCloseCode } from "./protocol.js";
 
 // Terminal close codes the client must NOT reconnect after (see protocol.ts):
@@ -100,6 +100,18 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             const code = connectDisabledCloseCode(protocolVersion);
             request.log.info({ userId, deviceId: msg.deviceId, protocolVersion, code }, "ws/connect: Connect disabled — closing");
             socket.close(code, "Connect disabled");
+            return;
+          }
+
+          // Minimum-protocol gate: even when Connect is enabled, refuse clients
+          // below the admin-configured floor (0 = allow all). Lets the old fleet
+          // be excluded without a global off. Reuses the disabled close code so
+          // proto < 2 gets terminal 4003 and proto >= 2 gets 4005.
+          const minProtocol = getConnectMinProtocol();
+          if (protocolVersion < minProtocol) {
+            const code = connectDisabledCloseCode(protocolVersion);
+            request.log.info({ userId, deviceId: msg.deviceId, protocolVersion, minProtocol, code }, "ws/connect: protocol below minimum — closing");
+            socket.close(code, "Connect minimum protocol");
             return;
           }
 

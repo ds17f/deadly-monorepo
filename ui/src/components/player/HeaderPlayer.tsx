@@ -429,7 +429,10 @@ export default function HeaderPlayer() {
     toggleAutoAdvance,
   } = usePlayer();
 
-  const { connected: isConnected, state: connectState, serverTimeOffsetMs } = useConnect();
+  const { connected: isConnected, state: connectState, serverTimeOffsetMs, serverConnectEnabled, connectOptedIn } = useConnect();
+  // ADR-0018: always offer the Connect control once the user has opted in OR the
+  // server has it enabled; greyed when the server kill switch is off.
+  const connectVisible = serverConnectEnabled || connectOptedIn;
   const { getReview } = useUserData();
 
   // Factoid cards for the fullscreen ambient view: the AI review + the user's
@@ -913,21 +916,23 @@ export default function HeaderPlayer() {
             </svg>
           </button>
         )}
-        {isConnected && (
+        {connectVisible && (
           <button
             onClick={() => setRailMode((m) => (m === "devices" ? null : "devices"))}
             className={`rounded-full p-2 transition-colors ${
-              railMode === "devices"
-                ? "text-deadly-highlight"
-                : isRemoteActive
-                  ? "text-deadly-highlight/70 hover:text-deadly-highlight"
-                  : "text-white/50 hover:text-white/80"
+              !serverConnectEnabled
+                ? "text-white/25 hover:text-white/40"
+                : railMode === "devices"
+                  ? "text-deadly-highlight"
+                  : isRemoteActive
+                    ? "text-deadly-highlight/70 hover:text-deadly-highlight"
+                    : "text-white/50 hover:text-white/80"
             }`}
             aria-label="Devices"
             title="Connect to a device"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M1 18v3h4v-3H1zm0-6v3h8v-3H1zm0-6v3h12V6H1zm20 12.59L17.42 15 16 16.41 21 21.41l5-5L24.59 15 21 18.59z" />
+              <path d="M21 3H3c-1.1 0-2 .9-2 2v3h2V5h18v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM1 18v3h3c0-1.66-1.34-3-3-3zm0-4v2c2.76 0 5 2.24 5 5h2c0-3.87-3.13-7-7-7zm0-4v2c4.97 0 9 4.03 9 9h2c0-6.08-4.93-11-11-11z" />
             </svg>
           </button>
         )}
@@ -998,16 +1003,18 @@ export default function HeaderPlayer() {
             )}
           </div>
           <div className="relative">
-            {isConnected ? (
+            {connectVisible ? (
               <button
                 onClick={() => setDevicePickerOpen((o) => !o)}
                 aria-label="Connect to device"
                 className={`rounded-full p-2 transition-colors ${
-                  isRemoteActive ? "text-deadly-highlight" : "text-white/60 hover:text-white"
+                  !serverConnectEnabled
+                    ? "text-white/25 hover:text-white/40"
+                    : isRemoteActive ? "text-deadly-highlight" : "text-white/60 hover:text-white"
                 }`}
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M1 18v3h4v-3H1zm0-6v3h8v-3H1zm0-6v3h12V6H1zm20 12.59L17.42 15 16 16.41 21 21.41l5-5L24.59 15 21 18.59z" />
+                  <path d="M21 3H3c-1.1 0-2 .9-2 2v3h2V5h18v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM1 18v3h3c0-1.66-1.34-3-3-3zm0-4v2c2.76 0 5 2.24 5 5h2c0-3.87-3.13-7-7-7zm0-4v2c4.97 0 9 4.03 9 9h2c0-6.08-4.93-11-11-11z" />
                 </svg>
               </button>
             ) : (

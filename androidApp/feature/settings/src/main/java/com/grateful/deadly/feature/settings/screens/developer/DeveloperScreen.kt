@@ -21,7 +21,8 @@ import com.grateful.deadly.feature.settings.SettingsViewModel
 @Composable
 fun DeveloperScreen(
     viewModel: SettingsViewModel = hiltViewModel(),
-    onNavigateBack: () -> Unit = {}
+    onNavigateBack: () -> Unit = {},
+    onNavigateToConnect: () -> Unit = {}
 ) {
     val forceOnline by viewModel.forceOnline.collectAsState()
 
