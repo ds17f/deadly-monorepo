@@ -9,6 +9,7 @@ const ADMIN_PAGES = [
   { href: "/admin/analytics-versions", title: "Analytics Watershed", description: "Per-platform reliable-from versions for each event/prop" },
   { href: "/admin/beta", title: "Beta", description: "Manage TestFlight beta applicants and invitations" },
   { href: "/admin/notifications", title: "Notifications", description: "Publish in-app messages to everybody" },
+  { href: "/admin/settings", title: "Global Settings", description: "Server-wide feature switches (Connect)" },
 ];
 
 export default function AdminPage() {
