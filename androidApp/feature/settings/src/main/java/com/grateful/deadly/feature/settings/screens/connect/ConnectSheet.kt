@@ -24,11 +24,46 @@ import kotlinx.coroutines.delay
 
 private const val VOLUME_STEP = 2
 
+/**
+ * The Connect entry point. Renders one of three modes (ADR-0018):
+ *  - server kill switch OFF      → "unavailable" note
+ *  - server ON, device opted out → "Enable Connect (Beta)" promo + confirm
+ *  - server ON, device opted in  → the full device picker
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ConnectSheet(
     onDismiss: () -> Unit,
     viewModel: ConnectViewModel = hiltViewModel()
+) {
+    val serverConnectEnabled by viewModel.serverConnectEnabled.collectAsState()
+    val connectEnabled by viewModel.connectEnabled.collectAsState()
+
+    // Re-check the global kill switch every time the sheet opens, so the correct
+    // mode (unavailable / promo / devices) is shown at this critical moment even
+    // if the cached value is stale (ADR-0018).
+    LaunchedEffect(Unit) { viewModel.refreshServerConnectEnabled() }
+
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        when {
+            !serverConnectEnabled -> ConnectUnavailableContent()
+            !connectEnabled -> ConnectEnablePromoContent(
+                onEnable = { viewModel.setConnectEnabled(true) },
+                onNotNow = onDismiss,
+            )
+            else -> ConnectFullContent(onDisableConnect = {
+                viewModel.setConnectEnabled(false)
+                onDismiss()
+            }, viewModel = viewModel)
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ConnectFullContent(
+    onDisableConnect: () -> Unit,
+    viewModel: ConnectViewModel,
 ) {
     val devices by viewModel.devices.collectAsState()
     val connectState by viewModel.connectState.collectAsState()
@@ -55,8 +90,7 @@ fun ConnectSheet(
     val volumeFocusRequester = remember { FocusRequester() }
     LaunchedEffect(Unit) { volumeFocusRequester.requestFocus() }
 
-    ModalBottomSheet(onDismissRequest = onDismiss) {
-        Column(
+    Column(
             modifier = Modifier
                 .focusRequester(volumeFocusRequester)
                 .focusable()
@@ -229,8 +263,23 @@ fun ConnectSheet(
                     }
                 )
             }
+
+            // Per-device beta opt-out. Turning Connect off here only affects this
+            // device — others stay in the session (ADR-0018).
+            HorizontalDivider()
+            ListItem(
+                headlineContent = { Text("Turn off Connect") },
+                supportingContent = {
+                    Text(
+                        "Stops Connect on this device only. Your other devices stay connected — turn it off there too to fully stop syncing.",
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                },
+                trailingContent = {
+                    TextButton(onClick = onDisableConnect) { Text("Turn off") }
+                },
+            )
         }
-    }
 }
 
 @Composable
@@ -292,4 +341,91 @@ internal fun ConnectDeviceRow(
         } else null,
         modifier = Modifier.clickable(enabled = isTappable, onClick = onTransfer)
     )
+}
+
+/** Server kill switch is OFF — Connect can't be used right now (ADR-0018). */
+@Composable
+private fun ConnectUnavailableContent() {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 24.dp)
+            .padding(top = 8.dp, bottom = 48.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Icon(
+            painter = IconResources.Content.Cast(),
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.size(40.dp),
+        )
+        Spacer(Modifier.height(16.dp))
+        Text(
+            text = "Connect is unavailable",
+            style = MaterialTheme.typography.titleMedium,
+        )
+        Spacer(Modifier.height(8.dp))
+        Text(
+            text = "Connect (cross-device playback) is temporarily turned off. Check back later.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+}
+
+/**
+ * Server is ON but this device hasn't opted in — the "Enable Connect (Beta)"
+ * promo with the confirmation gate (ADR-0018).
+ */
+@Composable
+private fun ConnectEnablePromoContent(
+    onEnable: () -> Unit,
+    onNotNow: () -> Unit,
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 24.dp)
+            .padding(top = 8.dp, bottom = 32.dp),
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(
+                painter = IconResources.Content.Cast(),
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.size(28.dp),
+            )
+            Spacer(Modifier.width(12.dp))
+            Text(
+                text = "Enable Connect (Beta)",
+                style = MaterialTheme.typography.titleLarge,
+            )
+        }
+        Spacer(Modifier.height(16.dp))
+        Text(
+            text = "Connect keeps playback in sync across your devices — start a show on your phone, pick it up on another device.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Spacer(Modifier.height(12.dp))
+        Text(
+            text = "It's a beta feature and may occasionally skip, pause, or fall out of sync. You'll need to enable Connect on your other devices too for them to appear here.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Spacer(Modifier.height(24.dp))
+        Button(
+            onClick = onEnable,
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            Text("Enable Connect")
+        }
+        Spacer(Modifier.height(8.dp))
+        TextButton(
+            onClick = onNotNow,
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            Text("Not now")
+        }
+    }
 }

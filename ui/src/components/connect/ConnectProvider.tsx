@@ -18,6 +18,10 @@ const APP_VERSION = (process.env.NEXT_PUBLIC_DATA_VERSION ?? "web").slice(0, 20)
 const HEARTBEAT_INTERVAL_MS = 15_000;
 const RECONNECT_DELAYS_MS = [1_000, 2_000, 4_000, 8_000, 30_000];
 const DEVICE_ID_KEY = "deadly-device-id";
+// Per-web-install Connect opt-in (ADR-0018). A user may run several browsers/
+// installs, each a distinct Connect device, so this is local — NOT an account
+// setting. Default OFF: a fresh install must explicitly opt into the beta.
+const OPTED_IN_KEY = "deadly-connect-opted-in";
 // Connect close codes the client must NOT reconnect after. 4003 Unauthorized,
 // 4000 replaced-by-newer-connection, 4005 Connect globally disabled (server
 // kill switch). The browser surfaces server-initiated close codes to onclose
@@ -75,6 +79,11 @@ export default function ConnectProvider({
 
   const [activeDeviceVolume, setActiveDeviceVolume] = useState<number | null>(null);
   const [serverTimeOffsetMs, setServerTimeOffsetMs] = useState(0);
+
+  // ADR-0018: server global flag (greys/hides the Connect UI) + per-install
+  // beta opt-in. Both must be true to attempt the socket.
+  const [serverConnectEnabled, setServerConnectEnabled] = useState(false);
+  const [connectOptedIn, setConnectOptedInState] = useState(false);
 
   const wsRef = useRef<WebSocket | null>(null);
   const heartbeatRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -260,6 +269,10 @@ export default function ConnectProvider({
       setConnected(false);
       wsRef.current = null;
 
+      // The server refused us because Connect is globally disabled — flip the
+      // flag so the Connect UI greys out immediately (ADR-0018 runtime path).
+      if (event.code === 4005) setServerConnectEnabled(false);
+
       // Terminal codes (don't reconnect): 4003 Unauthorized, 4000 replaced-by-
       // newer-connection (reconnecting would kick the rightful newer socket and
       // self-perpetuate churn), 4005 Connect globally disabled by the server.
@@ -308,6 +321,29 @@ export default function ConnectProvider({
     }
   }, []);
 
+  // ADR-0018: best-effort read of the global Connect flag. Short, no-store, and
+  // failures keep the current value. Called on mount and on focus/visibility so
+  // an admin flip is reflected without a reload.
+  const refreshServerConnectEnabled = useCallback(async () => {
+    try {
+      const res = await fetch("/api/connect/enabled", { cache: "no-store" });
+      if (!res.ok) return;
+      const json = (await res.json()) as { connectEnabled?: unknown };
+      if (typeof json.connectEnabled === "boolean") setServerConnectEnabled(json.connectEnabled);
+    } catch {
+      // keep the current value
+    }
+  }, []);
+
+  const setConnectOptedIn = useCallback((value: boolean) => {
+    try {
+      localStorage.setItem(OPTED_IN_KEY, value ? "1" : "0");
+    } catch {
+      // ignore storage failures (private mode); state still updates
+    }
+    setConnectOptedInState(value);
+  }, []);
+
   const setLocalPlaybackSource = useCallback(
     (source: (() => LocalPlaybackSnapshot | null) | null) => {
       localPlaybackRef.current = source ?? (() => null);
@@ -336,20 +372,41 @@ export default function ConnectProvider({
   }, [clearHeartbeat, clearReconnectTimer, clearTimeSyncRefresh]);
 
 
+  // Seed the per-install opt-in from localStorage, then refresh the server flag
+  // on mount and whenever the tab regains focus/visibility (ADR-0018).
+  useEffect(() => {
+    try {
+      setConnectOptedInState(localStorage.getItem(OPTED_IN_KEY) === "1");
+    } catch {
+      // ignore
+    }
+    void refreshServerConnectEnabled();
+    const onFocus = () => void refreshServerConnectEnabled();
+    const onVisible = () => {
+      if (document.visibilityState === "visible") void refreshServerConnectEnabled();
+    };
+    window.addEventListener("focus", onFocus);
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      window.removeEventListener("focus", onFocus);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, [refreshServerConnectEnabled]);
+
   useEffect(() => {
     if (isLoading) return;
 
-    // No per-device toggle on web: Connect is gated globally by the server. We
-    // always attempt when signed in; if the server has Connect disabled the
-    // socket closes terminally (4005) and `connected` stays false, which hides
-    // all Connect UI (the device-picker buttons are gated on `connected`).
-    if (user && !onAdmin) {
-      log(`User authenticated, starting connect`);
+    // ADR-0018: attempt the socket only when signed in, opted into the beta on
+    // this install, AND the server kill switch is on. Any of these going false
+    // re-runs the effect and tears the socket down — so an admin disabling
+    // Connect (flag refresh flips serverConnectEnabled) disconnects every tab.
+    if (user && !onAdmin && connectOptedIn && serverConnectEnabled) {
+      log(`User authenticated + opted in + server enabled, starting connect`);
       shouldConnectRef.current = true;
       reconnectAttemptRef.current = 0;
       connect();
     } else {
-      log(onAdmin ? `On admin route, disconnecting` : `No user, disconnecting`);
+      log(`Not connecting (user=${!!user} admin=${onAdmin} optedIn=${connectOptedIn} serverEnabled=${serverConnectEnabled})`);
       disconnect();
     }
 
@@ -357,10 +414,10 @@ export default function ConnectProvider({
       disconnect();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, isLoading, onAdmin]);
+  }, [user, isLoading, onAdmin, connectOptedIn, serverConnectEnabled]);
 
   return (
-    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, setLocalPlaybackSource, serverTimeOffsetMs }}>
+    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, setLocalPlaybackSource, serverTimeOffsetMs, serverConnectEnabled, refreshServerConnectEnabled, connectOptedIn, setConnectOptedIn }}>
       {children}
     </ConnectContext.Provider>
   );
