@@ -12,16 +12,20 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.ContentCopy
+import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.filled.IosShare
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.core.content.FileProvider
+import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -39,6 +43,7 @@ import kotlinx.coroutines.withContext
 fun BugReportScreen(
     onBack: () -> Unit,
     headerBar: @Composable (title: String, onBack: () -> Unit) -> Unit,
+    viewModel: BugReportViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -46,10 +51,14 @@ fun BugReportScreen(
     var logText by remember { mutableStateOf("") }
     var isLoading by remember { mutableStateOf(true) }
     var copied by remember { mutableStateOf(false) }
+    var note by remember { mutableStateOf("") }
+    val sendState by viewModel.state.collectAsState()
+    val isSending = sendState is BugReportSendState.Sending
 
     suspend fun reload() {
         isLoading = true
         copied = false
+        viewModel.resetState()
         logText = withContext(Dispatchers.IO) { BugReportExporter.exportRecentLogs() }
         isLoading = false
     }
@@ -68,10 +77,19 @@ fun BugReportScreen(
             Text("Logs from the last hour", style = MaterialTheme.typography.titleMedium)
             Spacer(Modifier.height(4.dp))
             Text(
-                "Tap Share to send these logs to support. They contain URLs of tracks you " +
-                    "played and timing information — no account or personal data.",
+                "Tap Send Bug Report to send these logs straight to support. They contain URLs " +
+                    "of tracks you played and timing information — no account or personal data.",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(Modifier.height(8.dp))
+            OutlinedTextField(
+                value = note,
+                onValueChange = { note = it },
+                label = { Text("What happened? (optional)") },
+                modifier = Modifier.fillMaxWidth(),
+                minLines = 1,
+                maxLines = 3
             )
         }
 
@@ -105,50 +123,92 @@ fun BugReportScreen(
 
         HorizontalDivider()
 
-        Row(
+        Column(
             modifier = Modifier.fillMaxWidth().padding(16.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            verticalAlignment = Alignment.CenterVertically
+            verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            OutlinedButton(
-                onClick = {
-                    copyToClipboard(context, logText)
-                    copied = true
-                    scope.launch { delay(1500); copied = false }
-                },
-                enabled = !isLoading && logText.isNotEmpty(),
-                modifier = Modifier.weight(1f)
-            ) {
-                Icon(
-                    imageVector = if (copied) Icons.Filled.Check else Icons.Filled.ContentCopy,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp)
-                )
-                Spacer(Modifier.width(6.dp))
-                Text(if (copied) "Copied" else "Copy")
+            when (val s = sendState) {
+                is BugReportSendState.Success ->
+                    StatusRow(Icons.Filled.Check, "Sent — thank you!", Color(0xFF2E7D32))
+                is BugReportSendState.Failure ->
+                    StatusRow(Icons.Filled.Error, s.message, MaterialTheme.colorScheme.error)
+                else -> {}
             }
 
             Button(
-                onClick = { shareLogs(context, logText) },
-                enabled = !isLoading && logText.isNotEmpty(),
-                modifier = Modifier.weight(1f)
+                onClick = { viewModel.send(logText, note) },
+                enabled = !isLoading && !isSending && logText.isNotEmpty(),
+                modifier = Modifier.fillMaxWidth()
             ) {
-                Icon(
-                    imageVector = Icons.Filled.IosShare,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp)
-                )
-                Spacer(Modifier.width(6.dp))
-                Text("Share")
+                if (isSending) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(18.dp),
+                        strokeWidth = 2.dp,
+                        color = MaterialTheme.colorScheme.onPrimary
+                    )
+                } else {
+                    Icon(Icons.Filled.Send, contentDescription = null, modifier = Modifier.size(18.dp))
+                }
+                Spacer(Modifier.width(8.dp))
+                Text(if (isSending) "Sending…" else "Send Bug Report")
             }
 
-            OutlinedButton(
-                onClick = { scope.launch { reload() } },
-                enabled = !isLoading
+            // Fallback path — for when sending fails or the user prefers to send
+            // the logs themselves (e.g. via email).
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(Icons.Filled.Refresh, contentDescription = "Refresh")
+                OutlinedButton(
+                    onClick = {
+                        copyToClipboard(context, logText)
+                        copied = true
+                        scope.launch { delay(1500); copied = false }
+                    },
+                    enabled = !isLoading && logText.isNotEmpty(),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Icon(
+                        imageVector = if (copied) Icons.Filled.Check else Icons.Filled.ContentCopy,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(Modifier.width(6.dp))
+                    Text(if (copied) "Copied" else "Copy")
+                }
+
+                OutlinedButton(
+                    onClick = { shareLogs(context, logText) },
+                    enabled = !isLoading && logText.isNotEmpty(),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.IosShare,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(Modifier.width(6.dp))
+                    Text("Share")
+                }
+
+                OutlinedButton(
+                    onClick = { scope.launch { reload() } },
+                    enabled = !isLoading && !isSending
+                ) {
+                    Icon(Icons.Filled.Refresh, contentDescription = "Refresh")
+                }
             }
         }
+    }
+}
+
+@Composable
+private fun StatusRow(icon: androidx.compose.ui.graphics.vector.ImageVector, text: String, tint: Color) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Icon(icon, contentDescription = null, tint = tint, modifier = Modifier.size(18.dp))
+        Spacer(Modifier.width(8.dp))
+        Text(text, style = MaterialTheme.typography.bodyMedium, color = tint)
     }
 }
 

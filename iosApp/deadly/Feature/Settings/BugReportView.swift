@@ -6,14 +6,25 @@ import SwiftAudioStreamEx
 /// by app + playback subsystems) via `LogExport`, shows a preview, and offers
 /// share + copy-to-clipboard actions so users can ship logs to support.
 struct BugReportView: View {
+    @Environment(\.appContainer) private var container
+
     @State private var logText: String = ""
     @State private var isLoading = true
     @State private var loadError: String?
     @State private var shareItem: ShareItem?
     @State private var copied = false
 
+    @State private var note: String = ""
+    @State private var isSending = false
+    @State private var sendStatus: SendStatus?
+
     /// Optional preset filter — e.g., `[PB]` to scope to playback lines only.
     var filterContains: String? = nil
+
+    private enum SendStatus: Equatable {
+        case success
+        case failure(String)
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -70,40 +81,80 @@ struct BugReportView: View {
         VStack(alignment: .leading, spacing: 6) {
             Text("Logs from the last hour")
                 .font(.headline)
-            Text("Tap **Share** to send these logs to support. They contain URLs of tracks you played and timing information — no account or personal data.")
+            Text("Tap **Send Bug Report** to send these logs straight to support. They contain URLs of tracks you played and timing information — no account or personal data.")
                 .font(.callout)
                 .foregroundStyle(.secondary)
+
+            TextField("What happened? (optional)", text: $note, axis: .vertical)
+                .lineLimit(1...3)
+                .textFieldStyle(.roundedBorder)
+                .padding(.top, 4)
         }
     }
 
     private var actionBar: some View {
-        HStack(spacing: 12) {
-            Button {
-                copyToClipboard()
-            } label: {
-                Label(copied ? "Copied" : "Copy", systemImage: copied ? "checkmark" : "doc.on.doc")
-                    .frame(maxWidth: .infinity)
+        VStack(spacing: 10) {
+            switch sendStatus {
+            case .success:
+                Label("Sent — thank you!", systemImage: "checkmark.circle.fill")
+                    .font(.callout)
+                    .foregroundStyle(.green)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            case .failure(let msg):
+                Label(msg, systemImage: "exclamationmark.triangle.fill")
+                    .font(.callout)
+                    .foregroundStyle(.orange)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            case nil:
+                EmptyView()
             }
-            .buttonStyle(.bordered)
-            .disabled(isLoading || logText.isEmpty)
 
             Button {
-                prepareShare()
+                Task { await sendReport() }
             } label: {
-                Label("Share", systemImage: "square.and.arrow.up")
-                    .frame(maxWidth: .infinity)
+                HStack {
+                    if isSending {
+                        ProgressView().controlSize(.small)
+                    } else {
+                        Image(systemName: "paperplane.fill")
+                    }
+                    Text(isSending ? "Sending…" : "Send Bug Report")
+                }
+                .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
-            .disabled(isLoading || logText.isEmpty)
+            .disabled(isLoading || isSending || logText.isEmpty)
 
-            Button {
-                Task { await loadLogs() }
-            } label: {
-                Image(systemName: "arrow.clockwise")
-                    .frame(width: 44, height: 32)
+            // Fallback path — for when sending fails or the user prefers to send
+            // the logs themselves (e.g. via email/Reddit).
+            HStack(spacing: 12) {
+                Button {
+                    copyToClipboard()
+                } label: {
+                    Label(copied ? "Copied" : "Copy", systemImage: copied ? "checkmark" : "doc.on.doc")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.bordered)
+                .disabled(isLoading || logText.isEmpty)
+
+                Button {
+                    prepareShare()
+                } label: {
+                    Label("Share", systemImage: "square.and.arrow.up")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.bordered)
+                .disabled(isLoading || logText.isEmpty)
+
+                Button {
+                    Task { await loadLogs() }
+                } label: {
+                    Image(systemName: "arrow.clockwise")
+                        .frame(width: 44, height: 32)
+                }
+                .buttonStyle(.bordered)
+                .disabled(isLoading || isSending)
             }
-            .buttonStyle(.bordered)
-            .disabled(isLoading)
         }
     }
 
@@ -120,6 +171,59 @@ struct BugReportView: View {
             loadError = error.localizedDescription
         }
         isLoading = false
+    }
+
+    /// One-tap submit: POSTs the logs + metadata to the server. Gated by the
+    /// shared analytics key; stamps the signed-in user when a token exists,
+    /// otherwise the report is anonymous.
+    private func sendReport() async {
+        guard !logText.isEmpty else { return }
+        isSending = true
+        sendStatus = nil
+
+        let prefs = container.appPreferences
+        let baseURL = prefs.apiBaseUrl
+        guard let url = URL(string: "\(baseURL)/api/bug-reports") else {
+            sendStatus = .failure("Couldn't build request URL.")
+            isSending = false
+            return
+        }
+
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
+        let payload: [String: String?] = [
+            "logs": logText,
+            "note": note.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? nil : note,
+            "platform": "ios",
+            "appVersion": appVersion,
+            "osVersion": "iOS \(UIDevice.current.systemVersion)",
+            "device": UIDevice.current.model,
+            "installId": prefs.installId,
+        ]
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(Secrets.analyticsApiKey, forHTTPHeaderField: "X-Analytics-Key")
+        if let token = container.authService.token {
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
+        do {
+            request.httpBody = try JSONSerialization.data(
+                withJSONObject: payload.compactMapValues { $0 }
+            )
+            let (_, response) = try await URLSession.shared.data(for: request)
+            let code = (response as? HTTPURLResponse)?.statusCode ?? 0
+            if (200..<300).contains(code) {
+                sendStatus = .success
+            } else if code == 429 {
+                sendStatus = .failure("Too many reports — please try again later.")
+            } else {
+                sendStatus = .failure("Send failed (\(code)). Try Copy or Share instead.")
+            }
+        } catch {
+            sendStatus = .failure("Couldn't reach the server. Try Copy or Share instead.")
+        }
+        isSending = false
     }
 
     private func copyToClipboard() {
