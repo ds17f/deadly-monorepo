@@ -124,6 +124,10 @@ jobs:
         run: |
           SITE_ADDRESS="${{ vars.SITE_ADDRESS }}"
           SHARE_ADDRESS="${{ vars.SHARE_ADDRESS }}"
+          # Optional: the emma-shop public host. Set as a per-environment variable
+          # only where the shop is hosted (prod). Empty elsewhere — compose then
+          # falls back to an inert default, so beta is unaffected.
+          SHOP_ADDRESS="${{ vars.SHOP_ADDRESS }}"
           if [ -z "$SITE_ADDRESS" ] || [ -z "$SHARE_ADDRESS" ]; then
             echo "::error::SITE_ADDRESS or SHARE_ADDRESS not set for environment '${{ inputs.environment }}'"
             exit 1
@@ -137,6 +141,7 @@ jobs:
             "REGISTRY=${REGISTRY}" \
             "SITE_ADDRESS=${SITE_ADDRESS}" \
             "SHARE_ADDRESS=${SHARE_ADDRESS}" \
+            "SHOP_ADDRESS=${SHOP_ADDRESS}" \
             "AUTH_SECRET=${AUTH_SECRET}" \
             "AUTH_URL=${AUTH_URL}" \
             "GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}" \
@@ -199,6 +204,11 @@ jobs:
 
             mkdir -p api-data ui-out
 
+            # Ensure the shared external `web` network exists (idempotent). The
+            # caddy service joins it to front the independently-deployed emma-shop;
+            # without it, `docker compose up` would fail. Safe on every env/deploy.
+            docker network create web 2>/dev/null || true
+
             # Pull new images
             echo "Pulling images..."
             docker compose pull api ui caddy
@@ -225,22 +235,10 @@ jobs:
             docker compose ps
           SCRIPT
 
-      - name: Health check
-        env:
-          SITE: https://${{ vars.SITE_ADDRESS }}
-        run: |
-          echo "Waiting for $SITE/api/health ..."
-          for i in $(seq 1 24); do
-            if curl -fsSk "$SITE/api/health" -o /dev/null 2>/dev/null; then
-              echo "Health check passed on attempt $i"
-              exit 0
-            fi
-            echo "  Attempt $i/24 — waiting 5s..."
-            sleep 5
-          done
-          echo "::warning::Health check did not pass within 2 minutes"
-          exit 1
-
+      # MUST run before the health check: on a first stand-up the box's DNS may
+      # still point at the old server, so the health check (which hits
+      # https://SITE_ADDRESS) can't pass until this repoints it. Skipped unless
+      # update_dns is set.
       - name: Update DNS (GoDaddy)
         if: inputs.update_dns
         env:
@@ -288,17 +286,47 @@ jobs:
           update_record "$SHARE_ADDRESS"
 
           echo "==> Polling dig @1.1.1.1 for $SITE_ADDRESS -> $NEW_IP (up to ~700s)"
+          PROPAGATED=0
           DEADLINE=$(( $(date +%s) + 700 ))
           while [ "$(date +%s)" -lt "$DEADLINE" ]; do
             RESOLVED=$(dig @1.1.1.1 +short "$SITE_ADDRESS" A | head -1)
             if [ "$RESOLVED" = "$NEW_IP" ]; then
               echo "    1.1.1.1 now resolves $SITE_ADDRESS to $NEW_IP"
-              exit 0
+              PROPAGATED=1
+              break
             fi
             echo "    currently resolves to '${RESOLVED:-<empty>}', sleeping 15s..."
             sleep 15
           done
-          echo "::warning::DNS did not propagate to 1.1.1.1 within 700s. The GoDaddy PATCH itself succeeded; propagation may still be in progress."
+          if [ "$PROPAGATED" -ne 1 ]; then
+            echo "::warning::DNS did not propagate to 1.1.1.1 within 700s. The GoDaddy PUT succeeded; propagation may still be in progress."
+          fi
+
+          # The box's Caddy is already up (Deploy step) and may be in ACME
+          # back-off from failing against the OLD IP. Now that DNS is correct,
+          # restart it so it re-obtains certs immediately instead of waiting out
+          # the back-off — otherwise the health check below races cert issuance.
+          echo "==> Restarting Caddy on $NEW_IP to re-obtain certs now that DNS is correct"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=accept-new deploy@"$NEW_IP" \
+            "cd /opt/deadly && docker compose restart caddy" || true
+          echo "==> Giving Caddy ~30s to obtain certificates"
+          sleep 30
+
+      - name: Health check
+        env:
+          SITE: https://${{ vars.SITE_ADDRESS }}
+        run: |
+          echo "Waiting for $SITE/api/health ..."
+          for i in $(seq 1 24); do
+            if curl -fsSk "$SITE/api/health" -o /dev/null 2>/dev/null; then
+              echo "Health check passed on attempt $i"
+              exit 0
+            fi
+            echo "  Attempt $i/24 — waiting 5s..."
+            sleep 5
+          done
+          echo "::warning::Health check did not pass within 2 minutes"
+          exit 1
 
       - name: Job summary
         if: always()

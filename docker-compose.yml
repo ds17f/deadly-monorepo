@@ -12,6 +12,11 @@ services:
       - SHARE_ADDRESS=${SHARE_ADDRESS}
       # Injected into /api/analytics requests so the browser never holds it.
       - ANALYTICS_API_KEY=${ANALYTICS_API_KEY}
+      # emma-shop (Comet Tail Crafts) public host, fronted by this Caddy. Set per
+      # environment (prod) via SHOP_ADDRESS; defaults to an inert internal name so
+      # the Caddy site block is never empty/invalid where the shop isn't hosted.
+      # See docs/docs/developer/hosting-emma-shop.md.
+      - SHOP_ADDRESS=${SHOP_ADDRESS:-shop.localhost}
     ports:
       - "80:80"
       - "443:443"
@@ -22,6 +27,12 @@ services:
       - ./ui-out:/srv/ui:ro
     depends_on:
       - api
+    # `default` MUST stay (Caddy reaches api/ui/ws here); `web` is the shared
+    # external network that lets Caddy reach the independently-deployed emma-shop
+    # container by name. Created idempotently during deploy.
+    networks:
+      - default
+      - web
 
   api:
     image: ${REGISTRY:-ghcr.io/ds17f/deadly-monorepo}/api:${IMAGE_TAG:-latest}
@@ -73,3 +84,10 @@ volumes:
   caddy_data:
   caddy_config:
   redis_data:
+
+networks:
+  # Shared with the independently-deployed emma-shop stack. Declared external so
+  # this compose never creates/owns it; the deploy runs `docker network create
+  # web` idempotently first. Only `caddy` joins it; api/ui/redis stay on default.
+  web:
+    external: true

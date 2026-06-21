@@ -56,3 +56,13 @@ www.{$SITE_ADDRESS} {
 		try_files {path} {path}/index.html /index.html
 	}
 }
+
+# Comet Tail Crafts (emma-shop) — a separate, independently-deployed app on the
+# same box, fronted by this Caddy via the shared external `web` network. Additive:
+# does not touch deadly's sites above. SHOP_ADDRESS is set per environment (the
+# real domain on prod) and defaults to `shop.localhost` where the shop isn't
+# hosted (e.g. beta) — an inert, internal-cert host so this block is always valid
+# and never triggers a public cert. See docs/docs/developer/hosting-emma-shop.md.
+{$SHOP_ADDRESS} {
+	reverse_proxy emma-shop:3000
+}
