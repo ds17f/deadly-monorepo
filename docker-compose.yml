@@ -17,6 +17,10 @@ services:
       # the Caddy site block is never empty/invalid where the shop isn't hosted.
       # See docs/docs/developer/hosting-emma-shop.md.
       - SHOP_ADDRESS=${SHOP_ADDRESS:-shop.localhost}
+      # The Starlight Loft public host, fronted by this Caddy. Set per environment
+      # via LOFT_ADDRESS; defaults to an inert internal name where not hosted.
+      # See docs/docs/developer/hosting-the-starlight-loft.md.
+      - LOFT_ADDRESS=${LOFT_ADDRESS:-loft.localhost}
     ports:
       - "80:80"
       - "443:443"

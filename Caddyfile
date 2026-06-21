@@ -66,3 +66,13 @@ www.{$SITE_ADDRESS} {
 {$SHOP_ADDRESS} {
 	reverse_proxy emma-shop:3000
 }
+
+# The Starlight Loft — a separate, independently-deployed Next.js app on the same
+# box, fronted by this Caddy via the shared external `web` network. Additive: does
+# not touch deadly's or the shop's sites. LOFT_ADDRESS is set per environment (the
+# real domain) and defaults to `loft.localhost` where the loft isn't hosted — an
+# inert, internal-cert host so this block is always valid and never triggers a
+# public cert. See docs/docs/developer/hosting-the-starlight-loft.md.
+{$LOFT_ADDRESS} {
+	reverse_proxy starlight-loft:3000
+}
