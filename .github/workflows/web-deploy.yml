@@ -128,6 +128,10 @@ jobs:
           # only where the shop is hosted (prod). Empty elsewhere — compose then
           # falls back to an inert default, so beta is unaffected.
           SHOP_ADDRESS="${{ vars.SHOP_ADDRESS }}"
+          # Optional: The Starlight Loft public host. Set as a per-environment
+          # variable only where the loft is hosted. Empty elsewhere — compose then
+          # falls back to an inert default, so other envs are unaffected.
+          LOFT_ADDRESS="${{ vars.LOFT_ADDRESS }}"
           if [ -z "$SITE_ADDRESS" ] || [ -z "$SHARE_ADDRESS" ]; then
             echo "::error::SITE_ADDRESS or SHARE_ADDRESS not set for environment '${{ inputs.environment }}'"
             exit 1
@@ -142,6 +146,7 @@ jobs:
             "SITE_ADDRESS=${SITE_ADDRESS}" \
             "SHARE_ADDRESS=${SHARE_ADDRESS}" \
             "SHOP_ADDRESS=${SHOP_ADDRESS}" \
+            "LOFT_ADDRESS=${LOFT_ADDRESS}" \
             "AUTH_SECRET=${AUTH_SECRET}" \
             "AUTH_URL=${AUTH_URL}" \
             "GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}" \
