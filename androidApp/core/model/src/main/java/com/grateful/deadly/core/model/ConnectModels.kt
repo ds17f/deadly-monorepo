@@ -45,6 +45,12 @@ data class ConnectState(
     // self-echoes can't cause skips and small remote seeks still land. Additive/
     // optional; defaults to 0 against a server that doesn't send it. See ADR-0017.
     val seekNonce: Int = 0,
+    // Bumped only by an explicit server-side next/prev (never by a load or a
+    // position report). The active device follows a remote track change when this
+    // advances AND it didn't issue it — keying on intent, not trackIndex
+    // coincidence. Generalizes seekNonce to track changes (ADR-0019). Additive/
+    // optional; defaults to 0 against a server that doesn't send it.
+    val trackNonce: Int = 0,
     val playing: Boolean = false,
     val activeDeviceId: String? = null,
     val activeDeviceName: String? = null,

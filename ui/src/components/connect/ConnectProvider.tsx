@@ -4,14 +4,16 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { useAuth } from "@/contexts/AuthContext";
 import { ConnectContext } from "@/contexts/ConnectContext";
-import type { LocalPlaybackSnapshot } from "@/contexts/ConnectContext";
+import type { LocalPlaybackSnapshot, LocalHandshakeSnapshot } from "@/contexts/ConnectContext";
 import type { ConnectDevice, ConnectState } from "@/types/connect";
 import { randomUUID } from "@/lib/uuid";
 
 // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
 // Bump in lockstep with the documented protocol; the server may branch on it.
 // v2: understands the 4005 "Connect disabled" terminal close code.
-const CONNECT_PROTOCOL_VERSION = 2;
+// v3: full-state handshake on register (ADR-0016 §3) + honors trackNonce
+//     (ADR-0019); heartbeat lease now carries trackIndex.
+const CONNECT_PROTOCOL_VERSION = 3;
 // Build identity for telemetry only — never branched on. Mirrors analytics.ts.
 const APP_VERSION = (process.env.NEXT_PUBLIC_DATA_VERSION ?? "web").slice(0, 20);
 
@@ -97,6 +99,9 @@ export default function ConnectProvider({
   // player. The heartbeat calls it to renew the ownership lease. Default: no
   // source loaded ⇒ plain heartbeat.
   const localPlaybackRef = useRef<() => LocalPlaybackSnapshot | null>(() => null);
+  // ADR-0016 §3: getter for this tab's full-state handshake, read once at register
+  // time. Default: nothing to declare ⇒ plain register.
+  const localHandshakeRef = useRef<() => LocalHandshakeSnapshot | null>(() => null);
   // Tracks the best (lowest-RTT) sample within the current sync batch so we
   // can keep updating as better samples arrive but ignore worse ones.
   const timeSyncBestRttRef = useRef<number>(Number.POSITIVE_INFINITY);
@@ -165,6 +170,9 @@ export default function ConnectProvider({
 
     ws.onopen = () => {
       if (!shouldConnectRef.current) {
+        // Null the ref we're closing so this socket's late onclose (guarded on
+        // wsRef identity) doesn't touch a socket that superseded it.
+        if (wsRef.current === ws) wsRef.current = null;
         ws.close();
         return;
       }
@@ -179,6 +187,12 @@ export default function ConnectProvider({
       // discards every fresh state (and never re-asserts its tracklist).
       currentVersionRef.current = -1;
 
+      // ADR-0016 §3: if this tab holds live audio, declare it so the server's
+      // FIRST post-register broadcast reflects our reality (closes the reconnect
+      // stale-snapshot clobber). Only when actually playing a recording — a plain
+      // register otherwise. The server ignores a non-playing handshake anyway.
+      const handshake = localHandshakeRef.current();
+      const includeHandshake = handshake != null && handshake.playing && !!handshake.recordingId;
       ws.send(JSON.stringify({
         type: "register",
         deviceId,
@@ -188,6 +202,7 @@ export default function ConnectProvider({
         // branch on; appVersion is build identity for telemetry only.
         protocolVersion: CONNECT_PROTOCOL_VERSION,
         appVersion: APP_VERSION,
+        ...(includeHandshake ? { handshake } : {}),
       }));
 
       clearHeartbeat();
@@ -261,6 +276,14 @@ export default function ConnectProvider({
     };
 
     ws.onclose = (event) => {
+      // Socket-identity guard: a superseded socket's late close must not tear down
+      // the fresh socket that replaced it (nulling wsRef / killing its heartbeat
+      // would orphan the live connection). Only the socket wsRef still holds may
+      // run this teardown; a stale one bails.
+      if (wsRef.current !== ws) {
+        log(`Ignoring close for a superseded socket: code=${event.code}`);
+        return;
+      }
       log(`Disconnected: code=${event.code} reason=${event.reason || "(none)"}`);
       clearHeartbeat();
       clearTimeSyncRefresh();
@@ -351,6 +374,13 @@ export default function ConnectProvider({
     [],
   );
 
+  const setLocalHandshakeSource = useCallback(
+    (source: (() => LocalHandshakeSnapshot | null) | null) => {
+      localHandshakeRef.current = source ?? (() => null);
+    },
+    [],
+  );
+
   const disconnect = useCallback(() => {
     log("disconnect() called");
     shouldConnectRef.current = false;
@@ -417,7 +447,7 @@ export default function ConnectProvider({
   }, [user, isLoading, onAdmin, connectOptedIn, serverConnectEnabled]);
 
   return (
-    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, setLocalPlaybackSource, serverTimeOffsetMs, serverConnectEnabled, refreshServerConnectEnabled, connectOptedIn, setConnectOptedIn }}>
+    <ConnectContext.Provider value={{ devices, state: connectState, myDeviceId, connected, sendCommand, activeDeviceVolume, onVolumeMessage, reportVolume, setLocalPlaybackSource, setLocalHandshakeSource, serverTimeOffsetMs, serverConnectEnabled, refreshServerConnectEnabled, connectOptedIn, setConnectOptedIn }}>
       {children}
     </ConnectContext.Provider>
   );
