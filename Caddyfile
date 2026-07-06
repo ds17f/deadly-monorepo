@@ -76,3 +76,11 @@ www.{$SITE_ADDRESS} {
 {$LOFT_ADDRESS} {
 	reverse_proxy starlight-loft:3000
 }
+
+# Loft redirect hosts (loft repo ADR-010): www.<apex> and the secondary domain
+# (starlightloft.com) 301 to the loft's canonical host. Set per environment
+# alongside LOFT_ADDRESS; distinct inert defaults where the loft isn't hosted,
+# so the block stays valid and never requests a public cert.
+{$LOFT_WWW_ADDRESS}, {$LOFT_ALT_ADDRESS} {
+	redir https://{$LOFT_ADDRESS}{uri} permanent
+}
