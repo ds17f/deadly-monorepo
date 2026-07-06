@@ -45,6 +45,14 @@ final class ConnectService: NSObject {
         return state.activeDeviceId != nil && state.activeDeviceId != appPreferences.installId
     }
 
+    /// True for a short window after a Connect-initiated queue (re)load. The
+    /// MiniPlayer's `onTrackComplete` broadcast is suppressed while this holds so
+    /// the engine's mis-inferred post-load track-complete doesn't fire a spurious
+    /// `next` (ADR-0019). See `lastConnectLoadAt`.
+    var isWithinLoadSuppressionWindow: Bool {
+        Date().timeIntervalSince(lastConnectLoadAt) < Self.loadCompleteSuppressionWindow
+    }
+
     /// Callback to load a show into the local player. Set by PlaylistServiceImpl
     /// to avoid circular dependency. Called when Connect state has a recording
     /// that isn't loaded locally.
@@ -83,11 +91,20 @@ final class ConnectService: NSObject {
     // are dropped; only the best (fastest round-trip) sample of each batch
     // gets promoted to serverTimeOffsetMs.
     private var timeSyncBestRttMs: Double = .infinity
+    // When we last (re)loaded the local queue via Connect (a `sendLoad` or a
+    // server-driven `onLoadShow`). Loading a fresh queue makes the audio engine
+    // start a new track at index 0, which its index-diff heuristic mis-infers as
+    // an auto-advance and fires `onTrackComplete` — turning into a spurious
+    // Connect `next` right after a show swap (the "jumps to Track 2" bug). The
+    // MiniPlayer callback suppresses the broadcast within this window. See ADR-0019.
+    private var lastConnectLoadAt: Date = .distantPast
 
     // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
     // Bump in lockstep with the documented protocol; the server may branch on it.
     // v2: understands the 4005 "Connect disabled" terminal close code.
-    private static let protocolVersion = 2
+    // v3: sends a full-state `handshake` on register when holding live audio, and
+    //     follows remote track changes by `trackNonce` (ADR-0016 §3 / ADR-0019).
+    private static let protocolVersion = 3
     private static let reconnectDelays: [Double] = [1, 2, 4, 8, 30]
     private static let heartbeatInterval: UInt64 = 15_000_000_000 // 15s in nanoseconds
     // WS keep-alive ping. URLSessionWebSocketTask has no built-in keep-alive: a
@@ -103,6 +120,10 @@ final class ConnectService: NSObject {
     private static let timeSyncRefreshInterval: UInt64 = 5 * 60 * 1_000_000_000 // 5 min
     private static let timeSyncSamples = 3
     private static let timeSyncSampleSpacing: UInt64 = 200_000_000 // 200ms
+    // How long after a Connect-initiated queue load to suppress the audio engine's
+    // mis-inferred track-complete (see lastConnectLoadAt). Generous: real tracks run
+    // minutes, so a genuine mid-queue auto-advance never lands inside this window.
+    private static let loadCompleteSuppressionWindow: TimeInterval = 8
 
     init(appPreferences: AppPreferences, authService: AuthService, streamPlayer: StreamPlayer) {
         self.appPreferences = appPreferences
@@ -248,6 +269,10 @@ final class ConnectService: NSObject {
         autoplay: Bool = true
     ) {
         logger.info("sendLoad: show=\(showId, privacy: .public) rec=\(recordingId, privacy: .public) track=\(trackIndex, privacy: .public) pos=\(positionMs, privacy: .public) dur=\(durationMs, privacy: .public) autoplay=\(autoplay, privacy: .public)")
+        // Loading a fresh queue makes the engine restart at a new index, which its
+        // heuristic mis-reads as an auto-advance — arm the suppression window so the
+        // resulting spurious onTrackComplete doesn't broadcast a `next` (ADR-0019).
+        lastConnectLoadAt = Date()
         var extra: [String: Any] = [
             "showId": showId,
             "recordingId": recordingId,
@@ -284,6 +309,12 @@ final class ConnectService: NSObject {
 
     func sendSeek(trackIndex: Int, positionMs: Int, durationMs: Int) {
         logger.info("sendSeek: track=\(trackIndex, privacy: .public) pos=\(positionMs, privacy: .public) dur=\(durationMs, privacy: .public)")
+        // Arm a pending 'seek' so the echoed seekNonce bump is recognized as our own
+        // and the remote-seek follow (reactToState, cmdAtEntry == "seek") is skipped —
+        // otherwise an active device re-seeks on the echo of its own scrub. Cleared on
+        // the seekNonce echo. No UI spinner: isPendingCommand only surfaces one while
+        // remote-controlling, and only the active device calls sendSeek here. See ADR-0017.
+        if isConnected { pendingCommand = "seek" }
         sendCommand("seek", extra: [
             "trackIndex": trackIndex,
             "positionMs": positionMs,
@@ -380,6 +411,13 @@ final class ConnectService: NSObject {
         var request = URLRequest(url: url)
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
+        // Tear down the previous session before making a new one: each reconnect
+        // created a fresh URLSession whose delegate (self) was retained by the
+        // session, leaking one per reconnect and letting a late callback from an old
+        // session run against the healthy replacement. invalidateAndCancel is safe —
+        // the old socket is already nil/cancelled here — and its delegate callbacks
+        // are dropped by the task-identity guards below. See ADR-0016.
+        urlSession?.invalidateAndCancel()
         let session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
         urlSession = session
         let task = session.webSocketTask(with: request)
@@ -542,6 +580,10 @@ final class ConnectService: NSObject {
         if let showId = new.showId, let recId = new.recordingId, recId != localRecordingId {
             let autoPlay = isActiveDevice && new.playing
             logger.info("reactToState: NEW RECORDING — server=\(recId, privacy: .public) local=\(localRecordingId ?? "nil", privacy: .public) isActive=\(self.isActiveDevice, privacy: .public) autoPlay=\(autoPlay, privacy: .public) track=\(new.trackIndex, privacy: .public)")
+            // Server-driven local (re)load: arm the same suppression window as
+            // sendLoad so the engine's post-load mis-inferred track-complete can't
+            // fire a spurious `next` (ADR-0019).
+            lastConnectLoadAt = Date()
             if let onLoadShow {
                 Task {
                     await onLoadShow(showId, recId, new.trackIndex, new.positionMs, autoPlay)
@@ -659,13 +701,18 @@ final class ConnectService: NSObject {
             }
         }
 
-        // React to track changes from remote controllers (while already active).
-        // Guard against the echo from our own sendNext(): the engine already advanced
-        // locally, so queueState.currentIndex already equals new.trackIndex — calling
-        // skipTo again would restart the track and stop playback.
-        if !justBecameActive, let oldState = old, new.trackIndex != oldState.trackIndex,
+        // React to track changes from remote controllers (while already active). Key
+        // on trackNonce — which the server bumps ONLY for an explicit next/prev, never
+        // for a load or a position report — not on a trackIndex coincidence. cmdAtEntry
+        // in {next,prev} means WE issued this change and already advanced the local
+        // engine, so the echoed nonce bump is our own — don't re-skip (that would
+        // restart the track and stop playback). The already-on-index guard stays as a
+        // belt-and-braces safety. See ADR-0019.
+        if !justBecameActive, let oldState = old,
+           (new.trackNonce ?? 0) != (oldState.trackNonce ?? 0),
+           cmdAtEntry != "next", cmdAtEntry != "prev",
            streamPlayer.queueState.currentIndex != new.trackIndex {
-            logger.info("reactToState: track changed \(oldState.trackIndex, privacy: .public) -> \(new.trackIndex, privacy: .public), skipping to index")
+            logger.info("reactToState: track change from remote (nonce \(oldState.trackNonce ?? 0, privacy: .public) -> \(new.trackNonce ?? 0, privacy: .public), track \(oldState.trackIndex, privacy: .public) -> \(new.trackIndex, privacy: .public)), skipping to index")
             streamPlayer.skipTo(index: new.trackIndex, autoplay: new.playing)
         }
 
@@ -799,7 +846,7 @@ final class ConnectService: NSObject {
 
         logger.info("sendRegister: deviceId=\(deviceId, privacy: .public) name=\(deviceName, privacy: .public) proto=\(Self.protocolVersion, privacy: .public) app=\(appVersion, privacy: .public)")
         // Mixed value types (string + int) → encode as a JSON object explicitly.
-        let msg: [String: Any] = [
+        var msg: [String: Any] = [
             "type": "register",
             "deviceId": deviceId,
             "deviceType": "ios",
@@ -808,9 +855,50 @@ final class ConnectService: NSObject {
             "protocolVersion": Self.protocolVersion,
             "appVersion": appVersion,
         ]
+        // ADR-0016 §3 (proto 3): when this device holds live audio, declare its
+        // authoritative playback state as part of (re)connecting so the server's
+        // FIRST post-register broadcast reflects our reality, not its stale memory —
+        // closing the reconnect stale-snapshot clobber. Only sent when locally playing
+        // a recording (mirrors the ownership-lease guard); the server further requires
+        // playing=true and an ownerless/self-owned session before adopting it.
+        if let handshake = buildHandshake() {
+            msg["handshake"] = handshake
+            logger.info("sendRegister: including handshake rec=\(handshake["recordingId"] as? String ?? "?", privacy: .public) track=\(handshake["trackIndex"] as? Int ?? -1, privacy: .public)")
+        }
         guard let data = try? JSONSerialization.data(withJSONObject: msg),
               let text = String(data: data, encoding: .utf8) else { return }
         webSocket?.send(.string(text)) { _ in }
+    }
+
+    /// Build the ADR-0016 §3 register handshake from the local player, or nil when
+    /// this device isn't holding live audio. Guarded on the SAME local source as the
+    /// heartbeat lease (a loaded recording) plus actually playing — the server only
+    /// adopts a `playing` handshake. Carries the local queue + show metadata so the
+    /// adopted session has a full tracklist for viewers and next/prev.
+    private func buildHandshake() -> [String: Any]? {
+        guard streamPlayer.playbackState.isPlaying,
+              let recordingId = streamPlayer.currentTrack?.metadata["recordingId"] else {
+            return nil
+        }
+        let queue = streamPlayer.loadedTracks
+        let idx = streamPlayer.queueState.currentIndex
+        let meta = streamPlayer.currentTrack?.metadata ?? [:]
+        let curDuration = (idx >= 0 && idx < queue.count) ? (queue[idx].duration ?? 0) : 0
+        var hs: [String: Any] = [
+            "playing": true,
+            "recordingId": recordingId,
+            "trackIndex": idx,
+            "positionMs": Int(streamPlayer.progress.currentTime * 1000),
+        ]
+        if !queue.isEmpty {
+            hs["tracks"] = queue.map { ["title": $0.title, "durationMs": Int(($0.duration ?? 0) * 1000)] }
+        }
+        if curDuration > 0 { hs["durationMs"] = Int(curDuration * 1000) }
+        if let showId = meta["showId"], !showId.isEmpty { hs["showId"] = showId }
+        if let date = meta["showDate"], !date.isEmpty { hs["date"] = date }
+        if let venue = meta["venue"], !venue.isEmpty { hs["venue"] = venue }
+        if let location = meta["location"], !location.isEmpty { hs["location"] = location }
+        return hs
     }
 
     // MARK: - Position Reporting
@@ -830,7 +918,8 @@ final class ConnectService: NSObject {
                     // screen / headset / CarPlay skip drives StreamPlayer directly,
                     // so no sendNext fires. Forward as an absolute seek so the index
                     // resyncs; a bare position report would land the new position on
-                    // the stale server index. sendSeek arms no pending spinner.
+                    // the stale server index. sendSeek arms pending 'seek' (cleared on
+                    // the echo) but shows no spinner — the active device isn't a controller.
                     let durationMs = Int(streamPlayer.progress.duration * 1000)
                     logger.info("positionReport: local track \(localIndex, privacy: .public) != server \(serverIndex, privacy: .public) — seek sync (pos=\(positionMs, privacy: .public))")
                     sendSeek(trackIndex: localIndex, positionMs: positionMs, durationMs: durationMs)
@@ -993,10 +1082,12 @@ final class ConnectService: NSObject {
         // for the next refresh (the runtime-enforcement half of ADR-0018).
         if closeCode == 4005 { setServerConnectEnabled(false) }
 
-        // Terminal closes (don't reconnect): 4003 = Unauthorized (token invalid),
-        // 4005 = Connect globally disabled by the server. iOS delivers custom
-        // close codes intact via didCloseWith, so this guard is reached.
-        if !shouldConnect || closeCode == 4003 || closeCode == 4005 {
+        // Terminal closes (don't reconnect): 4000 = replaced by a newer connection
+        // (reconnecting would kick the newer socket — matches Android/web), 4003 =
+        // Unauthorized (token invalid), 4005 = Connect globally disabled by the
+        // server. 4001 (heartbeat timeout) is NOT terminal — it should reconnect. iOS
+        // delivers custom close codes intact via didCloseWith, so this guard is reached.
+        if !shouldConnect || closeCode == 4000 || closeCode == 4003 || closeCode == 4005 {
             logger.info("handleDisconnect: not reconnecting (shouldConnect=\(self.shouldConnect, privacy: .public) code=\(closeCode ?? -1, privacy: .public))")
             return
         }
@@ -1026,6 +1117,14 @@ extension ConnectService: URLSessionWebSocketDelegate {
                 webSocketTask.cancel(with: .normalClosure, reason: nil)
                 return
             }
+            // Drop a late open from a superseded socket: a reconnect may have already
+            // created the current webSocket while this stale one was still handshaking.
+            // Running register/heartbeat on it would clobber the healthy replacement.
+            guard webSocketTask === self.webSocket else {
+                logger.warning("didOpen from a stale socket — closing, not adopting")
+                webSocketTask.cancel(with: .normalClosure, reason: nil)
+                return
+            }
             logger.info("Connected (WebSocket open)")
             self.isConnected = true
             self.reconnectAttempt = 0
@@ -1047,7 +1146,14 @@ extension ConnectService: URLSessionWebSocketDelegate {
         let reasonStr = reason.flatMap { String(data: $0, encoding: .utf8) } ?? "(none)"
         logger.info("WebSocket closed: code=\(closeCode.rawValue, privacy: .public) reason=\(reasonStr, privacy: .public)")
         Task { @MainActor [weak self] in
-            self?.handleDisconnect(closeCode: closeCode.rawValue)
+            guard let self else { return }
+            // Ignore a close for a socket we've already replaced — a late teardown from
+            // an old session must not tear down the healthy current one.
+            guard webSocketTask === self.webSocket else {
+                logger.info("didCloseWith from a stale socket (code=\(closeCode.rawValue, privacy: .public)) — ignoring")
+                return
+            }
+            self.handleDisconnect(closeCode: closeCode.rawValue)
         }
     }
 
@@ -1059,7 +1165,15 @@ extension ConnectService: URLSessionWebSocketDelegate {
         guard let error else { return }
         logger.warning("WebSocket error: \(error.localizedDescription, privacy: .public)")
         Task { @MainActor [weak self] in
-            self?.handleDisconnect(closeCode: nil)
+            guard let self else { return }
+            // Ignore an error for a socket we've already replaced (e.g. the
+            // invalidateAndCancel of the previous session in connect()) — only the
+            // current socket's failure should trigger a reconnect.
+            guard task === self.webSocket else {
+                logger.info("didCompleteWithError from a stale socket — ignoring")
+                return
+            }
+            self.handleDisconnect(closeCode: nil)
         }
     }
 }

@@ -63,6 +63,13 @@ struct ConnectState: Codable {
     // still land. Optional/additive (decodeIfPresent → nil against a server that
     // doesn't send it; treated as 0). See ADR-0017.
     let seekNonce: Int?
+    // Bumped only by an explicit server-side next/prev (never by a load or a
+    // routine position report). Generalizes seekNonce (ADR-0017) to track
+    // changes: the active device follows a remote track change only when this
+    // advances and it didn't issue the command, retiring the fragile
+    // trackIndex-coincidence guard. Optional/additive (decodeIfPresent → nil
+    // against a server that doesn't send it; treated as 0). See ADR-0019.
+    let trackNonce: Int?
     let playing: Bool
     let activeDeviceId: String?
     let activeDeviceName: String?

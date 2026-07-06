@@ -50,9 +50,38 @@ final class MiniPlayerServiceImpl: MiniPlayerService {
             // When the local (active) device auto-advances to the next track,
             // broadcast it so remote controllers/targets follow along.
             streamPlayer.onTrackComplete = { [weak self] in
-                self?.connectService?.sendNext()
+                self?.handleLocalTrackComplete()
             }
         }
+    }
+
+    /// Broadcast a Connect `next` when the local engine auto-advances to the next
+    /// track — but only for a REAL mid-queue advance of the active session. The
+    /// engine infers track-complete from an index change (no `.eof` signal is
+    /// surfaced here), so it also fires right after a fresh queue load (show swap),
+    /// which previously turned into a spurious `next` that skipped the newly loaded
+    /// show forward a track (ADR-0019). Guards, all required:
+    ///  1. we're the active Connect device (only the audio producer broadcasts);
+    ///  2. the completion is for the current session recording (not a stale/other
+    ///     queue mid-swap);
+    ///  3. we're not inside the post-load suppression window (the mis-inferred
+    ///     completion the engine emits just after a Connect-initiated load).
+    /// Local auto-advance itself is driven by the engine and is unaffected — only
+    /// the spurious Connect broadcast is suppressed.
+    private func handleLocalTrackComplete() {
+        guard let connect = connectService else { return }
+        guard connect.isActiveDevice else { return }
+        let localRec = streamPlayer.currentTrack?.metadata["recordingId"]
+        guard let localRec, localRec == connect.connectState?.recordingId else {
+            logger.info("onTrackComplete: recording mismatch (local=\(localRec ?? "nil", privacy: .public) session=\(connect.connectState?.recordingId ?? "nil", privacy: .public)) — not broadcasting next")
+            return
+        }
+        guard !connect.isWithinLoadSuppressionWindow else {
+            logger.info("onTrackComplete: within post-load window — suppressing spurious next")
+            return
+        }
+        logger.info("onTrackComplete: real mid-queue advance — sendNext")
+        connect.sendNext()
     }
 
     private func startInterpolationTicker() {
