@@ -20,6 +20,7 @@ import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.buildJsonArray
 import kotlinx.serialization.json.buildJsonObject
@@ -58,7 +59,9 @@ class ConnectServiceImpl @Inject constructor(
         // Connect WS wire-contract version. See docs/PROTOCOL.md for semantics.
         // Bump in lockstep with the documented protocol; the server may branch on it.
         // v2: understands the 4005 "Connect disabled" terminal close code.
-        private const val CONNECT_PROTOCOL_VERSION = 2
+        // v3: full-state handshake on register (ADR-0016 §3) + track-change intent
+        //     nonce (ADR-0019, generalizing seekNonce to next/prev).
+        private const val CONNECT_PROTOCOL_VERSION = 3
         private val RECONNECT_DELAYS_S = listOf(1L, 2L, 4L, 8L, 30L)
         private const val HEARTBEAT_INTERVAL_MS = 15_000L
         // WS keep-alive ping. readTimeout(0) keeps the read side open forever but
@@ -164,6 +167,9 @@ class ConnectServiceImpl @Inject constructor(
     private var timeSyncRefreshJob: Job? = null
 
     @Volatile private var webSocket: WebSocket? = null
+    // Serializes connect()'s webSocket check-and-set so concurrent triggers
+    // (foreground + network-restored + reconnect backoff) can't each open a socket.
+    private val connectLock = Any()
     @Volatile private var shouldConnect = false
     @Volatile private var reconnectAttempt = 0
     private var heartbeatJob: Job? = null
@@ -361,26 +367,30 @@ class ConnectServiceImpl @Inject constructor(
     private fun connect() {
         val token = authService.getAuthToken() ?: return
         if (!shouldConnect) return
-        // Re-entrancy guard: two near-simultaneous triggers (foreground +
-        // network-restored) can both pass their !isConnected gates before
-        // onOpen flips isConnected, opening a second socket. Bail if one
-        // already exists; handleDisconnect nulls webSocket before reconnecting.
-        if (webSocket != null) {
-            Log.d(TAG, "connect: socket already open/in-flight, skipping")
-            return
+        // Re-entrancy guard, atomic check-and-set: three near-simultaneous triggers
+        // (foreground + network-restored + reconnect backoff) can each pass their
+        // !isConnected gate before onOpen flips isConnected. Serializing the
+        // webSocket check-and-create guarantees only ONE socket is ever opened; the
+        // extras bail. handleDisconnect nulls webSocket (under its socket-identity
+        // guard) before a reconnect, so a later legitimate connect still proceeds.
+        synchronized(connectLock) {
+            if (webSocket != null) {
+                Log.d(TAG, "connect: socket already open/in-flight, skipping")
+                return
+            }
+
+            val baseUrl = appPreferences.apiBaseUrl
+                .replace("https://", "wss://")
+                .replace("http://", "ws://")
+            val url = "$baseUrl/ws/connect"
+
+            Log.d(TAG, "Connecting to $url")
+            val request = Request.Builder()
+                .url(url)
+                .header("Authorization", "Bearer $token")
+                .build()
+            webSocket = okHttpClient.newWebSocket(request, listener)
         }
-
-        val baseUrl = appPreferences.apiBaseUrl
-            .replace("https://", "wss://")
-            .replace("http://", "ws://")
-        val url = "$baseUrl/ws/connect"
-
-        Log.d(TAG, "Connecting to $url")
-        val request = Request.Builder()
-            .url(url)
-            .header("Authorization", "Bearer $token")
-            .build()
-        webSocket = okHttpClient.newWebSocket(request, listener)
     }
 
     private val listener = object : WebSocketListener() {
@@ -422,21 +432,22 @@ class ConnectServiceImpl @Inject constructor(
         override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
             Log.d(TAG, "Closing: code=$code reason=$reason")
             webSocket.close(1000, null)
-            handleDisconnect(code)
+            handleDisconnect(webSocket, code)
         }
 
         override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
             Log.d(TAG, "Closed: code=$code reason=$reason")
-            handleDisconnect(code)
+            handleDisconnect(webSocket, code)
         }
 
         override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
             Log.w(TAG, "Failure: ${t.message}")
-            handleDisconnect(null)
+            handleDisconnect(webSocket, null)
         }
     }
 
     private fun sendRegister(ws: WebSocket) {
+        val handshake = buildHandshake()
         val msg = buildJsonObject {
             put("type", "register")
             put("deviceId", appPreferences.installId)
@@ -446,8 +457,46 @@ class ConnectServiceImpl @Inject constructor(
             // branch on; appVersion is build identity for telemetry only.
             put("protocolVersion", CONNECT_PROTOCOL_VERSION)
             put("appVersion", appVersion)
+            // ADR-0016 §3: declare our live audio so the server adopts it BEFORE its
+            // first broadcast (closes the reconnect stale-snapshot clobber).
+            if (handshake != null) put("handshake", handshake)
         }
         ws.send(msg.toString())
+    }
+
+    // ADR-0016 §3 full-state handshake. Emitted only when this device holds live
+    // audio — mirrors the ownership-lease guard in buildHeartbeat (locally PLAYING a
+    // recording). Built from the SAME local sources as the lease (playing/recordingId/
+    // trackIndex/positionMs via mediaControllerRepository) plus our cached tracklist
+    // and the session's show metadata, so the server's first post-register broadcast
+    // reflects our reality, not its stale memory. Null ⇒ plain register.
+    private fun buildHandshake(): JsonObject? {
+        val recordingId = mediaControllerRepository.currentRecordingId.value ?: return null
+        if (!mediaControllerRepository.isPlaying.value) return null
+        val session = _connectState.value
+        // Only forward the tracklist when we know it belongs to this recording.
+        val tracks = if (cachedTracksRecordingId == recordingId) cachedTracks else emptyList()
+        return buildJsonObject {
+            put("playing", true)
+            (mediaControllerRepository.currentShowId.value ?: session?.showId)?.let { put("showId", it) }
+            put("recordingId", recordingId)
+            if (tracks.isNotEmpty()) {
+                put("tracks", buildJsonArray {
+                    tracks.forEach { t ->
+                        add(buildJsonObject {
+                            put("title", t.title)
+                            put("durationMs", t.durationMs)
+                        })
+                    }
+                })
+            }
+            put("trackIndex", mediaControllerRepository.currentTrackIndex.value)
+            put("positionMs", mediaControllerRepository.currentPosition.value.toInt())
+            put("durationMs", mediaControllerRepository.duration.value.toInt())
+            session?.date?.let { put("date", it) }
+            session?.venue?.let { put("venue", it) }
+            session?.location?.let { put("location", it) }
+        }
     }
 
     private fun startHeartbeat(ws: WebSocket) {
@@ -656,8 +705,13 @@ class ConnectServiceImpl @Inject constructor(
             } else if ((cmd == "next" || cmd == "prev") && new.trackIndex != (old?.trackIndex ?: -1)) {
                 Log.d(TAG, "reactToState: pending '$cmd' confirmed (track ${old?.trackIndex ?: -1} -> ${new.trackIndex}), clearing")
                 setPendingCommand(null)
-            } else if (cmd == "seek" && new.positionMs != (old?.positionMs ?: -1)) {
-                Log.d(TAG, "reactToState: pending 'seek' confirmed, clearing")
+            } else if (cmd == "seek" && new.seekNonce != (old?.seekNonce ?: 0)) {
+                // Clear on the seekNonce advance, NOT a positionMs delta — a routine
+                // ~5s position echo would otherwise clear the pending seek early, and
+                // the real seek echo would then fail self-echo suppression → the
+                // active device re-seeks to its own echoed position (backward
+                // stutter). Mirrors iOS ConnectService.swift:499. See ADR-0017.
+                Log.d(TAG, "reactToState: pending 'seek' confirmed (nonce ${old?.seekNonce ?: 0} -> ${new.seekNonce}), clearing")
                 setPendingCommand(null)
             }
         }
@@ -832,21 +886,22 @@ class ConnectServiceImpl @Inject constructor(
             }
         }
 
-        // React to track changes from remote controllers (while already active).
-        // Guard on the LOCAL index, not just old/new server indices: when WE
-        // auto-advanced locally and sent `next`, the server lags and only later
-        // echoes the new trackIndex back. By then the local player is already on
-        // that track (often seconds in), so re-seeking to pos=0 restarts the song
-        // — an audible skip a few seconds into the new track. If the local player
-        // is already on new.trackIndex there is nothing to do, whether the change
-        // came from a remote controller or from our own echoed auto-advance. Same
-        // self-echo race the seekNonce guard below handles (ADR-0017).
-        if (!justBecameActive && old != null && new.trackIndex != old.trackIndex) {
+        // React to a track change from a remote controller (while already active).
+        // Key on trackNonce — which the server bumps ONLY for an explicit next/prev,
+        // never for a load or a routine position report — not on trackIndex
+        // coincidence. `cmd == "next"/"prev"` means WE issued this change (including
+        // our own auto-advance, which emits `next`), so the echoed nonce bump is our
+        // own — don't re-seek. The already-on-index safety stays: if the local player
+        // is already on new.trackIndex, seeking to pos=0 would restart the song (an
+        // audible skip). Generalizes the seekNonce guard below to track changes
+        // (ADR-0019, from ADR-0017).
+        if (!justBecameActive && old != null && new.trackNonce != old.trackNonce &&
+            cmd != "next" && cmd != "prev") {
             val localTrackIndex = mediaControllerRepository.currentTrackIndex.value
             if (localTrackIndex == new.trackIndex) {
-                Log.d(TAG, "reactToState: track changed ${old.trackIndex} -> ${new.trackIndex}, but local already at ${new.trackIndex} (own auto-advance echo) — not seeking")
+                Log.d(TAG, "reactToState: track nonce advanced (${old.trackNonce} -> ${new.trackNonce}) but local already at ${new.trackIndex} — not seeking")
             } else {
-                Log.d(TAG, "reactToState: track changed ${old.trackIndex} -> ${new.trackIndex}, skipping to index")
+                Log.d(TAG, "reactToState: track change from remote (nonce ${old.trackNonce} -> ${new.trackNonce}), skipping to ${new.trackIndex}")
                 mediaControllerRepository.seekToMediaItemIndex(new.trackIndex, 0L)
             }
         }
@@ -1102,12 +1157,21 @@ class ConnectServiceImpl @Inject constructor(
         return (state.positionMs + elapsedMs).toInt().coerceIn(0, state.durationMs)
     }
 
-    private fun handleDisconnect(closeCode: Int?) {
+    private fun handleDisconnect(ws: WebSocket?, closeCode: Int?) {
+        // Socket-identity guard: a racing double-connect can leave a STALE old
+        // socket whose onClosing/onClosed/onFailure fires AFTER a newer socket was
+        // installed in `webSocket`. Without this check that stale callback would
+        // tear down the live connection — and 4000 being terminal, suppress its
+        // reconnect → a silent ghost. No-op unless the reporting socket is still the
+        // one we currently hold. (Also subsumes the old idempotency: after the first
+        // teardown nulls webSocket, a duplicate callback's ws !== null is ignored.)
+        if (ws != null && ws !== webSocket) {
+            Log.d(TAG, "handleDisconnect: stale socket callback (code=$closeCode), ignoring")
+            return
+        }
         // Idempotent: onClosing + the onClosed(1000) that follows our handshake
         // ack (or onFailure) can both land here for one socket. First wins; a
-        // duplicate must not schedule a second reconnect. The close completes
-        // synchronously inside onClosing, well before any reconnect backoff, so
-        // a stale onClosed can't tear down a freshly reconnected socket.
+        // duplicate must not schedule a second reconnect.
         if (webSocket == null && !_isConnected.value) return
         stopHeartbeat()
         stopTimeSyncRefresh()
