@@ -21,6 +21,10 @@ services:
       # via LOFT_ADDRESS; defaults to an inert internal name where not hosted.
       # See docs/docs/developer/hosting-the-starlight-loft.md.
       - LOFT_ADDRESS=${LOFT_ADDRESS:-loft.localhost}
+      # Loft redirect hosts (www + secondary domain → apex). Same per-environment
+      # pattern; distinct inert defaults so the addresses never collide.
+      - LOFT_WWW_ADDRESS=${LOFT_WWW_ADDRESS:-loft-www.localhost}
+      - LOFT_ALT_ADDRESS=${LOFT_ALT_ADDRESS:-loft-alt.localhost}
     ports:
       - "80:80"
       - "443:443"
