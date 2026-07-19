@@ -74,6 +74,12 @@ www.{$SITE_ADDRESS} {
 # inert, internal-cert host so this block is always valid and never triggers a
 # public cert. See docs/docs/developer/hosting-the-starlight-loft.md.
 {$LOFT_ADDRESS} {
+	# TEMPORARY (pre-cutover): public DNS for the loft domains still points at
+	# Instagram, so ACME validation cannot succeed and Caddy hard-fails the TLS
+	# handshake. Serve an internal cert so the site is testable via /etc/hosts.
+	# REMOVE this directive (both loft blocks) when DNS cuts over to this box,
+	# then redeploy — Let's Encrypt certs issue automatically once DNS is live.
+	tls internal
 	reverse_proxy starlight-loft:3000
 }
 
@@ -82,5 +88,6 @@ www.{$SITE_ADDRESS} {
 # alongside LOFT_ADDRESS; distinct inert defaults where the loft isn't hosted,
 # so the block stays valid and never requests a public cert.
 {$LOFT_WWW_ADDRESS}, {$LOFT_ALT_ADDRESS} {
+	tls internal # TEMPORARY pre-cutover — see note above; remove at DNS cutover
 	redir https://{$LOFT_ADDRESS}{uri} permanent
 }
