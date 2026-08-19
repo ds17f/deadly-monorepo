@@ -16,6 +16,7 @@ import com.grateful.deadly.core.api.recent.RecentShowsService
 import com.grateful.deadly.core.api.search.SearchService
 import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.domain.repository.ShowRepository
+import com.grateful.deadly.core.media.setPlaybackMetadata
 import com.grateful.deadly.core.model.DeadCollection
 import com.grateful.deadly.core.model.FavoriteTrack
 import com.grateful.deadly.core.model.Show
@@ -315,14 +316,17 @@ class BrowseTreeProvider @Inject constructor(
         index: Int
     ): MediaItem {
         val uri = "https://archive.org/download/$recordingId/${track.name}"
+        val showLabel = "${formatShowDate(show.date)} - ${show.venue.name}"
         return MediaItem.Builder()
             .setMediaId(BrowseMediaId.track(show.id, recordingId, index))
             .setUri(uri)
             .setMediaMetadata(
                 MediaMetadata.Builder()
-                    .setTitle(track.title ?: track.name)
-                    .setArtist("${formatShowDate(show.date)} - ${show.venue.name}")
-                    .setAlbumTitle("${formatShowDate(show.date)} - ${show.venue.name}")
+                    .setPlaybackMetadata(
+                        track.title ?: track.name,
+                        showLabel,
+                        appPreferences.nowPlayingMetadataStyle.value == "SCROBBLING",
+                    )
                     .setTrackNumber(track.trackNumber)
                     .setArtworkUri(
                         if (!show.coverImageUrl.isNullOrBlank()) {
@@ -356,13 +360,16 @@ class BrowseTreeProvider @Inject constructor(
             track.recordingId ?: "",
             track.trackNumber ?: 0
         )
+        val showLabel = "${formatShowDate(track.showDate)} \u2014 ${track.venue}"
         return MediaItem.Builder()
             .setMediaId(mediaId)
             .setMediaMetadata(
                 MediaMetadata.Builder()
-                    .setTitle(track.trackTitle)
-                    .setArtist("${formatShowDate(track.showDate)} \u2014 ${track.venue}")
-                    .setAlbumTitle("${formatShowDate(track.showDate)} \u2014 ${track.venue}")
+                    .setPlaybackMetadata(
+                        track.trackTitle,
+                        showLabel,
+                        appPreferences.nowPlayingMetadataStyle.value == "SCROBBLING",
+                    )
                     .setIsPlayable(true)
                     .setIsBrowsable(false)
                     .setMediaType(MediaMetadata.MEDIA_TYPE_MUSIC)

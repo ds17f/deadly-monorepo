@@ -32,6 +32,7 @@ import com.google.common.collect.ImmutableList
 import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
 import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.media.setPlaybackMetadata
 import com.grateful.deadly.core.media.browse.BrowseMediaId
 import com.grateful.deadly.core.media.browse.BrowseTreeProvider
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
@@ -268,8 +269,46 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             }
         }
 
+        // Metadata is part of each queued MediaItem, so re-publish the queue when
+        // the preference changes. Replacing otherwise-identical items preserves
+        // the current index, position, and playback state.
+        serviceScope.launch {
+            appPreferences.nowPlayingMetadataStyle.collectLatest { rawStyle ->
+                withContext(Dispatchers.Main) {
+                    reapplyNowPlayingMetadata(rawStyle == "SCROBBLING")
+                }
+            }
+        }
+
         // Restore last played session so AA reconnects see a loaded player
         restoreLastPlayedSession()
+    }
+
+    private fun reapplyNowPlayingMetadata(scrobblingMetadata: Boolean) {
+        if (exoPlayer.mediaItemCount == 0) return
+
+        val updatedItems = (0 until exoPlayer.mediaItemCount).map { index ->
+            val item = exoPlayer.getMediaItemAt(index)
+            val metadata = item.mediaMetadata
+            val showLabel = metadata.albumTitle ?: metadata.subtitle ?: metadata.artist
+            if (showLabel == null) {
+                item
+            } else {
+                item.buildUpon()
+                    .setMediaMetadata(
+                        metadata.buildUpon()
+                            .setPlaybackMetadata(
+                                metadata.title,
+                                showLabel,
+                                scrobblingMetadata,
+                            )
+                            .build()
+                    )
+                    .build()
+            }
+        }
+        exoPlayer.replaceMediaItems(0, exoPlayer.mediaItemCount, updatedItems)
+        Log.d(TAG, "[MEDIA] Now Playing metadata style changed; queue metadata refreshed")
     }
 
     private fun buildCustomLayout(style: PlayerControlsStyle): ImmutableList<CommandButton> {
@@ -407,9 +446,11 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             .setMediaId(mediaId)
             .setMediaMetadata(
                 MediaMetadata.Builder()
-                    .setTitle(trackTitle)
-                    .setArtist(subtitle)
-                    .setAlbumTitle(subtitle)
+                    .setPlaybackMetadata(
+                        trackTitle,
+                        subtitle,
+                        appPreferences.nowPlayingMetadataStyle.value == "SCROBBLING",
+                    )
                     .setArtworkUri(
                         com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recordingId)
                     )

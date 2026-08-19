@@ -313,6 +313,33 @@ struct PlaybackAudioSettingsView: View {
                         .font(.callout)
                         .foregroundStyle(.secondary)
                 }
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Now Playing metadata")
+                    Picker("Now Playing metadata", selection: Binding(
+                        get: {
+                            NowPlayingMetadataStyle(
+                                rawValueOrDefault: container.appPreferences.nowPlayingMetadataStyle
+                            )
+                        },
+                        set: { style in
+                            container.appPreferences.nowPlayingMetadataStyle = style.rawValue
+                            container.streamPlayer.setNowPlayingMetadataStyle(style)
+                            container.analyticsService.track("feature_use", props: [
+                                "feature": "set_now_playing_metadata_style",
+                                "category": "preference",
+                                "value": style.rawValue,
+                            ])
+                        }
+                    )) {
+                        Text("Show details").tag(NowPlayingMetadataStyle.showDetails)
+                        Text("Scrobbling").tag(NowPlayingMetadataStyle.scrobbling)
+                    }
+                    .pickerStyle(.segmented)
+                    Text("Choose whether the lock screen and CarPlay show the concert date and venue or publish Grateful Dead as the artist for scrobblers.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             Section("Audio") {

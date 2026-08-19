@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
+import com.grateful.deadly.core.database.AppPreferences
+import com.grateful.deadly.core.media.setPlaybackMetadata
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import kotlinx.coroutines.CoroutineScope
@@ -29,7 +31,8 @@ import javax.inject.Singleton
 @Singleton
 class MetadataHydratorService @Inject constructor(
     private val showRepository: ShowRepository,
-    private val mediaControllerRepository: MediaControllerRepository
+    private val mediaControllerRepository: MediaControllerRepository,
+    private val appPreferences: AppPreferences,
 ) {
     
     companion object {
@@ -105,6 +108,12 @@ class MetadataHydratorService @Inject constructor(
                 Log.w(TAG, "Recording not found: $recordingId in show $showId")
                 return mediaItem // Return unchanged if recording not found  
             }
+
+            val showLabel = if (!show.venue.name.isNullOrBlank()) {
+                "${formatShowDate(show.date)} - ${show.venue.name}"
+            } else {
+                formatShowDate(show.date)
+            }
             
             // Build enhanced MediaItem with fresh metadata
             return mediaItem.buildUpon()
@@ -117,20 +126,10 @@ class MetadataHydratorService @Inject constructor(
                                 com.grateful.deadly.core.media.artwork.ArtworkProvider.buildUri(recording.identifier)
                             }
                         )
-                        .setArtist(
-                            if (!show.venue.name.isNullOrBlank()) {
-                                "${formatShowDate(show.date)} - ${show.venue.name}"
-                            } else {
-                                formatShowDate(show.date)
-                            }
-                        )
-                        .setAlbumTitle(
-                            // Format: "Apr 3, 1990 - The Omni" or just show date if no venue
-                            if (!show.venue.name.isNullOrBlank()) {
-                                "${formatShowDate(show.date)} - ${show.venue.name}"
-                            } else {
-                                formatShowDate(show.date)
-                            }
+                        .setPlaybackMetadata(
+                            mediaItem.mediaMetadata.title,
+                            showLabel,
+                            appPreferences.nowPlayingMetadataStyle.value == "SCROBBLING",
                         )
                         .setExtras(Bundle().apply {
                             // Preserve existing extras
