@@ -56,6 +56,7 @@ class AppPreferences @Inject constructor(
         private const val KEY_LOCAL_BACKFILLED_V2 = "local_backfilled_v2"
         private const val KEY_DEVELOPER_MODE_UNLOCKED = "developer_mode_unlocked"
         private const val KEY_PLAYER_CONTROLS_STYLE = "player_controls_style"
+        private const val KEY_NOW_PLAYING_METADATA_STYLE = "now_playing_metadata_style"
         private const val KEY_HOME_TRENDING_WINDOW = "home_trending_window"
         private const val KEY_HOME_TRENDING_ABOVE_TODAY = "home_trending_above_today"
         private const val KEY_HOME_RECENT_ROWS = "home_recent_rows"
@@ -82,6 +83,9 @@ class AppPreferences @Inject constructor(
          * `GET /api/connect/enabled` resolves.
          */
         const val SERVER_CONNECT_ENABLED_DEFAULT = false
+
+        /** Preserve Deadly's existing notification / Android Auto presentation by default. */
+        const val NOW_PLAYING_METADATA_STYLE_DEFAULT = "SHOW_DETAILS"
     }
 
     private val _connectEnabled = MutableStateFlow(
@@ -159,6 +163,20 @@ class AppPreferences @Inject constructor(
     fun setAutoAdvanceEnabled(value: Boolean) {
         prefs.edit().putBoolean(KEY_AUTO_ADVANCE_ENABLED, value).apply()
         _autoAdvanceEnabled.value = value
+    }
+
+    private val _nowPlayingMetadataStyle = MutableStateFlow(
+        prefs.getString(KEY_NOW_PLAYING_METADATA_STYLE, null)
+            ?: NOW_PLAYING_METADATA_STYLE_DEFAULT
+    )
+
+    /** SHOW_DETAILS publishes date/venue as artist; SCROBBLING publishes Grateful Dead. */
+    val nowPlayingMetadataStyle: StateFlow<String> = _nowPlayingMetadataStyle.asStateFlow()
+
+    fun setNowPlayingMetadataStyle(value: String) {
+        val normalized = if (value == "SCROBBLING") "SCROBBLING" else "SHOW_DETAILS"
+        prefs.edit().putString(KEY_NOW_PLAYING_METADATA_STYLE, normalized).apply()
+        _nowPlayingMetadataStyle.value = normalized
     }
 
     private val _homePopularEnabled = MutableStateFlow(

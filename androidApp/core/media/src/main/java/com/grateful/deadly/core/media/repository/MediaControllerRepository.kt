@@ -9,6 +9,7 @@ import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
 import androidx.media3.session.MediaController
 import androidx.media3.session.SessionToken
+import com.grateful.deadly.core.media.setPlaybackMetadata
 import com.grateful.deadly.core.media.service.DeadlyMediaSessionService
 import com.grateful.deadly.core.media.exception.FormatNotAvailableException
 import com.grateful.deadly.core.model.PlaybackStatus
@@ -835,6 +836,11 @@ class MediaControllerRepository @Inject constructor(
         return tracks.mapIndexed { index, track ->
             // Use track name/filename for URL construction if no direct URL available
             val uri = generateArchiveUrl(recordingId, track)
+            val showLabel = if (!venue.isNullOrBlank()) {
+                "${formatShowDate(showDate)} - $venue"
+            } else {
+                formatShowDate(showDate)
+            }
             Log.d(TAG, "Converting track ${index + 1}: ${track.title ?: track.name} -> $uri")
             
             androidx.media3.common.MediaItem.Builder()
@@ -842,21 +848,10 @@ class MediaControllerRepository @Inject constructor(
                 .setMediaId("${showId}|${recordingId}|${index}")
                 .setMediaMetadata(
                     androidx.media3.common.MediaMetadata.Builder()
-                        .setTitle(track.title ?: track.name)
-                        .setArtist(
-                            if (!venue.isNullOrBlank()) {
-                                "${formatShowDate(showDate)} - $venue"
-                            } else {
-                                formatShowDate(showDate)
-                            }
-                        )
-                        .setAlbumTitle(
-                            // Format: "Apr 3, 1990 - The Omni" or just show date if no venue
-                            if (!venue.isNullOrBlank()) {
-                                "${formatShowDate(showDate)} - $venue"
-                            } else {
-                                formatShowDate(showDate)
-                            }
+                        .setPlaybackMetadata(
+                            track.title ?: track.name,
+                            showLabel,
+                            appPreferences.nowPlayingMetadataStyle.value == "SCROBBLING",
                         )
                         .setTrackNumber(track.trackNumber)
                         .setArtworkUri(

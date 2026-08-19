@@ -111,6 +111,17 @@ class SettingsViewModel @Inject constructor(
 
     val playerControlsStyle: StateFlow<String> = appPreferences.playerControlsStyle
 
+    val nowPlayingMetadataStyle: StateFlow<String> = appPreferences.nowPlayingMetadataStyle
+
+    fun setNowPlayingMetadataStyle(value: String) {
+        appPreferences.setNowPlayingMetadataStyle(value)
+        analyticsService.track("feature_use", mapOf(
+            "feature" to "set_now_playing_metadata_style",
+            "category" to "preference",
+            "value" to value,
+        ))
+    }
+
     fun setPlayerControlsStyle(value: String) {
         appPreferences.setPlayerControlsStyle(value)
         analyticsService.track("feature_use", mapOf(

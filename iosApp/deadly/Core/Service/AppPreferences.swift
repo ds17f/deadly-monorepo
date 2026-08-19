@@ -30,6 +30,7 @@ final class AppPreferences {
     private static let analyticsEnabledKey = "analytics_enabled"
     private static let installIdKey = "install_id"
     private static let playerControlsStyleKey = "player_controls_style"
+    private static let nowPlayingMetadataStyleKey = "now_playing_metadata_style"
     private static let homeTrendingWindowKey = "home_trending_window"
     private static let homeTrendingAboveTodayKey = "home_trending_above_today"
     private static let homeRecentRowsKey = "home_recent_rows"
@@ -154,6 +155,11 @@ final class AppPreferences {
         didSet { UserDefaults.standard.set(playerControlsStyle, forKey: Self.playerControlsStyleKey) }
     }
 
+    /// Artist value published to system players: showDetails or scrobbling.
+    var nowPlayingMetadataStyle: String {
+        didSet { UserDefaults.standard.set(nowPlayingMetadataStyle, forKey: Self.nowPlayingMetadataStyleKey) }
+    }
+
     /// Which trending window the home screen shows: "now"/"week"/"month"/"all".
     var homeTrendingWindow: String {
         didSet { UserDefaults.standard.set(homeTrendingWindow, forKey: Self.homeTrendingWindowKey) }
@@ -252,6 +258,7 @@ final class AppPreferences {
             Self.autoAdvanceEnabledKey: false,
             Self.sourceBadgeStyleKey: "LONG",
             Self.playerControlsStyleKey: "skipTrack",
+            Self.nowPlayingMetadataStyleKey: "scrobbling",
             Self.homeTrendingWindowKey: "now",
             Self.homeTrendingAboveTodayKey: false,
             Self.homeRecentRowsKey: 2,
@@ -301,6 +308,7 @@ final class AppPreferences {
         serverConnectEnabledCached = UserDefaults.standard.bool(forKey: Self.serverConnectEnabledKey)
         sourceBadgeStyle = UserDefaults.standard.string(forKey: Self.sourceBadgeStyleKey) ?? "LONG"
         playerControlsStyle = UserDefaults.standard.string(forKey: Self.playerControlsStyleKey) ?? "skipTrack"
+        nowPlayingMetadataStyle = UserDefaults.standard.string(forKey: Self.nowPlayingMetadataStyleKey) ?? "scrobbling"
         homeTrendingWindow = UserDefaults.standard.string(forKey: Self.homeTrendingWindowKey) ?? "now"
         homeTrendingAboveToday = UserDefaults.standard.bool(forKey: Self.homeTrendingAboveTodayKey)
         homeRecentRows = max(1, min(4, UserDefaults.standard.integer(forKey: Self.homeRecentRowsKey)))

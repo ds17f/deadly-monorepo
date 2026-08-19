@@ -172,6 +172,9 @@ final class AppContainer {
             // Apply the persisted lock-screen / CarPlay control style.
             MainActor.assumeIsolated {
                 player.setControlStyle(PlayerControlsStyle(rawValueOrDefault: prefs.playerControlsStyle))
+                player.setNowPlayingMetadataStyle(
+                    NowPlayingMetadataStyle(rawValueOrDefault: prefs.nowPlayingMetadataStyle)
+                )
             }
 
             // Set app logo as fallback for lock screen / Now Playing when artwork unavailable

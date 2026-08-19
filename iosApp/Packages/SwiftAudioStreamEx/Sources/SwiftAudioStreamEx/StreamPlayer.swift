@@ -564,6 +564,13 @@ public final class StreamPlayer {
         remoteCommandManager.setControlStyle(style)
     }
 
+    /// Update the artist value published to the lock screen and CarPlay.
+    /// Safe to call during playback; the current metadata refreshes immediately.
+    public func setNowPlayingMetadataStyle(_ style: NowPlayingMetadataStyle) {
+        nowPlayingManager.setMetadataStyle(style)
+        updateNowPlaying()
+    }
+
     // MARK: - Private: remote command callbacks
 
     private func setupRemoteCommandCallbacks() {

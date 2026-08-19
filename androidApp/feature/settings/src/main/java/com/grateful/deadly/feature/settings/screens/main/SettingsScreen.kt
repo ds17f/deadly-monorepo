@@ -476,6 +476,7 @@ private fun PlaybackAudioSettingsScreen(
 ) {
     val sourceBadgeStyle by viewModel.sourceBadgeStyle.collectAsState()
     val playerControlsStyle by viewModel.playerControlsStyle.collectAsState()
+    val nowPlayingMetadataStyle by viewModel.nowPlayingMetadataStyle.collectAsState()
     val connectEnabled by viewModel.connectEnabled.collectAsState()
     val serverConnectEnabled by viewModel.serverConnectEnabled.collectAsState()
 
@@ -486,6 +487,13 @@ private fun PlaybackAudioSettingsScreen(
             PlayerControlsStyleRow(
                 currentStyle = PlayerControlsStyle.fromString(playerControlsStyle),
                 onStyleSelected = { viewModel.setPlayerControlsStyle(it.name) }
+            )
+        }
+
+        item {
+            NowPlayingMetadataStyleRow(
+                currentStyle = nowPlayingMetadataStyle,
+                onStyleSelected = viewModel::setNowPlayingMetadataStyle,
             )
         }
 
@@ -922,6 +930,38 @@ private fun PlayerControlsStyleRow(
                     )
                 ) {
                     Text(style.label)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun NowPlayingMetadataStyleRow(
+    currentStyle: String,
+    onStyleSelected: (String) -> Unit,
+) {
+    val options = listOf("SHOW_DETAILS" to "Show details", "SCROBBLING" to "Scrobbling")
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(text = "Now Playing metadata", style = MaterialTheme.typography.bodyLarge)
+        Text(
+            text = "Choose whether system players show the concert date and venue or publish Grateful Dead as the artist for scrobblers.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+            options.forEachIndexed { index, (value, label) ->
+                SegmentedButton(
+                    selected = currentStyle == value,
+                    onClick = { onStyleSelected(value) },
+                    shape = SegmentedButtonDefaults.itemShape(index = index, count = options.size)
+                ) {
+                    Text(label)
                 }
             }
         }

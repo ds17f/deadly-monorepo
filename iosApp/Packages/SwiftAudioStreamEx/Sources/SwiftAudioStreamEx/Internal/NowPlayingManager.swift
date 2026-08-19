@@ -23,6 +23,11 @@ final class NowPlayingManager {
     private var artworkTask: Task<Void, Never>?
     private var currentArtwork: MPMediaItemArtwork?
     private var fallbackArtwork: MPMediaItemArtwork?
+    private var metadataStyle: NowPlayingMetadataStyle = .scrobbling
+
+    func setMetadataStyle(_ style: NowPlayingMetadataStyle) {
+        metadataStyle = style
+    }
 
     func update(
         track: TrackItem?,
@@ -38,7 +43,7 @@ final class NowPlayingManager {
 
         var info: [String: Any] = [
             MPMediaItemPropertyTitle: track.title,
-            MPMediaItemPropertyArtist: track.artist,
+            MPMediaItemPropertyArtist: publishedArtist(for: track),
             MPNowPlayingInfoPropertyElapsedPlaybackTime: progress.currentTime,
             MPMediaItemPropertyPlaybackDuration: progress.duration,
             MPNowPlayingInfoPropertyPlaybackRate: isPlaying ? 1.0 : 0.0,
@@ -59,6 +64,15 @@ final class NowPlayingManager {
         }
 
         MPNowPlayingInfoCenter.default().nowPlayingInfo = info
+    }
+
+    private func publishedArtist(for track: TrackItem) -> String {
+        switch metadataStyle {
+        case .showDetails:
+            return track.albumTitle ?? track.artist
+        case .scrobbling:
+            return track.artist
+        }
     }
 
     func updateElapsedTime(_ time: TimeInterval, isPlaying: Bool) {
