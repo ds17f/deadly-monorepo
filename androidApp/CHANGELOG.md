@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.42.0] - 2026-08-18
+
+### New Features
+* add Now Playing metadata preference (#98) (f83aca54)
+
+
 ## [2.41.0] - 2026-06-20
 
 ### New Features
@@ -9,8 +15,6 @@
 ### Bug Fixes
 * add server kill switch to globally disable Connect (default off) (#86) (b2eebd4c)
 * don't restart track on echoed auto-advance (#85) (83625535)
-
-
 ## [2.40.2] - 2026-06-16
 
 ### New Features
