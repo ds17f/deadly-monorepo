@@ -8,12 +8,15 @@ import os
 /// upfront, letting it pre-buffer the next track while the current one plays.
 final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendable {
     private let player: AudioPlayer
+    private let diagnosticSession: URLSession
+    private let cdnResolver: CDNURLResolver
     private let lock = NSLock()
     private let logger = Logger(subsystem: "SwiftAudioStreamEx", category: "Engine")
 
     private struct QueueState {
         var tracks: [URL] = []          // original URLs
         var resolved: [URL] = []        // redirect-resolved URLs
+        var fallbacks: [[URL]] = []     // per-track fallback URLs, parallel to `tracks`
         var currentIndex: Int = 0
     }
 
@@ -106,6 +109,74 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// is loaded.
     nonisolated(unsafe) private var hasSurfacedFinalError: Bool = false
 
+    /// Prevents a burst of opaque AudioStreaming `serverError` callbacks from
+    /// launching the same HTTP diagnostics repeatedly. Reset after playback
+    /// recovers, the user manually retries, or a new queue is loaded.
+    nonisolated(unsafe) private var hasDiagnosedNetworkFailure = false
+
+    /// Bumped whenever a scheduled retry is created or cancelled. A delayed retry
+    /// closure captures the value and bails if it changed, so a retry that was
+    /// scheduled before a stop, skip, or new queue cannot fire afterwards.
+    /// Guarded by `lock`.
+    nonisolated(unsafe) private var retryGeneration: Int = 0
+
+    /// State of one CDN recovery (ADR-0019). Created on the first `.cdnServer`
+    /// failure in a burst and cleared on success, exhaustion, or cancellation.
+    private struct CDNRecovery {
+        enum Phase {
+            /// Validating the current (and next) track URLs. The player is stopped.
+            case resolving
+            /// Waiting for the next attempt. The player is stopped.
+            case backoff
+            /// `play(url:)` was submitted for `expectedURL`; waiting for `.playing`.
+            case starting
+        }
+
+        let id: Int
+        let loadGeneration: Int
+        let currentIndex: Int
+        let canonicalURLs: [URL]
+        let resumePosition: TimeInterval
+        let shouldResumePlayback: Bool
+        let failedHost: String?
+        let capturedVolume: Float
+        let startedAt: Date
+        let source: NetworkFailureSource
+        /// True when the engine muted for this recovery and must restore the
+        /// volume. False for a manual Retry, where `StreamPlayer` owns the mute.
+        let ownsMute: Bool
+        var deadline: Date
+
+        var phase: Phase = .resolving
+        /// Number of resolution rounds started.
+        var attempts = 0
+        /// Hosts that failed validation or playback during this recovery. They
+        /// move to the end of the candidate order. RAM only.
+        var failedHosts: Set<String> = []
+        /// URL submitted to the player while `phase == .starting`.
+        var expectedURL: URL?
+    }
+
+#if DEBUG
+    /// Debug: treat `dn*.archive.org` final hosts as failed and delay each CDN
+    /// resolution attempt, so the simulator exercises the fallback path and
+    /// leaves time to skip during recovery. Guarded by `lock`.
+    nonisolated(unsafe) private var debugForceCDNFallbackStorage = false
+    private let debugCDNDelay: TimeInterval = 4.0
+
+    var debugForceCDNFallback: Bool {
+        get { lock.withLock { debugForceCDNFallbackStorage } }
+        set { lock.withLock { debugForceCDNFallbackStorage = newValue } }
+    }
+#endif
+
+    nonisolated(unsafe) private var nextCDNRecoveryID = 0
+    nonisolated(unsafe) private var cdnRecovery: CDNRecovery?
+
+    /// Tracks user play/pause intent independently of AudioStreaming's state,
+    /// which is forced to stopped during a retry.
+    nonisolated(unsafe) private var shouldBePlaying = false
+
     /// One-shot debug delay (seconds) injected before the NEXT `loadQueue`'s
     /// redirect-resolve completion fires. Used to deterministically force the
     /// stale-generation race when paired with a quick second `loadQueue`.
@@ -138,6 +209,14 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     nonisolated(unsafe) var onRetryStateChange: ((Bool) -> Void)?
 
     override init() {
+        let diagnosticConfiguration = URLSessionConfiguration.ephemeral
+        diagnosticConfiguration.requestCachePolicy = .reloadIgnoringLocalCacheData
+        diagnosticConfiguration.urlCache = nil
+        diagnosticConfiguration.timeoutIntervalForRequest = 10
+        diagnosticConfiguration.timeoutIntervalForResource = 10
+        self.diagnosticSession = URLSession(configuration: diagnosticConfiguration)
+        self.cdnResolver = CDNURLResolver.live()
+
         let config = AudioPlayerConfiguration(
             flushQueueOnSeek: false,
             bufferSizeInSeconds: 10,
@@ -166,12 +245,36 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
 
     func play() {
         logger.info("play (resume)")
+        lock.withLock { shouldBePlaying = true }
         player.resume()
         startProgressTimer()
     }
 
     func pause() {
         logger.info("pause")
+        lock.lock()
+        shouldBePlaying = false
+        // Pause after `play(url:)` was submitted but before `.playing`: do not
+        // rely on AudioStreaming honoring pause while it buffers. Abandon the
+        // start, keep the new mapping, and leave the engine prepared.
+        var pausedStart: (recovery: CDNRecovery, restoreVolume: Float?)?
+        if let recovery = cdnRecovery, recovery.phase == .starting {
+            pausedStart = (recovery, preparePausedAfterRecoveryLocked(recovery))
+        }
+        lock.unlock()
+
+        if let pausedStart {
+            let recovery = pausedStart.recovery
+            logger.notice("[PB] CDN recovery prepared paused kind=cdn source=\(recovery.source.rawValue, privacy: .public) loadGeneration=\(recovery.loadGeneration, privacy: .public) recoveryId=\(recovery.id, privacy: .public) reason=pausedDuringStart")
+            player.stop()
+            if let restore = pausedStart.restoreVolume {
+                player.volume = restore
+            }
+            stopProgressTimer()
+            onRetryStateChange?(false)
+            onStateChange?(.paused)
+            return
+        }
         player.pause()
         stopProgressTimer()
         sendCurrentProgress()
@@ -181,12 +284,29 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         logger.info("seek to \(time, format: .fixed(precision: 1))s")
         lock.lock()
         lastUserSeekTarget = time
+        // During a recovery the player is stopped or restarting at 0:00, so
+        // this seek cannot land. Make the latest user target the position that
+        // the post-`.playing` seek applies. A manual-Retry recovery leaves the
+        // seek to `StreamPlayer`.
+        var retargeted: CDNRecovery?
+        if let recovery = cdnRecovery, recovery.ownsMute {
+            resumePositionForRetry = time
+            retargeted = recovery
+        } else if cdnRecovery == nil, resumePositionForRetry != nil, !hasStartedAnyTrack {
+            // Recovery finished while paused; next Play will apply this.
+            resumePositionForRetry = time
+        }
         lock.unlock()
+        if let retargeted {
+            logger.notice("[PB] CDN recovery resume position replaced by user seek kind=cdn source=\(retargeted.source.rawValue, privacy: .public) loadGeneration=\(retargeted.loadGeneration, privacy: .public) recoveryId=\(retargeted.id, privacy: .public) phase=\(String(describing: retargeted.phase), privacy: .public) position=\(time, format: .fixed(precision: 1), privacy: .public)s")
+        }
         player.seek(to: time)
     }
 
     func stop() {
         logger.info("stop")
+        cancelRecoveryForUserAction(reason: "stop")
+        lock.withLock { shouldBePlaying = false }
         stopProgressTimer()
         player.stop()
     }
@@ -212,10 +332,14 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// and queues all remaining tracks with AudioStreaming's internal gapless queue.
     /// When `autoPlay` is false the queue is populated and ready, but playback is
     /// not started — call `startCurrent()` later to begin the loaded track.
-    func loadQueue(urls: [URL], startingAt index: Int, autoPlay: Bool = true) {
+    func loadQueue(urls: [URL], fallbackURLs: [[URL]] = [], startingAt index: Int, autoPlay: Bool = true) {
         lock.lock()
         loadGeneration += 1
+        retryGeneration += 1
         let generation = loadGeneration
+        shouldBePlaying = autoPlay
+        let cancelledRecovery = cdnRecovery
+        cdnRecovery = nil
         hasStartedAnyTrack = false
         playWhenResolved = false
         retryAttempts = 0
@@ -226,11 +350,15 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         savedVolumeBeforeRetry = nil
         lastUserSeekTarget = nil
         hasSurfacedFinalError = false
+        hasDiagnosedNetworkFailure = false
         // Capture the debug delay NOW so it binds to this generation, not
         // whichever loadQueue's resolve completes first.
         let delayThisResolve = debugNextResolveDelay
         debugNextResolveDelay = 0
         lock.unlock()
+        if let cancelledRecovery {
+            logger.notice("[PB] CDN recovery cancelled kind=cdn source=player loadGeneration=\(cancelledRecovery.loadGeneration, privacy: .public) recoveryId=\(cancelledRecovery.id, privacy: .public) reason=newQueue")
+        }
         if let restore = staleVolume {
             player.volume = restore
         }
@@ -238,6 +366,9 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         let firstName = urls.first?.lastPathComponent ?? "(none)"
         let lastName = urls.last?.lastPathComponent ?? "(none)"
         logger.notice("[PB] loadQueue gen=\(generation, privacy: .public) count=\(urls.count, privacy: .public) startIdx=\(index, privacy: .public) autoPlay=\(autoPlay, privacy: .public) first=\(firstName, privacy: .public) last=\(lastName, privacy: .public)")
+
+        // Keep `fallbacks` parallel to `urls` even if the caller passed fewer.
+        let fallbacks = urls.indices.map { fallbackURLs.indices.contains($0) ? fallbackURLs[$0] : [] }
 
         resolveAllRedirects(for: urls) { [weak self] resolved in
             guard let self else { return }
@@ -247,24 +378,24 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
             if delayThisResolve > 0 {
                 self.logger.warning("[PB] DEBUG delaying resolve gen=\(generation, privacy: .public) by \(delayThisResolve, format: .fixed(precision: 1), privacy: .public)s")
                 DispatchQueue.main.asyncAfter(deadline: .now() + delayThisResolve) { [weak self] in
-                    self?.processResolveCompletion(resolved: resolved, urls: urls, index: index, generation: generation, autoPlay: autoPlay)
+                    self?.processResolveCompletion(resolved: resolved, urls: urls, fallbacks: fallbacks, index: index, generation: generation, autoPlay: autoPlay)
                 }
                 return
             }
-            self.processResolveCompletion(resolved: resolved, urls: urls, index: index, generation: generation, autoPlay: autoPlay)
+            self.processResolveCompletion(resolved: resolved, urls: urls, fallbacks: fallbacks, index: index, generation: generation, autoPlay: autoPlay)
         }
     }
 
     /// Body of the `resolveAllRedirects` completion. Extracted so the debug
     /// delay can defer it without forking the closure body.
-    private func processResolveCompletion(resolved: [URL], urls: [URL], index: Int, generation: Int, autoPlay: Bool) {
+    private func processResolveCompletion(resolved: [URL], urls: [URL], fallbacks: [[URL]], index: Int, generation: Int, autoPlay: Bool) {
             self.lock.lock()
             guard generation == self.loadGeneration else {
                 self.lock.unlock()
                 self.logger.warning("[PB] loadQueue stale gen=\(generation, privacy: .public) current=\(self.loadGeneration, privacy: .public) — dropping completion")
                 return
             }
-            self.queue = QueueState(tracks: urls, resolved: resolved, currentIndex: index)
+            self.queue = QueueState(tracks: urls, resolved: resolved, fallbacks: fallbacks, currentIndex: index)
             // Stash remaining URLs — they'll be queued in didStartPlaying
             // (play() triggers an async clearQueue() that would wipe anything queued now)
             self.pendingQueueURLs = index + 1 < resolved.count ? Array(resolved[(index + 1)...]) : []
@@ -287,6 +418,7 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
                 self.logger.notice("[PB] loadQueue resolved gen=\(generation, privacy: .public) \(snapshot, privacy: .public) — play (\(reason, privacy: .public)) \(resolved[index].absoluteString, privacy: .public)")
                 self.lock.lock()
                 self.hasStartedAnyTrack = true
+                self.shouldBePlaying = true
                 self.lock.unlock()
                 self.player.play(url: resolved[index])
                 self.startProgressTimer()
@@ -311,10 +443,14 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     /// (`playWhenResolved`) and the resolve handler kicks playback off.
     func startCurrent() {
         lock.lock()
+        shouldBePlaying = true
         // User-driven retry clears the "we gave up" gate so future errors can
         // trigger the retry path again.
         let wasInError = hasSurfacedFinalError
         hasSurfacedFinalError = false
+        if wasInError {
+            hasDiagnosedNetworkFailure = false
+        }
         // After a surfaced error the underlying player has been `.stop()`'d
         // and `player.resume()` is a no-op — force a fresh `play(url:)` even
         // if we'd previously started playback. Otherwise the user taps Retry
@@ -326,6 +462,17 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
             startProgressTimer()
             return
         }
+        // Manual Retry after a surfaced error on a streamed track: do not replay
+        // the cached (possibly dead) URL. Start a fresh canonical recovery.
+        if wasInError, !queue.resolved.isEmpty, queue.currentIndex < queue.resolved.count,
+           queue.currentIndex < queue.tracks.count, !queue.resolved[queue.currentIndex].isFileURL {
+            hasStartedAnyTrack = true
+            playWhenResolved = false
+            lock.unlock()
+            logger.notice("[PB] startCurrent: manual retry — starting fresh CDN recovery from canonical URL")
+            beginManualCDNRecovery()
+            return
+        }
         guard !queue.resolved.isEmpty, queue.currentIndex < queue.resolved.count else {
             // Redirects not yet resolved — record intent; resolve handler will start.
             playWhenResolved = true
@@ -335,18 +482,36 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
             return
         }
         let url = queue.resolved[queue.currentIndex]
+        // `play(url:)` clears AudioStreaming's forward queue. Rebuild it, in
+        // case an earlier start already drained `pendingQueueURLs` (e.g. a
+        // pause during CDN recovery stopped the player after didStartPlaying).
+        pendingQueueURLs = queue.currentIndex + 1 < queue.resolved.count
+            ? Array(queue.resolved[(queue.currentIndex + 1)...])
+            : []
         hasStartedAnyTrack = true
         playWhenResolved = false
+        // A CDN recovery that finished while paused kept the captured position
+        // but restored the volume. Mute again so the post-play seek is silent.
+        let needsResumeMute = resumePositionForRetry != nil && savedVolumeBeforeRetry == nil
         let snapshot = queueSnapshotLocked()
         lock.unlock()
 
+        if needsResumeMute {
+            let currentVolume = player.volume
+            if currentVolume > 0 {
+                lock.withLock { savedVolumeBeforeRetry = currentVolume }
+                player.volume = 0
+            }
+        }
         logger.notice("[PB] startCurrent \(snapshot, privacy: .public) play=\(url.absoluteString, privacy: .public)")
         player.play(url: url)
         startProgressTimer()
     }
 
     func advanceToNext() -> Bool {
+        cancelRecoveryForUserAction(reason: "skip")
         lock.lock()
+        shouldBePlaying = true
         let before = queue.currentIndex
         guard queue.currentIndex < queue.resolved.count - 1 else {
             let snapshot = queueSnapshotLocked()
@@ -372,7 +537,9 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     }
 
     func rewindToPrevious() -> Bool {
+        cancelRecoveryForUserAction(reason: "previous")
         lock.lock()
+        shouldBePlaying = true
         let before = queue.currentIndex
         guard queue.currentIndex > 0 else {
             let snapshot = queueSnapshotLocked()
@@ -398,7 +565,9 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     }
 
     func skipTo(index: Int, autoplay: Bool = true) -> Bool {
+        cancelRecoveryForUserAction(reason: "skipTo")
         lock.lock()
+        shouldBePlaying = autoplay
         let before = queue.currentIndex
         guard index >= 0, index < queue.resolved.count else {
             let snapshot = queueSnapshotLocked()
@@ -438,19 +607,20 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         return queue.tracks.count
     }
 
-    func appendTrack(url: URL) {
+    func appendTrack(url: URL, fallbackURLs: [URL] = []) {
         resolveRedirect(for: url) { [weak self] resolved in
             guard let self else { return }
             self.lock.lock()
             self.queue.tracks.append(url)
             self.queue.resolved.append(resolved)
+            self.queue.fallbacks.append(fallbackURLs)
             self.lock.unlock()
             // Add to AudioStreaming's queue too
             self.player.queue(url: resolved)
         }
     }
 
-    func insertNext(url: URL) {
+    func insertNext(url: URL, fallbackURLs: [URL] = []) {
         resolveRedirect(for: url) { [weak self] resolved in
             guard let self else { return }
             self.lock.lock()
@@ -458,9 +628,11 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
             if insertIndex <= self.queue.tracks.count {
                 self.queue.tracks.insert(url, at: insertIndex)
                 self.queue.resolved.insert(resolved, at: insertIndex)
+                self.queue.fallbacks.insert(fallbackURLs, at: min(insertIndex, self.queue.fallbacks.count))
             } else {
                 self.queue.tracks.append(url)
                 self.queue.resolved.append(resolved)
+                self.queue.fallbacks.append(fallbackURLs)
             }
             // Get the current track's resolved URL to insert after
             let currentResolved = self.queue.resolved[self.queue.currentIndex]
@@ -478,6 +650,9 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
         let removedResolved = queue.resolved[index]
         queue.tracks.remove(at: index)
         queue.resolved.remove(at: index)
+        if index < queue.fallbacks.count {
+            queue.fallbacks.remove(at: index)
+        }
         if index < queue.currentIndex {
             queue.currentIndex -= 1
         }
@@ -555,6 +730,9 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
     }
 
     private func sendCurrentProgress() {
+        // The player is stopped or restarting at 0:00 during a CDN recovery.
+        // Do not publish that to the UI.
+        if lock.withLock({ cdnRecovery != nil }) { return }
         let currentTime = player.progress
         let duration = player.duration
         let progress = PlaybackProgress(
@@ -569,7 +747,21 @@ final class AudioStreamEngine: NSObject, AudioEngineProtocol, @unchecked Sendabl
 
 extension AudioStreamEngine: AudioPlayerDelegate {
     func audioPlayerDidStartPlaying(player: AudioPlayer, with entryId: AudioEntryId) {
+        // During a CDN recovery only the URL we submitted may start. A callback
+        // from the stopped player (or a superseded attempt) must not change the
+        // index or drain the pending queue.
         lock.lock()
+        if let recovery = cdnRecovery {
+            let matches = recovery.phase == .starting
+                && recovery.loadGeneration == loadGeneration
+                && recovery.expectedURL?.absoluteString == entryId.id
+            if !matches {
+                lock.unlock()
+                logger.notice("[PB] didStartPlaying ignored during CDN recovery kind=cdn source=\(recovery.source.rawValue, privacy: .public) loadGeneration=\(recovery.loadGeneration, privacy: .public) recoveryId=\(recovery.id, privacy: .public) phase=\(String(describing: recovery.phase), privacy: .public) entry=\(entryId.id, privacy: .public)")
+                return
+            }
+            logger.notice("[PB] didStartPlaying matches CDN recovery kind=cdn source=\(recovery.source.rawValue, privacy: .public) loadGeneration=\(recovery.loadGeneration, privacy: .public) recoveryId=\(recovery.id, privacy: .public)")
+        }
         let entrySnapshot = queueSnapshotLocked()
         let shouldPause = pauseAfterSkip
         pauseAfterSkip = false
@@ -681,51 +873,7 @@ extension AudioStreamEngine: AudioPlayerDelegate {
             return
         }
 
-        // Same prep as the real error path: capture position + mute (so the
-        // post-retry `.playing` handler will re-seek and unmute).
-        let actualProgress = player.progress
-        lock.lock()
-        let pendingSeekTarget = lastUserSeekTarget
-        let currentPosition: TimeInterval = {
-            if let seekTarget = pendingSeekTarget {
-                return actualProgress > seekTarget + 1 ? actualProgress : seekTarget
-            }
-            return actualProgress
-        }()
-        if savedVolumeBeforeRetry == nil, player.volume > 0 {
-            savedVolumeBeforeRetry = player.volume
-        }
-        if resumePositionForRetry == nil, currentPosition > 0 {
-            resumePositionForRetry = currentPosition
-            logger.notice("[PB] stall: captured resume position=\(currentPosition, format: .fixed(precision: 1), privacy: .public)s; muting")
-        }
-        lock.unlock()
-        player.volume = 0
-
-        if attemptRetry(isNetworkFailure: true) {
-            return
-        }
-
-        // Out of budget — surface the error directly, same as the real path.
-        let mapped: StreamPlayerError = .networkError("Can't reach Archive.org. Check your connection and try again.")
-        lock.lock()
-        lastError = mapped
-        retryDeadline = nil
-        retryAttempts = 0
-        hasStartedAnyTrack = false
-        let savedVolume = savedVolumeBeforeRetry
-        savedVolumeBeforeRetry = nil
-        let surfacedResume = resumePositionForRetry
-        resumePositionForRetry = nil
-        hasSurfacedFinalError = true
-        lock.unlock()
-        if let restore = savedVolume {
-            player.volume = restore
-        }
-        player.stop()
-        onRetryStateChange?(false)
-        onError?(mapped, surfacedResume)
-        onStateChange?(.error(mapped))
+        handleNetworkFailure(kind: .connectivity, source: .watchdog)
     }
 
     func audioPlayerStateChanged(player: AudioPlayer, with newState: AudioPlayerState, previous: AudioPlayerState) {
@@ -745,6 +893,20 @@ extension AudioStreamEngine: AudioPlayerDelegate {
             if newState == .paused || newState == .stopped || newState == .ready || newState == .disposed {
                 stopProgressTimer()
             }
+            return
+        }
+
+        // While a CDN recovery is resolving or backing off the player is
+        // stopped on purpose. Its stopped/idle noise must not reach the UI
+        // (which shows buffering) or re-arm the stall watchdog.
+        lock.lock()
+        var recoveryGap: CDNRecovery?
+        if let active = cdnRecovery, active.phase != .starting {
+            recoveryGap = active
+        }
+        lock.unlock()
+        if let recoveryGap {
+            logger.notice("[PB] stateChanged ignored (CDN recovery \(String(describing: recoveryGap.phase), privacy: .public)) kind=cdn source=\(recoveryGap.source.rawValue, privacy: .public) loadGeneration=\(recoveryGap.loadGeneration, privacy: .public) recoveryId=\(recoveryGap.id, privacy: .public)")
             return
         }
 
@@ -769,9 +931,12 @@ extension AudioStreamEngine: AudioPlayerDelegate {
             // gate; recovery happened.
             lock.lock()
             let wasRetrying = retryDeadline != nil
+            let completedRecovery = cdnRecovery
             retryAttempts = 0
             retryDeadline = nil
+            cdnRecovery = nil
             hasSurfacedFinalError = false
+            hasDiagnosedNetworkFailure = false
             // Seek has settled — clear the saved target so future
             // unrelated errors fall back to `player.progress`.
             lastUserSeekTarget = nil
@@ -783,6 +948,10 @@ extension AudioStreamEngine: AudioPlayerDelegate {
             resumePositionForRetry = nil
             savedVolumeBeforeRetry = nil
             lock.unlock()
+            if let completedRecovery {
+                let elapsed = Date.now.timeIntervalSince(completedRecovery.startedAt)
+                logger.notice("[PB] CDN recovery succeeded kind=cdn source=\(completedRecovery.source.rawValue, privacy: .public) loadGeneration=\(completedRecovery.loadGeneration, privacy: .public) recoveryId=\(completedRecovery.id, privacy: .public) elapsedMs=\(Int(elapsed * 1000), privacy: .public) behavior=canonicalRefresh")
+            }
             if let resume = pendingResume {
                 logger.notice("[PB] post-retry seek to \(resume, format: .fixed(precision: 1), privacy: .public)s")
                 player.seek(to: resume)
@@ -819,6 +988,7 @@ extension AudioStreamEngine: AudioPlayerDelegate {
 
         if stopReason == .eof && isLastTrack {
             logger.notice("[PB] final track finished, queue ended")
+            lock.withLock { shouldBePlaying = false }
             onStateChange?(.ended)
             onQueueComplete?()
         }
@@ -838,59 +1008,22 @@ extension AudioStreamEngine: AudioPlayerDelegate {
             return
         }
 
-        let isNetwork = isNetworkError(error)
-        if isNetwork {
-            // Capture position + mute BEFORE retry fires. The next time the
-            // underlying player reaches `.playing`, the state-change handler
-            // seeks to this position and restores the volume.
-            // Prefer the user's most recent seek target over `player.progress`
-            // — when a seek triggers the error (because the range request
-            // failed), AudioStreaming may have reset its progress reading
-            // to 0 while preparing for the new range, so player.progress
-            // here is unreliable.
-            let actualProgress = player.progress
-            lock.lock()
-            let pendingSeekTarget = lastUserSeekTarget
-            let currentPosition: TimeInterval = {
-                if let seekTarget = pendingSeekTarget {
-                    // If the seek hadn't settled yet, the user's intent is the
-                    // target. If actualProgress is meaningfully past it, the
-                    // user has heard audio beyond the seek, so prefer that.
-                    return actualProgress > seekTarget + 1 ? actualProgress : seekTarget
-                }
-                return actualProgress
-            }()
-            // Always remember the original volume before we mute — even if
-            // we don't have a resume position to apply, we still need to
-            // restore the volume on success or final error.
-            //
-            // BUT: if `player.volume` is already 0, someone (typically the
-            // StreamPlayer's playWithPendingSeek dance) has muted us before
-            // calling play. Saving 0 here would cascade: a later "restore"
-            // sets volume back to 0, and the audio stays muted forever.
-            // Skip the save in that case — the muter is responsible for
-            // restoring their own mute when their flow completes.
-            if savedVolumeBeforeRetry == nil, player.volume > 0 {
-                savedVolumeBeforeRetry = player.volume
-            }
-            if resumePositionForRetry == nil, currentPosition > 0 {
-                resumePositionForRetry = currentPosition
-                logger.notice("[PB] captured resume position=\(currentPosition, format: .fixed(precision: 1), privacy: .public)s for retry; muting")
-            } else if resumePositionForRetry == nil {
-                logger.notice("[PB] no resume position (track had no progress); muting for retry")
-            }
-            lock.unlock()
-            player.volume = 0
-        }
-        if attemptRetry(isNetworkFailure: isNetwork) {
+        let description = String(describing: error)
+        if let kind = PlaybackNetworkFailureClassifier.classify(errorDescription: description) {
+            handleNetworkFailure(kind: kind, source: .player)
             return
         }
 
-        let mapped: StreamPlayerError = isNetwork
-            ? .networkError("Can't reach Archive.org. Check your connection and try again.")
-            : .engineError(error.localizedDescription)
+        let mapped: StreamPlayerError = .engineError(error.localizedDescription)
         lock.lock()
         lastError = mapped
+        shouldBePlaying = false
+        let abortedRecovery = cdnRecovery
+        cdnRecovery = nil
+        if abortedRecovery != nil {
+            pendingQueueURLs = []
+        }
+        retryGeneration += 1
         retryDeadline = nil
         retryAttempts = 0
         // Reset hasStartedAnyTrack so the next play() reaches `player.play(url:)`
@@ -911,6 +1044,9 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         // from AudioStreaming's own internal thrashing are silently dropped.
         hasSurfacedFinalError = true
         lock.unlock()
+        if let abortedRecovery {
+            logger.notice("[PB] CDN recovery cancelled kind=cdn source=\(abortedRecovery.source.rawValue, privacy: .public) loadGeneration=\(abortedRecovery.loadGeneration, privacy: .public) recoveryId=\(abortedRecovery.id, privacy: .public) reason=engineError")
+        }
         if let restore = savedVolume {
             player.volume = restore
         }
@@ -925,24 +1061,185 @@ extension AudioStreamEngine: AudioPlayerDelegate {
     /// without depending on real network conditions. Wires through the same
     /// `attemptRetry` logic as a real failure.
     func debugInjectNetworkFailure() {
-        logger.error("[PB] DEBUG injected synthetic network failure")
-        if attemptRetry(isNetworkFailure: true) {
-            return
+        handleNetworkFailure(kind: .connectivity, source: .developer)
+    }
+
+#if DEBUG
+    /// Injects at the same dispatcher seam as a real AudioStreaming
+    /// `serverError`, so it runs the production CDN recovery.
+    func debugSimulateCDNFailure() -> Int? {
+        lock.lock()
+        let hasCurrentTrack = queue.currentIndex >= 0
+            && queue.currentIndex < queue.tracks.count
+            && queue.currentIndex < queue.resolved.count
+        let alreadyRecovering = cdnRecovery != nil
+        lock.unlock()
+        guard hasCurrentTrack, !alreadyRecovering else {
+            logger.notice("[PB] CDN developer injection ignored kind=cdn source=developer hasCurrent=\(hasCurrentTrack, privacy: .public) recoveryActive=\(alreadyRecovering, privacy: .public)")
+            return nil
         }
+        return handleNetworkFailure(kind: .cdnServer, source: .developer)
+    }
+#endif
+
+    // MARK: - Cancellation of retries and recovery
+
+    /// A user transport action (stop, skip, previous, skipTo) supersedes any
+    /// retry or CDN recovery in progress. Invalidates delayed retries, clears
+    /// the resume state, restores a recovery-owned mute, and tells the UI.
+    private func cancelRecoveryForUserAction(reason: String) {
+        lock.lock()
+        let cancelled = cdnRecovery
+        let wasRetrying = retryDeadline != nil
+        let savedVolume = savedVolumeBeforeRetry
+        cdnRecovery = nil
+        retryGeneration += 1
+        retryDeadline = nil
+        retryAttempts = 0
+        resumePositionForRetry = nil
+        savedVolumeBeforeRetry = nil
+        hasDiagnosedNetworkFailure = false
+        if cancelled != nil {
+            pendingQueueURLs = []
+        }
+        lock.unlock()
+
+        if let cancelled {
+            logger.notice("[PB] CDN recovery cancelled kind=cdn source=\(cancelled.source.rawValue, privacy: .public) loadGeneration=\(cancelled.loadGeneration, privacy: .public) recoveryId=\(cancelled.id, privacy: .public) reason=\(reason, privacy: .public)")
+        } else if wasRetrying {
+            logger.notice("[PB] retry cancelled kind=connectivity reason=\(reason, privacy: .public)")
+        }
+        if let restore = savedVolume {
+            player.volume = restore
+        }
+        if wasRetrying {
+            onRetryStateChange?(false)
+        }
+    }
+
+    // MARK: - Network failure handling
+
+    /// Shared dispatcher for real, watchdog, and developer-triggered network
+    /// incidents. `.connectivity` retries the current resolved URL with backoff.
+    /// `.cdnServer` runs the canonical-refresh recovery (ADR-0019), except for a
+    /// local file, which has no CDN and uses the same-URL retry.
+    @discardableResult
+    private func handleNetworkFailure(
+        kind requestedKind: PlaybackNetworkFailureKind,
+        source: NetworkFailureSource
+    ) -> Int? {
+        var kind = requestedKind
+        if let handledID = handleFailureDuringCDNRecovery(kind: kind, source: source) {
+            return handledID
+        }
+
+        let actualProgress = player.progress
+        let currentVolume = player.volume
+        lock.lock()
+        let pendingSeekTarget = lastUserSeekTarget
+        let currentPosition: TimeInterval = {
+            if let seekTarget = pendingSeekTarget {
+                return actualProgress > seekTarget + 1 ? actualProgress : seekTarget
+            }
+            return actualProgress
+        }()
+        let index = queue.currentIndex
+        let count = queue.tracks.count
+        let generation = loadGeneration
+        let failedHost = index >= 0 && index < queue.resolved.count
+            ? queue.resolved[index].host
+            : nil
+
+        var recoveryID: Int? = cdnRecovery?.id
+        var startedRecovery: CDNRecovery?
+        var skippedLocalFile = false
+        if kind == .cdnServer, cdnRecovery == nil,
+           index >= 0, index < queue.tracks.count, index < queue.resolved.count {
+            if queue.resolved[index].isFileURL {
+                // Downloaded track: no CDN to refresh.
+                skippedLocalFile = true
+                kind = .connectivity
+            } else {
+                let recovery = makeCDNRecoveryLocked(
+                    source: source,
+                    position: currentPosition,
+                    volume: currentVolume,
+                    shouldResume: shouldBePlaying,
+                    ownsMute: true
+                )
+                recoveryID = recovery.id
+                startedRecovery = recovery
+            }
+        }
+
+        if savedVolumeBeforeRetry == nil, currentVolume > 0 {
+            savedVolumeBeforeRetry = currentVolume
+        }
+        if resumePositionForRetry == nil, currentPosition > 0 {
+            resumePositionForRetry = currentPosition
+        }
+        let hasResumePosition = resumePositionForRetry != nil
+        lock.unlock()
+
+        let recoveryLog = recoveryID.map(String.init) ?? "none"
+        logger.notice("[PB] network failure dispatched kind=\(kind.rawValue, privacy: .public) source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryLog, privacy: .public) idx=\(index, privacy: .public)/\(count, privacy: .public) position=\(currentPosition, format: .fixed(precision: 1), privacy: .public)s failedHost=\(failedHost ?? "nil", privacy: .public)")
+
+        if skippedLocalFile {
+            logger.notice("[PB] CDN recovery skipped kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) reason=localFile behavior=sameURLRetry")
+        }
+
+        if hasResumePosition {
+            logger.notice("[PB] retry capture kind=\(kind.rawValue, privacy: .public) source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryLog, privacy: .public) position=\(currentPosition, format: .fixed(precision: 1), privacy: .public)s; muting")
+        } else {
+            logger.notice("[PB] retry capture kind=\(kind.rawValue, privacy: .public) source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryLog, privacy: .public) position=none; muting")
+        }
+        player.volume = 0
+
+        if let recovery = startedRecovery {
+            logger.notice("[PB] CDN recovery started kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(recovery.loadGeneration, privacy: .public) recoveryId=\(recovery.id, privacy: .public) idx=\(recovery.currentIndex, privacy: .public)/\(recovery.canonicalURLs.count, privacy: .public) position=\(recovery.resumePosition, format: .fixed(precision: 1), privacy: .public)s shouldResume=\(recovery.shouldResumePlayback, privacy: .public) volume=\(recovery.capturedVolume, format: .fixed(precision: 2), privacy: .public) failedHost=\(recovery.failedHost ?? "nil", privacy: .public) behavior=canonicalRefresh")
+            diagnoseNetworkFailureIfNeeded(recovery: recovery, source: source)
+            startCDNRecovery(recovery)
+            return recovery.id
+        }
+
+        if attemptRetry(kind: kind, source: source, recoveryID: recoveryID) {
+            return recoveryID
+        }
+        surfaceNetworkFailure(kind: kind, source: source, recoveryID: recoveryID)
+        return recoveryID
+    }
+
+    private func surfaceNetworkFailure(
+        kind: PlaybackNetworkFailureKind,
+        source: NetworkFailureSource,
+        recoveryID: Int?
+    ) {
         let mapped: StreamPlayerError = .networkError("Can't reach Archive.org. Check your connection and try again.")
         lock.lock()
         lastError = mapped
+        let attempts = retryAttempts
+        retryGeneration += 1
         retryDeadline = nil
         retryAttempts = 0
         hasStartedAnyTrack = false
+        shouldBePlaying = false
         let savedVolume = savedVolumeBeforeRetry
         savedVolumeBeforeRetry = nil
         let surfacedResume = resumePositionForRetry
         resumePositionForRetry = nil
+        let recovery = cdnRecovery
+        cdnRecovery = nil
+        pendingQueueURLs = []
         hasSurfacedFinalError = true
         lock.unlock()
         if let restore = savedVolume {
             player.volume = restore
+        }
+        let recoveryLog = recoveryID.map(String.init) ?? "none"
+        logger.error("[PB] network failure exhausted kind=\(kind.rawValue, privacy: .public) source=\(source.rawValue, privacy: .public) recoveryId=\(recoveryLog, privacy: .public) attempts=\(attempts, privacy: .public)")
+        if let recovery {
+            let elapsed = Date.now.timeIntervalSince(recovery.startedAt)
+            logger.error("[PB] CDN recovery exhausted kind=cdn source=\(recovery.source.rawValue, privacy: .public) loadGeneration=\(recovery.loadGeneration, privacy: .public) recoveryId=\(recovery.id, privacy: .public) attempts=\(attempts, privacy: .public) elapsedMs=\(Int(elapsed * 1000), privacy: .public) behavior=canonicalRefresh")
         }
         player.stop()
         onRetryStateChange?(false)
@@ -953,9 +1250,11 @@ extension AudioStreamEngine: AudioPlayerDelegate {
     /// Schedule a retry of the current URL if this looks like a transient
     /// network failure and we're inside the retry budget. Returns `true` if
     /// a retry was scheduled (caller should NOT surface the error).
-    private func attemptRetry(isNetworkFailure: Bool) -> Bool {
-        guard isNetworkFailure else { return false }
-
+    private func attemptRetry(
+        kind: PlaybackNetworkFailureKind,
+        source: NetworkFailureSource,
+        recoveryID: Int?
+    ) -> Bool {
         lock.lock()
         if retryDeadline == nil {
             retryDeadline = Date.now.addingTimeInterval(maxRetryDuration)
@@ -972,9 +1271,14 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         let url = queue.resolved[queue.currentIndex]
         retryAttempts += 1
         let attemptNumber = retryAttempts
+        // Only the newest scheduled retry may fire.
+        retryGeneration += 1
+        let retryToken = retryGeneration
+        let generation = loadGeneration
         lock.unlock()
 
-        logger.warning("[PB] retry attempt=\(attemptNumber, privacy: .public)/\(self.retryDelays.count, privacy: .public) in \(delay, format: .fixed(precision: 1), privacy: .public)s url=\(url.absoluteString, privacy: .public)")
+        let recoveryLog = recoveryID.map(String.init) ?? "none"
+        logger.warning("[PB] retry scheduled kind=\(kind.rawValue, privacy: .public) source=\(source.rawValue, privacy: .public) recoveryId=\(recoveryLog, privacy: .public) attempt=\(attemptNumber, privacy: .public)/\(self.retryDelays.count, privacy: .public) in=\(delay, format: .fixed(precision: 1), privacy: .public)s behavior=sameURLRetry url=\(url.absoluteString, privacy: .public)")
 
         // Notify on first retry so the UI can show "Network trouble — retrying".
         if attemptNumber == 1 {
@@ -997,9 +1301,14 @@ extension AudioStreamEngine: AudioPlayerDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
             guard let self else { return }
             self.lock.lock()
-            // Bail if a new queue or a successful play has reset retry state.
-            guard self.retryDeadline != nil, self.queue.currentIndex < self.queue.resolved.count else {
+            // Bail if a stop, skip, or new queue cancelled this retry, a newer
+            // retry replaced it, or a successful play reset retry state.
+            guard self.retryGeneration == retryToken,
+                  self.loadGeneration == generation,
+                  self.retryDeadline != nil,
+                  self.queue.currentIndex < self.queue.resolved.count else {
                 self.lock.unlock()
+                self.logger.notice("[PB] retry dropped (stale) kind=\(kind.rawValue, privacy: .public) recoveryId=\(recoveryLog, privacy: .public) attempt=\(attemptNumber, privacy: .public)")
                 return
             }
             let retryURL = self.queue.resolved[self.queue.currentIndex]
@@ -1010,17 +1319,491 @@ extension AudioStreamEngine: AudioPlayerDelegate {
             // pending URLs so `didStartPlaying` re-queues them.
             self.pendingQueueURLs = pending
             self.lock.unlock()
-            self.logger.notice("[PB] retry firing url=\(retryURL.absoluteString, privacy: .public) (will re-queue \(pending.count, privacy: .public) pending)")
+            self.logger.notice("[PB] retry firing kind=\(kind.rawValue, privacy: .public) source=\(source.rawValue, privacy: .public) recoveryId=\(recoveryLog, privacy: .public) url=\(retryURL.absoluteString, privacy: .public) pending=\(pending.count, privacy: .public)")
             self.player.play(url: retryURL)
         }
         return true
     }
 
-    private func isNetworkError(_ error: AudioPlayerError) -> Bool {
-        // AudioPlayerError doesn't expose a stable case discriminator, so
-        // string-match on the well-known "networkError" / "serverError" tokens.
-        let desc = String(describing: error).lowercased()
-        return desc.contains("network") || desc.contains("server")
+    // MARK: - CDN recovery (ADR-0019)
+
+    /// Build the recovery record and register it. Caller MUST hold `lock`.
+    private func makeCDNRecoveryLocked(
+        source: NetworkFailureSource,
+        position: TimeInterval,
+        volume: Float,
+        shouldResume: Bool,
+        ownsMute: Bool
+    ) -> CDNRecovery {
+        nextCDNRecoveryID += 1
+        let index = queue.currentIndex
+        let deadline = Date.now.addingTimeInterval(maxRetryDuration)
+        let recovery = CDNRecovery(
+            id: nextCDNRecoveryID,
+            loadGeneration: loadGeneration,
+            currentIndex: index,
+            canonicalURLs: queue.tracks,
+            resumePosition: position,
+            shouldResumePlayback: shouldResume,
+            failedHost: queue.resolved[index].host,
+            capturedVolume: volume,
+            startedAt: .now,
+            source: source,
+            ownsMute: ownsMute,
+            deadline: deadline
+        )
+        cdnRecovery = recovery
+        retryGeneration += 1
+        // Shares the retry bookkeeping so `.playing` and the auto-advance
+        // suppression in `didStartPlaying` treat this as a retry in progress.
+        retryDeadline = deadline
+        retryAttempts = 0
+        pendingQueueURLs = []
+        return recovery
+    }
+
+    /// Stop the player, show buffering, and run the first resolution attempt.
+    /// The recovery is already registered and the volume already muted.
+    private func startCDNRecovery(_ recovery: CDNRecovery) {
+        cancelBufferingStallWatchdog()
+        player.stop()
+        onRetryStateChange?(true)
+        onStateChange?(.buffering)
+        runCDNRecoveryAttempt(recoveryID: recovery.id)
+    }
+
+    /// Manual Retry after a surfaced error. `StreamPlayer` owns any mute and
+    /// the resume seek, so the engine neither mutes nor seeks here.
+    private func beginManualCDNRecovery() {
+        let currentVolume = player.volume
+        lock.lock()
+        guard cdnRecovery == nil,
+              queue.currentIndex >= 0,
+              queue.currentIndex < queue.tracks.count,
+              queue.currentIndex < queue.resolved.count else {
+            lock.unlock()
+            return
+        }
+        let recovery = makeCDNRecoveryLocked(
+            source: .manualRetry,
+            position: 0,
+            volume: currentVolume,
+            shouldResume: true,
+            ownsMute: false
+        )
+        let index = queue.currentIndex
+        let count = queue.tracks.count
+        lock.unlock()
+
+        logger.notice("[PB] CDN recovery started kind=cdn source=\(recovery.source.rawValue, privacy: .public) loadGeneration=\(recovery.loadGeneration, privacy: .public) recoveryId=\(recovery.id, privacy: .public) idx=\(index, privacy: .public)/\(count, privacy: .public) position=none shouldResume=true failedHost=\(recovery.failedHost ?? "nil", privacy: .public) behavior=canonicalRefresh")
+        startCDNRecovery(recovery)
+    }
+
+    /// A failure reported while a CDN recovery is active. Returns the recovery
+    /// ID if the failure was absorbed, or nil if the normal path should run
+    /// (a connectivity error after the new URL started playing).
+    private func handleFailureDuringCDNRecovery(
+        kind: PlaybackNetworkFailureKind,
+        source: NetworkFailureSource
+    ) -> Int? {
+        lock.lock()
+        guard var recovery = cdnRecovery else {
+            lock.unlock()
+            return nil
+        }
+        // A watchdog stall during a CDN recovery is part of that recovery.
+        let promoted = kind == .connectivity && source == .watchdog
+        let effectiveKind: PlaybackNetworkFailureKind = promoted ? .cdnServer : kind
+        let phase = recovery.phase
+        let generation = loadGeneration
+        let promotedLog = promoted ? " promotedFrom=connectivity" : ""
+
+        guard effectiveKind == .cdnServer else {
+            lock.unlock()
+            if phase == .starting {
+                return nil
+            }
+            logger.notice("[PB] network failure coalesced kind=\(kind.rawValue, privacy: .public) source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recovery.id, privacy: .public) phase=\(String(describing: phase), privacy: .public)")
+            return recovery.id
+        }
+        guard phase == .starting else {
+            // Burst of callbacks from the player we already stopped.
+            lock.unlock()
+            logger.notice("[PB] network failure coalesced kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recovery.id, privacy: .public) phase=\(String(describing: phase), privacy: .public)\(promotedLog, privacy: .public)")
+            return recovery.id
+        }
+
+        // The URL we validated and started has failed. Demote its host and retry.
+        let failedHost = recovery.expectedURL?.host
+        if let failedHost {
+            recovery.failedHosts.insert(failedHost)
+        }
+        recovery.phase = .backoff
+        recovery.expectedURL = nil
+        cdnRecovery = recovery
+        pendingQueueURLs = []
+        lock.unlock()
+
+        logger.notice("[PB] CDN recovery attempt failed after start kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recovery.id, privacy: .public) attempt=\(recovery.attempts, privacy: .public) failedHost=\(failedHost ?? "nil", privacy: .public)\(promotedLog, privacy: .public)")
+        cancelBufferingStallWatchdog()
+        player.stop()
+        onStateChange?(.buffering)
+        scheduleNextCDNAttempt(recoveryID: recovery.id)
+        return recovery.id
+    }
+
+    /// Resolve the current track and its successor in parallel, then hand the
+    /// result to `finishCDNRecoveryAttempt`. No lock is held across the network.
+    private func runCDNRecoveryAttempt(recoveryID: Int) {
+        lock.lock()
+        guard var recovery = cdnRecovery,
+              recovery.id == recoveryID,
+              recovery.loadGeneration == loadGeneration,
+              recovery.currentIndex < queue.tracks.count,
+              recovery.currentIndex < queue.resolved.count else {
+            lock.unlock()
+            return
+        }
+        recovery.attempts += 1
+        recovery.phase = .resolving
+        recovery.expectedURL = nil
+        var debugDelay: TimeInterval = 0
+#if DEBUG
+        if debugForceCDNFallbackStorage {
+            // The delay would otherwise eat the 10s budget, so extend it.
+            debugDelay = debugCDNDelay
+            recovery.deadline = recovery.deadline.addingTimeInterval(debugDelay)
+            retryDeadline = recovery.deadline
+        }
+#endif
+        cdnRecovery = recovery
+        retryAttempts = recovery.attempts
+
+        let generation = recovery.loadGeneration
+        let index = recovery.currentIndex
+        let attemptNumber = recovery.attempts
+        let failedHosts = recovery.failedHosts
+        let deadline = recovery.deadline
+        let source = recovery.source
+        // A local file in the next slot needs no validation.
+        let nextIndex = index + 1 < queue.tracks.count
+            ? CDNRecoveryPlanner.nextIndexToValidate(resolved: queue.resolved, currentIndex: index)
+            : nil
+        let currentCandidates = candidatesLocked(at: index, failedHosts: failedHosts)
+        let nextCandidates = nextIndex.map { candidatesLocked(at: $0, failedHosts: failedHosts) } ?? []
+        lock.unlock()
+
+        logger.notice("[PB] CDN recovery resolving kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) attempt=\(attemptNumber, privacy: .public) idx=\(index, privacy: .public) next=\(nextIndex.map(String.init) ?? "none", privacy: .public) candidates=\(currentCandidates.count, privacy: .public)/\(nextCandidates.count, privacy: .public) demotedHosts=\(failedHosts.count, privacy: .public)")
+
+        var attemptResolver = cdnResolver
+#if DEBUG
+        if debugDelay > 0 {
+            attemptResolver.rejectFinalHost = { host in host.hasPrefix("dn") && host.hasSuffix(".archive.org") }
+            logger.notice("[PB] CDN recovery debug delay \(debugDelay, format: .fixed(precision: 1), privacy: .public)s kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) attempt=\(attemptNumber, privacy: .public)")
+        }
+#endif
+        let resolver = attemptResolver
+        let startDelay = debugDelay
+        Task { [weak self] in
+            if startDelay > 0 {
+                try? await Task.sleep(for: .seconds(startDelay))
+            }
+            async let currentResult = resolver.resolve(candidates: currentCandidates, deadline: deadline)
+            async let nextResult = resolver.resolve(candidates: nextCandidates, deadline: deadline)
+            let (current, next) = await (currentResult, nextResult)
+            // Bind to a constant: a weak capture is a mutable box, which Swift 6
+            // will not send into the main-queue closure. The engine is
+            // `@unchecked Sendable`, so a strong reference is safe to send.
+            guard let engine = self else { return }
+            // Engine state, the player, and callbacks are main-thread territory.
+            DispatchQueue.main.async {
+                engine.finishCDNRecoveryAttempt(
+                    recoveryID: recoveryID,
+                    generation: generation,
+                    attempt: attemptNumber,
+                    currentIndex: index,
+                    nextIndex: nextIndex,
+                    current: current,
+                    next: next
+                )
+            }
+        }
+    }
+
+    /// Ordered candidate URLs for one track. Caller MUST hold `lock`.
+    private func candidatesLocked(at index: Int, failedHosts: Set<String>) -> [URL] {
+        let fallbacks = queue.fallbacks.indices.contains(index) ? queue.fallbacks[index] : []
+        return CDNURLResolver.orderedCandidates(
+            canonical: queue.tracks[index],
+            fallbacks: fallbacks,
+            failedHosts: failedHosts
+        )
+    }
+
+    private func finishCDNRecoveryAttempt(
+        recoveryID: Int,
+        generation: Int,
+        attempt: Int,
+        currentIndex: Int,
+        nextIndex: Int?,
+        current: CDNResolution,
+        next: CDNResolution
+    ) {
+        lock.lock()
+        guard var recovery = cdnRecovery,
+              recovery.id == recoveryID,
+              recovery.loadGeneration == generation,
+              loadGeneration == generation,
+              recovery.phase == .resolving,
+              recovery.attempts == attempt else {
+            lock.unlock()
+            logger.notice("[PB] CDN resolve result discarded kind=cdn loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) attempt=\(attempt, privacy: .public) reason=stale")
+            return
+        }
+        let source = recovery.source
+
+        // Remember failing hosts for the rest of this recovery.
+        for resolveAttempt in current.attempts + next.attempts {
+            if let host = resolveAttempt.failedHost {
+                recovery.failedHosts.insert(host)
+            }
+        }
+
+        let currentReady = current.resolvedURL != nil
+        let nextReady = nextIndex == nil || next.resolvedURL != nil
+        guard currentReady, nextReady, let currentURL = current.resolvedURL,
+              currentIndex < queue.resolved.count else {
+            cdnRecovery = recovery
+            lock.unlock()
+            logResolveAttempts(current, track: currentIndex, source: source, generation: generation, recoveryID: recoveryID, attempt: attempt)
+            if let nextIndex {
+                logResolveAttempts(next, track: nextIndex, source: source, generation: generation, recoveryID: recoveryID, attempt: attempt)
+            }
+            logger.notice("[PB] CDN recovery foreground not ready kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) attempt=\(attempt, privacy: .public) currentReady=\(currentReady, privacy: .public) nextReady=\(nextReady, privacy: .public)")
+            scheduleNextCDNAttempt(recoveryID: recoveryID)
+            return
+        }
+
+        // Install the validated URLs. Everything after the next track keeps its
+        // existing mapping until Phase 3 refreshes the rest of the queue.
+        let installed = CDNRecoveryPlanner.install(
+            resolved: queue.resolved,
+            currentIndex: currentIndex,
+            currentURL: currentURL,
+            nextIndex: nextIndex,
+            nextURL: next.resolvedURL
+        )
+        queue.resolved = installed.resolved
+        pendingQueueURLs = installed.pending
+        let pendingCount = pendingQueueURLs.count
+        // Read live intent: the user may have paused or pressed play meanwhile.
+        let shouldResume = shouldBePlaying
+        let currentHost = currentURL.host
+        let startedAt = recovery.startedAt
+
+        if shouldResume {
+            recovery.phase = .starting
+            recovery.expectedURL = currentURL
+            cdnRecovery = recovery
+            hasStartedAnyTrack = true
+            lock.unlock()
+
+            logResolveAttempts(current, track: currentIndex, source: source, generation: generation, recoveryID: recoveryID, attempt: attempt)
+            if let nextIndex {
+                logResolveAttempts(next, track: nextIndex, source: source, generation: generation, recoveryID: recoveryID, attempt: attempt)
+            }
+            logger.notice("[PB] CDN recovery foreground ready kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) attempt=\(attempt, privacy: .public) idx=\(currentIndex, privacy: .public) host=\(currentHost ?? "nil", privacy: .public) pending=\(pendingCount, privacy: .public)")
+            logger.notice("[PB] CDN recovery play submitted kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) url=\(currentURL.absoluteString, privacy: .public)")
+            player.play(url: currentURL)
+            startProgressTimer()
+            return
+        }
+
+        // Paused intent: leave the engine prepared but silent. The next user
+        // Play does a fresh `play(url:)` of the new current URL.
+        let restoreVolume = preparePausedAfterRecoveryLocked(recovery)
+        lock.unlock()
+
+        logResolveAttempts(current, track: currentIndex, source: source, generation: generation, recoveryID: recoveryID, attempt: attempt)
+        if let nextIndex {
+            logResolveAttempts(next, track: nextIndex, source: source, generation: generation, recoveryID: recoveryID, attempt: attempt)
+        }
+        let elapsed = Date.now.timeIntervalSince(startedAt)
+        logger.notice("[PB] CDN recovery prepared paused kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) attempt=\(attempt, privacy: .public) idx=\(currentIndex, privacy: .public) host=\(currentHost ?? "nil", privacy: .public) elapsedMs=\(Int(elapsed * 1000), privacy: .public) behavior=canonicalRefresh")
+        if let restoreVolume {
+            player.volume = restoreVolume
+        }
+        onRetryStateChange?(false)
+        onStateChange?(.paused)
+    }
+
+    /// End a recovery without playing: the engine stays prepared so the next
+    /// user Play does a fresh `play(url:)` of the new current URL. Keeps the
+    /// captured resume position. Returns the volume to restore, if the
+    /// recovery owned the mute. Caller MUST hold `lock`.
+    private func preparePausedAfterRecoveryLocked(_ recovery: CDNRecovery) -> Float? {
+        cdnRecovery = nil
+        retryGeneration += 1
+        retryDeadline = nil
+        retryAttempts = 0
+        hasStartedAnyTrack = false
+        hasDiagnosedNetworkFailure = false
+        guard recovery.ownsMute else { return nil }
+        let volume = savedVolumeBeforeRetry
+        savedVolumeBeforeRetry = nil
+        return volume
+    }
+
+    private func logResolveAttempts(
+        _ resolution: CDNResolution,
+        track: Int,
+        source: NetworkFailureSource,
+        generation: Int,
+        recoveryID: Int,
+        attempt: Int
+    ) {
+        for resolveAttempt in resolution.attempts {
+            logger.notice("[PB] CDN resolve attempt kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) attempt=\(attempt, privacy: .public) track=\(track, privacy: .public) \(resolveAttempt.logDescription, privacy: .public)")
+        }
+        if resolution.resolvedURL == nil {
+            logger.warning("[PB] CDN resolve failed kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) attempt=\(attempt, privacy: .public) track=\(track, privacy: .public) tried=\(resolution.attempts.count, privacy: .public)")
+        }
+    }
+
+    /// After a failed attempt: schedule the next one on the existing backoff
+    /// schedule, or surface the final error when the budget is spent.
+    private func scheduleNextCDNAttempt(recoveryID: Int) {
+        lock.lock()
+        guard var recovery = cdnRecovery,
+              recovery.id == recoveryID,
+              recovery.loadGeneration == loadGeneration else {
+            lock.unlock()
+            return
+        }
+        let done = max(recovery.attempts, 1)
+        let hasDelay = done <= retryDelays.count
+        let delay = hasDelay ? retryDelays[done - 1] : 0
+        let withinBudget = hasDelay && Date.now.addingTimeInterval(delay) < recovery.deadline
+        let source = recovery.source
+        guard withinBudget else {
+            lock.unlock()
+            surfaceNetworkFailure(kind: .cdnServer, source: source, recoveryID: recoveryID)
+            return
+        }
+        recovery.phase = .backoff
+        cdnRecovery = recovery
+        retryGeneration += 1
+        let retryToken = retryGeneration
+        let generation = recovery.loadGeneration
+        lock.unlock()
+
+        logger.warning("[PB] CDN recovery retry scheduled kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) afterAttempt=\(done, privacy: .public) in=\(delay, format: .fixed(precision: 1), privacy: .public)s behavior=canonicalRefresh")
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+            guard let self else { return }
+            let isCurrent = self.lock.withLock {
+                self.retryGeneration == retryToken
+                    && self.loadGeneration == generation
+                    && self.cdnRecovery?.id == recoveryID
+            }
+            guard isCurrent else {
+                self.logger.notice("[PB] CDN recovery retry dropped kind=cdn loadGeneration=\(generation, privacy: .public) recoveryId=\(recoveryID, privacy: .public) reason=stale")
+                return
+            }
+            self.runCDNRecoveryAttempt(recoveryID: recoveryID)
+        }
+    }
+
+    // MARK: - Network failure diagnostics
+
+    /// AudioStreaming 1.4.4 collapses every HTTP response >= 300 into the
+    /// context-free `NetworkError.serverError`. Probe the exact failed CDN URL
+    /// so bug reports retain the status code and redirect host that the
+    /// dependency discards. The recovery resolver logs every canonical and
+    /// fallback candidate itself, so the canonical URL is not probed here.
+    private func diagnoseNetworkFailureIfNeeded(
+        recovery: CDNRecovery,
+        source: NetworkFailureSource
+    ) {
+        lock.lock()
+        guard !hasDiagnosedNetworkFailure,
+              queue.currentIndex >= 0,
+              queue.currentIndex < queue.tracks.count,
+              queue.currentIndex < queue.resolved.count else {
+            lock.unlock()
+            return
+        }
+        hasDiagnosedNetworkFailure = true
+        let generation = loadGeneration
+        let index = queue.currentIndex
+        let failedURL = queue.resolved[index]
+        lock.unlock()
+
+        Task { [weak self] in
+            guard let self else { return }
+            let failedProbe = await self.probePlaybackURL(failedURL)
+
+            let isCurrent = self.lock.withLock {
+                self.loadGeneration == generation && self.queue.currentIndex == index
+            }
+            guard isCurrent else {
+                self.logger.notice("[PB] networkDiagnostic discarded kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recovery.id, privacy: .public) idx=\(index, privacy: .public) reason=queueChanged")
+                return
+            }
+
+            self.logger.error("[PB] networkDiagnostic kind=cdn source=\(source.rawValue, privacy: .public) loadGeneration=\(generation, privacy: .public) recoveryId=\(recovery.id, privacy: .public) target=failed \(failedProbe.logDescription, privacy: .public)")
+        }
+    }
+
+    /// A two-byte ranged GET mirrors AudioStreaming's playback requests closely
+    /// while avoiding a full media download. It returns at the response headers
+    /// and never reads the body, so a server that ignores `Range` cannot make us
+    /// download the track. The ephemeral session and explicit cache directives
+    /// ensure the diagnostic observes current Archive routing.
+    private func probePlaybackURL(_ url: URL) async -> HTTPProbeResult {
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        request.timeoutInterval = 10
+        request.setValue("bytes=0-1", forHTTPHeaderField: "Range")
+        request.setValue("*/*", forHTTPHeaderField: "Accept")
+        request.setValue("identity", forHTTPHeaderField: "Accept-Encoding")
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+
+        do {
+            let (bytes, response) = try await diagnosticSession.bytes(for: request)
+            bytes.task.cancel()
+            guard let http = response as? HTTPURLResponse else {
+                return HTTPProbeResult(
+                    requestedHost: url.host,
+                    finalHost: response.url?.host,
+                    statusCode: nil,
+                    contentRange: nil,
+                    server: nil,
+                    retryAfter: nil,
+                    errorCode: "non-http-response"
+                )
+            }
+            return HTTPProbeResult(
+                requestedHost: url.host,
+                finalHost: http.url?.host,
+                statusCode: http.statusCode,
+                contentRange: http.value(forHTTPHeaderField: "Content-Range"),
+                server: http.value(forHTTPHeaderField: "Server"),
+                retryAfter: http.value(forHTTPHeaderField: "Retry-After"),
+                errorCode: nil
+            )
+        } catch {
+            let nsError = error as NSError
+            return HTTPProbeResult(
+                requestedHost: url.host,
+                finalHost: nil,
+                statusCode: nil,
+                contentRange: nil,
+                server: nil,
+                retryAfter: nil,
+                errorCode: "\(nsError.domain):\(nsError.code)"
+            )
+        }
     }
 
     func audioPlayerDidCancel(player: AudioPlayer, queuedItems: [AudioEntryId]) {

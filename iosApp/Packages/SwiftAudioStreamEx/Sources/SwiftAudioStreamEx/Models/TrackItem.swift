@@ -10,6 +10,10 @@ public struct TrackItem: Sendable, Identifiable, Equatable {
     public let artworkURL: URL?
     public let duration: TimeInterval?
     public let metadata: [String: String]
+    /// Alternate URLs for the same audio file (e.g. the item's storage servers),
+    /// in preference order. Used only by CDN failure recovery when the primary
+    /// `url` cannot be resolved to a healthy host. Empty for local files.
+    public let fallbackURLs: [URL]
 
     public init(
         url: URL,
@@ -18,6 +22,7 @@ public struct TrackItem: Sendable, Identifiable, Equatable {
         albumTitle: String? = nil,
         artworkURL: URL? = nil,
         duration: TimeInterval? = nil,
+        fallbackURLs: [URL] = [],
         metadata: [String: String] = [:]
     ) {
         self.id = UUID()
@@ -27,6 +32,7 @@ public struct TrackItem: Sendable, Identifiable, Equatable {
         self.albumTitle = albumTitle
         self.artworkURL = artworkURL
         self.duration = duration
+        self.fallbackURLs = fallbackURLs
         self.metadata = metadata
     }
 

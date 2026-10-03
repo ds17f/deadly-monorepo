@@ -8,6 +8,11 @@ struct ArchiveTrack: Sendable, Equatable, Identifiable, Codable {
     let duration: String?   // raw seconds string from API: "423.12"
     let format: String      // "VBR MP3", "Flac", etc.
     let size: String?
+    /// Storage servers for the item (`workable_servers`, else `d1`/`d2`/`server`).
+    /// Optional so cache entries written before this field existed still decode.
+    var fallbackServers: [String]? = nil
+    /// Item directory on the storage servers, e.g. "/33/items/<identifier>".
+    var itemDir: String? = nil
 
     var id: String { name }
 
@@ -15,6 +20,20 @@ struct ArchiveTrack: Sendable, Equatable, Identifiable, Codable {
     func streamURL(recordingId: String) -> URL {
         let encoded = name.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? name
         return URL(string: "https://archive.org/download/\(recordingId)/\(encoded)")!
+    }
+
+    /// URLs of this file on the item's storage servers, in the order Archive lists
+    /// them. Used by the player as a fallback when the canonical redirect (and the
+    /// `dn*` CDN layer in front of the servers) fails. Empty when the metadata
+    /// was cached before these fields were stored.
+    func fallbackStreamURLs() -> [URL] {
+        guard let servers = fallbackServers, let dir = itemDir, !dir.isEmpty else { return [] }
+        let encodedName = name.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? name
+        let encodedDir = dir.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? dir
+        let normalizedDir = encodedDir.hasPrefix("/") ? encodedDir : "/" + encodedDir
+        return servers.compactMap { server in
+            URL(string: "https://\(server)\(normalizedDir)/\(encodedName)")
+        }
     }
 
     /// Human-readable duration string, e.g. "7:03". Nil if duration is missing or unparseable.

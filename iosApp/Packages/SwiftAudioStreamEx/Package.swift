@@ -17,7 +17,7 @@ let package = Package(
         ),
         .testTarget(
             name: "SwiftAudioStreamExTests",
-            dependencies: ["SwiftAudioStreamEx"]
+            dependencies: ["SwiftAudioStreamEx", "AudioStreaming"]
         ),
     ]
 )

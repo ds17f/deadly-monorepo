@@ -99,6 +99,7 @@ final class CarPlayTrackResolver {
                 albumTitle: albumTitle,
                 artworkURL: artworkURL,
                 duration: track.durationInterval,
+                fallbackURLs: track.fallbackStreamURLs(),
                 metadata: [
                     "showId": show.id,
                     "recordingId": recordingId,

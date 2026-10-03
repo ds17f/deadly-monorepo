@@ -2,7 +2,9 @@
 
 ## Status
 
-Proposed (2026-08-22).
+Accepted (2026-10-03). Proposed 2026-08-22.
+
+Phases 1 and 2 are implemented. Phase 3 is deferred (see Phase 3).
 
 This ADR covers the iOS streaming path in `SwiftAudioStreamEx`. It does not
 change Android or web playback.
@@ -31,6 +33,26 @@ seconds of successful resolution. The evidence does not support URL age as the
 initial cause. It does show that a resolved CDN endpoint can stop serving a
 track while the logical queue remains valid. Retrying the same CDN URL therefore
 does not repair the underlying condition.
+
+A later report in `bug-reports/cant-reach-archive` (2.42.0, 2026-10-02) shows
+the same failure on a resolved URL that was 6 hours 45 minutes old. The user
+paused the show, resumed it 6.5 hours later, and skipped to track 17. The
+`ia800504.us.archive.org` URL for track 15 continued to play. The
+`dn720303.ca.archive.org` URL for track 17 failed on all three automatic
+retries and on two manual retries. The manual Retry used the same stale URL.
+
+All failed URLs in all reports are on `dn7203xx.ca.archive.org` hosts. A manual
+test on 2026-10-03 got a mix of HTTP 500 and success from these URLs. Some URLs
+returned 500 and then worked on a second request. The same files on the
+item's `ia*.us.archive.org` storage servers played correctly.
+
+The Archive metadata API lists the storage servers for each item. For example,
+`https://archive.org/metadata/gd77-10-28.sbd.munder.8520.sbeok.shnf` returns
+`dir=/33/items/gd77-10-28.sbd.munder.8520.sbeok.shnf` and
+`workable_servers=[ia800504.us.archive.org, ia600504.us.archive.org]`. The
+`dn*` hosts are not in this list. They are a layer in front of the storage
+servers. The URL of a file on a storage server is
+`https://<server><dir>/<file>`.
 
 The current retry path already stops AudioStreaming. This is important because
 `AudioPlayer.stop()` destroys its internal forward queue. Each retry currently
@@ -127,6 +149,35 @@ the acceptance rule.
 Resolution has a per-request timeout and uses the existing bounded retry
 deadline. Failure to resolve or validate a URL never silently substitutes an
 unvalidated stale CDN URL.
+
+### 2a. Fall back to the item's storage servers
+
+Each track has an ordered list of candidate URLs. The resolver tries each
+candidate in sequence and accepts the first candidate that passes the ranged
+validation:
+
+1. The canonical `archive.org/download/...` URL, with redirects followed. This
+   keeps Archive's own routing when it works.
+2. The same file on each server in the item's `workable_servers` list, in the
+   order that Archive gives. Each URL is `https://<server><dir>/<file>`.
+
+During one recovery, a host that failed validation moves to the end of the
+candidate order for the remaining tracks. This memory is in RAM only and the
+engine clears it when the recovery ends. The app does not keep a persistent
+history of hosts, because host health changes and depends on the network.
+
+`SwiftAudioStreamEx` stays independent of Archive. `TrackItem` gets an
+optional `fallbackURLs: [URL]` list (default empty). The app builds this list
+from the metadata fields `server`, `dir`, and `workable_servers`. The
+`ArchiveMetadataClient` decodes these fields with the track list. An old cache
+entry without these fields gives an empty list. In that case recovery uses
+only the canonical URL until the cache entry expires.
+
+A local file URL (a downloaded track) never enters CDN recovery.
+
+The canonical redirect stays the default URL for the first play. The storage
+servers are a fallback only. Archive added the `dn*` layer in front of them,
+and the redirect is the URL that Archive expects clients to use.
 
 Refresh work is prioritized as follows:
 
@@ -378,8 +429,17 @@ adapter is wired to the same CDN seam.
 
 ### Phase 2 — Foreground CDN recovery
 
-- Introduce a small production URL resolver using an ephemeral session, ranged
-  validation, explicit timeout, and structured result.
+- Before Phase 2, fix the Phase 1 review items: clear `cdnRecovery` on skip,
+  previous, stop, and manual Retry, and log the cancel reason; make `stop()`
+  and skips cancel a scheduled retry; read only the response headers in the
+  HTTP probe; attach a watchdog stall during an active CDN recovery to that
+  recovery; make `shouldBePlaying` follow pause, queue end, and the surfaced
+  error.
+- Add a small production URL resolver. It uses an ephemeral session, ranged
+  validation, an explicit timeout, and a structured result. It tries the
+  candidate list defined in §2a.
+- Add `TrackItem.fallbackURLs` and decode `server`, `dir`, and
+  `workable_servers` in `ArchiveMetadataClient`.
 - Complete `CDNRecovery` generation/cancellation state.
 - Replace same-resolved-URL retry **only for `.cdnServer`** with canonical
   current/next refresh.
@@ -388,6 +448,13 @@ adapter is wired to the same CDN seam.
 - Add generation guards to every new asynchronous completion.
 
 ### Phase 3 — Whole-queue background reconstruction
+
+**Status: deferred (2026-10-03).** Phase 2 refreshes only the current and the
+next track. The other tracks keep their old resolved URLs. If one of these URLs
+fails when playback reaches it, the same Phase 2 recovery repairs it. The user
+hears a pause of about 1 to 3 seconds. Phase 2 alone recovers the failure in
+`bug-reports/cant-reach-archive`. Do Phase 3 only if field reports show
+repeated recovery pauses later in a show.
 
 - Resolve all remaining canonical URLs with the defined priority and concurrency
   cap.
@@ -419,6 +486,9 @@ Tests cover:
 - the hole resolving and flushing one ordered contiguous range;
 - previous tracks refreshing without entering the forward player queue;
 - canonical redirect returning the same now-healthy CDN host;
+- canonical redirect failing validation and a `workable_servers` URL accepted;
+- a host that failed once moving to the end of the order for later tracks;
+- an empty `fallbackURLs` list using only the canonical URL;
 - non-2xx validation, timeout, and retry exhaustion;
 - a second recovery invalidating first-generation completions;
 - a new queue load, skip, or stop canceling recovery;
