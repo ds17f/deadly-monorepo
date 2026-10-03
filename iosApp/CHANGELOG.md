@@ -1,11 +1,15 @@
 # Changelog
 
+## [2.42.1] - 2026-10-03
+
+### Bug Fixes
+* recover from failed Archive CDN URLs (#99) (395e7f4f)
+
+
 ## [2.42.0] - 2026-08-18
 
 ### New Features
 * add Now Playing metadata preference (#98) (f83aca54)
-
-
 ## [2.41.0] - 2026-06-20
 
 ### New Features
