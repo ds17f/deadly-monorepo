@@ -171,7 +171,7 @@ public final class StreamPlayer {
         remoteCommandManager.setup()
 
         let urls = tracks.map(\.url)
-        engine.loadQueue(urls: urls, startingAt: startIndex, autoPlay: autoPlay)
+        engine.loadQueue(urls: urls, fallbackURLs: tracks.map(\.fallbackURLs), startingAt: startIndex, autoPlay: autoPlay)
 
         updateNowPlaying()
         nowPlayingManager.loadArtwork(from: currentTrack?.artworkURL)
@@ -354,6 +354,22 @@ public final class StreamPlayer {
         engine.debugInjectNetworkFailure()
     }
 
+#if DEBUG
+    /// Inject a deterministic CDN server failure at the production dispatcher
+    /// seam. Returns the recovery ID included in persisted playback logs.
+    @discardableResult
+    public func debugSimulateCDNFailure() -> Int? {
+        engine.debugSimulateCDNFailure()
+    }
+
+    /// Debug: reject `dn*.archive.org` hosts during CDN recovery and delay each
+    /// attempt by 4s. Not persisted.
+    /// Stored (not forwarded) so `@Observable` tracks it and the toggle redraws.
+    public var debugForceCDNFallback = false {
+        didSet { engine.debugForceCDNFallback = debugForceCDNFallback }
+    }
+#endif
+
     /// Force the stale-generation race so the bug is user-visible.
     ///
     /// Loads the queue TWICE in quick succession with a 3s delay injected on
@@ -412,7 +428,7 @@ public final class StreamPlayer {
 
     public func append(_ track: TrackItem) {
         tracks.append(track)
-        engine.appendTrack(url: track.url)
+        engine.appendTrack(url: track.url, fallbackURLs: track.fallbackURLs)
         updateQueueState(index: engine.currentIndex)
     }
 
@@ -423,7 +439,7 @@ public final class StreamPlayer {
         } else {
             tracks.append(track)
         }
-        engine.insertNext(url: track.url)
+        engine.insertNext(url: track.url, fallbackURLs: track.fallbackURLs)
         updateQueueState(index: engine.currentIndex)
     }
 

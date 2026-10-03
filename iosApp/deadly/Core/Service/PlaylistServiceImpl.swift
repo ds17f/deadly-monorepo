@@ -335,6 +335,7 @@ final class PlaylistServiceImpl: PlaylistService {
                 albumTitle: albumTitle,
                 artworkURL: artworkURL,
                 duration: track.durationInterval,
+                fallbackURLs: track.fallbackStreamURLs(),
                 metadata: [
                     "showId": showId,
                     "recordingId": recordingId,

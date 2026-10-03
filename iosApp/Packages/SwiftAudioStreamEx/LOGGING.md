@@ -76,6 +76,34 @@ Values we treat as `.public`:
 If you ever interpolate something genuinely sensitive (auth tokens, user
 emails), use `, privacy: .private` explicitly and add a comment.
 
+## Network failure and CDN recovery events
+
+Network incidents are correlated by `kind=connectivity|cdn`,
+`source=player|watchdog|developer|manualRetry`, `loadGeneration`, and, for CDN
+recovery, `recoveryId`. Filter a bug report by `recoveryId=N` to get the whole
+timeline of one incident. See ADR-0019.
+
+| Message prefix                              | Meaning                                              |
+|---------------------------------------------|------------------------------------------------------|
+| `[PB] network failure dispatched`           | Failure received (`promotedFrom=connectivity` for a watchdog stall inside a CDN recovery) |
+| `[PB] CDN recovery started`                 | Recovery begins (`behavior=canonicalRefresh`)        |
+| `[PB] CDN recovery skipped`                 | Local file: same-URL retry is used (`reason=localFile`) |
+| `[PB] CDN recovery resolving`               | One resolution round (`attempt=N`)                   |
+| `[PB] CDN resolve attempt`                  | One candidate: `track`, `cand`, `requestedHost`, `finalHost`, `status`, `error=domain:code`, `ms` |
+| `[PB] CDN resolve failed`                   | No candidate for a track passed validation           |
+| `[PB] CDN recovery foreground ready`        | Current (and next) track validated                   |
+| `[PB] CDN recovery play submitted`          | `play(url:)` called with the new URL                 |
+| `[PB] CDN recovery prepared paused`         | Recovered while paused; no audio started             |
+| `[PB] CDN recovery attempt failed after start` | New URL failed too; its host is demoted           |
+| `[PB] CDN recovery retry scheduled`         | Next round after backoff                             |
+| `[PB] CDN recovery cancelled ... reason=`   | `newQueue`, `stop`, `skip`, `previous`, `skipTo`     |
+| `[PB] CDN recovery succeeded`               | Playback resumed (`elapsedMs`)                       |
+| `[PB] CDN recovery exhausted`               | Budget spent; error shown to the user                |
+| `[PB] retry scheduled ... behavior=sameURLRetry` | Connectivity retry of the same URL              |
+
+Logs contain hosts, status codes, indices, and `domain:code` only. Do not log
+response bodies or localized error text.
+
 ## Reading logs
 
 ### Live from a tethered Mac

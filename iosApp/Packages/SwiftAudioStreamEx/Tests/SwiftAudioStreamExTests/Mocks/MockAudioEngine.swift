@@ -1,3 +1,4 @@
+import AVFoundation
 import Foundation
 @testable import SwiftAudioStreamEx
 
@@ -12,7 +13,7 @@ final class MockAudioEngine: AudioEngineProtocol {
     var onStateChange: ((PlaybackState) -> Void)?
     var onTrackComplete: (() -> Void)?
     var onProgressUpdate: ((PlaybackProgress) -> Void)?
-    var onError: ((StreamPlayerError) -> Void)?
+    var onError: ((StreamPlayerError, TimeInterval?) -> Void)?
 
     func load(url: URL) {
         loadedURL = url
@@ -49,6 +50,10 @@ final class MockAudioEngine: AudioEngineProtocol {
         onStateChange?(.idle)
     }
 
+    func attachAudioNode(_ node: AVAudioNode) {}
+
+    func detachAudioNode(_ node: AVAudioNode) {}
+
     // Simulate track completion for testing
     func simulateTrackComplete() {
         onTrackComplete?()
@@ -59,6 +64,6 @@ final class MockAudioEngine: AudioEngineProtocol {
     }
 
     func simulateError(_ error: StreamPlayerError) {
-        onError?(error)
+        onError?(error, nil)
     }
 }

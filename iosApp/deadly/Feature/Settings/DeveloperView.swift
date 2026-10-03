@@ -113,6 +113,20 @@ struct DeveloperView: View {
                     container.streamPlayer.debugInjectNetworkError()
                 }
 
+#if DEBUG
+                Button("Simulate CDN Failure") {
+                    if let recoveryID = container.streamPlayer.debugSimulateCDNFailure() {
+                        container.toastPresenter.show("Simulated CDN failure · recovery \(recoveryID)")
+                    }
+                }
+                .disabled(container.streamPlayer.currentTrack == nil || container.streamPlayer.isRetrying)
+
+                Toggle("Force CDN Fallback", isOn: Binding(
+                    get: { container.streamPlayer.debugForceCDNFallback },
+                    set: { container.streamPlayer.debugForceCDNFallback = $0 }
+                ))
+#endif
+
                 Button("Force Stale-Gen Race") {
                     container.streamPlayer.debugForceRaceCondition()
                 }

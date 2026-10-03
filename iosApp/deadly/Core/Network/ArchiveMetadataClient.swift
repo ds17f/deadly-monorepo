@@ -122,6 +122,7 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
         }
 
         let audioExtensions: Set<String> = ["mp3"]
+        let (servers, itemDir) = storageServers(from: json)
 
         let tracks = files.compactMap { file -> ArchiveTrack? in
             guard let name = file["name"] as? String else { return nil }
@@ -143,7 +144,9 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
                 trackNumber: trackNumber,
                 duration: duration,
                 format: format,
-                size: size
+                size: size,
+                fallbackServers: servers.isEmpty ? nil : servers,
+                itemDir: itemDir
             )
         }
 
@@ -151,6 +154,21 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
             if a.trackNumber != b.trackNumber { return a.trackNumber < b.trackNumber }
             return a.name < b.name
         }
+    }
+
+    /// Storage servers and item directory from the item-level metadata. Prefers
+    /// `workable_servers`; older items may only have `d1`, `d2`, and `server`.
+    private static func storageServers(from json: [String: Any]) -> (servers: [String], dir: String?) {
+        var servers: [String] = []
+        if let workable = json["workable_servers"] as? [String] {
+            servers = workable
+        } else {
+            servers = ["d1", "d2", "server"].compactMap { json[$0] as? String }
+        }
+        var seen = Set<String>()
+        servers = servers.filter { !$0.isEmpty && seen.insert($0).inserted }
+        let dir = (json["dir"] as? String).flatMap { $0.isEmpty ? nil : $0 }
+        return (servers, dir)
     }
 
     static func parseReviews(from data: Data) -> [Review] {
