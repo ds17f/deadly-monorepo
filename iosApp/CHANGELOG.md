@@ -1,11 +1,15 @@
 # Changelog
 
+## [2.43.0] - 2026-10-05
+
+### New Features
+* add 528 new recordings from data 2.4.1 (#101) (110f669e)
+
+
 ## [2.42.1] - 2026-10-03
 
 ### Bug Fixes
 * recover from failed Archive CDN URLs (#99) (395e7f4f)
-
-
 ## [2.42.0] - 2026-08-18
 
 ### New Features
