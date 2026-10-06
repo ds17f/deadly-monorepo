@@ -86,8 +86,10 @@ data/stage01-collected-data/
 data/stage02-generated-data/
 data/stage02-processed-data/
 data/stage03-search-data/
-# `make data-download-stage01` unzips the prefix-less stage01 cache into data/
-# root (not data/stage01-collected-data/), so ignore its contents here too.
+# Pinned stage01 cache that `make data-diff-stage01` downloads for comparison.
+data/.stage01-cache/
+# Older `make data-download-stage01` extracted into data/ root. Keep these
+# ignored so a leftover 1GB cache is never committed.
 data/archive/
 data/jerrygarcia/
 data/data.zip

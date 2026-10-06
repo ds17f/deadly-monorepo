@@ -713,7 +713,8 @@ class JerryGarciaShowIntegrator:
             r.source_type == 'MATRIX',  # Prefer MATRIX over AUD sources
             r.review_count >= 5,
             r.rating,
-            r.review_count
+            r.review_count,
+            r.identifier  # Stable tie-break, so equal recordings pick the same way in each build
         ), reverse=True)
         
         best_recording = filtered_recordings[0]

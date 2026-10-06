@@ -40,7 +40,7 @@ help:
 	@echo "  download-stage01          - Download stage01 cache from GitHub Release"
 	@echo "  upload-stage01            - Upload stage01 cache as a new release and pin it in stage01-release"
 	@echo "  download-data VERSION=X   - Download a released data.zip by version"
-	@echo "  diff-stage01              - Summarize new/missing recordings: archive/ (published) vs stage01-collected-data/archive (fresh)"
+	@echo "  diff-stage01              - Summarize new/missing recordings: pinned cache vs stage01-collected-data/archive (fresh)"
 	@echo ""
 	@echo "  setup-review-processor    - Set up review processor Python environment (one-time)"
 	@echo "  process-reviews PATTERN=X - Process shows with LLM analysis"
@@ -149,13 +149,25 @@ download-stage01:
 		--output /tmp/stage01-collected-data.zip \
 		--clobber
 	@echo "Extracting stage01..."
-	unzip -qo /tmp/stage01-collected-data.zip -d .
+	mkdir -p stage01-collected-data
+	unzip -qo /tmp/stage01-collected-data.zip -d stage01-collected-data
 	rm /tmp/stage01-collected-data.zip
-	@echo "stage01-collected-data/ restored."
+	@echo "stage01-collected-data/ restored from $(STAGE01_RELEASE)."
 
-# Summarize recordings added/missing in a fresh collection vs the published cache
+# Summarize recordings added/missing in a fresh collection vs the pinned
+# (published) cache. Downloads the pinned cache once into .stage01-cache/.
+STAGE01_PINNED_DIR = .stage01-cache/$(STAGE01_RELEASE)
 diff-stage01:
-	python scripts/diff_stage01.py $(if $(FORMAT),--format $(FORMAT))
+	@if [ ! -d $(STAGE01_PINNED_DIR)/archive ]; then \
+		echo "Downloading pinned cache $(STAGE01_RELEASE) for comparison..." >&2; \
+		gh release download $(STAGE01_RELEASE) --repo $(REPO) \
+			--pattern 'stage01-collected-data.zip' \
+			--output /tmp/stage01-pinned.zip --clobber >&2 && \
+		mkdir -p $(STAGE01_PINNED_DIR) && \
+		unzip -qo /tmp/stage01-pinned.zip -d $(STAGE01_PINNED_DIR) && \
+		rm /tmp/stage01-pinned.zip; \
+	fi
+	python scripts/diff_stage01.py --old $(STAGE01_PINNED_DIR)/archive $(if $(FORMAT),--format $(FORMAT))
 
 # Upload the current stage01 cache as a NEW GitHub Release and pin it in
 # stage01-release. Releases are immutable: this refuses to overwrite one.

@@ -42,8 +42,15 @@ jobs:
 
       - name: Download data for UI build
         run: |
-          curl -fSL -o /tmp/data.zip \
-            "https://github.com/${{ github.repository }}/releases/download/data-v${{ steps.data.outputs.version }}/data.zip"
+          # A data/version bump is pushed together with its data-v* tag, and
+          # Data - Release needs a few minutes to publish data.zip. Wait for it.
+          url="https://github.com/${{ github.repository }}/releases/download/data-v${{ steps.data.outputs.version }}/data.zip"
+          for i in $(seq 1 30); do
+            curl -fsSL -o /tmp/data.zip "$url" && break
+            [ "$i" = 30 ] && { echo "::error::data.zip not published at $url"; exit 1; }
+            echo "data.zip not published yet ($i/30). Waiting 30s..."
+            sleep 30
+          done
           mkdir -p ui/data
           unzip -qo /tmp/data.zip -d ui/data/
           echo "Data: $(ls ui/data/shows/ | wc -l) shows, $(ls ui/data/recordings/ | wc -l) recordings"
