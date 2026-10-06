@@ -5,13 +5,17 @@
 .PHONY: collect-archive-data collect-jerrygarcia-shows collect-show-image-urls collect-show-image-files
 .PHONY: generate-recordings integrate-shows process-collections
 .PHONY: package-data package-data-versioned package-release package-dev package-catalog-db
-.PHONY: download-stage01 upload-stage01 download-data
+.PHONY: download-stage01 upload-stage01 download-data diff-stage01
 .PHONY: process-reviews setup-review-processor extract-ai-reviews clean-ai-reviews
 .PHONY: all clean
 
 VERSION   ?= $(shell cat version)
 REPO      ?= ds17f/deadly-monorepo
-STAGE01_RELEASE ?= data-stage01-v1
+# The stage01 cache release that stage02 builds from. Pinned in a committed file
+# so each data-v* tag records exactly which cache built it.
+STAGE01_RELEASE ?= $(shell cat stage01-release)
+# Tag for a new cache upload. Each upload is a new release; old ones are never changed.
+STAGE01_TAG     ?= data-stage01-$(shell date -u +%Y%m%d)
 
 # Default help
 help:
@@ -34,8 +38,9 @@ help:
 	@echo "  package-dev               - Create development build with commit hash"
 	@echo ""
 	@echo "  download-stage01          - Download stage01 cache from GitHub Release"
-	@echo "  upload-stage01            - Zip and upload stage01 cache as GitHub Release"
+	@echo "  upload-stage01            - Upload stage01 cache as a new release and pin it in stage01-release"
 	@echo "  download-data VERSION=X   - Download a released data.zip by version"
+	@echo "  diff-stage01              - Summarize new/missing recordings: archive/ (published) vs stage01-collected-data/archive (fresh)"
 	@echo ""
 	@echo "  setup-review-processor    - Set up review processor Python environment (one-time)"
 	@echo "  process-reviews PATTERN=X - Process shows with LLM analysis"
@@ -148,15 +153,28 @@ download-stage01:
 	rm /tmp/stage01-collected-data.zip
 	@echo "stage01-collected-data/ restored."
 
-# Upload current stage01 cache as a GitHub Release asset
+# Summarize recordings added/missing in a fresh collection vs the published cache
+diff-stage01:
+	python scripts/diff_stage01.py $(if $(FORMAT),--format $(FORMAT))
+
+# Upload the current stage01 cache as a NEW GitHub Release and pin it in
+# stage01-release. Releases are immutable: this refuses to overwrite one.
 upload-stage01:
+	@if gh release view $(STAGE01_TAG) --repo $(REPO) >/dev/null 2>&1; then \
+		echo "Release $(STAGE01_TAG) already exists. Stage01 releases are immutable."; \
+		echo "Use a different tag: make upload-stage01 STAGE01_TAG=data-stage01-YYYYMMDD-2"; \
+		exit 1; \
+	fi
 	@echo "Zipping stage01-collected-data/..."
-	cd stage01-collected-data && zip -r ../stage01-collected-data.zip .
-	@echo "Uploading to $(REPO) release $(STAGE01_RELEASE)..."
-	gh release upload $(STAGE01_RELEASE) stage01-collected-data.zip \
-		--repo $(REPO) --clobber
+	cd stage01-collected-data && zip -qr ../stage01-collected-data.zip .
+	@echo "Creating release $(STAGE01_TAG) in $(REPO)..."
+	gh release create $(STAGE01_TAG) stage01-collected-data.zip \
+		--repo $(REPO) --latest=false \
+		--title "Stage01 cache $(STAGE01_TAG)" \
+		--notes "Raw Archive.org + jerrygarcia.com API cache (stage01). Data releases that pin this tag in data/stage01-release build from it."
 	rm stage01-collected-data.zip
-	@echo "stage01 uploaded to release $(STAGE01_RELEASE)."
+	echo "$(STAGE01_TAG)" > stage01-release
+	@echo "Uploaded $(STAGE01_TAG) and pinned it in data/stage01-release. Commit that file."
 
 # Download a specific versioned data.zip from GitHub Releases
 download-data:

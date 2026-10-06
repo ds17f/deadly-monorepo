@@ -10,7 +10,7 @@ This directory contains the Grateful Dead concert metadata pipeline, part of the
 ## Directory Structure
 
 - `stage00-created-data/` — AI reviews + collections (committed, source of truth)
-- `stage01-collected-data/` — API cache from Archive.org + jerrygarcia.com (gitignored, stored as GitHub Release `data-stage01-v1`)
+- `stage01-collected-data/` — API cache from Archive.org + jerrygarcia.com (gitignored, stored as immutable GitHub Releases `data-stage01-*`; `stage01-release` pins the one that CI builds from)
 - `stage02-generated-data/` — Generated from stage00 + stage01 (gitignored, built by CI)
 - `scripts/` — Python pipeline scripts
 - `version` — Single source of truth for the current data version, read by all platforms and CI

@@ -16,7 +16,7 @@
 .PHONY: android-build android-emulator android-emu-list android-emu-stop android-run-emulator
 .PHONY: ios-build ios-sim ios-test ios-resolve ios-device ios-log
 .PHONY: infra-init infra-plan infra-apply infra-retry infra-destroy infra-output web-deploy web-promote infra-logs infra-ssh images-build
-.PHONY: data-download data-generate data-package data-build-db data-download-stage01 data-upload-stage01 data-collect data-release data-clean
+.PHONY: data-download data-generate data-package data-build-db data-download-stage01 data-diff-stage01 data-upload-stage01 data-collect data-release data-clean
 .PHONY: db-backup-list db-restore db-pull-analytics db-pull-users db-pull
 
 # Load KEYCHAIN_PASSWORD from .env if not set in environment.
@@ -940,6 +940,10 @@ data-build-db:
 # Download stage01 API cache from GitHub Release
 data-download-stage01:
 	@$(MAKE) -C data download-stage01
+
+# Summarize new/missing recordings after a fresh collection (FORMAT=markdown optional)
+data-diff-stage01:
+	@$(MAKE) -s -C data diff-stage01 $(if $(FORMAT),FORMAT=$(FORMAT))
 
 # Upload stage01 API cache to GitHub Release
 data-upload-stage01:
