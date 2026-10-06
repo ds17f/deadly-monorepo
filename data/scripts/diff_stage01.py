@@ -6,7 +6,7 @@ Use it after `make collect-archive-data` to see which recordings are new
 before you upload the cache and cut a data release.
 
 Defaults:
-  --old archive/                        (the published cache, from `make download-stage01`)
+  --old archive/                        (use `make diff-stage01`: it passes the pinned cache)
   --new stage01-collected-data/archive  (the fresh collection)
 
 Reports:
@@ -17,8 +17,8 @@ Reports:
     you upload, or the upload drops them.
 
 Usage:
-    python scripts/diff_stage01.py
-    python scripts/diff_stage01.py --format markdown > new-recordings.md
+    make diff-stage01
+    make diff-stage01 FORMAT=markdown > new-recordings.md
     python scripts/diff_stage01.py --old /path/to/old --new /path/to/new
 """
 

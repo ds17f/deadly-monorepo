@@ -35,10 +35,17 @@ jobs:
         run: |
           DATA_VERSION=$(cat data/version | tr -d '[:space:]')
           echo "Fetching data-v${DATA_VERSION} release..."
-          gh release download "data-v${DATA_VERSION}" \
-            --repo "${{ github.repository }}" \
-            --pattern 'data.zip' \
-            --output /tmp/data.zip
+          # A data/version bump is pushed together with its data-v* tag, and
+          # Data - Release needs a few minutes to publish data.zip. Wait for it.
+          for i in $(seq 1 30); do
+            gh release download "data-v${DATA_VERSION}" \
+              --repo "${{ github.repository }}" \
+              --pattern 'data.zip' \
+              --output /tmp/data.zip --clobber && break
+            [ "$i" = 30 ] && { echo "::error::data-v${DATA_VERSION} has no data.zip"; exit 1; }
+            echo "data.zip not published yet ($i/30). Waiting 30s..."
+            sleep 30
+          done
           mkdir -p ui/data
           unzip -q /tmp/data.zip -d ui/data
           rm /tmp/data.zip
