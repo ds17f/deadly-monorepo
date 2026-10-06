@@ -1,0 +1,13 @@
+{
+  "_comment": "Archive.org recordings with a wrong `date`. Stage02 uses the corrected date in place of the Archive.org date, so the recording attaches to the right show. Key = Archive.org identifier. See scripts/shared/date_corrections.py.",
+  "corrections": {
+    "gd1978-04-04.176217.shure.sm57s.kenninger.mattes.carbonetta.sirmick.flac1644": {
+      "date": "1978-04-14",
+      "reason": "Cassell Coliseum, Blacksburg VA was 1978-04-14 (jerrygarcia.com). Setlist matches 4/14 exactly; Archive.org review: \"It's 4/14, not 4/4\"."
+    },
+    "gd1978-04-04.176218.shure.sm57s.kenninger.mattes.carbonetta.sirmick.flac2496": {
+      "date": "1978-04-14",
+      "reason": "24-bit version of the same tape as .176217."
+    }
+  }
+}

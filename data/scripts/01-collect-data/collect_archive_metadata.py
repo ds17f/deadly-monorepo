@@ -134,8 +134,8 @@ class ArchiveMetadataCollector:
         if not date_str:
             return None
             
-        # Remove time component if present
-        date_str = date_str.split('T')[0]
+        # Remove time component if present ("1983-06-28T00:00:00" or "1983-06-28 00:00:00")
+        date_str = date_str.split('T')[0].split(' ')[0]
         
         # Handle YYYY-MM-DD (already normalized)
         if re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):

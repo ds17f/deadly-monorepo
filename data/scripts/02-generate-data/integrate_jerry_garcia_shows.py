@@ -35,6 +35,7 @@ import logging
 # Add shared module to path
 sys.path.append(str(Path(__file__).parent.parent))
 from shared.models import RecordingMetadata, ProcessedRecordingMetadata, processed_recording_to_dict
+from shared.date_corrections import apply_date_correction
 from shared.recording_utils import improve_source_type_detection, detect_recording_time, normalize_venue_name, calculate_venue_similarity
 from shared.hornsby import HORNSBY_ABSENT_DATES
 
@@ -541,7 +542,7 @@ class JerryGarciaShowIntegrator:
             try:
                 with open(recording_file, 'r') as f:
                     data = json.load(f)
-                recording_meta = RecordingMetadata(**data)
+                recording_meta = RecordingMetadata(**apply_date_correction(data))
                 # Use normalized_date for grouping
                 recordings_by_date[recording_meta.normalized_date].append(recording_meta)
             except Exception as e:

@@ -24,7 +24,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           cd data
-          gh release download data-stage01-v1 \
+          STAGE01_RELEASE="$(cat stage01-release)"
+          echo "STAGE01_RELEASE=$STAGE01_RELEASE" >> "$GITHUB_ENV"
+          gh release download "$STAGE01_RELEASE" \
             --repo "${{ github.repository }}" \
             --pattern 'stage01-collected-data.zip' \
             --output /tmp/stage01-collected-data.zip
@@ -71,4 +73,4 @@ jobs:
             data/catalog.db.zip \
             --repo "${{ github.repository }}" \
             --title "Data ${{ steps.version.outputs.version }}" \
-            --notes "Data pipeline release v${{ steps.version.outputs.version }}. Contains show metadata, recordings, and collections for all platforms. Assets: data.zip (JSON, legacy import) and catalog.db.zip (prebuilt SQLite catalog seed, see ADR-0007)."
+            --notes "Data pipeline release v${{ steps.version.outputs.version }}. Contains show metadata, recordings, and collections for all platforms. Assets: data.zip (JSON, legacy import) and catalog.db.zip (prebuilt SQLite catalog seed, see ADR-0007). Built from stage01 cache ${{ env.STAGE01_RELEASE }}."
