@@ -1,11 +1,15 @@
 # Changelog
 
+## [2.43.0] - 2026-10-05
+
+### New Features
+* add 528 new recordings from data 2.4.1 (#101) (110f669e)
+
+
 ## [2.42.0] - 2026-08-18
 
 ### New Features
 * add Now Playing metadata preference (#98) (f83aca54)
-
-
 ## [2.41.0] - 2026-06-20
 
 ### New Features
