@@ -1,6 +1,6 @@
 import type { WebSocket } from "ws";
-import type { ConnectState, ConnectDevice, DeviceType, SessionTrack } from "./types.js";
-import { LEGACY_PROTOCOL_VERSION } from "./types.js";
+import type { ConnectState, ConnectDevice, DeviceType, SessionTrack, RegisterMessage } from "./types.js";
+import { LEGACY_PROTOCOL_VERSION, HANDSHAKE_PROTOCOL_VERSION } from "./types.js";
 import { connectDisabledCloseCode } from "./protocol.js";
 import { upsertPlaybackPosition as dbUpsertPlaybackPosition, getPlaybackPosition } from "../db/userdata.js";
 
@@ -45,6 +45,7 @@ const userStates = new Map<string, ConnectState>();
 const liveDevices = new Map<string, LiveDevice>();
 
 interface PendingTransfer {
+  sourceDeviceId: string;
   targetDeviceId: string;
   interpolatedPositionMs: number;
   wasPlaying: boolean;
@@ -96,6 +97,7 @@ function initialState(): ConnectState {
     positionTs: Date.now(),
     durationMs: 0,
     seekNonce: 0,
+    trackNonce: 0,
     playing: false,
     activeDeviceId: null,
     activeDeviceName: null,
@@ -215,6 +217,7 @@ export function registerDevice(
   socket: WebSocket,
   protocolVersion: number = LEGACY_PROTOCOL_VERSION,
   appVersion: string | null = null,
+  handshake?: RegisterMessage["handshake"],
 ): void {
   const key = deviceKey(userId, deviceId);
 
@@ -235,10 +238,87 @@ export function registerDevice(
   liveDevices.set(key, { device, socket, protocolVersion, appVersion });
 
   const state = getOrCreateState(userId);
-  log(`registerDevice: ${name}[${type}] (${deviceId}) proto=${protocolVersion} app=${appVersion ?? "?"} — sending state v${state.version} show=${state.showId} rec=${state.recordingId} track=${state.trackIndex}/${state.tracks.length} pos=${state.positionMs} playing=${state.playing}`);
+  log(`registerDevice: ${name}[${type}] (${deviceId}) proto=${protocolVersion} app=${appVersion ?? "?"} — state v${state.version} show=${state.showId} rec=${state.recordingId} track=${state.trackIndex}/${state.tracks.length} pos=${state.positionMs} playing=${state.playing}`);
   logProtocolDistribution(userId);
-  sendJson(socket, { type: "state", state });
+
+  // ADR-0016 §3: full-state handshake. If a proto-3 device declares it holds live
+  // audio, adopt that as the authoritative session BEFORE the first broadcast, so
+  // its own first `state` (and every other device's) reflects the live device — not
+  // the server's stale memory. This closes the reconnect stale-snapshot clobber
+  // (recording-divergence / self-resume-of-pause) at the source instead of having
+  // each client special-case it. When adopted, `mutate` already broadcast the fresh
+  // state to this socket, so skip the redundant direct send.
+  const adopted =
+    protocolVersion >= HANDSHAKE_PROTOCOL_VERSION &&
+    handshake != null &&
+    applyHandshake(userId, deviceId, handshake);
+  if (!adopted) {
+    sendJson(socket, { type: "state", state });
+  }
   broadcastDevices(userId);
+}
+
+/**
+ * Adopt a (re)connecting device's declared playback state as authoritative
+ * (ADR-0016 §3). Conservative, mirroring the ownership lease (ADR-0011 §2): only a
+ * device actually PLAYING claims, and it FILLS A VACUUM — it never preempts a
+ * different device that currently owns the session. Returns true if it mutated
+ * (which broadcasts the fresh state to all of the user's sockets).
+ */
+function applyHandshake(
+  userId: string,
+  deviceId: string,
+  hs: NonNullable<RegisterMessage["handshake"]>,
+): boolean {
+  if (!hs.playing || !hs.recordingId) return false; // only a producing device asserts
+  const state = userStates.get(userId);
+  if (!state) return false;
+  // Never preempt a DIFFERENT live owner — that device is the authority (and a
+  // handshake that clobbered it would recreate the very split-brain we're closing).
+  if (state.activeDeviceId && state.activeDeviceId !== deviceId) return false;
+  const entry = liveDevices.get(deviceKey(userId, deviceId));
+  if (!entry) return false;
+
+  log(`applyHandshake: ${entry.device.name}[${entry.device.type}] asserts rec=${hs.recordingId} track=${hs.trackIndex} pos=${hs.positionMs} — adopting as authoritative`);
+  mutate(userId, {
+    showId: hs.showId ?? state.showId,
+    recordingId: hs.recordingId,
+    tracks: hs.tracks && hs.tracks.length > 0 ? hs.tracks : state.tracks,
+    trackIndex: hs.trackIndex,
+    positionMs: hs.positionMs,
+    positionTs: Date.now(),
+    durationMs: hs.durationMs && hs.durationMs > 0 ? hs.durationMs : state.durationMs,
+    playing: true,
+    activeDeviceId: deviceId,
+    activeDeviceName: entry.device.name,
+    activeDeviceType: entry.device.type,
+    date: hs.date ?? state.date,
+    venue: hs.venue ?? state.venue,
+    location: hs.location ?? state.location,
+    // A live device reconnecting supersedes any stale end-of-show countdown.
+    pendingAdvance: null,
+  });
+
+  upsertPlaybackPosition(userId, {
+    showId: hs.showId ?? state.showId ?? "",
+    recordingId: hs.recordingId,
+    trackIndex: hs.trackIndex,
+    positionMs: hs.positionMs,
+    date: hs.date ?? state.date ?? undefined,
+    venue: hs.venue ?? state.venue ?? undefined,
+    location: hs.location ?? state.location ?? undefined,
+    updatedAt: Date.now(),
+  });
+  return true;
+}
+
+// Refresh a registered device's liveness on ANY inbound message, not just the
+// 15s `heartbeat`. A backgrounded active device whose heartbeat timer is throttled
+// but which is still streaming `position` reports every second was otherwise
+// evicted at the 45s sweep despite continuous traffic — a self-inflicted ghost.
+export function touchDevice(userId: string, deviceId: string): void {
+  const entry = liveDevices.get(deviceKey(userId, deviceId));
+  if (entry) entry.device.lastHeartbeat = Date.now();
 }
 
 // Apply the global Connect gate to already-connected devices so an admin change
@@ -281,10 +361,24 @@ function logProtocolDistribution(userId: string): void {
   log(`protocolDistribution: ${userId} — ${dist}`);
 }
 
-export function unregisterDevice(userId: string, deviceId: string): void {
+export function unregisterDevice(userId: string, deviceId: string, socket?: WebSocket): void {
   const key = deviceKey(userId, deviceId);
   const entry = liveDevices.get(key);
   if (!entry) return; // idempotent
+
+  // Socket-identity guard (the reconnect "ghost" fix). On reconnect, registerDevice
+  // overwrites liveDevices[key] with the NEW socket and closes the old one; the old
+  // socket's close event then fires this handler asynchronously (a close frame to a
+  // half-dead peer can take ~30s to complete). Without this check it would delete
+  // the freshly-registered NEW entry — nulling the active device and turning the
+  // live device into a functional ghost (its heartbeats/play-claims silently no-op).
+  // The heartbeat sweep already guards this exact pattern (delete-before-close); the
+  // register path did not. Only unregister when the closing socket is still the one
+  // we hold for this key.
+  if (socket && entry.socket !== socket) {
+    log(`unregisterDevice: stale close for ${deviceId} — entry now holds a newer socket, ignoring`);
+    return;
+  }
 
   log(`unregisterDevice: ${entry.device.name}[${entry.device.type}] (${deviceId})`);
   liveDevices.delete(key);
@@ -662,12 +756,15 @@ export function handleNext(userId: string): void {
   if (newIndex >= state.tracks.length) return;
 
   const track = state.tracks[newIndex];
-  log(`handleNext: track=${newIndex}/${state.tracks.length}`);
+  log(`handleNext: track=${newIndex}/${state.tracks.length} trackNonce=${state.trackNonce + 1}`);
   mutate(userId, {
     trackIndex: newIndex,
     positionMs: 0,
     positionTs: Date.now(),
     durationMs: track.durationMs,
+    // Explicit track command → bump the intent nonce so the active device can tell
+    // this from a load or a position echo, and suppress its own echo (ADR-0019).
+    trackNonce: state.trackNonce + 1,
   });
 
   if (state.showId && state.recordingId) {
@@ -692,12 +789,13 @@ export function handlePrev(userId: string): void {
   if (newIndex < 0) return;
 
   const track = state.tracks[newIndex];
-  log(`handlePrev: track=${newIndex}/${state.tracks.length}`);
+  log(`handlePrev: track=${newIndex}/${state.tracks.length} trackNonce=${state.trackNonce + 1}`);
   mutate(userId, {
     trackIndex: newIndex,
     positionMs: 0,
     positionTs: Date.now(),
     durationMs: track.durationMs,
+    trackNonce: state.trackNonce + 1,
   });
 
   if (state.showId && state.recordingId) {
@@ -750,28 +848,34 @@ export function handleTransfer(
   // Self-transfer when already active: no-op
   if (state.activeDeviceId === targetDeviceId) return;
 
-  // Cancel any existing pending transfer
+  // Cancel any existing pending transfer. Carry its wasPlaying/position forward:
+  // phase 1 already parked the session (playing=false), so re-reading state.playing
+  // below would silently drop playback when re-targeting mid-transfer.
   const existing = pendingTransfers.get(userId);
   if (existing) {
     clearTimeout(existing.timeoutHandle);
     pendingTransfers.delete(userId);
   }
 
-  // No active device (parked): skip phase 1, go directly to phase 2
+  // No active device (parked): skip phase 1, go directly to phase 2. Prefer a
+  // cancelled pending transfer's captured intent over the parked state's false.
   if (!state.activeDeviceId) {
-    log(`handleTransfer: parked — activating ${targetEntry.device.name}[${targetEntry.device.type}] directly`);
-    activateTarget(userId, targetDeviceId, state.positionMs, state.playing);
+    const resumePlaying = existing ? existing.wasPlaying : state.playing;
+    const resumePositionMs = existing ? existing.interpolatedPositionMs : state.positionMs;
+    log(`handleTransfer: parked — activating ${targetEntry.device.name}[${targetEntry.device.type}] directly (playing=${resumePlaying})`);
+    activateTarget(userId, targetDeviceId, resumePositionMs, resumePlaying);
     return;
   }
 
   // Phase 1 — Park the old device
   const now = Date.now();
   const wasPlaying = state.playing;
+  const sourceDeviceId = state.activeDeviceId; // captured before the park nulls it
   const interpolatedPositionMs = wasPlaying
     ? state.positionMs + (now - state.positionTs)
     : state.positionMs;
 
-  log(`handleTransfer: phase 1 — parking, interpolated position ${interpolatedPositionMs}ms, wasPlaying=${wasPlaying}`);
+  log(`handleTransfer: phase 1 — parking source=${sourceDeviceId}, interpolated position ${interpolatedPositionMs}ms, wasPlaying=${wasPlaying}`);
 
   mutate(userId, {
     activeDeviceId: null,
@@ -792,6 +896,7 @@ export function handleTransfer(
   }, 1000);
 
   pendingTransfers.set(userId, {
+    sourceDeviceId: sourceDeviceId!,
     targetDeviceId,
     interpolatedPositionMs,
     wasPlaying,
@@ -803,12 +908,18 @@ export function handlePosition(userId: string, deviceId: string, positionMs: num
   const state = userStates.get(userId);
   if (!state) return;
 
-  // Check if this completes a pending transfer (old device reporting final position)
+  // Check if this completes a pending transfer — but ONLY when it's the SOURCE
+  // device reporting its final position. Previously the first `position` from ANY
+  // device completed the handoff, so a stray/queued report from the target (or a
+  // third device) activated the target at that position — restarting playback from
+  // the top. Any non-source report falls through to the normal path (dropped, since
+  // activeDeviceId is null while parked); the 1s timeout still guarantees progress
+  // if the source never reports.
   const pending = pendingTransfers.get(userId);
-  if (pending) {
+  if (pending && deviceId === pending.sourceDeviceId) {
     clearTimeout(pending.timeoutHandle);
     pendingTransfers.delete(userId);
-    log(`handleTransfer: phase 2 — old device reported positionMs=${positionMs}, wasPlaying=${pending.wasPlaying}`);
+    log(`handleTransfer: phase 2 — source device reported positionMs=${positionMs}, wasPlaying=${pending.wasPlaying}`);
     activateTarget(userId, pending.targetDeviceId, positionMs, pending.wasPlaying);
     return;
   }

@@ -22,6 +22,15 @@ export interface ConnectState {
   positionMs: number;
   positionTs: number;
   durationMs: number;
+  // ADR-0017: bumped ONLY by an explicit `seek` command, never by routine
+  // position reports. The active client honors a remote position when this
+  // advances (intent, not magnitude), so a self-echo of its own ~5s position
+  // report can't trigger a self-seek. Coalesce a missing value to 0.
+  seekNonce: number;
+  // ADR-0019: bumped ONLY by an explicit `next`/`prev`, never by a `load` or a
+  // position report. The active client follows a remote track change when this
+  // advances (not on trackIndex coincidence). Coalesce a missing value to 0.
+  trackNonce: number;
   playing: boolean;
   activeDeviceId: string | null;
   activeDeviceName: string | null;

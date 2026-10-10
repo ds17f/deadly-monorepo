@@ -19,8 +19,9 @@ import {
   handleVolume,
   handleVolumeReport,
   startHeartbeatSweep,
+  touchDevice,
 } from "./state.js";
-import type { ClientMessage, DeviceType, SessionTrack } from "./types.js";
+import type { ClientMessage, DeviceType, SessionTrack, RegisterMessage } from "./types.js";
 import { getConnectEnabled, getConnectMinProtocol } from "../db/appSettings.js";
 import { connectDisabledCloseCode } from "./protocol.js";
 
@@ -65,6 +66,13 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
         return;
       }
 
+      // Any inbound message from a registered device refreshes its liveness, not
+      // just the 15s heartbeat — so a device still streaming `position` reports
+      // isn't swept as dead while its heartbeat timer is throttled (ADR-0016).
+      if (registeredDeviceId && userId) {
+        touchDevice(userId, registeredDeviceId);
+      }
+
       switch (msg.type) {
         case "register": {
           if (!msg.deviceId || !msg.deviceType || !msg.deviceName) return;
@@ -77,25 +85,15 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
           // Leave registeredDeviceId null: nothing registered, nothing for the
           // close handler to unregister.
           //
-          // CLIENT BEHAVIOR ON THIS CLOSE — both verified on device 2026-06-18:
-          //   - iOS (iPhone 13 Pro, iOS 26.5, proto 1): CORRECT. didCloseWith
-          //     delivers code=4003, handleDisconnect hits the 4003 guard and
-          //     logs "not reconnecting" — clean terminal, no churn. (Custom
-          //     4000-range close codes ARE delivered intact on iOS, contrary to
-          //     an earlier guess about URLSessionWebSocketTask.CloseCode.)
-          //   - Android (Pixel 6, proto 1): CHURNS. Its WebSocketListener
-          //     overrides onClosed but NOT onClosing, so OkHttp's server-
-          //     initiated close lands in onClosing (a no-op) and the 4003 guard
-          //     in onClosed never runs. Half-dead socket → ~20s ping-pong
-          //     timeout → onFailure → handleDisconnect(null) → reconnect
-          //     (~21s loop; onOpen resets the backoff).
-          // The close stops a Connect session from forming on BOTH (no double-
-          // play/desync — the real bug). The only residual issue is Android's
-          // background reconnect churn, which is unavoidable on already-shipped
-          // builds (no server close reaches its terminal path). PHASE 3 fix is
-          // Android-only: add an onClosing override that reads the code and goes
-          // terminal. Close codes work fine for iOS, so proto-2's 4005 needs no
-          // app-message workaround. See ADR-0016 for the dead-socket pattern.
+          // Close-code handling on the shipped fleet (device-verified 2026-06):
+          //   - proto < 2 (legacy store builds): only 4003 is treated as terminal,
+          //     so they get 4003 (connectDisabledCloseCode) and go quiet.
+          //   - proto >= 2: understand 4005 "Connect disabled"; iOS/Android/web all
+          //     treat it as terminal. Android's onClosing override (PR #87) routes
+          //     the server close to its terminal path, so no reconnect churn.
+          // Either way the close prevents a Connect session from forming (no
+          // double-play/desync). See protocol.ts for the code selection and
+          // ADR-0016/0018 for the dead-socket + gating rationale.
           if (!getConnectEnabled()) {
             const code = connectDisabledCloseCode(protocolVersion);
             request.log.info({ userId, deviceId: msg.deviceId, protocolVersion, code }, "ws/connect: Connect disabled — closing");
@@ -115,8 +113,34 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
             return;
           }
 
+          // ADR-0016 §3 full-state handshake (proto >= 3, optional). Validate the
+          // shape here; state.applyHandshake enforces the adopt policy (only a
+          // playing device, never preempt a different owner).
+          const rawHs = (msg as RegisterMessage).handshake;
+          let handshake: RegisterMessage["handshake"];
+          if (
+            rawHs &&
+            typeof rawHs === "object" &&
+            typeof rawHs.recordingId === "string" &&
+            typeof rawHs.trackIndex === "number" &&
+            typeof rawHs.positionMs === "number"
+          ) {
+            handshake = {
+              playing: rawHs.playing === true,
+              showId: typeof rawHs.showId === "string" ? rawHs.showId : undefined,
+              recordingId: rawHs.recordingId,
+              tracks: Array.isArray(rawHs.tracks) ? (rawHs.tracks as SessionTrack[]) : undefined,
+              trackIndex: rawHs.trackIndex,
+              positionMs: rawHs.positionMs,
+              durationMs: typeof rawHs.durationMs === "number" ? rawHs.durationMs : undefined,
+              date: (rawHs.date as string | null | undefined) ?? null,
+              venue: (rawHs.venue as string | null | undefined) ?? null,
+              location: (rawHs.location as string | null | undefined) ?? null,
+            };
+          }
+
           registeredDeviceId = msg.deviceId;
-          registerDevice(userId!, msg.deviceId, msg.deviceType as DeviceType, msg.deviceName, socket, protocolVersion, appVersion);
+          registerDevice(userId!, msg.deviceId, msg.deviceType as DeviceType, msg.deviceName, socket, protocolVersion, appVersion, handshake);
           break;
         }
 
@@ -247,8 +271,10 @@ export async function connectRoutes(app: FastifyInstance): Promise<void> {
     });
 
     socket.on("close", () => {
+      // Pass this connection's socket so a delayed close of a REPLACED socket
+      // can't unregister the newer one for the same deviceId (the reconnect ghost).
       if (userId && registeredDeviceId) {
-        unregisterDevice(userId, registeredDeviceId);
+        unregisterDevice(userId, registeredDeviceId, socket);
       }
     });
   });

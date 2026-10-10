@@ -104,6 +104,7 @@ export default function PlayerProvider({
     onVolumeMessage,
     reportVolume,
     setLocalPlaybackSource,
+    setLocalHandshakeSource,
     serverTimeOffsetMs,
   } = useConnect();
 
@@ -200,6 +201,21 @@ export default function PlayerProvider({
   // "Play on this device?" autoplay prompt after a transfer to us.
   const prevActiveDeviceNameRef = useRef<string | null>(null);
   const prevIsActiveDeviceRef = useRef(false);
+  // ADR-0017/0019 intent nonces. lastSeen guards distinguish an explicit remote
+  // seek/next-prev (nonce advanced) from a routine position echo (unchanged); the
+  // selfEcho flags — armed when THIS active tab issues its own seek/next/prev —
+  // swallow the one echo of our own command so we don't re-apply it (the self-skip
+  // / auto-advance-restart family). wasActiveRef gives us "just became active" so a
+  // transfer-in still syncs track/position even though no nonce advanced.
+  const lastSeekNonceRef = useRef(0);
+  const lastTrackNonceRef = useRef(0);
+  const selfSeekEchoRef = useRef(false);
+  const selfTrackEchoRef = useRef(false);
+  const wasActiveRef = useRef(false);
+  // Current next/prev callbacks, read through refs so the once-registered
+  // MediaSession handlers never go stale (mirrors HeaderPlayer's Space-bar ref).
+  const prevTrackRef = useRef<() => void>(() => {});
+  const nextTrackRef = useRef<() => void>(() => {});
 
   // ── Playback analytics (playback_start / playback_end) ──────────────
   // Mirrors the mobile client: a 1s dwell gates playback_start so queue-load
@@ -345,6 +361,10 @@ export default function PlayerProvider({
         setAutoplayBlocked(false);
         setAutoplayInfo(null);
         autoplayBlockedAudioRef.current = null;
+        // This tab is now audibly playing — it may own the OS now-playing state.
+        if ("mediaSession" in navigator && !isRemoteControllingRef.current) {
+          navigator.mediaSession.playbackState = "playing";
+        }
       }
     });
 
@@ -355,6 +375,11 @@ export default function PlayerProvider({
       ) {
         if (!audio.seeking) {
           setStatus((prev) => (prev === "loading" ? prev : "paused"));
+          // Not audible any more (paused locally, or we just became a silent
+          // remote-controlling tab) — relinquish the "playing" now-playing claim.
+          if ("mediaSession" in navigator) {
+            navigator.mediaSession.playbackState = "paused";
+          }
         }
       }
     });
@@ -387,7 +412,10 @@ export default function PlayerProvider({
           }
           preloadedNextRef.current = false;
           setCurrentTrackIndex(idx + 1);
-          // Tell the server about the auto-advance so other devices follow.
+          // Tell the server about the auto-advance so other devices follow. We
+          // already advanced locally, so arm the self-echo guard: the trackNonce
+          // bump this `next` triggers is our own — don't re-follow it (ADR-0019).
+          if (isActiveDeviceRef.current) selfTrackEchoRef.current = true;
           sendCommandRef.current("next");
         } else {
           setStatus("paused");
@@ -632,14 +660,43 @@ export default function PlayerProvider({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeShow?.showId, selectedRecording, currentTrackIndex, tracks]);
 
-  // Register MediaSession action handlers
+  // Register MediaSession action handlers. Registered once, but every handler
+  // reads live refs (never a captured connectState — the old handlers closed over
+  // connectState===null). `play`/`pause` have EXPLICIT semantics (not a shared
+  // toggle): a remote-controlling tab forwards the command; an audible tab drives
+  // its own audio directly.
   useEffect(() => {
     if (!("mediaSession" in navigator)) return;
 
-    navigator.mediaSession.setActionHandler("play", () => togglePlayPause());
-    navigator.mediaSession.setActionHandler("pause", () => togglePlayPause());
-    navigator.mediaSession.setActionHandler("previoustrack", () => prevTrack());
-    navigator.mediaSession.setActionHandler("nexttrack", () => nextTrack());
+    const onPlay = () => {
+      if (isRemoteControllingRef.current) {
+        setPendingCommand("play");
+        sendCommandRef.current("play");
+        return;
+      }
+      const audio = getActiveAudio();
+      if (audio && audio.paused) {
+        audio.play().catch(() => {});
+        sendCommandRef.current("play");
+      }
+    };
+    const onPause = () => {
+      if (isRemoteControllingRef.current) {
+        setPendingCommand("pause");
+        sendCommandRef.current("pause");
+        return;
+      }
+      const audio = getActiveAudio();
+      if (audio && !audio.paused) {
+        audio.pause();
+        sendCommandRef.current("pause");
+      }
+    };
+
+    navigator.mediaSession.setActionHandler("play", onPlay);
+    navigator.mediaSession.setActionHandler("pause", onPause);
+    navigator.mediaSession.setActionHandler("previoustrack", () => prevTrackRef.current());
+    navigator.mediaSession.setActionHandler("nexttrack", () => nextTrackRef.current());
     navigator.mediaSession.setActionHandler("seekto", (details) => {
       if (details.seekTime == null) return;
       const audio = getActiveAudio();
@@ -731,11 +788,45 @@ export default function PlayerProvider({
       return {
         playing: !audio.paused,
         recordingId,
+        // ADR-0011 §2: heal to our REAL track, not track 0.
+        trackIndex: currentTrackIndexRef.current,
         positionMs: Math.round(audio.currentTime * 1000),
       };
     });
     return () => setLocalPlaybackSource(null);
   }, [setLocalPlaybackSource]);
+
+  // ADR-0016 §3: expose this tab's full-state handshake to the Connect register.
+  // Same live source as the lease, plus the local tracklist + show metadata, so a
+  // (re)connect while we hold live audio makes the server's first broadcast
+  // authoritative instead of stale. Null unless we're the active device playing.
+  useEffect(() => {
+    setLocalHandshakeSource(() => {
+      const audio = getActiveAudio();
+      const recordingId = selectedRecordingRef.current;
+      if (!audio || !recordingId || !isActiveDeviceRef.current) return null;
+      const show = activeShowRef.current;
+      const t = tracksRef.current;
+      return {
+        playing: !audio.paused,
+        showId: show?.showId,
+        recordingId,
+        tracks: t
+          ? t.map((track) => ({
+              title: track.title,
+              durationMs: Math.round((track.duration || 0) * 1000),
+            }))
+          : undefined,
+        trackIndex: currentTrackIndexRef.current,
+        positionMs: Math.round(audio.currentTime * 1000),
+        durationMs: Number.isFinite(audio.duration) ? Math.round(audio.duration * 1000) : undefined,
+        date: show?.date ?? null,
+        venue: show?.venue ?? null,
+        location: show?.location ?? null,
+      };
+    });
+    return () => setLocalHandshakeSource(null);
+  }, [setLocalHandshakeSource]);
 
   // ── React to authoritative ConnectState broadcasts ───────────────────
   // Single reconciliation path keyed on the server's monotonic version: clear
@@ -763,6 +854,30 @@ export default function PlayerProvider({
       if (connectState.activeDeviceId) return null;
       return prev;
     });
+
+    // ADR-0017/0019: resolve seek/track INTENT up front — before any early return
+    // — so the last-seen refs advance on every path. `remoteSeek`/`remoteTrackChange`
+    // are true only when the server bumped the nonce (an explicit seek / next-prev)
+    // AND it wasn't the echo of our own command (selfEcho refs, armed at issue time).
+    // A routine ~5s position echo leaves both nonces untouched, so it can never move
+    // our playhead or track (the self-skip / auto-advance-restart bugs).
+    // Compare against the PREVIOUS state's nonce with `!=` (mirrors iOS/Android),
+    // not a monotonic watermark: a server restart reseeds the nonce to 0, and a
+    // watermark would then ignore every post-restart remote seek/next as "stale".
+    const seekNonce = connectState.seekNonce ?? 0;
+    const trackNonce = connectState.trackNonce ?? 0;
+    const seekAdvanced = seekNonce !== lastSeekNonceRef.current;
+    const trackAdvanced = trackNonce !== lastTrackNonceRef.current;
+    lastSeekNonceRef.current = seekNonce;
+    lastTrackNonceRef.current = trackNonce;
+    const remoteSeek = seekAdvanced && !selfSeekEchoRef.current;
+    const remoteTrackChange = trackAdvanced && !selfTrackEchoRef.current;
+    if (seekAdvanced) selfSeekEchoRef.current = false;
+    if (trackAdvanced) selfTrackEchoRef.current = false;
+    // "Just became active" (e.g. a transfer in): sync track/position to the session
+    // even without a nonce bump. Update the watermark for the next broadcast.
+    const justBecameActive = isActiveDevice && !wasActiveRef.current;
+    wasActiveRef.current = isActiveDevice;
 
     // Hydrate local audio when the server's recording changes (or on first
     // state). Every connected client stays loaded so transfers are instant.
@@ -923,15 +1038,17 @@ export default function PlayerProvider({
       // completion and resetting the countdown. The note effect owns the transition.
       if (connectState.pendingAdvance) return;
 
-      // Track changed by a remote next/prev/seek. The trackEffect (keyed on
+      // Track changed by a remote next/prev. ADR-0019: follow only when the
+      // trackNonce ADVANCED and it wasn't our own echo (a `load` never bumps it,
+      // so the empty-tracks re-assert above can't be mistaken for a track change),
+      // or when we just became active (transfer in) and must adopt the session's
+      // track. The index-coincidence check stays purely as a safety so we never
+      // restart the track we're already on. The trackEffect (keyed on
       // currentTrackIndex) fully owns loading + starting the NEW track — so we
-      // must NOT also touch the outgoing track here. The old code fell through
-      // and called audio.play() on the still-loaded previous track, then the
-      // trackEffect swapped src and played again — briefly starting the wrong
-      // track (an audible blip of the previous one) before the selected track
-      // loads. Sync the index and let the trackEffect take it from there.
+      // must NOT also touch the outgoing track here (that caused an audible blip
+      // of the previous track). Sync the index and let the trackEffect take over.
       const indexChanging = connectState.trackIndex !== currentTrackIndexRef.current;
-      if (indexChanging) {
+      if (indexChanging && (justBecameActive || remoteTrackChange)) {
         // If the session is paused, tell the trackEffect to load without playing.
         if (!connectState.playing) suppressAutoplayRef.current = true;
         setCurrentTrackIndex(connectState.trackIndex);
@@ -947,7 +1064,15 @@ export default function PlayerProvider({
         ? connectState.positionMs + ((Date.now() + serverTimeOffsetMs) - connectState.positionTs)
         : connectState.positionMs;
       const serverPositionS = interpolatedPosMs / 1000;
-      if (isFinite(audio.duration) && Math.abs(audio.currentTime - serverPositionS) > 1) {
+      // ADR-0017: move our playhead ONLY on an explicit remote seek (seekNonce
+      // advanced, not our own echo) or when we just became active (sync down to the
+      // session position on a transfer in). A routine position echo — same seekNonce
+      // — must NOT move it, or the active tab audibly skips chasing its own reports.
+      if (
+        isFinite(audio.duration) &&
+        (justBecameActive || remoteSeek) &&
+        Math.abs(audio.currentTime - serverPositionS) > 1
+      ) {
         audio.currentTime = serverPositionS;
       }
 
@@ -977,6 +1102,10 @@ export default function PlayerProvider({
 
   function updateMediaSession(track: ArchiveTrack) {
     if (!("mediaSession" in navigator)) return;
+    // Only the tab actually producing audio owns the OS now-playing session. A
+    // silent remote-controlling tab must NOT set metadata/playbackState or the OS
+    // shows two sets of controls fighting each other.
+    if (isRemoteControllingRef.current) return;
     const showId = activeShowRef.current?.showId ?? "";
     navigator.mediaSession.metadata = new MediaMetadata({
       title: track.title,
@@ -988,8 +1117,8 @@ export default function PlayerProvider({
     // and once they're gone the lock screen falls back to its default ±skip
     // buttons instead of previous/next track. Setting them here (and NOT
     // setting seekforward/seekbackward) keeps it on real track controls.
-    navigator.mediaSession.setActionHandler("previoustrack", () => prevTrack());
-    navigator.mediaSession.setActionHandler("nexttrack", () => nextTrack());
+    navigator.mediaSession.setActionHandler("previoustrack", () => prevTrackRef.current());
+    navigator.mediaSession.setActionHandler("nexttrack", () => nextTrackRef.current());
     navigator.mediaSession.playbackState = "playing";
   }
 
@@ -1267,6 +1396,9 @@ export default function PlayerProvider({
       inactive.removeAttribute("src");
     }
     setCurrentTrackIndex(index);
+    // Local track pick moves the playhead here and sends a `seek`; swallow that
+    // seekNonce echo so the active tab doesn't re-seek itself (ADR-0017).
+    if (isActiveDeviceRef.current) selfSeekEchoRef.current = true;
     sendCommandRef.current("seek", { trackIndex: index, positionMs: 0, durationMs });
   }, []);
 
@@ -1312,6 +1444,7 @@ export default function PlayerProvider({
       if (prev < tracksRef.current!.length - 1) return prev + 1;
       return prev;
     });
+    if (isActiveDeviceRef.current) selfTrackEchoRef.current = true;
     sendCommandRef.current("next");
   }, []);
 
@@ -1327,7 +1460,9 @@ export default function PlayerProvider({
       audio.currentTime = 0;
       // Propagate the restart as a same-index seek so remote viewers' scrubbers
       // snap back immediately instead of waiting for the next position report —
-      // matches iOS/Android, where restart-current sends seek(index, 0).
+      // matches iOS/Android, where restart-current sends seek(index, 0). Arm the
+      // self-echo guard so our own seekNonce bump doesn't re-seek us (ADR-0017).
+      if (isActiveDeviceRef.current) selfSeekEchoRef.current = true;
       sendCommandRef.current("seek", {
         trackIndex: currentTrackIndexRef.current,
         positionMs: 0,
@@ -1335,9 +1470,17 @@ export default function PlayerProvider({
       });
     } else {
       setCurrentTrackIndex((prev) => Math.max(0, prev - 1));
+      if (isActiveDeviceRef.current) selfTrackEchoRef.current = true;
       sendCommandRef.current("prev");
     }
   }, []);
+
+  // Keep the MediaSession handler refs pointed at the current callbacks so the
+  // once-registered handlers never go stale.
+  useEffect(() => {
+    prevTrackRef.current = prevTrack;
+    nextTrackRef.current = nextTrack;
+  }, [prevTrack, nextTrack]);
 
   const seek = useCallback((fraction: number) => {
     if (isRemoteControllingRef.current && connectState) {
@@ -1353,6 +1496,9 @@ export default function PlayerProvider({
     const audio = getActiveAudio();
     if (!audio || !isFinite(audio.duration)) return;
     audio.currentTime = fraction * audio.duration;
+    // We already moved the local playhead — swallow the echo of our own seekNonce
+    // bump so it doesn't re-seek us (ADR-0017).
+    if (isActiveDeviceRef.current) selfSeekEchoRef.current = true;
     sendCommandRef.current("seek", {
       trackIndex: currentTrackIndexRef.current,
       positionMs: Math.round(fraction * audio.duration * 1000),
