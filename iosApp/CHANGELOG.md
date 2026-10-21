@@ -1,11 +1,15 @@
 # Changelog
 
+## [2.43.1] - 2026-10-21
+
+### Bug Fixes
+* show a Retry error when archive.org is unreachable (#103) (2b119b9f)
+
+
 ## [2.43.0] - 2026-10-05
 
 ### New Features
 * add 528 new recordings from data 2.4.1 (#101) (110f669e)
-
-
 ## [2.42.1] - 2026-10-03
 
 ### Bug Fixes
