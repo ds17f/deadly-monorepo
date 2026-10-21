@@ -19,11 +19,11 @@
 .PHONY: data-download data-generate data-package data-build-db data-download-stage01 data-diff-stage01 data-upload-stage01 data-collect data-release data-clean
 .PHONY: db-backup-list db-restore db-pull-analytics db-pull-users db-pull
 
-# Load KEYCHAIN_PASSWORD from .env if not set in environment.
-# Exported so recipes that read $$KEYCHAIN_PASSWORD from the shell (rather than
-# interpolating it into the command line via $(KEYCHAIN_PASSWORD)) can see it.
-KEYCHAIN_PASSWORD ?= $(shell grep -E '^KEYCHAIN_PASSWORD=' .env 2>/dev/null | cut -d= -f2- | tr -d '"')
-export KEYCHAIN_PASSWORD
+# Remote Mac login password (unlocks the keychain, drives sudo). It lives ONLY
+# in this gitignored file and is read on demand: recipes redirect the file into
+# ssh's stdin, so the value never enters make variables, the environment, or argv.
+MAC_PASSWORD_FILE := .secrets/mac_login_password.txt
+REQUIRE_MAC_PASSWORD = @if [ ! -s $(MAC_PASSWORD_FILE) ]; then echo "Missing $(MAC_PASSWORD_FILE) (remote Mac login password, one line)." >&2; exit 1; fi
 
 # =============================================================================
 # API & DOCKER COMPOSE
@@ -499,16 +499,16 @@ ios-remote-unlock:
 	@echo "Unlocking keychain on $(REMOTE_HOST)..."
 	@ssh -t $(REMOTE_HOST) "security unlock-keychain ~/Library/Keychains/login.keychain-db"
 
-# Build + install to connected device (requires USB-connected iPhone + KEYCHAIN_PASSWORD env var).
-# Password is piped to ssh stdin so it isn't on the local command line, then on
+# Build + install to connected device (requires USB-connected iPhone + $(MAC_PASSWORD_FILE)).
+# Password file is redirected into ssh stdin so it isn't on the local command line, then on
 # the Mac it's read into a shell var and passed to `security` via `-p`. macOS
 # stopped accepting passwords on stdin for `security unlock-keychain`, so the
 # flag is required. The password is briefly visible in the Mac's `ps` for the
 # milliseconds the command runs — acceptable on a personal dev laptop.
 ios-remote-install: remote-sync
-	@if [ -z "$$KEYCHAIN_PASSWORD" ]; then echo "KEYCHAIN_PASSWORD env var must be set." >&2; exit 1; fi
+	$(REQUIRE_MAC_PASSWORD)
 	@echo "Building on $(REMOTE_HOST)..."
-	@printf '%s\n' "$$KEYCHAIN_PASSWORD" | ssh $(REMOTE_HOST) "set -o pipefail; IFS= read -r PASS; \
+	@ssh $(REMOTE_HOST) < $(MAC_PASSWORD_FILE) "set -o pipefail; IFS= read -r PASS; \
 		security unlock-keychain -p \"\$$PASS\" ~/Library/Keychains/login.keychain-db && \
 		unset PASS && \
 		cd $(REMOTE_IOS) && xcodebuild -project deadly.xcodeproj -scheme deadly -configuration Debug -destination 'generic/platform=iOS' -allowProvisioningUpdates build 2>&1 | tail -20"
@@ -601,12 +601,12 @@ ios-remote-log-stream:
 # filter by IOS_LOG_FILTER, and save the result locally under $(IOS_LOG_DIR)/.
 # Also fetches the raw .logarchive back via scp for deeper inspection.
 #
-# The Mac sudo password is read from $$KEYCHAIN_PASSWORD on THIS machine and
-# piped to ssh's stdin (NOT placed on the command line). The remote shell
+# The Mac sudo password is read from $(MAC_PASSWORD_FILE) on THIS machine and
+# redirected into ssh's stdin (NOT placed on the command line). The remote shell
 # reads the first stdin line into a local variable and feeds it to `sudo -S`.
 # This keeps the password out of `ps` argv on both the local and remote hosts.
 ios-remote-log-collect:
-	@if [ -z "$$KEYCHAIN_PASSWORD" ]; then echo "KEYCHAIN_PASSWORD env var must be set (used to drive sudo -S on the Mac)." >&2; exit 1; fi
+	$(REQUIRE_MAC_PASSWORD)
 	@mkdir -p $(IOS_LOG_DIR)
 	@TS=$$(date +%Y%m%d-%H%M%S); \
 		TXT_LOCAL="$(IOS_LOG_DIR)/collect-$$TS.txt"; \
@@ -614,7 +614,7 @@ ios-remote-log-collect:
 		REMOTE_TMP=$$(ssh $(REMOTE_HOST) 'mktemp -d'); \
 		REMOTE_ARCHIVE="$$REMOTE_TMP/iphone_logs.logarchive"; \
 		echo "Collecting last $(IOS_LOG_MINUTES)m of device logs on $(REMOTE_HOST) (filter='$(IOS_LOG_FILTER)')..."; \
-		printf '%s\n' "$$KEYCHAIN_PASSWORD" | ssh $(REMOTE_HOST) 'IFS= read -r PASS; UDID=$${IOS_DEVICE_UDID:-$$(xcrun devicectl list devices --json-output - 2>/dev/null | grep -oE "[0-9A-F]{8}-[0-9A-F]{16}" | head -1)}; if [ -z "$$UDID" ]; then echo "No tethered iOS device found. Run: make ios-remote-log-devices" >&2; exit 1; fi; echo "Using device $$UDID" >&2; printf "%s\n" "$$PASS" | sudo -S -p "" /usr/bin/log collect --device-udid "$$UDID" --last $(IOS_LOG_MINUTES)m --output '"$$REMOTE_ARCHIVE"' >&2 && unset PASS && /usr/bin/log show '"$$REMOTE_ARCHIVE"' --style compact --predicate "eventMessage CONTAINS \"$(IOS_LOG_FILTER)\""' > "$$TXT_LOCAL"; \
+		ssh $(REMOTE_HOST) < $(MAC_PASSWORD_FILE) 'IFS= read -r PASS; UDID=$${IOS_DEVICE_UDID:-$$(xcrun devicectl list devices --json-output - 2>/dev/null | grep -oE "[0-9A-F]{8}-[0-9A-F]{16}" | head -1)}; if [ -z "$$UDID" ]; then echo "No tethered iOS device found. Run: make ios-remote-log-devices" >&2; exit 1; fi; echo "Using device $$UDID" >&2; printf "%s\n" "$$PASS" | sudo -S -p "" /usr/bin/log collect --device-udid "$$UDID" --last $(IOS_LOG_MINUTES)m --output '"$$REMOTE_ARCHIVE"' >&2 && unset PASS && /usr/bin/log show '"$$REMOTE_ARCHIVE"' --style compact --predicate "eventMessage CONTAINS \"$(IOS_LOG_FILTER)\""' > "$$TXT_LOCAL"; \
 		echo "Filtered text saved → $$TXT_LOCAL"; \
 		if [ "$(IOS_LOG_KEEP_ARCHIVE)" = "1" ]; then \
 			echo "Fetching raw .logarchive (this can be large)..."; \
@@ -789,12 +789,12 @@ docker-remote-pull:
 	@echo "Pulling base images on $(REMOTE_HOST)..."
 	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && docker pull node:22-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine"
 
-# Build + start full stack on remote Mac (requires KEYCHAIN_PASSWORD env var).
+# Build + start full stack on remote Mac (requires $(MAC_PASSWORD_FILE)).
 # See `ios-remote-install` for the rationale on using `security -p` vs stdin.
 docker-remote-up:
-	@if [ -z "$$KEYCHAIN_PASSWORD" ]; then echo "KEYCHAIN_PASSWORD env var must be set." >&2; exit 1; fi
+	$(REQUIRE_MAC_PASSWORD)
 	@echo "Starting stack on $(REMOTE_HOST)..."
-	@printf '%s\n' "$$KEYCHAIN_PASSWORD" | ssh $(REMOTE_HOST) "IFS= read -r PASS; \
+	@ssh $(REMOTE_HOST) < $(MAC_PASSWORD_FILE) "IFS= read -r PASS; \
 		security unlock-keychain -p \"\$$PASS\" ~/Library/Keychains/login.keychain-db && \
 		unset PASS && \
 		$(REMOTE_ENVPATH) && cd $(REMOTE_PATH) && docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d"
