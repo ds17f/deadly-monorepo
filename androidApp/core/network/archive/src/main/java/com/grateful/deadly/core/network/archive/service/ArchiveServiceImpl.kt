@@ -123,9 +123,14 @@ class ArchiveServiceImpl @Inject constructor(
                 val apiResponse = response.body()!!
                 val tracks = archiveMapper.mapToTracks(apiResponse)
 
-                // Cache the result
-                cacheFile.writeText(json.encodeToString(tracks))
-                Log.d(TAG, "Cached ${tracks.size} tracks for: $recordingId")
+                // Cache the result. Do not cache an empty list: a later retry
+                // must hit the API again instead of serving "0 tracks" from cache.
+                if (tracks.isNotEmpty()) {
+                    cacheFile.writeText(json.encodeToString(tracks))
+                    Log.d(TAG, "Cached ${tracks.size} tracks for: $recordingId")
+                } else {
+                    Log.w(TAG, "API returned 0 tracks for: $recordingId - not caching")
+                }
 
                 return Result.success(tracks)
             } else {

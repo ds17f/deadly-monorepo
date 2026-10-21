@@ -5,11 +5,14 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CloudOff
 import androidx.compose.material.icons.filled.WifiOff
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.grateful.deadly.feature.playlist.screens.main.components.PlaylistHeader
@@ -29,6 +32,10 @@ import com.grateful.deadly.core.design.component.ShareChooserSheet
 import com.grateful.deadly.core.design.component.ShowActionsMenuSheet
 import com.grateful.deadly.core.design.component.ShowReviewSheet
 import com.grateful.deadly.feature.playlist.screens.main.models.PlaylistViewModel
+
+/** Third-party status page for Archive.org, opened from the track-load error state. */
+private const val ARCHIVE_STATUS_URL = "https://www.isitdownrightnow.com/archive.org.html"
+
 /**
  * PlaylistScreen - Clean playlist interface
  * 
@@ -61,6 +68,7 @@ fun PlaylistScreen(
     val userReview by viewModel.userReview.collectAsState()
     val reviewLineup by viewModel.reviewLineup.collectAsState()
     val autoAdvanceEnabled by viewModel.autoAdvanceEnabled.collectAsState()
+    val uriHandler = LocalUriHandler.current
 
     // Load show data when screen opens - include recordingId for Player→Playlist navigation
     LaunchedEffect(showId, recordingId) {
@@ -241,7 +249,7 @@ fun PlaylistScreen(
                                 }
                             }
                         }
-                    } else if (uiState.isTrackListLoading) {
+                    } else if (uiState.isTrackListLoading && !uiState.trackLoadFailed) {
                         item {
                             Box(
                                 modifier = Modifier
@@ -261,6 +269,22 @@ fun PlaylistScreen(
                                     )
                                 }
                             }
+                        }
+                    } else if (uiState.trackLoadFailed && uiState.trackData.isEmpty()) {
+                        // Online but the track fetch failed (e.g. Archive.org unreachable)
+                        item {
+                            TrackLoadErrorState(
+                                isRetrying = uiState.isTrackListLoading,
+                                isRetryEnabled = !uiState.isTrackRetryCoolingDown && !uiState.isTrackListLoading,
+                                onRetry = viewModel::retryTrackLoad,
+                                onCheckStatus = {
+                                    try {
+                                        uriHandler.openUri(ARCHIVE_STATUS_URL)
+                                    } catch (e: Exception) {
+                                        Log.w("PlaylistScreen", "No app to open $ARCHIVE_STATUS_URL", e)
+                                    }
+                                }
+                            )
                         }
                     } else {
                         PlaylistTrackList(
@@ -466,5 +490,66 @@ fun PlaylistScreen(
             onBandLevelChanged = viewModel::setEqualizerBandLevel,
             onReset = viewModel::resetEqualizer
         )
+    }
+}
+
+/**
+ * Track-list error state: the show header stays visible above this.
+ * While a retry is in flight, the block stays in place with a spinner in the Retry
+ * button, so the list keeps its scroll position. Retry is disabled while in flight
+ * and during the cooldown after each failure.
+ */
+@Composable
+private fun TrackLoadErrorState(
+    isRetrying: Boolean,
+    isRetryEnabled: Boolean,
+    onRetry: () -> Unit,
+    onCheckStatus: () -> Unit
+) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 32.dp, vertical = 48.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            Icon(
+                imageVector = Icons.Default.CloudOff,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "Couldn't load tracks",
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Text(
+                text = "Archive.org isn't responding. It may be down right now.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(
+                onClick = onRetry,
+                enabled = isRetryEnabled
+            ) {
+                if (isRetrying) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(18.dp),
+                        strokeWidth = 2.dp
+                    )
+                } else {
+                    Text("Retry")
+                }
+            }
+            TextButton(onClick = onCheckStatus) {
+                Text("Check Archive.org status")
+            }
+        }
     }
 }

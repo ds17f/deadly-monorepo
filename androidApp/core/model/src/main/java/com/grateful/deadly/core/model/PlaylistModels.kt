@@ -130,6 +130,10 @@ data class PlaylistUiState(
     val isPlaying: Boolean = false,
     // Progressive loading: spinner over track section only
     val isTrackListLoading: Boolean = false,
+    // Track fetch failed (e.g. Archive.org unreachable) - distinct from "0 tracks"
+    val trackLoadFailed: Boolean = false,
+    // Retry is disabled for a short cooldown after each track fetch failure
+    val isTrackRetryCoolingDown: Boolean = false,
     // Review details modal state
     val showReviewDetails: Boolean = false,
     val reviewsLoading: Boolean = false,

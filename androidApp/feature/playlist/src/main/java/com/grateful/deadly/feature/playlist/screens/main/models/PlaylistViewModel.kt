@@ -324,8 +324,15 @@ class PlaylistViewModel @Inject constructor(
         initialValue = PlaylistUiState()
     )
     
-    // Track current track loading job for cancellation
-    private var trackLoadingJob: Job? = null
+    // Runs track fetches and debounces Retry (no taps while in flight, cooldown after failure).
+    // Status changes are mirrored into _baseUiState synchronously.
+    private val trackLoadGate = TrackLoadGate(viewModelScope) { status ->
+        _baseUiState.value = _baseUiState.value.copy(
+            isTrackListLoading = status.isLoading,
+            trackLoadFailed = status.failed,
+            isTrackRetryCoolingDown = status.isRetryCoolingDown
+        )
+    }
     
     /**
      * Determine if a playlist track matches the currently playing track from MediaController
@@ -1551,46 +1558,41 @@ class PlaylistViewModel @Inject constructor(
      * Shows loading spinner over track section only
      */
     private fun loadTrackListAsync() {
-        // Cancel any previous track loading
-        trackLoadingJob?.cancel()
-        
-        // Load tracks directly - internal prefetch is transparent
-        loadTracksFromService()
-    }
-    
-    /**
-     * Load tracks from service (either fresh or from cache)
-     */
-    private fun loadTracksFromService() {
-        // Start track loading with spinner
-        _baseUiState.value = _baseUiState.value.copy(
-            isTrackListLoading = true
-        )
+        // Cancels any previous track loading - internal prefetch is transparent
         _rawTrackData.value = emptyList() // Clear previous tracks while loading
-        
-        trackLoadingJob = viewModelScope.launch {
-            try {
-                Log.d(TAG, "Loading track list asynchronously...")
-                val trackData = playlistService.getTrackList()
-                
-                _baseUiState.value = _baseUiState.value.copy(
-                    isTrackListLoading = false
-                )
-                _rawTrackData.value = trackData
-                
-                Log.d(TAG, "Track list loaded: ${trackData.size} tracks")
-                
-                // Start background prefetching after current tracks load
-                startAdjacentPrefetch()
-                
-            } catch (e: Exception) {
-                Log.e(TAG, "Error loading track list", e)
-                _baseUiState.value = _baseUiState.value.copy(
-                    isTrackListLoading = false
-                )
-                _rawTrackData.value = emptyList()
-            }
+        trackLoadGate.load(::fetchTracksFromService)
+    }
+
+    /**
+     * Retry the track fetch for the current recording after a failure.
+     * Ignored while a fetch is in flight or during the cooldown after a failure.
+     */
+    fun retryTrackLoad() {
+        if (trackLoadGate.retry(::fetchTracksFromService)) {
+            Log.d(TAG, "Retrying track list load")
+        } else {
+            Log.d(TAG, "Ignoring track retry (in flight or cooling down)")
         }
+    }
+
+    /**
+     * Load tracks from service (either fresh or from cache).
+     * Returns false when the fetch failed, so the UI can show an error with Retry.
+     */
+    private suspend fun fetchTracksFromService(): Boolean {
+        Log.d(TAG, "Loading track list asynchronously...")
+        val result = playlistService.getTrackList()
+        val trackData = result.getOrElse { e ->
+            Log.e(TAG, "Error loading track list", e)
+            _rawTrackData.value = emptyList()
+            return false
+        }
+        _rawTrackData.value = trackData
+        Log.d(TAG, "Track list loaded: ${trackData.size} tracks")
+
+        // Start background prefetching after current tracks load
+        startAdjacentPrefetch()
+        return true
     }
     
     /**
