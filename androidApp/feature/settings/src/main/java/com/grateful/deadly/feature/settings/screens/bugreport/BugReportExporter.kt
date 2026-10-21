@@ -69,6 +69,64 @@ object BugReportExporter {
         }
     }
 
+    /** Max lines shown in the on-screen preview. The full log is still sent/shared. */
+    const val PREVIEW_MAX_LINES = 500
+
+    /** Max characters shown in the on-screen preview (~100KB). */
+    const val PREVIEW_MAX_CHARS = 100_000
+
+    /**
+     * Max characters put on the clipboard. A clip crosses Binder as UTF-16, and a
+     * transaction over ~1MB throws TransactionTooLargeException, so stay well under.
+     */
+    const val CLIPBOARD_MAX_CHARS = 250_000
+
+    /**
+     * A bounded tail of the log for on-screen display. Rendering the full log
+     * (several MB) in one Compose `Text` exceeds the max layout height and ANRs.
+     */
+    data class LogPreview(
+        val text: String,
+        val shownLines: Int,
+        val totalLines: Int,
+        val isTruncated: Boolean,
+    )
+
+    /**
+     * Return the last [maxLines] lines of [text], or fewer if they exceed
+     * [maxChars] characters (whichever is smaller). A single line longer than
+     * [maxChars] keeps only its last [maxChars] characters. Call off the main thread.
+     */
+    fun previewTail(
+        text: String,
+        maxLines: Int = PREVIEW_MAX_LINES,
+        maxChars: Int = PREVIEW_MAX_CHARS,
+    ): LogPreview {
+        if (text.isEmpty()) return LogPreview("", 0, 0, isTruncated = false)
+        val totalLines = text.count { it == '\n' } + 1
+
+        // Walk back from the end, one line at a time, until a limit is hit.
+        var tailStart = text.length
+        var shown = 0
+        var searchFrom = text.length - 1
+        while (shown < maxLines) {
+            val newline = if (searchFrom >= 0) text.lastIndexOf('\n', searchFrom) else -1
+            val lineStart = newline + 1
+            if (text.length - lineStart > maxChars) {
+                if (shown == 0) {
+                    // One very long last line: keep only its tail.
+                    return LogPreview(text.substring(text.length - maxChars), 1, totalLines, isTruncated = true)
+                }
+                break
+            }
+            tailStart = lineStart
+            shown++
+            if (newline < 0) break
+            searchFrom = newline - 1
+        }
+        return LogPreview(text.substring(tailStart), shown, totalLines, isTruncated = tailStart > 0)
+    }
+
     /** Write [text] to a shareable file in the cache and return it. */
     fun writeToCache(context: Context, text: String): File {
         val dir = File(context.cacheDir, "bugreports").apply { mkdirs() }

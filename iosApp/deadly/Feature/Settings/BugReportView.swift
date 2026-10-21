@@ -8,7 +8,10 @@ import SwiftAudioStreamEx
 struct BugReportView: View {
     @Environment(\.appContainer) private var container
 
+    /// Full log text — used for Send, Copy and Share. Never rendered directly.
     @State private var logText: String = ""
+    /// Bounded tail of `logText` shown on screen (see `LogPreview`).
+    @State private var preview = LogPreview.empty
     @State private var isLoading = true
     @State private var loadError: String?
     @State private var shareItem: ShareItem?
@@ -56,11 +59,18 @@ struct BugReportView: View {
                 Spacer()
             } else {
                 ScrollView {
-                    Text(logText.isEmpty ? "(no log entries in the selected window)" : logText)
-                        .font(.system(.footnote, design: .monospaced))
-                        .textSelection(.enabled)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
+                    VStack(alignment: .leading, spacing: 8) {
+                        if preview.isTruncated {
+                            Text("Showing last \(preview.shownLines) lines — full log is included when you send")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        Text(logText.isEmpty ? "(no log entries in the selected window)" : preview.text)
+                            .font(.system(.footnote, design: .monospaced))
+                            .textSelection(.enabled)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
                 }
             }
 
@@ -163,10 +173,16 @@ struct BugReportView: View {
         loadError = nil
         copied = false
         do {
-            let text = try await Task.detached(priority: .userInitiated) {
-                try LogExport.exportRecentLogs(duration: 3600, filterContains: filterContains)
+            // Export and build the bounded preview off the main thread. A full
+            // hour of logs can be several MB; laying that out in one Text
+            // hangs the main thread.
+            let filter = filterContains
+            let (text, tail) = try await Task.detached(priority: .userInitiated) {
+                let text = try LogExport.exportRecentLogs(duration: 3600, filterContains: filter)
+                return (text, LogPreview.make(from: text))
             }.value
             logText = text
+            preview = tail
         } catch {
             loadError = error.localizedDescription
         }
@@ -251,6 +267,43 @@ struct BugReportView: View {
     private struct ShareItem: Identifiable {
         let id = UUID()
         let url: URL
+    }
+}
+
+/// Bounded tail of the log for on-screen preview: the last
+/// `maxLines` lines or `maxBytes` UTF-8 bytes, whichever is smaller.
+/// The full log is still sent / copied / shared.
+struct LogPreview: Sendable {
+    static let maxLines = 500
+    static let maxBytes = 100_000
+    static let empty = LogPreview(text: "", shownLines: 0, isTruncated: false)
+
+    let text: String
+    let shownLines: Int
+    let isTruncated: Bool
+
+    static func make(from fullText: String) -> LogPreview {
+        let lines = fullText.split(separator: "\n", omittingEmptySubsequences: false)
+        var kept: [Substring] = []
+        var bytes = 0
+        for line in lines.reversed() {
+            let cost = line.utf8.count + 1
+            if kept.count >= maxLines || bytes + cost > maxBytes { break }
+            kept.append(line)
+            bytes += cost
+        }
+        var cutLongLine = false
+        if kept.isEmpty, let last = lines.last {
+            // A single line larger than the byte budget: keep its tail.
+            kept = [Substring(String(decoding: last.utf8.suffix(maxBytes), as: UTF8.self))]
+            cutLongLine = true
+        }
+        kept.reverse()
+        return LogPreview(
+            text: kept.joined(separator: "\n"),
+            shownLines: kept.count,
+            isTruncated: cutLongLine || kept.count < lines.count
+        )
     }
 }
 

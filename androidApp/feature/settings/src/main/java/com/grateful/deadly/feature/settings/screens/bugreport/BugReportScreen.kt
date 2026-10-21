@@ -3,6 +3,8 @@ package com.grateful.deadly.feature.settings.screens.bugreport
 import android.content.Intent
 import android.content.ClipData
 import android.content.ClipboardManager
+import android.util.Log
+import android.widget.Toast
 import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -49,6 +51,8 @@ fun BugReportScreen(
     val scope = rememberCoroutineScope()
 
     var logText by remember { mutableStateOf("") }
+    // Bounded tail for display only; [logText] (full log) is what Send/Copy/Share use.
+    var preview by remember { mutableStateOf(BugReportExporter.LogPreview("", 0, 0, isTruncated = false)) }
     var isLoading by remember { mutableStateOf(true) }
     var copied by remember { mutableStateOf(false) }
     var note by remember { mutableStateOf("") }
@@ -59,7 +63,12 @@ fun BugReportScreen(
         isLoading = true
         copied = false
         viewModel.resetState()
-        logText = withContext(Dispatchers.IO) { BugReportExporter.exportRecentLogs() }
+        val (full, tail) = withContext(Dispatchers.IO) {
+            val full = BugReportExporter.exportRecentLogs()
+            full to BugReportExporter.previewTail(full)
+        }
+        logText = full
+        preview = tail
         isLoading = false
     }
 
@@ -107,16 +116,29 @@ fun BugReportScreen(
                     Text("Reading logs…", style = MaterialTheme.typography.bodyMedium)
                 }
             } else {
-                SelectionContainer {
-                    Text(
-                        text = logText,
-                        style = MaterialTheme.typography.bodySmall,
-                        fontFamily = FontFamily.Monospace,
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .verticalScroll(rememberScrollState())
-                            .padding(16.dp)
-                    )
+                Column(modifier = Modifier.fillMaxSize()) {
+                    if (preview.isTruncated) {
+                        Text(
+                            text = "Showing last ${preview.shownLines} of ${preview.totalLines} lines — " +
+                                "full log is included when you send.",
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 12.dp)
+                        )
+                    }
+                    // Only the bounded tail is rendered: a multi-MB Text exceeds
+                    // Compose's max layout height and blocks the main thread.
+                    SelectionContainer(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = preview.text,
+                            style = MaterialTheme.typography.bodySmall,
+                            fontFamily = FontFamily.Monospace,
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .verticalScroll(rememberScrollState())
+                                .padding(16.dp)
+                        )
+                    }
                 }
             }
         }
@@ -162,7 +184,14 @@ fun BugReportScreen(
             ) {
                 OutlinedButton(
                     onClick = {
-                        copyToClipboard(context, logText)
+                        val copiedAll = copyToClipboard(context, logText)
+                        if (!copiedAll) {
+                            Toast.makeText(
+                                context,
+                                "Log is too large to copy in full. Copied the most recent part. Use Share for the full log.",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
                         copied = true
                         scope.launch { delay(1500); copied = false }
                     },
@@ -179,7 +208,7 @@ fun BugReportScreen(
                 }
 
                 OutlinedButton(
-                    onClick = { shareLogs(context, logText) },
+                    onClick = { scope.launch { shareLogs(context, logText) } },
                     enabled = !isLoading && logText.isNotEmpty(),
                     modifier = Modifier.weight(1f)
                 ) {
@@ -212,13 +241,38 @@ private fun StatusRow(icon: androidx.compose.ui.graphics.vector.ImageVector, tex
     }
 }
 
-private fun copyToClipboard(context: Context, text: String) {
+/**
+ * Copy the full log if it fits on the clipboard; otherwise copy its most recent
+ * part. Returns true if the full log was copied.
+ */
+private fun copyToClipboard(context: Context, text: String): Boolean {
     val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-    clipboard.setPrimaryClip(ClipData.newPlainText("Deadly bug report", text))
+    fun setClip(value: String) = clipboard.setPrimaryClip(ClipData.newPlainText("Deadly bug report", value))
+    val tail = { maxChars: Int -> BugReportExporter.previewTail(text, maxLines = Int.MAX_VALUE, maxChars = maxChars).text }
+
+    if (text.length <= BugReportExporter.CLIPBOARD_MAX_CHARS) {
+        try {
+            setClip(text)
+            return true
+        } catch (e: RuntimeException) {
+            // TransactionTooLargeException surfaces as a RuntimeException; fall back to the preview.
+            Log.w("BugReportScreen", "Full log did not fit on the clipboard", e)
+            setClip(tail(BugReportExporter.PREVIEW_MAX_CHARS))
+            return false
+        }
+    }
+    try {
+        setClip(tail(BugReportExporter.CLIPBOARD_MAX_CHARS))
+    } catch (e: RuntimeException) {
+        Log.w("BugReportScreen", "Log tail did not fit on the clipboard", e)
+        setClip(tail(BugReportExporter.PREVIEW_MAX_CHARS))
+    }
+    return false
 }
 
-private fun shareLogs(context: Context, text: String) {
-    val file = BugReportExporter.writeToCache(context, text)
+private suspend fun shareLogs(context: Context, text: String) {
+    // Writing a multi-MB file must not block the main thread.
+    val file = withContext(Dispatchers.IO) { BugReportExporter.writeToCache(context, text) }
     val uri = FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
     val intent = Intent(Intent.ACTION_SEND).apply {
         type = "text/plain"
