@@ -32,9 +32,13 @@ interface PlaylistService {
     fun getCurrentShowLineup(): List<String>
     
     /**
-     * Get track list for current show as ViewModels
+     * Get track list for current show as ViewModels.
+     *
+     * Returns failure when the tracks could not be fetched (for example, Archive.org
+     * is unreachable and there is no cached copy). A success with an empty list means
+     * the fetch worked but there are no playable tracks.
      */
-    suspend fun getTrackList(): List<PlaylistTrackViewModel>
+    suspend fun getTrackList(): Result<List<PlaylistTrackViewModel>>
     
     /**
      * Cancel any current track loading operation

@@ -77,7 +77,7 @@ final class PlaybackRestorationService {
         await playlistService.loadShow(saved.showId, recordingId: saved.recordingId)
 
         guard !playlistService.tracks.isEmpty else {
-            logger.warning("[PB] No tracks loaded for show \(saved.showId), skipping restore")
+            logger.warning("[PB] No tracks loaded for show \(saved.showId), skipping restore (error: \(self.playlistService.trackLoadError ?? "none", privacy: .public))")
             return
         }
 

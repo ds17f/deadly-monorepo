@@ -15,6 +15,12 @@ final class PlaylistServiceImpl: PlaylistService {
     private(set) var tracks: [ArchiveTrack] = []
     private(set) var isLoadingTracks = false
     private(set) var trackLoadError: String?
+    /// True for a short window after a failed track fetch. `retryTracks()` is a
+    /// no-op while this (or `isLoadingTracks`) is set, so rapid Retry taps can
+    /// never fire more than one request.
+    private(set) var isTrackRetryCoolingDown = false
+    private var trackRetryCooldownTask: Task<Void, Never>?
+    private static let trackRetryCooldown: Duration = .seconds(3)
 
     private(set) var reviews: [Review] = []
     private(set) var isLoadingReviews = false
@@ -227,6 +233,18 @@ final class PlaylistServiceImpl: PlaylistService {
             prefetchAdjacentShowImages()
         } catch {
             trackLoadError = error.localizedDescription
+            startTrackRetryCooldown()
+        }
+    }
+
+    /// Re-fetch tracks for the current recording after a failure. Ignored while
+    /// a fetch is in flight or during the post-failure cooldown.
+    func retryTracks() async {
+        guard !isLoadingTracks, !isTrackRetryCoolingDown else { return }
+        if let recording = currentRecording {
+            await fetchTracks(recordingId: recording.identifier, keepError: true)
+        } else if let showId = currentShow?.id {
+            await loadShow(showId)
         }
     }
 
@@ -636,19 +654,33 @@ final class PlaylistServiceImpl: PlaylistService {
 
     // MARK: - Private
 
-    private func fetchTracks(recordingId: String) async {
+    /// `keepError` is for Retry: the error stays set while the fetch runs, so the
+    /// error block stays in place (and the list keeps its scroll position).
+    private func fetchTracks(recordingId: String, keepError: Bool = false) async {
         isLoadingTracks = true
-        trackLoadError = nil
+        if !keepError { trackLoadError = nil }
         defer { isLoadingTracks = false }
         do {
             tracks = try await archiveClient.fetchTracks(recordingId: recordingId)
+            trackLoadError = nil
         } catch {
             trackLoadError = error.localizedDescription
             tracks = []
+            startTrackRetryCooldown()
             analyticsService?.track("error", props: [
                 "source": "fetch_tracks",
                 "message": error.localizedDescription,
             ])
+        }
+    }
+
+    private func startTrackRetryCooldown() {
+        trackRetryCooldownTask?.cancel()
+        isTrackRetryCoolingDown = true
+        trackRetryCooldownTask = Task { [weak self] in
+            try? await Task.sleep(for: Self.trackRetryCooldown)
+            guard !Task.isCancelled else { return }
+            self?.isTrackRetryCoolingDown = false
         }
     }
 

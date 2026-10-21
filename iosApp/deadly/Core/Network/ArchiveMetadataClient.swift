@@ -44,7 +44,8 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
            let modDate = attrs[.modificationDate] as? Date,
            !isCacheExpired(modDate),
            let data = try? Data(contentsOf: cache),
-           let tracks = try? JSONDecoder().decode([ArchiveTrack].self, from: data) {
+           let tracks = try? JSONDecoder().decode([ArchiveTrack].self, from: data),
+           !tracks.isEmpty {
             return tracks
         }
 
@@ -53,11 +54,13 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
             guard let url = URL(string: "https://archive.org/metadata/\(recordingId)") else {
                 throw URLError(.badURL)
             }
-            let (data, _) = try await session.data(from: url)
+            let (data, response) = try await session.data(from: url)
+            try Self.validate(response: response, data: data)
             let tracks = Self.parseTracks(from: data)
 
-            // Cache the result
-            if let encoded = try? JSONEncoder().encode(tracks) {
+            // Cache the result. Never cache an empty list: a transient archive.org
+            // problem must not hide a show's tracks for the full cache window.
+            if !tracks.isEmpty, let encoded = try? JSONEncoder().encode(tracks) {
                 try? encoded.write(to: cache)
             }
 
@@ -65,7 +68,8 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
         } catch {
             // Fallback: serve expired cache if available
             if let data = try? Data(contentsOf: cache),
-               let tracks = try? JSONDecoder().decode([ArchiveTrack].self, from: data) {
+               let tracks = try? JSONDecoder().decode([ArchiveTrack].self, from: data),
+               !tracks.isEmpty {
                 return tracks
             }
             throw error
@@ -89,7 +93,8 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
             guard let url = URL(string: "https://archive.org/metadata/\(recordingId)") else {
                 throw URLError(.badURL)
             }
-            let (data, _) = try await session.data(from: url)
+            let (data, response) = try await session.data(from: url)
+            try Self.validate(response: response, data: data)
             let reviews = Self.parseReviews(from: data)
 
             // Cache the result
@@ -111,6 +116,18 @@ struct URLSessionArchiveMetadataClient: ArchiveMetadataClient {
     func clearCache(recordingId: String) {
         try? FileManager.default.removeItem(at: cacheFile(for: recordingId))
         try? FileManager.default.removeItem(at: reviewsCacheFile(for: recordingId))
+    }
+
+    /// Reject non-2xx responses and non-JSON bodies (e.g. an HTML error page
+    /// while archive.org is down). Without this, the parsers turn them into an
+    /// empty list and the failure looks like "this recording has no tracks".
+    private static func validate(response: URLResponse, data: Data) throws {
+        if let http = response as? HTTPURLResponse, !(200..<300).contains(http.statusCode) {
+            throw URLError(.badServerResponse)
+        }
+        guard (try? JSONSerialization.jsonObject(with: data)) is [String: Any] else {
+            throw URLError(.cannotParseResponse)
+        }
     }
 
     // MARK: - Parsing (internal for testing)

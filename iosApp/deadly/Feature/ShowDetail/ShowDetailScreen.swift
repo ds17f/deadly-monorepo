@@ -8,6 +8,10 @@ struct ShowDetailScreen: View {
     var pendingSheet: Binding<ShowDetailSheet?>? = nil
 
     @Environment(\.appContainer) private var container
+    @Environment(\.openURL) private var openURL
+
+    /// Third-party status page opened from the track-load error state.
+    private static let archiveStatusURL = URL(string: "https://www.isitdownrightnow.com/archive.org.html")!
 
     private var playlistService: PlaylistServiceImpl { container.playlistService }
     private var streamPlayer: StreamPlayer { container.streamPlayer }
@@ -230,7 +234,7 @@ struct ShowDetailScreen: View {
 
             // Track list
             Section("Tracks") {
-                if playlistService.isLoadingTracks {
+                if playlistService.isLoadingTracks && playlistService.trackLoadError == nil {
                     HStack {
                         Spacer()
                         ProgressView("Loading tracks…")
@@ -253,10 +257,8 @@ struct ShowDetailScreen: View {
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 24)
                     .listRowSeparator(.hidden)
-                } else if let error = playlistService.trackLoadError {
-                    Text(error)
-                        .font(.caption)
-                        .foregroundStyle(.red)
+                } else if playlistService.trackLoadError != nil {
+                    trackLoadErrorView
                 } else {
                     let trackStates = downloadService.trackDownloadStates(for: currentShowId)
                     ForEach(Array(playlistService.tracks.enumerated()), id: \.element.id) { index, track in
@@ -390,6 +392,45 @@ struct ShowDetailScreen: View {
     }
 
     // MARK: - Error state
+
+    /// Shown in the track list when the archive.org metadata fetch fails while
+    /// online. The show header stays visible above it.
+    private var trackLoadErrorView: some View {
+        VStack(spacing: 12) {
+            Image(systemName: "exclamationmark.icloud")
+                .font(.largeTitle)
+                .foregroundStyle(.secondary)
+            Text("Couldn't load tracks")
+                .font(.headline)
+            Text("Archive.org isn't responding. It may be down right now.")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+            Button {
+                Task { await playlistService.retryTracks() }
+            } label: {
+                // Spinner inside the button keeps the block's height, so the list doesn't jump.
+                Group {
+                    if playlistService.isLoadingTracks {
+                        ProgressView()
+                    } else {
+                        Text("Retry")
+                    }
+                }
+                .frame(minWidth: 120)
+            }
+            .buttonStyle(.borderedProminent)
+            .disabled(playlistService.isLoadingTracks || playlistService.isTrackRetryCoolingDown)
+            Button("Check Archive.org status") {
+                openURL(Self.archiveStatusURL)
+            }
+            .buttonStyle(.borderless)
+            .font(.subheadline)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 24)
+        .listRowSeparator(.hidden)
+    }
 
     private var errorState: some View {
         ContentUnavailableView(

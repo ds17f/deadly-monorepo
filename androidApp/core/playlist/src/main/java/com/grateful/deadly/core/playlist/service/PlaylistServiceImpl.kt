@@ -13,6 +13,7 @@ import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.media.state.MediaControllerStateUtil
 import com.grateful.deadly.core.player.service.ShareService
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
@@ -311,13 +312,13 @@ class PlaylistServiceImpl @Inject constructor(
     
     // === PHASE 1: STUBBED IMPLEMENTATIONS (TODOs) ===
     
-    override suspend fun getTrackList(): List<PlaylistTrackViewModel> {
+    override suspend fun getTrackList(): Result<List<PlaylistTrackViewModel>> {
         Log.d(TAG, "getTrackList() - Cache-first implementation with prefetch")
         
         val recordingId = currentRecordingId
         if (recordingId == null) {
             Log.w(TAG, "No current recording ID set")
-            return emptyList()
+            return Result.success(emptyList())
         }
         
         // 1. Check internal cache first
@@ -330,7 +331,7 @@ class PlaylistServiceImpl @Inject constructor(
             
             if (selectedFormat == null) {
                 Log.w(TAG, "No compatible format found in cached tracks")
-                return emptyList()
+                return Result.success(emptyList())
             }
             
             // Store selected format for playback coordination
@@ -342,7 +343,7 @@ class PlaylistServiceImpl @Inject constructor(
             
             // Start background prefetch for adjacent shows after cache hit
             startAdjacentPrefetch()
-            return convertTracksToViewModels(filteredTracks)
+            return Result.success(convertTracksToViewModels(filteredTracks))
         }
         
         // 2. Cache miss - load from Archive.org API
@@ -354,15 +355,15 @@ class PlaylistServiceImpl @Inject constructor(
                 val allTracks = result.getOrNull() ?: emptyList()
                 Log.d(TAG, "Got ${allTracks.size} tracks from ArchiveService")
                 
-                // Store in cache for future requests
-                trackCache[recordingId] = allTracks
+                // Store in cache for future requests (never cache an empty result)
+                if (allTracks.isNotEmpty()) trackCache[recordingId] = allTracks
                 
                 // Smart format selection with fallback
                 val selectedFormat = selectBestAvailableFormat(allTracks)
                 
                 if (selectedFormat == null) {
                     Log.w(TAG, "No compatible format found in loaded tracks")
-                    return emptyList()
+                    return Result.success(emptyList())
                 }
                 
                 // Store selected format for playback coordination
@@ -376,14 +377,18 @@ class PlaylistServiceImpl @Inject constructor(
                 startAdjacentPrefetch()
                 
                 // Convert to ViewModels
-                convertTracksToViewModels(filteredTracks)
+                Result.success(convertTracksToViewModels(filteredTracks))
             } else {
-                Log.e(TAG, "Error fetching tracks: ${result.exceptionOrNull()}")
-                emptyList()
+                // Do not cache the failure: a later retry must hit the network again.
+                val error = result.exceptionOrNull() ?: Exception("Failed to fetch tracks for $recordingId")
+                Log.e(TAG, "Error fetching tracks: $error")
+                Result.failure(error)
             }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             Log.e(TAG, "Exception in getTrackList", e)
-            emptyList()
+            Result.failure(e)
         }
     }
     
@@ -971,7 +976,7 @@ class PlaylistServiceImpl @Inject constructor(
                     val allTracks = result.getOrNull() ?: emptyList()
                     
                     // Store in cache - raw tracks cached, format selection happens at display time
-                    trackCache[recordingId] = allTracks
+                    if (allTracks.isNotEmpty()) trackCache[recordingId] = allTracks
                     
                     Log.d(TAG, "Prefetch completed for ${show.displayTitle}: ${allTracks.size} raw tracks cached")
                 } else {
@@ -1017,7 +1022,7 @@ class PlaylistServiceImpl @Inject constructor(
                     val tracks = result.getOrNull() ?: emptyList()
                     
                     // Store in cache - raw tracks cached, format selection happens at display time
-                    trackCache[show.bestRecordingId ?: ""] = tracks
+                    if (tracks.isNotEmpty()) trackCache[show.bestRecordingId ?: ""] = tracks
                     
                     Log.d(TAG, "Prefetch completed for ${show.displayTitle}: ${tracks.size} raw tracks cached")
                 } else {

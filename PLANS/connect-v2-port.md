@@ -35,7 +35,7 @@ Working branch: **`connect-v2-port`** (off `main`; distinct from the stale
   the server position even when the receiver was paused; show-page now-playing
   indicator when remote; desktop queue rail fills the column.
   Still TODO: device install (`make ios-remote-install`, needs
-  `KEYCHAIN_PASSWORD`) + a real two-device beta smoke pass.
+  `.secrets/mac_login_password.txt`) + a real two-device beta smoke pass.
 - ✅ **Layer 4 — Android** — **in PR #52** (`connect-v2-android`). Full port
   (new `core/connect/` module, lifecycle, player/miniplayer/settings surfaces),
   reconciled against main's rewritten media stack (kept Android Auto / DEAD-360,
