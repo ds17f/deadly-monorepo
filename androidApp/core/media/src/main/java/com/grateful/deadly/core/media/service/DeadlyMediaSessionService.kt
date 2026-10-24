@@ -36,10 +36,12 @@ import com.grateful.deadly.core.media.setPlaybackMetadata
 import com.grateful.deadly.core.media.browse.BrowseMediaId
 import com.grateful.deadly.core.media.browse.BrowseTreeProvider
 import com.grateful.deadly.core.media.equalizer.EqualizerRepository
+import com.grateful.deadly.core.media.state.LastPlayedStore
 import com.grateful.deadly.core.model.PlayerControlsStyle
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
@@ -49,11 +51,13 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 /**
- * MediaLibraryService with browse tree and metadata hydration.
+ * MediaLibraryService with browse tree and last-played persistence.
  *
  * Extends MediaLibraryService (superset of MediaSessionService) to expose
  * a browsable content tree for Android Auto while keeping all existing
- * playback, retry, and metadata hydration behaviour.
+ * playback and retry behaviour. It is also the single writer of the
+ * last-played state ([LastPlayedStore]), so position is saved in headless
+ * Android Auto sessions as well as phone sessions.
  */
 @UnstableApi
 @AndroidEntryPoint
@@ -70,10 +74,15 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         // currently available on the player (e.g., before media is loaded).
         private const val CUSTOM_ACTION_REWIND = "com.grateful.deadly.REWIND_10S"
         private const val CUSTOM_ACTION_FORWARD = "com.grateful.deadly.FORWARD_10S"
+
+        // Last-played persistence: periodic save while playing, and the
+        // minimum gap between [SAVE] log lines for the same track.
+        private const val PERIODIC_SAVE_INTERVAL_MS = 10_000L
+        private const val SAVE_LOG_INTERVAL_MS = 30_000L
     }
 
     @Inject
-    lateinit var metadataHydratorService: MetadataHydratorService
+    lateinit var lastPlayedStore: LastPlayedStore
 
     @Inject
     lateinit var browseTreeProvider: BrowseTreeProvider
@@ -99,6 +108,15 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     // Retry logic state
     private var retryCount = 0
     private val maxRetries = 3 // immediate, 1s, 2s
+
+    // Last-played persistence (the only writer of the last_played_track prefs).
+    private var periodicSaveJob: Job? = null
+    private var lastSaveLogKey: String? = null
+    private var lastSaveLogAtMs = 0L
+    // True while restoreLastPlayedSession applies the saved snapshot. The
+    // transition events it causes must not save: the values are the same, but a
+    // save would refresh last_saved and make an old snapshot look new.
+    private var applyingRestore = false
 
     // Search result cache for Android Auto browse
     private var cachedSearchResults: List<MediaItem> = emptyList()
@@ -189,6 +207,7 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             .setSeekBackIncrementMs(10_000L)
             .setSeekForwardIncrementMs(10_000L)
             .build()
+        Log.d(TAG, "[LIFECYCLE] onCreate service=${hexId(this)} player=${hexId(exoPlayer)} pid=${android.os.Process.myPid()}")
 
         // Wrap ExoPlayer so we can filter which transport commands are exposed
         // to controllers (notification, lock screen, Android Auto) based on the
@@ -221,11 +240,39 @@ class DeadlyMediaSessionService : MediaLibraryService() {
                 if (isPlaying && !hasAudioFocus) {
                     requestAudioFocus()
                 }
+                if (isPlaying) {
+                    startPeriodicSave()
+                } else {
+                    stopPeriodicSave()
+                    saveLastPlayed("paused")
+                }
             }
 
             override fun onPlayerError(error: androidx.media3.common.PlaybackException) {
                 Log.e(TAG, "[ERROR] Player error: ${error.message}", error)
                 handlePlayerError(error)
+            }
+
+            override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
+                Log.d(TAG, "[PLAYER] playWhenReady=$playWhenReady reason=${playWhenReadyReasonName(reason)} " +
+                    "idx=${exoPlayer.currentMediaItemIndex} pos=${exoPlayer.currentPosition}ms player=${hexId(exoPlayer)}")
+            }
+
+            override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
+                Log.d(TAG, "[PLAYER] mediaItemTransition reason=${transitionReasonName(reason)} " +
+                    "idx=${exoPlayer.currentMediaItemIndex}/${exoPlayer.mediaItemCount} id=${mediaItem?.mediaId}")
+                saveLastPlayed("transition")
+            }
+
+            override fun onPositionDiscontinuity(
+                oldPosition: Player.PositionInfo,
+                newPosition: Player.PositionInfo,
+                reason: Int
+            ) {
+                Log.d(TAG, "[PLAYER] positionDiscontinuity reason=${discontinuityReasonName(reason)} " +
+                    "${oldPosition.mediaItemIndex}@${oldPosition.positionMs}ms -> " +
+                    "${newPosition.mediaItemIndex}@${newPosition.positionMs}ms")
+                saveLastPlayed("discontinuity")
             }
         })
 
@@ -387,35 +434,59 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         }
     }
 
+    /**
+     * Load the last-played snapshot into an empty player (paused) so a controller
+     * that connects later (Android Auto, the phone UI) sees a loaded session.
+     *
+     * This must never overwrite a queue someone else loaded. Track resolution
+     * takes about 1s on IO, and in that window a controller can load a queue
+     * (onSetMediaItems) or Media3 can apply onPlaybackResumption. So the guards
+     * run twice: before resolving and again on Main right before applying.
+     */
     private fun restoreLastPlayedSession() {
         if (exoPlayer.mediaItemCount > 0) {
-            Log.d(TAG, "[RESTORE] Player already has items, skipping restore")
+            Log.d(TAG, "[RESTORE] trigger=service_onCreate skipped — player already has ${exoPlayer.mediaItemCount} items")
+            return
+        }
+        val saved = lastPlayedStore.load()
+        if (saved == null) {
+            Log.d(TAG, "[RESTORE] trigger=service_onCreate skipped — no saved session")
             return
         }
 
+        Log.d(TAG, "[RESTORE] trigger=service_onCreate resolving: show=${saved.showId} rec=${saved.recordingId} " +
+            "fmt=${saved.selectedFormat} idx=${saved.trackIndex} pos=${saved.positionMs}ms " +
+            "savedAgo=${savedAgeSeconds(saved.lastSavedTime)}s")
+
         serviceScope.launch {
             try {
-                val prefs = getSharedPreferences("last_played_track", MODE_PRIVATE)
-                val showId = prefs.getString("show_id", null) ?: return@launch
-                val recordingId = prefs.getString("recording_id", null) ?: return@launch
-                val format = prefs.getString("selected_format", null) ?: return@launch
-                val trackIndex = prefs.getInt("track_index", 0)
-                val positionMs = prefs.getLong("position_ms", 0L)
-
-                Log.d(TAG, "[RESTORE] Restoring: show=$showId rec=$recordingId fmt=$format idx=$trackIndex pos=${positionMs}ms")
-
-                val tracks = browseTreeProvider.resolveRecordingToPlayableTracks(showId, recordingId, format)
+                val tracks = browseTreeProvider.resolveRecordingToPlayableTracks(
+                    saved.showId, saved.recordingId, saved.selectedFormat
+                )
                 if (tracks.isEmpty()) {
-                    Log.w(TAG, "[RESTORE] No tracks resolved, falling back to browse tree")
+                    Log.w(TAG, "[RESTORE] No tracks resolved for ${saved.showId}/${saved.recordingId}, not restoring")
                     return@launch
                 }
 
-                val safeIndex = trackIndex.coerceIn(0, tracks.size - 1)
-                launch(Dispatchers.Main) {
-                    exoPlayer.setMediaItems(tracks, safeIndex, positionMs)
-                    exoPlayer.playWhenReady = false
-                    exoPlayer.prepare()
-                    Log.d(TAG, "[RESTORE] Session restored: ${tracks.size} tracks, index=$safeIndex, pos=${positionMs}ms")
+                val safeIndex = saved.trackIndex.coerceIn(0, tracks.size - 1)
+                withContext(Dispatchers.Main) {
+                    // Re-check on Main: a controller may have loaded a queue while
+                    // tracks resolved. Never force playWhenReady=false over it.
+                    if (exoPlayer.mediaItemCount > 0) {
+                        Log.d(TAG, "[RESTORE] skipped at apply — a controller loaded a queue while resolving: " +
+                            "items=${exoPlayer.mediaItemCount} idx=${exoPlayer.currentMediaItemIndex} " +
+                            "playWhenReady=${exoPlayer.playWhenReady} id=${exoPlayer.currentMediaItem?.mediaId}")
+                        return@withContext
+                    }
+                    applyingRestore = true
+                    try {
+                        exoPlayer.setMediaItems(tracks, safeIndex, saved.positionMs)
+                        exoPlayer.playWhenReady = false
+                        exoPlayer.prepare()
+                    } finally {
+                        applyingRestore = false
+                    }
+                    Log.d(TAG, "[RESTORE] Session restored: ${tracks.size} tracks, index=$safeIndex, pos=${saved.positionMs}ms")
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "[RESTORE] Failed to restore session", e)
@@ -424,15 +495,15 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     }
 
     private fun buildRecentMediaItem(): MediaItem? {
-        val prefs = getSharedPreferences("last_played_track", MODE_PRIVATE)
-        val showId = prefs.getString("show_id", null) ?: return null
-        val recordingId = prefs.getString("recording_id", null) ?: return null
-        val trackIndex = prefs.getInt("track_index", 0)
-        val trackTitle = prefs.getString("track_title", null) ?: return null
-        val format = prefs.getString("selected_format", null) ?: return null
-        val showDate = prefs.getString("show_date", null) ?: ""
-        val venue = prefs.getString("venue", null) ?: ""
-        val location = prefs.getString("location", null) ?: ""
+        val saved = lastPlayedStore.load() ?: return null
+        val showId = saved.showId
+        val recordingId = saved.recordingId
+        val trackIndex = saved.trackIndex
+        val trackTitle = saved.trackTitle
+        val format = saved.selectedFormat
+        val showDate = saved.showDate
+        val venue = saved.venue ?: ""
+        val location = saved.location ?: ""
 
         val subtitle = buildString {
             append(showDate)
@@ -468,50 +539,18 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     }
 
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaLibrarySession? {
-        Log.d(TAG, "[MEDIA] Client requesting session: ${controllerInfo.packageName}")
-
-        // Hydrate metadata only on session restore (app restart / AA reconnect).
-        // Do NOT hydrate if the player is already actively playing — calling
-        // setMediaItems on a live player causes an audible skip.
-        serviceScope.launch {
-            delay(2000) // Give MediaSession time to restore state
-            val isAlreadyPlaying = kotlinx.coroutines.withContext(Dispatchers.Main) { exoPlayer.isPlaying }
-            if (isAlreadyPlaying) {
-                Log.d(TAG, "[MEDIA] Skipping hydration — player already active")
-                return@launch
-            }
-            Log.d(TAG, "[MEDIA] Triggering metadata hydration after restoration")
-            try {
-                metadataHydratorService.hydrateCurrentQueue()
-                Log.d(TAG, "[MEDIA] Metadata hydration completed")
-            } catch (e: Exception) {
-                Log.e(TAG, "Metadata hydration failed", e)
-            }
-        }
+        Log.d(TAG, "[MEDIA] Client requesting session: ${describeController(controllerInfo)} " +
+            "service=${hexId(this)} player=${hexId(exoPlayer)} items=${exoPlayer.mediaItemCount} " +
+            "idx=${exoPlayer.currentMediaItemIndex} pos=${exoPlayer.currentPosition}ms playing=${exoPlayer.isPlaying}")
 
         return mediaSession
     }
 
     override fun onTaskRemoved(rootIntent: Intent?) {
+        Log.d(TAG, "[LIFECYCLE] onTaskRemoved service=${hexId(this)} player=${hexId(exoPlayer)} " +
+            "items=${exoPlayer.mediaItemCount} playing=${exoPlayer.isPlaying}")
         // Save exact playback position before stopping (synchronous commit)
-        val currentItem = exoPlayer.currentMediaItem
-        if (currentItem != null) {
-            val extras = currentItem.mediaMetadata.extras
-            getSharedPreferences("last_played_track", MODE_PRIVATE).edit()
-                .putString("show_id", extras?.getString("showId"))
-                .putString("recording_id", extras?.getString("recordingId"))
-                .putInt("track_index", exoPlayer.currentMediaItemIndex)
-                .putLong("position_ms", exoPlayer.currentPosition)
-                .putString("track_title", currentItem.mediaMetadata.title?.toString())
-                .putString("track_filename", extras?.getString("filename"))
-                .putString("selected_format", extras?.getString("format"))
-                .putString("show_date", extras?.getString("showDate"))
-                .putString("venue", extras?.getString("venue"))
-                .putString("location", extras?.getString("location"))
-                .putLong("last_saved", System.currentTimeMillis())
-                .commit()
-            Log.d(TAG, "Saved playback position ${exoPlayer.currentPosition}ms before task removal")
-        }
+        saveLastPlayed("onTaskRemoved", commit = true)
 
         abandonAudioFocus()
         exoPlayer.stop()
@@ -520,7 +559,12 @@ class DeadlyMediaSessionService : MediaLibraryService() {
     }
 
     override fun onDestroy() {
-        Log.d(TAG, "Service onDestroy()")
+        Log.d(TAG, "[LIFECYCLE] onDestroy service=${hexId(this)} player=${hexId(exoPlayer)} " +
+            "items=${exoPlayer.mediaItemCount} idx=${exoPlayer.currentMediaItemIndex} " +
+            "pos=${exoPlayer.currentPosition}ms")
+        stopPeriodicSave()
+        // Final save before the player is released (synchronous commit).
+        saveLastPlayed("onDestroy", commit = true)
         abandonAudioFocus()
         equalizerRepository.release()
         mediaSession?.run {
@@ -529,6 +573,58 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         }
         exoPlayer.release()
         super.onDestroy()
+    }
+
+    // ── Last-played persistence ───────────────────────────────────────────
+
+    /**
+     * Save the player's current item/index/position to [LastPlayedStore].
+     *
+     * This is the single save path for the last-played state. It runs at the
+     * service level so it also works when Android Auto starts the service with
+     * no Activity. Must be called on the main thread (player access).
+     */
+    private fun saveLastPlayed(trigger: String, commit: Boolean = false) {
+        if (applyingRestore) {
+            Log.d(TAG, "[SAVE] trigger=$trigger skipped — applying restored snapshot")
+            return
+        }
+        val item = exoPlayer.currentMediaItem ?: run {
+            Log.d(TAG, "[SAVE] trigger=$trigger skipped — no current item")
+            return
+        }
+        val index = exoPlayer.currentMediaItemIndex
+        val position = exoPlayer.currentPosition
+        val saved = lastPlayedStore.save(item, index, position, commit)
+        if (saved == null) {
+            Log.d(TAG, "[SAVE] trigger=$trigger skipped — item has no show/recording id=${item.mediaId}")
+            return
+        }
+
+        // Throttle the log: periodic saves would otherwise log every 10s.
+        val key = "${saved.showId}|${saved.recordingId}|${saved.trackIndex}"
+        val now = System.currentTimeMillis()
+        if (trigger != "periodic" || key != lastSaveLogKey || now - lastSaveLogAtMs >= SAVE_LOG_INTERVAL_MS) {
+            lastSaveLogKey = key
+            lastSaveLogAtMs = now
+            Log.d(TAG, "[SAVE] trigger=$trigger show=${saved.showId} rec=${saved.recordingId} " +
+                "idx=${saved.trackIndex} pos=${saved.positionMs}ms commit=$commit")
+        }
+    }
+
+    private fun startPeriodicSave() {
+        if (periodicSaveJob?.isActive == true) return
+        periodicSaveJob = serviceScope.launch(Dispatchers.Main) {
+            while (true) {
+                delay(PERIODIC_SAVE_INTERVAL_MS)
+                saveLastPlayed("periodic")
+            }
+        }
+    }
+
+    private fun stopPeriodicSave() {
+        periodicSaveJob?.cancel()
+        periodicSaveJob = null
     }
 
     // ── Audio focus management ────────────────────────────────────────────
@@ -641,6 +737,76 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         }
     }
 
+    // ── Diagnostic log helpers ───────────────────────────────────────────
+
+    private fun hexId(obj: Any): String = "@" + Integer.toHexString(System.identityHashCode(obj))
+
+    private fun savedAgeSeconds(lastSaved: Long): Long =
+        if (lastSaved <= 0L) -1L else (System.currentTimeMillis() - lastSaved) / 1000
+
+    private fun describeController(c: MediaSession.ControllerInfo): String =
+        "pkg=${c.packageName} uid=${c.uid} ver=${c.controllerVersion} trusted=${c.isTrusted}"
+
+    /** First few media IDs only, so a 24-track queue stays one short line. */
+    private fun summarizeIds(items: List<MediaItem>): String {
+        val head = items.take(3).joinToString(",") { it.mediaId }
+        return if (items.size > 3) "[$head,…+${items.size - 3}]" else "[$head]"
+    }
+
+    private fun playWhenReadyReasonName(reason: Int): String = when (reason) {
+        Player.PLAY_WHEN_READY_CHANGE_REASON_USER_REQUEST -> "USER_REQUEST"
+        Player.PLAY_WHEN_READY_CHANGE_REASON_AUDIO_FOCUS_LOSS -> "AUDIO_FOCUS_LOSS"
+        Player.PLAY_WHEN_READY_CHANGE_REASON_AUDIO_BECOMING_NOISY -> "AUDIO_BECOMING_NOISY"
+        Player.PLAY_WHEN_READY_CHANGE_REASON_REMOTE -> "REMOTE"
+        Player.PLAY_WHEN_READY_CHANGE_REASON_END_OF_MEDIA_ITEM -> "END_OF_MEDIA_ITEM"
+        Player.PLAY_WHEN_READY_CHANGE_REASON_SUPPRESSED_TOO_LONG -> "SUPPRESSED_TOO_LONG"
+        else -> "UNKNOWN($reason)"
+    }
+
+    private fun transitionReasonName(reason: Int): String = when (reason) {
+        Player.MEDIA_ITEM_TRANSITION_REASON_REPEAT -> "REPEAT"
+        Player.MEDIA_ITEM_TRANSITION_REASON_AUTO -> "AUTO"
+        Player.MEDIA_ITEM_TRANSITION_REASON_SEEK -> "SEEK"
+        Player.MEDIA_ITEM_TRANSITION_REASON_PLAYLIST_CHANGED -> "PLAYLIST_CHANGED"
+        else -> "UNKNOWN($reason)"
+    }
+
+    private fun discontinuityReasonName(reason: Int): String = when (reason) {
+        Player.DISCONTINUITY_REASON_AUTO_TRANSITION -> "AUTO_TRANSITION"
+        Player.DISCONTINUITY_REASON_SEEK -> "SEEK"
+        Player.DISCONTINUITY_REASON_SEEK_ADJUSTMENT -> "SEEK_ADJUSTMENT"
+        Player.DISCONTINUITY_REASON_SKIP -> "SKIP"
+        Player.DISCONTINUITY_REASON_REMOVE -> "REMOVE"
+        Player.DISCONTINUITY_REASON_INTERNAL -> "INTERNAL"
+        Player.DISCONTINUITY_REASON_SILENCE_SKIP -> "SILENCE_SKIP"
+        else -> "UNKNOWN($reason)"
+    }
+
+    private fun playerCommandName(command: Int): String = when (command) {
+        Player.COMMAND_PLAY_PAUSE -> "PLAY_PAUSE"
+        Player.COMMAND_PREPARE -> "PREPARE"
+        Player.COMMAND_STOP -> "STOP"
+        Player.COMMAND_SEEK_TO_DEFAULT_POSITION -> "SEEK_TO_DEFAULT_POSITION"
+        Player.COMMAND_SEEK_IN_CURRENT_MEDIA_ITEM -> "SEEK_IN_CURRENT_MEDIA_ITEM"
+        Player.COMMAND_SEEK_TO_PREVIOUS_MEDIA_ITEM -> "SEEK_TO_PREVIOUS_MEDIA_ITEM"
+        Player.COMMAND_SEEK_TO_PREVIOUS -> "SEEK_TO_PREVIOUS"
+        Player.COMMAND_SEEK_TO_NEXT_MEDIA_ITEM -> "SEEK_TO_NEXT_MEDIA_ITEM"
+        Player.COMMAND_SEEK_TO_NEXT -> "SEEK_TO_NEXT"
+        Player.COMMAND_SEEK_TO_MEDIA_ITEM -> "SEEK_TO_MEDIA_ITEM"
+        Player.COMMAND_SEEK_BACK -> "SEEK_BACK"
+        Player.COMMAND_SEEK_FORWARD -> "SEEK_FORWARD"
+        Player.COMMAND_SET_SPEED_AND_PITCH -> "SET_SPEED_AND_PITCH"
+        Player.COMMAND_SET_SHUFFLE_MODE -> "SET_SHUFFLE_MODE"
+        Player.COMMAND_SET_REPEAT_MODE -> "SET_REPEAT_MODE"
+        Player.COMMAND_SET_MEDIA_ITEM -> "SET_MEDIA_ITEM"
+        Player.COMMAND_CHANGE_MEDIA_ITEMS -> "CHANGE_MEDIA_ITEMS"
+        Player.COMMAND_SET_VOLUME -> "SET_VOLUME"
+        Player.COMMAND_SET_DEVICE_VOLUME_WITH_FLAGS -> "SET_DEVICE_VOLUME"
+        Player.COMMAND_ADJUST_DEVICE_VOLUME_WITH_FLAGS -> "ADJUST_DEVICE_VOLUME"
+        Player.COMMAND_RELEASE -> "RELEASE"
+        else -> "CMD($command)"
+    }
+
     // ── Media library session callback (browse tree + search) ─────────────────
 
     private inner class LibrarySessionCallback : MediaLibrarySession.Callback {
@@ -652,6 +818,7 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             // Expose our custom ±10s session commands to every controller so the
             // notification + AA can render them as buttons. Player commands stay
             // at their defaults.
+            Log.d(TAG, "[SESSION] onConnect ${describeController(controller)}")
             val sessionCommands = MediaSession.ConnectionResult.DEFAULT_SESSION_AND_LIBRARY_COMMANDS
                 .buildUpon()
                 .add(SessionCommand(CUSTOM_ACTION_REWIND, Bundle.EMPTY))
@@ -660,6 +827,35 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             return MediaSession.ConnectionResult.AcceptedResultBuilder(session)
                 .setAvailableSessionCommands(sessionCommands)
                 .build()
+        }
+
+        override fun onDisconnected(
+            session: MediaSession,
+            controller: MediaSession.ControllerInfo
+        ) {
+            Log.d(TAG, "[SESSION] onDisconnected ${describeController(controller)}")
+            super.onDisconnected(session, controller)
+        }
+
+        override fun onPlayerCommandRequest(
+            session: MediaSession,
+            controller: MediaSession.ControllerInfo,
+            playerCommand: Int
+        ): Int {
+            val result = super.onPlayerCommandRequest(session, controller, playerCommand)
+            Log.d(TAG, "[SESSION] command=${playerCommandName(playerCommand)} from ${controller.packageName} " +
+                "uid=${controller.uid} result=$result")
+            return result
+        }
+
+        override fun onAddMediaItems(
+            mediaSession: MediaSession,
+            controller: MediaSession.ControllerInfo,
+            mediaItems: MutableList<MediaItem>
+        ): ListenableFuture<MutableList<MediaItem>> {
+            Log.d(TAG, "[SESSION] onAddMediaItems from ${controller.packageName} " +
+                "count=${mediaItems.size} ids=${summarizeIds(mediaItems)}")
+            return super.onAddMediaItems(mediaSession, controller, mediaItems)
         }
 
         override fun onCustomCommand(
@@ -684,6 +880,8 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             params: LibraryParams?
         ): ListenableFuture<LibraryResult<MediaItem>> {
             val isRecent = params?.isRecent ?: false
+            Log.d(TAG, "[BROWSE] onGetLibraryRoot from ${browser.packageName} uid=${browser.uid} " +
+                "recent=$isRecent offline=${params?.isOffline} suggested=${params?.isSuggested}")
             val mediaId = if (isRecent) BrowseMediaId.RECENT_ROOT else BrowseMediaId.ROOT
             val title = if (isRecent) "Recent" else "Grateful Dead"
 
@@ -713,10 +911,14 @@ class DeadlyMediaSessionService : MediaLibraryService() {
                 if (parentId == BrowseMediaId.RECENT_ROOT) {
                     val recentItem = buildRecentMediaItem()
                     val children = if (recentItem != null) listOf(recentItem) else emptyList()
+                    Log.d(TAG, "[BROWSE] onGetChildren parent=$parentId from ${browser.packageName} " +
+                        "count=${children.size} ids=${summarizeIds(children)}")
                     return@future LibraryResult.ofItemList(children, params)
                 }
 
                 val children = browseTreeProvider.getChildren(parentId, page, pageSize)
+                Log.d(TAG, "[BROWSE] onGetChildren parent=$parentId page=$page size=$pageSize " +
+                    "from ${browser.packageName} count=${children.size}")
                 LibraryResult.ofItemList(children, params)
             } catch (e: Exception) {
                 Log.e(TAG, "Error getting children for $parentId", e)
@@ -731,6 +933,7 @@ class DeadlyMediaSessionService : MediaLibraryService() {
         ): ListenableFuture<LibraryResult<MediaItem>> = serviceScope.future {
             try {
                 val item = browseTreeProvider.getItem(mediaId)
+                Log.d(TAG, "[BROWSE] onGetItem id=$mediaId from ${browser.packageName} found=${item != null}")
                 if (item != null) {
                     LibraryResult.ofItem(item, null)
                 } else {
@@ -786,27 +989,25 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             mediaSession: MediaSession,
             controller: MediaSession.ControllerInfo
         ): ListenableFuture<MediaSession.MediaItemsWithStartPosition> = serviceScope.future {
-            Log.d(TAG, "[RESUME] onPlaybackResumption from ${controller.packageName}")
-            val prefs = getSharedPreferences("last_played_track", MODE_PRIVATE)
-            val showId = prefs.getString("show_id", null)
-            val recordingId = prefs.getString("recording_id", null)
-            val format = prefs.getString("selected_format", null)
-            if (showId == null || recordingId == null || format == null) {
+            val saved = lastPlayedStore.load()
+            Log.d(TAG, "[RESUME] onPlaybackResumption from ${describeController(controller)} " +
+                "savedAgo=${savedAgeSeconds(saved?.lastSavedTime ?: 0L)}s " +
+                "playerItems=${exoPlayer.mediaItemCount}")
+            if (saved == null) {
                 Log.d(TAG, "[RESUME] No last-played session, declining resume")
                 throw UnsupportedOperationException("No resumable session")
             }
-            val trackIndex = prefs.getInt("track_index", 0)
-            val positionMs = prefs.getLong("position_ms", 0L)
             val tracks = browseTreeProvider.resolveRecordingToPlayableTracks(
-                showId, recordingId, format
+                saved.showId, saved.recordingId, saved.selectedFormat
             )
             if (tracks.isEmpty()) {
-                Log.w(TAG, "[RESUME] No tracks resolved for $showId/$recordingId")
+                Log.w(TAG, "[RESUME] No tracks resolved for ${saved.showId}/${saved.recordingId}")
                 throw UnsupportedOperationException("No tracks resolved")
             }
-            val safeIndex = trackIndex.coerceIn(0, tracks.size - 1)
-            Log.d(TAG, "[RESUME] Returning ${tracks.size} tracks, idx=$safeIndex, pos=${positionMs}ms")
-            MediaSession.MediaItemsWithStartPosition(tracks, safeIndex, positionMs)
+            val safeIndex = saved.trackIndex.coerceIn(0, tracks.size - 1)
+            Log.d(TAG, "[RESUME] trigger=onPlaybackResumption Returning show=${saved.showId} rec=${saved.recordingId} " +
+                "${tracks.size} tracks, idx=$safeIndex, pos=${saved.positionMs}ms")
+            MediaSession.MediaItemsWithStartPosition(tracks, safeIndex, saved.positionMs)
         }
 
         override fun onSetMediaItems(
@@ -816,8 +1017,23 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             startIndex: Int,
             startPositionMs: Long
         ): ListenableFuture<MediaSession.MediaItemsWithStartPosition> = serviceScope.future {
+            Log.d(TAG, "[SESSION] onSetMediaItems from ${controller.packageName} uid=${controller.uid} " +
+                "count=${mediaItems.size} startIndex=$startIndex startPos=${startPositionMs}ms " +
+                "ids=${summarizeIds(mediaItems)}")
+            resolveSetMediaItems(mediaItems, startIndex, startPositionMs).also { r ->
+                Log.d(TAG, "[SESSION] onSetMediaItems resolved count=${r.mediaItems.size} " +
+                    "startIndex=${r.startIndex} startPos=${r.startPositionMs}ms " +
+                    "startId=${r.mediaItems.getOrNull(r.startIndex)?.mediaId}")
+            }
+        }
+
+        private suspend fun resolveSetMediaItems(
+            mediaItems: List<MediaItem>,
+            startIndex: Int,
+            startPositionMs: Long
+        ): MediaSession.MediaItemsWithStartPosition {
             if (mediaItems.isEmpty()) {
-                return@future MediaSession.MediaItemsWithStartPosition(
+                return MediaSession.MediaItemsWithStartPosition(
                     mediaItems, startIndex, startPositionMs
                 )
             }
@@ -825,7 +1041,7 @@ class DeadlyMediaSessionService : MediaLibraryService() {
             val item = mediaItems[startIndex.coerceIn(0, mediaItems.size - 1)]
             val mediaId = item.mediaId
 
-            try {
+            return try {
                 when {
                     BrowseMediaId.isShow(mediaId) -> {
                         val tracks = browseTreeProvider.resolveShowToPlayableTracks(

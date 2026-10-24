@@ -8,7 +8,6 @@ import com.grateful.deadly.core.database.AppPreferences
 import com.grateful.deadly.core.database.AppReviewManager
 import com.grateful.deadly.core.database.ToastController
 import com.grateful.deadly.core.domain.repository.ShowRepository
-import com.grateful.deadly.core.miniplayer.LastPlayedTrackService
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.core.network.monitor.NetworkMonitor
 import com.grateful.deadly.playback.AutoAdvanceCoordinator
@@ -26,7 +25,6 @@ class AppViewModel @Inject constructor(
     networkMonitor: NetworkMonitor,
     appPreferences: AppPreferences,
     private val analyticsService: AnalyticsService,
-    private val lastPlayedTrackService: LastPlayedTrackService,
     private val showRepository: ShowRepository,
     private val favoritesService: FavoritesService,
     private val appReviewManager: AppReviewManager,
@@ -48,13 +46,6 @@ class AppViewModel @Inject constructor(
         appPreferences.forceOnline
     ) { online, forced -> !online && !forced }
         .stateIn(viewModelScope, SharingStarted.Eagerly, initialValue = false)
-
-    init {
-        lastPlayedTrackService.startMonitoring()
-        viewModelScope.launch {
-            lastPlayedTrackService.restoreLastPlayedTrack()
-        }
-    }
 
     suspend fun getShow(showId: String): Show? = showRepository.getShowById(showId)
 

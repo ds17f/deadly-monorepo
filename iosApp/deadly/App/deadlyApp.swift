@@ -6,7 +6,17 @@ import UIKit
 /// App Delegate to handle background URL session events, CarPlay scene routing, and Siri intents.
 class DeadlyAppDelegate: NSObject, UIApplicationDelegate {
     static private(set) var shared: DeadlyAppDelegate!
-    lazy var container = AppContainer()
+    /// The app's one container. Created lazily by whichever comes first — the
+    /// SwiftUI scene or CarPlaySceneDelegate (a CarPlay-only cold start never
+    /// builds the phone UI). Playback restore is scheduled here, at app level,
+    /// so it runs once per process in both cases (not from a view).
+    lazy var container: AppContainer = {
+        let container = AppContainer()
+        MainActor.assumeIsolated {
+            container.playbackRestorationService.scheduleLaunchRestore()
+        }
+        return container
+    }()
 
     func application(
         _ application: UIApplication,
@@ -96,7 +106,10 @@ struct deadlyApp: App {
                         // blank until a cold relaunch.
                         await container.trendingService.refresh()
                         await container.popularService.refresh()
-                        await container.playbackRestorationService.restoreIfAvailable()
+                        // The launch restore is app-level and idempotent. If it found
+                        // no catalog to load the saved show from (first import), this
+                        // retries it; otherwise it is a no-op.
+                        await container.playbackRestorationService.restoreOnLaunchIfNeeded(trigger: "data_import")
                     }
                 }) {
                     DataImportScreen(isPresented: $showingImport)
@@ -125,12 +138,11 @@ struct deadlyApp: App {
                         // Refresh the global Connect flag so the Connect UI renders
                         // in the right state from launch (ADR-0018).
                         container.connectService.refreshServerConnectEnabled()
-                        // Start Connect first so it can receive shared state before local restore.
+                        // Start Connect early so it can receive shared state before the
+                        // app-level playback restore (scheduled by DeadlyAppDelegate) runs.
                         container.connectService.startIfAuthenticated()
                         // Brief wait for the WebSocket to connect and receive state.
                         try? await Task.sleep(for: .seconds(1.5))
-                        // Restore last playback position only if Connect has no shared session.
-                        await container.playbackRestorationService.restoreIfAvailable()
                         container.isColdLaunch = false
                     }
                     // Cold-start sync: if the user is already signed in when the
