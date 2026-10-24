@@ -1,11 +1,15 @@
 # Changelog
 
+## [2.43.2] - 2026-10-24
+
+### Bug Fixes
+* save position from the player service and stop restore from overwriting car playback (#104) (c6252e36)
+
+
 ## [2.43.1] - 2026-10-21
 
 ### Bug Fixes
 * show a Retry error when archive.org is unreachable (#103) (2b119b9f)
-
-
 ## [2.43.0] - 2026-10-05
 
 ### New Features
