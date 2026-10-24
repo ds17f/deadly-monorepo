@@ -6,7 +6,6 @@ import com.grateful.deadly.core.api.player.PlayerService
 import com.grateful.deadly.core.connect.ConnectService
 import com.grateful.deadly.core.media.repository.MediaControllerRepository
 import com.grateful.deadly.core.media.state.MediaControllerStateUtil
-import com.grateful.deadly.core.media.service.MetadataHydratorService
 import com.grateful.deadly.core.domain.repository.ShowRepository
 import com.grateful.deadly.core.model.Show
 import com.grateful.deadly.core.model.Recording
@@ -31,19 +30,15 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Player Service Implementation with Metadata Hydration
+ * Player Service Implementation
  * 
  * Real implementation of PlayerService that delegates to MediaControllerRepository.
  * Provides perfect synchronization with Media3 playback state through direct StateFlow delegation.
- * Uses MetadataHydratorService for on-demand metadata enrichment from database.
- * 
- * Key Innovation: Hydrates metadata on-demand when accessed, ensuring fresh show/venue info.
  */
 @Singleton
 class PlayerServiceImpl @Inject constructor(
     private val mediaControllerRepository: MediaControllerRepository,
     private val mediaControllerStateUtil: MediaControllerStateUtil,
-    private val metadataHydratorService: MetadataHydratorService,
     private val showRepository: ShowRepository,
     private val shareService: ShareService,
     private val connectService: ConnectService,
