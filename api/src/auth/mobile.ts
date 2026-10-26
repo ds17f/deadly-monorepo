@@ -74,6 +74,7 @@ export async function mobileAuthRoutes(app: FastifyInstance): Promise<void> {
     // 1. Verify the ID token
     let sub: string;
     let email: string;
+    let emailVerified: unknown;
     let verifiedName: string | null = null;
 
     try {
@@ -91,6 +92,7 @@ export async function mobileAuthRoutes(app: FastifyInstance): Promise<void> {
 
         sub = payload.sub!;
         email = (payload as Record<string, unknown>).email as string;
+        emailVerified = payload.email_verified;
         verifiedName = (payload as Record<string, unknown>).name as string | null;
       } else if (provider === "apple") {
         const allowedAudiences = [
@@ -105,6 +107,7 @@ export async function mobileAuthRoutes(app: FastifyInstance): Promise<void> {
 
         sub = payload.sub!;
         email = (payload as Record<string, unknown>).email as string;
+        emailVerified = payload.email_verified;
         // Apple sends name only on first auth, passed via request body
         verifiedName = name ?? null;
       } else {
@@ -115,8 +118,11 @@ export async function mobileAuthRoutes(app: FastifyInstance): Promise<void> {
       return reply.code(401).send({ error: "Invalid ID token" });
     }
 
-    if (!sub || !email) {
-      return reply.code(401).send({ error: "ID token missing sub or email" });
+    // Email is used to link an existing account across providers. A signed
+    // token alone does not establish that its owner controls that email.
+    if (typeof sub !== "string" || !sub || typeof email !== "string" || !email.trim()
+      || (emailVerified !== true && emailVerified !== "true")) {
+      return reply.code(401).send({ error: "ID token requires sub and a verified email" });
     }
 
     // 2. Find or create user using adapter functions

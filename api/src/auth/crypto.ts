@@ -8,6 +8,9 @@ let encryptionKey: Uint8Array | null = null;
 
 export async function getSecretKey(): Promise<Uint8Array> {
   if (encryptionKey) return encryptionKey;
+  if (!AUTH_SECRET?.trim()) {
+    throw new Error("AUTH_SECRET must be configured before issuing or accepting tokens");
+  }
   const cookieName = "authjs.session-token";
   const encoder = new TextEncoder();
   const keyMaterial = encoder.encode(AUTH_SECRET);

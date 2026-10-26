@@ -1,4 +1,4 @@
-FROM node:22-slim AS builder
+FROM node:22.23.4-bookworm-slim AS builder
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci
@@ -12,7 +12,7 @@ COPY src/ src/
 COPY show-index.json ./
 RUN npm run build
 
-FROM node:22-slim
+FROM node:22.23.4-bookworm-slim
 WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends sqlite3 && rm -rf /var/lib/apt/lists/*
 COPY package.json package-lock.json* ./

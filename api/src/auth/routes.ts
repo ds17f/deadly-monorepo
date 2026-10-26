@@ -40,12 +40,20 @@ export async function authRoutes(app: FastifyInstance): Promise<void> {
     const appleName = extractAppleName(request);
 
     const webRequest = await toWebRequest(request);
-    const webResponse = await Auth(webRequest, authConfig);
-
-    // If Apple sent a name, backfill it into the freshly-created user record.
-    if (appleName) {
-      backfillAppleName(request, appleName);
-    }
+    const webResponse = await Auth(webRequest, {
+      ...authConfig,
+      events: {
+        ...authConfig.events,
+        async signIn(message) {
+          // Only a completed, verified Apple sign-in may update its own user.
+          // Callback body fields are untrusted, including the supplied email.
+          if (appleName && message.account?.provider === "apple" && message.user.id) {
+            backfillAppleName(message.user.id, appleName);
+          }
+          await authConfig.events?.signIn?.(message);
+        },
+      },
+    });
 
     return sendWebResponse(reply, webResponse);
   });
@@ -139,22 +147,18 @@ function extractAppleName(request: FastifyRequest): string | null {
 }
 
 /** Update both auth_users and accounts tables with the Apple-provided name. */
-function backfillAppleName(request: FastifyRequest, name: string): void {
+function backfillAppleName(authUserId: string, name: string): void {
   try {
-    const body = request.body as Record<string, string> | undefined;
-    const email = body?.email ?? (body?.user ? JSON.parse(body.user)?.email : null);
-    if (!email) return;
-
     const db = getUsersDb();
     // Update auth_users (Auth.js layer) — only if name is currently null
     db.prepare(
-      `UPDATE auth_users SET name = ? WHERE email = ? AND name IS NULL`
-    ).run(name, email.toLowerCase());
+      `UPDATE auth_users SET name = ? WHERE id = ? AND name IS NULL`
+    ).run(name, authUserId);
 
     // Update accounts (app layer) — only if name is currently null
     db.prepare(
-      `UPDATE accounts SET name = ? WHERE email = ? AND name IS NULL`
-    ).run(name, email.toLowerCase());
+      `UPDATE accounts SET name = ? WHERE auth_user_id = ? AND name IS NULL`
+    ).run(name, authUserId);
   } catch {
     // Non-critical — don't break the auth flow
   }

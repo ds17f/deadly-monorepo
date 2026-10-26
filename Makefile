@@ -31,7 +31,7 @@ REQUIRE_MAC_PASSWORD = @if [ ! -s $(MAC_PASSWORD_FILE) ]; then echo "Missing $(M
 
 # Pre-pull base images
 docker-pull:
-	docker pull node:22-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine
+	docker pull node:$$(cat .nvmrc)-bookworm-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine
 
 # Start full stack locally (Docker Compose dev mode). Regenerate the show
 # index first so it bakes into the freshly-built API image.
@@ -787,7 +787,7 @@ REMOTE_ENVPATH := export PATH=$(REMOTE_DOCKER):$(REMOTE_BREW)/node@22/bin:/usr/l
 # Pre-pull base images (avoids keychain auth issues over SSH)
 docker-remote-pull:
 	@echo "Pulling base images on $(REMOTE_HOST)..."
-	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && docker pull node:22-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine"
+	@ssh $(REMOTE_HOST) "$(REMOTE_ENVPATH) && docker pull node:$$(cat .nvmrc)-bookworm-slim && docker pull caddy:2-alpine && docker pull redis:7-alpine"
 
 # Build + start full stack on remote Mac (requires $(MAC_PASSWORD_FILE)).
 # See `ios-remote-install` for the rationale on using `security -p` vs stdin.

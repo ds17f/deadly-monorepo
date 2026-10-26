@@ -1,3 +1,5 @@
+# Apply security floors without installing optional Brotli decoders.
+-c ../security-constraints.txt
 # LLM API Integration
 requests>=2.31.0
 openai>=1.0.0

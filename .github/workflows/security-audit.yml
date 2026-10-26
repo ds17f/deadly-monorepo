@@ -1,0 +1,48 @@
+name: Security - Dependency audit
+
+on:
+  pull_request:
+    paths:
+      - 'api/package*.json'
+      - 'ui/package*.json'
+      - '**/requirements.txt'
+      - 'data/scripts/security-constraints.txt'
+      - '.nvmrc'
+      - '.github/workflows/security-audit.yml'
+  schedule:
+    - cron: '23 14 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        directory: [api, ui]
+    steps:
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+        with:
+          node-version-file: .nvmrc
+      - run: npm audit --package-lock-only
+        working-directory: ${{ matrix.directory }}
+  python:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        requirements:
+          - data/scripts/requirements.txt
+          - data/scripts/review-processor/requirements.txt
+          - docs/requirements.txt
+    steps:
+      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4.2.1
+      - uses: actions/setup-python@39cd14951b08e74b54015e9e001cdefcf80e669f # v5.1.1
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'pip-audit==2.10.1'
+      - run: python -m pip_audit -r '${{ matrix.requirements }}'
