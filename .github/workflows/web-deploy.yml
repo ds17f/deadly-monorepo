@@ -135,6 +135,9 @@ jobs:
           LOFT_ADDRESS="${{ vars.LOFT_ADDRESS }}"
           LOFT_WWW_ADDRESS="${{ vars.LOFT_WWW_ADDRESS }}"
           LOFT_ALT_ADDRESS="${{ vars.LOFT_ALT_ADDRESS }}"
+          # Optional: the Overhead flight tracker's public host (ds17f/airplane).
+          # Empty elsewhere — compose falls back to an inert default.
+          AIRPLANE_ADDRESS="${{ vars.AIRPLANE_ADDRESS }}"
           if [ -z "$SITE_ADDRESS" ] || [ -z "$SHARE_ADDRESS" ]; then
             echo "::error::SITE_ADDRESS or SHARE_ADDRESS not set for environment '${{ inputs.environment }}'"
             exit 1
@@ -152,6 +155,7 @@ jobs:
             "LOFT_ADDRESS=${LOFT_ADDRESS}" \
             "LOFT_WWW_ADDRESS=${LOFT_WWW_ADDRESS}" \
             "LOFT_ALT_ADDRESS=${LOFT_ALT_ADDRESS}" \
+            "AIRPLANE_ADDRESS=${AIRPLANE_ADDRESS}" \
             "AUTH_SECRET=${AUTH_SECRET}" \
             "AUTH_URL=${AUTH_URL}" \
             "GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}" \

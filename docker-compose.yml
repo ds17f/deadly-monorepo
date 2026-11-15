@@ -25,6 +25,10 @@ services:
       # pattern; distinct inert defaults so the addresses never collide.
       - LOFT_WWW_ADDRESS=${LOFT_WWW_ADDRESS:-loft-www.localhost}
       - LOFT_ALT_ADDRESS=${LOFT_ALT_ADDRESS:-loft-alt.localhost}
+      # Overhead (ds17f/airplane) public host, fronted by this Caddy. Set per
+      # environment via AIRPLANE_ADDRESS; inert default where not hosted.
+      # See docs/docs/developer/hosting-overhead.md.
+      - AIRPLANE_ADDRESS=${AIRPLANE_ADDRESS:-airplane.localhost}
     ports:
       - "80:80"
       - "443:443"

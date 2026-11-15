@@ -84,3 +84,13 @@ www.{$SITE_ADDRESS} {
 {$LOFT_WWW_ADDRESS}, {$LOFT_ALT_ADDRESS} {
 	redir https://{$LOFT_ADDRESS}{uri} permanent
 }
+
+# Overhead — a separate, independently-deployed flight tracker (repo
+# ds17f/airplane) on the same box, fronted by this Caddy via the shared external
+# `web` network. Additive: does not touch the other sites. AIRPLANE_ADDRESS is set
+# per environment (overhead.makersundays.com on prod) and defaults to
+# `airplane.localhost` where it isn't hosted — an inert, internal-cert host.
+# The app does its own HTTP Basic auth. See docs/docs/developer/hosting-overhead.md.
+{$AIRPLANE_ADDRESS} {
+	reverse_proxy airplane:8000
+}
